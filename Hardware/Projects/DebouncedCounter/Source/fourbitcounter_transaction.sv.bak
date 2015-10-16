@@ -1,0 +1,51 @@
+package fourbitcounter_transactions_pkg;
+  
+typedef enum {up_op, down_op, reset_op, load_op, no_op} operation_t;
+
+class fourbitcounter_operation;
+  
+  rand operation_t op;
+  rand logic [3:0] arg;
+  rand logic [7:0] hold;
+  rand logic [7:0] waits;
+  integer seed = 42;
+  
+  function new (
+    operation_t iop     = no_op,
+    logic [3:0] iarg    = 0,
+    logic [7:0] ihold   = 1,
+    logic [7:0] iwaits   = 1
+    );
+    
+    op    = iop;
+    arg   = iarg;
+    hold  = ihold;
+    waits  = iwaits;
+  
+  endfunction
+  
+  function fourbitcounter_operation clone();
+    fourbitcounter_operation c;
+    c = new(op, arg, hold, waits);
+    return c;  
+  endfunction
+ 
+  function bit comp(fourbitcounter_operation t);
+    return ((t.op == op) && (t.arg == arg) && (t.hold == hold) && (t.waits == waits));
+  endfunction;
+
+  function string convert2string;
+    string str;
+    $sformat(str, "{ op: %7s   arg: %2d   hold: %3d   waits: %3d }",
+              op, arg, hold, waits);
+    return str; 
+  endfunction;
+  
+  function int random();
+    op = operation_t'($dist_uniform(seed,0,3));
+    return 1;
+  endfunction;
+
+endclass
+
+endpackage

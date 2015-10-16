@@ -1,0 +1,96 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Mon Feb 06 17:06:09 2012
+#$ MODULE fourbitcounter
+#$ PINS 6 counter_3_:14'ke'  clock:10'ke'  reset:20'ke'  counter_2_:15'ke'  counter_1_:16'ke'  \
+#  counter_0_:17'ke' 
+#$ NODES 13 counter_n1 counter_n2 counter_n3 counter_c1 counter_c2 clock_i reset_i \
+#  counterDFFRH_0_reg counterDFFRH_1_reg counterDFFRH_2_reg counterDFFRH_3_reg \
+#  clock_c reset_c
+.model fourbitcounter
+.inputs clock.BLIF reset.BLIF counter_n1.BLIF counter_n2.BLIF counter_n3.BLIF \
+counter_c1.BLIF counter_c2.BLIF clock_i.BLIF reset_i.BLIF \
+counterDFFRH_0_reg.BLIF counterDFFRH_1_reg.BLIF counterDFFRH_2_reg.BLIF \
+counterDFFRH_3_reg.BLIF clock_c.BLIF reset_c.BLIF
+.outputs counter_3_ counter_2_ counter_1_ counter_0_ counterDFFRH_0_reg.D \
+counterDFFRH_0_reg.C counterDFFRH_0_reg.AR counterDFFRH_1_reg.D \
+counterDFFRH_1_reg.C counterDFFRH_1_reg.AR counterDFFRH_2_reg.D \
+counterDFFRH_2_reg.C counterDFFRH_2_reg.AR counterDFFRH_3_reg.D \
+counterDFFRH_3_reg.C counterDFFRH_3_reg.AR counter_c1 counter_c2 clock_i \
+reset_i clock_c reset_c counter_n1 counter_n2 counter_n3
+.names counterDFFRH_0_reg.BLIF counterDFFRH_0_reg.D
+0 1
+.names counterDFFRH_0_reg.BLIF counterDFFRH_1_reg.BLIF counter_c1
+11 1
+.names counter_c1.BLIF counterDFFRH_2_reg.BLIF counter_c2
+11 1
+.names clock_c.BLIF clock_i
+0 1
+.names reset_c.BLIF reset_i
+0 1
+.names counterDFFRH_3_reg.BLIF counter_3_
+1 1
+0 0
+.names counterDFFRH_2_reg.BLIF counter_2_
+1 1
+0 0
+.names counterDFFRH_1_reg.BLIF counter_1_
+1 1
+0 0
+.names counterDFFRH_0_reg.BLIF counter_0_
+1 1
+0 0
+.names clock_i.BLIF counterDFFRH_0_reg.C
+1 1
+0 0
+.names reset_i.BLIF counterDFFRH_0_reg.AR
+1 1
+0 0
+.names counter_n1.BLIF counterDFFRH_1_reg.D
+1 1
+0 0
+.names clock_i.BLIF counterDFFRH_1_reg.C
+1 1
+0 0
+.names reset_i.BLIF counterDFFRH_1_reg.AR
+1 1
+0 0
+.names counter_n2.BLIF counterDFFRH_2_reg.D
+1 1
+0 0
+.names clock_i.BLIF counterDFFRH_2_reg.C
+1 1
+0 0
+.names reset_i.BLIF counterDFFRH_2_reg.AR
+1 1
+0 0
+.names counter_n3.BLIF counterDFFRH_3_reg.D
+1 1
+0 0
+.names clock_i.BLIF counterDFFRH_3_reg.C
+1 1
+0 0
+.names reset_i.BLIF counterDFFRH_3_reg.AR
+1 1
+0 0
+.names clock.BLIF clock_c
+1 1
+0 0
+.names reset.BLIF reset_c
+1 1
+0 0
+.names counterDFFRH_0_reg.BLIF counterDFFRH_1_reg.BLIF counter_n1
+01 1
+10 1
+11 0
+00 0
+.names counter_c1.BLIF counterDFFRH_2_reg.BLIF counter_n2
+01 1
+10 1
+11 0
+00 0
+.names counter_c2.BLIF counterDFFRH_3_reg.BLIF counter_n3
+01 1
+10 1
+11 0
+00 0
+.end

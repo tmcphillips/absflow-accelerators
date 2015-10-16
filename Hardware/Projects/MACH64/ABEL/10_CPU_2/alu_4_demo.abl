@@ -1,0 +1,100 @@
+module ALU_4_demo
+
+declarations
+
+	@include 'opcodes.abl'
+
+	ALU_4 interface ([Op3..Op0], [A3..A0], [B3..B0] -> [C3..C0], ZF, CF);
+	alu functional_block ALU_4;
+
+	TenBitRippleCounter interface (inclock -> outclock);
+	scaler functional_block TenBitRippleCounter;
+
+	Debouncer interface (rawSignal, samplingClock -> debounced);
+	debouncer functional_block Debouncer;
+
+	clock	   pin 18;			// ! MHz system clock
+	!runButton pin 31;
+	!reset	   pin 32;
+
+	run	   node;
+
+	op0..op3 	pin;			// opcode input
+	arg0..arg3   	pin;	
+	pc2..pc0   	pin istype 'reg';
+
+
+	a0..a3     pin 45..48 istype 'reg';	// register A
+	b0..b3     pin 2..4, 40 istype 'reg';	// register B
+
+	zf	   pin 38 istype 'reg';
+	cf	   pin 39 istype 'reg';
+
+	pc 	= [pc2..pc0];
+	op 	= [op3..op0];
+	arg	= [arg3..arg0];
+	flags   = [zf, cf];
+	a	= [a3..a0];
+	b	= [b3..b0];
+
+equations
+
+	pc.ar = reset;
+	a.ar = reset;
+	b.ar = reset;
+	flags.ar = reset;
+
+	scaler.inclock = clock;
+
+	debouncer.samplingClock = scaler.outclock;
+	debouncer.rawSignal = runButton;
+	
+	run = debouncer.debounced;
+
+
+	a.clk 	  = run;
+	b.clk     = run;
+	flags.clk = run;
+	pc.clk 	  = run;
+	
+	alu.[Op3..Op0] = op;
+	alu.[A3..A0]   = a;
+	alu.[B3..B0]   = b;
+
+	when (op3 == 1) then {
+
+		a  := alu.[C3..C0];
+		b  := [b3..b0];
+		zf := alu.ZF;
+		cf := alu.CF;
+	}
+	
+	when (op == OP_LDA) then {
+
+		a  := arg;
+		b  := b;
+		zf := zf;
+		cf := cf;
+	}
+
+	when (op == OP_LDB) then {
+		
+		a  := a;
+		b  := arg;
+		zf := zf;
+		cf := cf;
+	}
+
+	pc := pc + 1;
+
+	when (pc ==  0) then { op = OP_LDA;	arg = 2;	}
+	when (pc ==  1) then { op = OP_LDB;	arg = 4;	}
+	when (pc ==  2) then { op = OP_OR;			}
+	when (pc ==  3) then { op = OP_SHL;			}
+	when (pc ==  4) then { op = OP_DEC;			}
+	when (pc ==  5) then { op = OP_DEC;			}
+	when (pc ==  6) then { op = OP_DEC;			}
+	when (pc ==  7) then { op = OP_DEC;			}
+
+end
+

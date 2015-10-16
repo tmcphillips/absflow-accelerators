@@ -1,0 +1,42 @@
+0002 |
+0003 |TITLE 'Four push button LED program'
+0004 |
+0005 |
+0006 |//   	Wiring diagram
+0007 |//
+0008 |//   	Outputs for driving LEDs
+0009 |//
+0010 |//  	D0 (31)  ->  L0 
+0011 |//   	D2 (32)  ->  L1
+0012 |//   	D4 (33)  ->  L2
+0013 |//   	D6 (34)  ->  L3
+0014 |//
+0015 |//   	Inputs from pushbuttons
+0016 |//
+0017 |//   	C2 (21) -> J17 (0)
+0018 |//	C4 (22) -> J17 (1)
+0019 |//	C6 (23) -> J17 (2)
+0020 |//	C8 (24) -> J17 (3)
+0021 |//
+0022 |
+0023 |DECLARATIONS
+0024 |
+0025 |	pb0 pin 21;
+0026 |	pb1 pin 22;
+0027 |	pb2 pin 23;
+0028 |	pb3 pin 24;
+0029 |
+0030 |	led0 pin 31 istype 'com';
+0031 |	led1 pin 32 istype 'com';
+0032 |	led2 pin 33 istype 'com';
+0033 |	led3 pin 34 istype 'com';
+0034 |
+0035 |	BUTTONS = [pb0..pb3];
+0036 |	LEDS	= [led0..led3];
+0037 |
+0038 |EQUATIONS
+0039 |
+0040 |	LEDS = !BUTTONS;
+0041 |
+0042 |END
+0043 |

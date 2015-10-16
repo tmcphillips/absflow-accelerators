@@ -1,0 +1,106 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 21_cylonleds
+
+#Sat Feb 11 20:44:50 2012
+
+$ Start of Compile
+#Sat Feb 11 20:44:50 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\ripplescaler.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\ripplescaler.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\ripplecounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\ripplecounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\tflipflop.v"
+Verilog syntax check successful!
+Selecting top level module CylonLEDs
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000010000
+   Generated name = RippleCounter_16s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000010000
+   Generated name = RippleScaler_16s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":3:7:3:15|Synthesizing module CylonLEDs
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register brightness_0_[3:0] 
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register brightness_1_[3:0] 
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register brightness_10_[3:0] 
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register brightness_11_[3:0] 
+
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_9_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_8_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_7_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_6_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_5_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_4_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_3_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_2_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_7_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_6_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_5_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_4_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_9_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_8_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_3_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_2_[3:0] 
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Feb 11 20:44:50 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\synlog\cylonleds_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+@N:"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":77:1:77:6|Found counter in view:work.CylonLEDs(verilog) inst duty[3:0]
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFC            24 uses
+DFF             28 uses
+DFFSH           1 use
+DFFRH           3 uses
+DFFCRH          1 use
+IBUF            2 uses
+OBUF            8 uses
+AND2            175 uses
+XOR2            10 uses
+INV             195 uses
+OR2             11 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Feb 11 20:44:52 2012
+
+###########################################################]

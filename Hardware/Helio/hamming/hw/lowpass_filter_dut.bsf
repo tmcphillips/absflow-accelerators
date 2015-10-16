@@ -1,0 +1,180 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 400 336)
+	(text "lowpass_filter_dut" (rect 146 -1 216 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 320 20 332)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clock_clk" (rect 0 0 36 12)(font "Arial" (font_size 8)))
+		(text "clock_clk" (rect 4 61 58 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 128 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "reset_reset" (rect 0 0 46 12)(font "Arial" (font_size 8)))
+		(text "reset_reset" (rect 4 101 70 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 128 112)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "cutoff_write" (rect 0 0 47 12)(font "Arial" (font_size 8)))
+		(text "cutoff_write" (rect 4 141 76 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 128 152)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "cutoff_read" (rect 0 0 47 12)(font "Arial" (font_size 8)))
+		(text "cutoff_read" (rect 4 157 70 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 128 168)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(input)
+		(text "cutoff_writedata[7..0]" (rect 0 0 83 12)(font "Arial" (font_size 8)))
+		(text "cutoff_writedata[7..0]" (rect 4 189 136 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 128 200)(line_width 3))
+	)
+	(port
+		(pt 400 72)
+		(input)
+		(text "source_ready" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "source_ready" (rect 329 61 401 72)(font "Arial" (font_size 8)))
+		(line (pt 400 72)(pt 272 72)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "sink_data[7..0]" (rect 0 0 57 12)(font "Arial" (font_size 8)))
+		(text "sink_data[7..0]" (rect 4 229 94 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 128 240)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "sink_valid" (rect 0 0 38 12)(font "Arial" (font_size 8)))
+		(text "sink_valid" (rect 4 261 64 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 128 272)(line_width 1))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "sink_startofpacket" (rect 0 0 73 12)(font "Arial" (font_size 8)))
+		(text "sink_startofpacket" (rect 4 277 112 288)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 128 288)(line_width 1))
+	)
+	(port
+		(pt 0 304)
+		(input)
+		(text "sink_endofpacket" (rect 0 0 69 12)(font "Arial" (font_size 8)))
+		(text "sink_endofpacket" (rect 4 293 100 304)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 128 304)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(output)
+		(text "cutoff_readdata[7..0]" (rect 0 0 83 12)(font "Arial" (font_size 8)))
+		(text "cutoff_readdata[7..0]" (rect 4 173 130 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 128 184)(line_width 3))
+	)
+	(port
+		(pt 400 88)
+		(output)
+		(text "source_valid" (rect 0 0 50 12)(font "Arial" (font_size 8)))
+		(text "source_valid" (rect 335 77 407 88)(font "Arial" (font_size 8)))
+		(line (pt 400 88)(pt 272 88)(line_width 1))
+	)
+	(port
+		(pt 400 104)
+		(output)
+		(text "source_data[7..0]" (rect 0 0 69 12)(font "Arial" (font_size 8)))
+		(text "source_data[7..0]" (rect 312 93 414 104)(font "Arial" (font_size 8)))
+		(line (pt 400 104)(pt 272 104)(line_width 3))
+	)
+	(port
+		(pt 400 120)
+		(output)
+		(text "source_startofpacket" (rect 0 0 84 12)(font "Arial" (font_size 8)))
+		(text "source_startofpacket" (rect 292 109 412 120)(font "Arial" (font_size 8)))
+		(line (pt 400 120)(pt 272 120)(line_width 1))
+	)
+	(port
+		(pt 400 136)
+		(output)
+		(text "source_endofpacket" (rect 0 0 81 12)(font "Arial" (font_size 8)))
+		(text "source_endofpacket" (rect 296 125 404 136)(font "Arial" (font_size 8)))
+		(line (pt 400 136)(pt 272 136)(line_width 1))
+	)
+	(port
+		(pt 0 256)
+		(output)
+		(text "sink_ready" (rect 0 0 44 12)(font "Arial" (font_size 8)))
+		(text "sink_ready" (rect 4 245 64 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 128 256)(line_width 1))
+	)
+	(drawing
+		(text "clock" (rect 100 43 230 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 133 67 284 144)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 99 83 228 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 133 107 296 224)(font "Arial" (color 0 0 0)))
+		(text "cutoff" (rect 95 123 226 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "write" (rect 133 147 296 304)(font "Arial" (color 0 0 0)))
+		(text "read" (rect 133 163 290 336)(font "Arial" (color 0 0 0)))
+		(text "readdata" (rect 133 179 314 368)(font "Arial" (color 0 0 0)))
+		(text "writedata" (rect 133 195 320 400)(font "Arial" (color 0 0 0)))
+		(text "source" (rect 273 43 582 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "ready" (rect 244 67 518 144)(font "Arial" (color 0 0 0)))
+		(text "valid" (rect 249 83 528 176)(font "Arial" (color 0 0 0)))
+		(text "data" (rect 251 99 526 208)(font "Arial" (color 0 0 0)))
+		(text "startofpacket" (rect 212 115 502 240)(font "Arial" (color 0 0 0)))
+		(text "endofpacket" (rect 217 131 500 272)(font "Arial" (color 0 0 0)))
+		(text "sink" (rect 105 211 234 435)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "data" (rect 133 235 290 480)(font "Arial" (color 0 0 0)))
+		(text "ready" (rect 133 251 296 512)(font "Arial" (color 0 0 0)))
+		(text "valid" (rect 133 267 296 544)(font "Arial" (color 0 0 0)))
+		(text "startofpacket" (rect 133 283 344 576)(font "Arial" (color 0 0 0)))
+		(text "endofpacket" (rect 133 299 332 608)(font "Arial" (color 0 0 0)))
+		(text " lowpass_filter_dut " (rect 319 320 758 650)(font "Arial" ))
+		(line (pt 129 52)(pt 129 76)(line_width 1))
+		(line (pt 130 52)(pt 130 76)(line_width 1))
+		(line (pt 129 92)(pt 129 116)(line_width 1))
+		(line (pt 130 92)(pt 130 116)(line_width 1))
+		(line (pt 129 132)(pt 129 204)(line_width 1))
+		(line (pt 130 132)(pt 130 204)(line_width 1))
+		(line (pt 271 52)(pt 271 140)(line_width 1))
+		(line (pt 270 52)(pt 270 140)(line_width 1))
+		(line (pt 129 220)(pt 129 308)(line_width 1))
+		(line (pt 130 220)(pt 130 308)(line_width 1))
+		(line (pt 128 32)(pt 272 32)(line_width 1))
+		(line (pt 272 32)(pt 272 320)(line_width 1))
+		(line (pt 128 320)(pt 272 320)(line_width 1))
+		(line (pt 128 32)(pt 128 320)(line_width 1))
+		(line (pt 0 0)(pt 400 0)(line_width 1))
+		(line (pt 400 0)(pt 400 336)(line_width 1))
+		(line (pt 0 336)(pt 400 336)(line_width 1))
+		(line (pt 0 0)(pt 0 336)(line_width 1))
+	)
+)

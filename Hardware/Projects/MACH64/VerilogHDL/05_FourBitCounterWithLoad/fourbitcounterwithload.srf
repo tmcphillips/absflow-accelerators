@@ -1,0 +1,97 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 05_fourbitcounterwithload
+
+#Mon Jan 23 11:19:51 2012
+
+$ Start of Compile
+#Mon Jan 23 11:19:51 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\fourbitcounterwithload.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\fourbitcounterwithload.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\ripplescaler.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\ripplescaler.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\ripplecounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\ripplecounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\tflipflop.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\fourbitcounterwithload.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\buttonpressdetector.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\fourbitcounterwithload.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v"
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\fourbitcounterwithload.v changed - recompiling
+Selecting top level module FourBitCounterWithLoad
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001010
+   Generated name = RippleCounter_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001010
+   Generated name = RippleScaler_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\buttonpressdetector.v":4:7:4:25|Synthesizing module ButtonPressDetector
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v":4:7:4:19|Synthesizing module UpDownCounter
+
+	SIZE=32'b00000000000000000000000000000100
+	IDLE=2'b00
+	UP_ACK=2'b01
+	DOWN_ACK=2'b10
+   Generated name = UpDownCounter_4s_0_1_2
+
+@A: CL106 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v":25:1:25:6|Register counter with async load is being synthesized in compatability mode. A Synthesis/Simulation mismatch is possible.
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v":25:1:25:6|Feedback mux created for signal state[1:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\fourbitcounterwithload.v":7:7:7:28|Synthesizing module FourBitCounterWithLoad
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v":25:1:25:6|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\buttonpressdetector.v":20:1:20:6|Trying to extract state machine for register state
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jan 23 11:19:51 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\synlog\fourbitcounterwithload_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+Encoding state machine work.UpDownCounter_4s_0_1_2(verilog)-state[2:0]
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             16 uses
+DFFC            2 uses
+DFFRSH          4 uses
+IBUF            9 uses
+OBUF            4 uses
+AND2            54 uses
+XOR2            7 uses
+INV             56 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jan 23 11:19:52 2012
+
+###########################################################]

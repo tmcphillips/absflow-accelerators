@@ -1,0 +1,51 @@
+module StateMachineWithCorrectOutputs
+
+declarations
+
+	TenBitScaler interface (inclock -> outclock);
+	Debouncer interface (rawSignal, samplingClock -> debounced);
+
+	debouncedStep functional_block Debouncer;
+	clockScaler   functional_block TenBitScaler;
+
+	clock	pin 18;
+
+	!step	pin 20;
+	!oe	pin 21;
+	!hold	pin 22;
+
+	q1,q0	pin 31,32 istype 'reg';
+
+	reg1	pin 33 	  istype 'reg';
+	com1	pin 34	  istype 'com';
+
+	A=0; B=1; C=2; D=3;
+
+equations
+
+	clockScaler.inclock = clock;
+
+	debouncedStep.samplingClock = clockScaler.outclock;	
+	debouncedStep.rawSignal = step;
+
+	[q1,q0,reg1].clk = debouncedStep.debounced;
+	[q1,q0,reg1].oe  = oe;
+
+	state_diagram [q1,q0]
+
+		state A:  com1  = 0;
+			  if !hold then A with reg1 := 0;
+      			  else 	        B with reg1 := 1;
+  
+		state B:  com1  = 1;
+			  goto          C with reg1 := 0;
+
+		state C:  com1  = 0;
+			  if hold then  C with reg1 := 0;
+			  else          D with reg1 := 1;  
+
+		state D:  com1  = 1;
+			  if hold then  D with reg1 := 1; 
+                          else          A with reg1 := 0;
+ 
+end

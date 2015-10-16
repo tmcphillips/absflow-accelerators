@@ -1,0 +1,809 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Feb 15 14:50:01 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 11 button_n_1_:21'ke'  octaveSelect_n_1_:16'ke'  oneMHzClock:43'ke'  noteOutC:31'ke'  \
+#  noteOutD:32'ke'  noteOutE:33'ke'  noteOutF:34'ke'  button_n_2_:22'ke'  button_n_3_:23'ke'  \
+#  button_n_4_:24'ke'  octaveSelect_n_0_:17'ke' 
+#$ NODES 45 u0rc_u0tff_q u0rc_genblk1_0__uitff_q u0rc_genblk1_1__uitff_q \
+#  octaveClocks_pmux u1cs_outclock u2cs_outclock u3cs_outclock u4cs_outclock \
+#  u4cs_count_0_ u4cs_count_1_ u4cs_count_2_ u4cs_count_3_ u4cs_count_4_ u4cs_count_5_ \
+#  u4cs_count_6_ u4cs_count_7_ u4cs_count_8_ u3cs_count_0_ u3cs_count_1_ u3cs_count_2_ \
+#  u3cs_count_3_ u3cs_count_4_ u3cs_count_5_ u3cs_count_6_ u3cs_count_7_ u3cs_count_8_ \
+#  u2cs_count_0_ u2cs_count_1_ u2cs_count_2_ u2cs_count_3_ u2cs_count_4_ u2cs_count_5_ \
+#  u2cs_count_6_ u2cs_count_7_ u2cs_count_8_ u1cs_count_0_ u1cs_count_1_ u1cs_count_2_ \
+#  u1cs_count_3_ u1cs_count_4_ u1cs_count_5_ u1cs_count_6_ u1cs_count_7_ u1cs_count_8_ \
+#  u1cs_n_17_n
+.model digitalorgan
+.inputs button_n_1_.BLIF octaveSelect_n_1_.BLIF oneMHzClock.BLIF \
+button_n_2_.BLIF button_n_3_.BLIF button_n_4_.BLIF octaveSelect_n_0_.BLIF \
+u0rc_u0tff_q.BLIF u0rc_genblk1_0__uitff_q.BLIF u0rc_genblk1_1__uitff_q.BLIF \
+octaveClocks_pmux.BLIF u1cs_outclock.BLIF u2cs_outclock.BLIF \
+u3cs_outclock.BLIF u4cs_outclock.BLIF u4cs_count_0_.BLIF u4cs_count_1_.BLIF \
+u4cs_count_2_.BLIF u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_5_.BLIF \
+u4cs_count_6_.BLIF u4cs_count_7_.BLIF u4cs_count_8_.BLIF u3cs_count_0_.BLIF \
+u3cs_count_1_.BLIF u3cs_count_2_.BLIF u3cs_count_3_.BLIF u3cs_count_4_.BLIF \
+u3cs_count_5_.BLIF u3cs_count_6_.BLIF u3cs_count_7_.BLIF u3cs_count_8_.BLIF \
+u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF u2cs_count_3_.BLIF \
+u2cs_count_4_.BLIF u2cs_count_5_.BLIF u2cs_count_6_.BLIF u2cs_count_7_.BLIF \
+u2cs_count_8_.BLIF u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF u1cs_count_6_.BLIF \
+u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_n_17_n.BLIF
+.outputs noteOutC noteOutD noteOutE noteOutF u1cs_count_0_.D u1cs_count_0_.C \
+u1cs_count_1_.D u1cs_count_1_.C u1cs_count_2_.D u1cs_count_2_.C \
+u1cs_count_3_.C u1cs_count_4_.C u1cs_count_5_.D u1cs_count_5_.C \
+u1cs_count_6_.D u1cs_count_6_.C u1cs_count_7_.C u1cs_count_8_.C \
+u1cs_outclock.C u2cs_count_0_.D u2cs_count_0_.C u2cs_count_1_.D \
+u2cs_count_1_.C u2cs_count_2_.D u2cs_count_2_.C u2cs_count_3_.C \
+u2cs_count_4_.C u2cs_count_5_.C u2cs_count_6_.C u2cs_count_7_.C \
+u2cs_count_8_.C u2cs_outclock.C u3cs_count_0_.D u3cs_count_0_.C \
+u3cs_count_1_.D u3cs_count_1_.C u3cs_count_2_.D u3cs_count_2_.C \
+u3cs_count_3_.C u3cs_count_4_.C u3cs_count_5_.C u3cs_count_6_.C \
+u3cs_count_7_.C u3cs_count_8_.C u3cs_outclock.C u4cs_count_0_.D \
+u4cs_count_0_.C u4cs_count_1_.D u4cs_count_1_.C u4cs_count_2_.D \
+u4cs_count_2_.C u4cs_count_3_.D u4cs_count_3_.C u4cs_count_4_.C \
+u4cs_count_5_.C u4cs_count_6_.C u4cs_count_7_.C u4cs_count_8_.C \
+u4cs_outclock.C u0rc_u0tff_q.D u0rc_u0tff_q.C u0rc_genblk1_0__uitff_q.D \
+u0rc_genblk1_0__uitff_q.C u0rc_genblk1_1__uitff_q.D u0rc_genblk1_1__uitff_q.C \
+octaveClocks_pmux u1cs_n_17_n u1cs_outclock.D.X1 u1cs_outclock.D.X2 \
+u2cs_outclock.D.X1 u2cs_outclock.D.X2 u3cs_outclock.D.X1 u3cs_outclock.D.X2 \
+u4cs_outclock.D.X1 u4cs_outclock.D.X2 u4cs_count_4_.D.X1 u4cs_count_4_.D.X2 \
+u4cs_count_5_.D.X1 u4cs_count_5_.D.X2 u4cs_count_6_.D.X1 u4cs_count_6_.D.X2 \
+u4cs_count_7_.D.X1 u4cs_count_7_.D.X2 u4cs_count_8_.D.X1 u4cs_count_8_.D.X2 \
+u3cs_count_3_.D.X1 u3cs_count_3_.D.X2 u3cs_count_4_.D.X1 u3cs_count_4_.D.X2 \
+u3cs_count_5_.D.X1 u3cs_count_5_.D.X2 u3cs_count_6_.D.X1 u3cs_count_6_.D.X2 \
+u3cs_count_7_.D.X1 u3cs_count_7_.D.X2 u3cs_count_8_.D.X1 u3cs_count_8_.D.X2 \
+u2cs_count_3_.D.X1 u2cs_count_3_.D.X2 u2cs_count_4_.D.X1 u2cs_count_4_.D.X2 \
+u2cs_count_5_.D.X1 u2cs_count_5_.D.X2 u2cs_count_6_.D.X1 u2cs_count_6_.D.X2 \
+u2cs_count_7_.D.X1 u2cs_count_7_.D.X2 u2cs_count_8_.D.X1 u2cs_count_8_.D.X2 \
+u1cs_count_3_.D.X1 u1cs_count_3_.D.X2 u1cs_count_4_.D.X1 u1cs_count_4_.D.X2 \
+u1cs_count_7_.D.X1 u1cs_count_7_.D.X2 u1cs_count_8_.D.X1 u1cs_count_8_.D.X2
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF u1cs_count_6_.BLIF \
+u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_count_0_.D
+0------0- 1
+0-----0-- 1
+0----1--- 1
+0---0---- 1
+0--0----- 1
+0-0------ 1
+01------- 1
+0-------0 1
+-01110111 0
+1-------- 0
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF u1cs_count_6_.BLIF \
+u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_count_2_.D
+-010----- 1
+-01-0---- 1
+-01--1--- 1
+-01---0-- 1
+-01----0- 1
+-01-----0 1
+110------ 1
+101------ 1
+011------ 1
+00-110111 0
+111------ 0
+-00------ 0
+0-0------ 0
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF u1cs_count_6_.BLIF \
+u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_n_17_n.BLIF u1cs_count_6_.D
+-1---01--- 1
+---0-01--- 1
+-----10--1 1
+-----11--0 1
+-----01-0- 1
+-----010-- 1
+----001--- 1
+--0--01--- 1
+1----01--- 1
+001110-11- 0
+-----11--1 0
+-----00--- 0
+------0--0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF \
+u2cs_count_3_.BLIF u2cs_count_4_.BLIF u2cs_count_5_.BLIF u2cs_count_6_.BLIF \
+u2cs_count_7_.BLIF u2cs_count_8_.BLIF u2cs_count_0_.D
+0------0- 1
+0-----1-- 1
+0----0--- 1
+0---1---- 1
+0--0----- 1
+0-1------ 1
+01------- 1
+0-------0 1
+-00101011 0
+1-------- 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF u3cs_count_6_.BLIF \
+u3cs_count_7_.BLIF u3cs_count_8_.BLIF u3cs_count_0_.D
+0------1- 1
+0-----0-- 1
+0----0--- 1
+0---0---- 1
+0--0----- 1
+0-1------ 1
+00------- 1
+0-------0 1
+-10111101 0
+1-------- 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF u3cs_count_6_.BLIF \
+u3cs_count_7_.BLIF u3cs_count_8_.BLIF u3cs_count_1_.D
+10------- 1
+01-----1- 1
+01----0-- 1
+01---0--- 1
+01--0---- 1
+01-0----- 1
+011------ 1
+01------0 1
+0-0111101 0
+11------- 0
+00------- 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_2_.BLIF \
+u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_5_.BLIF u4cs_count_6_.BLIF \
+u4cs_count_7_.BLIF u4cs_count_8_.BLIF u4cs_count_0_.D
+0------1- 1
+0-----0-- 1
+0----0--- 1
+0---1---- 1
+0--1----- 1
+0-0------ 1
+01------- 1
+0-------0 1
+-01001101 0
+1-------- 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_2_.BLIF \
+u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_5_.BLIF u4cs_count_6_.BLIF \
+u4cs_count_7_.BLIF u4cs_count_8_.BLIF u4cs_count_2_.D
+-011----- 1
+-01-1---- 1
+-01--0--- 1
+-01---0-- 1
+-01----1- 1
+-01-----0 1
+110------ 1
+101------ 1
+011------ 1
+00-001101 0
+111------ 0
+-00------ 0
+0-0------ 0
+.names oneMHzClock.BLIF u0rc_u0tff_q.C
+0 1
+1 0
+.names u0rc_genblk1_1__uitff_q.BLIF u0rc_genblk1_1__uitff_q.D
+0 1
+1 0
+.names octaveSelect_n_1_.BLIF oneMHzClock.BLIF octaveSelect_n_0_.BLIF \
+u0rc_u0tff_q.BLIF u0rc_genblk1_0__uitff_q.BLIF u0rc_genblk1_1__uitff_q.BLIF \
+octaveClocks_pmux
+1-0-1- 1
+0-11-- 1
+010--- 1
+1-1--1 1
+1-0-0- 0
+0-10-- 0
+000--- 0
+1-1--0 0
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_n_17_n
+11111 1
+---0- 0
+--0-- 0
+-0--- 0
+0---- 0
+----0 0
+.names button_n_1_.BLIF u1cs_outclock.BLIF noteOutC
+01 1
+1- 0
+-0 0
+.names button_n_2_.BLIF u2cs_outclock.BLIF noteOutD
+01 1
+1- 0
+-0 0
+.names button_n_3_.BLIF u3cs_outclock.BLIF noteOutE
+01 1
+1- 0
+-0 0
+.names button_n_4_.BLIF u4cs_outclock.BLIF noteOutF
+01 1
+1- 0
+-0 0
+.names octaveClocks_pmux.BLIF u1cs_count_0_.C
+1 1
+0 0
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_1_.D
+10 1
+01 1
+00 0
+11 0
+.names octaveClocks_pmux.BLIF u1cs_count_1_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u1cs_count_2_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u1cs_count_3_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u1cs_count_4_.C
+1 1
+0 0
+.names u1cs_count_5_.BLIF u1cs_n_17_n.BLIF u1cs_count_5_.D
+10 1
+01 1
+00 0
+11 0
+.names octaveClocks_pmux.BLIF u1cs_count_5_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u1cs_count_6_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u1cs_count_7_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u1cs_count_8_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u1cs_outclock.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u2cs_count_0_.C
+1 1
+0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_1_.D
+10 1
+01 1
+00 0
+11 0
+.names octaveClocks_pmux.BLIF u2cs_count_1_.C
+1 1
+0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF \
+u2cs_count_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names octaveClocks_pmux.BLIF u2cs_count_2_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u2cs_count_3_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u2cs_count_4_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u2cs_count_5_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u2cs_count_6_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u2cs_count_7_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u2cs_count_8_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u2cs_outclock.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_count_0_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_count_1_.C
+1 1
+0 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names octaveClocks_pmux.BLIF u3cs_count_2_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_count_3_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_count_4_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_count_5_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_count_6_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_count_7_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_count_8_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u3cs_outclock.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u4cs_count_0_.C
+1 1
+0 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_1_.D
+10 1
+01 1
+00 0
+11 0
+.names octaveClocks_pmux.BLIF u4cs_count_1_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u4cs_count_2_.C
+1 1
+0 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_2_.BLIF \
+u4cs_count_3_.BLIF u4cs_count_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names octaveClocks_pmux.BLIF u4cs_count_3_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u4cs_count_4_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u4cs_count_5_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u4cs_count_6_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u4cs_count_7_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u4cs_count_8_.C
+1 1
+0 0
+.names octaveClocks_pmux.BLIF u4cs_outclock.C
+1 1
+0 0
+.names u0rc_u0tff_q.BLIF u0rc_u0tff_q.D
+0 1
+1 0
+.names u0rc_genblk1_0__uitff_q.BLIF u0rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u0rc_u0tff_q.BLIF u0rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u0rc_genblk1_0__uitff_q.BLIF u0rc_genblk1_1__uitff_q.C
+0 1
+1 0
+.names u1cs_outclock.BLIF u1cs_outclock.D.X1
+1 1
+0 0
+.names u1cs_outclock.BLIF u1cs_count_0_.BLIF u1cs_count_1_.BLIF \
+u1cs_count_2_.BLIF u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF \
+u1cs_count_6_.BLIF u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_outclock.D.X2
+-001110111 1
+-1-------- 0
+--1------- 0
+---0------ 0
+----0----- 0
+-----0---- 0
+------1--- 0
+-------0-- 0
+--------0- 0
+---------0 0
+.names u2cs_outclock.BLIF u2cs_outclock.D.X1
+1 1
+0 0
+.names u2cs_outclock.BLIF u2cs_count_0_.BLIF u2cs_count_1_.BLIF \
+u2cs_count_2_.BLIF u2cs_count_3_.BLIF u2cs_count_4_.BLIF u2cs_count_5_.BLIF \
+u2cs_count_6_.BLIF u2cs_count_7_.BLIF u2cs_count_8_.BLIF u2cs_outclock.D.X2
+-000101011 1
+-1-------- 0
+--1------- 0
+---1------ 0
+----0----- 0
+-----1---- 0
+------0--- 0
+-------1-- 0
+--------0- 0
+---------0 0
+.names u3cs_outclock.BLIF u3cs_outclock.D.X1
+1 1
+0 0
+.names u3cs_outclock.BLIF u3cs_count_0_.BLIF u3cs_count_1_.BLIF \
+u3cs_count_2_.BLIF u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF \
+u3cs_count_6_.BLIF u3cs_count_7_.BLIF u3cs_count_8_.BLIF u3cs_outclock.D.X2
+-010111101 1
+-1-------- 0
+--0------- 0
+---1------ 0
+----0----- 0
+-----0---- 0
+------0--- 0
+-------0-- 0
+--------1- 0
+---------0 0
+.names u4cs_outclock.BLIF u4cs_outclock.D.X1
+1 1
+0 0
+.names u4cs_outclock.BLIF u4cs_count_0_.BLIF u4cs_count_1_.BLIF \
+u4cs_count_2_.BLIF u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_5_.BLIF \
+u4cs_count_6_.BLIF u4cs_count_7_.BLIF u4cs_count_8_.BLIF u4cs_outclock.D.X2
+-001001101 1
+-1-------- 0
+--1------- 0
+---0------ 0
+----1----- 0
+-----1---- 0
+------0--- 0
+-------0-- 0
+--------1- 0
+---------0 0
+.names u4cs_count_4_.BLIF u4cs_count_4_.D.X1
+1 1
+0 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_2_.BLIF \
+u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_4_.D.X2
+1111- 1
+0---- 0
+-0--- 0
+--0-- 0
+---0- 0
+.names u4cs_count_5_.BLIF u4cs_count_5_.D.X1
+1 1
+0 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_2_.BLIF \
+u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_5_.BLIF u4cs_count_6_.BLIF \
+u4cs_count_7_.BLIF u4cs_count_8_.BLIF u4cs_count_5_.D.X2
+001001101 1
+11111---- 1
+--0------ 0
+01------- 0
+10------- 0
+0--1----- 0
+1--0----- 0
+0---1---- 0
+1---0---- 0
+0----0--- 0
+0-----0-- 0
+0------1- 0
+0-------0 0
+.names u4cs_count_6_.BLIF u4cs_count_6_.D.X1
+1 1
+0 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_2_.BLIF \
+u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_5_.BLIF u4cs_count_6_.BLIF \
+u4cs_count_7_.BLIF u4cs_count_8_.BLIF u4cs_count_6_.D.X2
+001001101 1
+111111--- 1
+--0------ 0
+-----0--- 0
+01------- 0
+10------- 0
+0--1----- 0
+1--0----- 0
+0---1---- 0
+1---0---- 0
+0-----0-- 0
+0------1- 0
+0-------0 0
+.names u4cs_count_7_.BLIF u4cs_count_7_.D.X1
+1 1
+0 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_2_.BLIF \
+u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_5_.BLIF u4cs_count_6_.BLIF \
+u4cs_count_7_.BLIF u4cs_count_7_.D.X2
+1111111- 1
+0------- 0
+-0------ 0
+--0----- 0
+---0---- 0
+----0--- 0
+-----0-- 0
+------0- 0
+.names u4cs_count_8_.BLIF u4cs_count_8_.D.X1
+1 1
+0 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_count_2_.BLIF \
+u4cs_count_3_.BLIF u4cs_count_4_.BLIF u4cs_count_5_.BLIF u4cs_count_6_.BLIF \
+u4cs_count_7_.BLIF u4cs_count_8_.BLIF u4cs_count_8_.D.X2
+001001101 1
+11111111- 1
+--0------ 0
+-----0--- 0
+------0-- 0
+01------- 0
+10------- 0
+0--1----- 0
+1--0----- 0
+0---1---- 0
+1---0---- 0
+0------1- 0
+1------0- 0
+0-------0 0
+.names u3cs_count_3_.BLIF u3cs_count_3_.D.X1
+1 1
+0 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF u3cs_count_6_.BLIF \
+u3cs_count_7_.BLIF u3cs_count_8_.BLIF u3cs_count_3_.D.X2
+010111101 1
+111------ 1
+-0------- 0
+0-1------ 0
+1-0------ 0
+0--0----- 0
+0---0---- 0
+0----0--- 0
+0-----0-- 0
+0------1- 0
+0-------0 0
+.names u3cs_count_4_.BLIF u3cs_count_4_.D.X1
+1 1
+0 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF u3cs_count_6_.BLIF \
+u3cs_count_7_.BLIF u3cs_count_8_.BLIF u3cs_count_4_.D.X2
+010111101 1
+1111----- 1
+-0------- 0
+---0----- 0
+0-1------ 0
+1-0------ 0
+0---0---- 0
+0----0--- 0
+0-----0-- 0
+0------1- 0
+0-------0 0
+.names u3cs_count_5_.BLIF u3cs_count_5_.D.X1
+1 1
+0 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF u3cs_count_6_.BLIF \
+u3cs_count_7_.BLIF u3cs_count_8_.BLIF u3cs_count_5_.D.X2
+010111101 1
+11111---- 1
+-0------- 0
+---0----- 0
+----0---- 0
+0-1------ 0
+1-0------ 0
+0----0--- 0
+0-----0-- 0
+0------1- 0
+0-------0 0
+.names u3cs_count_6_.BLIF u3cs_count_6_.D.X1
+1 1
+0 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF u3cs_count_6_.BLIF \
+u3cs_count_7_.BLIF u3cs_count_8_.BLIF u3cs_count_6_.D.X2
+010111101 1
+111111--- 1
+-0------- 0
+---0----- 0
+----0---- 0
+-----0--- 0
+0-1------ 0
+1-0------ 0
+0-----0-- 0
+0------1- 0
+0-------0 0
+.names u3cs_count_7_.BLIF u3cs_count_7_.D.X1
+1 1
+0 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF u3cs_count_6_.BLIF \
+u3cs_count_7_.BLIF u3cs_count_7_.D.X2
+1111111- 1
+0------- 0
+-0------ 0
+--0----- 0
+---0---- 0
+----0--- 0
+-----0-- 0
+------0- 0
+.names u3cs_count_8_.BLIF u3cs_count_8_.D.X1
+1 1
+0 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_count_2_.BLIF \
+u3cs_count_3_.BLIF u3cs_count_4_.BLIF u3cs_count_5_.BLIF u3cs_count_6_.BLIF \
+u3cs_count_7_.BLIF u3cs_count_8_.BLIF u3cs_count_8_.D.X2
+010111101 1
+11111111- 1
+-0------- 0
+---0----- 0
+----0---- 0
+-----0--- 0
+------0-- 0
+0-1------ 0
+1-0------ 0
+0------1- 0
+1------0- 0
+0-------0 0
+.names u2cs_count_3_.BLIF u2cs_count_3_.D.X1
+1 1
+0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF \
+u2cs_count_3_.BLIF u2cs_count_4_.BLIF u2cs_count_5_.BLIF u2cs_count_6_.BLIF \
+u2cs_count_7_.BLIF u2cs_count_8_.BLIF u2cs_count_3_.D.X2
+000101011 1
+111------ 1
+01------- 0
+10------- 0
+0-1------ 0
+1-0------ 0
+0--0----- 0
+0---1---- 0
+0----0--- 0
+0-----1-- 0
+0------0- 0
+0-------0 0
+.names u2cs_count_4_.BLIF u2cs_count_4_.D.X1
+1 1
+0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF \
+u2cs_count_3_.BLIF u2cs_count_4_.BLIF u2cs_count_4_.D.X2
+1111- 1
+0---- 0
+-0--- 0
+--0-- 0
+---0- 0
+.names u2cs_count_5_.BLIF u2cs_count_5_.D.X1
+1 1
+0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF \
+u2cs_count_3_.BLIF u2cs_count_4_.BLIF u2cs_count_5_.BLIF u2cs_count_6_.BLIF \
+u2cs_count_7_.BLIF u2cs_count_8_.BLIF u2cs_count_5_.D.X2
+000101011 1
+11111---- 1
+---0----- 0
+01------- 0
+10------- 0
+0-1------ 0
+1-0------ 0
+0---1---- 0
+1---0---- 0
+0----0--- 0
+0-----1-- 0
+0------0- 0
+0-------0 0
+.names u2cs_count_6_.BLIF u2cs_count_6_.D.X1
+1 1
+0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF \
+u2cs_count_3_.BLIF u2cs_count_4_.BLIF u2cs_count_5_.BLIF u2cs_count_6_.BLIF \
+u2cs_count_6_.D.X2
+111111- 1
+0------ 0
+-0----- 0
+--0---- 0
+---0--- 0
+----0-- 0
+-----0- 0
+.names u2cs_count_7_.BLIF u2cs_count_7_.D.X1
+1 1
+0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF \
+u2cs_count_3_.BLIF u2cs_count_4_.BLIF u2cs_count_5_.BLIF u2cs_count_6_.BLIF \
+u2cs_count_7_.BLIF u2cs_count_8_.BLIF u2cs_count_7_.D.X2
+000101011 1
+1111111-- 1
+---0----- 0
+-----0--- 0
+01------- 0
+10------- 0
+0-1------ 0
+1-0------ 0
+0---1---- 0
+1---0---- 0
+0-----1-- 0
+1-----0-- 0
+0------0- 0
+0-------0 0
+.names u2cs_count_8_.BLIF u2cs_count_8_.D.X1
+1 1
+0 0
+.names u2cs_count_0_.BLIF u2cs_count_1_.BLIF u2cs_count_2_.BLIF \
+u2cs_count_3_.BLIF u2cs_count_4_.BLIF u2cs_count_5_.BLIF u2cs_count_6_.BLIF \
+u2cs_count_7_.BLIF u2cs_count_8_.BLIF u2cs_count_8_.D.X2
+000101011 1
+11111111- 1
+---0----- 0
+-----0--- 0
+-------0- 0
+01------- 0
+10------- 0
+0-1------ 0
+1-0------ 0
+0---1---- 0
+1---0---- 0
+0-----1-- 0
+1-----0-- 0
+0-------0 0
+.names u1cs_count_3_.BLIF u1cs_count_3_.D.X1
+1 1
+0 0
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF u1cs_count_6_.BLIF \
+u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_count_3_.D.X2
+001110111 1
+111------ 1
+--0------ 0
+01------- 0
+10------- 0
+0--0----- 0
+0---0---- 0
+0----1--- 0
+0-----0-- 0
+0------0- 0
+0-------0 0
+.names u1cs_count_4_.BLIF u1cs_count_4_.D.X1
+1 1
+0 0
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF u1cs_count_6_.BLIF \
+u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_count_4_.D.X2
+001110111 1
+1111----- 1
+--0------ 0
+---0----- 0
+01------- 0
+10------- 0
+0---0---- 0
+0----1--- 0
+0-----0-- 0
+0------0- 0
+0-------0 0
+.names u1cs_count_7_.BLIF u1cs_count_7_.D.X1
+1 1
+0 0
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF u1cs_count_6_.BLIF \
+u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_count_7_.D.X2
+001110111 1
+1111111-- 1
+--0------ 0
+---0----- 0
+----0---- 0
+------0-- 0
+01------- 0
+10------- 0
+0----1--- 0
+1----0--- 0
+0------0- 0
+0-------0 0
+.names u1cs_count_8_.BLIF u1cs_count_8_.D.X1
+1 1
+0 0
+.names u1cs_count_0_.BLIF u1cs_count_1_.BLIF u1cs_count_2_.BLIF \
+u1cs_count_3_.BLIF u1cs_count_4_.BLIF u1cs_count_5_.BLIF u1cs_count_6_.BLIF \
+u1cs_count_7_.BLIF u1cs_count_8_.BLIF u1cs_count_8_.D.X2
+001110111 1
+11111111- 1
+--0------ 0
+---0----- 0
+----0---- 0
+------0-- 0
+-------0- 0
+01------- 0
+10------- 0
+0----1--- 0
+1----0--- 0
+0-------0 0
+.end

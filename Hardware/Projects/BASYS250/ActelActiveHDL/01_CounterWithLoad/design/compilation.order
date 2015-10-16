@@ -1,0 +1,10 @@
+.\src\fourbitcounterwithload.v
+.\src\ripplecounter.v
+.\src\buttonpressdetector.v
+.\src\ripplescaler.v
+.\src\updowncounter.v
+.\src\tflipflop.v
+.\src\testbench.v
+.\synthesis\glbl.v
+.\synthesis\FourBitCounterWithLoad.v
+.\IMPLEMENT\TIME_SIM.V

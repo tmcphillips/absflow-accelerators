@@ -1,0 +1,17 @@
+Signal Name Cross Reference File
+
+ispLEVER Classic 1.4.01.04.23.l1
+
+Design 'fourbitcounterwithdirection' created Sun Nov 27 16:29:54 2011
+
+Title:  Four bit counter with manual clock and reset
+
+ LEGEND:  '>'  Functional Block Port Separator
+          '/'  Hierarchy Path Separator
+          '@'  Automatically Generated Node
+
+
+Short Name                              Hierarchical Name
+----------                              -----------------
+
+ *** Shortened names not required for this design. ***

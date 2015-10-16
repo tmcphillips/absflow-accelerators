@@ -1,0 +1,17 @@
+JDF B
+// Created by Version 1.5 
+PROJECT Mach64_Verilog_Project
+DESIGN mach64_verilog_project Normal
+DEVKIT LC4064V-75T48I
+ENTRY Pure Verilog HDL
+MODULE keypadscannerdemo.v
+MODSTYLE RippleCounter Normal
+MODSTYLE TFlipFlop Normal
+MODSTYLE BcdDigitToSevenSegment Normal
+MODSTYLE RippleScaler Normal
+MODSTYLE KeypadScanner Normal
+MODSTYLE KeypadScannerDemo Normal
+MODSTYLE StableValueDetector Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE KeypadScannerDemo

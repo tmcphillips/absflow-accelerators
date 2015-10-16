@@ -1,0 +1,1159 @@
+#$ DATE Wed Feb 22 10:15:10 2012
+#$ TOOL EDIF2BLIF version IspLever 1.0 
+#$ MODULE ntscpong
+#$ PINS 9 video_2_:34'ke'  hState_1_:23'ke'  vState_1_:21'ke'  ntscClock:43'ke'  reset_n:16'ke'  video_1_:33'ke'  video_0_:32'ke'  hState_0_:22'ke'  vState_0_:20'ke' 
+#$ NODES 382 N_199_0 hstate_c_i_1__n N_47_i ballDirectionY6_i scanX_0_ ballDirectionY5_i ballX_0_ un1_ballDirectionY5_0 inst_ballDirectionY N_50_i \
+#  inst_ballDirectionX N_48_i scanY_3_ N_49_i scanY_4_ video_7_0_0__n scanY_5_ ballx_i_1__n scanY_6_ N_129_0 \
+#  scanY_7_ ballx_i_2__n scanY_8_ N_131_0 ballY_0_ N_133_i ballY_1_ N_136_i ballY_2_ N_137_0 \
+#  ballY_3_ ballx_i_4__n ballY_4_ N_147_0 ballY_5_ N_158_i ballX_1_ N_146_i ballX_2_ N_159_0 \
+#  ballX_3_ ballDirectionX5_i ballX_4_ ballDirectionX6_i ballX_5_ un1_ballDirectionX5_0 G_19 N_194_i G_21 N_195_i \
+#  G_23 N_196_i G_25 N_197_0 scanX_1_ N_170_i scanX_2_ N_172_i scanX_3_ N_174_0 \
+#  scanX_4_ N_154_i scanX_5_ N_155_i scanX_6_ N_156_i scanX_7_ N_157_0 G_45 N_130_i \
+#  G_47 N_132_i G_49 N_134_0 G_51 video_7_0_1_0__n G_53 ballDirectionX6_1_0 G_55 ballDirectionX6_2 \
+#  G_57 ballDirectionX6_3 scanY_0_ ballDirectionX5_1 scanY_1_ ballDirectionX5_2 scanY_2_ ballDirectionX5_3 scanY_0_sqmuxa_1 N_50_1 \
+#  scanX_0_sqmuxa vState3_1 vState3_2 vState3_3 vState3_4 vState3_5 vState3_6 vState3_7 vState8_1_0 vState8_2 \
+#  N_62 vState8_3 N_65 vState8_4 N_68 vState8_5 N_71 vState8_6 N_74 vState13_1 \
+#  N_77 vState13_2 N_90 ballDirectionY6_1_0 G_68 ballDirectionY6_2 G_69 ballDirectionY6_3 G_70 ballDirectionY5_1 \
+#  G_71 ballDirectionY5_2 G_72 ballDirectionY5_3 G_73 scanX11_1 N_129 scanX11_2 N_130 scanX11_3 \
+#  N_131 scanX11_4 N_132 scanX11_5 N_133 scanX11_6 N_134 hState13_1 N_137 hState13_2 \
+#  N_154 hState13_3 N_155 hState13_4 N_156 hState13_5 N_157 hState8_1 N_159 hState8_2 \
+#  N_169 hState8_3 N_170 hState8_4 N_171 hState8_5 N_172 hState3_1 N_173 hState3_2 \
+#  N_174 hState3_3 N_177 hState3_4_0 N_194 hState3_5 N_195 scanY10_6_1 N_196 scanY10_6_2 \
+#  N_197 scanY10_1 N_199 scanY10_2 video_7_1__n scanY10_3 ballDirectionY6_1 video_0_sqmuxa_3_1 G_115 video_0_sqmuxa_3_2 \
+#  G_112 video_0_sqmuxa_3_3 G_107 video_0_sqmuxa_3_4 G_96 video_0_sqmuxa_3_5 G_93 video_0_sqmuxa_3_6 G_155 video_0_sqmuxa_3_7 \
+#  G_152 video_0_sqmuxa_3_8 G_147 video_0_sqmuxa_3_9 G_136 video_0_sqmuxa_3_10 G_133 video_0_sqmuxa_3_11 video36 video_7_1_1__n \
+#  ballDirectionX6 G_133_1 ballDirectionX6_1 G_136_1 ballDirectionX5 G_147_1 N_146 G_152_1 N_158 G_155_1 \
+#  N_147 G_68_1 N_136 G_69_1 scanY10 G_70_1 scanY10_6 G_71_1 vState8_1 G_72_1 \
+#  G_31 G_73_1 G_29 G_93_1 G_27 G_96_1 hState3_4 G_107_1 G_112_1 G_115_1 \
+#  N_87 N_197_0_1 G_43 N_174_0_1 N_48 N_172_1 N_47 N_157_0_1 N_49 N_134_0_1 \
+#  vstate_8_1_0__n_3_n N_132_1 vState3 hstate_6_1_0__m8_un3_n vState13 hstate_6_1_0__m8_un1_n vstate_8_1_0__n_6_n hstate_6_1_0__m8_un0_n vState8 hstate_6_1_0__m6_un3_n \
+#  vstate_8_1_0__n_9_n hstate_6_1_0__m6_un1_n N_50 hstate_6_1_0__m6_un0_n scanY_0_sqmuxa hstate_6_1_0__m5_un3_n ballDirectionY6 hstate_6_1_0__m5_un1_n ballDirectionY5 hstate_6_1_0__m5_un0_n \
+#  scanX11 hstate_6_1_0__m2_un3_n hState13 hstate_6_1_0__m2_un1_n hState8 hstate_6_1_0__m2_un0_n hState3 vstate_8_1_0__m9_un3_n hstate_6_1_0__n_9_n vstate_8_1_0__m9_un1_n \
+#  hstate_6_1_0__n_3_n vstate_8_1_0__m9_un0_n hstate_6_1_0__n_6_n hstate_6_1_0__m9_un3_n hstate_6_1_0__m9_un1_n hstate_6_1_0__m9_un0_n vstate_8_1_0__m2_un3_n N_93 vstate_8_1_0__m2_un1_n N_96 \
+#  vstate_8_1_0__m2_un0_n N_99 vstate_8_1_0__m5_un3_n N_102 vstate_8_1_0__m5_un1_n N_105 vstate_8_1_0__m5_un0_n G_75 vstate_8_1_0__m6_un3_n G_76 \
+#  vstate_8_1_0__m6_un1_n G_77 vstate_8_1_0__m6_un0_n G_78 vstate_8_1_0__m8_un3_n G_79 vstate_8_1_0__m8_un1_n G_80 vstate_8_1_0__m8_un0_n N_186 \
+#  N_198 N_187 N_176 ballDirectionY_i N_110_i N_109_i N_112_i N_111_i N_114_i N_113_i \
+#  N_117_i N_116_i N_119_i N_118_i N_121_i N_120_i N_219_i N_218_i N_217_i scany_1_i_7__n \
+#  scany_1_i_6__n scany_1_i_5__n scany_1_i_4__n scany_1_i_3__n scany_1_i_2__n scanY_0_sqmuxa_i hstate_i_0__n hState3_i hState13_i hState8_i \
+#  scanX11_i hstate_6_1_0__n_3_i_n scanx_2_i_5__n scanx_2_i_3__n scanx_2_i_2__n scanx_i_0_1__n N_216_i scany_i_1__n scany_1_i_8__n scany_1_i_1__n \
+#  scany_i_2__n vstate_i_1__n vstate_i_0__n scanY10_i vstate_8_1_0__n_3_i_n vState8_i vState3_i vState13_i scanx_i_0__n scanx_2_i_7__n \
+#  scanx_2_i_6__n scanx_2_i_4__n scanx_2_i_1__n scanX_0_sqmuxa_i ballDirectionX_i ballx_i_0__n N_214_i N_213_i N_211_i N_210_i \
+#  N_212_i reset_n_i ntscClock_c reset_n_c videoDFF_0reg videoDFF_1reg videoDFF_2reg hStateDFF_0reg hStateDFF_1reg vStateDFFC_0reg \
+#  vStateDFFC_1reg bally_i_1__n N_169_0 bally_i_2__n N_171_0 N_173_i N_176_i N_177_0 bally_i_4__n N_187_0 \
+#  N_198_i N_186_i 
+.model ntscpong
+.inputs ntscClock.BLIF reset_n.BLIF N_199_0.BLIF hstate_c_i_1__n.BLIF N_47_i.BLIF ballDirectionY6_i.BLIF scanX_0_.BLIF ballDirectionY5_i.BLIF ballX_0_.BLIF \
+  un1_ballDirectionY5_0.BLIF inst_ballDirectionY.BLIF N_50_i.BLIF inst_ballDirectionX.BLIF N_48_i.BLIF scanY_3_.BLIF N_49_i.BLIF scanY_4_.BLIF video_7_0_0__n.BLIF \
+  scanY_5_.BLIF ballx_i_1__n.BLIF scanY_6_.BLIF N_129_0.BLIF scanY_7_.BLIF ballx_i_2__n.BLIF scanY_8_.BLIF N_131_0.BLIF ballY_0_.BLIF \
+  N_133_i.BLIF ballY_1_.BLIF N_136_i.BLIF ballY_2_.BLIF N_137_0.BLIF ballY_3_.BLIF ballx_i_4__n.BLIF ballY_4_.BLIF N_147_0.BLIF \
+  ballY_5_.BLIF N_158_i.BLIF ballX_1_.BLIF N_146_i.BLIF ballX_2_.BLIF N_159_0.BLIF ballX_3_.BLIF ballDirectionX5_i.BLIF ballX_4_.BLIF \
+  ballDirectionX6_i.BLIF ballX_5_.BLIF un1_ballDirectionX5_0.BLIF G_19.BLIF N_194_i.BLIF G_21.BLIF N_195_i.BLIF G_23.BLIF N_196_i.BLIF \
+  G_25.BLIF N_197_0.BLIF scanX_1_.BLIF N_170_i.BLIF scanX_2_.BLIF N_172_i.BLIF scanX_3_.BLIF N_174_0.BLIF scanX_4_.BLIF \
+  N_154_i.BLIF scanX_5_.BLIF N_155_i.BLIF scanX_6_.BLIF N_156_i.BLIF scanX_7_.BLIF N_157_0.BLIF G_45.BLIF N_130_i.BLIF \
+  G_47.BLIF N_132_i.BLIF G_49.BLIF N_134_0.BLIF G_51.BLIF video_7_0_1_0__n.BLIF G_53.BLIF ballDirectionX6_1_0.BLIF G_55.BLIF \
+  ballDirectionX6_2.BLIF G_57.BLIF ballDirectionX6_3.BLIF scanY_0_.BLIF ballDirectionX5_1.BLIF scanY_1_.BLIF ballDirectionX5_2.BLIF scanY_2_.BLIF ballDirectionX5_3.BLIF \
+  scanY_0_sqmuxa_1.BLIF N_50_1.BLIF scanX_0_sqmuxa.BLIF vState3_1.BLIF vState3_2.BLIF vState3_3.BLIF vState3_4.BLIF vState3_5.BLIF vState3_6.BLIF \
+  vState3_7.BLIF vState8_1_0.BLIF vState8_2.BLIF N_62.BLIF vState8_3.BLIF N_65.BLIF vState8_4.BLIF N_68.BLIF vState8_5.BLIF \
+  N_71.BLIF vState8_6.BLIF N_74.BLIF vState13_1.BLIF N_77.BLIF vState13_2.BLIF N_90.BLIF ballDirectionY6_1_0.BLIF G_68.BLIF \
+  ballDirectionY6_2.BLIF G_69.BLIF ballDirectionY6_3.BLIF G_70.BLIF ballDirectionY5_1.BLIF G_71.BLIF ballDirectionY5_2.BLIF G_72.BLIF ballDirectionY5_3.BLIF \
+  G_73.BLIF scanX11_1.BLIF N_129.BLIF scanX11_2.BLIF N_130.BLIF scanX11_3.BLIF N_131.BLIF scanX11_4.BLIF N_132.BLIF \
+  scanX11_5.BLIF N_133.BLIF scanX11_6.BLIF N_134.BLIF hState13_1.BLIF N_137.BLIF hState13_2.BLIF N_154.BLIF hState13_3.BLIF \
+  N_155.BLIF hState13_4.BLIF N_156.BLIF hState13_5.BLIF N_157.BLIF hState8_1.BLIF N_159.BLIF hState8_2.BLIF N_169.BLIF \
+  hState8_3.BLIF N_170.BLIF hState8_4.BLIF N_171.BLIF hState8_5.BLIF N_172.BLIF hState3_1.BLIF N_173.BLIF hState3_2.BLIF \
+  N_174.BLIF hState3_3.BLIF N_177.BLIF hState3_4_0.BLIF N_194.BLIF hState3_5.BLIF N_195.BLIF scanY10_6_1.BLIF N_196.BLIF \
+  scanY10_6_2.BLIF N_197.BLIF scanY10_1.BLIF N_199.BLIF scanY10_2.BLIF video_7_1__n.BLIF scanY10_3.BLIF ballDirectionY6_1.BLIF video_0_sqmuxa_3_1.BLIF \
+  G_115.BLIF video_0_sqmuxa_3_2.BLIF G_112.BLIF video_0_sqmuxa_3_3.BLIF G_107.BLIF video_0_sqmuxa_3_4.BLIF G_96.BLIF video_0_sqmuxa_3_5.BLIF G_93.BLIF \
+  video_0_sqmuxa_3_6.BLIF G_155.BLIF video_0_sqmuxa_3_7.BLIF G_152.BLIF video_0_sqmuxa_3_8.BLIF G_147.BLIF video_0_sqmuxa_3_9.BLIF G_136.BLIF video_0_sqmuxa_3_10.BLIF \
+  G_133.BLIF video_0_sqmuxa_3_11.BLIF video36.BLIF video_7_1_1__n.BLIF ballDirectionX6.BLIF G_133_1.BLIF ballDirectionX6_1.BLIF G_136_1.BLIF ballDirectionX5.BLIF \
+  G_147_1.BLIF N_146.BLIF G_152_1.BLIF N_158.BLIF G_155_1.BLIF N_147.BLIF G_68_1.BLIF N_136.BLIF G_69_1.BLIF \
+  scanY10.BLIF G_70_1.BLIF scanY10_6.BLIF G_71_1.BLIF vState8_1.BLIF G_72_1.BLIF G_31.BLIF G_73_1.BLIF G_29.BLIF \
+  G_93_1.BLIF G_27.BLIF G_96_1.BLIF hState3_4.BLIF G_107_1.BLIF G_112_1.BLIF G_115_1.BLIF N_87.BLIF N_197_0_1.BLIF \
+  G_43.BLIF N_174_0_1.BLIF N_48.BLIF N_172_1.BLIF N_47.BLIF N_157_0_1.BLIF N_49.BLIF N_134_0_1.BLIF vstate_8_1_0__n_3_n.BLIF \
+  N_132_1.BLIF vState3.BLIF hstate_6_1_0__m8_un3_n.BLIF vState13.BLIF hstate_6_1_0__m8_un1_n.BLIF vstate_8_1_0__n_6_n.BLIF hstate_6_1_0__m8_un0_n.BLIF vState8.BLIF hstate_6_1_0__m6_un3_n.BLIF \
+  vstate_8_1_0__n_9_n.BLIF hstate_6_1_0__m6_un1_n.BLIF N_50.BLIF hstate_6_1_0__m6_un0_n.BLIF scanY_0_sqmuxa.BLIF hstate_6_1_0__m5_un3_n.BLIF ballDirectionY6.BLIF hstate_6_1_0__m5_un1_n.BLIF ballDirectionY5.BLIF \
+  hstate_6_1_0__m5_un0_n.BLIF scanX11.BLIF hstate_6_1_0__m2_un3_n.BLIF hState13.BLIF hstate_6_1_0__m2_un1_n.BLIF hState8.BLIF hstate_6_1_0__m2_un0_n.BLIF hState3.BLIF vstate_8_1_0__m9_un3_n.BLIF \
+  hstate_6_1_0__n_9_n.BLIF vstate_8_1_0__m9_un1_n.BLIF hstate_6_1_0__n_3_n.BLIF vstate_8_1_0__m9_un0_n.BLIF hstate_6_1_0__n_6_n.BLIF hstate_6_1_0__m9_un3_n.BLIF hstate_6_1_0__m9_un1_n.BLIF hstate_6_1_0__m9_un0_n.BLIF vstate_8_1_0__m2_un3_n.BLIF \
+  N_93.BLIF vstate_8_1_0__m2_un1_n.BLIF N_96.BLIF vstate_8_1_0__m2_un0_n.BLIF N_99.BLIF vstate_8_1_0__m5_un3_n.BLIF N_102.BLIF vstate_8_1_0__m5_un1_n.BLIF N_105.BLIF \
+  vstate_8_1_0__m5_un0_n.BLIF G_75.BLIF vstate_8_1_0__m6_un3_n.BLIF G_76.BLIF vstate_8_1_0__m6_un1_n.BLIF G_77.BLIF vstate_8_1_0__m6_un0_n.BLIF G_78.BLIF vstate_8_1_0__m8_un3_n.BLIF \
+  G_79.BLIF vstate_8_1_0__m8_un1_n.BLIF G_80.BLIF vstate_8_1_0__m8_un0_n.BLIF N_186.BLIF N_198.BLIF N_187.BLIF N_176.BLIF ballDirectionY_i.BLIF \
+  N_110_i.BLIF N_109_i.BLIF N_112_i.BLIF N_111_i.BLIF N_114_i.BLIF N_113_i.BLIF N_117_i.BLIF N_116_i.BLIF N_119_i.BLIF \
+  N_118_i.BLIF N_121_i.BLIF N_120_i.BLIF N_219_i.BLIF N_218_i.BLIF N_217_i.BLIF scany_1_i_7__n.BLIF scany_1_i_6__n.BLIF scany_1_i_5__n.BLIF \
+  scany_1_i_4__n.BLIF scany_1_i_3__n.BLIF scany_1_i_2__n.BLIF scanY_0_sqmuxa_i.BLIF hstate_i_0__n.BLIF hState3_i.BLIF hState13_i.BLIF hState8_i.BLIF scanX11_i.BLIF \
+  hstate_6_1_0__n_3_i_n.BLIF scanx_2_i_5__n.BLIF scanx_2_i_3__n.BLIF scanx_2_i_2__n.BLIF scanx_i_0_1__n.BLIF N_216_i.BLIF scany_i_1__n.BLIF scany_1_i_8__n.BLIF scany_1_i_1__n.BLIF \
+  scany_i_2__n.BLIF vstate_i_1__n.BLIF vstate_i_0__n.BLIF scanY10_i.BLIF vstate_8_1_0__n_3_i_n.BLIF vState8_i.BLIF vState3_i.BLIF vState13_i.BLIF scanx_i_0__n.BLIF \
+  scanx_2_i_7__n.BLIF scanx_2_i_6__n.BLIF scanx_2_i_4__n.BLIF scanx_2_i_1__n.BLIF scanX_0_sqmuxa_i.BLIF ballDirectionX_i.BLIF ballx_i_0__n.BLIF N_214_i.BLIF N_213_i.BLIF \
+  N_211_i.BLIF N_210_i.BLIF N_212_i.BLIF reset_n_i.BLIF ntscClock_c.BLIF reset_n_c.BLIF videoDFF_0reg.BLIF videoDFF_1reg.BLIF videoDFF_2reg.BLIF \
+  hStateDFF_0reg.BLIF hStateDFF_1reg.BLIF vStateDFFC_0reg.BLIF vStateDFFC_1reg.BLIF bally_i_1__n.BLIF N_169_0.BLIF bally_i_2__n.BLIF N_171_0.BLIF N_173_i.BLIF \
+  N_176_i.BLIF N_177_0.BLIF bally_i_4__n.BLIF N_187_0.BLIF N_198_i.BLIF N_186_i.BLIF  
+.outputs video_2_ hState_1_ vState_1_ video_1_ video_0_ hState_0_ vState_0_ scanY_4_.D scanY_4_.CE scanY_4_.C scanY_5_.D \
+  scanY_5_.CE scanY_5_.C scanY_6_.D scanY_6_.CE scanY_6_.C scanY_7_.D scanY_7_.CE scanY_7_.C scanY_8_.D scanY_8_.CE scanY_8_.C \
+  ballY_1_.D ballY_1_.CE ballY_1_.C ballY_2_.D ballY_2_.CE ballY_2_.C ballY_3_.D ballY_3_.CE ballY_3_.C ballY_4_.D ballY_4_.CE \
+  ballY_4_.C ballY_5_.D ballY_5_.CE ballY_5_.C scanY_0_.D scanY_0_.CE scanY_0_.C scanY_1_.D scanY_1_.CE scanY_1_.C scanY_2_.D \
+  scanY_2_.CE scanY_2_.C scanY_3_.D scanY_3_.CE scanY_3_.C scanX_7_.D scanX_7_.C ballX_0_.D ballX_0_.C ballX_0_.AP ballX_1_.D \
+  ballX_1_.C ballX_1_.AR ballX_2_.D ballX_2_.C ballX_2_.AR ballX_3_.D ballX_3_.C ballX_3_.AR ballX_4_.D ballX_4_.C ballX_4_.AR \
+  ballX_5_.D ballX_5_.C ballX_5_.AP hStateDFF_0reg.D hStateDFF_0reg.C hStateDFF_1reg.D hStateDFF_1reg.C videoDFF_0reg.D videoDFF_0reg.C videoDFF_1reg.D videoDFF_1reg.C \
+  videoDFF_2reg.D videoDFF_2reg.C vStateDFFC_0reg.D vStateDFFC_0reg.CE vStateDFFC_0reg.C vStateDFFC_1reg.D vStateDFFC_1reg.CE vStateDFFC_1reg.C ballY_0_.D ballY_0_.CE ballY_0_.C \
+  scanX_0_.D scanX_0_.C scanX_1_.D scanX_1_.C scanX_2_.D scanX_2_.C scanX_3_.D scanX_3_.C scanX_4_.D scanX_4_.C scanX_5_.D \
+  scanX_5_.C scanX_6_.D scanX_6_.C inst_ballDirectionY.D inst_ballDirectionY.CE inst_ballDirectionY.C inst_ballDirectionY.AP inst_ballDirectionX.D inst_ballDirectionX.CE inst_ballDirectionX.C inst_ballDirectionX.AP \
+  G_57.X1 G_57.X2 G_75.X1 G_75.X2 G_76.X1 G_76.X2 G_77.X1 G_77.X2 G_78.X1 G_78.X2 G_79.X1 \
+  G_79.X2 G_80.X1 G_80.X2 G_47.X1 G_47.X2 G_49.X1 G_49.X2 G_51.X1 G_51.X2 G_53.X1 G_53.X2 \
+  G_55.X1 G_55.X2 G_96.X1 G_96.X2 G_107_1.X1 G_107_1.X2 G_107.X1 G_107.X2 G_112_1.X1 G_112_1.X2 G_112.X1 \
+  G_112.X2 G_115_1.X1 G_115_1.X2 G_115.X1 G_115.X2 G_68_1.X1 G_68_1.X2 G_68.X1 G_68.X2 G_69_1.X1 G_69_1.X2 \
+  G_69.X1 G_69.X2 G_70_1.X1 G_70_1.X2 G_70.X1 G_70.X2 G_71_1.X1 G_71_1.X2 G_71.X1 G_71.X2 G_72_1.X1 \
+  G_72_1.X2 G_72.X1 G_72.X2 G_73_1.X1 G_73_1.X2 G_43.X1 G_43.X2 G_73.X1 G_73.X2 G_45.X1 G_45.X2 \
+  G_93_1.X1 G_93_1.X2 G_93.X1 G_93.X2 G_96_1.X1 G_96_1.X2 G_133_1.X1 G_133_1.X2 G_133.X1 G_133.X2 G_136_1.X1 \
+  G_136_1.X2 G_136.X1 G_136.X2 G_147_1.X1 G_147_1.X2 G_147.X1 G_147.X2 G_152_1.X1 G_152_1.X2 G_152.X1 G_152.X2 \
+  G_155_1.X1 G_155_1.X2 G_155.X1 G_155.X2 G_19.X1 G_19.X2 G_31.X1 G_31.X2 G_29.X1 G_29.X2 G_27.X1 \
+  G_27.X2 G_21.X1 G_21.X2 G_23.X1 G_23.X2 G_25.X1 G_25.X2 N_199_0 hstate_c_i_1__n N_47_i ballDirectionY6_i \
+  ballDirectionY5_i un1_ballDirectionY5_0 N_50_i N_48_i N_49_i video_7_0_0__n ballx_i_1__n N_129_0 ballx_i_2__n N_131_0 N_133_i \
+  N_136_i N_137_0 ballx_i_4__n N_147_0 N_158_i N_146_i N_159_0 ballDirectionX5_i ballDirectionX6_i un1_ballDirectionX5_0 N_194_i \
+  N_195_i N_196_i N_197_0 N_170_i N_172_i N_174_0 N_154_i N_155_i N_156_i N_157_0 N_130_i \
+  N_132_i N_134_0 video_7_0_1_0__n ballDirectionX6_1_0 ballDirectionX6_2 ballDirectionX6_3 ballDirectionX5_1 ballDirectionX5_2 ballDirectionX5_3 scanY_0_sqmuxa_1 N_50_1 \
+  scanX_0_sqmuxa vState3_1 vState3_2 vState3_3 vState3_4 vState3_5 vState3_6 vState3_7 vState8_1_0 vState8_2 N_62 \
+  vState8_3 N_65 vState8_4 N_68 vState8_5 N_71 vState8_6 N_74 vState13_1 N_77 vState13_2 \
+  N_90 ballDirectionY6_1_0 ballDirectionY6_2 ballDirectionY6_3 ballDirectionY5_1 ballDirectionY5_2 ballDirectionY5_3 scanX11_1 N_129 scanX11_2 N_130 \
+  scanX11_3 N_131 scanX11_4 N_132 scanX11_5 N_133 scanX11_6 N_134 hState13_1 N_137 hState13_2 \
+  N_154 hState13_3 N_155 hState13_4 N_156 hState13_5 N_157 hState8_1 N_159 hState8_2 N_169 \
+  hState8_3 N_170 hState8_4 N_171 hState8_5 N_172 hState3_1 N_173 hState3_2 N_174 hState3_3 \
+  N_177 hState3_4_0 N_194 hState3_5 N_195 scanY10_6_1 N_196 scanY10_6_2 N_197 scanY10_1 N_199 \
+  scanY10_2 video_7_1__n scanY10_3 ballDirectionY6_1 video_0_sqmuxa_3_1 video_0_sqmuxa_3_2 video_0_sqmuxa_3_3 video_0_sqmuxa_3_4 video_0_sqmuxa_3_5 video_0_sqmuxa_3_6 video_0_sqmuxa_3_7 \
+  video_0_sqmuxa_3_8 video_0_sqmuxa_3_9 video_0_sqmuxa_3_10 video_0_sqmuxa_3_11 video36 video_7_1_1__n ballDirectionX6 ballDirectionX6_1 ballDirectionX5 N_146 N_158 \
+  N_147 N_136 scanY10 scanY10_6 vState8_1 hState3_4 N_87 N_197_0_1 N_174_0_1 N_48 N_172_1 \
+  N_47 N_157_0_1 N_49 N_134_0_1 vstate_8_1_0__n_3_n N_132_1 vState3 hstate_6_1_0__m8_un3_n vState13 hstate_6_1_0__m8_un1_n vstate_8_1_0__n_6_n \
+  hstate_6_1_0__m8_un0_n vState8 hstate_6_1_0__m6_un3_n vstate_8_1_0__n_9_n hstate_6_1_0__m6_un1_n N_50 hstate_6_1_0__m6_un0_n scanY_0_sqmuxa hstate_6_1_0__m5_un3_n ballDirectionY6 hstate_6_1_0__m5_un1_n \
+  ballDirectionY5 hstate_6_1_0__m5_un0_n scanX11 hstate_6_1_0__m2_un3_n hState13 hstate_6_1_0__m2_un1_n hState8 hstate_6_1_0__m2_un0_n hState3 vstate_8_1_0__m9_un3_n hstate_6_1_0__n_9_n \
+  vstate_8_1_0__m9_un1_n hstate_6_1_0__n_3_n vstate_8_1_0__m9_un0_n hstate_6_1_0__n_6_n hstate_6_1_0__m9_un3_n hstate_6_1_0__m9_un1_n hstate_6_1_0__m9_un0_n vstate_8_1_0__m2_un3_n N_93 vstate_8_1_0__m2_un1_n N_96 \
+  vstate_8_1_0__m2_un0_n N_99 vstate_8_1_0__m5_un3_n N_102 vstate_8_1_0__m5_un1_n N_105 vstate_8_1_0__m5_un0_n vstate_8_1_0__m6_un3_n vstate_8_1_0__m6_un1_n vstate_8_1_0__m6_un0_n vstate_8_1_0__m8_un3_n \
+  vstate_8_1_0__m8_un1_n vstate_8_1_0__m8_un0_n N_186 N_198 N_187 N_176 ballDirectionY_i N_110_i N_109_i N_112_i N_111_i \
+  N_114_i N_113_i N_117_i N_116_i N_119_i N_118_i N_121_i N_120_i N_219_i N_218_i N_217_i \
+  scany_1_i_7__n scany_1_i_6__n scany_1_i_5__n scany_1_i_4__n scany_1_i_3__n scany_1_i_2__n scanY_0_sqmuxa_i hstate_i_0__n hState3_i hState13_i hState8_i \
+  scanX11_i hstate_6_1_0__n_3_i_n scanx_2_i_5__n scanx_2_i_3__n scanx_2_i_2__n scanx_i_0_1__n N_216_i scany_i_1__n scany_1_i_8__n scany_1_i_1__n scany_i_2__n \
+  vstate_i_1__n vstate_i_0__n scanY10_i vstate_8_1_0__n_3_i_n vState8_i vState3_i vState13_i scanx_i_0__n scanx_2_i_7__n scanx_2_i_6__n scanx_2_i_4__n \
+  scanx_2_i_1__n scanX_0_sqmuxa_i ballDirectionX_i ballx_i_0__n N_214_i N_213_i N_211_i N_210_i N_212_i reset_n_i ntscClock_c \
+  reset_n_c bally_i_1__n N_169_0 bally_i_2__n N_171_0 N_173_i N_176_i N_177_0 bally_i_4__n N_187_0 N_198_i \
+  N_186_i
+.names  ballDirectionY_i.BLIF ballY_3_.BLIF N_194
+11 1
+.names  ntscClock_c.BLIF scanY_3_.C
+1 1
+.names  scanX_4_.BLIF G_70.X2
+1 1
+.names  inst_ballDirectionY.BLIF bally_i_4__n.BLIF N_187_0
+11 1
+.names  ballDirectionY_i.BLIF ballY_4_.BLIF N_186
+11 1
+.names  N_173_i.BLIF N_176_i.BLIF N_177_0
+11 1
+.names  N_71.BLIF G_71_1.X1
+1 1
+.names  N_169.BLIF ballY_0_.BLIF N_176
+11 1
+.names  ntscClock_c.BLIF scanX_7_.C
+1 1
+.names  ballX_3_.BLIF G_71_1.X2
+1 1
+.names  ballx_i_0__n.BLIF ballX_0_.D
+1 1
+.names  G_71_1.BLIF G_71.X1
+1 1
+.names  scanY_8_.BLIF ballX_0_.C
+1 1
+.names  scanX_5_.BLIF G_71.X2
+1 1
+.names  reset_n_i.BLIF ballX_0_.AP
+1 1
+.names  G_133.BLIF N_219_i
+0 1
+.names  N_219_i.BLIF ballY_0_.BLIF ballDirectionY6_1
+11 1
+.names  N_74.BLIF G_72_1.X1
+1 1
+.names  G_80.BLIF N_121_i
+0 1
+.names  N_214_i.BLIF ballX_1_.D
+1 1
+.names  G_79.BLIF N_120_i
+0 1
+.names  ballX_4_.BLIF G_72_1.X2
+1 1
+.names  G_78.BLIF N_119_i
+0 1
+.names  scanY_8_.BLIF ballX_1_.C
+1 1
+.names  G_77.BLIF N_118_i
+0 1
+.names  G_76.BLIF N_117_i
+0 1
+.names  reset_n_i.BLIF ballX_1_.AR
+1 1
+.names  G_72_1.BLIF G_72.X1
+1 1
+.names  G_75.BLIF N_116_i
+0 1
+.names  scanX11.BLIF video36.BLIF scanX_0_sqmuxa
+11 1
+.names  scanX_6_.BLIF G_72.X2
+1 1
+.names  hStateDFF_0reg.BLIF hStateDFF_1reg.BLIF video36
+11 1
+.names  N_213_i.BLIF ballX_2_.D
+1 1
+.names  G_45.BLIF scany_1_i_2__n
+0 1
+.names  G_49.BLIF scany_1_i_4__n
+0 1
+.names  scanY_8_.BLIF ballX_2_.C
+1 1
+.names  N_77.BLIF G_73_1.X1
+1 1
+.names  G_47.BLIF scany_1_i_3__n
+0 1
+.names  G_53.BLIF scany_1_i_6__n
+0 1
+.names  reset_n_i.BLIF ballX_2_.AR
+1 1
+.names  ballX_5_.BLIF G_73_1.X2
+1 1
+.names  G_51.BLIF scany_1_i_5__n
+0 1
+.names  G_55.BLIF scany_1_i_7__n
+0 1
+.names  G_136.BLIF N_218_i
+0 1
+.names  N_212_i.BLIF ballX_3_.D
+1 1
+.names  scanY_0_.BLIF G_43.X1
+1 1
+.names  G_147.BLIF N_217_i
+0 1
+.names  scanY_8_.BLIF ballX_3_.C
+1 1
+.names  scanY_1_.BLIF G_43.X2
+1 1
+.names  reset_n_i.BLIF ballX_3_.AR
+1 1
+.names  G_73_1.BLIF G_73.X1
+1 1
+.names  hStateDFF_1reg.BLIF hstate_6_1_0__m8_un3_n
+0 1
+.names  N_211_i.BLIF ballX_4_.D
+1 1
+.names  scanX_7_.BLIF G_73.X2
+1 1
+.names  scanX11_i.BLIF hStateDFF_1reg.BLIF hstate_6_1_0__m8_un1_n
+11 1
+.names  hState8.BLIF hstate_6_1_0__m8_un3_n.BLIF hstate_6_1_0__m8_un0_n
+11 1
+.names  scanY_8_.BLIF ballX_4_.C
+1 1
+.names  hstate_6_1_0__m8_un1_n.BLIF hstate_6_1_0__m8_un0_n.BLIF hstate_6_1_0__n_9_n
+1- 1
+-1 1
+.names  N_87.BLIF G_45.X1
+1 1
+.names  hstate_6_1_0__n_3_n.BLIF hstate_6_1_0__n_3_i_n
+0 1
+.names  reset_n_i.BLIF ballX_4_.AR
+1 1
+.names  hStateDFF_0reg.BLIF hstate_6_1_0__m6_un3_n
+0 1
+.names  scanY_2_.BLIF G_45.X2
+1 1
+.names  hstate_6_1_0__n_6_n.BLIF hStateDFF_0reg.BLIF hstate_6_1_0__m6_un1_n
+11 1
+.names  hstate_6_1_0__n_3_i_n.BLIF hstate_6_1_0__m6_un3_n.BLIF hstate_6_1_0__m6_un0_n
+11 1
+.names  N_210_i.BLIF ballX_5_.D
+1 1
+.names  hstate_6_1_0__m6_un1_n.BLIF hstate_6_1_0__m6_un0_n.BLIF hStateDFF_0reg.D
+1- 1
+-1 1
+.names  inst_ballDirectionX.BLIF G_93_1.X1
+1 1
+.names  hState8.BLIF hState8_i
+0 1
+.names  scanY_8_.BLIF ballX_5_.C
+1 1
+.names  scanX11.BLIF scanX11_i
+0 1
+.names  ballX_0_.BLIF G_93_1.X2
+1 1
+.names  hStateDFF_1reg.BLIF hstate_6_1_0__m5_un3_n
+0 1
+.names  reset_n_i.BLIF ballX_5_.AP
+1 1
+.names  ntscClock.BLIF ntscClock_c
+1 1
+.names  scanX11_i.BLIF hStateDFF_1reg.BLIF hstate_6_1_0__m5_un1_n
+11 1
+.names  reset_n.BLIF reset_n_c
+1 1
+.names  hState8_i.BLIF hstate_6_1_0__m5_un3_n.BLIF hstate_6_1_0__m5_un0_n
+11 1
+.names  G_93_1.BLIF G_93.X1
+1 1
+.names  videoDFF_0reg.BLIF video_0_
+1 1
+.names  hstate_6_1_0__m5_un1_n.BLIF hstate_6_1_0__m5_un0_n.BLIF hstate_6_1_0__n_6_n
+1- 1
+-1 1
+.names  videoDFF_1reg.BLIF video_1_
+1 1
+.names  hState3.BLIF hState3_i
+0 1
+.names  ntscClock_c.BLIF hStateDFF_0reg.C
+1 1
+.names  ballX_1_.BLIF G_93.X2
+1 1
+.names  videoDFF_2reg.BLIF video_2_
+1 1
+.names  hState13.BLIF hState13_i
+0 1
+.names  hStateDFF_0reg.BLIF hState_0_
+1 1
+.names  hStateDFF_1reg.BLIF hstate_6_1_0__m2_un3_n
+0 1
+.names  hStateDFF_1reg.BLIF hState_1_
+1 1
+.names  hState13_i.BLIF hStateDFF_1reg.BLIF hstate_6_1_0__m2_un1_n
+11 1
+.names  N_137.BLIF G_96_1.X1
+1 1
+.names  vStateDFFC_0reg.BLIF vState_0_
+1 1
+.names  hState3_i.BLIF hstate_6_1_0__m2_un3_n.BLIF hstate_6_1_0__m2_un0_n
+11 1
+.names  ntscClock_c.BLIF hStateDFF_1reg.C
+1 1
+.names  vStateDFFC_1reg.BLIF vState_1_
+1 1
+.names  hstate_6_1_0__m2_un1_n.BLIF hstate_6_1_0__m2_un0_n.BLIF hstate_6_1_0__n_3_n
+1- 1
+-1 1
+.names  inst_ballDirectionX.BLIF G_96_1.X2
+1 1
+.names  N_133_i.BLIF N_130_i.BLIF N_134_0_1
+11 1
+.names  hStateDFF_0reg.BLIF hstate_i_0__n
+0 1
+.names  N_134_0_1.BLIF N_132_i.BLIF N_134_0
+11 1
+.names  hStateDFF_0reg.BLIF hstate_c_i_1__n.BLIF N_47_i
+11 1
+.names  N_129.BLIF N_131.BLIF N_132_1
+11 1
+.names  scanY_0_sqmuxa_i.BLIF G_45.BLIF scanY_2_.D
+11 1
+.names  ntscClock_c.BLIF videoDFF_0reg.C
+1 1
+.names  inst_ballDirectionY.BLIF G_133_1.X1
+1 1
+.names  N_132_1.BLIF ballX_0_.BLIF N_132
+11 1
+.names  scanY_0_sqmuxa_i.BLIF G_43.BLIF scanY_1_.D
+11 1
+.names  scanY_0_sqmuxa.BLIF scanY_0_sqmuxa_i
+0 1
+.names  ballY_0_.BLIF G_133_1.X2
+1 1
+.names  scanY_0_sqmuxa_i.BLIF G_57.BLIF scanY_8_.D
+11 1
+.names  video_7_1__n.BLIF videoDFF_1reg.D
+1 1
+.names  vStateDFFC_0reg.BLIF vstate_8_1_0__m9_un3_n
+0 1
+.names  vstate_8_1_0__n_9_n.BLIF vStateDFFC_0reg.BLIF vstate_8_1_0__m9_un1_n
+11 1
+.names  ntscClock_c.BLIF videoDFF_1reg.C
+1 1
+.names  G_133_1.BLIF G_133.X1
+1 1
+.names  vStateDFFC_1reg.BLIF vstate_8_1_0__m9_un3_n.BLIF vstate_8_1_0__m9_un0_n
+11 1
+.names  vstate_8_1_0__m9_un1_n.BLIF vstate_8_1_0__m9_un0_n.BLIF vStateDFFC_1reg.D
+1- 1
+-1 1
+.names  ballY_1_.BLIF G_133.X2
+1 1
+.names  vStateDFFC_1reg.BLIF vstate_i_1__n
+0 1
+.names  N_196_i.BLIF N_194_i.BLIF N_197_0_1
+11 1
+.names  vStateDFFC_0reg.BLIF vstate_i_0__n
+0 1
+.names  ntscClock_c.BLIF videoDFF_2reg.C
+1 1
+.names  N_197_0_1.BLIF N_195_i.BLIF N_197_0
+11 1
+.names  scanY_2_.BLIF scany_i_2__n
+0 1
+.names  N_177.BLIF G_136_1.X1
+1 1
+.names  N_173_i.BLIF N_170_i.BLIF N_174_0_1
+11 1
+.names  G_43.BLIF scany_1_i_1__n
+0 1
+.names  N_174_0_1.BLIF N_172_i.BLIF N_174_0
+11 1
+.names  G_57.BLIF scany_1_i_8__n
+0 1
+.names  inst_ballDirectionY.BLIF G_136_1.X2
+1 1
+.names  N_169.BLIF N_171.BLIF N_172_1
+11 1
+.names  scanY_1_.BLIF scany_i_1__n
+0 1
+.names  scanX_0_sqmuxa.BLIF vStateDFFC_0reg.CE
+1 1
+.names  N_172_1.BLIF ballY_0_.BLIF N_172
+11 1
+.names  scanY_0_.BLIF scany_i_1__n.BLIF vState8_1
+11 1
+.names  N_156_i.BLIF N_154_i.BLIF N_157_0_1
+11 1
+.names  G_152.BLIF N_216_i
+0 1
+.names  ntscClock_c.BLIF vStateDFFC_0reg.C
+1 1
+.names  G_136_1.BLIF G_136.X1
+1 1
+.names  N_157_0_1.BLIF N_155_i.BLIF N_157_0
+11 1
+.names  ballDirectionY5_i.BLIF ballDirectionY6_i.BLIF un1_ballDirectionY5_0
+11 1
+.names  G_21.BLIF scanx_2_i_2__n
+0 1
+.names  ballY_2_.BLIF G_136.X2
+1 1
+.names  scanX_1_.BLIF scanx_i_0_1__n
+0 1
+.names  G_27.BLIF scanx_2_i_5__n
+0 1
+.names  scanX_0_sqmuxa.BLIF vStateDFFC_1reg.CE
+1 1
+.names  G_23.BLIF scanx_2_i_3__n
+0 1
+.names  N_174.BLIF G_147_1.X1
+1 1
+.names  hStateDFF_0reg.BLIF hstate_6_1_0__m9_un3_n
+0 1
+.names  ntscClock_c.BLIF vStateDFFC_1reg.C
+1 1
+.names  hstate_6_1_0__n_9_n.BLIF hStateDFF_0reg.BLIF hstate_6_1_0__m9_un1_n
+11 1
+.names  inst_ballDirectionY.BLIF G_147_1.X2
+1 1
+.names  hStateDFF_1reg.BLIF hstate_6_1_0__m9_un3_n.BLIF hstate_6_1_0__m9_un0_n
+11 1
+.names  hstate_6_1_0__m9_un1_n.BLIF hstate_6_1_0__m9_un0_n.BLIF hStateDFF_1reg.D
+1- 1
+-1 1
+.names  scanY_0_.BLIF scanY_1_.BLIF N_87
+11 1
+.names  reset_n_c.BLIF ballY_0_.CE
+1 1
+.names  G_147_1.BLIF G_147.X1
+1 1
+.names  N_87.BLIF scanY_2_.BLIF N_90
+11 1
+.names  scanY_8_.BLIF ballY_0_.C
+1 1
+.names  ballY_3_.BLIF G_147.X2
+1 1
+.names  N_47.BLIF vStateDFFC_0reg.BLIF N_48
+11 1
+.names  hstate_i_0__n.BLIF vstate_i_1__n.BLIF N_49
+11 1
+.names  N_197.BLIF G_152_1.X1
+1 1
+.names  vState3.BLIF vState3_i
+0 1
+.names  ntscClock_c.BLIF scanX_0_.C
+1 1
+.names  video_0_sqmuxa_3_7.BLIF video_0_sqmuxa_3_8.BLIF video_0_sqmuxa_3_10
+11 1
+.names  vState13.BLIF vState13_i
+0 1
+.names  inst_ballDirectionY.BLIF G_152_1.X2
+1 1
+.names  video_0_sqmuxa_3_9.BLIF video_7_1__n.BLIF video_0_sqmuxa_3_11
+11 1
+.names  vStateDFFC_1reg.BLIF vstate_8_1_0__m2_un3_n
+0 1
+.names  video_0_sqmuxa_3_10.BLIF video_0_sqmuxa_3_11.BLIF videoDFF_2reg.D
+11 1
+.names  vState13_i.BLIF vStateDFFC_1reg.BLIF vstate_8_1_0__m2_un1_n
+11 1
+.names  G_19.BLIF scanX_1_.D
+1 1
+.names  video36.BLIF vstate_i_0__n.BLIF video_7_1_1__n
+11 1
+.names  vState3_i.BLIF vstate_8_1_0__m2_un3_n.BLIF vstate_8_1_0__m2_un0_n
+11 1
+.names  G_152_1.BLIF G_152.X1
+1 1
+.names  video_7_1_1__n.BLIF vstate_i_1__n.BLIF video_7_1__n
+11 1
+.names  vstate_8_1_0__m2_un1_n.BLIF vstate_8_1_0__m2_un0_n.BLIF vstate_8_1_0__n_3_n
+1- 1
+-1 1
+.names  ntscClock_c.BLIF scanX_1_.C
+1 1
+.names  vState8.BLIF vState8_i
+0 1
+.names  ballY_4_.BLIF G_152.X2
+1 1
+.names  vStateDFFC_1reg.BLIF vstate_8_1_0__m5_un3_n
+0 1
+.names  scanY10_i.BLIF vStateDFFC_1reg.BLIF vstate_8_1_0__m5_un1_n
+11 1
+.names  G_21.BLIF scanX_2_.D
+1 1
+.names  vState8_i.BLIF vstate_8_1_0__m5_un3_n.BLIF vstate_8_1_0__m5_un0_n
+11 1
+.names  N_199.BLIF G_155_1.X1
+1 1
+.names  vstate_8_1_0__m5_un1_n.BLIF vstate_8_1_0__m5_un0_n.BLIF vstate_8_1_0__n_6_n
+1- 1
+-1 1
+.names  ntscClock_c.BLIF scanX_2_.C
+1 1
+.names  vstate_8_1_0__n_3_n.BLIF vstate_8_1_0__n_3_i_n
+0 1
+.names  inst_ballDirectionY.BLIF G_155_1.X2
+1 1
+.names  vStateDFFC_0reg.BLIF vstate_8_1_0__m6_un3_n
+0 1
+.names  vstate_8_1_0__n_6_n.BLIF vStateDFFC_0reg.BLIF vstate_8_1_0__m6_un1_n
+11 1
+.names  G_23.BLIF scanX_3_.D
+1 1
+.names  vstate_8_1_0__n_3_i_n.BLIF vstate_8_1_0__m6_un3_n.BLIF vstate_8_1_0__m6_un0_n
+11 1
+.names  G_155_1.BLIF G_155.X1
+1 1
+.names  vstate_8_1_0__m6_un1_n.BLIF vstate_8_1_0__m6_un0_n.BLIF vStateDFFC_0reg.D
+1- 1
+-1 1
+.names  ntscClock_c.BLIF scanX_3_.C
+1 1
+.names  scany_1_i_5__n.BLIF scany_1_i_6__n.BLIF scanY10_6_2
+11 1
+.names  scanY10.BLIF scanY10_i
+0 1
+.names  ballY_5_.BLIF G_155.X2
+1 1
+.names  scanY10_6_1.BLIF scanY10_6_2.BLIF scanY10_6
+11 1
+.names  vStateDFFC_1reg.BLIF vstate_8_1_0__m8_un3_n
+0 1
+.names  scanY10_6.BLIF scanY_2_.BLIF scanY10_1
+11 1
+.names  scanY10_i.BLIF vStateDFFC_1reg.BLIF vstate_8_1_0__m8_un1_n
+11 1
+.names  G_25.BLIF scanX_4_.D
+1 1
+.names  G_57.BLIF scany_1_i_7__n.BLIF scanY10_2
+11 1
+.names  vState8.BLIF vstate_8_1_0__m8_un3_n.BLIF vstate_8_1_0__m8_un0_n
+11 1
+.names  scanX_0_.BLIF G_19.X1
+1 1
+.names  scanY10_1.BLIF scanY10_2.BLIF scanY10_3
+11 1
+.names  vstate_8_1_0__m8_un1_n.BLIF vstate_8_1_0__m8_un0_n.BLIF vstate_8_1_0__n_9_n
+1- 1
+-1 1
+.names  ntscClock_c.BLIF scanX_4_.C
+1 1
+.names  scanY10_3.BLIF vState8_1.BLIF scanY10
+11 1
+.names  scanX_1_.BLIF G_19.X2
+1 1
+.names  N_109_i.BLIF N_110_i.BLIF video_0_sqmuxa_3_1
+11 1
+.names  N_111_i.BLIF N_112_i.BLIF video_0_sqmuxa_3_2
+11 1
+.names  N_113_i.BLIF N_114_i.BLIF video_0_sqmuxa_3_3
+11 1
+.names  ntscClock_c.BLIF scanX_5_.C
+1 1
+.names  N_77.BLIF G_31.X1
+1 1
+.names  N_116_i.BLIF N_117_i.BLIF video_0_sqmuxa_3_4
+11 1
+.names  scanX_0_sqmuxa_i.BLIF scanx_i_0__n.BLIF scanX_0_.D
+11 1
+.names  N_118_i.BLIF N_119_i.BLIF video_0_sqmuxa_3_5
+11 1
+.names  scanX_0_sqmuxa_i.BLIF G_27.BLIF scanX_5_.D
+11 1
+.names  scanX_7_.BLIF G_31.X2
+1 1
+.names  N_120_i.BLIF N_121_i.BLIF video_0_sqmuxa_3_6
+11 1
+.names  scanX_0_sqmuxa_i.BLIF G_29.BLIF scanX_6_.D
+11 1
+.names  video_0_sqmuxa_3_1.BLIF video_0_sqmuxa_3_2.BLIF video_0_sqmuxa_3_7
+11 1
+.names  scanX_0_sqmuxa.BLIF scanX_0_sqmuxa_i
+0 1
+.names  ntscClock_c.BLIF scanX_6_.C
+1 1
+.names  video_0_sqmuxa_3_3.BLIF video_0_sqmuxa_3_4.BLIF video_0_sqmuxa_3_8
+11 1
+.names  scanX_0_sqmuxa_i.BLIF G_31.BLIF scanX_7_.D
+11 1
+.names  N_74.BLIF G_29.X1
+1 1
+.names  video_0_sqmuxa_3_5.BLIF video_0_sqmuxa_3_6.BLIF video_0_sqmuxa_3_9
+11 1
+.names  G_19.BLIF scanx_2_i_1__n
+0 1
+.names  hState13_3.BLIF scanx_2_i_4__n.BLIF hState13_5
+11 1
+.names  G_25.BLIF scanx_2_i_4__n
+0 1
+.names  scanX_6_.BLIF G_29.X2
+1 1
+.names  hState13_4.BLIF hState13_5.BLIF hState13
+11 1
+.names  G_31.BLIF scanx_2_i_7__n
+0 1
+.names  hState3_4.BLIF scanX_1_.BLIF hState8_1
+11 1
+.names  G_29.BLIF scanx_2_i_6__n
+0 1
+.names  scanY_8_.BLIF inst_ballDirectionY.C
+1 1
+.names  G_21.BLIF G_25.BLIF hState8_2
+11 1
+.names  scanx_2_i_6__n.BLIF scanx_2_i_7__n.BLIF hState3_4
+11 1
+.names  N_71.BLIF G_27.X1
+1 1
+.names  scanx_2_i_3__n.BLIF scanx_2_i_5__n.BLIF hState8_3
+11 1
+.names  scanX_0_.BLIF scanx_i_0__n
+0 1
+.names  reset_n_i.BLIF inst_ballDirectionY.AP
+1 1
+.names  hState8_1.BLIF hState8_2.BLIF hState8_4
+11 1
+.names  N_129.BLIF ballX_0_.BLIF N_136
+11 1
+.names  scanX_5_.BLIF G_27.X2
+1 1
+.names  hState8_3.BLIF scanx_i_0__n.BLIF hState8_5
+11 1
+.names  inst_ballDirectionX.BLIF ballx_i_2__n.BLIF N_131_0
+11 1
+.names  hState8_4.BLIF hState8_5.BLIF hState8
+11 1
+.names  ballDirectionX_i.BLIF ballX_2_.BLIF N_130
+11 1
+.names  hState3_4.BLIF scanX_0_.BLIF hState3_1
+11 1
+.names  inst_ballDirectionX.BLIF ballx_i_1__n.BLIF N_129_0
+11 1
+.names  N_62.BLIF G_21.X1
+1 1
+.names  G_19.BLIF G_21.BLIF hState3_2
+11 1
+.names  inst_ballDirectionX.BLIF ballDirectionX_i
+0 1
+.names  scanY_8_.BLIF inst_ballDirectionX.C
+1 1
+.names  scanx_2_i_3__n.BLIF scanx_2_i_4__n.BLIF hState3_3
+11 1
+.names  ballDirectionX_i.BLIF ballX_1_.BLIF N_133
+11 1
+.names  scanX_2_.BLIF G_21.X2
+1 1
+.names  hState3_1.BLIF hState3_2.BLIF hState3_4_0
+11 1
+.names  reset_n_i.BLIF inst_ballDirectionX.AP
+1 1
+.names  hState3_3.BLIF scanx_2_i_5__n.BLIF hState3_5
+11 1
+.names  hState3_4_0.BLIF hState3_5.BLIF hState3
+11 1
+.names  N_65.BLIF G_23.X1
+1 1
+.names  scany_1_i_3__n.BLIF scany_1_i_4__n.BLIF scanY10_6_1
+11 1
+.names  N_68.BLIF scanX_4_.BLIF N_71
+11 1
+.names  N_105.BLIF G_57.X1
+1 1
+.names  G_155.BLIF N_216_i.BLIF ballDirectionY5_1
+11 1
+.names  N_65.BLIF scanX_3_.BLIF N_68
+11 1
+.names  scanX_3_.BLIF G_23.X2
+1 1
+.names  N_217_i.BLIF N_218_i.BLIF ballDirectionY5_2
+11 1
+.names  N_62.BLIF scanX_2_.BLIF N_65
+11 1
+.names  scanY_8_.BLIF G_57.X2
+1 1
+.names  ballDirectionY5_1.BLIF ballDirectionY5_2.BLIF ballDirectionY5_3
+11 1
+.names  scanX_0_.BLIF scanX_1_.BLIF N_62
+11 1
+.names  ballDirectionY5_3.BLIF ballDirectionY6_1.BLIF ballDirectionY5
+11 1
+.names  N_71.BLIF scanX_5_.BLIF N_74
+11 1
+.names  N_68.BLIF G_25.X1
+1 1
+.names  scanX_5_.BLIF G_29.BLIF scanX11_1
+11 1
+.names  N_74.BLIF scanX_6_.BLIF N_77
+11 1
+.names  ballY_0_.BLIF G_75.X1
+1 1
+.names  G_31.BLIF scanx_2_i_2__n.BLIF scanX11_2
+11 1
+.names  G_115.BLIF N_210_i
+0 1
+.names  scanX_4_.BLIF G_25.X2
+1 1
+.names  scanx_2_i_3__n.BLIF scanx_2_i_4__n.BLIF scanX11_3
+11 1
+.names  G_96.BLIF N_213_i
+0 1
+.names  scanY_3_.BLIF G_75.X2
+1 1
+.names  scanx_i_0__n.BLIF scanx_i_0_1__n.BLIF scanX11_4
+11 1
+.names  G_112.BLIF N_211_i
+0 1
+.names  scanX11_1.BLIF scanX11_2.BLIF scanX11_5
+11 1
+.names  ballDirectionX5_i.BLIF ballDirectionX6_i.BLIF un1_ballDirectionX5_0
+11 1
+.names  scanX11_3.BLIF scanX11_4.BLIF scanX11_6
+11 1
+.names  ballX_0_.BLIF ballx_i_0__n
+0 1
+.names  ballY_1_.BLIF G_76.X1
+1 1
+.names  scanX11_5.BLIF scanX11_6.BLIF scanX11
+11 1
+.names  G_93.BLIF N_214_i
+0 1
+.names  hState3_4.BLIF scanX_0_.BLIF hState13_1
+11 1
+.names  N_214_i.BLIF ballx_i_0__n.BLIF ballDirectionX6_1
+11 1
+.names  scanY_4_.BLIF G_76.X2
+1 1
+.names  G_23.BLIF G_27.BLIF hState13_2
+11 1
+.names  N_146_i.BLIF N_158_i.BLIF N_159_0
+11 1
+.names  scanx_2_i_1__n.BLIF scanx_2_i_2__n.BLIF hState13_3
+11 1
+.names  N_147.BLIF N_157.BLIF N_158
+11 1
+.names  hState13_1.BLIF hState13_2.BLIF hState13_4
+11 1
+.names  N_134.BLIF ballX_3_.BLIF N_156
+11 1
+.names  ballY_2_.BLIF G_77.X1
+1 1
+.names  vState3_7.BLIF scany_1_i_8__n.BLIF vState3
+11 1
+.names  N_134.BLIF ballDirectionX_i.BLIF N_155
+11 1
+.names  G_47.BLIF G_49.BLIF vState8_1_0
+11 1
+.names  ballDirectionX_i.BLIF ballX_3_.BLIF N_154
+11 1
+.names  scanY_5_.BLIF G_77.X2
+1 1
+.names  G_51.BLIF G_53.BLIF vState8_2
+11 1
+.names  inst_ballDirectionX.BLIF ballx_i_4__n.BLIF N_147_0
+11 1
+.names  G_55.BLIF scany_1_i_2__n.BLIF vState8_3
+11 1
+.names  ballDirectionX_i.BLIF ballX_4_.BLIF N_146
+11 1
+.names  scany_1_i_8__n.BLIF vState8_1.BLIF vState8_4
+11 1
+.names  N_133_i.BLIF N_136_i.BLIF N_137_0
+11 1
+.names  ballY_3_.BLIF G_78.X1
+1 1
+.names  vState8_1_0.BLIF vState8_2.BLIF vState8_5
+11 1
+.names  ballY_0_.BLIF ballY_0_.D
+0 1
+.names  vState8_3.BLIF vState8_4.BLIF vState8_6
+11 1
+.names  ballY_3_.BLIF inst_ballDirectionY.D
+0 1
+.names  scanY_6_.BLIF G_78.X2
+1 1
+.names  vState8_5.BLIF vState8_6.BLIF vState8
+11 1
+.names  ballX_5_.BLIF inst_ballDirectionX.D
+0 1
+.names  N_90.BLIF scanY10_6.BLIF vState13_1
+11 1
+.names  reset_n_c.BLIF reset_n_i
+0 1
+.names  G_57.BLIF scany_1_i_7__n.BLIF vState13_2
+11 1
+.names  G_107.BLIF N_212_i
+0 1
+.names  ballY_4_.BLIF G_79.X1
+1 1
+.names  vState13_1.BLIF vState13_2.BLIF vState13
+11 1
+.names  G_155.BLIF ballY_5_.D
+0 1
+.names  ballDirectionY6_1.BLIF G_155.BLIF ballDirectionY6_1_0
+11 1
+.names  scanY_0_.BLIF scanY_0_.D
+0 1
+.names  scanY_7_.BLIF G_79.X2
+1 1
+.names  G_152.BLIF G_147.BLIF ballDirectionY6_2
+11 1
+.names  ballDirectionY6_1_0.BLIF ballDirectionY6_2.BLIF ballDirectionY6_3
+11 1
+.names  ballDirectionY6_3.BLIF G_136.BLIF ballDirectionY6
+11 1
+.names  ballY_5_.BLIF G_80.X1
+1 1
+.names  N_210_i.BLIF N_211_i.BLIF ballDirectionX5_1
+11 1
+.names  G_107.BLIF N_213_i.BLIF ballDirectionX5_2
+11 1
+.names  G_49.BLIF scanY_4_.D
+1 1
+.names  scanY_8_.BLIF G_80.X2
+1 1
+.names  ballDirectionX5_1.BLIF ballDirectionX5_2.BLIF ballDirectionX5_3
+11 1
+.names  ballDirectionX5_3.BLIF ballDirectionX6_1.BLIF ballDirectionX5
+11 1
+.names  scanX_0_sqmuxa.BLIF scanY_4_.CE
+1 1
+.names  scanY10.BLIF vStateDFFC_0reg.BLIF scanY_0_sqmuxa_1
+11 1
+.names  N_90.BLIF G_47.X1
+1 1
+.names  scanY_0_sqmuxa_1.BLIF vStateDFFC_1reg.BLIF scanY_0_sqmuxa
+11 1
+.names  ntscClock_c.BLIF scanY_4_.C
+1 1
+.names  N_47_i.BLIF vStateDFFC_1reg.BLIF N_50_1
+11 1
+.names  scanY_3_.BLIF G_47.X2
+1 1
+.names  N_50_1.BLIF vstate_i_0__n.BLIF N_50
+11 1
+.names  scany_i_2__n.BLIF scanY_0_.BLIF vState3_1
+11 1
+.names  G_51.BLIF scanY_5_.D
+1 1
+.names  G_49.BLIF G_51.BLIF vState3_2
+11 1
+.names  N_93.BLIF G_49.X1
+1 1
+.names  G_53.BLIF G_55.BLIF vState3_3
+11 1
+.names  scanX_0_sqmuxa.BLIF scanY_5_.CE
+1 1
+.names  scany_1_i_1__n.BLIF scany_1_i_3__n.BLIF vState3_4
+11 1
+.names  scanY_4_.BLIF G_49.X2
+1 1
+.names  vState3_1.BLIF vState3_2.BLIF vState3_5
+11 1
+.names  ntscClock_c.BLIF scanY_5_.C
+1 1
+.names  vState3_3.BLIF vState3_4.BLIF vState3_6
+11 1
+.names  vState3_5.BLIF vState3_6.BLIF vState3_7
+11 1
+.names  N_96.BLIF G_51.X1
+1 1
+.names  N_172.BLIF N_172_i
+0 1
+.names  G_53.BLIF scanY_6_.D
+1 1
+.names  N_174_0.BLIF N_174
+0 1
+.names  scanY_5_.BLIF G_51.X2
+1 1
+.names  N_154.BLIF N_154_i
+0 1
+.names  scanX_0_sqmuxa.BLIF scanY_6_.CE
+1 1
+.names  N_155.BLIF N_155_i
+0 1
+.names  N_156.BLIF N_156_i
+0 1
+.names  ntscClock_c.BLIF scanY_6_.C
+1 1
+.names  N_99.BLIF G_53.X1
+1 1
+.names  N_157_0.BLIF N_157
+0 1
+.names  N_130.BLIF N_130_i
+0 1
+.names  scanY_6_.BLIF G_53.X2
+1 1
+.names  N_132.BLIF N_132_i
+0 1
+.names  G_55.BLIF scanY_7_.D
+1 1
+.names  N_134_0.BLIF N_134
+0 1
+.names  N_49_i.BLIF N_48_i.BLIF video_7_0_1_0__n
+11 1
+.names  scanX_0_sqmuxa.BLIF scanY_7_.CE
+1 1
+.names  N_102.BLIF G_55.X1
+1 1
+.names  video_7_0_1_0__n.BLIF N_50_i.BLIF video_7_0_0__n
+11 1
+.names  ballDirectionX6_1.BLIF G_115.BLIF ballDirectionX6_1_0
+11 1
+.names  ntscClock_c.BLIF scanY_7_.C
+1 1
+.names  scanY_7_.BLIF G_55.X2
+1 1
+.names  G_112.BLIF N_212_i.BLIF ballDirectionX6_2
+11 1
+.names  ballDirectionX6_1_0.BLIF ballDirectionX6_2.BLIF ballDirectionX6_3
+11 1
+.names  ballDirectionX6_3.BLIF G_96.BLIF ballDirectionX6
+11 1
+.names  G_96_1.BLIF G_96.X1
+1 1
+.names  N_136.BLIF N_136_i
+0 1
+.names  scanX_0_sqmuxa.BLIF scanY_8_.CE
+1 1
+.names  N_137_0.BLIF N_137
+0 1
+.names  ballX_2_.BLIF G_96.X2
+1 1
+.names  ballX_4_.BLIF ballx_i_4__n
+0 1
+.names  ntscClock_c.BLIF scanY_8_.C
+1 1
+.names  N_147_0.BLIF N_147
+0 1
+.names  N_158.BLIF N_158_i
+0 1
+.names  N_134.BLIF G_107_1.X1
+1 1
+.names  N_146.BLIF N_146_i
+0 1
+.names  N_219_i.BLIF ballY_1_.D
+1 1
+.names  N_159_0.BLIF N_159
+0 1
+.names  inst_ballDirectionX.BLIF G_107_1.X2
+1 1
+.names  ballDirectionX5.BLIF ballDirectionX5_i
+0 1
+.names  reset_n_c.BLIF ballY_1_.CE
+1 1
+.names  ballDirectionX6.BLIF ballDirectionX6_i
+0 1
+.names  un1_ballDirectionX5_0.BLIF inst_ballDirectionX.CE
+0 1
+.names  scanY_8_.BLIF ballY_1_.C
+1 1
+.names  G_107_1.BLIF G_107.X1
+1 1
+.names  N_194.BLIF N_194_i
+0 1
+.names  N_195.BLIF N_195_i
+0 1
+.names  ballX_3_.BLIF G_107.X2
+1 1
+.names  N_196.BLIF N_196_i
+0 1
+.names  N_218_i.BLIF ballY_2_.D
+1 1
+.names  N_197_0.BLIF N_197
+0 1
+.names  N_170.BLIF N_170_i
+0 1
+.names  reset_n_c.BLIF ballY_2_.CE
+1 1
+.names  N_157.BLIF G_112_1.X1
+1 1
+.names  N_199_0.BLIF N_199
+0 1
+.names  hStateDFF_1reg.BLIF hstate_c_i_1__n
+0 1
+.names  scanY_8_.BLIF ballY_2_.C
+1 1
+.names  inst_ballDirectionX.BLIF G_112_1.X2
+1 1
+.names  N_47_i.BLIF N_47
+0 1
+.names  ballDirectionY6.BLIF ballDirectionY6_i
+0 1
+.names  ballDirectionY5.BLIF ballDirectionY5_i
+0 1
+.names  N_217_i.BLIF ballY_3_.D
+1 1
+.names  G_112_1.BLIF G_112.X1
+1 1
+.names  un1_ballDirectionY5_0.BLIF inst_ballDirectionY.CE
+0 1
+.names  N_50.BLIF N_50_i
+0 1
+.names  reset_n_c.BLIF ballY_3_.CE
+1 1
+.names  ballX_4_.BLIF G_112.X2
+1 1
+.names  N_48.BLIF N_48_i
+0 1
+.names  N_49.BLIF N_49_i
+0 1
+.names  scanY_8_.BLIF ballY_3_.C
+1 1
+.names  video_7_0_0__n.BLIF videoDFF_0reg.D
+0 1
+.names  N_159.BLIF G_115_1.X1
+1 1
+.names  ballX_1_.BLIF ballx_i_1__n
+0 1
+.names  N_129_0.BLIF N_129
+0 1
+.names  N_216_i.BLIF ballY_4_.D
+1 1
+.names  inst_ballDirectionX.BLIF G_115_1.X2
+1 1
+.names  ballX_2_.BLIF ballx_i_2__n
+0 1
+.names  N_131_0.BLIF N_131
+0 1
+.names  reset_n_c.BLIF ballY_4_.CE
+1 1
+.names  N_133.BLIF N_133_i
+0 1
+.names  G_115_1.BLIF G_115.X1
+1 1
+.names  ballY_1_.BLIF bally_i_1__n
+0 1
+.names  scanY_8_.BLIF ballY_4_.C
+1 1
+.names  N_169_0.BLIF N_169
+0 1
+.names  ballX_5_.BLIF G_115.X2
+1 1
+.names  ballY_2_.BLIF bally_i_2__n
+0 1
+.names  N_171_0.BLIF N_171
+0 1
+.names  N_173.BLIF N_173_i
+0 1
+.names  reset_n_c.BLIF ballY_5_.CE
+1 1
+.names  N_62.BLIF G_68_1.X1
+1 1
+.names  N_176.BLIF N_176_i
+0 1
+.names  N_177_0.BLIF N_177
+0 1
+.names  scanY_8_.BLIF ballY_5_.C
+1 1
+.names  ballX_0_.BLIF G_68_1.X2
+1 1
+.names  ballY_4_.BLIF bally_i_4__n
+0 1
+.names  N_187_0.BLIF N_187
+0 1
+.names  N_198.BLIF N_198_i
+0 1
+.names  G_68_1.BLIF G_68.X1
+1 1
+.names  N_186.BLIF N_186_i
+0 1
+.names  scanX_0_sqmuxa.BLIF scanY_0_.CE
+1 1
+.names  inst_ballDirectionY.BLIF bally_i_2__n.BLIF N_171_0
+11 1
+.names  scanX_2_.BLIF G_68.X2
+1 1
+.names  ballDirectionY_i.BLIF ballY_2_.BLIF N_170
+11 1
+.names  ntscClock_c.BLIF scanY_0_.C
+1 1
+.names  inst_ballDirectionY.BLIF bally_i_1__n.BLIF N_169_0
+11 1
+.names  inst_ballDirectionY.BLIF ballDirectionY_i
+0 1
+.names  N_65.BLIF G_69_1.X1
+1 1
+.names  ballDirectionY_i.BLIF ballY_1_.BLIF N_173
+11 1
+.names  N_102.BLIF scanY_7_.BLIF N_105
+11 1
+.names  scanX_0_sqmuxa.BLIF scanY_1_.CE
+1 1
+.names  ballX_1_.BLIF G_69_1.X2
+1 1
+.names  N_99.BLIF scanY_6_.BLIF N_102
+11 1
+.names  N_96.BLIF scanY_5_.BLIF N_99
+11 1
+.names  ntscClock_c.BLIF scanY_1_.C
+1 1
+.names  N_93.BLIF scanY_4_.BLIF N_96
+11 1
+.names  G_69_1.BLIF G_69.X1
+1 1
+.names  N_90.BLIF scanY_3_.BLIF N_93
+11 1
+.names  G_73.BLIF N_114_i
+0 1
+.names  scanX_3_.BLIF G_69.X2
+1 1
+.names  G_72.BLIF N_113_i
+0 1
+.names  scanX_0_sqmuxa.BLIF scanY_2_.CE
+1 1
+.names  G_71.BLIF N_112_i
+0 1
+.names  G_70.BLIF N_111_i
+0 1
+.names  ntscClock_c.BLIF scanY_2_.C
+1 1
+.names  N_68.BLIF G_70_1.X1
+1 1
+.names  G_69.BLIF N_110_i
+0 1
+.names  G_68.BLIF N_109_i
+0 1
+.names  ballX_2_.BLIF G_70_1.X2
+1 1
+.names  N_186_i.BLIF N_198_i.BLIF N_199_0
+11 1
+.names  G_47.BLIF scanY_3_.D
+1 1
+.names  N_187.BLIF N_197.BLIF N_198
+11 1
+.names  N_174.BLIF ballY_3_.BLIF N_196
+11 1
+.names  scanX_0_sqmuxa.BLIF scanY_3_.CE
+1 1
+.names  G_70_1.BLIF G_70.X1
+1 1
+.names  N_174.BLIF ballDirectionY_i.BLIF N_195
+11 1
+.end

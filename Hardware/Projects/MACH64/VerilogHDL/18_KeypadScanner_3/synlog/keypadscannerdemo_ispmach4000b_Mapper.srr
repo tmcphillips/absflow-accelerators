@@ -1,0 +1,29 @@
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+@N: MO106 :"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\bcddigittosevensegment.v":11:2:11:5|Found ROM, 'u3bdtss.segments_1[6:0]', 10 words by 7 bits 
+Encoding state machine work.KeypadScanner(verilog)-activeColumn_reg_1[2:0]
+original code -> new code
+   001 -> 00
+   010 -> 01
+   100 -> 10
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             14 uses
+DFFC            20 uses
+IBUF            5 uses
+OBUF            10 uses
+AND2            71 uses
+INV             59 uses
+XOR2            10 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Feb 02 14:00:31 2012
+
+###########################################################]

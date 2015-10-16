@@ -1,0 +1,36 @@
+module ThreeWayMultiplexerDemo
+
+declarations
+
+	ThreeWayMultiplexer interface([a3..a0],[b3..b0],[c3..c0],[d3..d0]=15,[select1,select0] -> [out3..out0]);
+	multiplexer functional_block ThreeWayMultiplexer;
+
+	// declare input pins
+	!a0..!a3 	pin  24,26..28;
+	!b0..!b3 	pin  20..23;
+	!c0..!c3 	pin  14..17;
+	!s0, !s1 	pin  7,8;
+
+	// declare output pins	
+	y0..y3 	pin 31..34 istype 'com';
+
+	// declare input sets
+	A 	= [a3..a0];
+	B 	= [b3..b0];
+	C 	= [c3..c0];	
+	select 	= [s1, s0];
+
+	// declare output sets
+	Y	= [y3..y0];	
+
+equations
+
+	multiplexer.[a3..a0] = [a3..a0];
+	multiplexer.[b3..b0] = [b3..b0];
+	multiplexer.[c3..c0] = [c3..c0];
+
+	multiplexer.[select1,select0] = [s1,s0];
+
+	Y = multiplexer.[out3..out0];
+end
+

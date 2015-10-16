@@ -1,0 +1,118 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:12:57 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE dipsto7segmentdisplay
+#$ PINS 13 d0:17 d1:16 d2:15 d3:14 a:20 b:21 c:22 d:23 e:24 f:26 g:27 enableHex:31 \
+#  enableDisplay:28
+.model dipsto7segmentdisplay
+.inputs enableDisplay.BLIF d0.BLIF d1.BLIF d2.BLIF d3.BLIF enableHex.BLIF
+.outputs a b c d e f g a.OE b.OE c.OE d.OE e.OE f.OE g.OE
+.names d0.BLIF d1.BLIF d2.BLIF d3.BLIF enableHex.BLIF a
+1-11- 1
+-110- 1
+0-01- 1
+-00-0 1
+1--00 1
+-0-1- 1
+--001 0
+0010- 0
+1101- 0
+0111- 0
+0100- 0
+-0-01 0
+.names d0.BLIF d1.BLIF d2.BLIF d3.BLIF enableHex.BLIF b
+01-00 1
+00-1- 1
+1-1-0 1
+11-1- 1
+-11-- 1
+--11- 1
+--001 0
+0101- 0
+00-0- 0
+1-00- 0
+100-- 0
+-0-01 0
+.names d0.BLIF d1.BLIF d2.BLIF d3.BLIF enableHex.BLIF c
+--100 1
+--01- 1
+-11-- 1
+0--1- 1
+01--0 1
+1011- 0
+1-00- 0
+-000- 0
+--001 0
+-0-01 0
+.names d0.BLIF d1.BLIF d2.BLIF d3.BLIF enableHex.BLIF d
+0-100 1
+1-11- 1
+-1-00 1
+1-000 1
+0101- 1
+-110- 1
+10-1- 1
+-011- 1
+1010- 0
+0111- 0
+1101- 0
+000-- 0
+-0-01 0
+--001 0
+.names d0.BLIF d1.BLIF d2.BLIF d3.BLIF enableHex.BLIF e
+111-- 1
+10-1- 1
+--000 1
+-0-00 1
+--001 0
+011-- 0
+-101- 0
+-0-01 0
+0--1- 0
+.names d0.BLIF d1.BLIF d2.BLIF d3.BLIF enableHex.BLIF f
+11-1- 1
+11--0 1
+-110- 1
+1-01- 1
+-0-00 1
+-101- 1
+-0-01 0
+0100- 0
+-011- 0
+0-11- 0
+--001 0
+00-1- 0
+.names d0.BLIF d1.BLIF d2.BLIF d3.BLIF enableHex.BLIF g
+10-1- 1
+-0-00 1
+0--00 1
+-110- 1
+-101- 1
+-011- 1
+1100- 0
+0001- 0
+-111- 0
+-0-01 0
+--001 0
+.names enableDisplay.BLIF a.OE
+0 1
+1 0
+.names enableDisplay.BLIF b.OE
+0 1
+1 0
+.names enableDisplay.BLIF c.OE
+0 1
+1 0
+.names enableDisplay.BLIF d.OE
+0 1
+1 0
+.names enableDisplay.BLIF e.OE
+0 1
+1 0
+.names enableDisplay.BLIF f.OE
+0 1
+1 0
+.names enableDisplay.BLIF g.OE
+0 1
+1 0
+.end

@@ -1,0 +1,174 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Thu Feb 09 10:02:36 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION reset_n:C_*_20
+DATA LOCATION start_n:C_*_21
+DATA LOCATION clock:*_*_43
+DATA LOCATION lcd_data_7_:A_2_45
+DATA LOCATION lcd_e:C_2_28
+DATA LOCATION lcd_rw:C_1_27
+DATA LOCATION lcd_rs:C_0_26
+DATA LOCATION wack:A_4_46
+DATA LOCATION wreq:A_6_47
+DATA LOCATION lcd_data_6_:D_3_40
+DATA LOCATION lcd_data_5_:D_0_39
+DATA LOCATION lcd_data_4_:D_12_38
+DATA LOCATION lcd_data_3_:D_7_34
+DATA LOCATION lcd_data_2_:D_5_33
+DATA LOCATION lcd_data_1_:D_9_32
+DATA LOCATION lcd_data_0_:D_1_31
+DATA LOCATION inst_state:B_1
+DATA LOCATION pc_0_:C_3
+DATA LOCATION pc_1_:B_0
+DATA LOCATION pc_2_:B_2
+DATA LOCATION pc_3_:B_9
+DATA LOCATION pc_4_:B_12
+DATA LOCATION u0lcdw_state_1_:C_7
+DATA LOCATION u0lcdw_state_0_:C_4
+DATA LOCATION u0lcdw_state_4_:C_8
+DATA LOCATION u0lcdw_outData_cl_7_0_reg:A_1
+DATA LOCATION u0lcdw_outData_cl_6_0_reg:C_5
+DATA LOCATION u0lcdw_outData_cl_5_0_reg:B_3
+DATA LOCATION u0lcdw_outData_cl_4_0_reg:A_3
+DATA LOCATION u0lcdw_outData_cl_3_0_reg:A_5
+DATA LOCATION u0lcdw_outData_cl_2_0_reg:B_5
+DATA LOCATION u0lcdw_outData_cl_1_0_reg:C_6
+DATA LOCATION u0lcdw_outData_cl_0_:A_7
+DATA LOCATION u0lcdw_state_2_:A_9
+DATA LOCATION u0lcdw_state_3_:C_9
+DATA LOCATION u0lcdw_state_7_:A_8
+DATA LOCATION u0lcdw_state_10_:A_10
+DATA LOCATION u0lcdw_busyFlag:A_0
+DATA LOCATION u0lcdw_state_9_:C_10
+DATA LOCATION u0lcdw_state_5_:C_11
+DATA LOCATION u0lcdw_state_6_:A_11
+DATA LOCATION u0lcdw_state_8_:C_12
+DATA LOCATION u0lcdw_state_11_:C_13
+DATA LOCATION u0lcdw_state_12_:A_13
+DATA LOCATION wreq_0:B_7
+
+// Signals direction
+DATA IO_DIR reset_n:IN
+DATA IO_DIR start_n:IN
+DATA IO_DIR clock:IN
+DATA IO_DIR lcd_data_7_:BI
+DATA IO_DIR lcd_e:OUT
+DATA IO_DIR lcd_rw:OUT
+DATA IO_DIR lcd_rs:OUT
+DATA IO_DIR wack:OUT
+DATA IO_DIR wreq:OUT
+DATA IO_DIR lcd_data_6_:TRI
+DATA IO_DIR lcd_data_5_:TRI
+DATA IO_DIR lcd_data_4_:TRI
+DATA IO_DIR lcd_data_3_:TRI
+DATA IO_DIR lcd_data_2_:TRI
+DATA IO_DIR lcd_data_1_:TRI
+DATA IO_DIR lcd_data_0_:TRI
+
+// Global Clocks
+DATA GLB_CLOCK clock:0
+
+// Signals using Shared Clock or CE
+DATA tBCLK lcd_data_7_.CE
+DATA tBCLK lcd_rs.CE
+DATA tBCLK lcd_data_6_.CE
+DATA tBCLK lcd_data_5_.CE
+DATA tBCLK lcd_data_4_.CE
+DATA tBCLK lcd_data_3_.CE
+DATA tBCLK lcd_data_2_.CE
+DATA tBCLK lcd_data_1_.CE
+DATA tBCLK lcd_data_0_.CE
+
+// Signals using Shared Init Pterm
+DATA tBSR lcd_data_7_.AR
+DATA tBSR lcd_e.AR
+DATA tBSR lcd_rw.AR
+DATA tBSR lcd_rs.AR
+DATA tBSR wack.AR
+DATA tBSR wreq.AR
+DATA tBSR lcd_data_6_.AR
+DATA tBSR lcd_data_5_.AR
+DATA tBSR lcd_data_4_.AR
+DATA tBSR lcd_data_3_.AR
+DATA tBSR lcd_data_2_.AR
+DATA tBSR lcd_data_1_.AR
+DATA tBSR lcd_data_0_.AR
+DATA tBSR inst_state.AR
+DATA tBSR pc_0_.AR
+DATA tBSR pc_1_.AR
+DATA tBSR pc_2_.AR
+DATA tBSR pc_3_.AR
+DATA tBSR pc_4_.AR
+DATA tBSR u0lcdw_state_1_.AR
+DATA tBSR u0lcdw_state_0_.PR
+DATA tBSR u0lcdw_state_4_.AR
+DATA tBSR u0lcdw_outData_cl_7_0_reg.AR
+DATA tBSR u0lcdw_outData_cl_6_0_reg.AR
+DATA tBSR u0lcdw_outData_cl_5_0_reg.AR
+DATA tBSR u0lcdw_outData_cl_4_0_reg.AR
+DATA tBSR u0lcdw_outData_cl_3_0_reg.AR
+DATA tBSR u0lcdw_outData_cl_2_0_reg.AR
+DATA tBSR u0lcdw_outData_cl_1_0_reg.AR
+DATA tBSR u0lcdw_outData_cl_0_.AR
+DATA tBSR u0lcdw_state_2_.AR
+DATA tBSR u0lcdw_state_3_.AR
+DATA tBSR u0lcdw_state_7_.AR
+DATA tBSR u0lcdw_state_10_.AR
+DATA tBSR u0lcdw_busyFlag.AR
+DATA tBSR u0lcdw_state_9_.AR
+DATA tBSR u0lcdw_state_5_.AR
+DATA tBSR u0lcdw_state_6_.AR
+DATA tBSR u0lcdw_state_8_.AR
+DATA tBSR u0lcdw_state_11_.AR
+DATA tBSR u0lcdw_state_12_.AR
+
+// Signals using global PT OEs
+DATA tGPTOE lcd_data_3_
+DATA tGPTOE lcd_data_2_
+DATA tGPTOE lcd_data_1_
+DATA tGPTOE lcd_data_0_
+
+// Block Load Adders
+DATA tBLA u0lcdw_state_1_:3
+DATA tBLA pc_4_:3
+DATA tBLA pc_3_:3
+DATA tBLA pc_2_:3
+DATA tBLA pc_1_:3
+DATA tBLA pc_0_:3
+DATA tBLA reset_n:3
+DATA tBLA u0lcdw_state_4_:2
+DATA tBLA u0lcdw_state_0_:2
+DATA tBLA inst_state:2
+DATA tBLA u0lcdw_state_12_:1
+DATA tBLA u0lcdw_state_11_:1
+DATA tBLA u0lcdw_state_6_:1
+DATA tBLA u0lcdw_state_9_:1
+DATA tBLA u0lcdw_outData_cl_1_0_reg:1
+DATA tBLA u0lcdw_outData_cl_2_0_reg:1
+DATA tBLA u0lcdw_outData_cl_3_0_reg:1
+DATA tBLA u0lcdw_outData_cl_7_0_reg:1
+DATA tBLA wack:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM lcd_data_7_
+DATA tOSM lcd_e
+DATA tOSM lcd_rw
+DATA tOSM lcd_rs
+DATA tOSM wack
+DATA tOSM wreq
+DATA tOSM lcd_data_6_
+DATA tOSM lcd_data_5_
+DATA tOSM lcd_data_4_
+DATA tOSM lcd_data_3_
+DATA tOSM lcd_data_2_
+DATA tOSM lcd_data_1_
+DATA tOSM lcd_data_0_

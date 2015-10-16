@@ -1,0 +1,30 @@
+//
+// Software Version :  ispLEVER Classic 1.5.00.05.39.l1  
+// Project Name	    :  mach64_verilog_project
+// Targeted Device  :  LC4064V-75T48I
+// Date             :  Sun Jan 29 17:07:57 2012
+//
+                 b_reg_1_          OUT           2
+                 b_reg_2_          OUT           3
+                 b_reg_3_          OUT           4
+                   GNDIO0          SYS           5
+                   VCCIO0          SYS           6
+                      VCC          SYS           12
+                      GND          SYS           13
+              oneMHzClock          IN            18
+                    pc_2_          OUT           26
+                    pc_1_          OUT           27
+                    pc_0_          OUT           28
+                   GNDIO1          SYS           29
+                   VCCIO1          SYS           30
+                     step          IN            31
+                  reset_n          IN            32
+                      VCC          SYS           36
+                      GND          SYS           37
+                       zf          OUT           38
+                       cf          OUT           39
+                 b_reg_0_          OUT           40
+                 a_reg_0_          OUT           45
+                 a_reg_1_          OUT           46
+                 a_reg_2_          OUT           47
+                 a_reg_3_          OUT           48

@@ -1,0 +1,37 @@
+import ovm_pkg::*;
+import bdb_tb_transactions_pkg::*;
+
+module bdb_tb_responder (
+  ref tlm_fifo #(bdb_result) result_fifo,
+  ref tlm_fifo #(bdb_result) res2comp_fifo,
+	input bit 	  clock,
+	input bit	   reset,
+	input bit	   pressPulse);
+	
+	bdb_result result;
+	
+	string m;
+	string message;
+	
+	initial begin : main
+
+	   $sformat(m, "%m");
+	       
+  	 forever begin : loop
+  	   
+      @(posedge pressPulse);
+        
+	    result = new();
+	      
+	    $sformat(message, result.convert2string);
+	    ovm_top.ovm_report_info(m, message, 300);
+	      
+	    assert(result_fifo.try_put(result.clone));
+      assert(res2comp_fifo.try_put(result.clone));
+          
+      @(negedge pressPulse);
+	    
+	  end
+	  
+  end	 
+endmodule

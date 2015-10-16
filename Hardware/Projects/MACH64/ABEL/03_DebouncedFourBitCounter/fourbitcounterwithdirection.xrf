@@ -1,0 +1,27 @@
+Signal Name Cross Reference File
+
+ispLEVER Classic 1.5.00.05.39.l1
+
+Design 'fourbitcounterwithdirection' created Wed Jan 18 09:43:55 2012
+
+Title:  Four bit counter with debounced step
+
+ LEGEND:  '>'  Functional Block Port Separator
+          '/'  Hierarchy Path Separator
+          '@'  Automatically Generated Node
+
+
+Short Name                              Hierarchical Name
+----------                              -----------------
+D0_debounced                         	debouncedStep>debounced
+D1_lastSample                        	debouncedStep/lastSample
+S0_s0                                	oneKHzClock/s0
+S0_s1                                	oneKHzClock/s1
+S0_s2                                	oneKHzClock/s2
+S0_s3                                	oneKHzClock/s3
+S0_s4                                	oneKHzClock/s4
+S0_s5                                	oneKHzClock/s5
+S0_s6                                	oneKHzClock/s6
+S0_s7                                	oneKHzClock/s7
+S0_s8                                	oneKHzClock/s8
+S0_s9                                	oneKHzClock/s9

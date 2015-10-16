@@ -1,0 +1,84 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:28:23 2012
+#$ MODULE sertoparshiftregister
+#$ JEDECFILE sertoparshiftregister
+#$ PINS 11 D Clk Clr Q0+ Q1+ Q2+ Q3+ Q4+ Q5+ Q6+ Q7+
+#$ INTERFACE sertoparshiftregister  11 Clk'i'  Clr'i'  D'i'  Q0'o'  Q1'o'  Q2'o'  Q3'o'  Q4'o'  Q5'o'  Q6'o'  Q7'o' 
+.model sertoparshiftregister
+.inputs D.BLIF Q6.BLIF Q5.BLIF Q4.BLIF Q3.BLIF Q2.BLIF Q1.BLIF Q0.BLIF \
+Clk.BLIF Clr.BLIF
+.outputs Q0.REG Q7.REG Q6.REG Q5.REG Q4.REG Q3.REG Q2.REG Q1.REG Q0.C Q1.C \
+Q2.C Q3.C Q4.C Q5.C Q6.C Q7.C Q0.AR Q1.AR Q2.AR Q3.AR Q4.AR Q5.AR Q6.AR Q7.AR
+.names D.BLIF Q0.REG
+1 1
+0 0
+.names Q6.BLIF Q7.REG
+1 1
+0 0
+.names Q5.BLIF Q6.REG
+1 1
+0 0
+.names Q4.BLIF Q5.REG
+1 1
+0 0
+.names Q3.BLIF Q4.REG
+1 1
+0 0
+.names Q2.BLIF Q3.REG
+1 1
+0 0
+.names Q1.BLIF Q2.REG
+1 1
+0 0
+.names Q0.BLIF Q1.REG
+1 1
+0 0
+.names Clk.BLIF Q0.C
+1 1
+0 0
+.names Clk.BLIF Q1.C
+1 1
+0 0
+.names Clk.BLIF Q2.C
+1 1
+0 0
+.names Clk.BLIF Q3.C
+1 1
+0 0
+.names Clk.BLIF Q4.C
+1 1
+0 0
+.names Clk.BLIF Q5.C
+1 1
+0 0
+.names Clk.BLIF Q6.C
+1 1
+0 0
+.names Clk.BLIF Q7.C
+1 1
+0 0
+.names Clr.BLIF Q0.AR
+1 1
+0 0
+.names Clr.BLIF Q1.AR
+1 1
+0 0
+.names Clr.BLIF Q2.AR
+1 1
+0 0
+.names Clr.BLIF Q3.AR
+1 1
+0 0
+.names Clr.BLIF Q4.AR
+1 1
+0 0
+.names Clr.BLIF Q5.AR
+1 1
+0 0
+.names Clr.BLIF Q6.AR
+1 1
+0 0
+.names Clr.BLIF Q7.AR
+1 1
+0 0
+.end

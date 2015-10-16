@@ -1,0 +1,10 @@
+oneMHzClock  i
+reset_n  i
+LED[7]  o
+LED[6]  o
+LED[5]  o
+LED[4]  o
+LED[3]  o
+LED[2]  o
+LED[1]  o
+LED[0]  o

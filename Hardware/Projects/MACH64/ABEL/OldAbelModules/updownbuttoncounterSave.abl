@@ -1,0 +1,92 @@
+MODULE UpDownButtonCounter
+
+// Displays in binary on 4 LEDs a 4 bit counter that is
+// reset by pressing button 0, preset by pushing button 1,
+// incremented by pressing button 3, and decremented by
+// pushing button 4.  
+//
+//Two 4-bit registers are used to debounce
+// the buttons. 
+//
+// Mach64	       Push Button (3..0)
+// 20/C0	->  	PB0
+// 21/C2	->	PB1
+// 22/C4	->	PB2
+// 23/C6	->	PB3
+//
+// Mach64 	       LEDs
+// 14/B8	->	L0
+// 15/B10	->	L1
+// 16/B12	->	L2
+// 17/B14	->	L3
+//
+// Mach64		
+// 43/CLK0_IN	->	OSC
+
+DECLARATIONS
+
+	// external clock (1 MHz) 
+	clock PIN 43;
+
+	// four button inputs
+	!pb0, !pb1, !pb2, !pb3 pin 20..23;
+	buttons = [pb0..pb3];
+
+	// latest buttons status (updated every 1 ms)
+	lat0..lat3 node ISTYPE 'reg';
+	latest = [lat0..lat3];
+
+	// debounced buttons status (each bit true if latest button
+	// status is the same as the previous status)
+	reset, preset, up, down node ISTYPE 'reg';
+	debounced = [reset, preset, up, down];
+
+	// 11-bit clock scaler (MSB toggles at 500 Hz)
+	TenBitScaler INTERFACE (inclock -> outclock);
+	Scaler FUNCTIONAL_BLOCK TenBitScaler;
+
+	// 4-bit counter
+	c3..c0 PIN 17..14 ISTYPE 'reg'; 
+	counter = [c3..c0];
+
+EQUATIONS
+
+	// scale incoming 1 MHz signal to 1 KHz and use it to clock the debouncers
+	Scaler.inclock = clock;
+
+	// read button status into latest using 1 KHz clock
+	latest.clk = Scaler.outclock;
+	latest := buttons;
+
+	// compute debounced button status as the conjuntion of the
+	// the latest and previous states of the buttons using the
+	// 1 KHz clock
+	debounced.clk = Scaler.outclock;
+	debounced := buttons & latest;
+	
+	// clock counter off of OR of up and down buttons such that the
+	// counter value wis updated whenever up or down buttons are pressed (go high)
+	counter.clk = !(up # down);
+
+	// asynchronously reset the counter when reset button is pressed
+	counter.aclr = reset;
+
+	// asynchronously preset the counter when preset button is pressed
+	counter.aset = preset;
+
+	// increment the counter when the up button is pressed and
+	// decrement it when the down button is pressed
+	when (up) then {
+		counter := counter + 1;
+	} else when (down) then {
+		counter := counter - 1;
+	} else { 
+		counter := counter;
+	}
+END
+
+	
+
+
+
+ 

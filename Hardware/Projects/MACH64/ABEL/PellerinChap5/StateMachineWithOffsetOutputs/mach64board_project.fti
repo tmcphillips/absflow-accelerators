@@ -1,0 +1,68 @@
+#PLAFILE     mach64board_project.bl5
+#DATE        Mon Jan 16 16:14:17 2012
+
+#DESIGN      mach64board_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION clock:*_*_18
+DATA LOCATION step:C_*_20
+DATA LOCATION oe:C_*_21
+DATA LOCATION hold:C_*_22
+DATA LOCATION q1:D_1_31
+DATA LOCATION q0:D_3_32
+DATA LOCATION reg1:D_6_33
+DATA LOCATION com1:D_10_34
+DATA LOCATION D0_debounced:A_5
+DATA LOCATION D1_lastSample:A_10
+DATA LOCATION T0_s9:C_2
+DATA LOCATION T0_s8:C_3
+DATA LOCATION T0_s7:C_5
+DATA LOCATION T0_s6:C_7
+DATA LOCATION T0_s5:C_9
+DATA LOCATION T0_s4:C_1
+DATA LOCATION T0_s3:C_0
+DATA LOCATION T0_s2:B_7
+DATA LOCATION T0_s1:A_2
+DATA LOCATION T0_s0:C_12
+
+// Signals direction
+DATA IO_DIR clock:IN
+DATA IO_DIR step:IN
+DATA IO_DIR oe:IN
+DATA IO_DIR hold:IN
+DATA IO_DIR q1:TRI
+DATA IO_DIR q0:TRI
+DATA IO_DIR reg1:TRI
+DATA IO_DIR com1:OUT
+
+// Global Clocks
+DATA GLB_CLOCK clock:1
+
+// Signals using Shared Clock or CE
+DATA tBCLK q1.C
+DATA tBCLK q0.C
+DATA tBCLK reg1.C
+DATA tBCLK D0_debounced.C
+DATA tBCLK D1_lastSample.C
+
+// Signals using global PT OEs
+DATA tGPTOE q1
+DATA tGPTOE q0
+DATA tGPTOE reg1
+
+// Block Load Adders
+DATA tBLA T0_s0:2
+DATA tBLA T0_s1:2
+DATA tBLA T0_s2:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM q1
+DATA tOSM q0
+DATA tOSM reg1
+DATA tOSM com1

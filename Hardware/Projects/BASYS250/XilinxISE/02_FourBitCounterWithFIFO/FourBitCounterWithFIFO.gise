@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="FourBitCounterWithFIFO.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ButtonPressDetector_tb_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="FourBitCounterWithLoad.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="FourBitCounterWithLoad.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="FourBitCounterWithLoad.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="FourBitCounterWithLoad.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="FourBitCounterWithLoad.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="FourBitCounterWithLoad.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="FourBitCounterWithLoad.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="FourBitCounterWithLoad.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="FourBitCounterWithLoad.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="FourBitCounterWithLoad.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FourBitCounterWithLoad.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="FourBitCounterWithLoad.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="FourBitCounterWithLoad.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="FourBitCounterWithLoad.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="FourBitCounterWithLoad.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="FourBitCounterWithLoad.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="FourBitCounterWithLoad.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="FourBitCounterWithLoad.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="FourBitCounterWithLoad.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="FourBitCounterWithLoad_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="FourBitCounterWithLoad_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="FourBitCounterWithLoad_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="FourBitCounterWithLoad_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="FourBitCounterWithLoad_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FourBitCounterWithLoad_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FourBitCounterWithLoad_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="FourBitCounterWithLoad_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="FourBitCounterWithLoad_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FourBitCounterWithLoad_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="FourBitCounterWithLoad_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="FourBitCounterWithLoad_summary.xml"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FourBitCounterWithLoad_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="FourBitCounterWithLoad_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="FourBitCounterWithLoad_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="FourBitCounterWithLoad_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FourBitCounterWithLoad_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="PushPullFIFO_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PushPullFIFO_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1332876475" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1332876475">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876475" xil_pn:in_ck="-3208942612251307530" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1332876475">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../01_FourBitCounterWithLoad/fourbitcounterwithload_tb.v"/>
+      <outfile xil_pn:name="buttonpressdetector.v"/>
+      <outfile xil_pn:name="buttonpressdetector_tb.v"/>
+      <outfile xil_pn:name="fourbitcounterwithload.v"/>
+      <outfile xil_pn:name="macros.v"/>
+      <outfile xil_pn:name="pushpullfifo.v"/>
+      <outfile xil_pn:name="pushpullfifo_tb.v"/>
+      <outfile xil_pn:name="ripplecounter.v"/>
+      <outfile xil_pn:name="ripplescaler.v"/>
+      <outfile xil_pn:name="tflipflop.v"/>
+      <outfile xil_pn:name="updowncounter.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876475" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-351738081120274301" xil_pn:start_ts="1332876475">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876475" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7648290810808011899" xil_pn:start_ts="1332876475">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1331249221" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8537519926880508117" xil_pn:start_ts="1331249221">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876475" xil_pn:in_ck="-3208942612251307530" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1332876475">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="../01_FourBitCounterWithLoad/fourbitcounterwithload_tb.v"/>
+      <outfile xil_pn:name="buttonpressdetector.v"/>
+      <outfile xil_pn:name="buttonpressdetector_tb.v"/>
+      <outfile xil_pn:name="fourbitcounterwithload.v"/>
+      <outfile xil_pn:name="macros.v"/>
+      <outfile xil_pn:name="pushpullfifo.v"/>
+      <outfile xil_pn:name="pushpullfifo_tb.v"/>
+      <outfile xil_pn:name="ripplecounter.v"/>
+      <outfile xil_pn:name="ripplescaler.v"/>
+      <outfile xil_pn:name="tflipflop.v"/>
+      <outfile xil_pn:name="updowncounter.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876478" xil_pn:in_ck="-3208942612251307530" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3250858965921099047" xil_pn:start_ts="1332876475">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_tb_beh.prj"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876479" xil_pn:in_ck="327684546813533063" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3636296318656913034" xil_pn:start_ts="1332876478">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876400" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1332876400">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876400" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5951321458625554672" xil_pn:start_ts="1332876400">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876400" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="8537519926880508117" xil_pn:start_ts="1332876400">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876400" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1332876400">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876400" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-1151084949129279954" xil_pn:start_ts="1332876400">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876400" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="5199527252417716204" xil_pn:start_ts="1332876400">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876400" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-1412590861312376993" xil_pn:start_ts="1332876400">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876438" xil_pn:in_ck="9035693714326000863" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7311848318474140408" xil_pn:start_ts="1332876429">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.lso"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.ngc"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.ngr"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.prj"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.stx"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.syr"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.xst"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876405" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-969371933963790887" xil_pn:start_ts="1332876405">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876445" xil_pn:in_ck="7630911421984681821" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="7035878610660560728" xil_pn:start_ts="1332876438">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.bld"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.ngd"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876450" xil_pn:in_ck="7630911421984681822" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="8974719074496307082" xil_pn:start_ts="1332876445">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.pcf"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_map.map"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_map.mrp"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_map.ncd"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_map.ngm"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_map.xrpt"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_summary.xml"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876469" xil_pn:in_ck="-943439070315971209" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="3129755442398015208" xil_pn:start_ts="1332876450">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.ncd"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.pad"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.par"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.ptwx"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.unroutes"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.xpi"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_pad.csv"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_pad.txt"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1332876469" xil_pn:in_ck="7630911421984681690" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1332876466">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.twr"/>
+      <outfile xil_pn:name="FourBitCounterWithLoad.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>

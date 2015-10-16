@@ -1,0 +1,153 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+columns_0_ = !columns_2_.Q & !columns_1_.Q ; (1 pterm, 2 signals)
+
+columns_1_.D = !columns_2_.Q & !columns_1_.Q ; (1 pterm, 2 signals)
+columns_1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+columns_2_.D = columns_1_.Q ; (1 pterm, 1 signal)
+columns_2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+segments_0_ = !u1ks_key_reg_0_.Q & u1ks_key_reg_1_.Q & !u1ks_key_reg_3_.Q
+    # !u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q & u1ks_key_reg_3_.Q
+    # u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q
+    # !u1ks_key_reg_1_.Q & u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q ; (4 pterms, 4 signals)
+
+segments_1_ = !u1ks_key_reg_0_.Q & !u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q
+    # !u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q & u1ks_key_reg_3_.Q
+    # !u1ks_key_reg_0_.Q & u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q
+    # !u1ks_key_reg_1_.Q & u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q ; (4 pterms, 4 signals)
+
+segments_2_ = !u1ks_key_reg_0_.Q & !u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q
+    # !u1ks_key_reg_0_.Q & u1ks_key_reg_1_.Q & !u1ks_key_reg_3_.Q ; (2 pterms, 4 signals)
+
+segments_3_.X1 = u1ks_key_reg_0_.Q & !u1ks_key_reg_1_.Q & !u1ks_key_reg_3_.Q
+    # !u1ks_key_reg_0_.Q & u1ks_key_reg_1_.Q & !u1ks_key_reg_3_.Q
+    # u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q ; (3 pterms, 4 signals)
+segments_3_.X2 = !u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q ; (1 pterm, 2 signals)
+
+segments_4_ = !u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q
+    # u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q
+    # u1ks_key_reg_0_.Q & !u1ks_key_reg_3_.Q ; (3 pterms, 4 signals)
+
+segments_5_ = u1ks_key_reg_0_.Q & u1ks_key_reg_1_.Q & !u1ks_key_reg_3_.Q
+    # !u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q
+    # !u1ks_key_reg_0_.Q & !u1ks_key_reg_1_.Q & !u1ks_key_reg_3_.Q
+    # !u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q ; (4 pterms, 4 signals)
+
+segments_6_ = !u1ks_key_reg_0_.Q & !u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q
+    # !u1ks_key_reg_1_.Q & !u1ks_key_reg_2_.Q & u1ks_key_reg_3_.Q
+    # u1ks_key_reg_0_.Q & u1ks_key_reg_2_.Q & !u1ks_key_reg_3_.Q
+    # u1ks_key_reg_1_.Q & !u1ks_key_reg_3_.Q ; (4 pterms, 4 signals)
+
+u0rs_u1rc_genblk1_0__uitff_q.D = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_0__uitff_q.C = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_1__uitff_q.D = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_1__uitff_q.C = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_2__uitff_q.D = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_2__uitff_q.C = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_3__uitff_q.D = !u0rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_3__uitff_q.C = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_4__uitff_q.D = !u0rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_4__uitff_q.C = !u0rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_5__uitff_q.D = !u0rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_5__uitff_q.C = !u0rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_6__uitff_q.D = !u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_6__uitff_q.C = !u0rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_7__uitff_q.D = !u0rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_7__uitff_q.C = !u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_8__uitff_q.D = !u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_8__uitff_q.C = !u0rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_u0tff_q.D = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u1ks_key_reg_0_.D = u1ks_pressed_reg_1__0_.Q ; (1 pterm, 1 signal)
+u1ks_key_reg_0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_key_reg_0_.CE = !( u1ks_key_reg_0__0 ) ; (1 pterm, 1 signal)
+
+u1ks_key_reg_0__0 = !u1ks_pressed_reg_3__3_.Q & u1ks_pressed_reg_1__3_.Q
+    # !u1ks_pressed_reg_2__3_.Q & u1ks_pressed_reg_1__3_.Q
+    # !u1ks_pressed_reg_3__0_.Q & u1ks_pressed_reg_1__0_.Q
+    # !u1ks_pressed_reg_2__0_.Q & u1ks_pressed_reg_1__0_.Q
+    # !u1ks_pressed_reg_3__1_.Q & u1ks_pressed_reg_1__1_.Q
+    # !u1ks_pressed_reg_2__1_.Q & u1ks_pressed_reg_1__1_.Q
+    # !u1ks_pressed_reg_3__2_.Q & u1ks_pressed_reg_1__2_.Q
+    # !u1ks_pressed_reg_2__2_.Q & u1ks_pressed_reg_1__2_.Q ; (8 pterms, 12 signals)
+
+u1ks_key_reg_1_.D = u1ks_pressed_reg_1__1_.Q ; (1 pterm, 1 signal)
+u1ks_key_reg_1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_key_reg_1_.CE = !( u1ks_key_reg_0__0 ) ; (1 pterm, 1 signal)
+
+u1ks_key_reg_2_.D = u1ks_pressed_reg_1__2_.Q ; (1 pterm, 1 signal)
+u1ks_key_reg_2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_key_reg_2_.CE = !( u1ks_key_reg_0__0 ) ; (1 pterm, 1 signal)
+
+u1ks_key_reg_3_.D = u1ks_pressed_reg_1__3_.Q ; (1 pterm, 1 signal)
+u1ks_key_reg_3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_key_reg_3_.CE = !( u1ks_key_reg_0__0 ) ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_1__0_.D = !rows_2_ & !rows_0_ & !columns_1_.Q
+    # rows_2_ & columns_1_.Q ; (2 pterms, 3 signals)
+u1ks_pressed_reg_1__0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_1__0_.CE = u1ks_un1_pressed_reg_1_5_n ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_1__1_.D = rows_2_ & !rows_1_ & !columns_2_.Q & !columns_1_.Q
+    # rows_3_ & !rows_1_ & !columns_2_.Q
+    # rows_1_ & columns_2_.Q ; (3 pterms, 5 signals)
+u1ks_pressed_reg_1__1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_1__1_.CE = u1ks_un1_pressed_reg_1_5_n ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_1__2_.D = rows_2_
+    # rows_1_ & columns_2_.Q ; (2 pterms, 3 signals)
+u1ks_pressed_reg_1__2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_1__2_.CE = u1ks_un1_pressed_reg_1_5_n ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_1__3_.D = rows_1_ & !columns_2_.Q ; (1 pterm, 2 signals)
+u1ks_pressed_reg_1__3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_1__3_.CE = u1ks_un1_pressed_reg_1_5_n ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_2__0_.D = u1ks_pressed_reg_1__0_.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_2__0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_2__1_.D = u1ks_pressed_reg_1__1_.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_2__1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_2__2_.D = u1ks_pressed_reg_1__2_.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_2__2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_2__3_.D = u1ks_pressed_reg_1__3_.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_2__3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_3__0_.D = u1ks_pressed_reg_2__0_.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_3__0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_3__1_.D = u1ks_pressed_reg_2__1_.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_3__1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_3__2_.D = u1ks_pressed_reg_2__2_.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_3__2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1ks_pressed_reg_3__3_.D = u1ks_pressed_reg_2__3_.Q ; (1 pterm, 1 signal)
+u1ks_pressed_reg_3__3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1ks_un1_pressed_reg_1_5_n = rows_3_ & !rows_2_ & !rows_1_ & !rows_0_
+    # !rows_3_ & rows_2_ & !rows_1_ & !rows_0_
+    # !rows_3_ & !rows_2_ & rows_1_ & !rows_0_
+    # !rows_3_ & !rows_2_ & !rows_1_ & rows_0_ ; (4 pterms, 4 signals)
+

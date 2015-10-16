@@ -1,0 +1,402 @@
+#$ TOOL  ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE  Sat Feb 18 19:15:06 2012
+#$ MODULE  ntsc
+#$ PINS 13 ntscClock:43 left_n:14 right_n:15 up_n:16 down_n:17 video_0_:31
+ video_3_:34 state_3_:23 video_2_:33 video_1_:32 state_2_:22 state_1_:21
+ state_0_:20
+#$ NODES 51 x_0_ xpos_0_ xpos_1_ xpos_2_ xpos_3_ xpos_4_ ypos_0_ ypos_1_
+ ypos_2_ ypos_3_ ypos_4_ N_28_8_i x_1_ x_2_ x_3_ x_4_ x_5_ x_6_ x_7_ y_0_ y_1_
+ y_2_ y_3_ y_4_ y_5_ y_6_ y_7_ y_8_ x_3_5__n x_3_6__n y_4_3__n y_4_4__n y_4_5__n
+ y_4_6__n y_4_7__n N_160 N_123_0 state23_6 N_86_0 state3 state8 x12 N_250 state40
+ state80 state13 N_250_1 G_212 N_188 G_88_1 G_89_1
+.model ntsc 
+.inputs ntscClock.BLIF left_n.BLIF right_n.BLIF up_n.BLIF down_n.BLIF x_0_.Q \
+ state_0_.Q xpos_0_.Q state_1_.Q xpos_1_.Q xpos_2_.Q state_2_.Q xpos_3_.Q \
+ xpos_4_.Q state_3_.Q ypos_0_.Q ypos_1_.Q ypos_2_.Q ypos_3_.Q ypos_4_.Q \
+ N_28_8_i.BLIF x_1_.Q x_2_.Q x_3_.Q x_4_.Q x_5_.Q x_6_.Q x_7_.Q y_0_.Q y_1_.Q \
+ y_2_.Q y_3_.Q y_4_.Q y_5_.Q y_6_.Q y_7_.Q y_8_.Q x_3_5__n.BLIF x_3_6__n.BLIF \
+ y_4_3__n.BLIF y_4_4__n.BLIF y_4_5__n.BLIF y_4_6__n.BLIF y_4_7__n.BLIF N_160.BLIF \
+ N_123_0.BLIF state23_6.BLIF N_86_0.BLIF state3.BLIF state8.BLIF x12.BLIF \
+ N_250.BLIF state40.BLIF state80.BLIF state13.BLIF N_250_1.BLIF G_212.BLIF \
+ N_188.BLIF G_88_1.BLIF G_89_1.BLIF
+.outputs video_0_ video_3_.D video_3_.C video_3_.CE- state_3_.T state_3_.C \
+ video_2_.D video_2_.C video_2_.CE- video_1_.D- video_1_.C video_1_.CE- \
+ state_2_.D state_2_.C state_1_.D state_1_.C state_0_.D- state_0_.C x_0_.D x_0_.C \
+ xpos_0_.D xpos_0_.C xpos_1_.D.X1 xpos_1_.D.X2 xpos_1_.C xpos_2_.T xpos_2_.C \
+ xpos_3_.D xpos_3_.C xpos_4_.D.X1 xpos_4_.D.X2 xpos_4_.C ypos_0_.D ypos_0_.C \
+ ypos_1_.D.X1 ypos_1_.D.X2 ypos_1_.C ypos_2_.T ypos_2_.C ypos_3_.D ypos_3_.C \
+ ypos_4_.D.X1 ypos_4_.D.X2 ypos_4_.C N_28_8_i x_1_.D x_1_.C x_2_.D x_2_.C x_3_.D \
+ x_3_.C x_4_.D x_4_.C x_5_.D x_5_.C x_6_.D x_6_.C x_7_.D.X1 x_7_.D.X2 x_7_.C \
+ y_0_.D y_0_.C y_1_.D.X1 y_1_.D.X2 y_1_.C y_2_.T y_2_.C y_3_.D.X1 y_3_.D.X2 \
+ y_3_.C y_4_.D.X1 y_4_.D.X2 y_4_.C y_5_.D y_5_.C y_6_.D y_6_.C y_7_.D.X1 \
+ y_7_.D.X2 y_7_.C y_8_.D- y_8_.C x_3_5__n x_3_6__n y_4_3__n.X1 y_4_3__n.X2 \
+ y_4_4__n.X1 y_4_4__n.X2 y_4_5__n y_4_6__n y_4_7__n.X1 y_4_7__n.X2 N_160 \
+ N_123_0.X1 N_123_0.X2 state23_6 N_86_0.X1 N_86_0.X2 state3 state8.X1 state8.X2 \
+ x12 N_250- state40 state80 state13 N_250_1- G_212.X1 G_212.X2 N_188 G_88_1 \
+ G_89_1
+.names video_0_
+.names state_1_.Q state_2_.Q state_3_.Q N_250.BLIF video_3_.D
+0101 1
+.names ntscClock.BLIF video_3_.C
+1 1
+.names state_1_.Q state_2_.Q state_3_.Q state23_6.BLIF video_3_.CE-
+0101 1
+.names state_0_.Q state_1_.Q state_2_.Q state_3_.Q state23_6.BLIF state8.BLIF state40.BLIF state80.BLIF state_3_.T
+00011-0- 1
+1110-1-- 1
+1111-0-- 1
+01111--1 1
+.names ntscClock.BLIF state_3_.C
+1 1
+.names state_1_.Q state_2_.Q state_3_.Q N_250.BLIF video_2_.D
+0100 1
+.names ntscClock.BLIF video_2_.C
+1 1
+.names state_1_.Q state_2_.Q state_3_.Q state23_6.BLIF video_2_.CE-
+0101 1
+.names state_0_.Q state_1_.Q state_2_.Q state_3_.Q video_1_.D-
+111- 1
+0-00 1
+1--1 1
+.names ntscClock.BLIF video_1_.C
+1 1
+.names state_1_.Q state_2_.Q state_3_.Q state23_6.BLIF video_1_.CE-
+0101 1
+.names state_0_.Q state_1_.Q state_2_.Q state_3_.Q N_28_8_i.BLIF y_0_.Q y_1_.Q y_2_.Q y_4_.Q y_4_3__n.BLIF y_4_5__n.BLIF y_4_6__n.BLIF y_4_7__n.BLIF state23_6.BLIF state8.BLIF x12.BLIF state40.BLIF state80.BLIF state13.BLIF G_212.BLIF state_2_.D
+0-11-------------0-- 1
+111-1---------0----- 1
+00---001101111-00-10 1
+00---110101111-10-10 1
+-01--00110111--0---0 1
+-01--11010111--1---0 1
+1100--------------1- 1
+00-1---------1--0--- 1
+11011--------------- 1
+-110----------0----- 1
+0-1----------0------ 1
+0110---------------- 1
+-01----------0------ 1
+-011---------------- 1
+.names ntscClock.BLIF state_2_.C
+1 1
+.names state_0_.Q state_1_.Q state_2_.Q state_3_.Q y_0_.Q y_1_.Q y_2_.Q y_4_.Q y_4_3__n.BLIF y_4_5__n.BLIF y_4_6__n.BLIF y_4_7__n.BLIF state23_6.BLIF state3.BLIF state8.BLIF x12.BLIF state40.BLIF state13.BLIF G_212.BLIF state_1_.D
+-010001101111--0--0 1
+-010110101111--1--0 1
+111-----------0---- 1
+1-11----------1---- 1
+0-0---------1---0-- 1
+100----------1----- 1
+-100-------------0- 1
+-1-1--------0------ 1
+010---------------- 1
+0--0--------------- 1
+.names ntscClock.BLIF state_1_.C
+1 1
+.names state_0_.Q state_1_.Q state_2_.Q state_3_.Q N_28_8_i.BLIF y_0_.Q y_1_.Q y_2_.Q y_4_.Q y_4_3__n.BLIF y_4_5__n.BLIF y_4_6__n.BLIF y_4_7__n.BLIF state23_6.BLIF state3.BLIF state8.BLIF x12.BLIF state40.BLIF state80.BLIF G_212.BLIF state_0_.D-
+1-11-----------1---- 1
+0-10----------0----- 1
+000----------0------ 1
+000--------------0-- 1
+-010-001101111--0--0 1
+-010-110101111--1--0 1
+100-----------1----- 1
+11-11--------------- 1
+010------------0---- 1
+-111--------------0- 1
+111------------1---- 1
+-111---------0------ 1
+001-----------0----- 1
+.names ntscClock.BLIF state_0_.C
+1 1
+.names x_0_.Q x_0_.D
+0 1
+.names ntscClock.BLIF x_0_.C
+1 1
+.names left_n.BLIF right_n.BLIF xpos_0_.Q xpos_0_.D
+100 1
+010 1
+001 1
+111 1
+.names y_8_.Q xpos_0_.C
+1 1
+.names left_n.BLIF right_n.BLIF xpos_0_.Q xpos_1_.Q xpos_1_.D.X1
+010- 1
+101- 1
+.names left_n.BLIF right_n.BLIF xpos_0_.Q xpos_1_.Q xpos_1_.D.X2
+---1 1
+.names y_8_.Q xpos_1_.C
+1 1
+.names left_n.BLIF right_n.BLIF xpos_0_.Q xpos_1_.Q xpos_2_.T
+0100 1
+1011 1
+.names y_8_.Q xpos_2_.C
+1 1
+.names left_n.BLIF xpos_3_.Q N_86_0.BLIF xpos_3_.D
+100 1
+010 1
+001 1
+111 1
+.names y_8_.Q xpos_3_.C
+1 1
+.names left_n.BLIF xpos_3_.Q xpos_4_.Q N_86_0.BLIF xpos_4_.D.X1
+00-1 1
+11-0 1
+.names left_n.BLIF xpos_3_.Q xpos_4_.Q N_86_0.BLIF xpos_4_.D.X2
+--1- 1
+.names y_8_.Q xpos_4_.C
+1 1
+.names up_n.BLIF down_n.BLIF ypos_0_.Q ypos_0_.D
+100 1
+010 1
+001 1
+111 1
+.names y_8_.Q ypos_0_.C
+1 1
+.names up_n.BLIF down_n.BLIF ypos_0_.Q ypos_1_.Q ypos_1_.D.X1
+010- 1
+101- 1
+.names up_n.BLIF down_n.BLIF ypos_0_.Q ypos_1_.Q ypos_1_.D.X2
+---1 1
+.names y_8_.Q ypos_1_.C
+1 1
+.names up_n.BLIF down_n.BLIF ypos_0_.Q ypos_1_.Q ypos_2_.T
+0100 1
+1011 1
+.names y_8_.Q ypos_2_.C
+1 1
+.names up_n.BLIF ypos_3_.Q N_123_0.BLIF ypos_3_.D
+100 1
+010 1
+001 1
+111 1
+.names y_8_.Q ypos_3_.C
+1 1
+.names up_n.BLIF ypos_3_.Q ypos_4_.Q N_123_0.BLIF ypos_4_.D.X1
+00-1 1
+11-0 1
+.names up_n.BLIF ypos_3_.Q ypos_4_.Q N_123_0.BLIF ypos_4_.D.X2
+--1- 1
+.names y_8_.Q ypos_4_.C
+1 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q y_5_.Q y_6_.Q y_7_.Q y_4_4__n.BLIF state23_6.BLIF x12.BLIF G_212.BLIF N_188.BLIF N_28_8_i
+000000001010 1
+111100001110 1
+000011101011 1
+111111101111 1
+.names x_0_.Q x_1_.Q x_1_.D
+10 1
+01 1
+.names ntscClock.BLIF x_1_.C
+1 1
+.names x_0_.Q x_1_.Q x_2_.Q x_2_.D
+110 1
+-01 1
+0-1 1
+.names ntscClock.BLIF x_2_.C
+1 1
+.names x_0_.Q x_1_.Q x_2_.Q x_3_.Q x_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+.names ntscClock.BLIF x_3_.C
+1 1
+.names x_4_.Q N_160.BLIF x_4_.D
+10 1
+01 1
+.names ntscClock.BLIF x_4_.C
+1 1
+.names x_4_.Q x_5_.Q N_160.BLIF x12.BLIF x_5_.D
+1010 1
+-100 1
+01-0 1
+.names ntscClock.BLIF x_5_.C
+1 1
+.names x_4_.Q x_5_.Q x_6_.Q N_160.BLIF x12.BLIF x_6_.D
+11010 1
+--100 1
+-01-0 1
+0-1-0 1
+.names ntscClock.BLIF x_6_.C
+1 1
+.names x_4_.Q x_5_.Q x_6_.Q x_7_.Q N_160.BLIF x12.BLIF x_7_.D.X1
+---1-0 1
+.names x_4_.Q x_5_.Q x_6_.Q x_7_.Q N_160.BLIF x12.BLIF x_7_.D.X2
+111-10 1
+.names ntscClock.BLIF x_7_.C
+1 1
+.names y_0_.Q x12.BLIF y_0_.D
+10 1
+01 1
+.names ntscClock.BLIF y_0_.C
+1 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q y_4_.Q y_5_.Q y_6_.Q y_7_.Q x12.BLIF G_212.BLIF N_188.BLIF y_1_.D.X1
+-1--------- 1
+10100111111 1
+10100000110 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q y_4_.Q y_5_.Q y_6_.Q y_7_.Q x12.BLIF G_212.BLIF N_188.BLIF y_1_.D.X2
+1-------1-- 1
+.names ntscClock.BLIF y_1_.C
+1 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q y_4_.Q y_5_.Q y_6_.Q y_7_.Q x12.BLIF G_212.BLIF N_188.BLIF y_2_.T
+1-100000110 1
+1-100111111 1
+11------1-- 1
+.names ntscClock.BLIF y_2_.C
+1 1
+.names y_0_.Q y_1_.Q y_2_.Q x12.BLIF y_3_.D.X1
+1111 1
+.names y_3_.Q y_3_.D.X2
+1 1
+.names ntscClock.BLIF y_3_.C
+1 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q x12.BLIF y_4_.D.X1
+11111 1
+.names y_4_.Q y_4_.D.X2
+1 1
+.names ntscClock.BLIF y_4_.C
+1 1
+.names y_5_.Q x12.BLIF N_188.BLIF y_5_.D
+011 1
+1-0 1
+10- 1
+.names ntscClock.BLIF y_5_.C
+1 1
+.names y_5_.Q y_6_.Q x12.BLIF N_188.BLIF y_6_.D
+1011 1
+01-- 1
+-1-0 1
+-10- 1
+.names ntscClock.BLIF y_6_.C
+1 1
+.names y_5_.Q y_6_.Q x12.BLIF N_188.BLIF y_7_.D.X1
+1111 1
+.names y_7_.Q y_7_.D.X2
+1 1
+.names ntscClock.BLIF y_7_.C
+1 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q y_4_.Q y_5_.Q y_6_.Q y_7_.Q y_8_.Q x12.BLIF G_212.BLIF N_188.BLIF y_8_.D-
+10100000-1-0 1
+10100111-1-1 1
+--------00-- 1
+---------10- 1
+.names ntscClock.BLIF y_8_.C
+1 1
+.names x_4_.Q x_5_.Q N_160.BLIF x12.BLIF x_3_5__n
+1010 1
+-100 1
+01-0 1
+.names x_4_.Q x_5_.Q x_6_.Q N_160.BLIF x12.BLIF x_3_6__n
+11010 1
+--100 1
+-01-0 1
+0-1-0 1
+.names y_0_.Q y_1_.Q y_2_.Q x12.BLIF y_4_3__n.X1
+1111 1
+.names y_3_.Q y_4_3__n.X2
+1 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q x12.BLIF y_4_4__n.X1
+11111 1
+.names y_4_.Q y_4_4__n.X2
+1 1
+.names y_5_.Q x12.BLIF N_188.BLIF y_4_5__n
+011 1
+1-0 1
+10- 1
+.names y_5_.Q y_6_.Q x12.BLIF N_188.BLIF y_4_6__n
+1011 1
+01-- 1
+-1-0 1
+-10- 1
+.names y_5_.Q y_6_.Q x12.BLIF N_188.BLIF y_4_7__n.X1
+1111 1
+.names y_7_.Q y_4_7__n.X2
+1 1
+.names x_0_.Q x_1_.Q x_2_.Q x_3_.Q N_160
+1111 1
+.names up_n.BLIF down_n.BLIF ypos_0_.Q ypos_1_.Q ypos_2_.Q N_123_0.X1
+1-111 1
+11--- 1
+-1000 1
+.names up_n.BLIF down_n.BLIF N_123_0.X2
+10 1
+.names x_0_.Q x_4_.Q x_5_.Q x_6_.Q x_7_.Q N_160.BLIF x12.BLIF state23_6
+111111- 1
+1---1-1 1
+.names left_n.BLIF right_n.BLIF xpos_0_.Q xpos_1_.Q xpos_2_.Q N_86_0.X1
+1-111 1
+11--- 1
+-1000 1
+.names left_n.BLIF right_n.BLIF N_86_0.X2
+10 1
+.names x_0_.Q x_1_.Q x_2_.Q x_3_.Q x_4_.Q x_5_.Q x_6_.Q x_7_.Q x_3_6__n.BLIF N_160.BLIF x12.BLIF state3
+0010111101- 1
+0010110001- 1
+001000-000- 1
+001000--001 1
+001011--011 1
+.names x_0_.Q x_1_.Q x_2_.Q x_3_.Q x_4_.Q x_5_.Q x_6_.Q x_7_.Q x_3_5__n.BLIF x_3_6__n.BLIF N_160.BLIF x12.BLIF state8.X1
+10101---00-1 1
+10101--000-- 1
+.names x_0_.Q x_1_.Q x_2_.Q x_3_.Q x_4_.Q x_5_.Q x_6_.Q x_7_.Q x_3_5__n.BLIF x_3_6__n.BLIF N_160.BLIF x12.BLIF state8.X2
+1010111-0010 1
+.names x_0_.Q x_1_.Q x_2_.Q x_3_.Q x_4_.Q x_5_.Q x_6_.Q x_7_.Q N_160.BLIF x12
+111110111 1
+11110-110 1
+.names xpos_1_.Q xpos_2_.Q xpos_3_.Q xpos_4_.Q ypos_1_.Q ypos_2_.Q ypos_3_.Q x_3_5__n.BLIF x_3_6__n.BLIF y_4_3__n.BLIF y_4_4__n.BLIF y_4_5__n.BLIF N_250_1.BLIF G_88_1.BLIF G_89_1.BLIF N_250-
+1------------0- 1
+0------------1- 1
+------1----0--- 1
+------0----1--- 1
+-----1----0---- 1
+-----0----1---- 1
+----1----0----- 1
+----0----1----- 1
+---1----0------ 1
+---0----1------ 1
+--1----0------- 1
+--0----1------- 1
+-1------------0 1
+-0------------1 1
+------------0-- 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q y_8_.Q y_4_4__n.BLIF y_4_5__n.BLIF y_4_6__n.BLIF y_4_7__n.BLIF x12.BLIF state40
+0101011110 1
+1001011111 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q y_4_.Q y_5_.Q y_6_.Q y_7_.Q y_8_.Q y_4_4__n.BLIF x12.BLIF G_212.BLIF N_188.BLIF state80
+0000-000000-0 1
+0000-111000-1 1
+1111-000-0100 1
+10100000-0110 1
+1111-111-0101 1
+10100111-0111 1
+.names x_0_.Q x_1_.Q x_2_.Q x_3_.Q x_4_.Q x_5_.Q x_6_.Q x_7_.Q x_3_5__n.BLIF x_3_6__n.BLIF N_160.BLIF x12.BLIF state13
+01101111101- 1
+01101-00101- 1
+011010-0101- 1
+01100--0100- 1
+01100---1001 1
+01101---1011 1
+.names x_0_.Q xpos_0_.Q ypos_4_.Q x_1_.Q x_2_.Q y_4_6__n.BLIF N_250_1-
+10-10- 1
+11-11- 1
+-1-00- 1
+01--0- 1
+-0-01- 1
+00--1- 1
+--1--0 1
+--0--1 1
+.names y_5_.Q y_6_.Q y_7_.Q N_188.BLIF G_212.X1
+1111 1
+.names y_8_.Q G_212.X2
+1 1
+.names y_0_.Q y_1_.Q y_2_.Q y_3_.Q y_4_.Q N_188
+11111 1
+.names x_0_.Q x_1_.Q x_2_.Q x_3_.Q G_88_1
+1110 1
+--01 1
+-0-1 1
+0--1 1
+.names x_4_.Q N_160.BLIF G_89_1
+10 1
+01 1
+.end

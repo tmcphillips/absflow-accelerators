@@ -1,0 +1,17 @@
+Simulator. Version 1.4
+Copyright (c) 1998-2007 by Lattice Semiconductor Corporation.
+Initializing mapping data.
+Initializing mapping data successfully.
+ticksize 100 ps
+stepsize 100000 ps
+mode unit
+Loading netlist......
+Loading netlist successfully.
+run 400.0 ns
+at 100.000 ns, LED_XOR  expected: 0, actual: 1
+Operation RUN ends.
+restart
+run 400.0 ns
+at 100.000 ns, LED_XOR  expected: 0, actual: 1
+Operation RUN ends.
+quit

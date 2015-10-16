@@ -1,0 +1,25 @@
+#$ TOOL   ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE   Wed Jan 18 09:42:31 2012
+#$ MODULE   FourBitCounterWithDirection
+#$ PINS 7 clock reset direction counter_3_ counter_2_ counter_1_ counter_0_
+.type f
+.i 6
+.o 13
+.ilb clock reset direction counter_0_.Q counter_1_.Q counter_2_.Q
+.ob counter_3_.T counter_3_.C counter_3_.AR counter_2_.D.X1 counter_2_.D.X2
+ counter_2_.C counter_2_.AR counter_1_.D counter_1_.C counter_1_.AR counter_0_.D
+ counter_0_.C counter_0_.AR
+.phase 1111111111111
+.p 11
+--0000 1000000000000
+--1111 1000000000000
+0----- 0100010010010
+-0---- 0010001001001
+--000- 0001000100000
+--111- 0001000000000
+-----1 0000100000000
+--110- 0000000100000
+--101- 0000000100000
+--011- 0000000100000
+---0-- 0000000000100
+.end

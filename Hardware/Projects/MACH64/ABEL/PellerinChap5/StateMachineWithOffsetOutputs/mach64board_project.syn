@@ -1,0 +1,15 @@
+JDF B
+// Created by Version 1.4 
+PROJECT UntitledProject
+DESIGN mach64board_project Normal
+DEVKIT LC4064V-75T48I
+ENTRY ABEL/Schematic
+MODULE tenbitscaler.abl
+MODSTYLE TenBitScaler Normal
+MODULE statemachineoffsetoutputs.abl
+MODSTYLE StateMachineWithOffsetOutputs Normal
+MODULE debouncer.abl
+MODSTYLE Debouncer Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE StateMachineWithOffsetOutputs

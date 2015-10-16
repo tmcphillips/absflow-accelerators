@@ -1,0 +1,477 @@
+|--------------------------------------------------------------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Fitter Report File        -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+Project_Summary
+~~~~~~~~~~~~~~~
+Project Name         :  mach64_verilog_project
+Project Path         :  C:\Users\tmcphillips\Designs\Projects\MACH64\VerilogHDL\09_ALU_1
+Project Fitted on    :  Thu Jan 26 13:49:05 2012
+
+Device               :  M4064_32
+Package              :  48
+GLB Input Mux Size   :  10
+Available Blocks     :  4
+Speed                :  -7.5
+Part Number          :  LC4064V-75T48I
+Source Format        :  Pure_Verilog_HDL
+
+
+// Project 'mach64_verilog_project' Fit Successfully! //
+
+
+Compilation_Times
+~~~~~~~~~~~~~~~~~
+Prefit Time                     0 secs
+Load Design Time                0.05 secs
+Partition Time                  0.01 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+Design_Summary
+~~~~~~~~~~~~~~
+Total Input Pins                12
+Total Logic Functions           16
+  Total Output Pins             14
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            2
+Total Flip-Flops                0
+  Total D Flip-Flops            0
+  Total T Flip-Flops            0
+  Total Latches                 0
+Total Product Terms             59
+
+Total Reserved Pins             0
+Total Locked Pins               26
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             0
+Total Unique Clock Enables      0
+Total Unique Resets             0
+Total Unique Presets            0
+
+Fmax Logic Levels               -
+
+
+Device_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~~~~
+                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+Dedicated Pins
+  Clock/Input Pins                  4        0      4    -->     0
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           30       26      4    -->    86
+Logic Functions                    64       16     48    -->    25
+  Input Registers                  32        0     32    -->     0
+
+GLB Inputs                        144       30    114    -->    20
+Logical Product Terms             320       59    261    -->    18
+Occupied GLBs                       4        4      0    -->   100
+Macrocells                         64       16     48    -->    25
+
+Control Product Terms:
+  GLB Clock/Clock Enables           4        0      4    -->     0
+  GLB Reset/Presets                 4        0      4    -->     0
+  Macrocell Clocks                 64        0     64    -->     0
+  Macrocell Clock Enables          64        0     64    -->     0
+  Macrocell Enables                64        0     64    -->     0
+  Macrocell Resets                 64        0     64    -->     0
+  Macrocell Presets                64        0     64    -->     0
+
+Global Routing Pool               100       14     86    -->    14
+  GRP from IFB                     ..       12     ..    -->    ..
+    (from input signals)           ..       12     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..        2     ..    -->    ..
+----------------------------------------------------------------------
+
+<Note> 1 : The available PT is the product term that has not been used.
+<Note> 2 : IFB is I/O feedback.
+<Note> 3 : MFB is macrocell feedback.
+
+
+
+GLB_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~
+                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+-------------------------------------------------------------------------------------------
+  GLB    A      5     5    10      7/8      0    8      0              8       16        9
+  GLB    B      8     0     8      4/8      0    1      0             15        8        2
+  GLB    C      0     0     0      8/8      0    0      0             16        0        0
+  GLB    D      2    10    12      7/8      0    7      0              9       35       11
+-------------------------------------------------------------------------------------------
+TOTALS:        15    15    30     26/32     0   16      0             48       59       22
+
+<Note> 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+<Note> 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+
+GLB_Control_Summary
+~~~~~~~~~~~~~~~~~~~
+           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+  GLB    A   0      0         0      0      0      0      0
+  GLB    B   0      0         0      0      0      0      0
+  GLB    C   0      0         0      0      0      0      0
+  GLB    D   0      0         0      0      0      0      0
+------------------------------------------------------------------------------
+
+<Note> 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+
+Optimizer_and_Fitter_Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              Yes
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+<Note> 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+<Note> 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+
+Pinout_Listing
+~~~~~~~~~~~~~~
+      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+--------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |
+2     |  I_O  |   0  |A10 |    *   |LVCMOS18         | Output|b_led_1_
+3     |  I_O  |   0  |A12 |    *   |LVCMOS18         | Output|b_led_2_
+4     |  I_O  |   0  |A14 |    *   |LVCMOS18         | Output|b_led_3_
+5     |GNDIO0 |   -  |    |        |                 |       |
+6     |VCCIO0 |   -  |    |        |                 |       |
+7     |  I_O  |   0  |B0  |    *   |LVCMOS18         | Input |opcode_n_0_
+8     |  I_O  |   0  |B2  |    *   |LVCMOS18         | Input |opcode_n_1_
+9     |  I_O  |   0  |B4  |    *   |LVCMOS18         | Input |opcode_n_2_
+10    |  I_O  |   0  |B6  |    *   |LVCMOS18         | Input |opcode_n_3_
+11    | TCK   |   -  |    |        |                 |       |
+12    | VCC   |   -  |    |        |                 |       |
+13    | GND   |   -  |    |        |                 |       |
+14    |  I_O  |   0  |B8  |        |                 |       |
+15    |  I_O  |   0  |B10 |        |                 |       |
+16    |  I_O  |   0  |B12 |        |                 |       |
+17    |  I_O  |   0  |B14 |        |                 |       |
+18    |INCLK1 |   0  |    |        |                 |       |
+19    |INCLK2 |   1  |    |        |                 |       |
+20    |  I_O  |   1  |C0  |    *   |LVCMOS18         | Input |b_n_3_
+21    |  I_O  |   1  |C2  |    *   |LVCMOS18         | Input |b_n_2_
+22    |  I_O  |   1  |C4  |    *   |LVCMOS18         | Input |b_n_1_
+23    |  I_O  |   1  |C6  |    *   |LVCMOS18         | Input |b_n_0_
+24    |  I_O  |   1  |C8  |    *   |LVCMOS18         | Input |a_n_3_
+25    | TMS   |   -  |    |        |                 |       |
+26    |  I_O  |   1  |C10 |    *   |LVCMOS18         | Input |a_n_2_
+27    |  I_O  |   1  |C12 |    *   |LVCMOS18         | Input |a_n_1_
+28    |  I_O  |   1  |C14 |    *   |LVCMOS18         | Input |a_n_0_
+29    |GNDIO1 |   -  |    |        |                 |       |
+30    |VCCIO1 |   -  |    |        |                 |       |
+31    |  I_O  |   1  |D0  |    *   |LVCMOS18         | Output|c_0_
+32    |  I_O  |   1  |D2  |    *   |LVCMOS18         | Output|c_1_
+33    |  I_O  |   1  |D4  |    *   |LVCMOS18         | Output|c_2_
+34    |  I_O  |   1  |D6  |    *   |LVCMOS18         | Output|c_3_
+35    | TDO   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    |  I_O  |   1  |D8  |    *   |LVCMOS18         | Output|zf
+39    |  I_O  |   1  |D10 |    *   |LVCMOS18         | Output|cf
+40    |  I_O  |   1  |D12 |    *   |LVCMOS18         | Output|b_led_0_
+41    | I_O/OE|   1  |D14 |        |                 |       |
+42    |INCLK3 |   1  |    |        |                 |       |
+43    |INCLK0 |   0  |    |        |                 |       |
+44    | I_O/OE|   0  |A0  |        |                 |       |
+45    |  I_O  |   0  |A2  |    *   |LVCMOS18         | Output|a_led_0_
+46    |  I_O  |   0  |A4  |    *   |LVCMOS18         | Output|a_led_1_
+47    |  I_O  |   0  |A6  |    *   |LVCMOS18         | Output|a_led_2_
+48    |  I_O  |   0  |A8  |    *   |LVCMOS18         | Output|a_led_3_
+--------------------------------------------------------------------------
+
+<Note> GLB Pad : This notation refers to the GLB I/O pad number in the device.
+<Note> Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+<Note> Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+
+Input_Signal_List
+~~~~~~~~~~~~~~~~~
+                Input
+         Pin    Fanout
+ Pin GLB Type           Pullup Signal
+------------------------------------------
+  28   C  I/O   3 AB-D      Up a_n_0_
+  27   C  I/O   3 AB-D      Up a_n_1_
+  26   C  I/O   3 AB-D      Up a_n_2_
+  24   C  I/O   3 AB-D      Up a_n_3_
+  23   C  I/O   1 ---D      Up b_n_0_
+  22   C  I/O   2 A--D      Up b_n_1_
+  21   C  I/O   1 A---      Up b_n_2_
+  20   C  I/O   2 AB--      Up b_n_3_
+   7   B  I/O   3 AB-D      Up opcode_n_0_
+   8   B  I/O   3 AB-D      Up opcode_n_1_
+   9   B  I/O   3 AB-D      Up opcode_n_2_
+  10   B  I/O   1 ---D      Up opcode_n_3_
+------------------------------------------
+
+
+
+Output_Signal_List
+~~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+---------------------------------------------------------------------
+  45   A  1  1   1  1 COM                  ----  Fast     Up a_led_0_
+  46   A  1  1   1  1 COM                  ----  Fast     Up a_led_1_
+  47   A  1  1   1  1 COM                  ----  Fast     Up a_led_2_
+  48   A  1  1   1  1 COM                  ----  Fast     Up a_led_3_
+  40   D  1  1   1  1 COM                  ----  Fast     Up b_led_0_
+   2   A  1  1   1  1 COM                  ----  Fast     Up b_led_1_
+   3   A  1  1   1  1 COM                  ----  Fast     Up b_led_2_
+   4   A  1  1   1  1 COM                  ----  Fast     Up b_led_3_
+  31   D  6  1   7  2 COM                  ----  Fast     Up c_0_
+  32   D  7  1   8  2 COM                  ----  Fast     Up c_1_
+  33   D  1  2   1  1 COM                  ----  Fast     Up c_2_
+  34   D  1  2   1  1 COM                  ----  Fast     Up c_3_
+  39   D  8  1   4  1 COM                  ----  Fast     Up cf
+  38   D 10  2  13  3 COM                  ----  Fast     Up zf
+---------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Bidir_Signal_List
+~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Buried_Signal_List
+~~~~~~~~~~~~~~~~~~
+        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P         Signal
+-----------------------------------------------------
+11   A  8  -   9  2 COM              1 ---D  c_c_2__n
+ 4   B  8  -   8  2 COM              1 ---D  c_c_3__n
+-----------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+PostFit_Equations
+~~~~~~~~~~~~~~~~~
+a_led_0_ = !a_n_0_ ; (1 pterm, 1 signal)
+
+a_led_1_ = !a_n_1_ ; (1 pterm, 1 signal)
+
+a_led_2_ = !a_n_2_ ; (1 pterm, 1 signal)
+
+a_led_3_ = !a_n_3_ ; (1 pterm, 1 signal)
+
+b_led_0_ = !b_n_0_ ; (1 pterm, 1 signal)
+
+b_led_1_ = !b_n_1_ ; (1 pterm, 1 signal)
+
+b_led_2_ = !b_n_2_ ; (1 pterm, 1 signal)
+
+b_led_3_ = !b_n_3_ ; (1 pterm, 1 signal)
+
+c_0_.X1 = !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & !a_n_1_
+    # opcode_n_2_ & !opcode_n_0_ & !a_n_0_
+    # opcode_n_2_ & !a_n_0_ & !b_n_0_
+    # opcode_n_2_ & !opcode_n_1_ & opcode_n_0_ & a_n_0_ & b_n_0_
+    # !opcode_n_2_ & opcode_n_1_ & a_n_0_
+    # opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & !b_n_0_ ; (6 pterms, 6 signals)
+c_0_.X2 = opcode_n_2_ & !opcode_n_1_ ; (1 pterm, 2 signals)
+
+c_1_.X1 = !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & !a_n_2_
+    # !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_0_
+    # !opcode_n_2_ & opcode_n_0_ & !a_n_0_
+    # opcode_n_2_ & opcode_n_0_ & !a_n_1_ & b_n_1_
+    # opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & a_n_1_
+    # opcode_n_2_ & !opcode_n_1_ & a_n_1_ & !b_n_1_
+    # opcode_n_2_ & !opcode_n_0_ & a_n_1_ & !b_n_1_ ; (7 pterms, 7 signals)
+c_1_.X2 = opcode_n_1_ & !a_n_1_ ; (1 pterm, 2 signals)
+
+c_2_ = c_c_2__n ; (1 pterm, 1 signal)
+
+c_3_ = c_c_3__n ; (1 pterm, 1 signal)
+
+c_c_2__n.X1 = !a_n_3_ & !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_
+    # !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_1_ & a_n_0_
+    # !opcode_n_2_ & !opcode_n_1_ & opcode_n_0_ & !a_n_1_
+    # !opcode_n_2_ & opcode_n_0_ & !a_n_1_ & !a_n_0_
+    # opcode_n_2_ & opcode_n_0_ & !a_n_2_ & b_n_2_
+    # opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & a_n_2_
+    # opcode_n_2_ & !opcode_n_1_ & a_n_2_ & !b_n_2_
+    # opcode_n_2_ & !opcode_n_0_ & a_n_2_ & !b_n_2_ ; (8 pterms, 8 signals)
+c_c_2__n.X2 = opcode_n_1_ & !a_n_2_ ; (1 pterm, 2 signals)
+
+c_c_3__n.X1 = !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_2_ & a_n_1_
+       & a_n_0_
+    # !opcode_n_2_ & !opcode_n_1_ & opcode_n_0_ & !a_n_2_
+    # !opcode_n_2_ & opcode_n_0_ & !a_n_2_ & !a_n_1_ & !a_n_0_
+    # !a_n_3_ & b_n_3_ & opcode_n_2_ & opcode_n_0_
+    # a_n_3_ & !b_n_3_ & opcode_n_2_ & !opcode_n_1_
+    # a_n_3_ & opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_
+    # a_n_3_ & !b_n_3_ & opcode_n_2_ & !opcode_n_0_ ; (7 pterms, 8 signals)
+c_c_3__n.X2 = !a_n_3_ & opcode_n_1_ ; (1 pterm, 2 signals)
+
+cf = !opcode_n_3_ & a_n_3_ & !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_
+       & a_n_2_ & a_n_1_ & a_n_0_
+    # !opcode_n_3_ & !a_n_3_ & !opcode_n_2_ & opcode_n_0_ & !a_n_2_ & !a_n_1_
+       & !a_n_0_
+    # !opcode_n_3_ & !a_n_3_ & !opcode_n_2_ & !opcode_n_1_ & opcode_n_0_
+    # !opcode_n_3_ & !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & !a_n_0_ ; (4 pterms, 8 signals)
+
+zf.X1 = opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & !a_n_1_ & !a_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # opcode_n_2_ & !opcode_n_1_ & !a_n_1_ & !a_n_0_ & !b_n_1_ & !b_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # !opcode_n_2_ & !opcode_n_1_ & opcode_n_0_ & a_n_0_ & !c_c_2__n
+       & !c_c_3__n
+    # !opcode_n_1_ & opcode_n_0_ & !a_n_1_ & a_n_0_ & !b_n_1_ & b_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & a_n_2_ & a_n_1_ & !c_c_2__n
+       & !c_c_3__n
+    # opcode_n_2_ & opcode_n_0_ & a_n_1_ & !a_n_0_ & b_n_1_ & !b_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # !opcode_n_1_ & opcode_n_0_ & a_n_1_ & a_n_0_ & b_n_1_ & b_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_1_ & !a_n_0_ & !c_c_2__n
+       & !c_c_3__n
+    # !opcode_n_2_ & opcode_n_1_ & opcode_n_0_ & !a_n_1_ & !a_n_0_ & !c_c_2__n
+       & !c_c_3__n
+    # opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_1_ & a_n_0_ & b_n_1_
+       & b_n_0_ & !c_c_2__n & !c_c_3__n
+    # opcode_n_2_ & opcode_n_1_ & opcode_n_0_ & !a_n_1_ & !b_n_1_ & !c_c_2__n
+       & !c_c_3__n
+    # opcode_n_2_ & opcode_n_1_ & opcode_n_0_ & !a_n_0_ & !b_n_0_ & !c_c_2__n
+       & !c_c_3__n ; (12 pterms, 10 signals)
+zf.X2 = opcode_n_2_ & opcode_n_1_ & opcode_n_0_ & !c_c_2__n & !c_c_3__n ; (1 pterm, 5 signals)
+
+
+
+

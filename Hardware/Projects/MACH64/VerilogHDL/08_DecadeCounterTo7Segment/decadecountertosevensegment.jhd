@@ -1,0 +1,39 @@
+MODULE DecadeCounterToSevenSegment DEFIN decadecountertosevensegment.v
+	SUBMODULE HexDigitToSevenSegment
+		INSTANCE u1hdtss
+	SUBMODULE BcdDecadeCounter
+		INSTANCE u4udc
+	SUBMODULE ButtonPressDetector
+		INSTANCE u2bpd
+	SUBMODULE RippleScaler
+		INSTANCE u1rs
+MODULE BcdDecadeCounter DEFIN bcddecadecounter.v
+	SUBMODULE JKFlipFlop
+		INSTANCE u3jkff
+	SUBMODULE JKFlipFlop
+		INSTANCE u2jkff
+	SUBMODULE JKFlipFlop
+		INSTANCE u1jkff
+	SUBMODULE JKFlipFlop
+		INSTANCE u0jkff
+MODULE JKFlipFlop DEFIN jkflipflop.v
+MODULE HexDigitToSevenSegment DEFIN hexdigittosevensegment.v
+MODULE UpDownCounter DEFIN updowncounter.v
+MODULE ButtonPressDetector DEFIN buttonpressdetector.v
+MODULE RippleScaler DEFIN ripplescaler.v
+	SUBMODULE RippleCounter
+		INSTANCE u1rc
+MODULE RippleCounter DEFIN ripplecounter.v
+	SUBMODULE TFlipFlop
+		INSTANCE uitff
+	SUBMODULE TFlipFlop
+		INSTANCE u0tff
+MODULE TFlipFlop DEFIN tflipflop.v
+DEPEND INCLUDED_FILE jkflipflop.v
+DEPEND INCLUDED_FILE bcddecadecounter.v
+DEPEND INCLUDED_FILE hexdigittosevensegment.v
+DEPEND INCLUDED_FILE updowncounter.v
+DEPEND INCLUDED_FILE buttonpressdetector.v
+DEPEND INCLUDED_FILE tflipflop.v
+DEPEND INCLUDED_FILE ripplecounter.v
+DEPEND INCLUDED_FILE ripplescaler.v

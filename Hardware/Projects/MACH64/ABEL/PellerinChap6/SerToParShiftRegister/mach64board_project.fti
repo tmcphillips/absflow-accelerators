@@ -1,0 +1,72 @@
+#PLAFILE     mach64board_project.bl5
+#DATE        Mon Jan 16 16:28:27 2012
+
+#DESIGN      mach64board_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION data:B_*_7
+DATA LOCATION rotate:B_*_8
+DATA LOCATION clk:C_*_26
+DATA LOCATION clr:C_*_20
+DATA LOCATION q0:D_0_31
+DATA LOCATION q1:D_3_32
+DATA LOCATION q2:D_5_33
+DATA LOCATION q3:D_7_34
+DATA LOCATION q4:D_9_38
+DATA LOCATION q5:D_1_39
+DATA LOCATION q6:D_12_40
+DATA LOCATION q7:A_7_45
+
+// Signals direction
+DATA IO_DIR data:IN
+DATA IO_DIR rotate:IN
+DATA IO_DIR clk:IN
+DATA IO_DIR clr:IN
+DATA IO_DIR q0:OUT
+DATA IO_DIR q1:OUT
+DATA IO_DIR q2:OUT
+DATA IO_DIR q3:OUT
+DATA IO_DIR q4:OUT
+DATA IO_DIR q5:OUT
+DATA IO_DIR q6:OUT
+DATA IO_DIR q7:OUT
+
+// Signals using Shared Clock or CE
+DATA tBCLK q0.C
+DATA tBCLK q1.C
+DATA tBCLK q2.C
+DATA tBCLK q3.C
+DATA tBCLK q4.C
+DATA tBCLK q5.C
+DATA tBCLK q6.C
+DATA tBCLK q7.C
+
+// Signals using Shared Init Pterm
+DATA tBSR q0.AR
+DATA tBSR q1.AR
+DATA tBSR q2.AR
+DATA tBSR q3.AR
+DATA tBSR q4.AR
+DATA tBSR q5.AR
+DATA tBSR q6.AR
+DATA tBSR q7.AR
+
+// Block Load Adders
+DATA tBLA clk:1
+DATA tBLA clr:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM q0
+DATA tOSM q1
+DATA tOSM q2
+DATA tOSM q3
+DATA tOSM q4
+DATA tOSM q5
+DATA tOSM q6
+DATA tOSM q7

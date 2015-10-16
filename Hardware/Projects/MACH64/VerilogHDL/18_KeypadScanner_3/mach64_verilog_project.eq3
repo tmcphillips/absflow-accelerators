@@ -1,0 +1,266 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+keypadColumns_0_ = !keypadColumns_2_.Q & !keypadColumns_1_.Q ; (1 pterm, 2 signals)
+
+keypadColumns_1_.D = !keypadColumns_2_.Q & !keypadColumns_1_.Q ; (1 pterm, 2 signals)
+keypadColumns_1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+keypadColumns_2_.D = keypadColumns_1_.Q ; (1 pterm, 1 signal)
+keypadColumns_2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+segments_0_ = !u2slpf_stableValue_reg_0_.Q & u2slpf_stableValue_reg_1_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # !u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_2_.Q
+       & u2slpf_stableValue_reg_3_.Q
+    # u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_2_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # !u2slpf_stableValue_reg_1_.Q & u2slpf_stableValue_reg_2_.Q
+       & !u2slpf_stableValue_reg_3_.Q ; (4 pterms, 4 signals)
+
+segments_1_ = !u2slpf_stableValue_reg_0_.Q & !u2slpf_stableValue_reg_1_.Q
+       & !u2slpf_stableValue_reg_2_.Q
+    # !u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_2_.Q
+       & u2slpf_stableValue_reg_3_.Q
+    # !u2slpf_stableValue_reg_0_.Q & u2slpf_stableValue_reg_2_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # !u2slpf_stableValue_reg_1_.Q & u2slpf_stableValue_reg_2_.Q
+       & !u2slpf_stableValue_reg_3_.Q ; (4 pterms, 4 signals)
+
+segments_2_ = !u2slpf_stableValue_reg_0_.Q & !u2slpf_stableValue_reg_1_.Q
+       & !u2slpf_stableValue_reg_2_.Q
+    # !u2slpf_stableValue_reg_0_.Q & u2slpf_stableValue_reg_1_.Q
+       & !u2slpf_stableValue_reg_3_.Q ; (2 pterms, 4 signals)
+
+segments_3_.X1 = u2slpf_stableValue_reg_0_.Q & !u2slpf_stableValue_reg_1_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # !u2slpf_stableValue_reg_0_.Q & u2slpf_stableValue_reg_1_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_2_.Q
+       & !u2slpf_stableValue_reg_3_.Q ; (3 pterms, 4 signals)
+segments_3_.X2 = !u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_2_.Q ; (1 pterm, 2 signals)
+
+segments_4_ = !u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_2_.Q
+    # u2slpf_stableValue_reg_2_.Q & !u2slpf_stableValue_reg_3_.Q
+    # u2slpf_stableValue_reg_0_.Q & !u2slpf_stableValue_reg_3_.Q ; (3 pterms, 4 signals)
+
+segments_5_ = u2slpf_stableValue_reg_0_.Q & u2slpf_stableValue_reg_1_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # !u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_2_.Q
+    # !u2slpf_stableValue_reg_0_.Q & !u2slpf_stableValue_reg_1_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # !u2slpf_stableValue_reg_2_.Q & !u2slpf_stableValue_reg_3_.Q ; (4 pterms, 4 signals)
+
+segments_6_ = !u2slpf_stableValue_reg_0_.Q & !u2slpf_stableValue_reg_2_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # !u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_2_.Q
+       & u2slpf_stableValue_reg_3_.Q
+    # u2slpf_stableValue_reg_0_.Q & u2slpf_stableValue_reg_2_.Q
+       & !u2slpf_stableValue_reg_3_.Q
+    # u2slpf_stableValue_reg_1_.Q & !u2slpf_stableValue_reg_3_.Q ; (4 pterms, 4 signals)
+
+u0rs_u1rc_genblk1_0__uitff_q.D = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_0__uitff_q.C = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_1__uitff_q.D = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_1__uitff_q.C = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_2__uitff_q.D = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_2__uitff_q.C = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_3__uitff_q.D = !u0rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_3__uitff_q.C = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_4__uitff_q.D = !u0rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_4__uitff_q.C = !u0rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_5__uitff_q.D = !u0rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_5__uitff_q.C = !u0rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_6__uitff_q.D = !u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_6__uitff_q.C = !u0rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_7__uitff_q.D = !u0rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_7__uitff_q.C = !u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_8__uitff_q.D = !u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_8__uitff_q.C = !u0rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_u0tff_q.D = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u1ks_activeKey_reg_0_.D = !keypadRows_2_ & !keypadRows_0_
+       & !keypadColumns_1_.Q
+    # keypadRows_2_ & !keypadRows_0_ & keypadColumns_1_.Q ; (2 pterms, 3 signals)
+u1ks_activeKey_reg_0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_activeKey_reg_0_.CE = !( !u1ks_n_21_n & !u1ks_n_22_n ) ; (1 pterm, 2 signals)
+
+u1ks_activeKey_reg_1_.D = !keypadRows_1_ & !keypadRows_0_
+       & !keypadColumns_2_.Q & !keypadColumns_1_.Q
+    # keypadRows_3_ & !keypadRows_1_ & !keypadRows_0_ & !keypadColumns_2_.Q
+    # keypadRows_1_ & !keypadRows_0_ & keypadColumns_2_.Q
+       & !keypadColumns_1_.Q
+    # keypadRows_3_ & keypadRows_1_ & !keypadRows_0_ & keypadColumns_2_.Q ; (4 pterms, 5 signals)
+u1ks_activeKey_reg_1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_activeKey_reg_1_.CE = !( !u1ks_n_21_n & !u1ks_n_22_n ) ; (1 pterm, 2 signals)
+
+u1ks_activeKey_reg_2_.D = keypadRows_2_
+    # keypadRows_1_ & keypadColumns_2_.Q ; (2 pterms, 3 signals)
+u1ks_activeKey_reg_2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_activeKey_reg_2_.CE = !( !u1ks_n_21_n & !u1ks_n_22_n ) ; (1 pterm, 2 signals)
+
+u1ks_activeKey_reg_3_.D = keypadRows_1_ & !keypadColumns_2_.Q ; (1 pterm, 2 signals)
+u1ks_activeKey_reg_3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1ks_activeKey_reg_3_.CE = !( !u1ks_n_21_n & !u1ks_n_22_n ) ; (1 pterm, 2 signals)
+
+u1ks_n_21_n = keypadRows_3_ & !keypadRows_2_ & !keypadRows_1_ & !keypadRows_0_
+    # !keypadRows_3_ & !keypadRows_2_ & keypadRows_1_ & !keypadRows_0_ ; (2 pterms, 4 signals)
+
+u1ks_n_22_n = !keypadRows_3_ & keypadRows_2_ & !keypadRows_1_ & !keypadRows_0_
+    # !keypadRows_3_ & !keypadRows_2_ & !keypadRows_1_ & keypadRows_0_ ; (2 pterms, 4 signals)
+
+u2slpf_stableValue_reg_0_.D = u1ks_activeKey_reg_0_.Q ; (1 pterm, 1 signal)
+u2slpf_stableValue_reg_0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_stableValue_reg_0_.CE = !( u2slpf_stableValue_reg_0__0 ) ; (1 pterm, 1 signal)
+
+u2slpf_stableValue_reg_0__0 = u2slpf_state_reg_0_.Q
+    # u1ks_activeKey_reg_3_.Q & !u2slpf_valueHistory_reg_3__3_.Q
+    # u1ks_activeKey_reg_0_.Q & !u2slpf_valueHistory_reg_1__0_.Q
+    # u1ks_activeKey_reg_1_.Q & !u2slpf_valueHistory_reg_1__1_.Q
+    # u1ks_activeKey_reg_2_.Q & !u2slpf_valueHistory_reg_1__2_.Q
+    # u1ks_activeKey_reg_0_.Q & !u2slpf_valueHistory_reg_2__0_.Q
+    # u1ks_activeKey_reg_1_.Q & !u2slpf_valueHistory_reg_2__1_.Q
+    # u1ks_activeKey_reg_2_.Q & !u2slpf_valueHistory_reg_2__2_.Q
+    # u1ks_activeKey_reg_0_.Q & !u2slpf_valueHistory_reg_3__0_.Q
+    # u1ks_activeKey_reg_1_.Q & !u2slpf_valueHistory_reg_3__1_.Q
+    # u1ks_activeKey_reg_2_.Q & !u2slpf_valueHistory_reg_3__2_.Q
+    # u1ks_activeKey_reg_3_.Q & !u2slpf_valueHistory_reg_1__3_.Q
+    # u1ks_activeKey_reg_3_.Q & !u2slpf_valueHistory_reg_2__3_.Q ; (13 pterms, 17 signals)
+
+u2slpf_stableValue_reg_1_.D = u1ks_activeKey_reg_1_.Q ; (1 pterm, 1 signal)
+u2slpf_stableValue_reg_1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_stableValue_reg_1_.CE = !( u2slpf_stableValue_reg_0__0 ) ; (1 pterm, 1 signal)
+
+u2slpf_stableValue_reg_2_.D = u1ks_activeKey_reg_2_.Q ; (1 pterm, 1 signal)
+u2slpf_stableValue_reg_2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_stableValue_reg_2_.CE = !( u2slpf_stableValue_reg_0__0 ) ; (1 pterm, 1 signal)
+
+u2slpf_stableValue_reg_3_.D = u1ks_activeKey_reg_3_.Q ; (1 pterm, 1 signal)
+u2slpf_stableValue_reg_3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_stableValue_reg_3_.CE = !( u2slpf_stableValue_reg_0__0 ) ; (1 pterm, 1 signal)
+
+u2slpf_state_reg_0_.D = !( !u1ks_activeKey_reg_3_.Q
+       & u2slpf_stableValue_reg_3_.Q & u2slpf_state_reg_1_.Q
+    # !u1ks_activeKey_reg_2_.Q & u2slpf_stableValue_reg_2_.Q
+       & u2slpf_state_reg_1_.Q
+    # !u1ks_activeKey_reg_1_.Q & u2slpf_stableValue_reg_1_.Q
+       & u2slpf_state_reg_1_.Q
+    # !u1ks_activeKey_reg_0_.Q & u2slpf_stableValue_reg_0_.Q
+       & u2slpf_state_reg_1_.Q
+    # u1ks_activeKey_reg_3_.Q & !u2slpf_stableValue_reg_3_.Q
+       & u2slpf_state_reg_1_.Q
+    # u1ks_activeKey_reg_2_.Q & !u2slpf_stableValue_reg_2_.Q
+       & u2slpf_state_reg_1_.Q
+    # u1ks_activeKey_reg_1_.Q & !u2slpf_stableValue_reg_1_.Q
+       & u2slpf_state_reg_1_.Q
+    # u1ks_activeKey_reg_0_.Q & !u2slpf_stableValue_reg_0_.Q
+       & u2slpf_state_reg_1_.Q
+    # u1ks_activeKey_reg_3_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_2__3_.Q
+    # u1ks_activeKey_reg_3_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_1__3_.Q
+    # u1ks_activeKey_reg_2_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_3__2_.Q
+    # u1ks_activeKey_reg_1_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_3__1_.Q
+    # u1ks_activeKey_reg_0_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_3__0_.Q
+    # u1ks_activeKey_reg_2_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_2__2_.Q
+    # u1ks_activeKey_reg_1_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_2__1_.Q
+    # u1ks_activeKey_reg_0_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_2__0_.Q
+    # u1ks_activeKey_reg_2_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_1__2_.Q
+    # u1ks_activeKey_reg_1_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_1__1_.Q
+    # u1ks_activeKey_reg_0_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_1__0_.Q
+    # u1ks_activeKey_reg_3_.Q & !u2slpf_state_reg_0_.Q
+       & !u2slpf_valueHistory_reg_3__3_.Q ) ; (20 pterms, 22 signals)
+u2slpf_state_reg_0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2slpf_state_reg_1_.D = !( u1ks_activeKey_reg_3_.Q
+       & !u2slpf_stableValue_reg_3_.Q & u2slpf_state_reg_1_.Q
+    # !u1ks_activeKey_reg_3_.Q & u2slpf_stableValue_reg_3_.Q
+       & u2slpf_state_reg_1_.Q
+    # u1ks_activeKey_reg_2_.Q & !u2slpf_stableValue_reg_2_.Q
+       & u2slpf_state_reg_1_.Q
+    # !u1ks_activeKey_reg_2_.Q & u2slpf_stableValue_reg_2_.Q
+       & u2slpf_state_reg_1_.Q
+    # u1ks_activeKey_reg_1_.Q & !u2slpf_stableValue_reg_1_.Q
+       & u2slpf_state_reg_1_.Q
+    # !u1ks_activeKey_reg_1_.Q & u2slpf_stableValue_reg_1_.Q
+       & u2slpf_state_reg_1_.Q
+    # u1ks_activeKey_reg_0_.Q & !u2slpf_stableValue_reg_0_.Q
+       & u2slpf_state_reg_1_.Q
+    # !u1ks_activeKey_reg_0_.Q & u2slpf_stableValue_reg_0_.Q
+       & u2slpf_state_reg_1_.Q
+    # !u2slpf_state_reg_0_.Q ) ; (9 pterms, 10 signals)
+u2slpf_state_reg_1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_1__0_.D = u1ks_activeKey_reg_0_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_1__0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_1__0_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_1__1_.D = u1ks_activeKey_reg_1_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_1__1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_1__1_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_1__2_.D = u1ks_activeKey_reg_2_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_1__2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_1__2_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_1__3_.D = u1ks_activeKey_reg_3_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_1__3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_1__3_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_2__0_.D = u2slpf_valueHistory_reg_1__0_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_2__0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_2__0_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_2__1_.D = u2slpf_valueHistory_reg_1__1_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_2__1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_2__1_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_2__2_.D = u2slpf_valueHistory_reg_1__2_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_2__2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_2__2_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_2__3_.D = u2slpf_valueHistory_reg_1__3_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_2__3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_2__3_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_3__0_.D = u2slpf_valueHistory_reg_2__0_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_3__0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_3__0_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_3__1_.D = u2slpf_valueHistory_reg_2__1_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_3__1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_3__1_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_3__2_.D = u2slpf_valueHistory_reg_2__2_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_3__2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_3__2_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+
+u2slpf_valueHistory_reg_3__3_.D = u2slpf_valueHistory_reg_2__3_.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_3__3_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u2slpf_valueHistory_reg_3__3_.CE = !u2slpf_state_reg_0_.Q ; (1 pterm, 1 signal)
+

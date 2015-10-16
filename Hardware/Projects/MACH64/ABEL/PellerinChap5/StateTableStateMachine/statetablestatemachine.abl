@@ -1,0 +1,47 @@
+module StateTableStateMachine
+
+declarations
+
+	TenBitScaler interface (inclock -> outclock);
+	Debouncer interface (rawSignal, samplingClock -> debounced);
+
+	clock	pin 18;
+
+	!step	pin 20;
+	!oe	pin 21;
+	!hold	pin 22;
+	!reset	pin 23;
+
+	debouncedStep functional_block Debouncer;
+	clockScaler   functional_block TenBitScaler;
+
+	q1,q0	pin 31,32 istype 'reg';
+
+	A=0; B=1; C=2; D=3;
+
+equations
+
+	clockScaler.inclock = clock;
+
+	debouncedStep.samplingClock = clockScaler.outclock;	
+	debouncedStep.rawSignal = step;
+
+	[q1,q0].clk = debouncedStep.debounced;
+	[q1,q0].oe  = oe;
+
+	state_diagram [q1,q0]
+
+		state A:  if !reset then B else A;
+  
+		state B:  case	 reset	       : A;
+				!reset &  hold : B
+				!reset & !hold : C;
+			  endcase;
+
+		state C:  if      reset then A
+			  else if hold  then C
+			  else               D;
+
+		state D:  goto A;
+ 
+end

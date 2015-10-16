@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ExactPatternMatching_Native_Tests.cpp" />
+    <ClCompile Include="ApproximatePatternMatching_Native_Tests.cpp" />
+    <ClCompile Include="ExactPatternMatching_OpenCL_Tests.cpp" />
+    <ClCompile Include="ApproximatePatternMatching_OpenCL_Tests.cpp" />
+  </ItemGroup>
+</Project>

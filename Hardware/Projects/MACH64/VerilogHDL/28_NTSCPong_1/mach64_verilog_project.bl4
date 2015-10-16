@@ -1,0 +1,889 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Feb 22 10:15:10 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 9 ntscClock:43'ke'  reset_n:16'ke'  video_2_:34'ke'  hState_1_:23'ke'  vState_1_:21'ke'  \
+#  video_1_:33'ke'  video_0_:32'ke'  hState_0_:22'ke'  vState_0_:20'ke' 
+#$ NODES 36 scanX_0_ ballX_0_ inst_ballDirectionY inst_ballDirectionX scanY_3_ \
+#  scanY_4_ scanY_5_ scanY_6_ scanY_7_ scanY_8_ ballY_0_ ballY_1_ ballY_2_ ballY_3_ \
+#  ballY_4_ ballY_5_ ballX_1_ ballX_2_ ballX_3_ ballX_4_ ballX_5_ scanX_1_ scanX_2_ \
+#  scanX_3_ scanX_4_ scanX_5_ scanX_6_ scanX_7_ scanY_0_ scanY_1_ scanY_2_ G_72 G_73 \
+#  video_0_sqmuxa_3_4 video_0_sqmuxa_3_5 video_0_sqmuxa_3_6
+.model ntscpong
+.inputs ntscClock.BLIF reset_n.BLIF scanX_0_.Q ballX_0_.Q \
+inst_ballDirectionY.Q inst_ballDirectionX.Q scanY_3_.Q scanY_4_.Q scanY_5_.Q \
+scanY_6_.Q scanY_7_.Q scanY_8_.Q ballY_0_.Q ballY_1_.Q ballY_2_.Q ballY_3_.Q \
+ballY_4_.Q ballY_5_.Q ballX_1_.Q ballX_2_.Q ballX_3_.Q ballX_4_.Q ballX_5_.Q \
+scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q scanX_6_.Q scanX_7_.Q \
+scanY_0_.Q scanY_1_.Q scanY_2_.Q G_72.BLIF G_73.BLIF video_0_sqmuxa_3_4.BLIF \
+video_0_sqmuxa_3_5.BLIF video_0_sqmuxa_3_6.BLIF hState_0_.Q hState_1_.Q \
+vState_0_.Q vState_1_.Q
+.outputs scanY_4_.CE scanY_4_.C scanY_5_.CE scanY_5_.C scanY_6_.CE scanY_6_.C \
+scanY_7_.CE scanY_7_.C scanY_8_.CE scanY_8_.C ballY_1_.CE ballY_1_.C \
+ballY_2_.CE ballY_2_.C ballY_3_.CE ballY_3_.C ballY_4_.CE ballY_4_.C \
+ballY_5_.CE ballY_5_.C scanY_0_.CE scanY_0_.C scanY_1_.CE scanY_1_.C \
+scanY_2_.CE scanY_2_.C scanY_3_.CE scanY_3_.C scanX_7_.C ballX_0_.C \
+ballX_0_.AP ballX_1_.C ballX_1_.AR ballX_2_.C ballX_2_.AR ballX_3_.C \
+ballX_3_.AR ballX_4_.C ballX_4_.AR ballX_5_.C ballX_5_.AP hState_0_.C \
+hState_1_.C video_0_.C video_1_.C video_2_.D video_2_.C vState_0_.CE \
+vState_0_.C vState_1_.CE vState_1_.C ballY_0_.CE ballY_0_.C scanX_0_.C \
+scanX_1_.C scanX_2_.C scanX_3_.C scanX_4_.C scanX_5_.C scanX_6_.C \
+inst_ballDirectionY.CE inst_ballDirectionY.C inst_ballDirectionY.AP \
+inst_ballDirectionX.CE inst_ballDirectionX.C inst_ballDirectionX.AP \
+video_0_sqmuxa_3_4 video_0_sqmuxa_3_5 video_0_sqmuxa_3_6 G_72.X1 G_72.X2 \
+G_73.X1 G_73.X2 scanX_0_.D ballX_0_.D inst_ballDirectionY.D \
+inst_ballDirectionX.D scanY_3_.D scanY_4_.D scanY_5_.T scanY_6_.T scanY_7_.T \
+scanY_8_.T ballY_0_.D ballY_1_.D ballY_2_.D ballY_3_.T ballY_4_.T ballY_5_.T \
+ballX_1_.D ballX_2_.D ballX_3_.T ballX_4_.T ballX_5_.T scanX_1_.D scanX_2_.D \
+scanX_3_.D scanX_4_.D scanX_5_.T scanX_6_.T scanX_7_.T scanY_0_.D scanY_1_.D \
+scanY_2_.D video_0_.D video_1_.D hState_0_.T hState_1_.T vState_0_.T \
+vState_1_.T
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_4_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_5_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_6_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_7_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_8_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_0_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_1_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_2_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanY_3_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names reset_n.BLIF ballX_0_.AP
+0 1
+1 0
+.names reset_n.BLIF ballX_1_.AR
+0 1
+1 0
+.names reset_n.BLIF ballX_2_.AR
+0 1
+1 0
+.names reset_n.BLIF ballX_3_.AR
+0 1
+1 0
+.names reset_n.BLIF ballX_4_.AR
+0 1
+1 0
+.names reset_n.BLIF ballX_5_.AP
+0 1
+1 0
+.names scanX_0_.Q ballX_0_.Q ballX_1_.Q ballX_2_.Q ballX_3_.Q scanX_1_.Q \
+scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q G_72.BLIF G_73.BLIF \
+video_0_sqmuxa_3_4.BLIF video_0_sqmuxa_3_5.BLIF video_0_sqmuxa_3_6.BLIF \
+hState_0_.Q hState_1_.Q vState_0_.Q vState_1_.Q video_2_.D
+1100010000001111100 1
+1010011000001111100 1
+1110010100001111100 1
+1001011100001111100 1
+1101010010001111100 1
+1011011010001111100 1
+1111010110001111100 1
+1000111110001111100 1
+1100110001001111100 1
+1010111001001111100 1
+1110110101001111100 1
+1001111101001111100 1
+1101110011001111100 1
+1011111011001111100 1
+1111110111001111100 1
+1000011111001111100 1
+-000000000001111100 1
+00000-0000001111100 1
+-100001000001111100 1
+01000-1000001111100 1
+-010000100001111100 1
+00100-0100001111100 1
+-110001100001111100 1
+01100-1100001111100 1
+-001000010001111100 1
+00010-0010001111100 1
+-101001010001111100 1
+01010-1010001111100 1
+-011000110001111100 1
+00110-0110001111100 1
+-111001110001111100 1
+01110-1110001111100 1
+-000100001001111100 1
+00001-0001001111100 1
+-100101001001111100 1
+01001-1001001111100 1
+-010100101001111100 1
+00101-0101001111100 1
+-110101101001111100 1
+01101-1101001111100 1
+-001100011001111100 1
+00011-0011001111100 1
+-101101011001111100 1
+01011-1011001111100 1
+-011100111001111100 1
+00111-0111001111100 1
+-111101111001111100 1
+01111-1111001111100 1
+---00---10--------- 0
+---01---11--------- 0
+--00---10---------- 0
+--01---11---------- 0
+-00---10----------- 0
+-01---11----------- 0
+---11----0--------- 0
+---10----1--------- 0
+--11----0---------- 0
+-11----0----------- 0
+--10----1---------- 0
+10---10------------ 0
+-10----1----------- 0
+00----1------------ 0
+11---11------------ 0
+----1---00--------- 0
+----0---01--------- 0
+--1---00----------- 0
+---1---00---------- 0
+---0---01---------- 0
+--0---01----------- 0
+-0---01------------ 0
+-1---00------------ 0
+01----0------------ 0
+-----------------1- 0
+----------------0-- 0
+---------------0--- 0
+--------------0---- 0
+-------------0----- 0
+------------0------ 0
+-----------1------- 0
+----------1-------- 0
+------------------1 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q vState_0_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q vState_1_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names inst_ballDirectionY.Q ballY_0_.Q ballY_1_.Q ballY_2_.Q ballY_3_.Q \
+ballY_4_.Q ballY_5_.Q inst_ballDirectionY.CE
+1100000 1
+0110000 1
+1101110 1
+0111110 1
+---1-0- 0
+----01- 0
+---01-- 0
+0-0---- 0
+1-1---- 0
+-0----- 0
+------1 0
+.names reset_n.BLIF inst_ballDirectionY.AP
+0 1
+1 0
+.names ballX_0_.Q inst_ballDirectionX.Q ballX_1_.Q ballX_2_.Q ballX_3_.Q \
+ballX_4_.Q ballX_5_.Q inst_ballDirectionX.CE
+0111011 1
+0110100 1
+0001100 1
+0000111 1
+-0-0--0 0
+--11--0 0
+---00-- 0
+-0-1--1 0
+--1-1-1 0
+----0-0 0
+-10---- 0
+-----10 0
+-----01 0
+1------ 0
+.names reset_n.BLIF inst_ballDirectionX.AP
+0 1
+1 0
+.names scanY_3_.Q scanY_4_.Q ballY_0_.Q ballY_1_.Q video_0_sqmuxa_3_4
+0000 1
+1010 1
+0101 1
+1111 1
+1-0- 0
+0-1- 0
+-1-0 0
+-0-1 0
+.names scanY_5_.Q scanY_6_.Q ballY_2_.Q ballY_3_.Q video_0_sqmuxa_3_5
+0000 1
+1010 1
+0101 1
+1111 1
+1-0- 0
+0-1- 0
+-1-0 0
+-0-1 0
+.names scanY_7_.Q scanY_8_.Q ballY_4_.Q ballY_5_.Q video_0_sqmuxa_3_6
+0000 1
+1010 1
+0101 1
+1111 1
+1-0- 0
+0-1- 0
+-1-0 0
+-0-1 0
+.names ballX_4_.Q G_72.X1
+0 1
+1 0
+.names scanX_0_.Q ballX_4_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q \
+scanX_5_.Q scanX_6_.Q G_72.X2
+0------0 1
+--0----0 1
+---0---0 1
+----0--0 1
+-----0-0 1
+------00 1
+1-111111 1
+0------1 0
+--0----1 0
+---0---1 0
+----0--1 0
+-----0-1 0
+------01 0
+1-111110 0
+.names ballX_5_.Q G_73.X1
+0 1
+1 0
+.names scanX_0_.Q ballX_5_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q \
+scanX_5_.Q scanX_6_.Q scanX_7_.Q G_73.X2
+0-------0 1
+--0-----0 1
+---0----0 1
+----0---0 1
+-----0--0 1
+------0-0 1
+-------00 1
+1-1111111 1
+0-------1 0
+--0-----1 0
+---0----1 0
+----0---1 0
+-----0--1 0
+------0-1 0
+-------01 0
+1-1111110 0
+.names ntscClock.BLIF scanY_4_.C
+1 1
+0 0
+.names ntscClock.BLIF scanY_5_.C
+1 1
+0 0
+.names ntscClock.BLIF scanY_6_.C
+1 1
+0 0
+.names ntscClock.BLIF scanY_7_.C
+1 1
+0 0
+.names ntscClock.BLIF scanY_8_.C
+1 1
+0 0
+.names reset_n.BLIF ballY_1_.CE
+1 1
+0 0
+.names scanY_8_.Q ballY_1_.C
+1 1
+0 0
+.names reset_n.BLIF ballY_2_.CE
+1 1
+0 0
+.names scanY_8_.Q ballY_2_.C
+1 1
+0 0
+.names reset_n.BLIF ballY_3_.CE
+1 1
+0 0
+.names scanY_8_.Q ballY_3_.C
+1 1
+0 0
+.names reset_n.BLIF ballY_4_.CE
+1 1
+0 0
+.names scanY_8_.Q ballY_4_.C
+1 1
+0 0
+.names reset_n.BLIF ballY_5_.CE
+1 1
+0 0
+.names scanY_8_.Q ballY_5_.C
+1 1
+0 0
+.names ntscClock.BLIF scanY_0_.C
+1 1
+0 0
+.names ntscClock.BLIF scanY_1_.C
+1 1
+0 0
+.names ntscClock.BLIF scanY_2_.C
+1 1
+0 0
+.names ntscClock.BLIF scanY_3_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_7_.C
+1 1
+0 0
+.names scanY_8_.Q ballX_0_.C
+1 1
+0 0
+.names scanY_8_.Q ballX_1_.C
+1 1
+0 0
+.names scanY_8_.Q ballX_2_.C
+1 1
+0 0
+.names scanY_8_.Q ballX_3_.C
+1 1
+0 0
+.names scanY_8_.Q ballX_4_.C
+1 1
+0 0
+.names scanY_8_.Q ballX_5_.C
+1 1
+0 0
+.names ntscClock.BLIF hState_0_.C
+1 1
+0 0
+.names ntscClock.BLIF hState_1_.C
+1 1
+0 0
+.names ntscClock.BLIF video_0_.C
+1 1
+0 0
+.names ntscClock.BLIF video_1_.C
+1 1
+0 0
+.names ntscClock.BLIF video_2_.C
+1 1
+0 0
+.names ntscClock.BLIF vState_0_.C
+1 1
+0 0
+.names ntscClock.BLIF vState_1_.C
+1 1
+0 0
+.names reset_n.BLIF ballY_0_.CE
+1 1
+0 0
+.names scanY_8_.Q ballY_0_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_0_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_1_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_2_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_3_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_4_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_5_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_6_.C
+1 1
+0 0
+.names scanY_8_.Q inst_ballDirectionY.C
+1 1
+0 0
+.names scanY_8_.Q inst_ballDirectionX.C
+1 1
+0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanX_0_.D
+0-------0- 1
+0------0-- 1
+0-----0--- 1
+0----0---- 1
+0---1----- 1
+0--1------ 1
+0-1------- 1
+01-------- 1
+0--------0 1
+-000011111 0
+1--------- 0
+.names ballX_0_.Q ballX_0_.D
+0 1
+1 0
+.names ballY_3_.Q inst_ballDirectionY.D
+0 1
+1 0
+.names ballX_5_.Q inst_ballDirectionX.D
+0 1
+1 0
+.names scanY_3_.Q scanY_0_.Q scanY_1_.Q scanY_2_.Q scanY_3_.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names scanY_3_.Q scanY_4_.Q scanY_0_.Q scanY_1_.Q scanY_2_.Q scanY_4_.D
+10111 1
+-1-0- 1
+-10-- 1
+01--- 1
+-1--0 1
+11111 0
+-0-0- 0
+-00-- 0
+00--- 0
+-0--0 0
+.names scanY_3_.Q scanY_4_.Q scanY_0_.Q scanY_1_.Q scanY_2_.Q scanY_5_.T
+11111 1
+---0- 0
+--0-- 0
+-0--- 0
+0---- 0
+----0 0
+.names scanY_3_.Q scanY_4_.Q scanY_5_.Q scanY_0_.Q scanY_1_.Q scanY_2_.Q \
+scanY_6_.T
+111111 1
+----0- 0
+---0-- 0
+--0--- 0
+-0---- 0
+0----- 0
+-----0 0
+.names scanY_3_.Q scanY_4_.Q scanY_5_.Q scanY_6_.Q scanY_0_.Q scanY_1_.Q \
+scanY_2_.Q scanY_7_.T
+1111111 1
+-----0- 0
+----0-- 0
+---0--- 0
+--0---- 0
+-0----- 0
+0------ 0
+------0 0
+.names scanY_3_.Q scanY_4_.Q scanY_5_.Q scanY_6_.Q scanY_7_.Q scanY_8_.Q \
+scanY_0_.Q scanY_1_.Q scanY_2_.Q vState_0_.Q vState_1_.Q scanY_8_.T
+00000110111 1
+11111-111-- 1
+--1----0--- 0
+-----0-0--- 0
+-------0-0- 0
+0------1--- 0
+-1--0------ 0
+---01------ 0
+--01------- 0
+10--------- 0
+-------0--0 0
+--------0-- 0
+------0---- 0
+.names ballY_0_.Q ballY_0_.D
+0 1
+1 0
+.names inst_ballDirectionY.Q ballY_0_.Q ballY_1_.Q ballY_1_.D
+000 1
+110 1
+101 1
+011 1
+100 0
+010 0
+001 0
+111 0
+.names inst_ballDirectionY.Q ballY_0_.Q ballY_1_.Q ballY_2_.Q ballY_2_.D
+1-01 1
+-011 1
+01-1 1
+0000 1
+1110 1
+1-00 0
+-010 0
+01-0 0
+0001 0
+1111 0
+.names inst_ballDirectionY.Q ballY_0_.Q ballY_1_.Q ballY_2_.Q ballY_3_.T
+0000 1
+1111 1
+1--0 0
+--01 0
+-01- 0
+01-- 0
+.names inst_ballDirectionY.Q ballY_0_.Q ballY_1_.Q ballY_2_.Q ballY_3_.Q \
+ballY_4_.T
+00000 1
+11111 1
+---10 0
+--0-1 0
+1--0- 0
+-01-- 0
+01--- 0
+.names inst_ballDirectionY.Q ballY_0_.Q ballY_1_.Q ballY_2_.Q ballY_3_.Q \
+ballY_4_.Q ballY_5_.T
+000000 1
+111111 1
+1----0 0
+--0--1 0
+--1-0- 0
+---01- 0
+-0-1-- 0
+01---- 0
+.names ballX_0_.Q inst_ballDirectionX.Q ballX_1_.Q ballX_1_.D
+000 1
+110 1
+101 1
+011 1
+100 0
+010 0
+001 0
+111 0
+.names ballX_0_.Q inst_ballDirectionX.Q ballX_1_.Q ballX_2_.Q ballX_2_.D
+1-01 1
+-011 1
+01-1 1
+0000 1
+1110 1
+1-00 0
+-010 0
+01-0 0
+0001 0
+1111 0
+.names ballX_0_.Q inst_ballDirectionX.Q ballX_1_.Q ballX_2_.Q ballX_3_.T
+0000 1
+1111 1
+1--0 0
+--01 0
+-01- 0
+01-- 0
+.names ballX_0_.Q inst_ballDirectionX.Q ballX_1_.Q ballX_2_.Q ballX_3_.Q \
+ballX_4_.T
+00000 1
+11111 1
+---10 0
+--0-1 0
+1--0- 0
+-01-- 0
+01--- 0
+.names ballX_0_.Q inst_ballDirectionX.Q ballX_1_.Q ballX_2_.Q ballX_3_.Q \
+ballX_4_.Q ballX_5_.T
+000000 1
+111111 1
+1----0 0
+--0--1 0
+--1-0- 0
+---01- 0
+-0-1-- 0
+01---- 0
+.names scanX_0_.Q scanX_1_.Q scanX_1_.D
+10 1
+01 1
+00 0
+11 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_4_.D
+11110 1
+---01 1
+--0-1 1
+-0--1 1
+0---1 1
+11111 0
+---00 0
+--0-0 0
+-0--0 0
+0---0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanX_5_.T
+0000011111 1
+11111----- 1
+01-------- 0
+0----0---- 0
+0-----0--- 0
+0------0-- 0
+0-------0- 0
+--1-0----- 0
+-0--1----- 0
+1--0------ 0
+--01------ 0
+0--------0 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanX_6_.T
+0000011111 1
+111111---- 1
+01-------- 0
+0-----0--- 0
+0------0-- 0
+0-------0- 0
+--1-0----- 0
+-0--1----- 0
+1--0------ 0
+--01------ 0
+0--------0 0
+-----0---- 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q scanX_7_.T
+0000011111 1
+1111111--- 1
+01-------- 0
+0------0-- 0
+0-------0- 0
+--1-0----- 0
+-0--1----- 0
+1--0------ 0
+--01------ 0
+0--------0 0
+------0--- 0
+-----0---- 0
+.names scanY_0_.Q scanY_0_.D
+0 1
+1 0
+.names scanY_3_.Q scanY_4_.Q scanY_5_.Q scanY_6_.Q scanY_7_.Q scanY_8_.Q \
+scanY_0_.Q scanY_1_.Q scanY_2_.Q vState_0_.Q vState_1_.Q scanY_1_.D
+------01--- 1
+------10-0- 1
+------100-- 1
+-----010--- 1
+----1-10--- 1
+---1--10--- 1
+--1---10--- 1
+-1----10--- 1
+1-----10--- 1
+------10--0 1
+0000011-111 0
+------00--- 0
+------11--- 0
+.names scanY_3_.Q scanY_4_.Q scanY_5_.Q scanY_6_.Q scanY_7_.Q scanY_8_.Q \
+scanY_0_.Q scanY_1_.Q scanY_2_.Q vState_0_.Q vState_1_.Q scanY_2_.D
+------110-- 1
+------0-1-- 1
+-------010- 1
+-----0-01-- 1
+----1--01-- 1
+---1---01-- 1
+--1----01-- 1
+-1-----01-- 1
+1------01-- 1
+-------01-0 1
+00000110-11 0
+------111-- 0
+------0-0-- 0
+-------00-- 0
+.names hState_0_.Q hState_1_.Q vState_0_.Q vState_1_.Q video_0_.D
+1001 1
+-11- 1
+0-1- 1
+0--0 1
+10-0 0
+110- 0
+101- 0
+0-01 0
+.names hState_0_.Q hState_1_.Q vState_0_.Q vState_1_.Q video_1_.D
+1100 1
+--1- 0
+-0-- 0
+0--- 0
+---1 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q hState_0_.T
+0000011111 1
+0110100010 1
+1010000000 1
+1110010001 1
+-0--1----- 0
+-----1---0 0
+-1-----1-- 0
+0-1------1 0
+-0------01 0
+-1---0--0- 0
+0---00---- 0
+1-------1- 0
+------10-- 0
+--0---0--- 0
+-------1-0 0
+----1----1 0
+---1------ 0
+.names scanX_0_.Q scanX_1_.Q scanX_2_.Q scanX_3_.Q scanX_4_.Q scanX_5_.Q \
+scanX_6_.Q scanX_7_.Q hState_0_.Q hState_1_.Q hState_1_.T
+0110100010 1
+0000011111 1
+------1--0 0
+-1-------1 0
+-0-----0-- 0
+-----0-1-- 0
+----0-0--- 0
+--1--1---- 0
+--0-1----- 0
+--------0- 0
+---1------ 0
+1--------- 0
+.names scanY_3_.Q scanY_4_.Q scanY_5_.Q scanY_6_.Q scanY_7_.Q scanY_8_.Q \
+scanY_0_.Q scanY_1_.Q scanY_2_.Q vState_0_.Q vState_1_.Q vState_0_.T
+00000110111 1
+01111011000 1
+11111010010 1
+11111011101 1
+1--------00 0
+-----1----0 0
+--0-1------ 0
+1------0--1 0
+0---1-----1 0
+0--1---0--- 0
+-------1-1- 0
+--10------- 0
+-----1---0- 0
+-0---0----- 0
+-1--0------ 0
+--------1-0 0
+--------0-1 0
+------0---- 0
+.names scanY_3_.Q scanY_4_.Q scanY_5_.Q scanY_6_.Q scanY_7_.Q scanY_8_.Q \
+scanY_0_.Q scanY_1_.Q scanY_2_.Q vState_0_.Q vState_1_.Q vState_1_.T
+11111010010 1
+00000110111 1
+--------1-0 0
+1---------1 0
+-----1--0-- 0
+-0---0----- 0
+-1--0------ 0
+--0-1------ 0
+--10------- 0
+0--1------- 0
+---------0- 0
+-------1--- 0
+------0---- 0
+.end

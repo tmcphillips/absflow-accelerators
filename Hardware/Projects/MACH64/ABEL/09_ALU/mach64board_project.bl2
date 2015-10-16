@@ -1,0 +1,152 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Sat Dec 10 21:50:33 2011
+#$ MODULE mach64board_project
+#$ JEDECFILE alu_1_demo
+#$ PINS 26 op0:7 op1:8 op2:9 op3:10 a0:24 a1:26 a2:27 a3:28 b0:20 b1:21 b2:22 b3:23 c0:31 \
+#  c1:32 c2:33 c3:34 ad0:45 ad1:46 ad2:47 ad3:48 bd0:2 bd1:3 bd2:4 bd3:40 zf:38 cf:39
+#$ NODES 18 alu>A0'co'  alu>A1'co'  alu>A2'co'  alu>A3'co'  alu>B0'co'  alu>B1'co'  alu>B2'co'  alu>B3'co'  \
+#  alu>Op0'co'  alu>Op1'co'  alu>Op2'co'  alu>Op3'co'  alu>C0'co,o'  alu>C1'co,o'  alu>C2'co,o'  alu>C3'co,o'  \
+#  alu>CF'co,o'  alu>ZF'co,o' 
+.model alu_1_demo
+.inputs a3.BLIF a2.BLIF a1.BLIF a0.BLIF b3.BLIF b2.BLIF b1.BLIF b0.BLIF \
+op3.BLIF op2.BLIF op1.BLIF op0.BLIF alu>C3.BLIF alu>C2.BLIF alu>C1.BLIF \
+alu>C0.BLIF alu>ZF.BLIF alu>CF.BLIF alu>A0.BLIF alu>A1.BLIF alu>A2.BLIF \
+alu>A3.BLIF alu>B0.BLIF alu>B1.BLIF alu>B2.BLIF alu>B3.BLIF alu>Op0.BLIF \
+alu>Op1.BLIF alu>Op2.BLIF alu>Op3.BLIF
+.outputs alu>A0 alu>A1 alu>A2 alu>A3 alu>B0 alu>B1 alu>B2 alu>B3 alu>Op0 \
+alu>Op1 alu>Op2 alu>Op3 c0 c1 c2 c3 ad0 ad1 ad2 ad3 bd0 bd1 bd2 bd3 zf cf \
+alu>C0 alu>C1 alu>C2 alu>C3 alu>CF alu>ZF
+\
+
+.subckt alu_1 A0.BLIF=alu>A0.BLIF A1.BLIF=alu>A1.BLIF A2.BLIF=alu>A2.BLIF A3.BLIF=alu>A3.BLIF \
+ B0.BLIF=alu>B0.BLIF B1.BLIF=alu>B1.BLIF B2.BLIF=alu>B2.BLIF B3.BLIF=alu>B3.BLIF Op0.BLIF=alu>Op0.BLIF \
+ Op1.BLIF=alu>Op1.BLIF Op2.BLIF=alu>Op2.BLIF Op3.BLIF=alu>Op3.BLIF C0.BLIF=alu>C0.BLIF \
+ C1.BLIF=alu>C1.BLIF C2.BLIF=alu>C2.BLIF C3.BLIF=alu>C3.BLIF C0=alu>C0 C1=alu>C1 C2=alu>C2 \
+ C3=alu>C3 CF=alu>CF ZF=alu>ZF
+.names a0.BLIF alu>A0
+0 1
+.names a1.BLIF alu>A1
+0 1
+.names a2.BLIF alu>A2
+0 1
+.names a3.BLIF alu>A3
+0 1
+.names b0.BLIF alu>B0
+0 1
+.names b1.BLIF alu>B1
+0 1
+.names b2.BLIF alu>B2
+0 1
+.names b3.BLIF alu>B3
+0 1
+.names op0.BLIF alu>Op0
+0 1
+.names op1.BLIF alu>Op1
+0 1
+.names op2.BLIF alu>Op2
+0 1
+.names op3.BLIF alu>Op3
+0 1
+.names a0.BLIF ad0
+0 1
+.names a1.BLIF ad1
+0 1
+.names a2.BLIF ad2
+0 1
+.names a3.BLIF ad3
+0 1
+.names b0.BLIF bd0
+0 1
+.names b1.BLIF bd1
+0 1
+.names b2.BLIF bd2
+0 1
+.names b3.BLIF bd3
+0 1
+.names alu>C0.BLIF c0
+1 1
+0 0
+.names alu>C1.BLIF c1
+1 1
+0 0
+.names alu>C2.BLIF c2
+1 1
+0 0
+.names alu>C3.BLIF c3
+1 1
+0 0
+.names alu>ZF.BLIF zf
+1 1
+0 0
+.names alu>CF.BLIF cf
+1 1
+0 0
+.end
+.model alu_1
+.inputs A3.BLIF B3.BLIF Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF B2.BLIF \
+A1.BLIF B1.BLIF A0.BLIF B0.BLIF C0.BLIF C1.BLIF C2.BLIF C3.BLIF
+.outputs C3 C2 C1 C0 ZF CF
+.names A3.BLIF B3.BLIF Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF A1.BLIF \
+A0.BLIF C3
+0-1101--- 1
+1-1001--- 1
+-11001--- 1
+--01111-- 1
+010101--- 1
+100101--- 1
+110001--- 1
+1-10111-- 1
+1-00110-- 1
+1-1011-1- 1
+1-0011-0- 1
+1-1011--1 1
+1-0011--0 1
+0-0011111 1
+0-1011000 1
+.names A3.BLIF Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF B2.BLIF A1.BLIF \
+A0.BLIF C2
+11111---- 1
+-10011--- 1
+-11010--- 1
+-1001-1-- 1
+-0111--1- 1
+-000111-- 1
+-010101-- 1
+-010110-- 1
+-10111-1- 1
+-00111-0- 1
+-10111--1 1
+-00111--0 1
+-00110-11 1
+-10110-00 1
+.names Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF A1.BLIF B1.BLIF A0.BLIF C1
+11111--- 1
+1001-1-- 1
+1101-0-- 1
+1001--1- 1
+0111---1 1
+0001-11- 1
+0101-01- 1
+0101-10- 1
+1011-1-1 1
+0011-0-1 1
+0011-1-0 1
+1011-0-0 1
+.names Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A1.BLIF A0.BLIF B0.BLIF C0
+11111-- 1
+1001-1- 1
+1011-0- 1
+0011-0- 1
+1101-0- 1
+1001--1 1
+0001-11 1
+0101-01 1
+0101-10 1
+.names C0.BLIF C1.BLIF C2.BLIF C3.BLIF ZF
+0000 1
+.names A3.BLIF Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF A1.BLIF A0.BLIF CF
+10111--- 1
+-1111--1 1
+10011111 1
+01011000 1
+.end

@@ -1,0 +1,86 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:28:23 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE sertoparshiftregisterdemo
+#$ PINS 12 data:7 rotate:8 clk:26 clr:20 q0+:31'co'  q1+:32'co'  q2+:33'co'  q3+:34'co'  q4+:38'co'  \
+#  q5+:39'co'  q6+:40'co'  q7+:45'co' 
+.model sertoparshiftregisterdemo
+.inputs data.BLIF rotate.BLIF clk.BLIF clr.BLIF q7.Q q6.Q q5.Q q4.Q q3.Q q2.Q \
+q1.Q q0.Q
+.outputs q0.AR q0.C q1.AR q1.C q2.AR q2.C q3.AR q3.C q4.AR q4.C q5.AR q5.C \
+q6.AR q6.C q7.AR q7.C q0.D q1.D q2.D q3.D q4.D q5.D q6.D q7.D
+.names clr.BLIF q0.AR
+0 1
+1 0
+.names clk.BLIF q0.C
+0 1
+1 0
+.names clr.BLIF q1.AR
+0 1
+1 0
+.names clk.BLIF q1.C
+0 1
+1 0
+.names clr.BLIF q2.AR
+0 1
+1 0
+.names clk.BLIF q2.C
+0 1
+1 0
+.names clr.BLIF q3.AR
+0 1
+1 0
+.names clk.BLIF q3.C
+0 1
+1 0
+.names clr.BLIF q4.AR
+0 1
+1 0
+.names clk.BLIF q4.C
+0 1
+1 0
+.names clr.BLIF q5.AR
+0 1
+1 0
+.names clk.BLIF q5.C
+0 1
+1 0
+.names clr.BLIF q6.AR
+0 1
+1 0
+.names clk.BLIF q6.C
+0 1
+1 0
+.names clr.BLIF q7.AR
+0 1
+1 0
+.names clk.BLIF q7.C
+0 1
+1 0
+.names data.BLIF rotate.BLIF q7.Q q0.D
+0-- 1
+-01 1
+11- 0
+1-0 0
+.names q0.Q q1.D
+1 1
+0 0
+.names q1.Q q2.D
+1 1
+0 0
+.names q2.Q q3.D
+1 1
+0 0
+.names q3.Q q4.D
+1 1
+0 0
+.names q4.Q q5.D
+1 1
+0 0
+.names q5.Q q6.D
+1 1
+0 0
+.names q6.Q q7.D
+1 1
+0 0
+.end

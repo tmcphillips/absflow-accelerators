@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_FourBitCounterWithLoad\FourBitCounterWithLoad.ncd
+OUTFILE=C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_FourBitCounterWithLoad\FourBitCounterWithLoad.bit
+FAMILY=Spartan3E
+PART=xc3s250e-5tq144
+WORKINGDIR=C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_FourBitCounterWithLoad
+LICENSE=WebPack
+USER_INFO=208911381_0_0_173

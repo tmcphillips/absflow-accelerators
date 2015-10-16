@@ -1,0 +1,718 @@
+EDIF2BLIF version IspLever 1.0  Linked Equations File
+Copyright(C), 1992-2011, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design alu created Thu Jan 26 12:59:28 2012
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   1/1        1        1    Pin   c_3_ 
+   1/1        1        1    Pin   zf 
+   1/1        1        1    Pin   cf 
+   1/1        1        1    Pin   c_2_ 
+   1/1        1        1    Pin   c_1_ 
+   1/1        1        1    Pin   c_0_ 
+   1          1        1    Node  N_62 
+   1/1        1        1    NodeX1  c_2_0_1_.X1 
+   1/1        1        1    NodeX2  c_2_0_1_.X2 
+   1/1        1        1    NodeX1  c_4_3_.X1 
+   1/1        1        1    NodeX2  c_4_3_.X2 
+   1/1        1        1    NodeX1  G_31.X1 
+   1/1        1        1    NodeX2  G_31.X2 
+   1/1        1        1    NodeX1  c_4_2_.X1 
+   1/1        1        1    NodeX2  c_4_2_.X2 
+   1/1        1        1    NodeX1  G_30.X1 
+   1/1        1        1    NodeX2  G_30.X2 
+   1          1        1    Node  N_65 
+   1/1        1        1    NodeX1  c_4_0_.X1 
+   1/1        1        1    NodeX2  c_4_0_.X2 
+   1/1        1        1    NodeX1  c_4_1_.X1 
+   1/1        1        1    NodeX2  c_4_1_.X2 
+   1          2        1    Node  a_m_0__n 
+   1          2        1    Node  a_m_3__n 
+   1          2        1    Node  un4_c_1_m_4__n 
+   1          2        1    Node  cf_3_m_2 
+   1          2        1    Node  N_44 
+   1          2        1    Node  cf_3_m 
+   1          2        1    Node  a_m_2_3__n 
+   1          2        1    Node  N_18 
+   1          2        1    Node  N_15 
+   2          2        1    Node  N_24 
+   2          2        1    Node  N_28 
+   2          2        1    Node  N_23 
+   2          2        1    Node  N_27 
+   2          2        1    Node  N_22 
+   2          2        1    Node  N_26 
+   2          2        1    Node  N_21 
+   2          2        1    Node  N_25 
+   2          2        1    Node  N_14 
+   2          2        1    Node  N_13 
+   2          2        1    Node  N_17 
+   2          2        1    Node  N_16 
+   2          2        1    Node  N_6 
+   2          2        1    Node  N_10 
+   2          2        1    Node  N_5 
+   2          2        1    Node  N_9 
+   2          2        1    Node  N_4 
+   2          2        1    Node  N_8 
+   2          2        1    Node  N_3 
+   2          2        1    Node  N_7 
+   1/1        1        1    NodeX1  G_7.X1 
+   1/1        1        1    NodeX2  G_7.X2 
+   1/1        1        1    NodeX1  G_5.X1 
+   1/1        1        1    NodeX2  G_5.X2 
+   1          2        1    Node  c_2_3__n 
+   1          1        1    Node  c_3_3__n 
+   1          2        1    Node  c_2_2__n 
+   1          1        1    Node  c_3_2__n 
+   1          2        1    Node  c_2_1__n 
+   1          1        1    Node  c_3_1__n 
+   1          2        1    Node  c_2_0__n 
+   1          1        1    Node  c_3_0__n 
+   1          2        1    Node  N_41 
+   1          1        1    Node  a_i_0__n 
+   1          1        1    Node  a_i_1__n 
+   1          1        1    Node  a_i_2__n 
+   1          1        1    Node  a_i_3__n 
+   1          1        1    Node  un26_c_i_i_2__n 
+   1          1        1    Node  un26_c_i_i_3__n 
+   1          1        1    Node  opcode_i_0__n 
+   1          1        1    Node  opcode_i_1__n 
+   1          1        1    Node  c_i_1__n 
+   1          1        1    Node  c_i_0__n 
+   1          1        1    Node  c_i_3__n 
+   1          1        1    Node  c_i_2__n 
+   1/1        1        1    Node  opcode_c_0__n 
+   1/1        1        1    Node  opcode_c_1__n 
+   1/1        1        1    Node  opcode_c_2__n 
+   1/1        1        1    Node  opcode_c_3__n 
+   1/1        1        1    Node  a_c_0__n 
+   1/1        1        1    Node  a_c_1__n 
+   1/1        1        1    Node  a_c_2__n 
+   1/1        1        1    Node  a_c_3__n 
+   1/1        1        1    Node  b_c_0__n 
+   1/1        1        1    Node  b_c_1__n 
+   1/1        1        1    Node  b_c_2__n 
+   1/1        1        1    Node  b_c_3__n 
+   2          2        1    Node  c_c_0__n 
+   2          2        1    Node  c_c_1__n 
+   2          2        1    Node  c_c_2__n 
+   2          2        1    Node  c_c_3__n 
+   1          2        1    Node  zf_c 
+   1          1        1    Node  cf_c 
+   1          2        1    Node  N_65_0 
+   1          1        1    Node  b_c_i_0__n 
+   1          2        1    Node  c_3_0_0__n 
+   1          1        1    Node  b_c_i_1__n 
+   1          2        1    Node  c_3_0_1__n 
+   1          1        1    Node  b_c_i_2__n 
+   1          2        1    Node  c_3_0_2__n 
+   1          1        1    Node  b_c_i_3__n 
+   1          2        1    Node  c_3_0_3__n 
+   1          1        1    Node  un4_c_1_m_i_4__n 
+   1          1        1    Node  cf_3_m_i 
+   1          1        1    Node  a_m_i_3__n 
+   1          1        1    Node  a_m_i_0__n 
+   1          2        1    Node  cf_c_0 
+   1          2        1    Node  N_62_0 
+   1          2        1    Node  cf_c_0_1 
+   1          2        1    Node  cf_c_0_2 
+   1          2        1    Node  zf_c_1 
+   1          2        1    Node  zf_c_2 
+   1          2        1    Node  un4_c_1_m_1_4__n 
+   1          2        1    Node  un4_c_1_m_2_4__n 
+   1          2        1    Node  un4_c_1_m_3_4__n 
+   1          2        1    Node  cf_3_m_1 
+   1          2        1    Node  cf_3_m_2_0 
+   1          2        1    Node  cf_3_m_3 
+   1          2        1    Node  cf_3_m_4 
+   1          2        1    Node  a_m_1_3__n 
+   1          2        1    Node  a_m_2_0_3__n 
+   1          2        1    Node  a_m_1_0__n 
+   1          2        1    Node  a_m_2_0__n 
+   1/1        1        1    NodeX1  c_2_0_1_1_.X1 
+   1/1        1        1    NodeX2  c_2_0_1_1_.X2 
+   1          2        1    Node  N_62_0_1 
+   1          1        1    Node  c_0_0__un3_n 
+   1          2        1    Node  c_0_0__un1_n 
+   1          2        1    Node  c_0_0__un0_n 
+   1          1        1    Node  c_2_0_3__un3_n 
+   1          2        1    Node  c_2_0_3__un1_n 
+   1          2        1    Node  c_2_0_3__un0_n 
+   1          1        1    Node  c_2_0_2__un3_n 
+   1          2        1    Node  c_2_0_2__un1_n 
+   1          2        1    Node  c_2_0_2__un0_n 
+   1          1        1    Node  c_1_3__un3_n 
+   1          2        1    Node  c_1_3__un1_n 
+   1          2        1    Node  c_1_3__un0_n 
+   1          1        1    Node  c_1_2__un3_n 
+   1          2        1    Node  c_1_2__un1_n 
+   1          2        1    Node  c_1_2__un0_n 
+   1          1        1    Node  c_1_1__un3_n 
+   1          2        1    Node  c_1_1__un1_n 
+   1          2        1    Node  c_1_1__un0_n 
+   1          1        1    Node  c_1_0__un3_n 
+   1          2        1    Node  c_1_0__un1_n 
+   1          2        1    Node  c_1_0__un0_n 
+   1          1        1    Node  c_0_3__un3_n 
+   1          2        1    Node  c_0_3__un1_n 
+   1          2        1    Node  c_0_3__un0_n 
+   1          1        1    Node  c_0_2__un3_n 
+   1          2        1    Node  c_0_2__un1_n 
+   1          2        1    Node  c_0_2__un0_n 
+   1          1        1    Node  c_0_1__un3_n 
+   1          2        1    Node  c_0_1__un1_n 
+   1          2        1    Node  c_0_1__un0_n 
+   1          1        1    Node  cmux_3__un3_n 
+   1          2        1    Node  cmux_3__un1_n 
+   1          2        1    Node  cmux_3__un0_n 
+   1          1        1    Node  cmux_2__un3_n 
+   1          2        1    Node  cmux_2__un1_n 
+   1          2        1    Node  cmux_2__un0_n 
+   1          1        1    Node  cmux_1__un3_n 
+   1          2        1    Node  cmux_1__un1_n 
+   1          2        1    Node  cmux_1__un0_n 
+   1          1        1    Node  cmux_0__un3_n 
+   1          2        1    Node  cmux_0__un1_n 
+   1          2        1    Node  cmux_0__un0_n 
+   1          1        1    Node  c_5_3__un3_n 
+   1          2        1    Node  c_5_3__un1_n 
+   1          2        1    Node  c_5_3__un0_n 
+   1          1        1    Node  c_5_2__un3_n 
+   1          2        1    Node  c_5_2__un1_n 
+   1          2        1    Node  c_5_2__un0_n 
+   1          1        1    Node  c_5_1__un3_n 
+   1          2        1    Node  c_5_1__un1_n 
+   1          2        1    Node  c_5_1__un0_n 
+   1          1        1    Node  c_5_0__un3_n 
+   1          2        1    Node  c_5_0__un1_n 
+   1          2        1    Node  c_5_0__un0_n 
+   1          1        1    Node  c_4_0_3__un3_n 
+   1          2        1    Node  c_4_0_3__un1_n 
+   1          2        1    Node  c_4_0_3__un0_n 
+   1          1        1    Node  c_4_0_2__un3_n 
+   1          2        1    Node  c_4_0_2__un1_n 
+   1          2        1    Node  c_4_0_2__un0_n 
+   1          1        1    Node  c_4_0_1__un3_n 
+   1          2        1    Node  c_4_0_1__un1_n 
+   1          2        1    Node  c_4_0_1__un0_n 
+   1          1        1    Node  c_4_0_0__un3_n 
+   1          2        1    Node  c_4_0_0__un1_n 
+   1          2        1    Node  c_4_0_0__un0_n 
+   1          1        1    Node  c_3_0_2__un3_n 
+   1          2        1    Node  c_3_0_2__un1_n 
+   1          2        1    Node  c_3_0_2__un0_n 
+   1          1        1    Node  c_3_0_1__un3_n 
+   1          2        1    Node  c_3_0_1__un1_n 
+   1          2        1    Node  c_3_0_1__un0_n 
+=========
+ 223/38         Best P-Term Total: 223
+                       Total Pins: 18
+                      Total Nodes: 183
+            Average P-Term/Output: 1
+
+
+Equations:
+
+c_3_ = (c_c_3__n);
+
+zf = (zf_c);
+
+cf = (cf_c);
+
+c_2_ = (c_c_2__n);
+
+c_1_ = (c_c_1__n);
+
+c_0_ = (c_c_0__n);
+
+N_62 = (!N_62_0);
+
+c_2_0_1_.X1 = (c_2_0_1_1_);
+
+c_2_0_1_.X2 = (opcode_c_0__n);
+
+c_4_3_.X1 = (a_c_3__n);
+
+c_4_3_.X2 = (b_c_3__n);
+
+G_31.X1 = (N_62);
+
+G_31.X2 = (a_c_3__n);
+
+c_4_2_.X1 = (a_c_2__n);
+
+c_4_2_.X2 = (b_c_2__n);
+
+G_30.X1 = (N_65);
+
+G_30.X2 = (a_c_2__n);
+
+N_65 = (!N_65_0);
+
+c_4_0_.X1 = (a_c_0__n);
+
+c_4_0_.X2 = (b_c_0__n);
+
+c_4_1_.X1 = (a_c_1__n);
+
+c_4_1_.X2 = (b_c_1__n);
+
+a_m_0__n = (a_m_1_0__n & a_m_2_0__n);
+
+a_m_3__n = (a_m_1_3__n & a_m_2_0_3__n);
+
+un4_c_1_m_4__n = (un4_c_1_m_3_4__n & opcode_i_0__n);
+
+cf_3_m_2 = (opcode_c_2__n & opcode_c_3__n);
+
+N_44 = (N_41 & a_c_2__n);
+
+cf_3_m = (cf_3_m_4 & cf_3_m_3);
+
+a_m_2_3__n = (opcode_c_1__n & opcode_c_2__n);
+
+N_18 = (a_c_2__n & opcode_i_0__n);
+
+N_15 = (a_c_1__n & opcode_c_0__n);
+
+N_24 = (c_4_0_3__un1_n
+     # c_4_0_3__un0_n);
+
+N_28 = (c_5_3__un1_n
+     # c_5_3__un0_n);
+
+N_23 = (c_4_0_2__un1_n
+     # c_4_0_2__un0_n);
+
+N_27 = (c_5_2__un1_n
+     # c_5_2__un0_n);
+
+N_22 = (c_4_0_1__un1_n
+     # c_4_0_1__un0_n);
+
+N_26 = (c_5_1__un1_n
+     # c_5_1__un0_n);
+
+N_21 = (c_4_0_0__un1_n
+     # c_4_0_0__un0_n);
+
+N_25 = (c_5_0__un1_n
+     # c_5_0__un0_n);
+
+N_14 = (c_2_0_3__un1_n
+     # c_2_0_3__un0_n);
+
+N_13 = (c_2_0_2__un1_n
+     # c_2_0_2__un0_n);
+
+N_17 = (c_3_0_2__un1_n
+     # c_3_0_2__un0_n);
+
+N_16 = (c_3_0_1__un1_n
+     # c_3_0_1__un0_n);
+
+N_6 = (c_0_3__un1_n
+     # c_0_3__un0_n);
+
+N_10 = (c_1_3__un1_n
+     # c_1_3__un0_n);
+
+N_5 = (c_0_2__un1_n
+     # c_0_2__un0_n);
+
+N_9 = (c_1_2__un1_n
+     # c_1_2__un0_n);
+
+N_4 = (c_0_1__un1_n
+     # c_0_1__un0_n);
+
+N_8 = (c_1_1__un1_n
+     # c_1_1__un0_n);
+
+N_3 = (c_0_0__un1_n
+     # c_0_0__un0_n);
+
+N_7 = (c_1_0__un1_n
+     # c_1_0__un0_n);
+
+G_7.X1 = (N_44);
+
+G_7.X2 = (a_c_3__n);
+
+G_5.X1 = (N_41);
+
+G_5.X2 = (a_c_2__n);
+
+c_2_3__n = (a_c_3__n & b_c_3__n);
+
+c_3_3__n = (!c_3_0_3__n);
+
+c_2_2__n = (a_c_2__n & b_c_2__n);
+
+c_3_2__n = (!c_3_0_2__n);
+
+c_2_1__n = (a_c_1__n & b_c_1__n);
+
+c_3_1__n = (!c_3_0_1__n);
+
+c_2_0__n = (a_c_0__n & b_c_0__n);
+
+c_3_0__n = (!c_3_0_0__n);
+
+N_41 = (a_c_0__n & a_c_1__n);
+
+a_i_0__n = (!a_c_0__n);
+
+a_i_1__n = (!a_c_1__n);
+
+a_i_2__n = (!a_c_2__n);
+
+a_i_3__n = (!a_c_3__n);
+
+un26_c_i_i_2__n = (!G_30);
+
+un26_c_i_i_3__n = (!G_31);
+
+opcode_i_0__n = (!opcode_c_0__n);
+
+opcode_i_1__n = (!opcode_c_1__n);
+
+c_i_1__n = (!c_c_1__n);
+
+c_i_0__n = (!c_c_0__n);
+
+c_i_3__n = (!c_c_3__n);
+
+c_i_2__n = (!c_c_2__n);
+
+opcode_c_0__n = (opcode_0_);
+
+opcode_c_1__n = (opcode_1_);
+
+opcode_c_2__n = (opcode_2_);
+
+opcode_c_3__n = (opcode_3_);
+
+a_c_0__n = (a_0_);
+
+a_c_1__n = (a_1_);
+
+a_c_2__n = (a_2_);
+
+a_c_3__n = (a_3_);
+
+b_c_0__n = (b_0_);
+
+b_c_1__n = (b_1_);
+
+b_c_2__n = (b_2_);
+
+b_c_3__n = (b_3_);
+
+c_c_0__n = (cmux_0__un1_n
+     # cmux_0__un0_n);
+
+c_c_1__n = (cmux_1__un1_n
+     # cmux_1__un0_n);
+
+c_c_2__n = (cmux_2__un1_n
+     # cmux_2__un0_n);
+
+c_c_3__n = (cmux_3__un1_n
+     # cmux_3__un0_n);
+
+zf_c = (zf_c_1 & zf_c_2);
+
+cf_c = (!cf_c_0);
+
+N_65_0 = (a_i_0__n & a_i_1__n);
+
+b_c_i_0__n = (!b_c_0__n);
+
+c_3_0_0__n = (a_i_0__n & b_c_i_0__n);
+
+b_c_i_1__n = (!b_c_1__n);
+
+c_3_0_1__n = (a_i_1__n & b_c_i_1__n);
+
+b_c_i_2__n = (!b_c_2__n);
+
+c_3_0_2__n = (a_i_2__n & b_c_i_2__n);
+
+b_c_i_3__n = (!b_c_3__n);
+
+c_3_0_3__n = (a_i_3__n & b_c_i_3__n);
+
+un4_c_1_m_i_4__n = (!un4_c_1_m_4__n);
+
+cf_3_m_i = (!cf_3_m);
+
+a_m_i_3__n = (!a_m_3__n);
+
+a_m_i_0__n = (!a_m_0__n);
+
+cf_c_0 = (cf_c_0_1 & cf_c_0_2);
+
+N_62_0 = (N_62_0_1 & a_i_2__n);
+
+cf_c_0_1 = (cf_3_m_i & un4_c_1_m_i_4__n);
+
+cf_c_0_2 = (a_m_i_0__n & a_m_i_3__n);
+
+zf_c_1 = (c_i_0__n & c_i_1__n);
+
+zf_c_2 = (c_i_2__n & c_i_3__n);
+
+un4_c_1_m_1_4__n = (opcode_i_1__n & N_44);
+
+un4_c_1_m_2_4__n = (a_c_3__n & cf_3_m_2);
+
+un4_c_1_m_3_4__n = (un4_c_1_m_1_4__n & un4_c_1_m_2_4__n);
+
+cf_3_m_1 = (opcode_c_0__n & opcode_i_1__n);
+
+cf_3_m_2_0 = (N_65_0 & a_i_2__n);
+
+cf_3_m_3 = (a_i_3__n & cf_3_m_2);
+
+cf_3_m_4 = (cf_3_m_1 & cf_3_m_2_0);
+
+a_m_1_3__n = (a_c_3__n & a_m_2_3__n);
+
+a_m_2_0_3__n = (opcode_c_3__n & opcode_i_0__n);
+
+a_m_1_0__n = (a_c_0__n & a_m_2_3__n);
+
+a_m_2_0__n = (opcode_c_0__n & opcode_c_3__n);
+
+c_2_0_1_1_.X1 = (a_c_0__n);
+
+c_2_0_1_1_.X2 = (a_c_1__n);
+
+N_62_0_1 = (a_i_0__n & a_i_1__n);
+
+c_0_0__un3_n = (!opcode_c_0__n);
+
+c_0_0__un1_n = (c_3_0__n & opcode_c_0__n);
+
+c_0_0__un0_n = (c_2_0__n & c_0_0__un3_n);
+
+c_2_0_3__un3_n = (!opcode_c_0__n);
+
+c_2_0_3__un1_n = (un26_c_i_i_3__n & opcode_c_0__n);
+
+c_2_0_3__un0_n = (G_7 & c_2_0_3__un3_n);
+
+c_2_0_2__un3_n = (!opcode_c_0__n);
+
+c_2_0_2__un1_n = (un26_c_i_i_2__n & opcode_c_0__n);
+
+c_2_0_2__un0_n = (G_5 & c_2_0_2__un3_n);
+
+c_1_3__un3_n = (!opcode_c_0__n);
+
+c_1_3__un1_n = (a_i_3__n & opcode_c_0__n);
+
+c_1_3__un0_n = (c_4_3_ & c_1_3__un3_n);
+
+c_1_2__un3_n = (!opcode_c_0__n);
+
+c_1_2__un1_n = (a_i_2__n & opcode_c_0__n);
+
+c_1_2__un0_n = (c_4_2_ & c_1_2__un3_n);
+
+c_1_1__un3_n = (!opcode_c_0__n);
+
+c_1_1__un1_n = (a_i_1__n & opcode_c_0__n);
+
+c_1_1__un0_n = (c_4_1_ & c_1_1__un3_n);
+
+c_1_0__un3_n = (!opcode_c_0__n);
+
+c_1_0__un1_n = (a_i_0__n & opcode_c_0__n);
+
+c_1_0__un0_n = (c_4_0_ & c_1_0__un3_n);
+
+c_0_3__un3_n = (!opcode_c_0__n);
+
+c_0_3__un1_n = (c_3_3__n & opcode_c_0__n);
+
+c_0_3__un0_n = (c_2_3__n & c_0_3__un3_n);
+
+c_0_2__un3_n = (!opcode_c_0__n);
+
+c_0_2__un1_n = (c_3_2__n & opcode_c_0__n);
+
+c_0_2__un0_n = (c_2_2__n & c_0_2__un3_n);
+
+c_0_1__un3_n = (!opcode_c_0__n);
+
+c_0_1__un1_n = (c_3_1__n & opcode_c_0__n);
+
+c_0_1__un0_n = (c_2_1__n & c_0_1__un3_n);
+
+cmux_3__un3_n = (!opcode_c_2__n);
+
+cmux_3__un1_n = (N_28 & opcode_c_2__n);
+
+cmux_3__un0_n = (N_24 & cmux_3__un3_n);
+
+cmux_2__un3_n = (!opcode_c_2__n);
+
+cmux_2__un1_n = (N_27 & opcode_c_2__n);
+
+cmux_2__un0_n = (N_23 & cmux_2__un3_n);
+
+cmux_1__un3_n = (!opcode_c_2__n);
+
+cmux_1__un1_n = (N_26 & opcode_c_2__n);
+
+cmux_1__un0_n = (N_22 & cmux_1__un3_n);
+
+cmux_0__un3_n = (!opcode_c_2__n);
+
+cmux_0__un1_n = (N_25 & opcode_c_2__n);
+
+cmux_0__un0_n = (N_21 & cmux_0__un3_n);
+
+c_5_3__un3_n = (!opcode_c_1__n);
+
+c_5_3__un1_n = (N_18 & opcode_c_1__n);
+
+c_5_3__un0_n = (N_14 & c_5_3__un3_n);
+
+c_5_2__un3_n = (!opcode_c_1__n);
+
+c_5_2__un1_n = (N_17 & opcode_c_1__n);
+
+c_5_2__un0_n = (N_13 & c_5_2__un3_n);
+
+c_5_1__un3_n = (!opcode_c_1__n);
+
+c_5_1__un1_n = (N_16 & opcode_c_1__n);
+
+c_5_1__un0_n = (c_2_0_1_ & c_5_1__un3_n);
+
+c_5_0__un3_n = (!opcode_c_1__n);
+
+c_5_0__un1_n = (N_15 & opcode_c_1__n);
+
+c_5_0__un0_n = (a_i_0__n & c_5_0__un3_n);
+
+c_4_0_3__un3_n = (!opcode_c_1__n);
+
+c_4_0_3__un1_n = (N_10 & opcode_c_1__n);
+
+c_4_0_3__un0_n = (N_6 & c_4_0_3__un3_n);
+
+c_4_0_2__un3_n = (!opcode_c_1__n);
+
+c_4_0_2__un1_n = (N_9 & opcode_c_1__n);
+
+c_4_0_2__un0_n = (N_5 & c_4_0_2__un3_n);
+
+c_4_0_1__un3_n = (!opcode_c_1__n);
+
+c_4_0_1__un1_n = (N_8 & opcode_c_1__n);
+
+c_4_0_1__un0_n = (N_4 & c_4_0_1__un3_n);
+
+c_4_0_0__un3_n = (!opcode_c_1__n);
+
+c_4_0_0__un1_n = (N_7 & opcode_c_1__n);
+
+c_4_0_0__un0_n = (N_3 & c_4_0_0__un3_n);
+
+c_3_0_2__un3_n = (!opcode_c_0__n);
+
+c_3_0_2__un1_n = (a_c_3__n & opcode_c_0__n);
+
+c_3_0_2__un0_n = (a_c_1__n & c_3_0_2__un3_n);
+
+c_3_0_1__un3_n = (!opcode_c_0__n);
+
+c_3_0_1__un1_n = (a_c_2__n & opcode_c_0__n);
+
+c_3_0_1__un0_n = (a_c_0__n & c_3_0_1__un3_n);
+
+
+Reverse-Polarity Equations:
+
+!c_3_ = (!c_c_3__n);
+
+!zf = (!zf_c);
+
+!cf = (!cf_c);
+
+!c_2_ = (!c_c_2__n);
+
+!c_1_ = (!c_c_1__n);
+
+!c_0_ = (!c_c_0__n);
+
+!c_2_0_1_.X1 = (!c_2_0_1_1_);
+
+!c_2_0_1_.X2 = (!opcode_c_0__n);
+
+!c_4_3_.X1 = (!a_c_3__n);
+
+!c_4_3_.X2 = (!b_c_3__n);
+
+!G_31.X1 = (!N_62);
+
+!G_31.X2 = (!a_c_3__n);
+
+!c_4_2_.X1 = (!a_c_2__n);
+
+!c_4_2_.X2 = (!b_c_2__n);
+
+!G_30.X1 = (!N_65);
+
+!G_30.X2 = (!a_c_2__n);
+
+!c_4_0_.X1 = (!a_c_0__n);
+
+!c_4_0_.X2 = (!b_c_0__n);
+
+!c_4_1_.X1 = (!a_c_1__n);
+
+!c_4_1_.X2 = (!b_c_1__n);
+
+!G_7.X1 = (!N_44);
+
+!G_7.X2 = (!a_c_3__n);
+
+!G_5.X1 = (!N_41);
+
+!G_5.X2 = (!a_c_2__n);
+
+!opcode_c_0__n = (!opcode_0_);
+
+!opcode_c_1__n = (!opcode_1_);
+
+!opcode_c_2__n = (!opcode_2_);
+
+!opcode_c_3__n = (!opcode_3_);
+
+!a_c_0__n = (!a_0_);
+
+!a_c_1__n = (!a_1_);
+
+!a_c_2__n = (!a_2_);
+
+!a_c_3__n = (!a_3_);
+
+!b_c_0__n = (!b_0_);
+
+!b_c_1__n = (!b_1_);
+
+!b_c_2__n = (!b_2_);
+
+!b_c_3__n = (!b_3_);
+
+!c_2_0_1_1_.X1 = (!a_c_0__n);
+
+!c_2_0_1_1_.X2 = (!a_c_1__n);
+

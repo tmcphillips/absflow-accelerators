@@ -1,0 +1,55 @@
+MODULE ButtonSummer
+
+// This design displays the number of pressed buttons on
+// the seven-segment display.
+//
+// Mach64	       Push Button (3..0)
+// 31/D0	->  	PB0
+// 32/D2	->	PB1
+// 33/D4	->	PB2
+// 34/D6	->	PB3
+
+// Mach64 	     7-Segment
+// 20/C0	->	A
+// 21/C2	->	B
+// 22/C4	->	C
+// 23/C6	->	D
+// 24/C8	->	E
+// 26/C10	->	F
+// 27/C12	->	G
+
+DECLARATIONS
+ 
+	// four active-low buttons connected to input pins
+	!i3..!i0 PIN 31,32,33,34 ISTYPE 'com';
+	buttons = [i3..i0];			
+	
+	// 4-bit summer for counting pressed buttons
+	FourBitSummer INTERFACE ([a3..a0] -> [s2..s0]);
+	Summer FUNCTIONAL_BLOCK FourBitSummer;
+
+	// component for converting BCD digit
+	// to signals for a seven segment display
+	BCDToSevenSegment INTERFACE ([d3..d0] -> [a,b,c,d,e,f,g]);
+	DigitToSevenSeg FUNCTIONAL_BLOCK BCDToSevenSegment;
+
+	// / seven segments of LED connected to output pins
+	a,b,c,d,e,f,g PIN 20..24, 26,27 ISTYPE 'com';		
+	leds = [a,b,c,d,e,f,g];
+
+EQUATIONS
+
+	// route the input signals reflecting the buttons' states to Summer input
+	Summer.[a3..a0] = buttons;
+
+	// route output of summer to lower two bits of DigitToSevenSegment
+	DigitToSevenSeg.d0 = Summer.s0;
+	DigitToSevenSeg.d1 = Summer.s1;
+	DigitToSevenSeg.d2 = Summer.s2;
+	DigitToSevenSeg.d3 = 0;
+
+	// route output of DigitToSevenSeg to the outputs driving the LEDs
+	leds = DigitToSevenSeg.[a,b,c,d,e,f,g];
+	
+END
+

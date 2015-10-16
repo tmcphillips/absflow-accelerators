@@ -1,0 +1,92 @@
+import fourbitcounter_transactions_pkg::*;
+import ovm_pkg::*;
+
+module testbench_top;
+
+  tlm_fifo #(fourbitcounter_operation)  gen2drv_fifo;
+  tlm_fifo #(fourbitcounter_operation)  drv2pred_fifo;
+  tlm_fifo #(fourbitcounter_result)     pred2comp_fifo;
+  tlm_fifo #(fourbitcounter_result)     resp2prn_fifo;
+  tlm_fifo #(fourbitcounter_result)     resp2comp_fifo;
+
+  wire clock;
+  wire up;
+  wire down;
+  wire load;
+  wire reset;
+  wire [3:0] loadValue;
+  wire [3:0] counterValue;
+  wire ack;
+  
+  testbench_generator generator(
+    .op_fifo(gen2drv_fifo)
+  );
+  
+  testbench_driver driver(
+    .op_fifo(gen2drv_fifo),
+    .op2prd_fifo(drv2pred_fifo),
+    .ack(ack),
+    .clock(clock),
+ 	  .up(up),
+	  .down(down),
+	  .load(load),
+	  .reset(reset),
+	  .value(loadValue)
+	);
+	
+	testbench_predictor predictor (
+    .operation_fifo(drv2pred_fifo),
+    .predicted_result_fifo(pred2comp_fifo)
+  );
+	
+ 	fourbitcounterwithload dut (
+		.upButton(up),
+		.downButton(down),
+		.loadButton(load),
+		.resetButton(reset),
+		.switches(loadValue),
+		.clock(clock),
+		.counter(counterValue),
+		.ack(ack)
+	);
+	
+	testbench_responder responder (
+    .result_fifo(resp2prn_fifo),
+    .res2comp_fifo(resp2comp_fifo),
+    .busy(busy),
+    .clock(clock),
+	  .reset(reset),
+	  .ack(ack),
+	  .counter(counterValue)
+	);
+	
+	testbench_comparator comparator (
+    .actual_result_fifo(resp2comp_fifo),
+    .predicted_result_fifo(pred2comp_fifo)
+  );
+
+  testbench_printer printer (
+    .result_fifo(resp2prn_fifo)
+  );
+
+  initial begin
+    
+    ovm_top.set_report_verbosity_level(300);
+    ovm_top.set_report_max_quit_count(10);
+    
+    gen2drv_fifo = new("gen2drv_fifo");
+    drv2pred_fifo = new("drv2pred_fifo");
+    pred2comp_fifo = new("pred2comp_fifo");
+    resp2prn_fifo = new("resp2prn_fifo");
+    resp2comp_fifo = new("resp2comp_fifo");
+    
+    fork
+      generator.run();
+      predictor.run();
+      comparator.run();
+      printer.run();
+    join_none
+    
+  end
+
+endmodule

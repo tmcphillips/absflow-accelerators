@@ -1,0 +1,30 @@
+module MillisecondClock interface (oneMHzClock, [period9..period0]=1023 -> millisecondClock)
+
+declarations
+
+	// input unscaled clock signal		
+	oneMHzClock pin;
+
+	period9..period0 pin;
+	max = [period9..period0];
+
+	// output scaled clock signal
+	millisecondClock pin;
+
+	// 20 bit register
+	s19..s0 node istype 'reg';	
+	scaler 	= [s19..s0];
+	scaler_hi = [s19..s10];
+	
+equations
+
+	// clock the scaling register using the input clock signal
+	scaler.clk = oneMHzClock;
+
+	// increment scalar on each input clock pulse
+	scaler := (scaler + 1) & !(scaler_hi == max);
+
+	// output the highest order bit of the scaling register
+	millisecondClock = (scaler == 0);
+end
+

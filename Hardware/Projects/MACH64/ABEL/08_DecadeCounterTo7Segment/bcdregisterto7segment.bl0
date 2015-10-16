@@ -1,0 +1,59 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:15:46 2012
+#$ MODULE bcdregisterto7segment
+#$ JEDECFILE bcdregisterto7segment
+#$ PINS 9 upButton:18 oneMHzClock:19 a:20 b:21 c:22 d:23 e:24 f:26 g:27
+#$ NODES 21 clockScaler>inclock'co'  clockScaler>outclock'co'  debouncedUp>rawSignal'co'  debouncedUp>samplingClock'co'  debouncedUp>debounced'co'  \
+#  bcdCounter>up'co'  bcdCounter>d0'co'  bcdCounter>d1'co'  bcdCounter>d2'co'  bcdCounter>d3'co'  digitToSegment>d0'co'  digitToSegment>d1'co'  digitToSegment>d2'co'  \
+#  digitToSegment>d3'co'  digitToSegment>a'co'  digitToSegment>b'co'  digitToSegment>c'co'  digitToSegment>d'co'  digitToSegment>e'co'  digitToSegment>f'co'  \
+#  digitToSegment>g'co' 
+#$ INTERFACE tenbitscaler  2 inclock'i'  outclock'o' 
+#$ INTERFACE debouncer  3 rawSignal'i'  samplingClock'i'  debounced'o' 
+#$ INTERFACE bcdupcounter  5 up'i'  d0'o'  d1'o'  d2'o'  d3'o' 
+#$ INTERFACE bcdtosevensegment  11 d0'i'  d1'i'  d2'i'  d3'i'  a'o'  b'o'  c'o'  d'o'  e'o'  f'o'  g'o' 
+#$ INSTANCE clockScaler tenbitscaler 2 clockScaler>inclock clockScaler>outclock
+#$ INSTANCE debouncedUp debouncer 3 debouncedUp>rawSignal debouncedUp>samplingClock debouncedUp>debounced
+#$ INSTANCE bcdCounter bcdupcounter 5 bcdCounter>up bcdCounter>d0 bcdCounter>d1 bcdCounter>d2 bcdCounter>d3
+#$ INSTANCE digitToSegment bcdtosevensegment 11 digitToSegment>d0 digitToSegment>d1 digitToSegment>d2 digitToSegment>d3 digitToSegment>a \
+#  digitToSegment>b digitToSegment>c digitToSegment>d digitToSegment>e digitToSegment>f digitToSegment>g
+
+.model bcdregisterto7segment
+.inputs oneMHzClock.BLIF clockScaler>outclock.BLIF upButton.BLIF \
+debouncedUp>debounced.BLIF bcdCounter>d0.BLIF bcdCounter>d1.BLIF \
+bcdCounter>d2.BLIF bcdCounter>d3.BLIF digitToSegment>a.BLIF \
+digitToSegment>b.BLIF digitToSegment>c.BLIF digitToSegment>d.BLIF \
+digitToSegment>e.BLIF digitToSegment>f.BLIF digitToSegment>g.BLIF
+.outputs clockScaler>inclock debouncedUp>rawSignal debouncedUp>samplingClock \
+bcdCounter>up digitToSegment>d0 digitToSegment>d1 digitToSegment>d2 \
+digitToSegment>d3 a b c d e f g
+.names oneMHzClock.BLIF clockScaler>inclock
+1 1
+.names upButton.BLIF debouncedUp>rawSignal
+0 1
+.names clockScaler>outclock.BLIF debouncedUp>samplingClock
+1 1
+.names debouncedUp>debounced.BLIF bcdCounter>up
+1 1
+.names bcdCounter>d0.BLIF digitToSegment>d0
+1 1
+.names bcdCounter>d1.BLIF digitToSegment>d1
+1 1
+.names bcdCounter>d2.BLIF digitToSegment>d2
+1 1
+.names bcdCounter>d3.BLIF digitToSegment>d3
+1 1
+.names digitToSegment>a.BLIF a
+1 1
+.names digitToSegment>b.BLIF b
+1 1
+.names digitToSegment>c.BLIF c
+1 1
+.names digitToSegment>d.BLIF d
+1 1
+.names digitToSegment>e.BLIF e
+1 1
+.names digitToSegment>f.BLIF f
+1 1
+.names digitToSegment>g.BLIF g
+1 1
+.end

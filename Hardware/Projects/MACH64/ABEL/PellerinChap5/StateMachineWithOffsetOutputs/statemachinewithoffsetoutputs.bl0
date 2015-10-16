@@ -1,0 +1,51 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:14:13 2012
+#$ MODULE statemachinewithoffsetoutputs
+#$ JEDECFILE statemachinewithoffsetoutputs
+#$ PINS 8 clock:18 step:20 oe:21 hold:22 q1:31 q0:32 reg1:33 com1:34
+#$ NODES 5 debouncedStep>rawSignal'co'  debouncedStep>samplingClock'co'  debouncedStep>debounced'co'  clockScaler>inclock'co'  clockScaler>outclock'co' 
+#$ INTERFACE tenbitscaler  2 inclock'i'  outclock'o' 
+#$ INTERFACE debouncer  3 rawSignal'i'  samplingClock'i'  debounced'o' 
+#$ INSTANCE debouncedStep debouncer 3 debouncedStep>rawSignal debouncedStep>samplingClock debouncedStep>debounced
+#$ INSTANCE clockScaler tenbitscaler 2 clockScaler>inclock clockScaler>outclock
+
+.model statemachinewithoffsetoutputs
+.inputs clock.BLIF clockScaler>outclock.BLIF step.BLIF debouncedStep>debounced.BLIF \
+oe.BLIF q1.FB q0.FB hold.BLIF
+.outputs debouncedStep>rawSignal debouncedStep>samplingClock \
+clockScaler>inclock com1 q1.C q0.C reg1.C q1.OE q0.OE reg1.OE reg1.REG q0.REG \
+q1.REG
+.names step.BLIF debouncedStep>rawSignal
+0 1
+.names clockScaler>outclock.BLIF debouncedStep>samplingClock
+1 1
+.names clock.BLIF clockScaler>inclock
+1 1
+.names q1.FB q0.FB com1
+11 1
+01 1
+.names debouncedStep>debounced.BLIF q1.C
+1 1
+.names debouncedStep>debounced.BLIF q0.C
+1 1
+.names debouncedStep>debounced.BLIF reg1.C
+1 1
+.names oe.BLIF q1.OE
+0 1
+.names oe.BLIF q0.OE
+0 1
+.names oe.BLIF reg1.OE
+0 1
+.names q1.FB q0.FB reg1.REG
+11 1
+01 1
+.names q1.FB q0.FB hold.BLIF q0.REG
+101 1
+110 1
+000 1
+.names q1.FB q0.FB hold.BLIF q1.REG
+01- 1
+101 1
+110 1
+100 1
+.end

@@ -1,0 +1,7 @@
+MODULE ALU_5_demo
+	SUBMODULE alu_5
+		INSTANCE alu
+	SUBMODULE tenbitripplecounter
+		INSTANCE scaler
+	SUBMODULE debouncer
+		INSTANCE debouncer

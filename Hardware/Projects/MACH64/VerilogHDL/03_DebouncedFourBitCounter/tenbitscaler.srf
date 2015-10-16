@@ -1,0 +1,56 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.1
+#Hostname: NEMESIS-X86
+
+#Implementation: 03_debouncedfourbitcounter
+
+#Wed Jan 18 09:57:57 2012
+
+$ Start of Compile
+#Wed Jan 18 09:57:57 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncedfourbitcounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncedfourbitcounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncer.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncedfourbitcounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\tenbitscaler.v"
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\tenbitscaler.v changed - recompiling
+Selecting top level module TenBitScaler
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\tenbitscaler.v":1:7:1:18|Synthesizing module TenBitScaler
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jan 18 09:57:57 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\synlog\tenbitscaler_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             10 uses
+OBUF            1 use
+IBUF            1 use
+AND2            8 uses
+XOR2            9 uses
+INV             2 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jan 18 09:57:58 2012
+
+###########################################################]

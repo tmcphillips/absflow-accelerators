@@ -1,0 +1,31 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+counter_0_.D = !counter_0_.Q ; (1 pterm, 1 signal)
+counter_0_.C = !clock ; (1 pterm, 1 signal)
+counter_0_.AR = !reset ; (1 pterm, 1 signal)
+
+counter_1_.D = !counter_1_.Q & counter_0_.Q
+    # counter_1_.Q & !counter_0_.Q ; (2 pterms, 2 signals)
+counter_1_.C = !clock ; (1 pterm, 1 signal)
+counter_1_.AR = !reset ; (1 pterm, 1 signal)
+
+counter_2_.D = !counter_2_.Q & counter_1_.Q & counter_0_.Q
+    # counter_2_.Q & !counter_1_.Q
+    # counter_2_.Q & !counter_0_.Q ; (3 pterms, 3 signals)
+counter_2_.C = !clock ; (1 pterm, 1 signal)
+counter_2_.AR = !reset ; (1 pterm, 1 signal)
+
+counter_3_.D = !counter_3_.Q & counter_2_.Q & counter_1_.Q & counter_0_.Q
+    # counter_3_.Q & !counter_2_.Q
+    # counter_3_.Q & !counter_1_.Q
+    # counter_3_.Q & !counter_0_.Q ; (4 pterms, 4 signals)
+counter_3_.C = !clock ; (1 pterm, 1 signal)
+counter_3_.AR = !reset ; (1 pterm, 1 signal)
+

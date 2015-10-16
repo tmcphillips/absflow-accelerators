@@ -1,0 +1,14 @@
+vgaClock  i
+reset_n  i
+red[1]  o
+red[0]  o
+green[1]  o
+green[0]  o
+blue[1]  o
+blue[0]  o
+hsync  o
+vsync  o
+hState[1]  o
+hState[0]  o
+vState[1]  o
+vState[0]  o

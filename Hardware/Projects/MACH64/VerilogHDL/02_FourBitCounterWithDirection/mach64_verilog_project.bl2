@@ -1,0 +1,156 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Jan 18 09:42:28 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 7 counter_3_:14'ke'  clock:18'ke'  reset:20'ke'  direction:21'ke'  counter_2_:15'ke'  \
+#  counter_1_:16'ke'  counter_0_:17'ke' 
+#$ NODES 36 N_7 N_8 N_9 N_10 N_11 N_12 N_15 G_16 G_15 G_12 N_14 direction_i clock_i reset_i \
+#  counterDFFRH_0reg counterDFFRH_1reg counterDFFRH_2reg counterDFFRH_3reg clock_c \
+#  reset_c direction_c counter_c_i_1__n N_7_0 counter_c_i_2__n N_9_0 N_11_i N_14_i N_15_0 \
+#  N_8_i N_10_i N_12_0 G_12_1 G_15_1 G_16_1 N_12_0_1 N_10_1
+.model fourbitcounterwithdirection
+.inputs clock.BLIF reset.BLIF direction.BLIF N_7.BLIF N_8.BLIF N_9.BLIF \
+N_10.BLIF N_11.BLIF N_12.BLIF N_15.BLIF G_16.BLIF G_15.BLIF G_12.BLIF \
+N_14.BLIF direction_i.BLIF clock_i.BLIF reset_i.BLIF counterDFFRH_0reg.BLIF \
+counterDFFRH_1reg.BLIF counterDFFRH_2reg.BLIF counterDFFRH_3reg.BLIF \
+clock_c.BLIF reset_c.BLIF direction_c.BLIF counter_c_i_1__n.BLIF N_7_0.BLIF \
+counter_c_i_2__n.BLIF N_9_0.BLIF N_11_i.BLIF N_14_i.BLIF N_15_0.BLIF \
+N_8_i.BLIF N_10_i.BLIF N_12_0.BLIF G_12_1.BLIF G_15_1.BLIF G_16_1.BLIF \
+N_12_0_1.BLIF N_10_1.BLIF
+.outputs counter_3_ counter_2_ counter_1_ counter_0_ counterDFFRH_0reg.D \
+counterDFFRH_0reg.C counterDFFRH_0reg.AR counterDFFRH_1reg.D \
+counterDFFRH_1reg.C counterDFFRH_1reg.AR counterDFFRH_2reg.D \
+counterDFFRH_2reg.C counterDFFRH_2reg.AR counterDFFRH_3reg.D \
+counterDFFRH_3reg.C counterDFFRH_3reg.AR N_7 N_8 N_9 N_10 N_11 N_12 N_15 N_14 \
+direction_i clock_i reset_i clock_c reset_c direction_c counter_c_i_1__n N_7_0 \
+counter_c_i_2__n N_9_0 N_11_i N_14_i N_15_0 N_8_i N_10_i N_12_0 N_12_0_1 \
+N_10_1 G_16 G_15 G_12 G_12_1 G_15_1 G_16_1
+.names counterDFFRH_0reg.BLIF counterDFFRH_0reg.D
+0 1
+.names G_12.BLIF counterDFFRH_1reg.D
+0 1
+.names G_15.BLIF counterDFFRH_2reg.D
+0 1
+.names G_16.BLIF counterDFFRH_3reg.D
+0 1
+.names N_7_0.BLIF N_7
+0 1
+.names counterDFFRH_2reg.BLIF direction_i.BLIF N_8
+11 1
+.names N_9_0.BLIF N_9
+0 1
+.names N_10_1.BLIF counterDFFRH_0reg.BLIF N_10
+11 1
+.names counterDFFRH_1reg.BLIF direction_i.BLIF N_11
+11 1
+.names N_12_0.BLIF N_12
+0 1
+.names N_15_0.BLIF N_15
+0 1
+.names N_7.BLIF counterDFFRH_0reg.BLIF N_14
+11 1
+.names direction_c.BLIF direction_i
+0 1
+.names clock_c.BLIF clock_i
+0 1
+.names reset_c.BLIF reset_i
+0 1
+.names counterDFFRH_1reg.BLIF counter_c_i_1__n
+0 1
+.names counter_c_i_1__n.BLIF direction_c.BLIF N_7_0
+11 1
+.names counterDFFRH_2reg.BLIF counter_c_i_2__n
+0 1
+.names counter_c_i_2__n.BLIF direction_c.BLIF N_9_0
+11 1
+.names N_11.BLIF N_11_i
+0 1
+.names N_14.BLIF N_14_i
+0 1
+.names N_11_i.BLIF N_14_i.BLIF N_15_0
+11 1
+.names N_8.BLIF N_8_i
+0 1
+.names N_10.BLIF N_10_i
+0 1
+.names N_12_0_1.BLIF N_10_i.BLIF N_12_0
+11 1
+.names N_11_i.BLIF N_8_i.BLIF N_12_0_1
+11 1
+.names N_7.BLIF N_9.BLIF N_10_1
+11 1
+.names direction_c.BLIF G_16_1.BLIF G_16
+01 1
+10 1
+11 0
+00 0
+.names direction_c.BLIF G_15_1.BLIF G_15
+01 1
+10 1
+11 0
+00 0
+.names direction_c.BLIF G_12_1.BLIF G_12
+01 1
+10 1
+11 0
+00 0
+.names counterDFFRH_0reg.BLIF counterDFFRH_1reg.BLIF G_12_1
+01 1
+10 1
+11 0
+00 0
+.names N_15.BLIF counterDFFRH_2reg.BLIF G_15_1
+01 1
+10 1
+11 0
+00 0
+.names N_12.BLIF counterDFFRH_3reg.BLIF G_16_1
+01 1
+10 1
+11 0
+00 0
+.names counterDFFRH_3reg.BLIF counter_3_
+1 1
+0 0
+.names counterDFFRH_2reg.BLIF counter_2_
+1 1
+0 0
+.names counterDFFRH_1reg.BLIF counter_1_
+1 1
+0 0
+.names counterDFFRH_0reg.BLIF counter_0_
+1 1
+0 0
+.names clock_i.BLIF counterDFFRH_0reg.C
+1 1
+0 0
+.names reset_i.BLIF counterDFFRH_0reg.AR
+1 1
+0 0
+.names clock_i.BLIF counterDFFRH_1reg.C
+1 1
+0 0
+.names reset_i.BLIF counterDFFRH_1reg.AR
+1 1
+0 0
+.names clock_i.BLIF counterDFFRH_2reg.C
+1 1
+0 0
+.names reset_i.BLIF counterDFFRH_2reg.AR
+1 1
+0 0
+.names clock_i.BLIF counterDFFRH_3reg.C
+1 1
+0 0
+.names reset_i.BLIF counterDFFRH_3reg.AR
+1 1
+0 0
+.names clock.BLIF clock_c
+1 1
+0 0
+.names reset.BLIF reset_c
+1 1
+0 0
+.names direction.BLIF direction_c
+1 1
+0 0
+.end

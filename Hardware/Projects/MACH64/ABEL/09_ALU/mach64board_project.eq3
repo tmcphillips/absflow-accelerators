@@ -1,0 +1,88 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+G0_C1.X1 = !op0 & !op1 & !op3 & !a1 & a2
+    # op0 & !op1 & !op2 & !op3 & a0 & !a1
+    # op0 & op1 & !op2 & !op3 & !a0
+    # !op0 & op1 & !op2 & !op3 & a0
+    # !op1 & op2 & !op3 & !b1
+    # !op0 & !op1 & op2 & !op3
+    # op0 & op1 & op2 & !op3 & !a1 & b1
+    # !op0 & !op1 & !op3 & a1 & !a2
+    # op0 & !op2 & !op3 & !a0 & a1
+    # !op0 & op2 & !op3 & a1 & !b1 ; (10 pterms, 8 signals)
+G0_C1.X2 = !op3 & !a1 ; (1 pterm, 2 signals)
+
+G0_C2.X1 = !op0 & !op1 & !op2 & !op3 & a3
+    # op0 & !op1 & !op2 & !op3 & a1
+    # op2 & !op3 & !a2 & !b2
+    # !op0 & op2 & !op3 & !a2
+    # op0 & !op1 & op2 & !op3 & a2 & b2
+    # !op0 & op1 & !op3 & !a1 & !a2
+    # op1 & !op2 & !op3 & !a0 & a1 & !a2
+    # op0 & op1 & !op2 & !op3 & a0 & !a2
+    # op0 & op1 & !op2 & !op3 & !a0 & !a1 & a2
+    # !op0 & op1 & !op2 & !op3 & a0 & a1 & a2
+    # !op0 & op1 & op2 & !op3 & !b2 ; (11 pterms, 9 signals)
+G0_C2.X2 = !op1 & !op3 ; (1 pterm, 2 signals)
+
+G0_C3.X1 = op0 & !op1 & !op2 & !op3 & !a2
+    # op0 & !op2 & !op3 & !a0 & !a1 & !a2
+    # !op0 & op1 & !op2 & !op3 & a0 & a1 & a2
+    # op0 & op2 & !op3 & !a3 & b3
+    # !op1 & op2 & !op3 & a3 & !b3
+    # !op0 & !op1 & op2 & !op3 & a3
+    # !op0 & op2 & !op3 & a3 & !b3 ; (7 pterms, 9 signals)
+G0_C3.X2 = op1 & !op3 & !a3 ; (1 pterm, 3 signals)
+
+ad0 = !a0 ; (1 pterm, 1 signal)
+
+ad1 = !a1 ; (1 pterm, 1 signal)
+
+ad2 = !a2 ; (1 pterm, 1 signal)
+
+ad3 = !a3 ; (1 pterm, 1 signal)
+
+bd0 = !b0 ; (1 pterm, 1 signal)
+
+bd1 = !b1 ; (1 pterm, 1 signal)
+
+bd2 = !b2 ; (1 pterm, 1 signal)
+
+bd3 = !b3 ; (1 pterm, 1 signal)
+
+c0.X1 = !op0 & !op1 & !op2 & !op3 & !a1
+    # !op0 & op2 & !op3 & !a0
+    # op2 & !op3 & !a0 & !b0
+    # op0 & !op1 & op2 & !op3 & a0 & b0
+    # op1 & !op2 & !op3 & a0
+    # !op0 & op1 & !op3 & a0 & !b0 ; (6 pterms, 7 signals)
+c0.X2 = !op1 & op2 & !op3 ; (1 pterm, 3 signals)
+
+c1 = G0_C1 ; (1 pterm, 1 signal)
+
+c2 = G0_C2 ; (1 pterm, 1 signal)
+
+c3 = G0_C3 ; (1 pterm, 1 signal)
+
+cf = !op0 & op1 & !op2 & !op3 & a0 & a1 & a2 & a3
+    # op0 & !op2 & !op3 & !a0 & !a1 & !a2 & !a3
+    # !op0 & !op1 & !op2 & !op3 & !a0
+    # op0 & !op1 & !op2 & !op3 & !a3 ; (4 pterms, 8 signals)
+
+zf.X1 = !op0 & !op1 & !op2 & !op3 & !a1 & !G0_C1 & !G0_C2 & !G0_C3
+    # op1 & !op2 & !op3 & a0 & !G0_C1 & !G0_C2 & !G0_C3
+    # op0 & !op1 & op2 & !op3 & !a0 & b0 & !G0_C1 & !G0_C2 & !G0_C3
+    # op1 & op2 & !op3 & !a0 & !b0 & !G0_C1 & !G0_C2 & !G0_C3
+    # !op0 & op1 & op2 & !op3 & !a0 & !G0_C1 & !G0_C2 & !G0_C3
+    # !op1 & op2 & !op3 & a0 & !b0 & !G0_C1 & !G0_C2 & !G0_C3
+    # !op0 & op2 & !op3 & a0 & !b0 & !G0_C1 & !G0_C2 & !G0_C3
+    # !op0 & !op1 & op2 & !op3 & a0 & !G0_C1 & !G0_C2 & !G0_C3 ; (8 pterms, 10 signals)
+zf.X2 = !G0_C1 & !G0_C2 & !G0_C3 ; (1 pterm, 3 signals)
+

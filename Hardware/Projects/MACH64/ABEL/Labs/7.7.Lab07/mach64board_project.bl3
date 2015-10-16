@@ -1,0 +1,1251 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:21:36 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE rollingupdowncounter
+#$ PINS 11 clock:18 up:14 down:15 reset:31 a:20 b:21 c:22 d:23 e:24 f:26 g:27
+#$ NODES 25 counterClock>millisecondClock'co,o'  bcd>d0'co,o'  bcd>d1'co,o'  bcd>d2'co,o'  \
+#  bcd>d3'co,o'  counterClock/s19 counterClock/s18 counterClock/s17 counterClock/s16 \
+#  counterClock/s15 counterClock/s14 counterClock/s13 counterClock/s12 \
+#  counterClock/s11 counterClock/s10 counterClock/s9 counterClock/s8 counterClock/s7 \
+#  counterClock/s6 counterClock/s5 counterClock/s4 counterClock/s3 counterClock/s2 \
+#  counterClock/s1 counterClock/s0
+.model rollingupdowncounter
+.inputs clock.BLIF counterClock>millisecondClock.BLIF up.BLIF down.BLIF \
+reset.BLIF bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF \
+counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF
+.outputs a b c d e f g counterClock>millisecondClock counterClock/s19.C \
+counterClock/s18.C counterClock/s17.C counterClock/s16.C counterClock/s15.C \
+counterClock/s14.C counterClock/s13.C counterClock/s12.C counterClock/s11.C \
+counterClock/s10.C counterClock/s9.REG counterClock/s9.C counterClock/s8.REG \
+counterClock/s8.C counterClock/s7.REG counterClock/s7.C counterClock/s6.REG \
+counterClock/s6.C counterClock/s5.REG counterClock/s5.C counterClock/s4.REG \
+counterClock/s4.C counterClock/s3.REG counterClock/s3.C counterClock/s2.REG \
+counterClock/s2.C counterClock/s1.REG counterClock/s1.C counterClock/s0.REG \
+counterClock/s0.C bcd>d0.REG bcd>d0.AR bcd>d0.C bcd>d1.AR bcd>d1.C bcd>d2.AR \
+bcd>d2.C bcd>d3.AR bcd>d3.C bcd>d1.REG.X1 bcd>d1.REG.X2 bcd>d2.REG.X1 \
+bcd>d2.REG.X2 bcd>d3.REG.X1 bcd>d3.REG.X2 counterClock/s19.REG.X1 \
+counterClock/s19.REG.X2 counterClock/s18.REG.X1 counterClock/s18.REG.X2 \
+counterClock/s17.REG.X1 counterClock/s17.REG.X2 counterClock/s16.REG.X1 \
+counterClock/s16.REG.X2 counterClock/s15.REG.X1 counterClock/s15.REG.X2 \
+counterClock/s14.REG.X1 counterClock/s14.REG.X2 counterClock/s13.REG.X1 \
+counterClock/s13.REG.X2 counterClock/s12.REG.X1 counterClock/s12.REG.X2 \
+counterClock/s11.REG.X1 counterClock/s11.REG.X2 counterClock/s10.REG.X1 \
+counterClock/s10.REG.X2
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock>millisecondClock
+00000000000000000000 1
+------------------1- 0
+-----------------1-- 0
+----------------1--- 0
+---------------1---- 0
+--------------1----- 0
+-------------1------ 0
+------------1------- 0
+-----------1-------- 0
+----------1--------- 0
+---------1---------- 0
+--------1----------- 0
+-------1------------ 0
+------1------------- 0
+-----1-------------- 0
+----1--------------- 0
+---1---------------- 0
+--1----------------- 0
+-1------------------ 0
+1------------------- 0
+-------------------1 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s9.REG
+---------10111111111 1
+--------1-0111111111 1
+-------1--0111111111 1
+------1---0111111111 1
+-----0----0111111111 1
+----1-----0111111111 1
+---0------0111111111 1
+--0-------0111111111 1
+-0--------0111111111 1
+0---------0111111111 1
+---------11-------0- 1
+--------1-1-------0- 1
+-------1--1-------0- 1
+------1---1-------0- 1
+-----0----1-------0- 1
+----1-----1-------0- 1
+---0------1-------0- 1
+--0-------1-------0- 1
+-0--------1-------0- 1
+0---------1-------0- 1
+---------11------0-- 1
+--------1-1------0-- 1
+-------1--1------0-- 1
+------1---1------0-- 1
+-----0----1------0-- 1
+----1-----1------0-- 1
+---0------1------0-- 1
+--0-------1------0-- 1
+-0--------1------0-- 1
+0---------1------0-- 1
+---------11-----0--- 1
+--------1-1-----0--- 1
+-------1--1-----0--- 1
+------1---1-----0--- 1
+-----0----1-----0--- 1
+----1-----1-----0--- 1
+---0------1-----0--- 1
+--0-------1-----0--- 1
+-0--------1-----0--- 1
+0---------1-----0--- 1
+---------11----0---- 1
+--------1-1----0---- 1
+-------1--1----0---- 1
+------1---1----0---- 1
+-----0----1----0---- 1
+----1-----1----0---- 1
+---0------1----0---- 1
+--0-------1----0---- 1
+-0--------1----0---- 1
+0---------1----0---- 1
+---------11---0----- 1
+--------1-1---0----- 1
+-------1--1---0----- 1
+------1---1---0----- 1
+-----0----1---0----- 1
+----1-----1---0----- 1
+---0------1---0----- 1
+--0-------1---0----- 1
+-0--------1---0----- 1
+0---------1---0----- 1
+---------11--0------ 1
+--------1-1--0------ 1
+-------1--1--0------ 1
+------1---1--0------ 1
+-----0----1--0------ 1
+----1-----1--0------ 1
+---0------1--0------ 1
+--0-------1--0------ 1
+-0--------1--0------ 1
+0---------1--0------ 1
+---------11-0------- 1
+--------1-1-0------- 1
+-------1--1-0------- 1
+------1---1-0------- 1
+-----0----1-0------- 1
+----1-----1-0------- 1
+---0------1-0------- 1
+--0-------1-0------- 1
+-0--------1-0------- 1
+0---------1-0------- 1
+---------110-------- 1
+--------1-10-------- 1
+-------1--10-------- 1
+------1---10-------- 1
+-----0----10-------- 1
+----1-----10-------- 1
+---0------10-------- 1
+--0-------10-------- 1
+-0--------10-------- 1
+0---------10-------- 1
+---------11--------0 1
+--------1-1--------0 1
+-------1--1--------0 1
+------1---1--------0 1
+-----0----1--------0 1
+----1-----1--------0 1
+---0------1--------0 1
+--0-------1--------0 1
+-0--------1--------0 1
+0---------1--------0 1
+1111010000---------- 0
+----------1111111111 0
+----------0-------0- 0
+----------0------0-- 0
+----------0-----0--- 0
+----------0----0---- 0
+----------0---0----- 0
+----------0--0------ 0
+----------0-0------- 0
+----------00-------- 0
+----------0--------0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s8.BLIF counterClock/s7.BLIF \
+counterClock/s6.BLIF counterClock/s5.BLIF counterClock/s4.BLIF \
+counterClock/s3.BLIF counterClock/s2.BLIF counterClock/s1.BLIF \
+counterClock/s0.BLIF counterClock/s8.REG
+---------1011111111 1
+--------1-011111111 1
+-------1--011111111 1
+------1---011111111 1
+-----0----011111111 1
+----1-----011111111 1
+---0------011111111 1
+--0-------011111111 1
+-0--------011111111 1
+0---------011111111 1
+---------11------0- 1
+--------1-1------0- 1
+-------1--1------0- 1
+------1---1------0- 1
+-----0----1------0- 1
+----1-----1------0- 1
+---0------1------0- 1
+--0-------1------0- 1
+-0--------1------0- 1
+0---------1------0- 1
+---------11-----0-- 1
+--------1-1-----0-- 1
+-------1--1-----0-- 1
+------1---1-----0-- 1
+-----0----1-----0-- 1
+----1-----1-----0-- 1
+---0------1-----0-- 1
+--0-------1-----0-- 1
+-0--------1-----0-- 1
+0---------1-----0-- 1
+---------11----0--- 1
+--------1-1----0--- 1
+-------1--1----0--- 1
+------1---1----0--- 1
+-----0----1----0--- 1
+----1-----1----0--- 1
+---0------1----0--- 1
+--0-------1----0--- 1
+-0--------1----0--- 1
+0---------1----0--- 1
+---------11---0---- 1
+--------1-1---0---- 1
+-------1--1---0---- 1
+------1---1---0---- 1
+-----0----1---0---- 1
+----1-----1---0---- 1
+---0------1---0---- 1
+--0-------1---0---- 1
+-0--------1---0---- 1
+0---------1---0---- 1
+---------11--0----- 1
+--------1-1--0----- 1
+-------1--1--0----- 1
+------1---1--0----- 1
+-----0----1--0----- 1
+----1-----1--0----- 1
+---0------1--0----- 1
+--0-------1--0----- 1
+-0--------1--0----- 1
+0---------1--0----- 1
+---------11-0------ 1
+--------1-1-0------ 1
+-------1--1-0------ 1
+------1---1-0------ 1
+-----0----1-0------ 1
+----1-----1-0------ 1
+---0------1-0------ 1
+--0-------1-0------ 1
+-0--------1-0------ 1
+0---------1-0------ 1
+---------110------- 1
+--------1-10------- 1
+-------1--10------- 1
+------1---10------- 1
+-----0----10------- 1
+----1-----10------- 1
+---0------10------- 1
+--0-------10------- 1
+-0--------10------- 1
+0---------10------- 1
+---------11-------0 1
+--------1-1-------0 1
+-------1--1-------0 1
+------1---1-------0 1
+-----0----1-------0 1
+----1-----1-------0 1
+---0------1-------0 1
+--0-------1-------0 1
+-0--------1-------0 1
+0---------1-------0 1
+1111010000--------- 0
+----------111111111 0
+----------0------0- 0
+----------0-----0-- 0
+----------0----0--- 0
+----------0---0---- 0
+----------0--0----- 0
+----------0-0------ 0
+----------00------- 0
+----------0-------0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s7.BLIF counterClock/s6.BLIF \
+counterClock/s5.BLIF counterClock/s4.BLIF counterClock/s3.BLIF \
+counterClock/s2.BLIF counterClock/s1.BLIF counterClock/s0.BLIF \
+counterClock/s7.REG
+---------101111111 1
+--------1-01111111 1
+-------1--01111111 1
+------1---01111111 1
+-----0----01111111 1
+----1-----01111111 1
+---0------01111111 1
+--0-------01111111 1
+-0--------01111111 1
+0---------01111111 1
+---------11-----0- 1
+--------1-1-----0- 1
+-------1--1-----0- 1
+------1---1-----0- 1
+-----0----1-----0- 1
+----1-----1-----0- 1
+---0------1-----0- 1
+--0-------1-----0- 1
+-0--------1-----0- 1
+0---------1-----0- 1
+---------11----0-- 1
+--------1-1----0-- 1
+-------1--1----0-- 1
+------1---1----0-- 1
+-----0----1----0-- 1
+----1-----1----0-- 1
+---0------1----0-- 1
+--0-------1----0-- 1
+-0--------1----0-- 1
+0---------1----0-- 1
+---------11---0--- 1
+--------1-1---0--- 1
+-------1--1---0--- 1
+------1---1---0--- 1
+-----0----1---0--- 1
+----1-----1---0--- 1
+---0------1---0--- 1
+--0-------1---0--- 1
+-0--------1---0--- 1
+0---------1---0--- 1
+---------11--0---- 1
+--------1-1--0---- 1
+-------1--1--0---- 1
+------1---1--0---- 1
+-----0----1--0---- 1
+----1-----1--0---- 1
+---0------1--0---- 1
+--0-------1--0---- 1
+-0--------1--0---- 1
+0---------1--0---- 1
+---------11-0----- 1
+--------1-1-0----- 1
+-------1--1-0----- 1
+------1---1-0----- 1
+-----0----1-0----- 1
+----1-----1-0----- 1
+---0------1-0----- 1
+--0-------1-0----- 1
+-0--------1-0----- 1
+0---------1-0----- 1
+---------110------ 1
+--------1-10------ 1
+-------1--10------ 1
+------1---10------ 1
+-----0----10------ 1
+----1-----10------ 1
+---0------10------ 1
+--0-------10------ 1
+-0--------10------ 1
+0---------10------ 1
+---------11------0 1
+--------1-1------0 1
+-------1--1------0 1
+------1---1------0 1
+-----0----1------0 1
+----1-----1------0 1
+---0------1------0 1
+--0-------1------0 1
+-0--------1------0 1
+0---------1------0 1
+1111010000-------- 0
+----------11111111 0
+----------0-----0- 0
+----------0----0-- 0
+----------0---0--- 0
+----------0--0---- 0
+----------0-0----- 0
+----------00------ 0
+----------0------0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s6.REG
+---------10111111 1
+--------1-0111111 1
+-------1--0111111 1
+------1---0111111 1
+-----0----0111111 1
+----1-----0111111 1
+---0------0111111 1
+--0-------0111111 1
+-0--------0111111 1
+0---------0111111 1
+---------11----0- 1
+--------1-1----0- 1
+-------1--1----0- 1
+------1---1----0- 1
+-----0----1----0- 1
+----1-----1----0- 1
+---0------1----0- 1
+--0-------1----0- 1
+-0--------1----0- 1
+0---------1----0- 1
+---------11---0-- 1
+--------1-1---0-- 1
+-------1--1---0-- 1
+------1---1---0-- 1
+-----0----1---0-- 1
+----1-----1---0-- 1
+---0------1---0-- 1
+--0-------1---0-- 1
+-0--------1---0-- 1
+0---------1---0-- 1
+---------11--0--- 1
+--------1-1--0--- 1
+-------1--1--0--- 1
+------1---1--0--- 1
+-----0----1--0--- 1
+----1-----1--0--- 1
+---0------1--0--- 1
+--0-------1--0--- 1
+-0--------1--0--- 1
+0---------1--0--- 1
+---------11-0---- 1
+--------1-1-0---- 1
+-------1--1-0---- 1
+------1---1-0---- 1
+-----0----1-0---- 1
+----1-----1-0---- 1
+---0------1-0---- 1
+--0-------1-0---- 1
+-0--------1-0---- 1
+0---------1-0---- 1
+---------110----- 1
+--------1-10----- 1
+-------1--10----- 1
+------1---10----- 1
+-----0----10----- 1
+----1-----10----- 1
+---0------10----- 1
+--0-------10----- 1
+-0--------10----- 1
+0---------10----- 1
+---------11-----0 1
+--------1-1-----0 1
+-------1--1-----0 1
+------1---1-----0 1
+-----0----1-----0 1
+----1-----1-----0 1
+---0------1-----0 1
+--0-------1-----0 1
+-0--------1-----0 1
+0---------1-----0 1
+1111010000------- 0
+----------1111111 0
+----------0----0- 0
+----------0---0-- 0
+----------0--0--- 0
+----------0-0---- 0
+----------00----- 0
+----------0-----0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s5.BLIF counterClock/s4.BLIF \
+counterClock/s3.BLIF counterClock/s2.BLIF counterClock/s1.BLIF \
+counterClock/s0.BLIF counterClock/s5.REG
+---------1011111 1
+--------1-011111 1
+-------1--011111 1
+------1---011111 1
+-----0----011111 1
+----1-----011111 1
+---0------011111 1
+--0-------011111 1
+-0--------011111 1
+0---------011111 1
+---------11---0- 1
+--------1-1---0- 1
+-------1--1---0- 1
+------1---1---0- 1
+-----0----1---0- 1
+----1-----1---0- 1
+---0------1---0- 1
+--0-------1---0- 1
+-0--------1---0- 1
+0---------1---0- 1
+---------11--0-- 1
+--------1-1--0-- 1
+-------1--1--0-- 1
+------1---1--0-- 1
+-----0----1--0-- 1
+----1-----1--0-- 1
+---0------1--0-- 1
+--0-------1--0-- 1
+-0--------1--0-- 1
+0---------1--0-- 1
+---------11-0--- 1
+--------1-1-0--- 1
+-------1--1-0--- 1
+------1---1-0--- 1
+-----0----1-0--- 1
+----1-----1-0--- 1
+---0------1-0--- 1
+--0-------1-0--- 1
+-0--------1-0--- 1
+0---------1-0--- 1
+---------110---- 1
+--------1-10---- 1
+-------1--10---- 1
+------1---10---- 1
+-----0----10---- 1
+----1-----10---- 1
+---0------10---- 1
+--0-------10---- 1
+-0--------10---- 1
+0---------10---- 1
+---------11----0 1
+--------1-1----0 1
+-------1--1----0 1
+------1---1----0 1
+-----0----1----0 1
+----1-----1----0 1
+---0------1----0 1
+--0-------1----0 1
+-0--------1----0 1
+0---------1----0 1
+1111010000------ 0
+----------111111 0
+----------0---0- 0
+----------0--0-- 0
+----------0-0--- 0
+----------00---- 0
+----------0----0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s4.BLIF counterClock/s3.BLIF \
+counterClock/s2.BLIF counterClock/s1.BLIF counterClock/s0.BLIF \
+counterClock/s4.REG
+---------101111 1
+--------1-01111 1
+-------1--01111 1
+------1---01111 1
+-----0----01111 1
+----1-----01111 1
+---0------01111 1
+--0-------01111 1
+-0--------01111 1
+0---------01111 1
+---------11--0- 1
+--------1-1--0- 1
+-------1--1--0- 1
+------1---1--0- 1
+-----0----1--0- 1
+----1-----1--0- 1
+---0------1--0- 1
+--0-------1--0- 1
+-0--------1--0- 1
+0---------1--0- 1
+---------11-0-- 1
+--------1-1-0-- 1
+-------1--1-0-- 1
+------1---1-0-- 1
+-----0----1-0-- 1
+----1-----1-0-- 1
+---0------1-0-- 1
+--0-------1-0-- 1
+-0--------1-0-- 1
+0---------1-0-- 1
+---------110--- 1
+--------1-10--- 1
+-------1--10--- 1
+------1---10--- 1
+-----0----10--- 1
+----1-----10--- 1
+---0------10--- 1
+--0-------10--- 1
+-0--------10--- 1
+0---------10--- 1
+---------11---0 1
+--------1-1---0 1
+-------1--1---0 1
+------1---1---0 1
+-----0----1---0 1
+----1-----1---0 1
+---0------1---0 1
+--0-------1---0 1
+-0--------1---0 1
+0---------1---0 1
+1111010000----- 0
+----------11111 0
+----------0--0- 0
+----------0-0-- 0
+----------00--- 0
+----------0---0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s3.REG
+---------10111 1
+--------1-0111 1
+-------1--0111 1
+------1---0111 1
+-----0----0111 1
+----1-----0111 1
+---0------0111 1
+--0-------0111 1
+-0--------0111 1
+0---------0111 1
+---------11-0- 1
+--------1-1-0- 1
+-------1--1-0- 1
+------1---1-0- 1
+-----0----1-0- 1
+----1-----1-0- 1
+---0------1-0- 1
+--0-------1-0- 1
+-0--------1-0- 1
+0---------1-0- 1
+---------110-- 1
+--------1-10-- 1
+-------1--10-- 1
+------1---10-- 1
+-----0----10-- 1
+----1-----10-- 1
+---0------10-- 1
+--0-------10-- 1
+-0--------10-- 1
+0---------10-- 1
+---------11--0 1
+--------1-1--0 1
+-------1--1--0 1
+------1---1--0 1
+-----0----1--0 1
+----1-----1--0 1
+---0------1--0 1
+--0-------1--0 1
+-0--------1--0 1
+0---------1--0 1
+1111010000---- 0
+----------1111 0
+----------0-0- 0
+----------00-- 0
+----------0--0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s2.BLIF counterClock/s1.BLIF \
+counterClock/s0.BLIF counterClock/s2.REG
+---------1011 1
+--------1-011 1
+-------1--011 1
+------1---011 1
+-----0----011 1
+----1-----011 1
+---0------011 1
+--0-------011 1
+-0--------011 1
+0---------011 1
+---------110- 1
+--------1-10- 1
+-------1--10- 1
+------1---10- 1
+-----0----10- 1
+----1-----10- 1
+---0------10- 1
+--0-------10- 1
+-0--------10- 1
+0---------10- 1
+---------11-0 1
+--------1-1-0 1
+-------1--1-0 1
+------1---1-0 1
+-----0----1-0 1
+----1-----1-0 1
+---0------1-0 1
+--0-------1-0 1
+-0--------1-0 1
+0---------1-0 1
+1111010000--- 0
+----------111 0
+----------00- 0
+----------0-0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s1.BLIF counterClock/s0.BLIF \
+counterClock/s1.REG
+---------110 1
+--------1-10 1
+-------1--10 1
+------1---10 1
+-----0----10 1
+----1-----10 1
+---0------10 1
+--0-------10 1
+-0--------10 1
+0---------10 1
+---------101 1
+--------1-01 1
+-------1--01 1
+------1---01 1
+-----0----01 1
+----1-----01 1
+---0------01 1
+--0-------01 1
+-0--------01 1
+0---------01 1
+1111010000-- 0
+----------00 0
+----------11 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s0.BLIF counterClock/s0.REG
+---------10 1
+--------1-0 1
+-------1--0 1
+------1---0 1
+-----0----0 1
+----1-----0 1
+---0------0 1
+--0-------0 1
+-0--------0 1
+0---------0 1
+1111010000- 0
+----------1 0
+.names up.BLIF down.BLIF bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF \
+bcd>d0.REG
+01-000 1
+-11--1 1
+10--10 1
+10-1-0 1
+010--0 1
+101--0 1
+00---1 1
+11---1 1
+10000- 0
+-111-0 0
+-11-10 0
+010--1 0
+10---1 0
+11---0 0
+00---0 0
+.names bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF a
+100- 1
+01-1 1
+-0-0 1
+1--0 1
+0-1- 1
+-11- 1
+0100 0
+1011 0
+0001 0
+1101 0
+.names bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF b
+00-- 1
+1-01 1
+0-11 1
+0-00 1
+-0-0 1
+0101 0
+1-11 0
+-110 0
+11-0 0
+.names bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF c
+-00- 1
+-0-1 1
+10-- 1
+01-- 1
+--01 1
+0010 0
+111- 0
+11-0 0
+.names bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF d
+1-0- 1
+0-10 1
+11-0 1
+-011 1
+-000 1
+-101 1
+1010 0
+0100 0
+0001 0
+-111 0
+.names bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF e
+-0-0 1
+11-- 1
+--10 1
+1-1- 1
+010- 0
+-001 0
+0--1 0
+.names bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF f
+010- 1
+10-- 1
+--00 1
+-1-0 1
+1-1- 1
+1101 0
+001- 0
+0-11 0
+00-1 0
+.names bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF g
+--10 1
+1--1 1
+010- 1
+10-- 1
+-01- 1
+1100 0
+0111 0
+000- 0
+.names clock.BLIF counterClock/s19.C
+1 1
+0 0
+.names clock.BLIF counterClock/s18.C
+1 1
+0 0
+.names clock.BLIF counterClock/s17.C
+1 1
+0 0
+.names clock.BLIF counterClock/s16.C
+1 1
+0 0
+.names clock.BLIF counterClock/s15.C
+1 1
+0 0
+.names clock.BLIF counterClock/s14.C
+1 1
+0 0
+.names clock.BLIF counterClock/s13.C
+1 1
+0 0
+.names clock.BLIF counterClock/s12.C
+1 1
+0 0
+.names clock.BLIF counterClock/s11.C
+1 1
+0 0
+.names clock.BLIF counterClock/s10.C
+1 1
+0 0
+.names clock.BLIF counterClock/s9.C
+1 1
+0 0
+.names clock.BLIF counterClock/s8.C
+1 1
+0 0
+.names clock.BLIF counterClock/s7.C
+1 1
+0 0
+.names clock.BLIF counterClock/s6.C
+1 1
+0 0
+.names clock.BLIF counterClock/s5.C
+1 1
+0 0
+.names clock.BLIF counterClock/s4.C
+1 1
+0 0
+.names clock.BLIF counterClock/s3.C
+1 1
+0 0
+.names clock.BLIF counterClock/s2.C
+1 1
+0 0
+.names clock.BLIF counterClock/s1.C
+1 1
+0 0
+.names clock.BLIF counterClock/s0.C
+1 1
+0 0
+.names reset.BLIF bcd>d0.AR
+0 1
+1 0
+.names counterClock>millisecondClock.BLIF bcd>d0.C
+1 1
+0 0
+.names reset.BLIF bcd>d1.AR
+0 1
+1 0
+.names counterClock>millisecondClock.BLIF bcd>d1.C
+1 1
+0 0
+.names reset.BLIF bcd>d2.AR
+0 1
+1 0
+.names counterClock>millisecondClock.BLIF bcd>d2.C
+1 1
+0 0
+.names reset.BLIF bcd>d3.AR
+0 1
+1 0
+.names counterClock>millisecondClock.BLIF bcd>d3.C
+1 1
+0 0
+.names bcd>d1.BLIF bcd>d1.REG.X1
+1 1
+0 0
+.names up.BLIF down.BLIF bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF \
+bcd>d1.REG.X2
+010--1 1
+101--0 1
+10-1-0 1
+10--10 1
+11---- 0
+00---- 0
+0-1--- 0
+1----1 0
+0----0 0
+1-000- 0
+.names bcd>d2.BLIF bcd>d2.REG.X1
+1 1
+0 0
+.names up.BLIF down.BLIF bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF \
+bcd>d2.REG.X2
+010-11 1
+101-00 1
+10-100 1
+11---- 0
+00---- 0
+0-1--- 0
+1---1- 0
+0---0- 0
+1----1 0
+0----0 0
+1-00-- 0
+.names up.BLIF bcd>d3.BLIF bcd>d3.REG.X1
+11 1
+0- 0
+-0 0
+.names up.BLIF down.BLIF bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF \
+bcd>d3.REG.X2
+0-1--- 1
+01-111 1
+-01000 1
+11---- 0
+-00--- 0
+1--1-- 0
+--00-- 0
+1---1- 0
+--0-0- 0
+1----1 0
+--0--0 0
+.names counterClock/s19.BLIF counterClock/s19.REG.X1
+1 1
+0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s19.REG.X2
+-1111111111111111111 1
+1111010000---------- 1
+-0------------------ 0
+--0----------------- 0
+---0---------------- 0
+-----0-------------- 0
+0---0--------------- 0
+----0-1------------- 0
+----1-0------------- 0
+----0--1------------ 0
+----1--0------------ 0
+----0---1----------- 0
+----1---0----------- 0
+----0----1---------- 0
+----1----0---------- 0
+----1-----0--------- 0
+----1------0-------- 0
+----1-------0------- 0
+----1--------0------ 0
+----1---------0----- 0
+----1----------0---- 0
+----1-----------0--- 0
+----1------------0-- 0
+----1-------------0- 0
+----1--------------0 0
+.names counterClock/s18.BLIF counterClock/s18.REG.X1
+1 1
+0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s18.REG.X2
+--111111111111111111 1
+1111010000---------- 1
+--0----------------- 0
+---0---------------- 0
+-----0-------------- 0
+0---0--------------- 0
+-0--0--------------- 0
+----0-1------------- 0
+----1-0------------- 0
+----0--1------------ 0
+----1--0------------ 0
+----0---1----------- 0
+----1---0----------- 0
+----0----1---------- 0
+----1----0---------- 0
+----1-----0--------- 0
+----1------0-------- 0
+----1-------0------- 0
+----1--------0------ 0
+----1---------0----- 0
+----1----------0---- 0
+----1-----------0--- 0
+----1------------0-- 0
+----1-------------0- 0
+----1--------------0 0
+.names counterClock/s17.BLIF counterClock/s17.REG.X1
+1 1
+0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s17.REG.X2
+---11111111111111111 1
+1111010000---------- 1
+---0---------------- 0
+-----0-------------- 0
+0---0--------------- 0
+-0--0--------------- 0
+--0-0--------------- 0
+----0-1------------- 0
+----1-0------------- 0
+----0--1------------ 0
+----1--0------------ 0
+----0---1----------- 0
+----1---0----------- 0
+----0----1---------- 0
+----1----0---------- 0
+----1-----0--------- 0
+----1------0-------- 0
+----1-------0------- 0
+----1--------0------ 0
+----1---------0----- 0
+----1----------0---- 0
+----1-----------0--- 0
+----1------------0-- 0
+----1-------------0- 0
+----1--------------0 0
+.names counterClock/s16.BLIF counterClock/s16.REG.X1
+1 1
+0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s16.REG.X2
+----1111111111111111 1
+1111010000---------- 1
+-----0-------------- 0
+0---0--------------- 0
+-0--0--------------- 0
+--0-0--------------- 0
+---00--------------- 0
+----0-1------------- 0
+----1-0------------- 0
+----0--1------------ 0
+----1--0------------ 0
+----0---1----------- 0
+----1---0----------- 0
+----0----1---------- 0
+----1----0---------- 0
+----1-----0--------- 0
+----1------0-------- 0
+----1-------0------- 0
+----1--------0------ 0
+----1---------0----- 0
+----1----------0---- 0
+----1-----------0--- 0
+----1------------0-- 0
+----1-------------0- 0
+----1--------------0 0
+.names counterClock/s15.BLIF counterClock/s15.REG.X1
+1 1
+0 0
+.names counterClock/s15.BLIF counterClock/s14.BLIF counterClock/s13.BLIF \
+counterClock/s12.BLIF counterClock/s11.BLIF counterClock/s10.BLIF \
+counterClock/s9.BLIF counterClock/s8.BLIF counterClock/s7.BLIF \
+counterClock/s6.BLIF counterClock/s5.BLIF counterClock/s4.BLIF \
+counterClock/s3.BLIF counterClock/s2.BLIF counterClock/s1.BLIF \
+counterClock/s0.BLIF counterClock/s15.REG.X2
+-111111111111111 1
+-0-------------- 0
+--0------------- 0
+---0------------ 0
+----0----------- 0
+-----0---------- 0
+------0--------- 0
+-------0-------- 0
+--------0------- 0
+---------0------ 0
+----------0----- 0
+-----------0---- 0
+------------0--- 0
+-------------0-- 0
+--------------0- 0
+---------------0 0
+.names counterClock/s14.BLIF counterClock/s14.REG.X1
+1 1
+0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s14.REG.X2
+------11111111111111 1
+1111010000---------- 1
+0-----0------------- 0
+-0----0------------- 0
+--0---0------------- 0
+---0--0------------- 0
+----1-0------------- 0
+-----00------------- 0
+------01------------ 0
+------10------------ 0
+------0-1----------- 0
+------1-0----------- 0
+------0--1---------- 0
+------1--0---------- 0
+------1---0--------- 0
+------1----0-------- 0
+------1-----0------- 0
+------1------0------ 0
+------1-------0----- 0
+------1--------0---- 0
+------1---------0--- 0
+------1----------0-- 0
+------1-----------0- 0
+------1------------0 0
+.names counterClock/s13.BLIF counterClock/s13.REG.X1
+1 1
+0 0
+.names counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s13.REG.X2
+-1111111111111 1
+-0------------ 0
+--0----------- 0
+---0---------- 0
+----0--------- 0
+-----0-------- 0
+------0------- 0
+-------0------ 0
+--------0----- 0
+---------0---- 0
+----------0--- 0
+-----------0-- 0
+------------0- 0
+-------------0 0
+.names counterClock/s12.BLIF counterClock/s12.REG.X1
+1 1
+0 0
+.names counterClock/s12.BLIF counterClock/s11.BLIF counterClock/s10.BLIF \
+counterClock/s9.BLIF counterClock/s8.BLIF counterClock/s7.BLIF \
+counterClock/s6.BLIF counterClock/s5.BLIF counterClock/s4.BLIF \
+counterClock/s3.BLIF counterClock/s2.BLIF counterClock/s1.BLIF \
+counterClock/s0.BLIF counterClock/s12.REG.X2
+-111111111111 1
+-0----------- 0
+--0---------- 0
+---0--------- 0
+----0-------- 0
+-----0------- 0
+------0------ 0
+-------0----- 0
+--------0---- 0
+---------0--- 0
+----------0-- 0
+-----------0- 0
+------------0 0
+.names counterClock/s11.BLIF counterClock/s11.REG.X1
+1 1
+0 0
+.names counterClock/s11.BLIF counterClock/s10.BLIF counterClock/s9.BLIF \
+counterClock/s8.BLIF counterClock/s7.BLIF counterClock/s6.BLIF \
+counterClock/s5.BLIF counterClock/s4.BLIF counterClock/s3.BLIF \
+counterClock/s2.BLIF counterClock/s1.BLIF counterClock/s0.BLIF \
+counterClock/s11.REG.X2
+-11111111111 1
+-0---------- 0
+--0--------- 0
+---0-------- 0
+----0------- 0
+-----0------ 0
+------0----- 0
+-------0---- 0
+--------0--- 0
+---------0-- 0
+----------0- 0
+-----------0 0
+.names counterClock/s10.BLIF counterClock/s10.REG.X1
+1 1
+0 0
+.names counterClock/s19.BLIF counterClock/s18.BLIF counterClock/s17.BLIF \
+counterClock/s16.BLIF counterClock/s15.BLIF counterClock/s14.BLIF \
+counterClock/s13.BLIF counterClock/s12.BLIF counterClock/s11.BLIF \
+counterClock/s10.BLIF counterClock/s9.BLIF counterClock/s8.BLIF \
+counterClock/s7.BLIF counterClock/s6.BLIF counterClock/s5.BLIF \
+counterClock/s4.BLIF counterClock/s3.BLIF counterClock/s2.BLIF \
+counterClock/s1.BLIF counterClock/s0.BLIF counterClock/s10.REG.X2
+0---------1111111111 1
+-0--------1111111111 1
+--0-------1111111111 1
+---0------1111111111 1
+----1-----1111111111 1
+-----0----1111111111 1
+------1---1111111111 1
+-------1--1111111111 1
+--------1-1111111111 1
+---------11111111111 1
+----------0--------- 0
+-----------0-------- 0
+------------0------- 0
+-------------0------ 0
+--------------0----- 0
+---------------0---- 0
+----------------0--- 0
+-----------------0-- 0
+------------------0- 0
+-------------------0 0
+1111010000---------- 0
+.end

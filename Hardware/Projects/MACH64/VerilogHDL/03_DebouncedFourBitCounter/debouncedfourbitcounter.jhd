@@ -1,0 +1,9 @@
+MODULE DebouncedFourBitCounter DEFIN debouncedfourbitcounter.v
+	SUBMODULE Debouncer
+		INSTANCE u1d
+	SUBMODULE SynchronousClockScaler
+		INSTANCE u1cs
+MODULE SynchronousClockScaler DEFIN synchronousclockscaler.v
+MODULE Debouncer DEFIN debouncer.v
+DEPEND INCLUDED_FILE synchronousclockscaler.v
+DEPEND INCLUDED_FILE debouncer.v

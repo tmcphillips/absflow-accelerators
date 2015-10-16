@@ -1,0 +1,13 @@
+
+
+	OP_LDA = ^b0000;
+	OP_LDB = ^b0011;
+
+	OP_AND = ^b1000;
+	OP_OR  = ^b1001;
+	OP_XOR = ^b1010;
+	OP_NOT = ^b1011;
+	OP_INC = ^b1100;
+	OP_DEC = ^b1101;
+	OP_SHL = ^b1110;
+	OP_SHR = ^b1111;

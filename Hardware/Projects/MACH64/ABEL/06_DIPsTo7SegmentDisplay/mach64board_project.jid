@@ -1,0 +1,3 @@
+. DIPsTo7SegmentDisplay dipsto7segmentdisplay.abl c:\users\tmcphillips\designs\projects\mach64\abel\7.5.lab05\dipsto7segmentdisplay\dipsto7segmentdisplay.abl
+BCDLEDSegmentLookup BCDToSevenSegment bcdtosevensegment.abl c:\users\tmcphillips\designs\projects\mach64\abel\7.5.lab05\dipsto7segmentdisplay\bcdtosevensegment.abl
+HexLEDSegmentLookup HexToSevenSegment hextosevensegment.abl c:\users\tmcphillips\designs\projects\mach64\abel\7.5.lab05\dipsto7segmentdisplay\hextosevensegment.abl

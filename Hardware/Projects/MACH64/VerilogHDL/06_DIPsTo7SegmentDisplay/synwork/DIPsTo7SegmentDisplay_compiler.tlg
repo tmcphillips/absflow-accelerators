@@ -1,0 +1,11 @@
+Selecting top level module DIPsTo7SegmentDisplay
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\dipsto7segmentdisplay.v":4:7:4:27|Synthesizing module DIPsTo7SegmentDisplay
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\hexdigittosevensegment.v":4:7:4:28|Synthesizing module HexDigitToSevenSegment
+
+@W: CL259 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\dipsto7segmentdisplay.v":17:26:17:32|duplicate loc attributes found on net
+@W: CL259 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\dipsto7segmentdisplay.v":17:26:17:32|duplicate loc attributes found on net
+@W: CL259 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\dipsto7segmentdisplay.v":17:26:17:32|duplicate loc attributes found on net
+@W: CL259 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\dipsto7segmentdisplay.v":17:26:17:32|duplicate loc attributes found on net
+@W: CL259 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\dipsto7segmentdisplay.v":17:26:17:32|duplicate loc attributes found on net
+@W: CL259 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\dipsto7segmentdisplay.v":17:26:17:32|duplicate loc attributes found on net

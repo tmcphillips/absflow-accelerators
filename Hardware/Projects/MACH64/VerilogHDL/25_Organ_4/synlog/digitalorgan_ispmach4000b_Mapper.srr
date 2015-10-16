@@ -1,0 +1,23 @@
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+@N: MO106 :"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\digitalorgan.v":1:0:7:24|Found ROM, 'songLine_2[1:5]', 32 words by 5 bits 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             57 uses
+IBUF            1 use
+OBUF            4 uses
+AND2            96 uses
+INV             56 uses
+XOR2            28 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Feb 17 11:33:43 2012
+
+###########################################################]

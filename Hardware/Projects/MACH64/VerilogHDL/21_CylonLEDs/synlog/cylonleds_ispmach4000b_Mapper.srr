@@ -1,0 +1,28 @@
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+@N:"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":77:1:77:6|Found counter in view:work.CylonLEDs(verilog) inst duty[3:0]
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFC            24 uses
+DFF             28 uses
+DFFSH           1 use
+DFFRH           3 uses
+DFFCRH          1 use
+IBUF            2 uses
+OBUF            8 uses
+AND2            175 uses
+XOR2            10 uses
+INV             195 uses
+OR2             11 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Feb 11 20:44:52 2012
+
+###########################################################]

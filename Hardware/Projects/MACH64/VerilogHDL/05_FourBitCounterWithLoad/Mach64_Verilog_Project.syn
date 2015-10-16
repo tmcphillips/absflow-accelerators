@@ -1,0 +1,16 @@
+JDF B
+// Created by Version 1.5 
+PROJECT Mach64_Verilog_Project
+DESIGN mach64_verilog_project Normal
+DEVKIT LC4064V-75T48I
+ENTRY Pure Verilog HDL
+MODULE fourbitcounterwithload.v
+MODSTYLE RippleCounter Normal
+MODSTYLE TFlipFlop Normal
+MODSTYLE UpDownCounter Normal
+MODSTYLE RippleScaler Normal
+MODSTYLE ButtonPressDetector Normal
+MODSTYLE FourBitCounterWithLoad Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE FourBitCounterWithLoad

@@ -1,0 +1,45 @@
+module AddressableLatch interface ([S2..S0],D,G,Clr -> [Q7..Q0])
+
+declarations
+
+	S2..S0	pin;
+	D	pin;
+	G	pin;
+	Clr	pin;
+
+	Q7..Q0	pin istype 'reg,buffer';
+
+	select = [S2..S0];
+	output = [Q7..Q0];
+
+equations
+
+	when (select == 0) then
+		output := [Q7, Q6, Q5, Q4, Q3, Q2, Q1, D];
+
+	when (select == 1) then
+		output := [Q7, Q6, Q5, Q4, Q3, Q2, D, Q0];
+
+	when (select == 2) then
+		output := [Q7, Q6, Q5, Q4, Q3, D, Q1, Q0];
+
+	when (select == 3) then
+		output := [Q7, Q6, Q5, Q4, D, Q2, Q1, Q0];
+
+	when (select == 4) then
+		output := [Q7, Q6, Q5, D, Q3, Q2, Q1, Q0];
+
+	when (select == 5) then
+		output := [Q7, Q6, D, Q4, Q3, Q2, Q1, Q0];
+
+	when (select == 6) then
+		output := [Q7, D, Q5, Q4, Q3, Q2, Q1, Q0];
+
+	when (select == 7) then
+		output := [D, Q6, Q5, Q4, Q3, Q2, Q1, Q0];
+
+	output.le = G;
+	output.ar = !Clr & G;
+
+end
+

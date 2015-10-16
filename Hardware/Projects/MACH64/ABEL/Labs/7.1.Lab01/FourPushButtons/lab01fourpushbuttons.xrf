@@ -1,0 +1,17 @@
+Signal Name Cross Reference File
+
+ispLEVER Classic 1.4.01.04.23.l1
+
+Design 'lab01fourpushbuttons' created Sat Nov 26 11:04:57 2011
+
+Title:  Four push button LED program
+
+ LEGEND:  '>'  Functional Block Port Separator
+          '/'  Hierarchy Path Separator
+          '@'  Automatically Generated Node
+
+
+Short Name                              Hierarchical Name
+----------                              -----------------
+
+ *** Shortened names not required for this design. ***

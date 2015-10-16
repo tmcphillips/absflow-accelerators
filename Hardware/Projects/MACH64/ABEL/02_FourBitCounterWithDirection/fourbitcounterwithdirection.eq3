@@ -1,0 +1,31 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+q0.D = !q0.Q ; (1 pterm, 1 signal)
+q0.C = !clock ; (1 pterm, 1 signal)
+q0.AR = !reset ; (1 pterm, 1 signal)
+
+q1.D = !direction & !q1.Q & !q0.Q
+    # !direction & q1.Q & q0.Q
+    # direction & q1.Q & !q0.Q
+    # direction & !q1.Q & q0.Q ; (4 pterms, 3 signals)
+q1.C = !clock ; (1 pterm, 1 signal)
+q1.AR = !reset ; (1 pterm, 1 signal)
+
+q2.D.X1 = !direction & !q1.Q & !q0.Q
+    # direction & q1.Q & q0.Q ; (2 pterms, 3 signals)
+q2.D.X2 = q2.Q ; (1 pterm, 1 signal)
+q2.C = !clock ; (1 pterm, 1 signal)
+q2.AR = !reset ; (1 pterm, 1 signal)
+
+q3.T = !direction & !q2.Q & !q1.Q & !q0.Q
+    # direction & q2.Q & q1.Q & q0.Q ; (2 pterms, 4 signals)
+q3.C = !clock ; (1 pterm, 1 signal)
+q3.AR = !reset ; (1 pterm, 1 signal)
+

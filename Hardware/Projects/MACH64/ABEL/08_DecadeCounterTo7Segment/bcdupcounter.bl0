@@ -1,0 +1,34 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:15:47 2012
+#$ MODULE bcdupcounter
+#$ JEDECFILE bcdupcounter
+#$ PINS 5 up d3 d2 d1 d0
+#$ INTERFACE bcdupcounter  5 up'i'  d0'o'  d1'o'  d2'o'  d3'o' 
+
+.model bcdupcounter
+.inputs up.BLIF d3.BLIF d2.BLIF d1.BLIF d0.BLIF
+.outputs d3.C d2.C d1.C d0.C d3.REG d2.REG d1.REG d0.REG
+.names up.BLIF d3.C
+1 1
+.names up.BLIF d2.C
+1 1
+.names up.BLIF d1.C
+1 1
+.names up.BLIF d0.C
+1 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF d3.REG
+1--0 1
+101- 1
+110- 1
+0111 1
+.names d2.BLIF d1.BLIF d0.BLIF d2.REG
+10- 1
+1-0 1
+011 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF d1.REG
+--10 1
+0-01 1
+-101 1
+.names d0.BLIF d0.REG
+0 1
+.end

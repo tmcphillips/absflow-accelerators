@@ -1,0 +1,50 @@
+MODULE DecimalCounter
+
+// Repeatedly counts from 0 to 9 and displays the running digit
+// on a seven segment LED display.
+//
+// Mach64 	     7-Segment
+// 20/C0	->	A
+// 21/C2	->	B
+// 22/C4	->	C
+// 23/C6	->	D
+// 24/C8	->	E
+// 26/C10	->	F
+// 27/C12	->	G
+//
+// Mach64	       
+// 18/CLK1_IN	-> 	OSC
+
+DECLARATIONS
+
+	// input clock signal
+	clock PIN 18;
+
+	// 20-bit register for scaling external 1 MHz clock signal to ~1 Hz
+	TwentyBitScaler INTERFACE (inclock -> outclock);
+	Scaler FUNCTIONAL_BLOCK TwentyBitScaler;
+
+	// single-digit decimal counter
+	BCDCounter INTERFACE(clock -> [d3..d0]);
+	Digit FUNCTIONAL_BLOCK BCDCounter;
+
+	// component for converting BCD digit
+	// to signals for a seven segment display
+	BCDToSevenSegment INTERFACE ([d3..d0] -> [a,b,c,d,e,f,g]);
+	DigitToSevenSeg FUNCTIONAL_BLOCK BCDToSevenSegment;
+
+	// output pins for driving 7-segment LED display
+	a,b,c,d,e,f,g PIN 20..24, 26,27 ISTYPE 'com';
+
+EQUATIONS
+
+	// scale incoming 1 MHz signal to 1 Hz and use it to clock the digit register
+	Scaler.inclock = clock;
+	Digit.clock = Scaler.outclock;
+
+	// convert 4-bit digit to 7-bit LED signal
+	DigitToSevenSeg.[d3..d0] = Digit.[d3..d0];
+	[a,b,c,d,e,f,g] = DigitToSevenSeg.[a,b,c,d,e,f,g];
+END
+
+

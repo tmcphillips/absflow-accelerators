@@ -1,0 +1,70 @@
+#PLAFILE     fourbitcounterwithdirection.bl5
+#DATE        Wed Jan 18 09:43:58 2012
+
+#DESIGN      fourbitcounterwithdirection
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION oneMHzClock:*_*_19
+DATA LOCATION stepButton:*_*_18
+DATA LOCATION reset:C_*_20
+DATA LOCATION stepDirectionUp:C_*_21
+DATA LOCATION q0:B_8_14
+DATA LOCATION q1:B_1_15
+DATA LOCATION q2:B_3_16
+DATA LOCATION q3:B_14_17
+DATA LOCATION D0_debounced:D_5
+DATA LOCATION D1_lastSample:D_10
+DATA LOCATION S0_s9:A_2
+DATA LOCATION S0_s8:A_3
+DATA LOCATION S0_s7:A_5
+DATA LOCATION S0_s6:A_7
+DATA LOCATION S0_s5:A_9
+DATA LOCATION S0_s4:A_1
+DATA LOCATION S0_s3:A_0
+DATA LOCATION S0_s2:C_7
+DATA LOCATION S0_s1:D_2
+DATA LOCATION S0_s0:A_12
+
+// Signals direction
+DATA IO_DIR oneMHzClock:IN
+DATA IO_DIR stepButton:IN
+DATA IO_DIR reset:IN
+DATA IO_DIR stepDirectionUp:IN
+DATA IO_DIR q0:OUT
+DATA IO_DIR q1:OUT
+DATA IO_DIR q2:OUT
+DATA IO_DIR q3:OUT
+
+// Global Clocks
+DATA GLB_CLOCK oneMHzClock:2
+
+// Signals using Shared Clock or CE
+DATA tBCLK q0.C
+DATA tBCLK q1.C
+DATA tBCLK q2.C
+DATA tBCLK q3.C
+DATA tBCLK D0_debounced.C
+DATA tBCLK D1_lastSample.C
+
+// Signals using Shared Init Pterm
+DATA tBSR q0.AR
+DATA tBSR q1.AR
+DATA tBSR q2.AR
+DATA tBSR q3.AR
+
+// Block Load Adders
+DATA tBLA S0_s0:2
+DATA tBLA S0_s1:2
+DATA tBLA S0_s2:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM q0
+DATA tOSM q1
+DATA tOSM q2
+DATA tOSM q3

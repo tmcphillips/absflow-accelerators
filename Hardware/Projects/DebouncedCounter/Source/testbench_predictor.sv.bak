@@ -1,0 +1,100 @@
+import ovm_pkg::*;
+import fourbitcounter_transactions_pkg::*;
+
+module testbench_predictor (
+  ref tlm_fifo #(fourbitcounter_operation) operation_fifo,
+  ref tlm_fifo #(fourbitcounter_result) predicted_result_fifo
+);
+	
+	parameter minEffectiveHoldTime = 4;
+	parameter minEffectiveWaits = 3;
+	
+	string m;
+	string message;
+
+	fourbitcounter_operation operation;
+	operation_t last_op = reset_op;
+	int last_wait_was_short = 0;
+	int operation_success;
+	
+  fourbitcounter_result predictedResult;
+	bit [3:0] predictedValue;
+  
+	task run;
+	  
+	 begin
+	   
+	   $sformat(m, "%m");
+	   	  
+	   predictedValue = 0; 
+	  
+	   forever begin
+	   
+	     operation_fifo.get(operation);
+	     
+	     operation_success = 0;
+	   
+	     case (operation.op)
+	     
+	       up_op:    if (operation.hold >= minEffectiveHoldTime) begin
+	                   if (previous_waits_sufficient()) begin
+	                       predictedValue = predictedValue + 1;
+	                       operation_success = 1;
+	                     end
+	                   else begin
+	                     $sformat(message, "Predicting no effect due to low previous wait.");
+                        ovm_top.ovm_report_info(m, message, 300);
+                      end
+                  end
+
+	      
+         down_op:  if (operation.hold >= minEffectiveHoldTime) 
+                     begin
+                       if (previous_waits_sufficient()) 
+                         begin
+                           predictedValue = predictedValue - 1;
+	                         operation_success = 1;
+	                       end
+	                    else 
+	                     begin
+	                       $sformat(message, "Predicting no effect due to low previous wait.");
+                         ovm_top.ovm_report_info(m, message, 300);
+                       end
+                     end  
+                    
+         load_op:  begin
+                     predictedValue = operation.arg;
+	                   operation_success = 1;
+                   end
+                   
+         reset_op: begin
+                     predictedValue = 0;
+                     operation_success = 1;
+                   end
+        
+         no_op:    ;
+        
+	     endcase
+	   
+	     if (operation_success) begin
+	       predictedResult = new(predictedValue);
+	       $sformat(message, "Predicted: %s", predictedResult.convert2string);
+	       ovm_top.ovm_report_info(m, message, 300);
+	       predicted_result_fifo.put(predictedResult.clone);
+       end
+     
+       last_op = operation.op;
+       last_wait_was_short = !last_wait_was_short && (operation.waits < minEffectiveWaits);
+	     
+	   end
+	   
+	  end  
+	 
+	endtask
+	
+	function int previous_waits_sufficient();
+	  return (!last_wait_was_short || operation.op != last_op);
+	endfunction
+	 
+endmodule
+

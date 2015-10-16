@@ -1,0 +1,64 @@
+ispLEVER Classic 1.4.01.04.23.l1 Linked Equations File
+Copyright(C), 1992-2011, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design fourbitcounter created Sun Nov 27 16:31:56 2011
+
+Title: Four bit counter with manual clock and reset
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   4          4        1    Pin   q3.REG 
+   1          1        1    Pin   q3.AR 
+   1          1        1    Pin   q3.C 
+   3          3        1    Pin   q2.REG 
+   1          1        1    Pin   q2.AR 
+   1          1        1    Pin   q2.C 
+   2          2        1    Pin   q1.REG 
+   1          1        1    Pin   q1.AR 
+   1          1        1    Pin   q1.C 
+   1          1        1    Pin   q0.REG 
+   1          1        1    Pin   q0.AR 
+   1          1        1    Pin   q0.C 
+=========
+  18                 P-Term Total: 18
+                       Total Pins: 6
+                      Total Nodes: 0
+            Average P-Term/Output: 2
+
+
+Equations:
+
+q3 := (q3 & !q2
+     # q3 & !q1
+     # q3 & !q0
+     # !q3 & q2 & q1 & q0);
+
+q3.AR = (!reset);
+
+q3.C = (!clock);
+
+q2 := (q2 & !q1
+     # q2 & !q0
+     # !q2 & q1 & q0);
+
+q2.AR = (!reset);
+
+q2.C = (!clock);
+
+q1 := (!q1 & q0
+     # q1 & !q0);
+
+q1.AR = (!reset);
+
+q1.C = (!clock);
+
+q0 := (!q0);
+
+q0.AR = (!reset);
+
+q0.C = (!clock);
+
+
+Reverse-Polarity Equations:
+

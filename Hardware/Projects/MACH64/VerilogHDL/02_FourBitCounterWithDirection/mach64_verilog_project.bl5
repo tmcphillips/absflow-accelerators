@@ -1,0 +1,43 @@
+#$ TOOL  ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE  Wed Jan 18 09:42:28 2012
+#$ MODULE  FourBitCounterWithDirection
+#$ PINS 7 clock:18 reset:20 direction:21 counter_3_:14 counter_2_:15
+ counter_1_:16 counter_0_:17
+.model fourbitcounterwithdirection 
+.inputs clock.BLIF reset.BLIF direction.BLIF counter_0_.Q counter_1_.Q \
+ counter_2_.Q
+.outputs counter_3_.T counter_3_.C counter_3_.AR counter_2_.D.X1 counter_2_.D.X2 \
+ counter_2_.C counter_2_.AR counter_1_.D counter_1_.C counter_1_.AR counter_0_.D \
+ counter_0_.C counter_0_.AR
+.names direction.BLIF counter_0_.Q counter_1_.Q counter_2_.Q counter_3_.T
+0000 1
+1111 1
+.names clock.BLIF counter_3_.C
+0 1
+.names reset.BLIF counter_3_.AR
+0 1
+.names direction.BLIF counter_0_.Q counter_1_.Q counter_2_.Q counter_2_.D.X1
+000- 1
+111- 1
+.names direction.BLIF counter_0_.Q counter_1_.Q counter_2_.Q counter_2_.D.X2
+---1 1
+.names clock.BLIF counter_2_.C
+0 1
+.names reset.BLIF counter_2_.AR
+0 1
+.names direction.BLIF counter_0_.Q counter_1_.Q counter_1_.D
+000 1
+110 1
+101 1
+011 1
+.names clock.BLIF counter_1_.C
+0 1
+.names reset.BLIF counter_1_.AR
+0 1
+.names counter_0_.Q counter_0_.D
+0 1
+.names clock.BLIF counter_0_.C
+0 1
+.names reset.BLIF counter_0_.AR
+0 1
+.end

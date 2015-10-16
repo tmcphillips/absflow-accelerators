@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element mm_to_st_adapter.avalon_mm_in
+   {
+      datum baseAddress
+      {
+         value = "65536";
+         type = "String";
+      }
+   }
+   element st_to_mm_adapter.avalon_mm_out
+   {
+      datum baseAddress
+      {
+         value = "65552";
+         type = "String";
+      }
+   }
+   element clock
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element fifo
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element jtag_master_bridge
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element mm_to_st_adapter
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element st_to_mm_adapter
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6C6U23C8ES" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="soc_hamming_hps.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
+ <module kind="clock_source" version="13.1" enabled="1" name="clock">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="altera_jtag_avalon_master"
+   version="13.1"
+   enabled="1"
+   name="jtag_master_bridge">
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6C6U23C8ES" />
+ </module>
+ <module
+   kind="mm_to_st_adapter"
+   version="1.0"
+   enabled="1"
+   name="mm_to_st_adapter">
+  <parameter name="WIDTH" value="8" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <module
+   kind="st_to_mm_adapter"
+   version="1.0"
+   enabled="1"
+   name="st_to_mm_adapter">
+  <parameter name="WIDTH" value="8" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <module kind="altera_avalon_sc_fifo" version="13.1" enabled="1" name="fifo">
+  <parameter name="SYMBOLS_PER_BEAT" value="1" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="16" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="1" />
+  <parameter name="USE_FILL_LEVEL" value="0" />
+  <parameter name="EMPTY_LATENCY" value="3" />
+  <parameter name="USE_MEMORY_BLOCKS" value="1" />
+  <parameter name="USE_STORE_FORWARD" value="0" />
+  <parameter name="USE_ALMOST_FULL_IF" value="0" />
+  <parameter name="USE_ALMOST_EMPTY_IF" value="0" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="jtag_master_bridge.clk" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_master_bridge.master_reset"
+   end="clock.clk_in_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_master_bridge.master_reset"
+   end="jtag_master_bridge.clk_reset" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="mm_to_st_adapter.clock" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_master_bridge.master_reset"
+   end="mm_to_st_adapter.reset" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="st_to_mm_adapter.clock" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_master_bridge.master_reset"
+   end="st_to_mm_adapter.reset" />
+ <connection
+   kind="avalon"
+   version="13.1"
+   start="jtag_master_bridge.master"
+   end="st_to_mm_adapter.avalon_mm_out">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010010" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.1"
+   start="jtag_master_bridge.master"
+   end="mm_to_st_adapter.avalon_mm_in">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="fifo.out"
+   end="st_to_mm_adapter.avalon_st_in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="mm_to_st_adapter.avalon_st_out"
+   end="fifo.in" />
+ <connection kind="clock" version="13.1" start="clock.clk" end="fifo.clk" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_master_bridge.master_reset"
+   end="fifo.clk_reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="false" />
+</system>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/tmcphillips/Designs/Projects/BASYS250/VerilogHDL/01_FourBitCounterWithLoad/testbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="/testbench/counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/upButton" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">upButton</obj_property>
+      <obj_property name="ObjectShortName">upButton</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/downButton" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">downButton</obj_property>
+      <obj_property name="ObjectShortName">downButton</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/resetButton" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">resetButton</obj_property>
+      <obj_property name="ObjectShortName">resetButton</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/testClock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">testClock</obj_property>
+      <obj_property name="ObjectShortName">testClock</obj_property>
+   </wvobject>
+</wave_config>

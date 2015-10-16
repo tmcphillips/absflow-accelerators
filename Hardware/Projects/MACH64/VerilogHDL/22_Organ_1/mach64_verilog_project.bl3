@@ -1,0 +1,149 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Tue Feb 14 16:49:22 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 6 button_n_1_:21'ke'  oneMHzClock:43'ke'  rca:31'ke'  button_n_2_:22'ke'  \
+#  button_n_3_:23'ke'  button_n_4_:24'ke' 
+#$ NODES 15 u0rs_u1rc_genblk1_10__uitff_q u1rs_u1rc_u0tff_q u2rs_u1rc_u0tff_q \
+#  u3rs_u1rc_u0tff_q u0rs_u1rc_u0tff_q u0rs_u1rc_genblk1_0__uitff_q \
+#  u0rs_u1rc_genblk1_1__uitff_q u0rs_u1rc_genblk1_2__uitff_q \
+#  u0rs_u1rc_genblk1_3__uitff_q u0rs_u1rc_genblk1_4__uitff_q \
+#  u0rs_u1rc_genblk1_5__uitff_q u0rs_u1rc_genblk1_6__uitff_q \
+#  u0rs_u1rc_genblk1_7__uitff_q u0rs_u1rc_genblk1_8__uitff_q \
+#  u0rs_u1rc_genblk1_9__uitff_q
+.model digitalorgan
+.inputs button_n_1_.BLIF oneMHzClock.BLIF button_n_2_.BLIF button_n_3_.BLIF \
+button_n_4_.BLIF u0rs_u1rc_genblk1_10__uitff_q.BLIF u1rs_u1rc_u0tff_q.BLIF \
+u2rs_u1rc_u0tff_q.BLIF u3rs_u1rc_u0tff_q.BLIF u0rs_u1rc_u0tff_q.BLIF \
+u0rs_u1rc_genblk1_0__uitff_q.BLIF u0rs_u1rc_genblk1_1__uitff_q.BLIF \
+u0rs_u1rc_genblk1_2__uitff_q.BLIF u0rs_u1rc_genblk1_3__uitff_q.BLIF \
+u0rs_u1rc_genblk1_4__uitff_q.BLIF u0rs_u1rc_genblk1_5__uitff_q.BLIF \
+u0rs_u1rc_genblk1_6__uitff_q.BLIF u0rs_u1rc_genblk1_7__uitff_q.BLIF \
+u0rs_u1rc_genblk1_8__uitff_q.BLIF u0rs_u1rc_genblk1_9__uitff_q.BLIF
+.outputs rca u3rs_u1rc_u0tff_q.D u3rs_u1rc_u0tff_q.C \
+u0rs_u1rc_genblk1_3__uitff_q.D u0rs_u1rc_genblk1_3__uitff_q.C \
+u0rs_u1rc_genblk1_5__uitff_q.D u0rs_u1rc_genblk1_5__uitff_q.C \
+u0rs_u1rc_genblk1_6__uitff_q.D u0rs_u1rc_genblk1_6__uitff_q.C \
+u0rs_u1rc_genblk1_2__uitff_q.D u0rs_u1rc_genblk1_2__uitff_q.C \
+u1rs_u1rc_u0tff_q.D u1rs_u1rc_u0tff_q.C u2rs_u1rc_u0tff_q.D \
+u2rs_u1rc_u0tff_q.C u0rs_u1rc_u0tff_q.D u0rs_u1rc_u0tff_q.C \
+u0rs_u1rc_genblk1_0__uitff_q.D u0rs_u1rc_genblk1_0__uitff_q.C \
+u0rs_u1rc_genblk1_10__uitff_q.D u0rs_u1rc_genblk1_10__uitff_q.C \
+u0rs_u1rc_genblk1_8__uitff_q.D u0rs_u1rc_genblk1_8__uitff_q.C \
+u0rs_u1rc_genblk1_4__uitff_q.D u0rs_u1rc_genblk1_4__uitff_q.C \
+u0rs_u1rc_genblk1_1__uitff_q.D u0rs_u1rc_genblk1_1__uitff_q.C \
+u0rs_u1rc_genblk1_9__uitff_q.D u0rs_u1rc_genblk1_9__uitff_q.C \
+u0rs_u1rc_genblk1_7__uitff_q.D u0rs_u1rc_genblk1_7__uitff_q.C
+.names u3rs_u1rc_u0tff_q.BLIF u3rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names oneMHzClock.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names button_n_1_.BLIF button_n_2_.BLIF button_n_3_.BLIF button_n_4_.BLIF \
+u0rs_u1rc_genblk1_10__uitff_q.BLIF u1rs_u1rc_u0tff_q.BLIF \
+u2rs_u1rc_u0tff_q.BLIF u3rs_u1rc_u0tff_q.BLIF rca
+--0---1- 1
+-0---1-- 1
+0---1--- 1
+---0---1 1
+---1000- 0
+1--1-00- 0
+-1-10-0- 0
+11-1--0- 0
+--1100-- 0
+1-11-0-- 0
+-1110--- 0
+1111---- 0
+----0000 0
+1----000 0
+-1--0-00 0
+11----00 0
+--1-00-0 0
+1-1--0-0 0
+-11-0--0 0
+111----0 0
+.names u2rs_u1rc_u0tff_q.BLIF u3rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_3__uitff_q.BLIF u0rs_u1rc_genblk1_3__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u0rs_u1rc_genblk1_3__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_5__uitff_q.BLIF u0rs_u1rc_genblk1_5__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_4__uitff_q.BLIF u0rs_u1rc_genblk1_5__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_6__uitff_q.BLIF u0rs_u1rc_genblk1_6__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_5__uitff_q.BLIF u0rs_u1rc_genblk1_6__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u0rs_u1rc_genblk1_2__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_1__uitff_q.BLIF u0rs_u1rc_genblk1_2__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_u0tff_q.BLIF u1rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_10__uitff_q.BLIF u1rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names u2rs_u1rc_u0tff_q.BLIF u2rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names u1rs_u1rc_u0tff_q.BLIF u2rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names u0rs_u1rc_u0tff_q.BLIF u0rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_0__uitff_q.BLIF u0rs_u1rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_u0tff_q.BLIF u0rs_u1rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_10__uitff_q.BLIF u0rs_u1rc_genblk1_10__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_9__uitff_q.BLIF u0rs_u1rc_genblk1_10__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u0rs_u1rc_genblk1_8__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_7__uitff_q.BLIF u0rs_u1rc_genblk1_8__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_4__uitff_q.BLIF u0rs_u1rc_genblk1_4__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_3__uitff_q.BLIF u0rs_u1rc_genblk1_4__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_1__uitff_q.BLIF u0rs_u1rc_genblk1_1__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_0__uitff_q.BLIF u0rs_u1rc_genblk1_1__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_9__uitff_q.BLIF u0rs_u1rc_genblk1_9__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u0rs_u1rc_genblk1_9__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_7__uitff_q.BLIF u0rs_u1rc_genblk1_7__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_6__uitff_q.BLIF u0rs_u1rc_genblk1_7__uitff_q.C
+0 1
+1 0
+.end

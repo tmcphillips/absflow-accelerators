@@ -1,0 +1,41 @@
+module TruthTableStateMachine
+
+declarations
+
+	TenBitScaler interface (inclock -> outclock);
+	Debouncer interface (rawSignal, samplingClock -> debounced);
+
+	clock	pin 18;
+
+	!step	pin 20;
+	!oe	pin 21;
+	!hold	pin 22;
+	!reset	pin 23;
+
+	debouncedStep functional_block Debouncer;
+	clockScaler   functional_block TenBitScaler;
+
+	q1,q0	pin 31,32 istype 'reg';
+
+	A=0; B=1; C=2; D=3;
+
+equations
+
+	clockScaler.inclock = clock;
+
+	debouncedStep.samplingClock = clockScaler.outclock;	
+	debouncedStep.rawSignal = step;
+
+	[q1,q0].clk = debouncedStep.debounced;
+	[q1,q0].oe  = oe;
+
+	truth_table ([reset, hold, [q1,q0]] :> [q1,q0])
+		     [  1,   .x.,    .x.]   :>    A;
+		     [  0,   .x.,     A ]   :>    B;
+		     [  0,    1,      B ]   :>    B;
+		     [  0,    0,      B ]   :>    C;
+		     [  0,    1,      C ]   :>    C;
+		     [  0,    0,      C ]   :>    D;
+		     [ .x.,  .x.,     D ]   :>    A;
+ 
+end

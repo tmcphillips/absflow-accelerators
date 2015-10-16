@@ -1,0 +1,28 @@
+# Pin assignment for LEDs
+NET "counter<3>" 	LOC = "p7" ; 
+NET "counter<2>" 	LOC = "p8" ; 
+NET "counter<1>" 	LOC = "p14" ; 
+NET "counter<0>" 	LOC = "p15" ; 
+
+# Pin assignment for slide switches
+NET "switches<3>" LOC = "p24"; 
+NET "switches<2>" LOC = "p29"; 
+NET "switches<1>" LOC = "p36"; 
+NET "switches<0>" LOC = "p38"; 
+
+# Pin assignment for pushbutton switches
+NET "upButton" 		LOC = "p41"; 
+NET "downButton"	LOC = "p47"; 
+NET "loadButton" 	LOC = "p48"; 
+NET "resetButton" 	LOC = "p69"; 
+
+# Pin assignment for clock
+NET "systemClock" LOC = "p54"; 
+
+
+
+NET "upButton" CLOCK_DEDICATED_ROUTE = FALSE;
+ 
+
+
+

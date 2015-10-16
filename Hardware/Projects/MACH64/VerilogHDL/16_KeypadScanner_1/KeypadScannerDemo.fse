@@ -1,0 +1,10 @@
+
+fsm_encoding {8131131} sequential
+
+fsm_state_encoding {8131131} 001 {00}
+
+fsm_state_encoding {8131131} 010 {01}
+
+fsm_state_encoding {8131131} 100 {10}
+
+fsm_registers {8131131} {columnDrivers_reg_1[1]}  {columnDrivers_reg_1[0]} 

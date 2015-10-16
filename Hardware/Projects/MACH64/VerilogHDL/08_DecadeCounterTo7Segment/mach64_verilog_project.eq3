@@ -1,0 +1,109 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+a = !( !u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q
+       & !u4udc_u3jkff_q.Q
+    # u4udc_u0jkff_q.Q & u4udc_u1jkff_q.Q & !u4udc_u2jkff_q.Q
+       & u4udc_u3jkff_q.Q
+    # u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & !u4udc_u2jkff_q.Q
+       & !u4udc_u3jkff_q.Q
+    # u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q
+       & u4udc_u3jkff_q.Q ) ; (4 pterms, 4 signals)
+
+b = !( u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q
+       & !u4udc_u3jkff_q.Q
+    # !u4udc_u0jkff_q.Q & u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q
+    # u4udc_u0jkff_q.Q & u4udc_u1jkff_q.Q & u4udc_u3jkff_q.Q
+    # !u4udc_u0jkff_q.Q & u4udc_u2jkff_q.Q & u4udc_u3jkff_q.Q ) ; (4 pterms, 4 signals)
+
+c = !( !u4udc_u0jkff_q.Q & u4udc_u1jkff_q.Q & !u4udc_u2jkff_q.Q
+       & !u4udc_u3jkff_q.Q
+    # u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q & u4udc_u3jkff_q.Q
+    # !u4udc_u0jkff_q.Q & u4udc_u2jkff_q.Q & u4udc_u3jkff_q.Q ) ; (3 pterms, 4 signals)
+
+d = !( !u4udc_u0jkff_q.Q & u4udc_u1jkff_q.Q & !u4udc_u2jkff_q.Q
+       & u4udc_u3jkff_q.Q
+    # u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & !u4udc_u2jkff_q.Q
+       & !u4udc_u3jkff_q.Q
+    # !u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q
+       & !u4udc_u3jkff_q.Q
+    # u4udc_u0jkff_q.Q & u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q ) ; (4 pterms, 4 signals)
+
+e = !( u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & !u4udc_u2jkff_q.Q
+    # !u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q & !u4udc_u3jkff_q.Q
+    # u4udc_u0jkff_q.Q & !u4udc_u3jkff_q.Q ) ; (3 pterms, 4 signals)
+
+f = !( u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q
+       & u4udc_u3jkff_q.Q
+    # u4udc_u1jkff_q.Q & !u4udc_u2jkff_q.Q & !u4udc_u3jkff_q.Q
+    # u4udc_u0jkff_q.Q & !u4udc_u2jkff_q.Q & !u4udc_u3jkff_q.Q
+    # u4udc_u0jkff_q.Q & u4udc_u1jkff_q.Q & !u4udc_u3jkff_q.Q ) ; (4 pterms, 4 signals)
+
+g = !( u4udc_u0jkff_q.Q & u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q
+       & !u4udc_u3jkff_q.Q
+    # !u4udc_u0jkff_q.Q & !u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q
+       & u4udc_u3jkff_q.Q
+    # !u4udc_u1jkff_q.Q & !u4udc_u2jkff_q.Q & !u4udc_u3jkff_q.Q ) ; (3 pterms, 4 signals)
+
+u1rs_u1rc_genblk1_0__uitff_q.D = !u1rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_0__uitff_q.C = !u1rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_1__uitff_q.D = !u1rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_1__uitff_q.C = !u1rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_2__uitff_q.D = !u1rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_2__uitff_q.C = !u1rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_3__uitff_q.D = !u1rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_3__uitff_q.C = !u1rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_4__uitff_q.D = !u1rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_4__uitff_q.C = !u1rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_5__uitff_q.D = !u1rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_5__uitff_q.C = !u1rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_6__uitff_q.D = !u1rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_6__uitff_q.C = !u1rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_7__uitff_q.D = !u1rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_7__uitff_q.C = !u1rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_8__uitff_q.D = !u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_8__uitff_q.C = !u1rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_u0tff_q.D = !u1rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u2bpd_state_0_.D = !stepButton_n & !u2bpd_state_0_.Q
+    # !u2bpd_state_0_.Q & u2bpd_state_2_.Q
+    # !stepButton_n & u2bpd_state_2_.Q ; (3 pterms, 3 signals)
+u2bpd_state_0_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2bpd_state_1_.D = !u2bpd_state_0_.Q & u2bpd_state_1_.Q & u2bpd_state_2_.Q
+    # !stepButton_n & u2bpd_state_0_.Q
+    # !stepButton_n & u2bpd_state_1_.Q ; (3 pterms, 4 signals)
+u2bpd_state_1_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2bpd_state_2_.D = !stepButton_n & u2bpd_state_0_.Q & u2bpd_state_1_.Q
+    # !u2bpd_state_0_.Q & u2bpd_state_1_.Q & u2bpd_state_2_.Q ; (2 pterms, 4 signals)
+u2bpd_state_2_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4udc_u0jkff_q.D = !u4udc_u0jkff_q.Q ; (1 pterm, 1 signal)
+u4udc_u0jkff_q.C = !( !u2bpd_state_0_.Q & u2bpd_state_2_.Q ) ; (1 pterm, 2 signals)
+
+u4udc_u1jkff_q.D = !u4udc_u1jkff_q.Q & !u4udc_u3jkff_q.Q ; (1 pterm, 2 signals)
+u4udc_u1jkff_q.C = !u4udc_u0jkff_q.Q ; (1 pterm, 1 signal)
+
+u4udc_u2jkff_q.D = !u4udc_u2jkff_q.Q ; (1 pterm, 1 signal)
+u4udc_u2jkff_q.C = !u4udc_u1jkff_q.Q ; (1 pterm, 1 signal)
+
+u4udc_u3jkff_q.D = u4udc_u1jkff_q.Q & u4udc_u2jkff_q.Q & !u4udc_u3jkff_q.Q ; (1 pterm, 3 signals)
+u4udc_u3jkff_q.C = !u4udc_u0jkff_q.Q ; (1 pterm, 1 signal)
+

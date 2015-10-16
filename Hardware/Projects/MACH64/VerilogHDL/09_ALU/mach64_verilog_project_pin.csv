@@ -1,0 +1,54 @@
+ ispLEVER Classic 1.5.00.05.39.l1 Fitter Report File 
+Project Name,mach64_verilog_project
+Project Path,C:\Users\tmcphillips\Designs\Projects\MACH64\VerilogHDL\09_ALU_1
+Project Fitted on,Thu Jan 26 13:49:05 2012
+
+Pin,Pin_Type,Bank,GLB_Pad,Assigned,I/O_Type,Signal_Type,Signal_Name
+1,TDI,-,,,,,
+2,I_O,0,A10,*,LVCMOS18,Output,b_led_1_
+3,I_O,0,A12,*,LVCMOS18,Output,b_led_2_
+4,I_O,0,A14,*,LVCMOS18,Output,b_led_3_
+5,GNDIO0,-,,,,,
+6,VCCIO0,-,,,,,
+7,I_O,0,B0,*,LVCMOS18,Input,opcode_n_0_
+8,I_O,0,B2,*,LVCMOS18,Input,opcode_n_1_
+9,I_O,0,B4,*,LVCMOS18,Input,opcode_n_2_
+10,I_O,0,B6,*,LVCMOS18,Input,opcode_n_3_
+11,TCK,-,,,,,
+12,VCC,-,,,,,
+13,GND,-,,,,,
+14,I_O,0,B8,,,,
+15,I_O,0,B10,,,,
+16,I_O,0,B12,,,,
+17,I_O,0,B14,,,,
+18,INCLK1,0,,,,,
+19,INCLK2,1,,,,,
+20,I_O,1,C0,*,LVCMOS18,Input,b_n_3_
+21,I_O,1,C2,*,LVCMOS18,Input,b_n_2_
+22,I_O,1,C4,*,LVCMOS18,Input,b_n_1_
+23,I_O,1,C6,*,LVCMOS18,Input,b_n_0_
+24,I_O,1,C8,*,LVCMOS18,Input,a_n_3_
+25,TMS,-,,,,,
+26,I_O,1,C10,*,LVCMOS18,Input,a_n_2_
+27,I_O,1,C12,*,LVCMOS18,Input,a_n_1_
+28,I_O,1,C14,*,LVCMOS18,Input,a_n_0_
+29,GNDIO1,-,,,,,
+30,VCCIO1,-,,,,,
+31,I_O,1,D0,*,LVCMOS18,Output,c_0_
+32,I_O,1,D2,*,LVCMOS18,Output,c_1_
+33,I_O,1,D4,*,LVCMOS18,Output,c_2_
+34,I_O,1,D6,*,LVCMOS18,Output,c_3_
+35,TDO,-,,,,,
+36,VCC,-,,,,,
+37,GND,-,,,,,
+38,I_O,1,D8,*,LVCMOS18,Output,zf
+39,I_O,1,D10,*,LVCMOS18,Output,cf
+40,I_O,1,D12,*,LVCMOS18,Output,b_led_0_
+41,I_O/OE,1,D14,,,,
+42,INCLK3,1,,,,,
+43,INCLK0,0,,,,,
+44,I_O/OE,0,A0,,,,
+45,I_O,0,A2,*,LVCMOS18,Output,a_led_0_
+46,I_O,0,A4,*,LVCMOS18,Output,a_led_1_
+47,I_O,0,A6,*,LVCMOS18,Output,a_led_2_
+48,I_O,0,A8,*,LVCMOS18,Output,a_led_3_

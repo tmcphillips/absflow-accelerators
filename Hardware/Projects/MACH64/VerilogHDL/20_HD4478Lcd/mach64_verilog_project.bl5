@@ -1,0 +1,395 @@
+#$ TOOL  ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE  Thu Feb 09 10:01:52 2012
+#$ MODULE  LcdDemo
+#$ PINS 16 reset_n:20 start_n:21 clock:43 lcd_data_7_:45 lcd_e:28 lcd_rw:27
+ lcd_rs:26 wack:46 wreq:47 lcd_data_6_:40 lcd_data_5_:39 lcd_data_4_:38
+ lcd_data_3_:34 lcd_data_2_:33 lcd_data_1_:32 lcd_data_0_:31
+#$ NODES 29 inst_state pc_0_ pc_1_ pc_2_ pc_3_ pc_4_ u0lcdw_state_1_
+ u0lcdw_state_0_ u0lcdw_state_4_ u0lcdw_outData_cl_7_0_reg
+ u0lcdw_outData_cl_6_0_reg u0lcdw_outData_cl_5_0_reg u0lcdw_outData_cl_4_0_reg
+ u0lcdw_outData_cl_3_0_reg u0lcdw_outData_cl_2_0_reg u0lcdw_outData_cl_1_0_reg
+ u0lcdw_outData_cl_0_ u0lcdw_state_2_ u0lcdw_state_3_ u0lcdw_state_7_
+ u0lcdw_state_10_ u0lcdw_busyFlag u0lcdw_state_9_ u0lcdw_state_5_ u0lcdw_state_6_
+ u0lcdw_state_8_ u0lcdw_state_11_ u0lcdw_state_12_ wreq_0
+.model lcddemo 
+.inputs reset_n.BLIF start_n.BLIF clock.BLIF inst_state.Q pc_0_.Q pc_1_.Q \
+ pc_2_.Q pc_3_.Q pc_4_.Q u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q \
+ u0lcdw_outData_cl_7_0_reg.Q u0lcdw_outData_cl_6_0_reg.Q \
+ u0lcdw_outData_cl_5_0_reg.Q u0lcdw_outData_cl_4_0_reg.Q \
+ u0lcdw_outData_cl_3_0_reg.Q u0lcdw_outData_cl_2_0_reg.Q \
+ u0lcdw_outData_cl_1_0_reg.Q u0lcdw_outData_cl_0_.Q u0lcdw_state_2_.Q \
+ u0lcdw_state_3_.Q u0lcdw_state_7_.Q u0lcdw_state_10_.Q u0lcdw_busyFlag.Q \
+ u0lcdw_state_9_.Q u0lcdw_state_5_.Q u0lcdw_state_6_.Q u0lcdw_state_8_.Q \
+ u0lcdw_state_11_.Q u0lcdw_state_12_.Q wack.Q wreq.Q lcd_data_7_.PIN wreq_0.BLIF
+.outputs lcd_data_7_.D lcd_data_7_.C lcd_data_7_.CE lcd_data_7_.AR \
+ lcd_data_7_.OE lcd_e.D- lcd_e.C lcd_e.CE- lcd_e.AR lcd_rw.D lcd_rw.C lcd_rw.CE- \
+ lcd_rw.AR lcd_rs.D- lcd_rs.C lcd_rs.CE- lcd_rs.AR wack.D wack.C wack.CE- wack.AR \
+ wreq.D wreq.C wreq.CE- wreq.AR lcd_data_6_.D- lcd_data_6_.C lcd_data_6_.CE \
+ lcd_data_6_.AR lcd_data_6_.OE lcd_data_5_.D lcd_data_5_.C lcd_data_5_.CE \
+ lcd_data_5_.AR lcd_data_5_.OE lcd_data_4_.D lcd_data_4_.C lcd_data_4_.CE \
+ lcd_data_4_.AR lcd_data_4_.OE lcd_data_3_.D lcd_data_3_.C lcd_data_3_.CE \
+ lcd_data_3_.AR lcd_data_3_.OE lcd_data_2_.D lcd_data_2_.C lcd_data_2_.CE \
+ lcd_data_2_.AR lcd_data_2_.OE lcd_data_1_.D lcd_data_1_.C lcd_data_1_.CE \
+ lcd_data_1_.AR lcd_data_1_.OE lcd_data_0_.D- lcd_data_0_.C lcd_data_0_.CE \
+ lcd_data_0_.AR lcd_data_0_.OE inst_state.D- inst_state.C inst_state.AR pc_0_.D \
+ pc_0_.C pc_0_.AR pc_1_.D pc_1_.C pc_1_.AR pc_2_.D.X1 pc_2_.D.X2 pc_2_.C pc_2_.AR \
+ pc_3_.T pc_3_.C pc_3_.AR pc_4_.T pc_4_.C pc_4_.AR u0lcdw_state_1_.D \
+ u0lcdw_state_1_.C u0lcdw_state_1_.AR u0lcdw_state_0_.D u0lcdw_state_0_.C \
+ u0lcdw_state_0_.AP u0lcdw_state_4_.D u0lcdw_state_4_.C u0lcdw_state_4_.AR \
+ u0lcdw_outData_cl_7_0_reg.D u0lcdw_outData_cl_7_0_reg.C \
+ u0lcdw_outData_cl_7_0_reg.AR u0lcdw_outData_cl_6_0_reg.D \
+ u0lcdw_outData_cl_6_0_reg.C u0lcdw_outData_cl_6_0_reg.AR \
+ u0lcdw_outData_cl_5_0_reg.D u0lcdw_outData_cl_5_0_reg.C \
+ u0lcdw_outData_cl_5_0_reg.AR u0lcdw_outData_cl_4_0_reg.D \
+ u0lcdw_outData_cl_4_0_reg.C u0lcdw_outData_cl_4_0_reg.AR \
+ u0lcdw_outData_cl_3_0_reg.D u0lcdw_outData_cl_3_0_reg.C \
+ u0lcdw_outData_cl_3_0_reg.AR u0lcdw_outData_cl_2_0_reg.D \
+ u0lcdw_outData_cl_2_0_reg.C u0lcdw_outData_cl_2_0_reg.AR \
+ u0lcdw_outData_cl_1_0_reg.D u0lcdw_outData_cl_1_0_reg.C \
+ u0lcdw_outData_cl_1_0_reg.AR u0lcdw_outData_cl_0_.D u0lcdw_outData_cl_0_.C \
+ u0lcdw_outData_cl_0_.AR u0lcdw_state_2_.D u0lcdw_state_2_.C u0lcdw_state_2_.AR \
+ u0lcdw_state_3_.D u0lcdw_state_3_.C u0lcdw_state_3_.AR u0lcdw_state_7_.D \
+ u0lcdw_state_7_.C u0lcdw_state_7_.AR u0lcdw_state_10_.D u0lcdw_state_10_.C \
+ u0lcdw_state_10_.AR u0lcdw_busyFlag.D u0lcdw_busyFlag.C u0lcdw_busyFlag.CE \
+ u0lcdw_busyFlag.AR u0lcdw_state_9_.D u0lcdw_state_9_.C u0lcdw_state_9_.AR \
+ u0lcdw_state_5_.D u0lcdw_state_5_.C u0lcdw_state_5_.AR u0lcdw_state_6_.D \
+ u0lcdw_state_6_.C u0lcdw_state_6_.AR u0lcdw_state_8_.D u0lcdw_state_8_.C \
+ u0lcdw_state_8_.AR u0lcdw_state_11_.D u0lcdw_state_11_.C u0lcdw_state_11_.AR \
+ u0lcdw_state_12_.D u0lcdw_state_12_.C u0lcdw_state_12_.AR wreq_0
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q lcd_data_7_.D
+0010- 1
+0101- 1
+1---1 1
+.names clock.BLIF lcd_data_7_.C
+1 1
+.names u0lcdw_state_1_.Q lcd_data_7_.CE
+1 1
+.names reset_n.BLIF lcd_data_7_.AR
+0 1
+.names u0lcdw_outData_cl_0_.Q lcd_data_7_.OE
+1 1
+.names u0lcdw_state_2_.Q u0lcdw_state_7_.Q u0lcdw_state_6_.Q lcd_e.D-
+000 1
+.names clock.BLIF lcd_e.C
+1 1
+.names u0lcdw_state_0_.Q u0lcdw_state_2_.Q u0lcdw_state_3_.Q u0lcdw_state_7_.Q u0lcdw_state_10_.Q lcd_e.CE-
+00000 1
+.names reset_n.BLIF lcd_e.AR
+0 1
+.names u0lcdw_state_6_.Q lcd_rw.D
+1 1
+.names clock.BLIF lcd_rw.C
+1 1
+.names u0lcdw_state_0_.Q u0lcdw_state_6_.Q lcd_rw.CE-
+00 1
+.names reset_n.BLIF lcd_rw.AR
+0 1
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q u0lcdw_state_1_.Q u0lcdw_state_3_.Q u0lcdw_state_7_.Q u0lcdw_state_9_.Q u0lcdw_state_5_.Q u0lcdw_state_11_.Q lcd_rs.D-
+-----000000 1
+00-00------ 1
+010-------- 1
+--000------ 1
+.names clock.BLIF lcd_rs.C
+1 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_6_.Q lcd_rs.CE-
+000 1
+.names reset_n.BLIF lcd_rs.AR
+0 1
+.names u0lcdw_state_12_.Q wack.D
+1 1
+.names clock.BLIF wack.C
+1 1
+.names u0lcdw_state_0_.Q u0lcdw_state_12_.Q wack.CE-
+00 1
+.names reset_n.BLIF wack.AR
+0 1
+.names inst_state.Q wreq.D
+0 1
+.names clock.BLIF wreq.C
+1 1
+.names wreq_0.BLIF wreq.CE-
+1 1
+.names reset_n.BLIF wreq.AR
+0 1
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q lcd_data_6_.D-
+010- 1
+00-0 1
+--00 1
+.names clock.BLIF lcd_data_6_.C
+1 1
+.names u0lcdw_state_1_.Q lcd_data_6_.CE
+1 1
+.names reset_n.BLIF lcd_data_6_.AR
+0 1
+.names u0lcdw_outData_cl_1_0_reg.Q lcd_data_6_.OE
+1 1
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q lcd_data_5_.D
+000- 1
+-11- 1
+-0-1 1
+0--1 1
+.names clock.BLIF lcd_data_5_.C
+1 1
+.names u0lcdw_state_1_.Q lcd_data_5_.CE
+1 1
+.names reset_n.BLIF lcd_data_5_.AR
+0 1
+.names u0lcdw_outData_cl_2_0_reg.Q lcd_data_5_.OE
+1 1
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q lcd_data_4_.D
+00000 1
+1101- 1
+1011- 1
+.names clock.BLIF lcd_data_4_.C
+1 1
+.names u0lcdw_state_1_.Q lcd_data_4_.CE
+1 1
+.names reset_n.BLIF lcd_data_4_.AR
+0 1
+.names u0lcdw_outData_cl_3_0_reg.Q lcd_data_4_.OE
+1 1
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q lcd_data_3_.D
+1-10- 1
+-001- 1
+0-0-0 1
+0--1- 1
+.names clock.BLIF lcd_data_3_.C
+1 1
+.names u0lcdw_state_1_.Q lcd_data_3_.CE
+1 1
+.names reset_n.BLIF lcd_data_3_.AR
+0 1
+.names u0lcdw_outData_cl_4_0_reg.Q lcd_data_3_.OE
+1 1
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q lcd_data_2_.D
+-00-0 1
+-1-1- 1
+-11-- 1
+0---0 1
+.names clock.BLIF lcd_data_2_.C
+1 1
+.names u0lcdw_state_1_.Q lcd_data_2_.CE
+1 1
+.names reset_n.BLIF lcd_data_2_.AR
+0 1
+.names u0lcdw_outData_cl_5_0_reg.Q lcd_data_2_.OE
+1 1
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q lcd_data_1_.D
+100-0 1
+-101- 1
+-011- 1
+.names clock.BLIF lcd_data_1_.C
+1 1
+.names u0lcdw_state_1_.Q lcd_data_1_.CE
+1 1
+.names reset_n.BLIF lcd_data_1_.AR
+0 1
+.names u0lcdw_outData_cl_6_0_reg.Q lcd_data_1_.OE
+1 1
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q lcd_data_0_.D-
+01-1- 1
+-0-00 1
+1-1-- 1
+0-0-0 1
+1---1 1
+.names clock.BLIF lcd_data_0_.C
+1 1
+.names u0lcdw_state_1_.Q lcd_data_0_.CE
+1 1
+.names reset_n.BLIF lcd_data_0_.AR
+0 1
+.names u0lcdw_outData_cl_7_0_reg.Q lcd_data_0_.OE
+1 1
+.names start_n.BLIF inst_state.Q pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q wack.Q inst_state.D-
+-010001- 1
+10------ 1
+-1-----1 1
+.names clock.BLIF inst_state.C
+1 1
+.names reset_n.BLIF inst_state.AR
+0 1
+.names inst_state.Q pc_0_.Q wack.Q pc_0_.D
+101 1
+01- 1
+-10 1
+.names clock.BLIF pc_0_.C
+1 1
+.names reset_n.BLIF pc_0_.AR
+0 1
+.names inst_state.Q pc_0_.Q pc_1_.Q wack.Q pc_1_.D
+1101 1
+-01- 1
+0-1- 1
+--10 1
+.names clock.BLIF pc_1_.C
+1 1
+.names reset_n.BLIF pc_1_.AR
+0 1
+.names inst_state.Q pc_0_.Q pc_1_.Q wack.Q pc_2_.D.X1
+1111 1
+.names pc_2_.Q pc_2_.D.X2
+1 1
+.names clock.BLIF pc_2_.C
+1 1
+.names reset_n.BLIF pc_2_.AR
+0 1
+.names inst_state.Q pc_0_.Q pc_1_.Q pc_2_.Q wack.Q pc_3_.T
+11111 1
+.names clock.BLIF pc_3_.C
+1 1
+.names reset_n.BLIF pc_3_.AR
+0 1
+.names inst_state.Q pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q wack.Q pc_4_.T
+111111 1
+.names clock.BLIF pc_4_.C
+1 1
+.names reset_n.BLIF pc_4_.AR
+0 1
+.names u0lcdw_state_0_.Q wreq.Q u0lcdw_state_1_.D
+11 1
+.names clock.BLIF u0lcdw_state_1_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_1_.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_4_.Q u0lcdw_state_2_.Q u0lcdw_state_3_.Q u0lcdw_state_7_.Q u0lcdw_state_10_.Q u0lcdw_state_9_.Q u0lcdw_state_5_.Q u0lcdw_state_6_.Q u0lcdw_state_8_.Q u0lcdw_state_11_.Q u0lcdw_state_12_.Q wreq.Q u0lcdw_state_0_.D
+00000000000-0 1
+---00-00--01- 1
+.names clock.BLIF u0lcdw_state_0_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_0_.AP
+0 1
+.names u0lcdw_state_3_.Q u0lcdw_state_4_.D
+1 1
+.names clock.BLIF u0lcdw_state_4_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_4_.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q u0lcdw_outData_cl_7_0_reg.Q u0lcdw_outData_cl_7_0_reg.D
+100- 1
+-001 1
+.names clock.BLIF u0lcdw_outData_cl_7_0_reg.C
+1 1
+.names reset_n.BLIF u0lcdw_outData_cl_7_0_reg.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q u0lcdw_outData_cl_6_0_reg.Q u0lcdw_outData_cl_6_0_reg.D
+100- 1
+-001 1
+.names clock.BLIF u0lcdw_outData_cl_6_0_reg.C
+1 1
+.names reset_n.BLIF u0lcdw_outData_cl_6_0_reg.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q u0lcdw_outData_cl_5_0_reg.Q u0lcdw_outData_cl_5_0_reg.D
+100- 1
+-001 1
+.names clock.BLIF u0lcdw_outData_cl_5_0_reg.C
+1 1
+.names reset_n.BLIF u0lcdw_outData_cl_5_0_reg.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q u0lcdw_outData_cl_4_0_reg.Q u0lcdw_outData_cl_4_0_reg.D
+100- 1
+-001 1
+.names clock.BLIF u0lcdw_outData_cl_4_0_reg.C
+1 1
+.names reset_n.BLIF u0lcdw_outData_cl_4_0_reg.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q u0lcdw_outData_cl_3_0_reg.Q u0lcdw_outData_cl_3_0_reg.D
+100- 1
+-001 1
+.names clock.BLIF u0lcdw_outData_cl_3_0_reg.C
+1 1
+.names reset_n.BLIF u0lcdw_outData_cl_3_0_reg.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q u0lcdw_outData_cl_2_0_reg.Q u0lcdw_outData_cl_2_0_reg.D
+100- 1
+-001 1
+.names clock.BLIF u0lcdw_outData_cl_2_0_reg.C
+1 1
+.names reset_n.BLIF u0lcdw_outData_cl_2_0_reg.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q u0lcdw_outData_cl_1_0_reg.Q u0lcdw_outData_cl_1_0_reg.D
+100- 1
+-001 1
+.names clock.BLIF u0lcdw_outData_cl_1_0_reg.C
+1 1
+.names reset_n.BLIF u0lcdw_outData_cl_1_0_reg.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_0_.Q u0lcdw_state_4_.Q u0lcdw_outData_cl_0_.Q u0lcdw_outData_cl_0_.D
+100- 1
+-001 1
+.names clock.BLIF u0lcdw_outData_cl_0_.C
+1 1
+.names reset_n.BLIF u0lcdw_outData_cl_0_.AR
+0 1
+.names u0lcdw_state_1_.Q u0lcdw_state_2_.D
+1 1
+.names clock.BLIF u0lcdw_state_2_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_2_.AR
+0 1
+.names u0lcdw_state_5_.Q u0lcdw_state_3_.D
+1 1
+.names clock.BLIF u0lcdw_state_3_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_3_.AR
+0 1
+.names u0lcdw_busyFlag.Q u0lcdw_state_6_.Q u0lcdw_state_11_.Q u0lcdw_state_7_.D
+-1- 1
+1-1 1
+.names clock.BLIF u0lcdw_state_7_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_7_.AR
+0 1
+.names u0lcdw_state_9_.Q u0lcdw_state_10_.D
+1 1
+.names clock.BLIF u0lcdw_state_10_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_10_.AR
+0 1
+.names lcd_data_7_.PIN u0lcdw_busyFlag.D
+1 1
+.names clock.BLIF u0lcdw_busyFlag.C
+1 1
+.names u0lcdw_state_9_.Q u0lcdw_busyFlag.CE
+1 1
+.names reset_n.BLIF u0lcdw_busyFlag.AR
+0 1
+.names u0lcdw_state_8_.Q u0lcdw_state_9_.D
+1 1
+.names clock.BLIF u0lcdw_state_9_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_9_.AR
+0 1
+.names u0lcdw_state_2_.Q u0lcdw_state_5_.D
+1 1
+.names clock.BLIF u0lcdw_state_5_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_5_.AR
+0 1
+.names u0lcdw_state_4_.Q u0lcdw_state_6_.D
+1 1
+.names clock.BLIF u0lcdw_state_6_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_6_.AR
+0 1
+.names u0lcdw_state_7_.Q u0lcdw_state_8_.D
+1 1
+.names clock.BLIF u0lcdw_state_8_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_8_.AR
+0 1
+.names u0lcdw_state_10_.Q u0lcdw_state_11_.D
+1 1
+.names clock.BLIF u0lcdw_state_11_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_11_.AR
+0 1
+.names u0lcdw_busyFlag.Q u0lcdw_state_11_.Q u0lcdw_state_12_.D
+01 1
+.names clock.BLIF u0lcdw_state_12_.C
+1 1
+.names reset_n.BLIF u0lcdw_state_12_.AR
+0 1
+.names start_n.BLIF inst_state.Q pc_0_.Q pc_1_.Q pc_2_.Q pc_3_.Q pc_4_.Q wreq_0
+10----- 1
+-010001 1
+.end

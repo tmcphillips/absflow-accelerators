@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 1.4 
+PROJECT Lab01SinglePushButton
+DESIGN lab01singlepushbutton Normal
+DEVKIT LC4064V-75T48I
+ENTRY ABEL/Schematic
+MODULE mach64_kit_push_01.abl
+MODSTYLE mach64_kit_push_01 Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE mach64_kit_push_01

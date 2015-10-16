@@ -1,0 +1,398 @@
+#$ DATE Mon Jan 23 11:19:57 2012
+#$ TOOL EDIF2BLIF version IspLever 1.0 
+#$ MODULE fourbitcounterwithload
+#$ PINS 13 dipSwitches_n_3_:14'ke'  counter_3_:34'ke'  upButton_n:24'ke'  downButton_n:23'ke'  loadButton_n:22'ke'  resetButton_n:21'ke'  oneMHzClock:42'ke'  dipSwitches_n_2_:15'ke'  dipSwitches_n_1_:16'ke'  dipSwitches_n_0_:17'ke'  counter_2_:33'ke'  counter_1_:32'ke'  counter_0_:31'ke' 
+#$ NODES 130 u1rs_u1rc_genblk1_8__uitff_q u4udc_state_0_ u4udc_state_1_ u1rs_u1rc_u0tff_q u1rs_u1rc_genblk1_0__uitff_q u1rs_u1rc_genblk1_1__uitff_q u1rs_u1rc_genblk1_2__uitff_q u1rs_u1rc_genblk1_3__uitff_q u1rs_u1rc_genblk1_4__uitff_q u1rs_u1rc_genblk1_5__uitff_q \
+#  u1rs_u1rc_genblk1_6__uitff_q u1rs_u1rc_genblk1_7__uitff_q u4udc_G_46 u4udc_G_49 u4udc_G_50 u4udc_n_33_n u4udc_state_ns_1__n u4udc_n_47_n u4udc_n_50_n u4udc_n_51_n \
+#  u4udc_n_52_n u4udc_n_53_n u4udc_n_54_n u4udc_n_55_n u4udc_n_58_n u4udc_G_44 u3bpd_state_0_ u3bpd_state_1_ u3bpd_state_2_ downReq_i_1 \
+#  u3bpd_n_19_n u3bpd_n_23_n u3bpd_n_25_n u3bpd_n_26_n u3bpd_n_27_n u2bpd_state_0_ u2bpd_state_1_ u2bpd_state_2_ upReq_i_1 u2bpd_n_19_n \
+#  u2bpd_n_23_n u2bpd_n_25_n u2bpd_n_26_n u2bpd_n_27_n u4udc_n_30_n u4udc_n_9_n u4udc_un1_data_n u4udc_un1_data_1_n u4udc_un1_data_2_n u4udc_un1_data_3_n \
+#  u4udc_n_57_n u3bpd_n_21_n u2bpd_n_21_n u2bpd_state_i_0__n u2bpd_state_i_1__n u2bpd_state_i_2__n upAck_i u3bpd_state_i_0__n u3bpd_state_i_1__n u3bpd_state_i_2__n \
+#  downAck_i u4udc_n_33_i_n u4udc_un1_data_i_n u4udc_un1_data_1_i_n u4udc_un1_data_2_i_n u4udc_un1_data_3_i_n dipswitches_n_i_3__n dipswitches_n_i_2__n dipswitches_n_i_1__n dipswitches_n_i_0__n \
+#  u1rs_counter_i_8__n u1rs_counter_i_7__n u1rs_counter_i_6__n u1rs_counter_i_1__n u1rs_counter_i_0__n u1rs_counter_i_5__n u1rs_counter_i_4__n u1rs_counter_i_3__n u1rs_counter_i_2__n upButton_n_c \
+#  downButton_n_c loadButton_n_c resetButton_n_c dipswitches_n_c_0__n dipswitches_n_c_1__n dipswitches_n_c_2__n dipswitches_n_c_3__n oneMHzClock_c u4udc_counter_1_0_reg u4udc_counter_1_1_reg \
+#  u4udc_counter_1_2_reg u4udc_counter_1_3_reg u2bpd_n_19_i_n u2bpd_n_21_i_n upReq_i_1_i u3bpd_n_19_i_n u3bpd_n_21_i_n downReq_i_1_i u4udc_state_ns_i_1__n counter_c_i_1__n \
+#  u4udc_n_50_0_n counter_c_i_2__n u4udc_n_52_0_n u4udc_n_54_i_n u4udc_n_57_i_n u4udc_n_58_0_n u4udc_n_6_i_n u4udc_n_9_i_n u4udc_n_30_i_n u4udc_n_51_i_n \
+#  u4udc_n_53_i_n u4udc_n_55_0_n u3bpd_n_26_i_n u3bpd_n_27_i_n u3bpd_n_23_i_n u3bpd_n_25_i_n u2bpd_n_26_i_n u2bpd_n_27_i_n u2bpd_n_23_i_n u2bpd_n_25_i_n \
+#  u4udc_state_ns_1_1__n u4udc_G_46_1 u4udc_G_49_1 u4udc_G_50_1 u4udc_n_55_0_1_n u4udc_n_53_1_n u3bpd_n_8_i_1_n u3bpd_n_7_0_1_n u2bpd_n_8_i_1_n u2bpd_n_7_0_1_n \
+#  
+.model fourbitcounterwithload
+.inputs dipSwitches_n_3_.BLIF upButton_n.BLIF downButton_n.BLIF loadButton_n.BLIF resetButton_n.BLIF oneMHzClock.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF \
+  u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_state_0_.BLIF u4udc_state_1_.BLIF u1rs_u1rc_u0tff_q.BLIF u1rs_u1rc_genblk1_0__uitff_q.BLIF u1rs_u1rc_genblk1_1__uitff_q.BLIF u1rs_u1rc_genblk1_2__uitff_q.BLIF u1rs_u1rc_genblk1_3__uitff_q.BLIF u1rs_u1rc_genblk1_4__uitff_q.BLIF \
+  u1rs_u1rc_genblk1_5__uitff_q.BLIF u1rs_u1rc_genblk1_6__uitff_q.BLIF u1rs_u1rc_genblk1_7__uitff_q.BLIF u4udc_G_46.BLIF u4udc_G_49.BLIF u4udc_G_50.BLIF u4udc_n_33_n.BLIF u4udc_state_ns_1__n.BLIF u4udc_n_47_n.BLIF \
+  u4udc_n_50_n.BLIF u4udc_n_51_n.BLIF u4udc_n_52_n.BLIF u4udc_n_53_n.BLIF u4udc_n_54_n.BLIF u4udc_n_55_n.BLIF u4udc_n_58_n.BLIF u4udc_G_44.BLIF u3bpd_state_0_.BLIF \
+  u3bpd_state_1_.BLIF u3bpd_state_2_.BLIF downReq_i_1.BLIF u3bpd_n_19_n.BLIF u3bpd_n_23_n.BLIF u3bpd_n_25_n.BLIF u3bpd_n_26_n.BLIF u3bpd_n_27_n.BLIF u2bpd_state_0_.BLIF \
+  u2bpd_state_1_.BLIF u2bpd_state_2_.BLIF upReq_i_1.BLIF u2bpd_n_19_n.BLIF u2bpd_n_23_n.BLIF u2bpd_n_25_n.BLIF u2bpd_n_26_n.BLIF u2bpd_n_27_n.BLIF u4udc_n_30_n.BLIF \
+  u4udc_n_9_n.BLIF u4udc_un1_data_n.BLIF u4udc_un1_data_1_n.BLIF u4udc_un1_data_2_n.BLIF u4udc_un1_data_3_n.BLIF u4udc_n_57_n.BLIF u3bpd_n_21_n.BLIF u2bpd_n_21_n.BLIF u2bpd_state_i_0__n.BLIF \
+  u2bpd_state_i_1__n.BLIF u2bpd_state_i_2__n.BLIF upAck_i.BLIF u3bpd_state_i_0__n.BLIF u3bpd_state_i_1__n.BLIF u3bpd_state_i_2__n.BLIF downAck_i.BLIF u4udc_n_33_i_n.BLIF u4udc_un1_data_i_n.BLIF \
+  u4udc_un1_data_1_i_n.BLIF u4udc_un1_data_2_i_n.BLIF u4udc_un1_data_3_i_n.BLIF dipswitches_n_i_3__n.BLIF dipswitches_n_i_2__n.BLIF dipswitches_n_i_1__n.BLIF dipswitches_n_i_0__n.BLIF u1rs_counter_i_8__n.BLIF u1rs_counter_i_7__n.BLIF \
+  u1rs_counter_i_6__n.BLIF u1rs_counter_i_1__n.BLIF u1rs_counter_i_0__n.BLIF u1rs_counter_i_5__n.BLIF u1rs_counter_i_4__n.BLIF u1rs_counter_i_3__n.BLIF u1rs_counter_i_2__n.BLIF upButton_n_c.BLIF downButton_n_c.BLIF \
+  loadButton_n_c.BLIF resetButton_n_c.BLIF dipswitches_n_c_0__n.BLIF dipswitches_n_c_1__n.BLIF dipswitches_n_c_2__n.BLIF dipswitches_n_c_3__n.BLIF oneMHzClock_c.BLIF u4udc_counter_1_0_reg.BLIF u4udc_counter_1_1_reg.BLIF \
+  u4udc_counter_1_2_reg.BLIF u4udc_counter_1_3_reg.BLIF u2bpd_n_19_i_n.BLIF u2bpd_n_21_i_n.BLIF upReq_i_1_i.BLIF u3bpd_n_19_i_n.BLIF u3bpd_n_21_i_n.BLIF downReq_i_1_i.BLIF u4udc_state_ns_i_1__n.BLIF \
+  counter_c_i_1__n.BLIF u4udc_n_50_0_n.BLIF counter_c_i_2__n.BLIF u4udc_n_52_0_n.BLIF u4udc_n_54_i_n.BLIF u4udc_n_57_i_n.BLIF u4udc_n_58_0_n.BLIF u4udc_n_6_i_n.BLIF u4udc_n_9_i_n.BLIF \
+  u4udc_n_30_i_n.BLIF u4udc_n_51_i_n.BLIF u4udc_n_53_i_n.BLIF u4udc_n_55_0_n.BLIF u3bpd_n_26_i_n.BLIF u3bpd_n_27_i_n.BLIF u3bpd_n_23_i_n.BLIF u3bpd_n_25_i_n.BLIF u2bpd_n_26_i_n.BLIF \
+  u2bpd_n_27_i_n.BLIF u2bpd_n_23_i_n.BLIF u2bpd_n_25_i_n.BLIF u4udc_state_ns_1_1__n.BLIF u4udc_G_46_1.BLIF u4udc_G_49_1.BLIF u4udc_G_50_1.BLIF u4udc_n_55_0_1_n.BLIF u4udc_n_53_1_n.BLIF \
+  u3bpd_n_8_i_1_n.BLIF u3bpd_n_7_0_1_n.BLIF u2bpd_n_8_i_1_n.BLIF u2bpd_n_7_0_1_n.BLIF  
+.outputs counter_3_ counter_2_ counter_1_ counter_0_ u2bpd_state_0_.D u2bpd_state_0_.C u2bpd_state_1_.D u2bpd_state_1_.C u2bpd_state_2_.D u2bpd_state_2_.C u3bpd_state_0_.D \
+  u3bpd_state_0_.C u3bpd_state_1_.D u3bpd_state_1_.C u3bpd_state_2_.D u3bpd_state_2_.C u4udc_state_0_.D u4udc_state_0_.CE u4udc_state_0_.C u4udc_state_1_.D u4udc_state_1_.CE u4udc_state_1_.C \
+  u4udc_counter_1_0_reg.D u4udc_counter_1_0_reg.C u4udc_counter_1_0_reg.AR u4udc_counter_1_0_reg.AP u4udc_counter_1_1_reg.D u4udc_counter_1_1_reg.C u4udc_counter_1_1_reg.AR u4udc_counter_1_1_reg.AP u4udc_counter_1_2_reg.D u4udc_counter_1_2_reg.C u4udc_counter_1_2_reg.AR \
+  u4udc_counter_1_2_reg.AP u4udc_counter_1_3_reg.D u4udc_counter_1_3_reg.C u4udc_counter_1_3_reg.AR u4udc_counter_1_3_reg.AP u1rs_u1rc_genblk1_8__uitff_q.D u1rs_u1rc_genblk1_8__uitff_q.C u1rs_u1rc_genblk1_3__uitff_q.D u1rs_u1rc_genblk1_3__uitff_q.C u1rs_u1rc_u0tff_q.D u1rs_u1rc_u0tff_q.C \
+  u1rs_u1rc_genblk1_1__uitff_q.D u1rs_u1rc_genblk1_1__uitff_q.C u1rs_u1rc_genblk1_2__uitff_q.D u1rs_u1rc_genblk1_2__uitff_q.C u1rs_u1rc_genblk1_5__uitff_q.D u1rs_u1rc_genblk1_5__uitff_q.C u1rs_u1rc_genblk1_4__uitff_q.D u1rs_u1rc_genblk1_4__uitff_q.C u1rs_u1rc_genblk1_0__uitff_q.D u1rs_u1rc_genblk1_0__uitff_q.C u1rs_u1rc_genblk1_6__uitff_q.D \
+  u1rs_u1rc_genblk1_6__uitff_q.C u1rs_u1rc_genblk1_7__uitff_q.D u1rs_u1rc_genblk1_7__uitff_q.C u4udc_G_46_1.X1 u4udc_G_46_1.X2 u4udc_G_46.X1 u4udc_G_46.X2 u4udc_G_49_1.X1 u4udc_G_49_1.X2 u4udc_G_49.X1 u4udc_G_49.X2 \
+  u4udc_G_50_1.X1 u4udc_G_50_1.X2 u4udc_G_50.X1 u4udc_G_50.X2 u4udc_G_44.X1 u4udc_G_44.X2 u4udc_n_33_n u4udc_state_ns_1__n u4udc_n_47_n u4udc_n_50_n u4udc_n_51_n \
+  u4udc_n_52_n u4udc_n_53_n u4udc_n_54_n u4udc_n_55_n u4udc_n_58_n downReq_i_1 u3bpd_n_19_n u3bpd_n_23_n u3bpd_n_25_n u3bpd_n_26_n u3bpd_n_27_n \
+  upReq_i_1 u2bpd_n_19_n u2bpd_n_23_n u2bpd_n_25_n u2bpd_n_26_n u2bpd_n_27_n u4udc_n_30_n u4udc_n_9_n u4udc_un1_data_n u4udc_un1_data_1_n u4udc_un1_data_2_n \
+  u4udc_un1_data_3_n u4udc_n_57_n u3bpd_n_21_n u2bpd_n_21_n u2bpd_state_i_0__n u2bpd_state_i_1__n u2bpd_state_i_2__n upAck_i u3bpd_state_i_0__n u3bpd_state_i_1__n u3bpd_state_i_2__n \
+  downAck_i u4udc_n_33_i_n u4udc_un1_data_i_n u4udc_un1_data_1_i_n u4udc_un1_data_2_i_n u4udc_un1_data_3_i_n dipswitches_n_i_3__n dipswitches_n_i_2__n dipswitches_n_i_1__n dipswitches_n_i_0__n u1rs_counter_i_8__n \
+  u1rs_counter_i_7__n u1rs_counter_i_6__n u1rs_counter_i_1__n u1rs_counter_i_0__n u1rs_counter_i_5__n u1rs_counter_i_4__n u1rs_counter_i_3__n u1rs_counter_i_2__n upButton_n_c downButton_n_c loadButton_n_c \
+  resetButton_n_c dipswitches_n_c_0__n dipswitches_n_c_1__n dipswitches_n_c_2__n dipswitches_n_c_3__n oneMHzClock_c u2bpd_n_19_i_n u2bpd_n_21_i_n upReq_i_1_i u3bpd_n_19_i_n u3bpd_n_21_i_n \
+  downReq_i_1_i u4udc_state_ns_i_1__n counter_c_i_1__n u4udc_n_50_0_n counter_c_i_2__n u4udc_n_52_0_n u4udc_n_54_i_n u4udc_n_57_i_n u4udc_n_58_0_n u4udc_n_6_i_n u4udc_n_9_i_n \
+  u4udc_n_30_i_n u4udc_n_51_i_n u4udc_n_53_i_n u4udc_n_55_0_n u3bpd_n_26_i_n u3bpd_n_27_i_n u3bpd_n_23_i_n u3bpd_n_25_i_n u2bpd_n_26_i_n u2bpd_n_27_i_n u2bpd_n_23_i_n \
+  u2bpd_n_25_i_n u4udc_state_ns_1_1__n u4udc_n_55_0_1_n u4udc_n_53_1_n u3bpd_n_8_i_1_n u3bpd_n_7_0_1_n u2bpd_n_8_i_1_n u2bpd_n_7_0_1_n
+.names  u1rs_counter_i_5__n.BLIF u1rs_u1rc_genblk1_4__uitff_q.D
+1 1
+.names  u1rs_counter_i_4__n.BLIF u1rs_u1rc_genblk1_4__uitff_q.C
+1 1
+.names  u1rs_counter_i_1__n.BLIF u1rs_u1rc_genblk1_0__uitff_q.D
+1 1
+.names  u1rs_counter_i_0__n.BLIF u1rs_u1rc_genblk1_0__uitff_q.C
+1 1
+.names  u1rs_counter_i_7__n.BLIF u1rs_u1rc_genblk1_6__uitff_q.D
+1 1
+.names  u1rs_counter_i_6__n.BLIF u1rs_u1rc_genblk1_6__uitff_q.C
+1 1
+.names  u1rs_counter_i_8__n.BLIF u1rs_u1rc_genblk1_7__uitff_q.D
+1 1
+.names  u1rs_counter_i_7__n.BLIF u1rs_u1rc_genblk1_7__uitff_q.C
+1 1
+.names  u4udc_state_ns_1__n.BLIF u4udc_G_46_1.X1
+1 1
+.names  u4udc_counter_1_1_reg.BLIF u4udc_G_46_1.X2
+1 1
+.names  u4udc_G_46_1.BLIF u4udc_G_46.X1
+1 1
+.names  u4udc_n_47_n.BLIF u4udc_G_46.X2
+1 1
+.names  u4udc_state_ns_1__n.BLIF u4udc_G_49_1.X1
+1 1
+.names  upButton_n.BLIF upButton_n_c
+1 1
+.names  downButton_n.BLIF downButton_n_c
+1 1
+.names  u4udc_counter_1_2_reg.BLIF u4udc_G_49_1.X2
+1 1
+.names  loadButton_n.BLIF loadButton_n_c
+1 1
+.names  resetButton_n.BLIF resetButton_n_c
+1 1
+.names  dipSwitches_n_0_.BLIF dipswitches_n_c_0__n
+1 1
+.names  u4udc_G_49_1.BLIF u4udc_G_49.X1
+1 1
+.names  dipSwitches_n_1_.BLIF dipswitches_n_c_1__n
+1 1
+.names  dipSwitches_n_2_.BLIF dipswitches_n_c_2__n
+1 1
+.names  u4udc_n_58_n.BLIF u4udc_G_49.X2
+1 1
+.names  dipSwitches_n_3_.BLIF dipswitches_n_c_3__n
+1 1
+.names  oneMHzClock.BLIF oneMHzClock_c
+1 1
+.names  u4udc_counter_1_0_reg.BLIF counter_0_
+1 1
+.names  u4udc_state_ns_1__n.BLIF u4udc_G_50_1.X1
+1 1
+.names  u4udc_counter_1_1_reg.BLIF counter_1_
+1 1
+.names  u4udc_counter_1_2_reg.BLIF counter_2_
+1 1
+.names  u4udc_counter_1_3_reg.BLIF u4udc_G_50_1.X2
+1 1
+.names  u4udc_counter_1_3_reg.BLIF counter_3_
+1 1
+.names  u2bpd_n_8_i_1_n.BLIF u2bpd_state_1_.BLIF u2bpd_state_2_.D
+11 1
+.names  u2bpd_n_19_i_n.BLIF u2bpd_n_23_i_n.BLIF u2bpd_n_7_0_1_n
+11 1
+.names  u4udc_G_50_1.BLIF u4udc_G_50.X1
+1 1
+.names  u2bpd_n_7_0_1_n.BLIF u2bpd_n_25_i_n.BLIF u2bpd_state_0_.D
+11 1
+.names  u4udc_n_55_n.BLIF u4udc_G_50.X2
+1 1
+.names  u4udc_counter_1_0_reg.BLIF u4udc_G_44.X1
+1 1
+.names  u4udc_n_30_n.BLIF u4udc_G_44.X2
+1 1
+.names  u4udc_n_54_i_n.BLIF u4udc_n_51_i_n.BLIF u4udc_n_55_0_1_n
+11 1
+.names  u4udc_n_55_0_1_n.BLIF u4udc_n_53_i_n.BLIF u4udc_n_55_0_n
+11 1
+.names  u4udc_n_52_n.BLIF u4udc_n_47_n.BLIF u4udc_n_53_1_n
+11 1
+.names  u4udc_G_46.BLIF u4udc_counter_1_1_reg.D
+1 1
+.names  u4udc_n_53_1_n.BLIF u4udc_n_50_n.BLIF u4udc_n_53_n
+11 1
+.names  u4udc_G_49.BLIF u4udc_counter_1_2_reg.D
+1 1
+.names  u3bpd_n_26_i_n.BLIF u3bpd_n_27_i_n.BLIF u3bpd_n_8_i_1_n
+11 1
+.names  u4udc_G_50.BLIF u4udc_counter_1_3_reg.D
+1 1
+.names  u3bpd_n_8_i_1_n.BLIF u3bpd_state_1_.BLIF u3bpd_state_2_.D
+11 1
+.names  u3bpd_n_19_i_n.BLIF u3bpd_n_23_i_n.BLIF u3bpd_n_7_0_1_n
+11 1
+.names  u3bpd_n_7_0_1_n.BLIF u3bpd_n_25_i_n.BLIF u3bpd_state_0_.D
+11 1
+.names  u2bpd_n_26_i_n.BLIF u2bpd_n_27_i_n.BLIF u2bpd_n_8_i_1_n
+11 1
+.names  u4udc_n_9_n.BLIF u4udc_n_9_i_n
+0 1
+.names  u4udc_n_30_i_n.BLIF u4udc_n_30_n
+0 1
+.names  u4udc_n_51_n.BLIF u4udc_n_51_i_n
+0 1
+.names  u4udc_n_53_n.BLIF u4udc_n_53_i_n
+0 1
+.names  u4udc_n_55_0_n.BLIF u4udc_n_55_n
+0 1
+.names  u3bpd_n_26_n.BLIF u3bpd_n_26_i_n
+0 1
+.names  u3bpd_n_27_n.BLIF u3bpd_n_27_i_n
+0 1
+.names  u3bpd_n_23_n.BLIF u3bpd_n_23_i_n
+0 1
+.names  u3bpd_n_25_n.BLIF u3bpd_n_25_i_n
+0 1
+.names  u2bpd_n_26_n.BLIF u2bpd_n_26_i_n
+0 1
+.names  u2bpd_n_27_n.BLIF u2bpd_n_27_i_n
+0 1
+.names  u2bpd_n_23_n.BLIF u2bpd_n_23_i_n
+0 1
+.names  u2bpd_n_25_n.BLIF u2bpd_n_25_i_n
+0 1
+.names  downReq_i_1_i.BLIF u4udc_n_6_i_n.BLIF u4udc_state_ns_1_1__n
+11 1
+.names  u4udc_state_ns_1_1__n.BLIF upReq_i_1.BLIF u4udc_state_ns_1__n
+11 1
+.names  u2bpd_n_19_n.BLIF u2bpd_n_19_i_n
+0 1
+.names  u2bpd_n_21_n.BLIF u2bpd_n_21_i_n
+0 1
+.names  upReq_i_1_i.BLIF upReq_i_1
+0 1
+.names  u3bpd_n_19_n.BLIF u3bpd_n_19_i_n
+0 1
+.names  u3bpd_n_21_n.BLIF u3bpd_n_21_i_n
+0 1
+.names  downReq_i_1_i.BLIF downReq_i_1
+0 1
+.names  u4udc_state_ns_1__n.BLIF u4udc_state_ns_i_1__n
+0 1
+.names  u4udc_counter_1_1_reg.BLIF counter_c_i_1__n
+0 1
+.names  u4udc_n_50_0_n.BLIF u4udc_n_50_n
+0 1
+.names  u4udc_counter_1_2_reg.BLIF counter_c_i_2__n
+0 1
+.names  u4udc_n_52_0_n.BLIF u4udc_n_52_n
+0 1
+.names  u4udc_n_54_n.BLIF u4udc_n_54_i_n
+0 1
+.names  u4udc_n_57_n.BLIF u4udc_n_57_i_n
+0 1
+.names  u4udc_n_58_0_n.BLIF u4udc_n_58_n
+0 1
+.names  u2bpd_state_1_.BLIF u2bpd_state_i_1__n
+0 1
+.names  u2bpd_state_i_0__n.BLIF u2bpd_state_i_1__n.BLIF u2bpd_n_21_n
+11 1
+.names  upButton_n_c.BLIF upReq_i_1.BLIF u2bpd_n_19_n
+11 1
+.names  u3bpd_state_2_.BLIF u3bpd_state_i_2__n
+0 1
+.names  u3bpd_state_0_.BLIF u3bpd_state_i_2__n.BLIF u3bpd_n_23_n
+11 1
+.names  u3bpd_state_0_.BLIF u3bpd_state_i_0__n
+0 1
+.names  u3bpd_state_1_.BLIF u3bpd_state_i_1__n
+0 1
+.names  u3bpd_state_i_0__n.BLIF u3bpd_state_i_1__n.BLIF u3bpd_n_21_n
+11 1
+.names  downButton_n_c.BLIF downReq_i_1.BLIF u3bpd_n_19_n
+11 1
+.names  u2bpd_state_2_.BLIF u2bpd_state_i_0__n.BLIF upReq_i_1_i
+11 1
+.names  u2bpd_n_19_i_n.BLIF u2bpd_n_21_i_n.BLIF u2bpd_state_1_.D
+11 1
+.names  u2bpd_state_i_0__n.BLIF u2bpd_state_i_2__n.BLIF u2bpd_n_27_n
+11 1
+.names  u2bpd_state_0_.BLIF upButton_n_c.BLIF u2bpd_n_26_n
+11 1
+.names  u4udc_state_0_.BLIF upAck_i
+0 1
+.names  upAck_i.BLIF upReq_i_1_i.BLIF u2bpd_n_25_n
+11 1
+.names  u2bpd_state_2_.BLIF u2bpd_state_i_2__n
+0 1
+.names  u2bpd_state_0_.BLIF u2bpd_state_i_2__n.BLIF u2bpd_n_23_n
+11 1
+.names  u2bpd_state_0_.BLIF u2bpd_state_i_0__n
+0 1
+.names  u4udc_un1_data_1_n.BLIF u4udc_un1_data_1_i_n
+0 1
+.names  u4udc_n_33_i_n.BLIF u4udc_un1_data_1_i_n.BLIF u4udc_counter_1_1_reg.AR
+11 1
+.names  u4udc_un1_data_n.BLIF u4udc_un1_data_i_n
+0 1
+.names  u4udc_n_33_i_n.BLIF u4udc_un1_data_i_n.BLIF u4udc_counter_1_0_reg.AR
+11 1
+.names  u4udc_n_33_i_n.BLIF u4udc_un1_data_3_n.BLIF u4udc_counter_1_3_reg.AP
+11 1
+.names  u4udc_n_33_i_n.BLIF u4udc_un1_data_2_n.BLIF u4udc_counter_1_2_reg.AP
+11 1
+.names  u4udc_n_33_i_n.BLIF u4udc_un1_data_1_n.BLIF u4udc_counter_1_1_reg.AP
+11 1
+.names  u4udc_n_33_n.BLIF u4udc_n_33_i_n
+0 1
+.names  u4udc_n_33_i_n.BLIF u4udc_un1_data_n.BLIF u4udc_counter_1_0_reg.AP
+11 1
+.names  u3bpd_state_2_.BLIF u3bpd_state_i_0__n.BLIF downReq_i_1_i
+11 1
+.names  u3bpd_n_19_i_n.BLIF u3bpd_n_21_i_n.BLIF u3bpd_state_1_.D
+11 1
+.names  u3bpd_state_i_0__n.BLIF u3bpd_state_i_2__n.BLIF u3bpd_n_27_n
+11 1
+.names  downButton_n_c.BLIF u3bpd_state_0_.BLIF u3bpd_n_26_n
+11 1
+.names  u4udc_state_1_.BLIF downAck_i
+0 1
+.names  downAck_i.BLIF downReq_i_1_i.BLIF u3bpd_n_25_n
+11 1
+.names  dipswitches_n_c_3__n.BLIF dipswitches_n_i_3__n
+0 1
+.names  dipswitches_n_i_3__n.BLIF resetButton_n_c.BLIF u4udc_un1_data_3_n
+11 1
+.names  downAck_i.BLIF upAck_i.BLIF u4udc_n_6_i_n
+11 1
+.names  u4udc_n_54_i_n.BLIF u4udc_n_57_i_n.BLIF u4udc_n_58_0_n
+11 1
+.names  u4udc_n_47_n.BLIF u4udc_n_50_n.BLIF u4udc_n_57_n
+11 1
+.names  counter_c_i_2__n.BLIF u4udc_state_ns_i_1__n.BLIF u4udc_n_52_0_n
+11 1
+.names  u4udc_counter_1_2_reg.BLIF u4udc_state_ns_1__n.BLIF u4udc_n_51_n
+11 1
+.names  counter_c_i_1__n.BLIF u4udc_state_ns_i_1__n.BLIF u4udc_n_50_0_n
+11 1
+.names  u4udc_counter_1_1_reg.BLIF u4udc_state_ns_1__n.BLIF u4udc_n_54_n
+11 1
+.names  u4udc_counter_1_0_reg.BLIF u4udc_n_30_i_n.BLIF u4udc_n_47_n
+11 1
+.names  u4udc_un1_data_3_n.BLIF u4udc_un1_data_3_i_n
+0 1
+.names  u4udc_n_33_i_n.BLIF u4udc_un1_data_3_i_n.BLIF u4udc_counter_1_3_reg.AR
+11 1
+.names  u4udc_un1_data_2_n.BLIF u4udc_un1_data_2_i_n
+0 1
+.names  u4udc_n_33_i_n.BLIF u4udc_un1_data_2_i_n.BLIF u4udc_counter_1_2_reg.AR
+11 1
+.names  u1rs_u1rc_genblk1_5__uitff_q.BLIF u1rs_counter_i_6__n
+0 1
+.names  u1rs_u1rc_genblk1_7__uitff_q.BLIF u1rs_counter_i_8__n
+0 1
+.names  u1rs_u1rc_genblk1_6__uitff_q.BLIF u1rs_counter_i_7__n
+0 1
+.names  u4udc_n_6_i_n.BLIF u4udc_n_9_i_n.BLIF u4udc_n_30_i_n
+11 1
+.names  downReq_i_1.BLIF upReq_i_1.BLIF u4udc_n_9_n
+11 1
+.names  u4udc_n_6_i_n.BLIF upReq_i_1_i.BLIF u4udc_state_0_.D
+11 1
+.names  loadButton_n_c.BLIF resetButton_n_c.BLIF u4udc_n_33_n
+11 1
+.names  dipswitches_n_c_0__n.BLIF dipswitches_n_i_0__n
+0 1
+.names  dipswitches_n_i_0__n.BLIF resetButton_n_c.BLIF u4udc_un1_data_n
+11 1
+.names  dipswitches_n_c_1__n.BLIF dipswitches_n_i_1__n
+0 1
+.names  dipswitches_n_i_1__n.BLIF resetButton_n_c.BLIF u4udc_un1_data_1_n
+11 1
+.names  dipswitches_n_c_2__n.BLIF dipswitches_n_i_2__n
+0 1
+.names  dipswitches_n_i_2__n.BLIF resetButton_n_c.BLIF u4udc_un1_data_2_n
+11 1
+.names  oneMHzClock_c.BLIF u1rs_u1rc_u0tff_q.C
+0 1
+.names  u1rs_u1rc_genblk1_2__uitff_q.BLIF u1rs_counter_i_3__n
+0 1
+.names  u1rs_u1rc_genblk1_1__uitff_q.BLIF u1rs_counter_i_2__n
+0 1
+.names  u1rs_u1rc_genblk1_4__uitff_q.BLIF u1rs_counter_i_5__n
+0 1
+.names  u1rs_u1rc_genblk1_3__uitff_q.BLIF u1rs_counter_i_4__n
+0 1
+.names  u1rs_u1rc_genblk1_0__uitff_q.BLIF u1rs_counter_i_1__n
+0 1
+.names  u1rs_u1rc_u0tff_q.BLIF u1rs_counter_i_0__n
+0 1
+.names  u4udc_G_44.BLIF u4udc_counter_1_0_reg.D
+0 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u1rs_u1rc_genblk1_8__uitff_q.D
+0 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u2bpd_state_0_.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u2bpd_state_1_.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u2bpd_state_2_.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u3bpd_state_0_.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u3bpd_state_1_.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u3bpd_state_2_.C
+1 1
+.names  u4udc_n_33_n.BLIF u4udc_state_0_.CE
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_state_0_.C
+1 1
+.names  u4udc_state_ns_1__n.BLIF u4udc_state_1_.D
+1 1
+.names  u4udc_n_33_n.BLIF u4udc_state_1_.CE
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_state_1_.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_counter_1_0_reg.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_counter_1_1_reg.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_counter_1_2_reg.C
+1 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_counter_1_3_reg.C
+1 1
+.names  u1rs_counter_i_8__n.BLIF u1rs_u1rc_genblk1_8__uitff_q.C
+1 1
+.names  u1rs_counter_i_4__n.BLIF u1rs_u1rc_genblk1_3__uitff_q.D
+1 1
+.names  u1rs_counter_i_3__n.BLIF u1rs_u1rc_genblk1_3__uitff_q.C
+1 1
+.names  u1rs_counter_i_0__n.BLIF u1rs_u1rc_u0tff_q.D
+1 1
+.names  u1rs_counter_i_2__n.BLIF u1rs_u1rc_genblk1_1__uitff_q.D
+1 1
+.names  u1rs_counter_i_1__n.BLIF u1rs_u1rc_genblk1_1__uitff_q.C
+1 1
+.names  u1rs_counter_i_3__n.BLIF u1rs_u1rc_genblk1_2__uitff_q.D
+1 1
+.names  u1rs_counter_i_2__n.BLIF u1rs_u1rc_genblk1_2__uitff_q.C
+1 1
+.names  u1rs_counter_i_6__n.BLIF u1rs_u1rc_genblk1_5__uitff_q.D
+1 1
+.names  u1rs_counter_i_5__n.BLIF u1rs_u1rc_genblk1_5__uitff_q.C
+1 1
+.end

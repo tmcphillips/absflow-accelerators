@@ -1,0 +1,947 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Sun Jan 29 22:24:08 2012
+#$ MODULE fourbitcpu
+#$ PINS 17 a_reg_3_:48'ke'  b_reg_3_:4'ke'  pc_2_:26'ke'  step:31'ke'  reset_n:32'ke'  \
+#  oneMHzClock:18'ke'  zf:38'ke'  cf:39'ke'  use_a_reg:10'ke'  a_reg_2_:47'ke'  a_reg_1_:46'ke'  \
+#  a_reg_0_:45'ke'  b_reg_2_:3'ke'  b_reg_1_:2'ke'  b_reg_0_:40'ke'  pc_1_:27'ke'  pc_0_:28'ke' 
+#$ NODES 251 u2alu_c_4_0_3__un0_n u2alu_c_4_0_2__un3_n u2alu_c_4_0_2__un1_n \
+#  u2alu_c_4_0_2__un0_n u0rs_u1rc_genblk1_8__uitff_q u2alu_c_1__un3_n \
+#  un1_statement_0__n u2alu_c_1__un1_n u0rs_u1rc_u0tff_q u2alu_c_1__un0_n \
+#  u0rs_u1rc_genblk1_0__uitff_q u2alu_c_5_1__un3_n u0rs_u1rc_genblk1_1__uitff_q \
+#  u2alu_c_5_1__un1_n u0rs_u1rc_genblk1_2__uitff_q u2alu_c_5_1__un0_n \
+#  u0rs_u1rc_genblk1_3__uitff_q u2alu_c_4_0_1__un3_n u0rs_u1rc_genblk1_4__uitff_q \
+#  u2alu_c_4_0_1__un1_n u0rs_u1rc_genblk1_5__uitff_q u2alu_c_4_0_1__un0_n \
+#  u0rs_u1rc_genblk1_6__uitff_q u2alu_c_3_0_2__un3_n u0rs_u1rc_genblk1_7__uitff_q \
+#  u2alu_c_3_0_2__un1_n u2alu_c_3_0_2__un0_n N_5 u2alu_c_3_0_1__un3_n N_10 \
+#  u2alu_c_3_0_1__un1_n N_13 u2alu_c_3_0_1__un0_n N_15 u2alu_c_1_0__un3_n N_20 \
+#  u2alu_c_1_0__un1_n N_42 u2alu_c_1_0__un0_n N_43 u2alu_c_1_1__un3_n N_45 \
+#  u2alu_c_1_1__un1_n N_53 u2alu_c_1_1__un0_n N_60 u2alu_c_4_0_0__un3_n N_77 \
+#  u2alu_c_4_0_0__un1_n N_78 u2alu_c_4_0_0__un0_n N_81 u2alu_c_5_0__un3_n u2alu_n_28_n \
+#  u2alu_c_5_0__un1_n u2alu_c_2_0_1_ u2alu_c_5_0__un0_n u1pbd_state_0_ \
+#  u2alu_c_0__un3_n u1pbd_state_1_ u2alu_c_0__un1_n u1pbd_state_2_ u2alu_c_0__un0_n \
+#  u1pbd_n_8_n u1pbd_n_9_n u1pbd_n_11_n u1pbd_n_13_n u1pbd_n_23_n u1pbd_n_25_n N_73 \
+#  N_121 u2alu_n_7_n u2alu_c_2_0__n N_46 u2alu_n_48_n u2alu_c_4_0_ u2alu_n_49_n \
+#  u2alu_c_4_1_ u2alu_n_62_n N_7 u2alu_n_66_n u2alu_n_56_n alu_c_0__n N_59 N_48 N_50 \
+#  u2alu_c_4_3_ N_17 statement_8_4__m5_i_x2 u2alu_cf_3_m_n alu_c_1__n u2alu_n_67_n \
+#  u2alu_n_63_n u2alu_n_57_n u2alu_n_58_n u2alu_c_2_3__n u2alu_c_2_1__n u2alu_a_m_0__n \
+#  u2alu_a_m_3__n u2alu_un1_opcode_11_n alu_c_3__n alu_c_2__n u2alu_un4_c_1_m_4__n \
+#  u2alu_n_10_n u2alu_n_59_n N_117 u2alu_n_69_n u2alu_n_65_n u2alu_n_68_n u2alu_n_64_n \
+#  u2alu_n_55_n u2alu_n_54_n u2alu_n_50_n u2alu_n_46_n u2alu_G_31 u2alu_G_7 u2alu_G_30 \
+#  u2alu_G_5 u2alu_n_31_n N_68 N_69 N_70 N_64 N_65 N_62 N_63 b_reg_i_0_0__n a_reg_i_0_0__n \
+#  b_reg_i_0_1__n a_reg_i_0_1__n a_reg_i_0_3__n b_reg_i_0_3__n a_reg_i_0_2__n \
+#  b_reg_i_0_2__n N_117_i alu_c_i_2__n u2alu_n_69_i_n alu_c_i_1__n alu_c_i_0__n \
+#  u2alu_un26_c_i_i_2__n u2alu_un26_c_i_i_3__n pc_i_2__n pc_i_1__n pc_i_0__n \
+#  u0rs_counter_i_4__n u0rs_counter_i_3__n u0rs_counter_i_5__n u0rs_counter_i_8__n \
+#  u0rs_counter_i_7__n u0rs_counter_i_6__n u0rs_counter_i_2__n u0rs_counter_i_1__n \
+#  u0rs_counter_i_0__n reset_n_i u1pbd_state_i_2__n u1pbd_state_i_1__n \
+#  u1pbd_state_i_0__n step_c reset_n_c oneMHzClock_c a_regDFFCRH_0reg a_regDFFCRH_1reg \
+#  a_regDFFCRH_2reg a_regDFFCRH_3reg b_regDFFCRH_0reg b_regDFFCRH_1reg \
+#  b_regDFFCRH_2reg b_regDFFCRH_3reg zfDFFCRHreg cfDFFCRHreg pcDFFRH_0_reg \
+#  pcDFFRH_1_reg pcDFFRH_2_reg u2alu_n_31_0_n N_63_i N_62_i N_10_0 N_65_i N_64_i N_13_0 \
+#  N_70_i N_69_i N_17_0 N_68_i N_15_0 u2alu_un4_c_1_m_i_4__n u2alu_cf_3_m_i_n \
+#  u2alu_a_m_i_3__n u2alu_a_m_i_0__n alu_cf_0 N_7_0 N_81_i N_20_0 N_43_0 N_46_0 N_48_0 \
+#  u2alu_un1_opcode_11_0_n N_50_0 N_45_0 N_42_0 N_53_i N_59_i un1_statement_0_0__n \
+#  N_78_i pc_n1_0 N_60_i N_5_0 u2alu_n_28_0_n u1pbd_n_8_i_n u1pbd_n_9_i_n u1pbd_n_25_i_n \
+#  u1pbd_n_13_i_n u1pbd_n_23_i_n u1pbd_n_11_i_n alu_cf_0_1 alu_cf_0_2 u2alu_cf_3_m_1_n \
+#  u2alu_cf_3_m_2_n u2alu_cf_3_m_3_n u2alu_a_m_1_0__n u2alu_a_m_1_3__n \
+#  u2alu_a_m_2_3__n u2alu_un4_c_1_m_1_4__n alu_zf_1 alu_zf_2 pc_n1_0_1 N_5_0_1 N_78_1 \
+#  u2alu_c_2_0_1_1_ u2alu_n_28_0_1_n u1pbd_n_12_i_1_n u2alu_c_2_0_3__un3_n \
+#  u2alu_c_2_0_3__un1_n u2alu_c_2_0_3__un0_n u2alu_c_2_0_2__un3_n \
+#  u2alu_c_2_0_2__un1_n u2alu_c_2_0_2__un0_n u2alu_c_3__un3_n u2alu_c_3__un1_n \
+#  u2alu_c_3__un0_n u2alu_c_2__un3_n u2alu_c_2__un1_n u2alu_c_2__un0_n \
+#  u2alu_c_5_3__un3_n u2alu_c_5_3__un1_n u2alu_c_5_3__un0_n u2alu_c_5_2__un3_n \
+#  u2alu_c_5_2__un1_n u2alu_c_5_2__un0_n u2alu_c_4_0_3__un3_n u2alu_c_4_0_3__un1_n
+.model fourbitcpu
+.inputs step.BLIF reset_n.BLIF oneMHzClock.BLIF u2alu_c_4_0_3__un0_n.BLIF \
+u2alu_c_4_0_2__un3_n.BLIF u2alu_c_4_0_2__un1_n.BLIF u2alu_c_4_0_2__un0_n.BLIF \
+u0rs_u1rc_genblk1_8__uitff_q.BLIF u2alu_c_1__un3_n.BLIF \
+un1_statement_0__n.BLIF u2alu_c_1__un1_n.BLIF u0rs_u1rc_u0tff_q.BLIF \
+u2alu_c_1__un0_n.BLIF u0rs_u1rc_genblk1_0__uitff_q.BLIF \
+u2alu_c_5_1__un3_n.BLIF u0rs_u1rc_genblk1_1__uitff_q.BLIF \
+u2alu_c_5_1__un1_n.BLIF u0rs_u1rc_genblk1_2__uitff_q.BLIF \
+u2alu_c_5_1__un0_n.BLIF u0rs_u1rc_genblk1_3__uitff_q.BLIF \
+u2alu_c_4_0_1__un3_n.BLIF u0rs_u1rc_genblk1_4__uitff_q.BLIF \
+u2alu_c_4_0_1__un1_n.BLIF u0rs_u1rc_genblk1_5__uitff_q.BLIF \
+u2alu_c_4_0_1__un0_n.BLIF u0rs_u1rc_genblk1_6__uitff_q.BLIF \
+u2alu_c_3_0_2__un3_n.BLIF u0rs_u1rc_genblk1_7__uitff_q.BLIF \
+u2alu_c_3_0_2__un1_n.BLIF u2alu_c_3_0_2__un0_n.BLIF N_5.BLIF \
+u2alu_c_3_0_1__un3_n.BLIF N_10.BLIF u2alu_c_3_0_1__un1_n.BLIF N_13.BLIF \
+u2alu_c_3_0_1__un0_n.BLIF N_15.BLIF u2alu_c_1_0__un3_n.BLIF N_20.BLIF \
+u2alu_c_1_0__un1_n.BLIF N_42.BLIF u2alu_c_1_0__un0_n.BLIF N_43.BLIF \
+u2alu_c_1_1__un3_n.BLIF N_45.BLIF u2alu_c_1_1__un1_n.BLIF N_53.BLIF \
+u2alu_c_1_1__un0_n.BLIF N_60.BLIF u2alu_c_4_0_0__un3_n.BLIF N_77.BLIF \
+u2alu_c_4_0_0__un1_n.BLIF N_78.BLIF u2alu_c_4_0_0__un0_n.BLIF N_81.BLIF \
+u2alu_c_5_0__un3_n.BLIF u2alu_n_28_n.BLIF u2alu_c_5_0__un1_n.BLIF \
+u2alu_c_2_0_1_.BLIF u2alu_c_5_0__un0_n.BLIF u1pbd_state_0_.BLIF \
+u2alu_c_0__un3_n.BLIF u1pbd_state_1_.BLIF u2alu_c_0__un1_n.BLIF \
+u1pbd_state_2_.BLIF u2alu_c_0__un0_n.BLIF u1pbd_n_8_n.BLIF u1pbd_n_9_n.BLIF \
+u1pbd_n_11_n.BLIF u1pbd_n_13_n.BLIF u1pbd_n_23_n.BLIF u1pbd_n_25_n.BLIF \
+N_73.BLIF N_121.BLIF u2alu_n_7_n.BLIF u2alu_c_2_0__n.BLIF N_46.BLIF \
+u2alu_n_48_n.BLIF u2alu_c_4_0_.BLIF u2alu_n_49_n.BLIF u2alu_c_4_1_.BLIF \
+u2alu_n_62_n.BLIF N_7.BLIF u2alu_n_66_n.BLIF u2alu_n_56_n.BLIF alu_c_0__n.BLIF \
+N_59.BLIF N_48.BLIF N_50.BLIF u2alu_c_4_3_.BLIF N_17.BLIF \
+statement_8_4__m5_i_x2.BLIF u2alu_cf_3_m_n.BLIF alu_c_1__n.BLIF \
+u2alu_n_67_n.BLIF u2alu_n_63_n.BLIF u2alu_n_57_n.BLIF u2alu_n_58_n.BLIF \
+u2alu_c_2_3__n.BLIF u2alu_c_2_1__n.BLIF u2alu_a_m_0__n.BLIF \
+u2alu_a_m_3__n.BLIF u2alu_un1_opcode_11_n.BLIF alu_c_3__n.BLIF alu_c_2__n.BLIF \
+u2alu_un4_c_1_m_4__n.BLIF u2alu_n_10_n.BLIF u2alu_n_59_n.BLIF N_117.BLIF \
+u2alu_n_69_n.BLIF u2alu_n_65_n.BLIF u2alu_n_68_n.BLIF u2alu_n_64_n.BLIF \
+u2alu_n_55_n.BLIF u2alu_n_54_n.BLIF u2alu_n_50_n.BLIF u2alu_n_46_n.BLIF \
+u2alu_G_31.BLIF u2alu_G_7.BLIF u2alu_G_30.BLIF u2alu_G_5.BLIF \
+u2alu_n_31_n.BLIF N_68.BLIF N_69.BLIF N_70.BLIF N_64.BLIF N_65.BLIF N_62.BLIF \
+N_63.BLIF b_reg_i_0_0__n.BLIF a_reg_i_0_0__n.BLIF b_reg_i_0_1__n.BLIF \
+a_reg_i_0_1__n.BLIF a_reg_i_0_3__n.BLIF b_reg_i_0_3__n.BLIF \
+a_reg_i_0_2__n.BLIF b_reg_i_0_2__n.BLIF N_117_i.BLIF alu_c_i_2__n.BLIF \
+u2alu_n_69_i_n.BLIF alu_c_i_1__n.BLIF alu_c_i_0__n.BLIF \
+u2alu_un26_c_i_i_2__n.BLIF u2alu_un26_c_i_i_3__n.BLIF pc_i_2__n.BLIF \
+pc_i_1__n.BLIF pc_i_0__n.BLIF u0rs_counter_i_4__n.BLIF \
+u0rs_counter_i_3__n.BLIF u0rs_counter_i_5__n.BLIF u0rs_counter_i_8__n.BLIF \
+u0rs_counter_i_7__n.BLIF u0rs_counter_i_6__n.BLIF u0rs_counter_i_2__n.BLIF \
+u0rs_counter_i_1__n.BLIF u0rs_counter_i_0__n.BLIF reset_n_i.BLIF \
+u1pbd_state_i_2__n.BLIF u1pbd_state_i_1__n.BLIF u1pbd_state_i_0__n.BLIF \
+step_c.BLIF reset_n_c.BLIF oneMHzClock_c.BLIF a_regDFFCRH_0reg.BLIF \
+a_regDFFCRH_1reg.BLIF a_regDFFCRH_2reg.BLIF a_regDFFCRH_3reg.BLIF \
+b_regDFFCRH_0reg.BLIF b_regDFFCRH_1reg.BLIF b_regDFFCRH_2reg.BLIF \
+b_regDFFCRH_3reg.BLIF zfDFFCRHreg.BLIF cfDFFCRHreg.BLIF pcDFFRH_0_reg.BLIF \
+pcDFFRH_1_reg.BLIF pcDFFRH_2_reg.BLIF u2alu_n_31_0_n.BLIF N_63_i.BLIF \
+N_62_i.BLIF N_10_0.BLIF N_65_i.BLIF N_64_i.BLIF N_13_0.BLIF N_70_i.BLIF \
+N_69_i.BLIF N_17_0.BLIF N_68_i.BLIF N_15_0.BLIF u2alu_un4_c_1_m_i_4__n.BLIF \
+u2alu_cf_3_m_i_n.BLIF u2alu_a_m_i_3__n.BLIF u2alu_a_m_i_0__n.BLIF \
+alu_cf_0.BLIF N_7_0.BLIF N_81_i.BLIF N_20_0.BLIF N_43_0.BLIF N_46_0.BLIF \
+N_48_0.BLIF u2alu_un1_opcode_11_0_n.BLIF N_50_0.BLIF N_45_0.BLIF N_42_0.BLIF \
+N_53_i.BLIF N_59_i.BLIF un1_statement_0_0__n.BLIF N_78_i.BLIF pc_n1_0.BLIF \
+N_60_i.BLIF N_5_0.BLIF u2alu_n_28_0_n.BLIF u1pbd_n_8_i_n.BLIF \
+u1pbd_n_9_i_n.BLIF u1pbd_n_25_i_n.BLIF u1pbd_n_13_i_n.BLIF u1pbd_n_23_i_n.BLIF \
+u1pbd_n_11_i_n.BLIF alu_cf_0_1.BLIF alu_cf_0_2.BLIF u2alu_cf_3_m_1_n.BLIF \
+u2alu_cf_3_m_2_n.BLIF u2alu_cf_3_m_3_n.BLIF u2alu_a_m_1_0__n.BLIF \
+u2alu_a_m_1_3__n.BLIF u2alu_a_m_2_3__n.BLIF u2alu_un4_c_1_m_1_4__n.BLIF \
+alu_zf_1.BLIF alu_zf_2.BLIF pc_n1_0_1.BLIF N_5_0_1.BLIF N_78_1.BLIF \
+u2alu_c_2_0_1_1_.BLIF u2alu_n_28_0_1_n.BLIF u1pbd_n_12_i_1_n.BLIF \
+u2alu_c_2_0_3__un3_n.BLIF u2alu_c_2_0_3__un1_n.BLIF u2alu_c_2_0_3__un0_n.BLIF \
+u2alu_c_2_0_2__un3_n.BLIF u2alu_c_2_0_2__un1_n.BLIF u2alu_c_2_0_2__un0_n.BLIF \
+u2alu_c_3__un3_n.BLIF u2alu_c_3__un1_n.BLIF u2alu_c_3__un0_n.BLIF \
+u2alu_c_2__un3_n.BLIF u2alu_c_2__un1_n.BLIF u2alu_c_2__un0_n.BLIF \
+u2alu_c_5_3__un3_n.BLIF u2alu_c_5_3__un1_n.BLIF u2alu_c_5_3__un0_n.BLIF \
+u2alu_c_5_2__un3_n.BLIF u2alu_c_5_2__un1_n.BLIF u2alu_c_5_2__un0_n.BLIF \
+u2alu_c_4_0_3__un3_n.BLIF u2alu_c_4_0_3__un1_n.BLIF
+.outputs a_reg_3_ b_reg_3_ pc_2_ zf cf use_a_reg a_reg_2_ a_reg_1_ a_reg_0_ \
+b_reg_2_ b_reg_1_ b_reg_0_ pc_1_ pc_0_ u1pbd_state_0_.D u1pbd_state_0_.C \
+u1pbd_state_1_.D u1pbd_state_1_.C u1pbd_state_2_.D u1pbd_state_2_.C \
+b_regDFFCRH_0reg.D b_regDFFCRH_0reg.CE b_regDFFCRH_0reg.C b_regDFFCRH_0reg.AR \
+b_regDFFCRH_1reg.D b_regDFFCRH_1reg.CE b_regDFFCRH_1reg.C b_regDFFCRH_1reg.AR \
+b_regDFFCRH_2reg.D b_regDFFCRH_2reg.CE b_regDFFCRH_2reg.C b_regDFFCRH_2reg.AR \
+b_regDFFCRH_3reg.D b_regDFFCRH_3reg.CE b_regDFFCRH_3reg.C b_regDFFCRH_3reg.AR \
+a_regDFFCRH_0reg.D a_regDFFCRH_0reg.CE a_regDFFCRH_0reg.C a_regDFFCRH_0reg.AR \
+a_regDFFCRH_1reg.D a_regDFFCRH_1reg.CE a_regDFFCRH_1reg.C a_regDFFCRH_1reg.AR \
+a_regDFFCRH_2reg.D a_regDFFCRH_2reg.CE a_regDFFCRH_2reg.C a_regDFFCRH_2reg.AR \
+a_regDFFCRH_3reg.D a_regDFFCRH_3reg.CE a_regDFFCRH_3reg.C a_regDFFCRH_3reg.AR \
+pcDFFRH_2_reg.D pcDFFRH_2_reg.C pcDFFRH_2_reg.AR pcDFFRH_0_reg.D \
+pcDFFRH_0_reg.C pcDFFRH_0_reg.AR pcDFFRH_1_reg.D pcDFFRH_1_reg.C \
+pcDFFRH_1_reg.AR zfDFFCRHreg.D zfDFFCRHreg.CE zfDFFCRHreg.C zfDFFCRHreg.AR \
+cfDFFCRHreg.D cfDFFCRHreg.CE cfDFFCRHreg.C cfDFFCRHreg.AR \
+u0rs_u1rc_genblk1_5__uitff_q.D u0rs_u1rc_genblk1_5__uitff_q.C \
+u0rs_u1rc_genblk1_7__uitff_q.D u0rs_u1rc_genblk1_7__uitff_q.C \
+u0rs_u1rc_u0tff_q.D u0rs_u1rc_u0tff_q.C u0rs_u1rc_genblk1_1__uitff_q.D \
+u0rs_u1rc_genblk1_1__uitff_q.C u0rs_u1rc_genblk1_0__uitff_q.D \
+u0rs_u1rc_genblk1_0__uitff_q.C u0rs_u1rc_genblk1_2__uitff_q.D \
+u0rs_u1rc_genblk1_2__uitff_q.C u0rs_u1rc_genblk1_6__uitff_q.D \
+u0rs_u1rc_genblk1_6__uitff_q.C u0rs_u1rc_genblk1_8__uitff_q.D \
+u0rs_u1rc_genblk1_8__uitff_q.C u0rs_u1rc_genblk1_4__uitff_q.D \
+u0rs_u1rc_genblk1_4__uitff_q.C u0rs_u1rc_genblk1_3__uitff_q.D \
+u0rs_u1rc_genblk1_3__uitff_q.C u2alu_c_4_0_3__un0_n u2alu_c_4_0_2__un3_n \
+u2alu_c_4_0_2__un1_n u2alu_c_4_0_2__un0_n u2alu_c_1__un3_n un1_statement_0__n \
+u2alu_c_1__un1_n u2alu_c_1__un0_n u2alu_c_5_1__un3_n u2alu_c_5_1__un1_n \
+u2alu_c_5_1__un0_n u2alu_c_4_0_1__un3_n u2alu_c_4_0_1__un1_n \
+u2alu_c_4_0_1__un0_n u2alu_c_3_0_2__un3_n u2alu_c_3_0_2__un1_n \
+u2alu_c_3_0_2__un0_n N_5 u2alu_c_3_0_1__un3_n N_10 u2alu_c_3_0_1__un1_n N_13 \
+u2alu_c_3_0_1__un0_n N_15 u2alu_c_1_0__un3_n N_20 u2alu_c_1_0__un1_n N_42 \
+u2alu_c_1_0__un0_n N_43 u2alu_c_1_1__un3_n N_45 u2alu_c_1_1__un1_n N_53 \
+u2alu_c_1_1__un0_n N_60 u2alu_c_4_0_0__un3_n N_77 u2alu_c_4_0_0__un1_n N_78 \
+u2alu_c_4_0_0__un0_n N_81 u2alu_c_5_0__un3_n u2alu_n_28_n u2alu_c_5_0__un1_n \
+u2alu_c_5_0__un0_n u2alu_c_0__un3_n u2alu_c_0__un1_n u2alu_c_0__un0_n \
+u1pbd_n_8_n u1pbd_n_9_n u1pbd_n_11_n u1pbd_n_13_n u1pbd_n_23_n u1pbd_n_25_n \
+N_73 N_121 u2alu_n_7_n u2alu_c_2_0__n N_46 u2alu_n_48_n u2alu_n_49_n \
+u2alu_n_62_n N_7 u2alu_n_66_n u2alu_n_56_n alu_c_0__n N_59 N_48 N_50 N_17 \
+u2alu_cf_3_m_n alu_c_1__n u2alu_n_67_n u2alu_n_63_n u2alu_n_57_n u2alu_n_58_n \
+u2alu_c_2_3__n u2alu_c_2_1__n u2alu_a_m_0__n u2alu_a_m_3__n \
+u2alu_un1_opcode_11_n alu_c_3__n alu_c_2__n u2alu_un4_c_1_m_4__n u2alu_n_10_n \
+u2alu_n_59_n N_117 u2alu_n_69_n u2alu_n_65_n u2alu_n_68_n u2alu_n_64_n \
+u2alu_n_55_n u2alu_n_54_n u2alu_n_50_n u2alu_n_46_n u2alu_n_31_n N_68 N_69 \
+N_70 N_64 N_65 N_62 N_63 b_reg_i_0_0__n a_reg_i_0_0__n b_reg_i_0_1__n \
+a_reg_i_0_1__n a_reg_i_0_3__n b_reg_i_0_3__n a_reg_i_0_2__n b_reg_i_0_2__n \
+N_117_i alu_c_i_2__n u2alu_n_69_i_n alu_c_i_1__n alu_c_i_0__n \
+u2alu_un26_c_i_i_2__n u2alu_un26_c_i_i_3__n pc_i_2__n pc_i_1__n pc_i_0__n \
+u0rs_counter_i_4__n u0rs_counter_i_3__n u0rs_counter_i_5__n \
+u0rs_counter_i_8__n u0rs_counter_i_7__n u0rs_counter_i_6__n \
+u0rs_counter_i_2__n u0rs_counter_i_1__n u0rs_counter_i_0__n reset_n_i \
+u1pbd_state_i_2__n u1pbd_state_i_1__n u1pbd_state_i_0__n step_c reset_n_c \
+oneMHzClock_c u2alu_n_31_0_n N_63_i N_62_i N_10_0 N_65_i N_64_i N_13_0 N_70_i \
+N_69_i N_17_0 N_68_i N_15_0 u2alu_un4_c_1_m_i_4__n u2alu_cf_3_m_i_n \
+u2alu_a_m_i_3__n u2alu_a_m_i_0__n alu_cf_0 N_7_0 N_81_i N_20_0 N_43_0 N_46_0 \
+N_48_0 u2alu_un1_opcode_11_0_n N_50_0 N_45_0 N_42_0 N_53_i N_59_i \
+un1_statement_0_0__n N_78_i pc_n1_0 N_60_i N_5_0 u2alu_n_28_0_n u1pbd_n_8_i_n \
+u1pbd_n_9_i_n u1pbd_n_25_i_n u1pbd_n_13_i_n u1pbd_n_23_i_n u1pbd_n_11_i_n \
+alu_cf_0_1 alu_cf_0_2 u2alu_cf_3_m_1_n u2alu_cf_3_m_2_n u2alu_cf_3_m_3_n \
+u2alu_a_m_1_0__n u2alu_a_m_1_3__n u2alu_a_m_2_3__n u2alu_un4_c_1_m_1_4__n \
+alu_zf_1 alu_zf_2 pc_n1_0_1 N_5_0_1 N_78_1 u2alu_n_28_0_1_n u1pbd_n_12_i_1_n \
+u2alu_c_2_0_3__un3_n u2alu_c_2_0_3__un1_n u2alu_c_2_0_3__un0_n \
+u2alu_c_2_0_2__un3_n u2alu_c_2_0_2__un1_n u2alu_c_2_0_2__un0_n \
+u2alu_c_3__un3_n u2alu_c_3__un1_n u2alu_c_3__un0_n u2alu_c_2__un3_n \
+u2alu_c_2__un1_n u2alu_c_2__un0_n u2alu_c_5_3__un3_n u2alu_c_5_3__un1_n \
+u2alu_c_5_3__un0_n u2alu_c_5_2__un3_n u2alu_c_5_2__un1_n u2alu_c_5_2__un0_n \
+u2alu_c_4_0_3__un3_n u2alu_c_4_0_3__un1_n u2alu_c_2_0_1_ u2alu_c_4_0_ \
+u2alu_c_4_1_ u2alu_c_4_3_ statement_8_4__m5_i_x2 u2alu_G_31 u2alu_G_7 \
+u2alu_G_30 u2alu_G_5 u2alu_c_2_0_1_1_
+.names u1pbd_n_9_i_n.BLIF u1pbd_n_25_i_n.BLIF u1pbd_state_0_.D
+11 1
+.names u1pbd_n_9_i_n.BLIF u1pbd_n_11_i_n.BLIF u1pbd_state_1_.D
+11 1
+.names u1pbd_n_12_i_1_n.BLIF u1pbd_state_1_.BLIF u1pbd_state_2_.D
+11 1
+.names N_50.BLIF pc_i_2__n.BLIF b_regDFFCRH_0reg.D
+11 1
+.names N_121.BLIF b_regDFFCRH_1reg.D
+0 1
+.names N_46_0.BLIF alu_c_2__n.BLIF b_regDFFCRH_2reg.D
+11 1
+.names N_46_0.BLIF alu_c_3__n.BLIF b_regDFFCRH_3reg.D
+11 1
+.names alu_c_0__n.BLIF pcDFFRH_2_reg.BLIF a_regDFFCRH_0reg.D
+11 1
+.names alu_c_1__n.BLIF pcDFFRH_2_reg.BLIF a_regDFFCRH_1reg.D
+11 1
+.names N_73.BLIF a_regDFFCRH_2reg.D
+0 1
+.names alu_c_3__n.BLIF pcDFFRH_2_reg.BLIF a_regDFFCRH_3reg.D
+11 1
+.names statement_8_4__m5_i_x2.BLIF N_81_i.BLIF pcDFFRH_2_reg.D
+11 1
+.names N_77.BLIF pcDFFRH_0_reg.D
+0 1
+.names pc_n1_0.BLIF pcDFFRH_1_reg.D
+0 1
+.names alu_zf_1.BLIF alu_zf_2.BLIF zfDFFCRHreg.D
+11 1
+.names alu_cf_0.BLIF cfDFFCRHreg.D
+0 1
+.names oneMHzClock_c.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u0rs_u1rc_genblk1_8__uitff_q.D
+0 1
+.names u2alu_c_4_3_.BLIF u2alu_c_4_0_3__un3_n.BLIF u2alu_c_4_0_3__un0_n
+11 1
+.names N_7.BLIF u2alu_c_4_0_2__un3_n
+0 1
+.names u2alu_n_46_n.BLIF N_7.BLIF u2alu_c_4_0_2__un1_n
+11 1
+.names u2alu_n_50_n.BLIF u2alu_c_4_0_2__un3_n.BLIF u2alu_c_4_0_2__un0_n
+11 1
+.names N_5.BLIF u2alu_c_1__un3_n
+0 1
+.names un1_statement_0_0__n.BLIF un1_statement_0__n
+0 1
+.names u2alu_n_63_n.BLIF N_5.BLIF u2alu_c_1__un1_n
+11 1
+.names u2alu_n_67_n.BLIF u2alu_c_1__un3_n.BLIF u2alu_c_1__un0_n
+11 1
+.names N_7.BLIF u2alu_c_5_1__un3_n
+0 1
+.names u2alu_c_2_0_1_.BLIF N_7.BLIF u2alu_c_5_1__un1_n
+11 1
+.names u2alu_n_57_n.BLIF u2alu_c_5_1__un3_n.BLIF u2alu_c_5_1__un0_n
+11 1
+.names N_7.BLIF u2alu_c_4_0_1__un3_n
+0 1
+.names u2alu_c_2_1__n.BLIF N_7.BLIF u2alu_c_4_0_1__un1_n
+11 1
+.names u2alu_n_49_n.BLIF u2alu_c_4_0_1__un3_n.BLIF u2alu_c_4_0_1__un0_n
+11 1
+.names N_20.BLIF u2alu_c_3_0_2__un3_n
+0 1
+.names N_13_0.BLIF N_20.BLIF u2alu_c_3_0_2__un1_n
+11 1
+.names N_17_0.BLIF u2alu_c_3_0_2__un3_n.BLIF u2alu_c_3_0_2__un0_n
+11 1
+.names N_5_0.BLIF N_5
+0 1
+.names N_20.BLIF u2alu_c_3_0_1__un3_n
+0 1
+.names N_10_0.BLIF N_10
+0 1
+.names N_10_0.BLIF N_20.BLIF u2alu_c_3_0_1__un1_n
+11 1
+.names N_13_0.BLIF N_13
+0 1
+.names N_15_0.BLIF u2alu_c_3_0_1__un3_n.BLIF u2alu_c_3_0_1__un0_n
+11 1
+.names N_15_0.BLIF N_15
+0 1
+.names N_20.BLIF u2alu_c_1_0__un3_n
+0 1
+.names N_20_0.BLIF N_20
+0 1
+.names u2alu_c_4_0_.BLIF N_20.BLIF u2alu_c_1_0__un1_n
+11 1
+.names N_42_0.BLIF N_42
+0 1
+.names N_10.BLIF u2alu_c_1_0__un3_n.BLIF u2alu_c_1_0__un0_n
+11 1
+.names N_43_0.BLIF N_43
+0 1
+.names N_20.BLIF u2alu_c_1_1__un3_n
+0 1
+.names N_45_0.BLIF N_45
+0 1
+.names u2alu_c_4_1_.BLIF N_20.BLIF u2alu_c_1_1__un1_n
+11 1
+.names pcDFFRH_1_reg.BLIF pc_i_0__n.BLIF N_53
+11 1
+.names N_13.BLIF u2alu_c_1_1__un3_n.BLIF u2alu_c_1_1__un0_n
+11 1
+.names pc_i_1__n.BLIF pc_i_2__n.BLIF N_60
+11 1
+.names N_7.BLIF u2alu_c_4_0_0__un3_n
+0 1
+.names N_45.BLIF pcDFFRH_0_reg.BLIF N_77
+11 1
+.names u2alu_c_2_0__n.BLIF N_7.BLIF u2alu_c_4_0_0__un1_n
+11 1
+.names N_78_1.BLIF pc_i_2__n.BLIF N_78
+11 1
+.names u2alu_n_48_n.BLIF u2alu_c_4_0_0__un3_n.BLIF u2alu_c_4_0_0__un0_n
+11 1
+.names pcDFFRH_0_reg.BLIF pc_i_1__n.BLIF N_81
+11 1
+.names N_7.BLIF u2alu_c_5_0__un3_n
+0 1
+.names u2alu_n_28_0_n.BLIF u2alu_n_28_n
+0 1
+.names N_10.BLIF N_7.BLIF u2alu_c_5_0__un1_n
+11 1
+.names u2alu_n_56_n.BLIF u2alu_c_5_0__un3_n.BLIF u2alu_c_5_0__un0_n
+11 1
+.names N_5.BLIF u2alu_c_0__un3_n
+0 1
+.names u2alu_n_62_n.BLIF N_5.BLIF u2alu_c_0__un1_n
+11 1
+.names u2alu_n_66_n.BLIF u2alu_c_0__un3_n.BLIF u2alu_c_0__un0_n
+11 1
+.names u1pbd_n_8_i_n.BLIF u1pbd_n_8_n
+0 1
+.names step_c.BLIF u1pbd_n_8_n.BLIF u1pbd_n_9_n
+11 1
+.names u1pbd_state_i_0__n.BLIF u1pbd_state_i_1__n.BLIF u1pbd_n_11_n
+11 1
+.names step_c.BLIF u1pbd_state_0_.BLIF u1pbd_n_13_n
+11 1
+.names u1pbd_state_i_0__n.BLIF u1pbd_state_i_2__n.BLIF u1pbd_n_23_n
+11 1
+.names u1pbd_state_0_.BLIF u1pbd_state_i_2__n.BLIF u1pbd_n_25_n
+11 1
+.names alu_c_i_2__n.BLIF pcDFFRH_2_reg.BLIF N_73
+11 1
+.names N_48.BLIF pc_i_0__n.BLIF N_121
+11 1
+.names N_10_0.BLIF N_13_0.BLIF u2alu_n_7_n
+11 1
+.names N_10_0.BLIF b_regDFFCRH_0reg.BLIF u2alu_c_2_0__n
+11 1
+.names N_46_0.BLIF N_46
+0 1
+.names u2alu_c_1_0__un1_n.BLIF u2alu_c_1_0__un0_n.BLIF u2alu_n_48_n
+1- 1
+-1 1
+.names u2alu_c_1_1__un1_n.BLIF u2alu_c_1_1__un0_n.BLIF u2alu_n_49_n
+1- 1
+-1 1
+.names u2alu_c_4_0_0__un1_n.BLIF u2alu_c_4_0_0__un0_n.BLIF u2alu_n_62_n
+1- 1
+-1 1
+.names N_7_0.BLIF N_7
+0 1
+.names u2alu_c_5_0__un1_n.BLIF u2alu_c_5_0__un0_n.BLIF u2alu_n_66_n
+1- 1
+-1 1
+.names N_13_0.BLIF N_20_0.BLIF u2alu_n_56_n
+11 1
+.names u2alu_c_0__un1_n.BLIF u2alu_c_0__un0_n.BLIF alu_c_0__n
+1- 1
+-1 1
+.names N_81.BLIF pc_i_2__n.BLIF N_59
+11 1
+.names N_48_0.BLIF N_48
+0 1
+.names N_50_0.BLIF N_50
+0 1
+.names N_17_0.BLIF N_17
+0 1
+.names u2alu_cf_3_m_3_n.BLIF N_17.BLIF u2alu_cf_3_m_n
+11 1
+.names u2alu_c_1__un1_n.BLIF u2alu_c_1__un0_n.BLIF alu_c_1__n
+1- 1
+-1 1
+.names u2alu_c_5_1__un1_n.BLIF u2alu_c_5_1__un0_n.BLIF u2alu_n_67_n
+1- 1
+-1 1
+.names u2alu_c_4_0_1__un1_n.BLIF u2alu_c_4_0_1__un0_n.BLIF u2alu_n_63_n
+1- 1
+-1 1
+.names u2alu_c_3_0_1__un1_n.BLIF u2alu_c_3_0_1__un0_n.BLIF u2alu_n_57_n
+1- 1
+-1 1
+.names u2alu_c_3_0_2__un1_n.BLIF u2alu_c_3_0_2__un0_n.BLIF u2alu_n_58_n
+1- 1
+-1 1
+.names N_17_0.BLIF b_regDFFCRH_3reg.BLIF u2alu_c_2_3__n
+11 1
+.names N_13_0.BLIF b_regDFFCRH_1reg.BLIF u2alu_c_2_1__n
+11 1
+.names u2alu_a_m_1_0__n.BLIF N_20_0.BLIF u2alu_a_m_0__n
+11 1
+.names u2alu_a_m_1_3__n.BLIF u2alu_a_m_2_3__n.BLIF u2alu_a_m_3__n
+11 1
+.names u2alu_un1_opcode_11_0_n.BLIF u2alu_un1_opcode_11_n
+0 1
+.names u2alu_c_3__un1_n.BLIF u2alu_c_3__un0_n.BLIF alu_c_3__n
+1- 1
+-1 1
+.names u2alu_c_2__un1_n.BLIF u2alu_c_2__un0_n.BLIF alu_c_2__n
+1- 1
+-1 1
+.names u2alu_un4_c_1_m_1_4__n.BLIF u2alu_n_10_n.BLIF u2alu_un4_c_1_m_4__n
+11 1
+.names N_15_0.BLIF u2alu_n_7_n.BLIF u2alu_n_10_n
+11 1
+.names N_20.BLIF N_117_i.BLIF u2alu_n_59_n
+11 1
+.names N_43.BLIF b_reg_i_0_2__n.BLIF N_117
+11 1
+.names u2alu_c_5_3__un1_n.BLIF u2alu_c_5_3__un0_n.BLIF u2alu_n_69_n
+1- 1
+-1 1
+.names u2alu_c_4_0_3__un1_n.BLIF u2alu_c_4_0_3__un0_n.BLIF u2alu_n_65_n
+1- 1
+-1 1
+.names u2alu_c_5_2__un1_n.BLIF u2alu_c_5_2__un0_n.BLIF u2alu_n_68_n
+1- 1
+-1 1
+.names u2alu_c_4_0_2__un1_n.BLIF u2alu_c_4_0_2__un0_n.BLIF u2alu_n_64_n
+1- 1
+-1 1
+.names u2alu_c_2_0_3__un1_n.BLIF u2alu_c_2_0_3__un0_n.BLIF u2alu_n_55_n
+1- 1
+-1 1
+.names u2alu_c_2_0_2__un1_n.BLIF u2alu_c_2_0_2__un0_n.BLIF u2alu_n_54_n
+1- 1
+-1 1
+.names N_20_0.BLIF N_117.BLIF u2alu_n_50_n
+11 1
+.names N_15_0.BLIF b_regDFFCRH_2reg.BLIF u2alu_n_46_n
+11 1
+.names u2alu_n_31_0_n.BLIF u2alu_n_31_n
+0 1
+.names N_43_0.BLIF a_reg_i_0_2__n.BLIF N_68
+11 1
+.names N_43.BLIF b_reg_i_0_3__n.BLIF N_69
+11 1
+.names N_43_0.BLIF a_reg_i_0_3__n.BLIF N_70
+11 1
+.names N_43.BLIF b_reg_i_0_1__n.BLIF N_64
+11 1
+.names N_43_0.BLIF a_reg_i_0_1__n.BLIF N_65
+11 1
+.names N_43.BLIF b_reg_i_0_0__n.BLIF N_62
+11 1
+.names N_43_0.BLIF a_reg_i_0_0__n.BLIF N_63
+11 1
+.names b_regDFFCRH_0reg.BLIF b_reg_i_0_0__n
+0 1
+.names a_regDFFCRH_0reg.BLIF a_reg_i_0_0__n
+0 1
+.names b_regDFFCRH_1reg.BLIF b_reg_i_0_1__n
+0 1
+.names a_regDFFCRH_1reg.BLIF a_reg_i_0_1__n
+0 1
+.names a_regDFFCRH_3reg.BLIF a_reg_i_0_3__n
+0 1
+.names b_regDFFCRH_3reg.BLIF b_reg_i_0_3__n
+0 1
+.names a_regDFFCRH_2reg.BLIF a_reg_i_0_2__n
+0 1
+.names b_regDFFCRH_2reg.BLIF b_reg_i_0_2__n
+0 1
+.names N_117.BLIF N_117_i
+0 1
+.names alu_c_2__n.BLIF alu_c_i_2__n
+0 1
+.names u2alu_n_69_n.BLIF u2alu_n_69_i_n
+0 1
+.names alu_c_1__n.BLIF alu_c_i_1__n
+0 1
+.names alu_c_0__n.BLIF alu_c_i_0__n
+0 1
+.names u2alu_G_30.BLIF u2alu_un26_c_i_i_2__n
+0 1
+.names u2alu_G_31.BLIF u2alu_un26_c_i_i_3__n
+0 1
+.names pcDFFRH_2_reg.BLIF pc_i_2__n
+0 1
+.names pcDFFRH_1_reg.BLIF pc_i_1__n
+0 1
+.names pcDFFRH_0_reg.BLIF pc_i_0__n
+0 1
+.names u0rs_u1rc_genblk1_3__uitff_q.BLIF u0rs_counter_i_4__n
+0 1
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u0rs_counter_i_3__n
+0 1
+.names u0rs_u1rc_genblk1_4__uitff_q.BLIF u0rs_counter_i_5__n
+0 1
+.names u0rs_u1rc_genblk1_7__uitff_q.BLIF u0rs_counter_i_8__n
+0 1
+.names u0rs_u1rc_genblk1_6__uitff_q.BLIF u0rs_counter_i_7__n
+0 1
+.names u0rs_u1rc_genblk1_5__uitff_q.BLIF u0rs_counter_i_6__n
+0 1
+.names u0rs_u1rc_genblk1_1__uitff_q.BLIF u0rs_counter_i_2__n
+0 1
+.names u0rs_u1rc_genblk1_0__uitff_q.BLIF u0rs_counter_i_1__n
+0 1
+.names u0rs_u1rc_u0tff_q.BLIF u0rs_counter_i_0__n
+0 1
+.names reset_n_c.BLIF reset_n_i
+0 1
+.names u1pbd_state_2_.BLIF u1pbd_state_i_2__n
+0 1
+.names u1pbd_state_1_.BLIF u1pbd_state_i_1__n
+0 1
+.names u1pbd_state_0_.BLIF u1pbd_state_i_0__n
+0 1
+.names N_10.BLIF N_13.BLIF u2alu_n_31_0_n
+11 1
+.names N_63.BLIF N_63_i
+0 1
+.names N_62.BLIF N_62_i
+0 1
+.names N_62_i.BLIF N_63_i.BLIF N_10_0
+11 1
+.names N_65.BLIF N_65_i
+0 1
+.names N_64.BLIF N_64_i
+0 1
+.names N_64_i.BLIF N_65_i.BLIF N_13_0
+11 1
+.names N_70.BLIF N_70_i
+0 1
+.names N_69.BLIF N_69_i
+0 1
+.names N_69_i.BLIF N_70_i.BLIF N_17_0
+11 1
+.names N_68.BLIF N_68_i
+0 1
+.names N_68_i.BLIF N_117_i.BLIF N_15_0
+11 1
+.names u2alu_un4_c_1_m_4__n.BLIF u2alu_un4_c_1_m_i_4__n
+0 1
+.names u2alu_cf_3_m_n.BLIF u2alu_cf_3_m_i_n
+0 1
+.names u2alu_a_m_3__n.BLIF u2alu_a_m_i_3__n
+0 1
+.names u2alu_a_m_0__n.BLIF u2alu_a_m_i_0__n
+0 1
+.names alu_cf_0_1.BLIF alu_cf_0_2.BLIF alu_cf_0
+11 1
+.names N_42.BLIF statement_8_4__m5_i_x2.BLIF N_7_0
+11 1
+.names N_81.BLIF N_81_i
+0 1
+.names N_81_i.BLIF pc_i_2__n.BLIF N_20_0
+11 1
+.names N_42_0.BLIF pcDFFRH_2_reg.BLIF N_43_0
+11 1
+.names pc_i_0__n.BLIF pc_i_2__n.BLIF N_46_0
+11 1
+.names alu_c_1__n.BLIF pc_i_2__n.BLIF N_48_0
+11 1
+.names N_43.BLIF pc_i_0__n.BLIF u2alu_un1_opcode_11_0_n
+11 1
+.names alu_c_i_0__n.BLIF pc_i_0__n.BLIF N_50_0
+11 1
+.names pcDFFRH_1_reg.BLIF pcDFFRH_2_reg.BLIF N_45_0
+11 1
+.names pc_i_0__n.BLIF pc_i_1__n.BLIF N_42_0
+11 1
+.names N_53.BLIF N_53_i
+0 1
+.names N_59.BLIF N_59_i
+0 1
+.names N_53_i.BLIF N_59_i.BLIF un1_statement_0_0__n
+11 1
+.names N_78.BLIF N_78_i
+0 1
+.names pc_n1_0_1.BLIF N_78_i.BLIF pc_n1_0
+11 1
+.names N_60.BLIF N_60_i
+0 1
+.names N_5_0_1.BLIF pc_i_0__n.BLIF N_5_0
+11 1
+.names u2alu_n_28_0_1_n.BLIF N_13.BLIF u2alu_n_28_0_n
+11 1
+.names u1pbd_state_2_.BLIF u1pbd_state_i_0__n.BLIF u1pbd_n_8_i_n
+11 1
+.names u1pbd_n_9_n.BLIF u1pbd_n_9_i_n
+0 1
+.names u1pbd_n_25_n.BLIF u1pbd_n_25_i_n
+0 1
+.names u1pbd_n_13_n.BLIF u1pbd_n_13_i_n
+0 1
+.names u1pbd_n_23_n.BLIF u1pbd_n_23_i_n
+0 1
+.names u1pbd_n_11_n.BLIF u1pbd_n_11_i_n
+0 1
+.names u2alu_cf_3_m_i_n.BLIF u2alu_un4_c_1_m_i_4__n.BLIF alu_cf_0_1
+11 1
+.names u2alu_a_m_i_0__n.BLIF u2alu_a_m_i_3__n.BLIF alu_cf_0_2
+11 1
+.names N_46_0.BLIF N_10.BLIF u2alu_cf_3_m_1_n
+11 1
+.names N_13.BLIF N_15.BLIF u2alu_cf_3_m_2_n
+11 1
+.names u2alu_cf_3_m_1_n.BLIF u2alu_cf_3_m_2_n.BLIF u2alu_cf_3_m_3_n
+11 1
+.names statement_8_4__m5_i_x2.BLIF N_10_0.BLIF u2alu_a_m_1_0__n
+11 1
+.names N_7_0.BLIF N_17_0.BLIF u2alu_a_m_1_3__n
+11 1
+.names N_20.BLIF statement_8_4__m5_i_x2.BLIF u2alu_a_m_2_3__n
+11 1
+.names u2alu_un1_opcode_11_n.BLIF N_17_0.BLIF u2alu_un4_c_1_m_1_4__n
+11 1
+.names alu_c_i_0__n.BLIF alu_c_i_1__n.BLIF alu_zf_1
+11 1
+.names alu_c_i_2__n.BLIF u2alu_n_69_i_n.BLIF alu_zf_2
+11 1
+.names N_81_i.BLIF N_53_i.BLIF pc_n1_0_1
+11 1
+.names N_45.BLIF N_60_i.BLIF N_5_0_1
+11 1
+.names cfDFFCRHreg.BLIF pcDFFRH_1_reg.BLIF N_78_1
+11 1
+.names N_15.BLIF N_10.BLIF u2alu_n_28_0_1_n
+11 1
+.names u1pbd_n_13_i_n.BLIF u1pbd_n_23_i_n.BLIF u1pbd_n_12_i_1_n
+11 1
+.names N_46.BLIF u2alu_c_2_0_3__un3_n
+0 1
+.names u2alu_G_7.BLIF N_46.BLIF u2alu_c_2_0_3__un1_n
+11 1
+.names u2alu_un26_c_i_i_3__n.BLIF u2alu_c_2_0_3__un3_n.BLIF \
+u2alu_c_2_0_3__un0_n
+11 1
+.names N_46.BLIF u2alu_c_2_0_2__un3_n
+0 1
+.names u2alu_G_5.BLIF N_46.BLIF u2alu_c_2_0_2__un1_n
+11 1
+.names u2alu_un26_c_i_i_2__n.BLIF u2alu_c_2_0_2__un3_n.BLIF \
+u2alu_c_2_0_2__un0_n
+11 1
+.names N_5.BLIF u2alu_c_3__un3_n
+0 1
+.names u2alu_n_65_n.BLIF N_5.BLIF u2alu_c_3__un1_n
+11 1
+.names u2alu_n_69_n.BLIF u2alu_c_3__un3_n.BLIF u2alu_c_3__un0_n
+11 1
+.names N_5.BLIF u2alu_c_2__un3_n
+0 1
+.names u2alu_n_64_n.BLIF N_5.BLIF u2alu_c_2__un1_n
+11 1
+.names u2alu_n_68_n.BLIF u2alu_c_2__un3_n.BLIF u2alu_c_2__un0_n
+11 1
+.names N_7.BLIF u2alu_c_5_3__un3_n
+0 1
+.names u2alu_n_55_n.BLIF N_7.BLIF u2alu_c_5_3__un1_n
+11 1
+.names u2alu_n_59_n.BLIF u2alu_c_5_3__un3_n.BLIF u2alu_c_5_3__un0_n
+11 1
+.names N_7.BLIF u2alu_c_5_2__un3_n
+0 1
+.names u2alu_n_54_n.BLIF N_7.BLIF u2alu_c_5_2__un1_n
+11 1
+.names u2alu_n_58_n.BLIF u2alu_c_5_2__un3_n.BLIF u2alu_c_5_2__un0_n
+11 1
+.names N_7.BLIF u2alu_c_4_0_3__un3_n
+0 1
+.names u2alu_c_2_3__n.BLIF N_7.BLIF u2alu_c_4_0_3__un1_n
+11 1
+.names a_regDFFCRH_3reg.BLIF a_reg_3_
+1 1
+0 0
+.names b_regDFFCRH_3reg.BLIF b_reg_3_
+1 1
+0 0
+.names pcDFFRH_2_reg.BLIF pc_2_
+1 1
+0 0
+.names zfDFFCRHreg.BLIF zf
+1 1
+0 0
+.names cfDFFCRHreg.BLIF cf
+1 1
+0 0
+.names N_43_0.BLIF use_a_reg
+1 1
+0 0
+.names a_regDFFCRH_2reg.BLIF a_reg_2_
+1 1
+0 0
+.names a_regDFFCRH_1reg.BLIF a_reg_1_
+1 1
+0 0
+.names a_regDFFCRH_0reg.BLIF a_reg_0_
+1 1
+0 0
+.names b_regDFFCRH_2reg.BLIF b_reg_2_
+1 1
+0 0
+.names b_regDFFCRH_1reg.BLIF b_reg_1_
+1 1
+0 0
+.names b_regDFFCRH_0reg.BLIF b_reg_0_
+1 1
+0 0
+.names pcDFFRH_1_reg.BLIF pc_1_
+1 1
+0 0
+.names pcDFFRH_0_reg.BLIF pc_0_
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1pbd_state_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1pbd_state_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1pbd_state_2_.C
+1 1
+0 0
+.names un1_statement_0__n.BLIF b_regDFFCRH_0reg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF b_regDFFCRH_0reg.C
+1 1
+0 0
+.names reset_n_i.BLIF b_regDFFCRH_0reg.AR
+1 1
+0 0
+.names un1_statement_0__n.BLIF b_regDFFCRH_1reg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF b_regDFFCRH_1reg.C
+1 1
+0 0
+.names reset_n_i.BLIF b_regDFFCRH_1reg.AR
+1 1
+0 0
+.names un1_statement_0__n.BLIF b_regDFFCRH_2reg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF b_regDFFCRH_2reg.C
+1 1
+0 0
+.names reset_n_i.BLIF b_regDFFCRH_2reg.AR
+1 1
+0 0
+.names un1_statement_0__n.BLIF b_regDFFCRH_3reg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF b_regDFFCRH_3reg.C
+1 1
+0 0
+.names reset_n_i.BLIF b_regDFFCRH_3reg.AR
+1 1
+0 0
+.names N_42_0.BLIF a_regDFFCRH_0reg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF a_regDFFCRH_0reg.C
+1 1
+0 0
+.names reset_n_i.BLIF a_regDFFCRH_0reg.AR
+1 1
+0 0
+.names N_42_0.BLIF a_regDFFCRH_1reg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF a_regDFFCRH_1reg.C
+1 1
+0 0
+.names reset_n_i.BLIF a_regDFFCRH_1reg.AR
+1 1
+0 0
+.names N_42_0.BLIF a_regDFFCRH_2reg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF a_regDFFCRH_2reg.C
+1 1
+0 0
+.names reset_n_i.BLIF a_regDFFCRH_2reg.AR
+1 1
+0 0
+.names N_42_0.BLIF a_regDFFCRH_3reg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF a_regDFFCRH_3reg.C
+1 1
+0 0
+.names reset_n_i.BLIF a_regDFFCRH_3reg.AR
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF pcDFFRH_2_reg.C
+1 1
+0 0
+.names reset_n_i.BLIF pcDFFRH_2_reg.AR
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF pcDFFRH_0_reg.C
+1 1
+0 0
+.names reset_n_i.BLIF pcDFFRH_0_reg.AR
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF pcDFFRH_1_reg.C
+1 1
+0 0
+.names reset_n_i.BLIF pcDFFRH_1_reg.AR
+1 1
+0 0
+.names N_5_0.BLIF zfDFFCRHreg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF zfDFFCRHreg.C
+1 1
+0 0
+.names reset_n_i.BLIF zfDFFCRHreg.AR
+1 1
+0 0
+.names N_5_0.BLIF cfDFFCRHreg.CE
+1 1
+0 0
+.names u1pbd_n_8_i_n.BLIF cfDFFCRHreg.C
+1 1
+0 0
+.names reset_n_i.BLIF cfDFFCRHreg.AR
+1 1
+0 0
+.names u0rs_counter_i_6__n.BLIF u0rs_u1rc_genblk1_5__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_5__n.BLIF u0rs_u1rc_genblk1_5__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_8__n.BLIF u0rs_u1rc_genblk1_7__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_7__n.BLIF u0rs_u1rc_genblk1_7__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_0__n.BLIF u0rs_u1rc_u0tff_q.D
+1 1
+0 0
+.names u0rs_counter_i_2__n.BLIF u0rs_u1rc_genblk1_1__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_1__n.BLIF u0rs_u1rc_genblk1_1__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_1__n.BLIF u0rs_u1rc_genblk1_0__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_0__n.BLIF u0rs_u1rc_genblk1_0__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_3__n.BLIF u0rs_u1rc_genblk1_2__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_2__n.BLIF u0rs_u1rc_genblk1_2__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_7__n.BLIF u0rs_u1rc_genblk1_6__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_6__n.BLIF u0rs_u1rc_genblk1_6__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_8__n.BLIF u0rs_u1rc_genblk1_8__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_5__n.BLIF u0rs_u1rc_genblk1_4__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_4__n.BLIF u0rs_u1rc_genblk1_4__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_4__n.BLIF u0rs_u1rc_genblk1_3__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_3__n.BLIF u0rs_u1rc_genblk1_3__uitff_q.C
+1 1
+0 0
+.names step.BLIF step_c
+1 1
+0 0
+.names reset_n.BLIF reset_n_c
+1 1
+0 0
+.names oneMHzClock.BLIF oneMHzClock_c
+1 1
+0 0
+.names N_13_0.BLIF u2alu_c_2_0_1_1_.BLIF u2alu_c_2_0_1_
+01 1
+10 1
+11 0
+00 0
+.names b_regDFFCRH_0reg.BLIF N_10_0.BLIF u2alu_c_4_0_
+01 1
+10 1
+11 0
+00 0
+.names b_regDFFCRH_1reg.BLIF N_13_0.BLIF u2alu_c_4_1_
+01 1
+10 1
+11 0
+00 0
+.names b_regDFFCRH_3reg.BLIF N_17_0.BLIF u2alu_c_4_3_
+01 1
+10 1
+11 0
+00 0
+.names pcDFFRH_0_reg.BLIF pcDFFRH_2_reg.BLIF statement_8_4__m5_i_x2
+01 1
+10 1
+11 0
+00 0
+.names u2alu_n_28_n.BLIF N_17_0.BLIF u2alu_G_31
+01 1
+10 1
+11 0
+00 0
+.names u2alu_n_10_n.BLIF N_17_0.BLIF u2alu_G_7
+01 1
+10 1
+11 0
+00 0
+.names u2alu_n_31_n.BLIF N_117_i.BLIF u2alu_G_30
+01 1
+10 1
+11 0
+00 0
+.names u2alu_n_7_n.BLIF N_15_0.BLIF u2alu_G_5
+01 1
+10 1
+11 0
+00 0
+.names N_10_0.BLIF N_20_0.BLIF u2alu_c_2_0_1_1_
+01 1
+10 1
+11 0
+00 0
+.end

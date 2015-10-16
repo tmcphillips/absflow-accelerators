@@ -1,0 +1,65 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:27:24 2012
+#$ MODULE octallatchdemo
+#$ JEDECFILE octallatchdemo
+#$ PINS 18 oe:24 le:26 d0:7 d1:8 d2:9 d3:10 d4:14 d5:15 d6:16 d7:20 q0:31 q1:32 q2:33 q3:34 \
+#  q4:38 q5:39 q6:40 q7:45
+#$ NODES 18 latch>d0'co'  latch>d1'co'  latch>d2'co'  latch>d3'co'  latch>d4'co'  latch>d5'co'  \
+#  latch>d6'co'  latch>d7'co'  latch>le'co'  latch>oe'co'  latch>q0'co'  latch>q1'co'  latch>q2'co'  \
+#  latch>q3'co'  latch>q4'co'  latch>q5'co'  latch>q6'co'  latch>q7'co' 
+#$ INTERFACE octallatch  18 d0'i'  d1'i'  d2'i'  d3'i'  d4'i'  d5'i'  d6'i'  d7'i'  le'i'  oe'i'  q0'o'  q1'o'  q2'o'  q3'o'  q4'o'  q5'o'  q6'o'  q7'o' 
+#$ INSTANCE latch octallatch 18 latch>d0 latch>d1 latch>d2 latch>d3 latch>d4 latch>d5 \
+#  latch>d6 latch>d7 latch>le latch>oe latch>q0 latch>q1 latch>q2 latch>q3 latch>q4 \
+#  latch>q5 latch>q6 latch>q7
+.model octallatchdemo
+.inputs d7.BLIF d6.BLIF d5.BLIF d4.BLIF d3.BLIF d2.BLIF d1.BLIF d0.BLIF \
+le.BLIF oe.BLIF latch>q7.BLIF latch>q6.BLIF latch>q5.BLIF latch>q4.BLIF \
+latch>q3.BLIF latch>q2.BLIF latch>q1.BLIF latch>q0.BLIF
+.outputs latch>d0 latch>d1 latch>d2 latch>d3 latch>d4 latch>d5 latch>d6 \
+latch>d7 latch>le latch>oe q0 q1 q2 q3 q4 q5 q6 q7
+.names d0.BLIF latch>d0
+0 1
+.names d1.BLIF latch>d1
+0 1
+.names d2.BLIF latch>d2
+0 1
+.names d3.BLIF latch>d3
+0 1
+.names d4.BLIF latch>d4
+0 1
+.names d5.BLIF latch>d5
+0 1
+.names d6.BLIF latch>d6
+0 1
+.names d7.BLIF latch>d7
+0 1
+.names oe.BLIF latch>oe
+0 1
+.names le.BLIF latch>le
+1 1
+0 0
+.names latch>q0.BLIF q0
+1 1
+0 0
+.names latch>q1.BLIF q1
+1 1
+0 0
+.names latch>q2.BLIF q2
+1 1
+0 0
+.names latch>q3.BLIF q3
+1 1
+0 0
+.names latch>q4.BLIF q4
+1 1
+0 0
+.names latch>q5.BLIF q5
+1 1
+0 0
+.names latch>q6.BLIF q6
+1 1
+0 0
+.names latch>q7.BLIF q7
+1 1
+0 0
+.end

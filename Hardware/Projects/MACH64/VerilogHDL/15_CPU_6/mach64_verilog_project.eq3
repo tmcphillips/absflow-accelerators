@@ -1,0 +1,295 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+N_10_0.X1 = !pc_3_.Q & c_reg_2_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # a_reg_2_.Q & c_reg_2_.Q
+    # !pc_3_.Q & a_reg_2_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q ; (3 pterms, 6 signals)
+N_10_0.X2 = !a_reg_2_.Q & c_reg_2_.Q ; (1 pterm, 2 signals)
+
+N_12_0.X1 = c_reg_3_.Q & !pc_3_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # a_reg_3_.Q & c_reg_3_.Q
+    # a_reg_3_.Q & !pc_3_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q ; (3 pterms, 6 signals)
+N_12_0.X2 = !a_reg_3_.Q & c_reg_3_.Q ; (1 pterm, 2 signals)
+
+N_14_0 = pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # !pc_3_.Q & !pc_2_.Q & !pc_1_.Q
+    # !pc_3_.Q & !pc_1_.Q & !pc_0_.Q ; (3 pterms, 4 signals)
+
+N_181_i = !( !pc_3_.Q & !pc_2_.Q & pc_1_.Q & !pc_0_.Q
+    # pc_2_.Q & pc_1_.Q & pc_0_.Q ) ; (2 pterms, 4 signals)
+
+N_60 = !pc_3_.Q & !pc_2_.Q & !pc_1_.Q & pc_0_.Q
+    # !pc_3_.Q & !pc_2_.Q & pc_1_.Q & !pc_0_.Q ; (2 pterms, 4 signals)
+
+N_6_0.X1 = !pc_3_.Q & c_reg_0_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # a_reg_0_.Q & c_reg_0_.Q
+    # !pc_3_.Q & a_reg_0_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q ; (3 pterms, 6 signals)
+N_6_0.X2 = !a_reg_0_.Q & c_reg_0_.Q ; (1 pterm, 2 signals)
+
+N_8_0.X1 = !pc_3_.Q & c_reg_1_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # a_reg_1_.Q & c_reg_1_.Q
+    # !pc_3_.Q & a_reg_1_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q ; (3 pterms, 6 signals)
+N_8_0.X2 = !a_reg_1_.Q & c_reg_1_.Q ; (1 pterm, 2 signals)
+
+a_reg_0_.D = pc_1_.Q & N_8_0 & !u2alu_n_48_n & !u2alu_n_60_n & !N_14_0
+    # pc_1_.Q & N_6_0 & u2alu_n_48_n & !u2alu_n_60_n & N_14_0
+    # pc_1_.Q & !N_6_0 & u2alu_n_48_n & !u2alu_n_60_n & !N_14_0
+    # pc_1_.Q & u2alu_r_0__un1_n ; (4 pterms, 7 signals)
+a_reg_0_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+a_reg_0_.CE = !un1_pc_1_0 ; (1 pterm, 1 signal)
+a_reg_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+a_reg_1_.D = pc_0_.Q & alu_r_1__n ; (1 pterm, 2 signals)
+a_reg_1_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+a_reg_1_.CE = !un1_pc_1_0 ; (1 pterm, 1 signal)
+a_reg_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+a_reg_2_.D = pc_1_.Q & alu_r_2__n
+    # !pc_2_.Q ; (2 pterms, 3 signals)
+a_reg_2_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+a_reg_2_.CE = !un1_pc_1_0 ; (1 pterm, 1 signal)
+a_reg_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+a_reg_3_.D = pc_0_.Q & alu_r_3__n ; (1 pterm, 2 signals)
+a_reg_3_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+a_reg_3_.CE = !un1_pc_1_0 ; (1 pterm, 1 signal)
+a_reg_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+alu_r_1__n.X1 = N_10_0 & !u2alu_n_48_n & !u2alu_n_60_n & !N_14_0
+    # N_6_0 & !u2alu_n_48_n & !u2alu_n_60_n & N_14_0
+    # !N_6_0 & u2alu_n_48_n & !u2alu_n_60_n & !N_14_0
+    # u2alu_n_60_n & u2alu_r_6_1__un1_n
+    # N_6_0 & !N_8_0 & !u2alu_n_54_n & u2alu_n_60_n
+    # !N_8_0 & !u2alu_n_54_n & u2alu_n_60_n & !N_14_0
+    # !N_6_0 & N_8_0 & !u2alu_n_54_n & u2alu_n_60_n & N_14_0 ; (7 pterms, 8 signals)
+alu_r_1__n.X2 = N_8_0 & u2alu_n_48_n & !u2alu_n_60_n ; (1 pterm, 3 signals)
+
+alu_r_2__n.X1 = N_12_0 & !u2alu_n_48_n & !u2alu_n_60_n & !N_14_0
+    # N_8_0 & !u2alu_n_48_n & !u2alu_n_60_n & N_14_0
+    # !N_6_0 & !N_8_0 & u2alu_n_48_n & !u2alu_n_60_n & !N_14_0
+    # u2alu_n_60_n & u2alu_r_6_2__un1_n
+    # !N_10_0 & !u2alu_n_54_n & u2alu_n_60_n & !N_14_0
+    # N_6_0 & N_8_0 & !N_10_0 & !u2alu_n_54_n & u2alu_n_60_n
+    # !N_6_0 & N_10_0 & !u2alu_n_54_n & u2alu_n_60_n & N_14_0
+    # !N_8_0 & N_10_0 & !u2alu_n_54_n & u2alu_n_60_n & N_14_0 ; (8 pterms, 9 signals)
+alu_r_2__n.X2 = N_10_0 & u2alu_n_48_n & !u2alu_n_60_n ; (1 pterm, 3 signals)
+
+alu_r_3__n.X1 = !N_6_0 & !N_8_0 & !N_12_0 & !N_10_0 & u2alu_n_48_n
+       & !u2alu_n_60_n & !N_14_0
+    # N_10_0 & !u2alu_n_48_n & !u2alu_n_60_n & N_14_0
+    # N_12_0 & N_10_0 & !u2alu_n_60_n & N_14_0
+    # N_12_0 & N_10_0 & u2alu_n_48_n & !u2alu_n_60_n
+    # N_12_0 & u2alu_n_48_n & !u2alu_n_60_n & N_14_0
+    # N_8_0 & N_12_0 & u2alu_n_48_n & !u2alu_n_60_n
+    # N_6_0 & N_12_0 & u2alu_n_48_n & !u2alu_n_60_n
+    # !u2alu_n_54_n & u2alu_n_60_n & !N_14_0
+    # N_6_0 & N_8_0 & N_10_0 & !u2alu_n_54_n & u2alu_n_60_n
+    # !N_12_0 & u2alu_n_54_n & u2alu_n_60_n & u2alu_r_4_0_3__un1_n
+    # b_reg_3_.Q & !statement_5__n & !N_12_0 & u2alu_n_54_n & u2alu_n_60_n
+       & N_14_0
+    # statement_5__n & N_12_0 & u2alu_n_54_n & u2alu_n_60_n
+       & !u2alu_r_4_0_3__un1_n
+    # !b_reg_3_.Q & N_12_0 & u2alu_n_60_n & !u2alu_r_4_0_3__un1_n & !N_14_0 ; (13 pterms, 11 signals)
+alu_r_3__n.X2 = N_12_0 & u2alu_n_60_n ; (1 pterm, 2 signals)
+
+b_reg_0_.D = a_reg_0_.Q ; (1 pterm, 1 signal)
+b_reg_0_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+b_reg_0_.CE = !pc_3_.Q & pc_2_.Q & pc_1_.Q & !pc_0_.Q ; (1 pterm, 4 signals)
+b_reg_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+b_reg_1_.D = a_reg_1_.Q ; (1 pterm, 1 signal)
+b_reg_1_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+b_reg_1_.CE = !pc_3_.Q & pc_2_.Q & pc_1_.Q & !pc_0_.Q ; (1 pterm, 4 signals)
+b_reg_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+b_reg_2_.D = a_reg_2_.Q ; (1 pterm, 1 signal)
+b_reg_2_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+b_reg_2_.CE = !pc_3_.Q & pc_2_.Q & pc_1_.Q & !pc_0_.Q ; (1 pterm, 4 signals)
+b_reg_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+b_reg_3_.D = a_reg_3_.Q ; (1 pterm, 1 signal)
+b_reg_3_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+b_reg_3_.CE = !pc_3_.Q & pc_2_.Q & pc_1_.Q & !pc_0_.Q ; (1 pterm, 4 signals)
+b_reg_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+c_reg_0_.D = N_8_0 & !u2alu_n_48_n & !u2alu_n_60_n & !N_14_0
+    # N_6_0 & u2alu_n_48_n & !u2alu_n_60_n & N_14_0
+    # !N_6_0 & u2alu_n_48_n & !u2alu_n_60_n & !N_14_0
+    # pc_0_.Q
+    # u2alu_r_0__un1_n ; (5 pterms, 7 signals)
+c_reg_0_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+c_reg_0_.CE = c_reg_3__0 ; (1 pterm, 1 signal)
+c_reg_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+c_reg_1_.D = !( !pc_0_.Q & !alu_r_1__n ) ; (1 pterm, 2 signals)
+c_reg_1_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+c_reg_1_.CE = c_reg_3__0 ; (1 pterm, 1 signal)
+c_reg_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+c_reg_2_.D = !pc_0_.Q & alu_r_2__n ; (1 pterm, 2 signals)
+c_reg_2_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+c_reg_2_.CE = c_reg_3__0 ; (1 pterm, 1 signal)
+c_reg_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+c_reg_3_.D = !pc_0_.Q & alu_r_3__n ; (1 pterm, 2 signals)
+c_reg_3_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+c_reg_3_.CE = c_reg_3__0 ; (1 pterm, 1 signal)
+c_reg_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+c_reg_3__0 = N_60
+    # pc_3_.Q & !pc_2_.Q & !pc_1_.Q & !pc_0_.Q ; (2 pterms, 5 signals)
+
+cf.D.X1 = N_60 & N_14_0
+    # !N_12_0 & u2alu_c_4_0_3__n & N_14_0
+    # b_reg_3_.Q & N_12_0 & N_14_0
+    # !b_reg_3_.Q & !u2alu_c_4_0_3__n & N_14_0
+    # pc_3_.Q & !pc_1_.Q & !pc_0_.Q & N_14_0
+    # !N_6_0 & statement_5__n & !N_8_0 & !N_12_0 & !N_10_0 & !N_14_0 ; (6 pterms, 12 signals)
+cf.D.X2 = !N_12_0 & N_14_0 ; (1 pterm, 2 signals)
+cf.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+cf.CE = zf_0 ; (1 pterm, 1 signal)
+cf.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_0_.D = pc_3_.Q & !zf.Q & !pc_2_.Q & !pc_1_.Q
+    # pc_2_.Q & pc_1_.Q & !pc_0_.Q
+    # !pc_2_.Q & !pc_1_.Q & !pc_0_.Q
+    # !pc_3_.Q & !pc_0_.Q ; (4 pterms, 5 signals)
+pc_0_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+pc_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_1_.D = !pc_3_.Q & !cf.Q & !pc_2_.Q & pc_1_.Q
+    # pc_3_.Q & pc_2_.Q & !pc_0_.Q
+    # !pc_1_.Q & pc_0_.Q
+    # pc_1_.Q & !pc_0_.Q ; (4 pterms, 5 signals)
+pc_1_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+pc_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_2_.D = pc_3_.Q & !zf.Q & !pc_2_.Q & pc_0_.Q
+    # pc_2_.Q & pc_1_.Q & !pc_0_.Q
+    # !pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # !pc_3_.Q & pc_2_.Q & !pc_0_.Q ; (4 pterms, 5 signals)
+pc_2_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+pc_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_3_.D = !( !zf.Q & !pc_2_.Q & !pc_1_.Q & pc_0_.Q
+    # pc_3_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # !pc_3_.Q & !pc_0_.Q
+    # !pc_3_.Q & !pc_2_.Q ) ; (4 pterms, 5 signals)
+pc_3_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+pc_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+statement_5__n = !pc_2_.Q & !pc_1_.Q & pc_0_.Q
+    # pc_3_.Q & !pc_2_.Q & !pc_1_.Q
+    # !N_181_i ; (3 pterms, 5 signals)
+
+u0rs_u1rc_genblk1_0__uitff_q.D = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_0__uitff_q.C = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_1__uitff_q.D = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_1__uitff_q.C = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_2__uitff_q.D = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_2__uitff_q.C = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_3__uitff_q.D = !u0rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_3__uitff_q.C = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_4__uitff_q.D = !u0rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_4__uitff_q.C = !u0rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_5__uitff_q.D = !u0rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_5__uitff_q.C = !u0rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_6__uitff_q.D = !u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_6__uitff_q.C = !u0rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_u0tff_q.D = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u1pbd_state_0_.D = !step & !u1pbd_state_0_.Q
+    # !u1pbd_state_0_.Q & u1pbd_state_2_.Q
+    # !step & u1pbd_state_2_.Q ; (3 pterms, 3 signals)
+u1pbd_state_0_.C = u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1pbd_state_1_.D = !u1pbd_state_0_.Q & u1pbd_state_1_.Q & u1pbd_state_2_.Q
+    # !step & u1pbd_state_0_.Q
+    # !step & u1pbd_state_1_.Q ; (3 pterms, 4 signals)
+u1pbd_state_1_.C = u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1pbd_state_2_.D = !step & u1pbd_state_0_.Q & u1pbd_state_1_.Q
+    # !u1pbd_state_0_.Q & u1pbd_state_1_.Q & u1pbd_state_2_.Q ; (2 pterms, 4 signals)
+u1pbd_state_2_.C = u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2alu_c_3_0_2__n = !( b_reg_0_.Q & N_6_0 & N_8_0
+    # b_reg_1_.Q & b_reg_0_.Q & N_6_0
+    # b_reg_1_.Q & N_8_0 ) ; (3 pterms, 4 signals)
+
+u2alu_c_4_0_3__n = !N_10_0 & u2alu_c_3_0_2__n
+    # !b_reg_2_.Q & u2alu_c_3_0_2__n
+    # !b_reg_2_.Q & !N_10_0 ; (3 pterms, 3 signals)
+
+u2alu_n_48_n = !( !pc_2_.Q & pc_1_.Q & pc_0_.Q & !N_14_0
+    # pc_2_.Q & pc_1_.Q & !pc_0_.Q & !N_14_0
+    # statement_5__n & !u2alu_n_54_n & N_14_0 ) ; (3 pterms, 6 signals)
+
+u2alu_n_54_n = !pc_3_.Q & pc_2_.Q & !pc_0_.Q & !N_60
+    # !pc_3_.Q & !pc_2_.Q & !pc_1_.Q & !N_60
+    # pc_2_.Q & pc_1_.Q & !N_60 ; (3 pterms, 5 signals)
+
+u2alu_n_60_n = !( !pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # pc_2_.Q & pc_1_.Q & !pc_0_.Q
+    # statement_5__n & !u2alu_n_54_n ) ; (3 pterms, 5 signals)
+
+u2alu_r_0__un1_n.X1 = !u2alu_n_54_n & u2alu_n_60_n
+    # b_reg_0_.Q & statement_5__n & u2alu_n_60_n
+    # b_reg_0_.Q & !N_6_0 & u2alu_n_60_n & N_14_0
+    # !b_reg_0_.Q & N_6_0 & !statement_5__n & u2alu_n_60_n & !N_14_0 ; (4 pterms, 6 signals)
+u2alu_r_0__un1_n.X2 = N_6_0 & u2alu_n_60_n ; (1 pterm, 2 signals)
+
+u2alu_r_4_0_3__un1_n.X1 = !b_reg_3_.Q & statement_5__n & u2alu_c_4_0_3__n
+    # !b_reg_3_.Q & statement_5__n & !N_14_0
+    # b_reg_3_.Q & statement_5__n & !u2alu_c_4_0_3__n & N_14_0 ; (3 pterms, 4 signals)
+u2alu_r_4_0_3__un1_n.X2 = statement_5__n & !N_12_0 ; (1 pterm, 2 signals)
+
+u2alu_r_6_1__un1_n.X1 = b_reg_1_.Q & !statement_5__n & !N_8_0 & u2alu_n_54_n
+       & N_14_0
+    # !b_reg_1_.Q & b_reg_0_.Q & N_6_0 & statement_5__n & u2alu_n_54_n
+       & N_14_0
+    # b_reg_1_.Q & !N_6_0 & statement_5__n & u2alu_n_54_n
+    # b_reg_1_.Q & !b_reg_0_.Q & statement_5__n & u2alu_n_54_n
+    # b_reg_1_.Q & statement_5__n & u2alu_n_54_n & !N_14_0
+    # !b_reg_1_.Q & !statement_5__n & N_8_0 & u2alu_n_54_n & !N_14_0 ; (6 pterms, 7 signals)
+u2alu_r_6_1__un1_n.X2 = N_8_0 & u2alu_n_54_n ; (1 pterm, 2 signals)
+
+u2alu_r_6_2__un1_n.X1 = !b_reg_2_.Q & statement_5__n & !u2alu_c_3_0_2__n
+       & u2alu_n_54_n & N_14_0
+    # b_reg_2_.Q & statement_5__n & u2alu_n_54_n & !N_14_0
+    # b_reg_2_.Q & !statement_5__n & !N_10_0 & u2alu_n_54_n & N_14_0
+    # b_reg_2_.Q & !N_10_0 & u2alu_c_3_0_2__n & u2alu_n_54_n & N_14_0
+    # !b_reg_2_.Q & !statement_5__n & N_10_0 & u2alu_n_54_n & !N_14_0
+    # b_reg_2_.Q & statement_5__n & N_10_0 & u2alu_c_3_0_2__n & u2alu_n_54_n ; (6 pterms, 6 signals)
+u2alu_r_6_2__un1_n.X2 = N_10_0 & u2alu_n_54_n ; (1 pterm, 2 signals)
+
+un1_pc_1_0 = !( !pc_3_.Q & pc_2_.Q & pc_1_.Q & pc_0_.Q
+    # !pc_3_.Q & !pc_1_.Q & !pc_0_.Q ) ; (2 pterms, 4 signals)
+
+zf.D.X1 = !alu_r_1__n & !alu_r_2__n & !alu_r_3__n & u2alu_n_60_n
+       & !u2alu_r_0__un1_n
+    # !alu_r_1__n & !alu_r_2__n & !alu_r_3__n & !u2alu_r_0__un1_n & N_14_0
+    # !alu_r_1__n & !alu_r_2__n & !alu_r_3__n & !N_8_0 & !u2alu_n_48_n
+       & !u2alu_r_0__un1_n ; (3 pterms, 8 signals)
+zf.D.X2 = !alu_r_1__n & !alu_r_2__n & !alu_r_3__n & N_6_0 & u2alu_n_48_n
+       & !u2alu_n_60_n & !u2alu_r_0__un1_n ; (1 pterm, 7 signals)
+zf.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+zf.CE = zf_0 ; (1 pterm, 1 signal)
+zf.AR = !reset_n ; (1 pterm, 1 signal)
+
+zf_0 = !N_181_i
+    # pc_3_.Q & !pc_2_.Q & !pc_1_.Q & !pc_0_.Q ; (2 pterms, 5 signals)
+

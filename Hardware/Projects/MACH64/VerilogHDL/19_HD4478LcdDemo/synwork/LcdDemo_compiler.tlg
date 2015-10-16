@@ -1,0 +1,67 @@
+Selecting top level module LcdDemo
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":158:7:158:15|Synthesizing module LCDWriter
+
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal rw. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal rs. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal e. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal busyFlag. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal ack. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData_cl[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData_cl[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData[1:1]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData_cl[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData[2:2]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData_cl[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData[3:3]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData_cl[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData[4:4]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData_cl[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData[5:5]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData_cl[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData[6:6]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData_cl[0:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Feedback mux created for signal outData[7:7]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":3:7:3:13|Synthesizing module LcdDemo
+
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":52:1:52:6|Feedback mux created for signal writeValue[7:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@W: CL189 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":52:1:52:6|Register bit writeValue[7] is always 0, optimizing ...
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":52:1:52:6|Pruning Register bit 7 of writeValue[7:0] 
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":52:1:52:6|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 15 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01110
+   01111
+   10000
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":52:1:52:6|Pruning Register bit 5 of writeValue[6:0] 
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\19_hd4478lcddemo\lcddemo.v":195:1:195:6|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 14 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   0101
+   0110
+   0111
+   1000
+   1001
+   1010
+   1011
+   1100
+   1101

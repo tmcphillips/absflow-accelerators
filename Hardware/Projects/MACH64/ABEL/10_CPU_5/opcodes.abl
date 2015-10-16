@@ -1,0 +1,35 @@
+	// non-ALU operations (op5 = 0) 
+
+
+	// non-jump register operations (!op5 & !op4)
+	OP_NOP  = ^b000000;
+	OP_LDA 	= ^b000001;
+	OP_LDB	= ^b000010;
+
+
+	// jump operations (!op5 && op4)
+	OP_JMP  = ^b010000;
+	OP_JZ   = ^b010001;
+	OP_JNZ  = ^b010010;
+	OP_JC   = ^b010011;
+	OP_JNC  = ^b010100;
+
+
+
+	// ALU operations (op5 = 1)
+
+	// ALU operations leaving results in A (op5, !op4)
+	OP_AND  = ^b100000;
+	OP_OR   = ^b100001;
+	OP_XOR  = ^b100010;
+	OP_NOT  = ^b100011;
+	OP_INCA = ^b100100;
+	OP_DECA	= ^b100101;
+	OP_SHL  = ^b100110;
+	OP_SHR  = ^b100111;
+	OP_ADD	= ^b101000;
+
+	// ALU operations leaving results in B (op5, op4)
+	OP_INCB = ^b111000;
+	OP_DECB	= ^b111010;
+

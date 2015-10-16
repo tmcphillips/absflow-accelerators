@@ -1,0 +1,101 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 24_organ_3
+
+#Wed Feb 15 16:02:44 2012
+
+$ Start of Compile
+#Wed Feb 15 16:02:44 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\digitalorgan.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\digitalorgan.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\ripplecounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\ripplecounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\tflipflop.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\digitalorgan.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\clocksynthesizer.v"
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\digitalorgan.v changed - recompiling
+Selecting top level module DigitalOrgan
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000000011
+   Generated name = RippleCounter_3s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000011110100001001000000
+	OUT_FREQ=32'b00000000000000000000010000010111
+	BITS=32'b00000000000000000000000000001001
+	TOGGLE_PERIOD=32'b00000000000000000000000111011101
+   Generated name = ClockSynthesizer_1000000s_1047s_9s_477s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000011110100001001000000
+	OUT_FREQ=32'b00000000000000000000010010010111
+	BITS=32'b00000000000000000000000000001001
+	TOGGLE_PERIOD=32'b00000000000000000000000110101001
+   Generated name = ClockSynthesizer_1000000s_1175s_9s_425s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000011110100001001000000
+	OUT_FREQ=32'b00000000000000000000010100100111
+	BITS=32'b00000000000000000000000000001001
+	TOGGLE_PERIOD=32'b00000000000000000000000101111011
+   Generated name = ClockSynthesizer_1000000s_1319s_9s_379s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000011110100001001000000
+	OUT_FREQ=32'b00000000000000000000010101110101
+	BITS=32'b00000000000000000000000000001001
+	TOGGLE_PERIOD=32'b00000000000000000000000101100101
+   Generated name = ClockSynthesizer_1000000s_1397s_9s_357s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\digitalorgan.v":4:7:4:18|Synthesizing module DigitalOrgan
+
+@W: CS149 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\digitalorgan.v":34:9:34:14|Port width mismatch for port value.  Formal has width 3, Actual 2
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Feb 15 16:02:44 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\synlog\digitalorgan_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+@N: BN116 :"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\24_organ_3\tflipflop.v":13:1:13:6|Removing sequential instance u0rc.genblk1\[1\]\.uitff.q of view:PrimLib.dff(prim) because there are no references to its outputs 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             42 uses
+DFFRH           1 use
+DFFSH           7 uses
+IBUF            9 uses
+OBUF            4 uses
+AND2            97 uses
+INV             34 uses
+XOR2            38 uses
+OR2             2 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Feb 15 16:02:46 2012
+
+###########################################################]

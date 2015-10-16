@@ -1,0 +1,46 @@
+MODULE Lab01FourPushButtons
+
+TITLE 'Four push button LED program'
+
+
+//   	Wiring diagram
+//
+//   	Outputs for driving LEDs
+//
+//  	D0 (31)  ->  L0 
+//   	D2 (32)  ->  L1
+//   	D4 (33)  ->  L2
+//   	D6 (34)  ->  L3
+//
+//   	Inputs from pushbuttons
+//
+//   	C2 (21) -> J17 (0)
+//	C4 (22) -> J17 (1)
+//	C6 (23) -> J17 (2)
+//	C8 (24) -> J17 (3)
+//
+
+DECLARATIONS
+
+	// wire four push buttons to CPLD inputs
+	pb0 pin 21;
+	pb1 pin 22;
+	pb2 pin 23;
+	pb3 pin 24;
+
+	// wire four LEDs to CPLD outputs
+	led0 pin 31 istype 'com';
+	led1 pin 32 istype 'com';
+	led2 pin 33 istype 'com';
+	led3 pin 34 istype 'com';
+
+	// define the led and button sets
+	buttons = [pb0..pb3];
+	leds	= [led0..led3];
+
+EQUATIONS
+
+	leds = !buttons;
+
+END
+

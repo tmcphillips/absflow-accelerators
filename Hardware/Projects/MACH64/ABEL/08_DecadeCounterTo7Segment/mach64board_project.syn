@@ -1,0 +1,19 @@
+JDF B
+// Created by Version 1.4 
+PROJECT UntitledProject
+DESIGN mach64board_project Normal
+DEVKIT LC4064V-75T48I
+ENTRY ABEL/Schematic
+MODULE bcdregisterto7segment.abl
+MODSTYLE BCDRegisterTo7Segment Normal
+MODULE tenbitscaler.abl
+MODSTYLE TenBitScaler Normal
+MODULE bcdtosevensegment.abl
+MODSTYLE BCDToSevenSegment Normal
+MODULE bcdupcounter.abl
+MODSTYLE BcdUpCounter Normal
+MODULE debouncer.abl
+MODSTYLE Debouncer Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE BCDRegisterTo7Segment

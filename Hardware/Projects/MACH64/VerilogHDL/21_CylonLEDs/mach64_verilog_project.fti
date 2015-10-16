@@ -1,0 +1,147 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Sat Feb 11 20:45:03 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION oneMHzClock:*_*_43
+DATA LOCATION reset_n:C_*_24
+DATA LOCATION LED_7_:C_1_28
+DATA LOCATION LED_6_:D_1_40
+DATA LOCATION LED_5_:D_12_39
+DATA LOCATION LED_4_:D_10_38
+DATA LOCATION LED_3_:D_8_34
+DATA LOCATION LED_2_:D_6_33
+DATA LOCATION LED_1_:D_4_32
+DATA LOCATION LED_0_:D_2_31
+DATA LOCATION u1rs_u1rc_genblk1_14__uitff_q:B_3
+DATA LOCATION center_0_:C_3
+DATA LOCATION inst_direction:A_6
+DATA LOCATION duty_0_:A_15
+DATA LOCATION duty_1_:C_15
+DATA LOCATION duty_2_:C_12
+DATA LOCATION duty_3_:C_6
+DATA LOCATION brightness_2__0_:A_12
+DATA LOCATION brightness_2__1_:A_7
+DATA LOCATION brightness_2__2_:C_0
+DATA LOCATION brightness_3__0_:B_0
+DATA LOCATION brightness_3__1_:A_8
+DATA LOCATION brightness_3__2_:C_2
+DATA LOCATION brightness_4__0_:C_7
+DATA LOCATION brightness_4__1_:A_9
+DATA LOCATION brightness_4__2_:A_2
+DATA LOCATION brightness_5__0_:B_4
+DATA LOCATION brightness_5__1_:C_8
+DATA LOCATION brightness_5__2_:C_4
+DATA LOCATION brightness_6__0_:A_13
+DATA LOCATION brightness_6__1_:B_1
+DATA LOCATION brightness_6__2_:C_5
+DATA LOCATION brightness_7__0_:A_10
+DATA LOCATION brightness_7__1_:A_11
+DATA LOCATION brightness_7__2_:A_3
+DATA LOCATION brightness_8__0_:C_9
+DATA LOCATION brightness_8__1_:B_2
+DATA LOCATION brightness_8__2_:A_4
+DATA LOCATION brightness_9__0_:B_5
+DATA LOCATION brightness_9__1_:C_10
+DATA LOCATION brightness_9__2_:A_5
+DATA LOCATION center_1_:A_0
+DATA LOCATION center_2_:A_1
+DATA LOCATION center_3_:C_11
+DATA LOCATION un1_direction10_0__n:A_14
+DATA LOCATION u1rs_u1rc_u0tff_q:D_14
+DATA LOCATION u1rs_u1rc_genblk1_0__uitff_q:D_15
+DATA LOCATION u1rs_u1rc_genblk1_1__uitff_q:B_6
+DATA LOCATION u1rs_u1rc_genblk1_2__uitff_q:D_0
+DATA LOCATION u1rs_u1rc_genblk1_3__uitff_q:C_13
+DATA LOCATION u1rs_u1rc_genblk1_4__uitff_q:C_14
+DATA LOCATION u1rs_u1rc_genblk1_5__uitff_q:B_7
+DATA LOCATION u1rs_u1rc_genblk1_6__uitff_q:B_8
+DATA LOCATION u1rs_u1rc_genblk1_7__uitff_q:B_9
+DATA LOCATION u1rs_u1rc_genblk1_8__uitff_q:B_10
+DATA LOCATION u1rs_u1rc_genblk1_9__uitff_q:B_11
+DATA LOCATION u1rs_u1rc_genblk1_10__uitff_q:B_12
+DATA LOCATION u1rs_u1rc_genblk1_11__uitff_q:B_13
+DATA LOCATION u1rs_u1rc_genblk1_12__uitff_q:B_14
+DATA LOCATION u1rs_u1rc_genblk1_13__uitff_q:B_15
+
+// Signals direction
+DATA IO_DIR oneMHzClock:IN
+DATA IO_DIR reset_n:IN
+DATA IO_DIR LED_7_:OUT
+DATA IO_DIR LED_6_:OUT
+DATA IO_DIR LED_5_:OUT
+DATA IO_DIR LED_4_:OUT
+DATA IO_DIR LED_3_:OUT
+DATA IO_DIR LED_2_:OUT
+DATA IO_DIR LED_1_:OUT
+DATA IO_DIR LED_0_:OUT
+
+// Global Clocks
+DATA GLB_CLOCK oneMHzClock:0
+DATA GLB_CLOCK oneMHzClock:0
+
+// Signals using Shared Clock or CE
+DATA tBCLK center_0_.C
+DATA tBCLK inst_direction.C
+DATA tBCLK brightness_2__0_.C
+DATA tBCLK brightness_2__1_.C
+DATA tBCLK brightness_2__2_.C
+DATA tBCLK brightness_3__0_.C
+DATA tBCLK brightness_3__1_.C
+DATA tBCLK brightness_3__2_.C
+DATA tBCLK brightness_4__0_.C
+DATA tBCLK brightness_4__1_.C
+DATA tBCLK brightness_4__2_.C
+DATA tBCLK brightness_5__0_.C
+DATA tBCLK brightness_5__1_.C
+DATA tBCLK brightness_5__2_.C
+DATA tBCLK brightness_6__0_.C
+DATA tBCLK brightness_6__1_.C
+DATA tBCLK brightness_6__2_.C
+DATA tBCLK brightness_7__0_.C
+DATA tBCLK brightness_7__1_.C
+DATA tBCLK brightness_7__2_.C
+DATA tBCLK brightness_8__0_.C
+DATA tBCLK brightness_8__1_.C
+DATA tBCLK brightness_8__2_.C
+DATA tBCLK brightness_9__0_.C
+DATA tBCLK brightness_9__1_.C
+DATA tBCLK brightness_9__2_.C
+DATA tBCLK center_1_.C
+DATA tBCLK center_2_.C
+DATA tBCLK center_3_.C
+DATA tBCLK u1rs_u1rc_genblk1_0__uitff_q.C
+
+// Block Load Adders
+DATA tBLA center_3_:2
+DATA tBLA center_2_:2
+DATA tBLA center_1_:2
+DATA tBLA duty_0_:2
+DATA tBLA inst_direction:2
+DATA tBLA center_0_:2
+DATA tBLA u1rs_u1rc_genblk1_14__uitff_q:2
+DATA tBLA reset_n:2
+DATA tBLA u1rs_u1rc_genblk1_4__uitff_q:1
+DATA tBLA u1rs_u1rc_genblk1_2__uitff_q:1
+DATA tBLA u1rs_u1rc_genblk1_1__uitff_q:1
+DATA tBLA u1rs_u1rc_genblk1_0__uitff_q:1
+DATA tBLA duty_3_:1
+DATA tBLA duty_2_:1
+DATA tBLA duty_1_:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM LED_7_
+DATA tOSM LED_6_
+DATA tOSM LED_5_
+DATA tOSM LED_4_
+DATA tOSM LED_3_
+DATA tOSM LED_2_
+DATA tOSM LED_1_
+DATA tOSM LED_0_

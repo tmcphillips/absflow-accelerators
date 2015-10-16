@@ -1,0 +1,912 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Fri Feb 17 11:33:48 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 5 toneOut_1_:31'ke'  oneMHzClock:43'ke'  toneOut_2_:32'ke'  toneOut_3_:33'ke'  \
+#  toneOut_4_:34'ke' 
+#$ NODES 214 toneout_1_4__n toneout_4_3__n toneout_3_2__n toneout_2_1__n \
+#  u0rs_u1rc_genblk1_2__uitff_q u3cs_outclock u4cs_outclock u5cs_outclock \
+#  u6cs_outclock u1rs_u1rc_genblk1_10__uitff_q u2rc_u0tff_q u2rc_genblk1_0__uitff_q \
+#  u2rc_genblk1_1__uitff_q songLineIndex_0_ songLineIndex_1_ songLineIndex_2_ \
+#  songLineIndex_3_ songLineIndex_4_ inst_breakAfterNote currentNote_4_ \
+#  currentNote_3_ currentNote_2_ currentNote_1_ inBreakAfterNote G_40 G_42 G_44 G_46 \
+#  u1rs_u1rc_u0tff_q u1rs_u1rc_genblk1_0__uitff_q u1rs_u1rc_genblk1_1__uitff_q \
+#  u1rs_u1rc_genblk1_2__uitff_q u1rs_u1rc_genblk1_3__uitff_q \
+#  u1rs_u1rc_genblk1_4__uitff_q u1rs_u1rc_genblk1_5__uitff_q \
+#  u1rs_u1rc_genblk1_6__uitff_q u1rs_u1rc_genblk1_7__uitff_q \
+#  u1rs_u1rc_genblk1_8__uitff_q u1rs_u1rc_genblk1_9__uitff_q u0rs_u1rc_u0tff_q \
+#  u0rs_u1rc_genblk1_0__uitff_q u0rs_u1rc_genblk1_1__uitff_q N_39 N_42 N_45 N_9 N_11 \
+#  N_12 N_18 N_19 N_20 N_33 N_34 N_35 N_36 N_37 N_38 N_40 u6cs_count_0_ u6cs_G_7 u6cs_G_9 \
+#  u6cs_count_1_ u6cs_count_2_ u6cs_count_3_ u6cs_count_4_ u6cs_count_5_ \
+#  u6cs_outclock_0 u5cs_count_0_ u5cs_G_9 u5cs_count_1_ u5cs_count_2_ u5cs_count_3_ \
+#  u5cs_count_4_ u5cs_count_5_ u5cs_outclock_0 u4cs_count_0_ u4cs_G_3 u4cs_G_7 \
+#  u4cs_count_1_ u4cs_count_2_ u4cs_count_3_ u4cs_count_4_ u4cs_count_5_ \
+#  u4cs_outclock_0 u3cs_count_0_ u3cs_G_5 u3cs_count_1_ u3cs_count_2_ u3cs_count_3_ \
+#  u3cs_count_4_ u3cs_count_5_ u3cs_outclock_0 u5cs_count40_n u5cs_G_7 u5cs_G_11 \
+#  u5cs_G_3 u5cs_G_5 u5cs_n_17_n u5cs_n_14_n u5cs_n_11_n u5cs_n_8_n u4cs_count26_n \
+#  u4cs_G_9 u4cs_G_11 u4cs_G_5 u4cs_n_17_n u4cs_n_14_n u4cs_n_11_n u4cs_n_8_n u3cs_n_8_n \
+#  u3cs_n_11_n u3cs_n_14_n u3cs_n_17_n u3cs_count12_n u3cs_G_3 u3cs_G_7 u3cs_G_9 \
+#  u3cs_G_11 u6cs_n_8_n u6cs_n_11_n u6cs_n_14_n u6cs_n_17_n u6cs_count54_n u6cs_G_3 \
+#  u6cs_G_5 u6cs_G_11 inBreakAfterNote_i u6cs_count_i_0__n u6cs_count54_i_n \
+#  u6cs_un42_count_1_i_4__n u6cs_un42_count_1_i_3__n u3cs_count_i_0_2__n \
+#  u3cs_count_i_0__n u3cs_count12_i_n u4cs_un14_count_1_i_3__n \
+#  u4cs_un14_count_1_i_1__n u4cs_count26_i_n u4cs_count_i_0__n u5cs_count40_i_n \
+#  u5cs_count_i_0__n u5cs_count_i_4__n songlineindex_i_0__n songlineindex_i_1__n \
+#  songlineindex_i_2__n songlineindex_i_3__n songlineindex_i_4__n \
+#  u1rs_counter_i_0__n toneBaseClock_i u0rs_counter_i_2__n u0rs_counter_i_1__n \
+#  u0rs_counter_i_0__n u1rs_counter_i_6__n u1rs_counter_i_5__n u1rs_counter_i_4__n \
+#  u1rs_counter_i_3__n u1rs_counter_i_8__n u1rs_counter_i_7__n u1rs_counter_i_10__n \
+#  u1rs_counter_i_9__n u1rs_counter_i_2__n u1rs_counter_i_1__n metronomeBaseClock_i \
+#  metronomecounter_i_2__n metronomecounter_i_1__n metronomecounter_i_0__n \
+#  oneMHzClock_c songline_2_0_5__n N_33_i N_40_i N_20_i N_39_i songline_2_0_3__n N_35_i \
+#  N_36_i N_19_i N_34_i N_12_0 N_11_i N_9_i N_37_i N_38_i N_18_i songline_2_0_1_3__n \
+#  songline_2_0_2_3__n songline_2_0_1_5__n songline_2_0_2_5__n N_36_1 N_36_2 \
+#  toneout_4_1_3__n u5cs_count40_1_n u5cs_count40_2_n u5cs_count40_3_n \
+#  u5cs_count40_4_n toneout_3_1_2__n u4cs_count26_1_n u4cs_count26_2_n \
+#  u4cs_count26_3_n u4cs_count26_4_n u3cs_count12_1_n u3cs_count12_2_n \
+#  u3cs_count12_3_n u3cs_count12_4_n toneout_2_1_1__n inBreakAfterNote_1 \
+#  inBreakAfterNote_2 u6cs_count54_1_n u6cs_count54_2_n u6cs_count54_3_n \
+#  u6cs_count54_4_n toneout_1_1_4__n N_13_i_1 N_10_i_1 N_4_i_1 N_37_1
+.model digitalorgan
+.inputs oneMHzClock.BLIF toneout_1_4__n.BLIF toneout_4_3__n.BLIF \
+toneout_3_2__n.BLIF toneout_2_1__n.BLIF u0rs_u1rc_genblk1_2__uitff_q.BLIF \
+u3cs_outclock.BLIF u4cs_outclock.BLIF u5cs_outclock.BLIF u6cs_outclock.BLIF \
+u1rs_u1rc_genblk1_10__uitff_q.BLIF u2rc_u0tff_q.BLIF \
+u2rc_genblk1_0__uitff_q.BLIF u2rc_genblk1_1__uitff_q.BLIF \
+songLineIndex_0_.BLIF songLineIndex_1_.BLIF songLineIndex_2_.BLIF \
+songLineIndex_3_.BLIF songLineIndex_4_.BLIF inst_breakAfterNote.BLIF \
+currentNote_4_.BLIF currentNote_3_.BLIF currentNote_2_.BLIF \
+currentNote_1_.BLIF inBreakAfterNote.BLIF G_40.BLIF G_42.BLIF G_44.BLIF \
+G_46.BLIF u1rs_u1rc_u0tff_q.BLIF u1rs_u1rc_genblk1_0__uitff_q.BLIF \
+u1rs_u1rc_genblk1_1__uitff_q.BLIF u1rs_u1rc_genblk1_2__uitff_q.BLIF \
+u1rs_u1rc_genblk1_3__uitff_q.BLIF u1rs_u1rc_genblk1_4__uitff_q.BLIF \
+u1rs_u1rc_genblk1_5__uitff_q.BLIF u1rs_u1rc_genblk1_6__uitff_q.BLIF \
+u1rs_u1rc_genblk1_7__uitff_q.BLIF u1rs_u1rc_genblk1_8__uitff_q.BLIF \
+u1rs_u1rc_genblk1_9__uitff_q.BLIF u0rs_u1rc_u0tff_q.BLIF \
+u0rs_u1rc_genblk1_0__uitff_q.BLIF u0rs_u1rc_genblk1_1__uitff_q.BLIF N_39.BLIF \
+N_42.BLIF N_45.BLIF N_9.BLIF N_11.BLIF N_12.BLIF N_18.BLIF N_19.BLIF N_20.BLIF \
+N_33.BLIF N_34.BLIF N_35.BLIF N_36.BLIF N_37.BLIF N_38.BLIF N_40.BLIF \
+u6cs_count_0_.BLIF u6cs_G_7.BLIF u6cs_G_9.BLIF u6cs_count_1_.BLIF \
+u6cs_count_2_.BLIF u6cs_count_3_.BLIF u6cs_count_4_.BLIF u6cs_count_5_.BLIF \
+u6cs_outclock_0.BLIF u5cs_count_0_.BLIF u5cs_G_9.BLIF u5cs_count_1_.BLIF \
+u5cs_count_2_.BLIF u5cs_count_3_.BLIF u5cs_count_4_.BLIF u5cs_count_5_.BLIF \
+u5cs_outclock_0.BLIF u4cs_count_0_.BLIF u4cs_G_3.BLIF u4cs_G_7.BLIF \
+u4cs_count_1_.BLIF u4cs_count_2_.BLIF u4cs_count_3_.BLIF u4cs_count_4_.BLIF \
+u4cs_count_5_.BLIF u4cs_outclock_0.BLIF u3cs_count_0_.BLIF u3cs_G_5.BLIF \
+u3cs_count_1_.BLIF u3cs_count_2_.BLIF u3cs_count_3_.BLIF u3cs_count_4_.BLIF \
+u3cs_count_5_.BLIF u3cs_outclock_0.BLIF u5cs_count40_n.BLIF u5cs_G_7.BLIF \
+u5cs_G_11.BLIF u5cs_G_3.BLIF u5cs_G_5.BLIF u5cs_n_17_n.BLIF u5cs_n_14_n.BLIF \
+u5cs_n_11_n.BLIF u5cs_n_8_n.BLIF u4cs_count26_n.BLIF u4cs_G_9.BLIF \
+u4cs_G_11.BLIF u4cs_G_5.BLIF u4cs_n_17_n.BLIF u4cs_n_14_n.BLIF \
+u4cs_n_11_n.BLIF u4cs_n_8_n.BLIF u3cs_n_8_n.BLIF u3cs_n_11_n.BLIF \
+u3cs_n_14_n.BLIF u3cs_n_17_n.BLIF u3cs_count12_n.BLIF u3cs_G_3.BLIF \
+u3cs_G_7.BLIF u3cs_G_9.BLIF u3cs_G_11.BLIF u6cs_n_8_n.BLIF u6cs_n_11_n.BLIF \
+u6cs_n_14_n.BLIF u6cs_n_17_n.BLIF u6cs_count54_n.BLIF u6cs_G_3.BLIF \
+u6cs_G_5.BLIF u6cs_G_11.BLIF inBreakAfterNote_i.BLIF u6cs_count_i_0__n.BLIF \
+u6cs_count54_i_n.BLIF u6cs_un42_count_1_i_4__n.BLIF \
+u6cs_un42_count_1_i_3__n.BLIF u3cs_count_i_0_2__n.BLIF u3cs_count_i_0__n.BLIF \
+u3cs_count12_i_n.BLIF u4cs_un14_count_1_i_3__n.BLIF \
+u4cs_un14_count_1_i_1__n.BLIF u4cs_count26_i_n.BLIF u4cs_count_i_0__n.BLIF \
+u5cs_count40_i_n.BLIF u5cs_count_i_0__n.BLIF u5cs_count_i_4__n.BLIF \
+songlineindex_i_0__n.BLIF songlineindex_i_1__n.BLIF songlineindex_i_2__n.BLIF \
+songlineindex_i_3__n.BLIF songlineindex_i_4__n.BLIF u1rs_counter_i_0__n.BLIF \
+toneBaseClock_i.BLIF u0rs_counter_i_2__n.BLIF u0rs_counter_i_1__n.BLIF \
+u0rs_counter_i_0__n.BLIF u1rs_counter_i_6__n.BLIF u1rs_counter_i_5__n.BLIF \
+u1rs_counter_i_4__n.BLIF u1rs_counter_i_3__n.BLIF u1rs_counter_i_8__n.BLIF \
+u1rs_counter_i_7__n.BLIF u1rs_counter_i_10__n.BLIF u1rs_counter_i_9__n.BLIF \
+u1rs_counter_i_2__n.BLIF u1rs_counter_i_1__n.BLIF metronomeBaseClock_i.BLIF \
+metronomecounter_i_2__n.BLIF metronomecounter_i_1__n.BLIF \
+metronomecounter_i_0__n.BLIF oneMHzClock_c.BLIF songline_2_0_5__n.BLIF \
+N_33_i.BLIF N_40_i.BLIF N_20_i.BLIF N_39_i.BLIF songline_2_0_3__n.BLIF \
+N_35_i.BLIF N_36_i.BLIF N_19_i.BLIF N_34_i.BLIF N_12_0.BLIF N_11_i.BLIF \
+N_9_i.BLIF N_37_i.BLIF N_38_i.BLIF N_18_i.BLIF songline_2_0_1_3__n.BLIF \
+songline_2_0_2_3__n.BLIF songline_2_0_1_5__n.BLIF songline_2_0_2_5__n.BLIF \
+N_36_1.BLIF N_36_2.BLIF toneout_4_1_3__n.BLIF u5cs_count40_1_n.BLIF \
+u5cs_count40_2_n.BLIF u5cs_count40_3_n.BLIF u5cs_count40_4_n.BLIF \
+toneout_3_1_2__n.BLIF u4cs_count26_1_n.BLIF u4cs_count26_2_n.BLIF \
+u4cs_count26_3_n.BLIF u4cs_count26_4_n.BLIF u3cs_count12_1_n.BLIF \
+u3cs_count12_2_n.BLIF u3cs_count12_3_n.BLIF u3cs_count12_4_n.BLIF \
+toneout_2_1_1__n.BLIF inBreakAfterNote_1.BLIF inBreakAfterNote_2.BLIF \
+u6cs_count54_1_n.BLIF u6cs_count54_2_n.BLIF u6cs_count54_3_n.BLIF \
+u6cs_count54_4_n.BLIF toneout_1_1_4__n.BLIF N_13_i_1.BLIF N_10_i_1.BLIF \
+N_4_i_1.BLIF N_37_1.BLIF
+.outputs toneOut_1_ toneOut_2_ toneOut_3_ toneOut_4_ u3cs_count_1_.D \
+u3cs_count_1_.C u3cs_count_2_.D u3cs_count_2_.C u3cs_count_3_.D \
+u3cs_count_3_.C u3cs_count_4_.D u3cs_count_4_.C u3cs_count_5_.D \
+u3cs_count_5_.C u3cs_outclock.D u3cs_outclock.C u3cs_count_0_.D \
+u3cs_count_0_.C u4cs_count_1_.D u4cs_count_1_.C u4cs_count_2_.D \
+u4cs_count_2_.C u4cs_count_3_.D u4cs_count_3_.C u4cs_count_4_.D \
+u4cs_count_4_.C u4cs_count_5_.D u4cs_count_5_.C u4cs_outclock.D \
+u4cs_outclock.C u4cs_count_0_.D u4cs_count_0_.C u5cs_count_1_.D \
+u5cs_count_1_.C u5cs_count_2_.D u5cs_count_2_.C u5cs_count_3_.D \
+u5cs_count_3_.C u5cs_count_4_.D u5cs_count_4_.C u5cs_count_5_.D \
+u5cs_count_5_.C u5cs_outclock.D u5cs_outclock.C u5cs_count_0_.D \
+u5cs_count_0_.C u6cs_count_1_.D u6cs_count_1_.C u6cs_count_2_.D \
+u6cs_count_2_.C u6cs_count_3_.D u6cs_count_3_.C u6cs_count_4_.D \
+u6cs_count_4_.C u6cs_count_5_.D u6cs_count_5_.C u6cs_outclock.D \
+u6cs_outclock.C u6cs_count_0_.D u6cs_count_0_.C songLineIndex_2_.D \
+songLineIndex_2_.C songLineIndex_3_.D songLineIndex_3_.C songLineIndex_4_.D \
+songLineIndex_4_.C inst_breakAfterNote.D inst_breakAfterNote.C \
+currentNote_4_.D currentNote_4_.C currentNote_3_.D currentNote_3_.C \
+currentNote_2_.D currentNote_2_.C currentNote_1_.D currentNote_1_.C \
+songLineIndex_0_.D songLineIndex_0_.C songLineIndex_1_.D songLineIndex_1_.C \
+u1rs_u1rc_genblk1_6__uitff_q.D u1rs_u1rc_genblk1_6__uitff_q.C \
+u1rs_u1rc_genblk1_2__uitff_q.D u1rs_u1rc_genblk1_2__uitff_q.C u2rc_u0tff_q.D \
+u2rc_u0tff_q.C u2rc_genblk1_0__uitff_q.D u2rc_genblk1_0__uitff_q.C \
+u2rc_genblk1_1__uitff_q.D u2rc_genblk1_1__uitff_q.C \
+u1rs_u1rc_genblk1_0__uitff_q.D u1rs_u1rc_genblk1_0__uitff_q.C \
+u1rs_u1rc_genblk1_10__uitff_q.D u1rs_u1rc_genblk1_10__uitff_q.C \
+u1rs_u1rc_genblk1_8__uitff_q.D u1rs_u1rc_genblk1_8__uitff_q.C \
+u1rs_u1rc_genblk1_4__uitff_q.D u1rs_u1rc_genblk1_4__uitff_q.C \
+u1rs_u1rc_genblk1_1__uitff_q.D u1rs_u1rc_genblk1_1__uitff_q.C \
+u1rs_u1rc_genblk1_9__uitff_q.D u1rs_u1rc_genblk1_9__uitff_q.C \
+u1rs_u1rc_genblk1_7__uitff_q.D u1rs_u1rc_genblk1_7__uitff_q.C \
+u1rs_u1rc_genblk1_3__uitff_q.D u1rs_u1rc_genblk1_3__uitff_q.C \
+u1rs_u1rc_genblk1_5__uitff_q.D u1rs_u1rc_genblk1_5__uitff_q.C \
+u0rs_u1rc_u0tff_q.D u0rs_u1rc_u0tff_q.C u0rs_u1rc_genblk1_0__uitff_q.D \
+u0rs_u1rc_genblk1_0__uitff_q.C u0rs_u1rc_genblk1_1__uitff_q.D \
+u0rs_u1rc_genblk1_1__uitff_q.C u0rs_u1rc_genblk1_2__uitff_q.D \
+u0rs_u1rc_genblk1_2__uitff_q.C u1rs_u1rc_u0tff_q.D u1rs_u1rc_u0tff_q.C \
+toneout_1_4__n toneout_4_3__n toneout_3_2__n toneout_2_1__n inBreakAfterNote \
+N_39 N_42 N_45 N_9 N_11 N_12 N_18 N_19 N_20 N_33 N_34 N_35 N_36 N_37 N_38 N_40 \
+u5cs_count40_n u5cs_n_17_n u5cs_n_14_n u5cs_n_11_n u5cs_n_8_n u4cs_count26_n \
+u4cs_n_17_n u4cs_n_14_n u4cs_n_11_n u4cs_n_8_n u3cs_n_8_n u3cs_n_11_n \
+u3cs_n_14_n u3cs_n_17_n u3cs_count12_n u6cs_n_8_n u6cs_n_11_n u6cs_n_14_n \
+u6cs_n_17_n u6cs_count54_n inBreakAfterNote_i u6cs_count_i_0__n \
+u6cs_count54_i_n u6cs_un42_count_1_i_4__n u6cs_un42_count_1_i_3__n \
+u3cs_count_i_0_2__n u3cs_count_i_0__n u3cs_count12_i_n \
+u4cs_un14_count_1_i_3__n u4cs_un14_count_1_i_1__n u4cs_count26_i_n \
+u4cs_count_i_0__n u5cs_count40_i_n u5cs_count_i_0__n u5cs_count_i_4__n \
+songlineindex_i_0__n songlineindex_i_1__n songlineindex_i_2__n \
+songlineindex_i_3__n songlineindex_i_4__n u1rs_counter_i_0__n toneBaseClock_i \
+u0rs_counter_i_2__n u0rs_counter_i_1__n u0rs_counter_i_0__n \
+u1rs_counter_i_6__n u1rs_counter_i_5__n u1rs_counter_i_4__n \
+u1rs_counter_i_3__n u1rs_counter_i_8__n u1rs_counter_i_7__n \
+u1rs_counter_i_10__n u1rs_counter_i_9__n u1rs_counter_i_2__n \
+u1rs_counter_i_1__n metronomeBaseClock_i metronomecounter_i_2__n \
+metronomecounter_i_1__n metronomecounter_i_0__n oneMHzClock_c \
+songline_2_0_5__n N_33_i N_40_i N_20_i N_39_i songline_2_0_3__n N_35_i N_36_i \
+N_19_i N_34_i N_12_0 N_11_i N_9_i N_37_i N_38_i N_18_i songline_2_0_1_3__n \
+songline_2_0_2_3__n songline_2_0_1_5__n songline_2_0_2_5__n N_36_1 N_36_2 \
+toneout_4_1_3__n u5cs_count40_1_n u5cs_count40_2_n u5cs_count40_3_n \
+u5cs_count40_4_n toneout_3_1_2__n u4cs_count26_1_n u4cs_count26_2_n \
+u4cs_count26_3_n u4cs_count26_4_n u3cs_count12_1_n u3cs_count12_2_n \
+u3cs_count12_3_n u3cs_count12_4_n toneout_2_1_1__n inBreakAfterNote_1 \
+inBreakAfterNote_2 u6cs_count54_1_n u6cs_count54_2_n u6cs_count54_3_n \
+u6cs_count54_4_n toneout_1_1_4__n N_13_i_1 N_10_i_1 N_4_i_1 N_37_1 G_40 G_42 \
+G_44 G_46 u6cs_G_7 u6cs_G_9 u6cs_outclock_0 u5cs_G_9 u5cs_outclock_0 u4cs_G_3 \
+u4cs_G_7 u4cs_outclock_0 u3cs_G_5 u3cs_outclock_0 u5cs_G_7 u5cs_G_11 u5cs_G_3 \
+u5cs_G_5 u4cs_G_9 u4cs_G_11 u4cs_G_5 u3cs_G_3 u3cs_G_7 u3cs_G_9 u3cs_G_11 \
+u6cs_G_3 u6cs_G_5 u6cs_G_11
+.names u3cs_count12_i_n.BLIF u3cs_G_3.BLIF u3cs_count_1_.D
+11 1
+.names u3cs_count12_i_n.BLIF u3cs_G_7.BLIF u3cs_count_3_.D
+11 1
+.names u3cs_count12_i_n.BLIF u3cs_G_9.BLIF u3cs_count_4_.D
+11 1
+.names u3cs_count12_i_n.BLIF u3cs_G_11.BLIF u3cs_count_5_.D
+11 1
+.names u3cs_count12_i_n.BLIF u3cs_count_i_0__n.BLIF u3cs_count_0_.D
+11 1
+.names u4cs_count26_i_n.BLIF u4cs_G_5.BLIF u4cs_count_2_.D
+11 1
+.names u4cs_count26_i_n.BLIF u4cs_G_9.BLIF u4cs_count_4_.D
+11 1
+.names u4cs_count26_i_n.BLIF u4cs_G_11.BLIF u4cs_count_5_.D
+11 1
+.names u4cs_count26_i_n.BLIF u4cs_count_i_0__n.BLIF u4cs_count_0_.D
+11 1
+.names u5cs_count40_i_n.BLIF u5cs_G_3.BLIF u5cs_count_1_.D
+11 1
+.names u5cs_count40_i_n.BLIF u5cs_G_5.BLIF u5cs_count_2_.D
+11 1
+.names u5cs_count40_i_n.BLIF u5cs_G_7.BLIF u5cs_count_3_.D
+11 1
+.names u5cs_count40_i_n.BLIF u5cs_G_11.BLIF u5cs_count_5_.D
+11 1
+.names u5cs_count40_i_n.BLIF u5cs_count_i_0__n.BLIF u5cs_count_0_.D
+11 1
+.names u6cs_count54_i_n.BLIF u6cs_G_3.BLIF u6cs_count_1_.D
+11 1
+.names u6cs_count54_i_n.BLIF u6cs_G_5.BLIF u6cs_count_2_.D
+11 1
+.names u6cs_count54_i_n.BLIF u6cs_G_11.BLIF u6cs_count_5_.D
+11 1
+.names u6cs_count54_i_n.BLIF u6cs_count_i_0__n.BLIF u6cs_count_0_.D
+11 1
+.names songline_2_0_5__n.BLIF inst_breakAfterNote.D
+0 1
+.names N_10_i_1.BLIF songLineIndex_3_.BLIF currentNote_4_.D
+11 1
+.names songline_2_0_3__n.BLIF currentNote_3_.D
+0 1
+.names N_13_i_1.BLIF songlineindex_i_2__n.BLIF currentNote_2_.D
+11 1
+.names N_4_i_1.BLIF N_19_i.BLIF currentNote_1_.D
+11 1
+.names oneMHzClock_c.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+.names toneout_1_1_4__n.BLIF inBreakAfterNote_i.BLIF toneout_1_4__n
+11 1
+.names toneout_4_1_3__n.BLIF inBreakAfterNote_i.BLIF toneout_4_3__n
+11 1
+.names toneout_3_1_2__n.BLIF inBreakAfterNote_i.BLIF toneout_3_2__n
+11 1
+.names toneout_2_1_1__n.BLIF inBreakAfterNote_i.BLIF toneout_2_1__n
+11 1
+.names inBreakAfterNote_1.BLIF inBreakAfterNote_2.BLIF inBreakAfterNote
+11 1
+.names songLineIndex_0_.BLIF songLineIndex_1_.BLIF N_39
+11 1
+.names N_39.BLIF songLineIndex_2_.BLIF N_42
+11 1
+.names N_42.BLIF songLineIndex_3_.BLIF N_45
+11 1
+.names N_9_i.BLIF N_9
+0 1
+.names N_11_i.BLIF N_11
+0 1
+.names N_12_0.BLIF N_12
+0 1
+.names N_12.BLIF songlineindex_i_2__n.BLIF N_18
+11 1
+.names songLineIndex_2_.BLIF songlineindex_i_3__n.BLIF N_19
+11 1
+.names N_9.BLIF songlineindex_i_3__n.BLIF N_20
+11 1
+.names songlineindex_i_1__n.BLIF songlineindex_i_4__n.BLIF N_33
+11 1
+.names N_11_i.BLIF songlineindex_i_1__n.BLIF N_34
+11 1
+.names N_9_i.BLIF N_38.BLIF N_35
+11 1
+.names N_36_1.BLIF N_36_2.BLIF N_36
+11 1
+.names N_37_1.BLIF songlineindex_i_0__n.BLIF N_37
+11 1
+.names songlineindex_i_0__n.BLIF songlineindex_i_1__n.BLIF N_38
+11 1
+.names songLineIndex_4_.BLIF songlineindex_i_2__n.BLIF N_40
+11 1
+.names u5cs_count40_4_n.BLIF u5cs_count40_3_n.BLIF u5cs_count40_n
+11 1
+.names u5cs_n_14_n.BLIF u5cs_count_4_.BLIF u5cs_n_17_n
+11 1
+.names u5cs_n_11_n.BLIF u5cs_count_3_.BLIF u5cs_n_14_n
+11 1
+.names u5cs_n_8_n.BLIF u5cs_count_2_.BLIF u5cs_n_11_n
+11 1
+.names u5cs_count_0_.BLIF u5cs_count_1_.BLIF u5cs_n_8_n
+11 1
+.names u4cs_count26_4_n.BLIF u4cs_count26_3_n.BLIF u4cs_count26_n
+11 1
+.names u4cs_n_14_n.BLIF u4cs_count_4_.BLIF u4cs_n_17_n
+11 1
+.names u4cs_n_11_n.BLIF u4cs_count_3_.BLIF u4cs_n_14_n
+11 1
+.names u4cs_n_8_n.BLIF u4cs_count_2_.BLIF u4cs_n_11_n
+11 1
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_n_8_n
+11 1
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_n_8_n
+11 1
+.names u3cs_n_8_n.BLIF u3cs_count_2_.BLIF u3cs_n_11_n
+11 1
+.names u3cs_n_11_n.BLIF u3cs_count_3_.BLIF u3cs_n_14_n
+11 1
+.names u3cs_n_14_n.BLIF u3cs_count_4_.BLIF u3cs_n_17_n
+11 1
+.names u3cs_count12_4_n.BLIF u3cs_count12_3_n.BLIF u3cs_count12_n
+11 1
+.names u6cs_count_0_.BLIF u6cs_count_1_.BLIF u6cs_n_8_n
+11 1
+.names u6cs_n_8_n.BLIF u6cs_count_2_.BLIF u6cs_n_11_n
+11 1
+.names u6cs_n_11_n.BLIF u6cs_count_3_.BLIF u6cs_n_14_n
+11 1
+.names u6cs_n_14_n.BLIF u6cs_count_4_.BLIF u6cs_n_17_n
+11 1
+.names u6cs_count54_4_n.BLIF u6cs_count54_3_n.BLIF u6cs_count54_n
+11 1
+.names inBreakAfterNote.BLIF inBreakAfterNote_i
+0 1
+.names u6cs_count_0_.BLIF u6cs_count_i_0__n
+0 1
+.names u6cs_count54_n.BLIF u6cs_count54_i_n
+0 1
+.names u6cs_G_9.BLIF u6cs_un42_count_1_i_4__n
+0 1
+.names u6cs_G_7.BLIF u6cs_un42_count_1_i_3__n
+0 1
+.names u3cs_count_2_.BLIF u3cs_count_i_0_2__n
+0 1
+.names u3cs_count_0_.BLIF u3cs_count_i_0__n
+0 1
+.names u3cs_count12_n.BLIF u3cs_count12_i_n
+0 1
+.names u4cs_G_7.BLIF u4cs_un14_count_1_i_3__n
+0 1
+.names u4cs_G_3.BLIF u4cs_un14_count_1_i_1__n
+0 1
+.names u4cs_count26_n.BLIF u4cs_count26_i_n
+0 1
+.names u4cs_count_0_.BLIF u4cs_count_i_0__n
+0 1
+.names u5cs_count40_n.BLIF u5cs_count40_i_n
+0 1
+.names u5cs_count_0_.BLIF u5cs_count_i_0__n
+0 1
+.names u5cs_count_4_.BLIF u5cs_count_i_4__n
+0 1
+.names songLineIndex_0_.BLIF songlineindex_i_0__n
+0 1
+.names songLineIndex_1_.BLIF songlineindex_i_1__n
+0 1
+.names songLineIndex_2_.BLIF songlineindex_i_2__n
+0 1
+.names songLineIndex_3_.BLIF songlineindex_i_3__n
+0 1
+.names songLineIndex_4_.BLIF songlineindex_i_4__n
+0 1
+.names u1rs_u1rc_u0tff_q.BLIF u1rs_counter_i_0__n
+0 1
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF toneBaseClock_i
+0 1
+.names u0rs_u1rc_genblk1_1__uitff_q.BLIF u0rs_counter_i_2__n
+0 1
+.names u0rs_u1rc_genblk1_0__uitff_q.BLIF u0rs_counter_i_1__n
+0 1
+.names u0rs_u1rc_u0tff_q.BLIF u0rs_counter_i_0__n
+0 1
+.names u1rs_u1rc_genblk1_5__uitff_q.BLIF u1rs_counter_i_6__n
+0 1
+.names u1rs_u1rc_genblk1_4__uitff_q.BLIF u1rs_counter_i_5__n
+0 1
+.names u1rs_u1rc_genblk1_3__uitff_q.BLIF u1rs_counter_i_4__n
+0 1
+.names u1rs_u1rc_genblk1_2__uitff_q.BLIF u1rs_counter_i_3__n
+0 1
+.names u1rs_u1rc_genblk1_7__uitff_q.BLIF u1rs_counter_i_8__n
+0 1
+.names u1rs_u1rc_genblk1_6__uitff_q.BLIF u1rs_counter_i_7__n
+0 1
+.names u1rs_u1rc_genblk1_9__uitff_q.BLIF u1rs_counter_i_10__n
+0 1
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u1rs_counter_i_9__n
+0 1
+.names u1rs_u1rc_genblk1_1__uitff_q.BLIF u1rs_counter_i_2__n
+0 1
+.names u1rs_u1rc_genblk1_0__uitff_q.BLIF u1rs_counter_i_1__n
+0 1
+.names u1rs_u1rc_genblk1_10__uitff_q.BLIF metronomeBaseClock_i
+0 1
+.names u2rc_genblk1_1__uitff_q.BLIF metronomecounter_i_2__n
+0 1
+.names u2rc_genblk1_0__uitff_q.BLIF metronomecounter_i_1__n
+0 1
+.names u2rc_u0tff_q.BLIF metronomecounter_i_0__n
+0 1
+.names songline_2_0_1_5__n.BLIF songline_2_0_2_5__n.BLIF songline_2_0_5__n
+11 1
+.names N_33.BLIF N_33_i
+0 1
+.names N_40.BLIF N_40_i
+0 1
+.names N_20.BLIF N_20_i
+0 1
+.names N_39.BLIF N_39_i
+0 1
+.names songline_2_0_1_3__n.BLIF songline_2_0_2_3__n.BLIF songline_2_0_3__n
+11 1
+.names N_35.BLIF N_35_i
+0 1
+.names N_36.BLIF N_36_i
+0 1
+.names N_19.BLIF N_19_i
+0 1
+.names N_34.BLIF N_34_i
+0 1
+.names N_11_i.BLIF songLineIndex_1_.BLIF N_12_0
+11 1
+.names songlineindex_i_0__n.BLIF songlineindex_i_3__n.BLIF N_11_i
+11 1
+.names songLineIndex_2_.BLIF songlineindex_i_4__n.BLIF N_9_i
+11 1
+.names N_37.BLIF N_37_i
+0 1
+.names N_38.BLIF N_38_i
+0 1
+.names N_18.BLIF N_18_i
+0 1
+.names N_19_i.BLIF N_34_i.BLIF songline_2_0_1_3__n
+11 1
+.names N_35_i.BLIF N_36_i.BLIF songline_2_0_2_3__n
+11 1
+.names N_20_i.BLIF N_33_i.BLIF songline_2_0_1_5__n
+11 1
+.names N_39_i.BLIF N_40_i.BLIF songline_2_0_2_5__n
+11 1
+.names N_40.BLIF songLineIndex_1_.BLIF N_36_1
+11 1
+.names songLineIndex_3_.BLIF songlineindex_i_0__n.BLIF N_36_2
+11 1
+.names u5cs_outclock.BLIF currentNote_3_.BLIF toneout_4_1_3__n
+11 1
+.names u5cs_G_3.BLIF u5cs_G_7.BLIF u5cs_count40_1_n
+11 1
+.names u5cs_count_2_.BLIF u5cs_count_5_.BLIF u5cs_count40_2_n
+11 1
+.names u5cs_count_i_0__n.BLIF u5cs_count_i_4__n.BLIF u5cs_count40_3_n
+11 1
+.names u5cs_count40_1_n.BLIF u5cs_count40_2_n.BLIF u5cs_count40_4_n
+11 1
+.names u4cs_outclock.BLIF currentNote_2_.BLIF toneout_3_1_2__n
+11 1
+.names u4cs_un14_count_1_i_1__n.BLIF u4cs_un14_count_1_i_3__n.BLIF \
+u4cs_count26_1_n
+11 1
+.names u4cs_count_2_.BLIF u4cs_count_i_0__n.BLIF u4cs_count26_2_n
+11 1
+.names u4cs_G_9.BLIF u4cs_G_11.BLIF u4cs_count26_3_n
+11 1
+.names u4cs_count26_1_n.BLIF u4cs_count26_2_n.BLIF u4cs_count26_4_n
+11 1
+.names u3cs_count_i_0__n.BLIF u3cs_count_i_0_2__n.BLIF u3cs_count12_1_n
+11 1
+.names u3cs_count_1_.BLIF u3cs_count_5_.BLIF u3cs_count12_2_n
+11 1
+.names u3cs_G_7.BLIF u3cs_G_9.BLIF u3cs_count12_3_n
+11 1
+.names u3cs_count12_1_n.BLIF u3cs_count12_2_n.BLIF u3cs_count12_4_n
+11 1
+.names u3cs_outclock.BLIF currentNote_1_.BLIF toneout_2_1_1__n
+11 1
+.names inst_breakAfterNote.BLIF u2rc_u0tff_q.BLIF inBreakAfterNote_1
+11 1
+.names u2rc_genblk1_0__uitff_q.BLIF u2rc_genblk1_1__uitff_q.BLIF \
+inBreakAfterNote_2
+11 1
+.names u6cs_un42_count_1_i_3__n.BLIF u6cs_un42_count_1_i_4__n.BLIF \
+u6cs_count54_1_n
+11 1
+.names u6cs_count_1_.BLIF u6cs_count_2_.BLIF u6cs_count54_2_n
+11 1
+.names u6cs_count_5_.BLIF u6cs_count_i_0__n.BLIF u6cs_count54_3_n
+11 1
+.names u6cs_count54_1_n.BLIF u6cs_count54_2_n.BLIF u6cs_count54_4_n
+11 1
+.names u6cs_outclock.BLIF currentNote_4_.BLIF toneout_1_1_4__n
+11 1
+.names N_11.BLIF N_37_i.BLIF N_13_i_1
+11 1
+.names N_9_i.BLIF N_38_i.BLIF N_10_i_1
+11 1
+.names N_9.BLIF N_18_i.BLIF N_4_i_1
+11 1
+.names songLineIndex_1_.BLIF songLineIndex_4_.BLIF N_37_1
+11 1
+.names songLineIndex_0_.BLIF songLineIndex_1_.BLIF G_40
+01 1
+10 1
+11 0
+00 0
+.names songLineIndex_2_.BLIF N_39.BLIF G_42
+01 1
+10 1
+11 0
+00 0
+.names songLineIndex_3_.BLIF N_42.BLIF G_44
+01 1
+10 1
+11 0
+00 0
+.names songLineIndex_4_.BLIF N_45.BLIF G_46
+01 1
+10 1
+11 0
+00 0
+.names u6cs_count_3_.BLIF u6cs_n_11_n.BLIF u6cs_G_7
+01 1
+10 1
+11 0
+00 0
+.names u6cs_count_4_.BLIF u6cs_n_14_n.BLIF u6cs_G_9
+01 1
+10 1
+11 0
+00 0
+.names u6cs_outclock.BLIF u6cs_count54_n.BLIF u6cs_outclock_0
+01 1
+10 1
+11 0
+00 0
+.names u5cs_count_4_.BLIF u5cs_n_14_n.BLIF u5cs_G_9
+01 1
+10 1
+11 0
+00 0
+.names u5cs_outclock.BLIF u5cs_count40_n.BLIF u5cs_outclock_0
+01 1
+10 1
+11 0
+00 0
+.names u4cs_count_0_.BLIF u4cs_count_1_.BLIF u4cs_G_3
+01 1
+10 1
+11 0
+00 0
+.names u4cs_count_3_.BLIF u4cs_n_11_n.BLIF u4cs_G_7
+01 1
+10 1
+11 0
+00 0
+.names u4cs_outclock.BLIF u4cs_count26_n.BLIF u4cs_outclock_0
+01 1
+10 1
+11 0
+00 0
+.names u3cs_count_2_.BLIF u3cs_n_8_n.BLIF u3cs_G_5
+01 1
+10 1
+11 0
+00 0
+.names u3cs_outclock.BLIF u3cs_count12_n.BLIF u3cs_outclock_0
+01 1
+10 1
+11 0
+00 0
+.names u5cs_count_3_.BLIF u5cs_n_11_n.BLIF u5cs_G_7
+01 1
+10 1
+11 0
+00 0
+.names u5cs_count_5_.BLIF u5cs_n_17_n.BLIF u5cs_G_11
+01 1
+10 1
+11 0
+00 0
+.names u5cs_count_0_.BLIF u5cs_count_1_.BLIF u5cs_G_3
+01 1
+10 1
+11 0
+00 0
+.names u5cs_count_2_.BLIF u5cs_n_8_n.BLIF u5cs_G_5
+01 1
+10 1
+11 0
+00 0
+.names u4cs_count_4_.BLIF u4cs_n_14_n.BLIF u4cs_G_9
+01 1
+10 1
+11 0
+00 0
+.names u4cs_count_5_.BLIF u4cs_n_17_n.BLIF u4cs_G_11
+01 1
+10 1
+11 0
+00 0
+.names u4cs_count_2_.BLIF u4cs_n_8_n.BLIF u4cs_G_5
+01 1
+10 1
+11 0
+00 0
+.names u3cs_count_0_.BLIF u3cs_count_1_.BLIF u3cs_G_3
+01 1
+10 1
+11 0
+00 0
+.names u3cs_count_3_.BLIF u3cs_n_11_n.BLIF u3cs_G_7
+01 1
+10 1
+11 0
+00 0
+.names u3cs_count_4_.BLIF u3cs_n_14_n.BLIF u3cs_G_9
+01 1
+10 1
+11 0
+00 0
+.names u3cs_count_5_.BLIF u3cs_n_17_n.BLIF u3cs_G_11
+01 1
+10 1
+11 0
+00 0
+.names u6cs_count_0_.BLIF u6cs_count_1_.BLIF u6cs_G_3
+01 1
+10 1
+11 0
+00 0
+.names u6cs_count_2_.BLIF u6cs_n_8_n.BLIF u6cs_G_5
+01 1
+10 1
+11 0
+00 0
+.names u6cs_count_5_.BLIF u6cs_n_17_n.BLIF u6cs_G_11
+01 1
+10 1
+11 0
+00 0
+.names toneout_2_1__n.BLIF toneOut_1_
+1 1
+0 0
+.names toneout_3_2__n.BLIF toneOut_2_
+1 1
+0 0
+.names toneout_4_3__n.BLIF toneOut_3_
+1 1
+0 0
+.names toneout_1_4__n.BLIF toneOut_4_
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u3cs_count_1_.C
+1 1
+0 0
+.names u3cs_G_5.BLIF u3cs_count_2_.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u3cs_count_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u3cs_count_3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u3cs_count_4_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u3cs_count_5_.C
+1 1
+0 0
+.names u3cs_outclock_0.BLIF u3cs_outclock.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u3cs_outclock.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u3cs_count_0_.C
+1 1
+0 0
+.names u4cs_G_3.BLIF u4cs_count_1_.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u4cs_count_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u4cs_count_2_.C
+1 1
+0 0
+.names u4cs_G_7.BLIF u4cs_count_3_.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u4cs_count_3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u4cs_count_4_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u4cs_count_5_.C
+1 1
+0 0
+.names u4cs_outclock_0.BLIF u4cs_outclock.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u4cs_outclock.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u4cs_count_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u5cs_count_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u5cs_count_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u5cs_count_3_.C
+1 1
+0 0
+.names u5cs_G_9.BLIF u5cs_count_4_.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u5cs_count_4_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u5cs_count_5_.C
+1 1
+0 0
+.names u5cs_outclock_0.BLIF u5cs_outclock.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u5cs_outclock.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u5cs_count_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u6cs_count_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u6cs_count_2_.C
+1 1
+0 0
+.names u6cs_G_7.BLIF u6cs_count_3_.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u6cs_count_3_.C
+1 1
+0 0
+.names u6cs_G_9.BLIF u6cs_count_4_.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u6cs_count_4_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u6cs_count_5_.C
+1 1
+0 0
+.names u6cs_outclock_0.BLIF u6cs_outclock.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u6cs_outclock.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u6cs_count_0_.C
+1 1
+0 0
+.names G_42.BLIF songLineIndex_2_.D
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF songLineIndex_2_.C
+1 1
+0 0
+.names G_44.BLIF songLineIndex_3_.D
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF songLineIndex_3_.C
+1 1
+0 0
+.names G_46.BLIF songLineIndex_4_.D
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF songLineIndex_4_.C
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF inst_breakAfterNote.C
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF currentNote_4_.C
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF currentNote_3_.C
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF currentNote_2_.C
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF currentNote_1_.C
+1 1
+0 0
+.names songlineindex_i_0__n.BLIF songLineIndex_0_.D
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF songLineIndex_0_.C
+1 1
+0 0
+.names G_40.BLIF songLineIndex_1_.D
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF songLineIndex_1_.C
+1 1
+0 0
+.names u1rs_counter_i_7__n.BLIF u1rs_u1rc_genblk1_6__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_6__n.BLIF u1rs_u1rc_genblk1_6__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_3__n.BLIF u1rs_u1rc_genblk1_2__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_2__n.BLIF u1rs_u1rc_genblk1_2__uitff_q.C
+1 1
+0 0
+.names metronomecounter_i_0__n.BLIF u2rc_u0tff_q.D
+1 1
+0 0
+.names metronomeBaseClock_i.BLIF u2rc_u0tff_q.C
+1 1
+0 0
+.names metronomecounter_i_1__n.BLIF u2rc_genblk1_0__uitff_q.D
+1 1
+0 0
+.names metronomecounter_i_0__n.BLIF u2rc_genblk1_0__uitff_q.C
+1 1
+0 0
+.names metronomecounter_i_2__n.BLIF u2rc_genblk1_1__uitff_q.D
+1 1
+0 0
+.names metronomecounter_i_1__n.BLIF u2rc_genblk1_1__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_1__n.BLIF u1rs_u1rc_genblk1_0__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_0__n.BLIF u1rs_u1rc_genblk1_0__uitff_q.C
+1 1
+0 0
+.names metronomeBaseClock_i.BLIF u1rs_u1rc_genblk1_10__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_10__n.BLIF u1rs_u1rc_genblk1_10__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_9__n.BLIF u1rs_u1rc_genblk1_8__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_8__n.BLIF u1rs_u1rc_genblk1_8__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_5__n.BLIF u1rs_u1rc_genblk1_4__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_4__n.BLIF u1rs_u1rc_genblk1_4__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_2__n.BLIF u1rs_u1rc_genblk1_1__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_1__n.BLIF u1rs_u1rc_genblk1_1__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_10__n.BLIF u1rs_u1rc_genblk1_9__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_9__n.BLIF u1rs_u1rc_genblk1_9__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_8__n.BLIF u1rs_u1rc_genblk1_7__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_7__n.BLIF u1rs_u1rc_genblk1_7__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_4__n.BLIF u1rs_u1rc_genblk1_3__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_3__n.BLIF u1rs_u1rc_genblk1_3__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_6__n.BLIF u1rs_u1rc_genblk1_5__uitff_q.D
+1 1
+0 0
+.names u1rs_counter_i_5__n.BLIF u1rs_u1rc_genblk1_5__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_0__n.BLIF u0rs_u1rc_u0tff_q.D
+1 1
+0 0
+.names u0rs_counter_i_1__n.BLIF u0rs_u1rc_genblk1_0__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_0__n.BLIF u0rs_u1rc_genblk1_0__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_2__n.BLIF u0rs_u1rc_genblk1_1__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_1__n.BLIF u0rs_u1rc_genblk1_1__uitff_q.C
+1 1
+0 0
+.names toneBaseClock_i.BLIF u0rs_u1rc_genblk1_2__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_2__n.BLIF u0rs_u1rc_genblk1_2__uitff_q.C
+1 1
+0 0
+.names u1rs_counter_i_0__n.BLIF u1rs_u1rc_u0tff_q.D
+1 1
+0 0
+.names toneBaseClock_i.BLIF u1rs_u1rc_u0tff_q.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneMHzClock_c
+1 1
+0 0
+.end

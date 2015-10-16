@@ -1,0 +1,8 @@
+Selecting top level module JKFlipFlop
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\jkflipflop.v":5:7:5:16|Synthesizing module JKFlipFlop
+
+@W: CG296 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\jkflipflop.v":15:10:15:14|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\jkflipflop.v":17:9:17:9|Referenced variable j is not in sensitivity list
+@W: CG290 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\jkflipflop.v":17:12:17:12|Referenced variable k is not in sensitivity list
+@W: CL118 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\jkflipflop.v":17:2:17:5|Latch generated from always block for signal q, probably caused by a missing assignment in an if or case stmt
+@W: CL159 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\jkflipflop.v":8:12:8:16|Input clock is unused

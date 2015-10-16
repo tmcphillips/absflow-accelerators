@@ -1,0 +1,1037 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Fri Feb 24 17:13:45 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 14 red_1_:34'ke'  green_1_:32'ke'  blue_1_:28'ke'  hState_1_:23'ke'  vState_1_:21'ke'  \
+#  vgaClock:43'ke'  reset_n:16'ke'  hsync:26'ke'  red_0_:33'ke'  vsync:24'ke'  green_0_:31'ke'  \
+#  blue_0_:27'ke'  hState_0_:22'ke'  vState_0_:20'ke' 
+#$ NODES 296 N_444_2 N_444_3 N_101_3_1 N_101_3_2 N_103_1 N_26_i_1 gnd_n_n N_26_i_2 \
+#  video_0_reg N_37_1 pixel_0_ N_37_2 pixel_1_ N_37_3 pixel_2_ N_37_4 pixel_3_ N_37_5 \
+#  pixel_4_ N_37_6 pixel_5_ N_37_7_0 pixel_6_ N_37_8 pixel_7_ N_251_1 pixel_8_ N_251_2 \
+#  pixel_9_ N_251_3 line_0_ N_251_4 line_1_ N_251_5 line_2_ N_251_6 line_3_ N_251_7 line_4_ \
+#  N_251_8 line_5_ N_251_9 line_6_ N_251_10 line_7_ vstate_1_ns_0_1_0__n line_8_ \
+#  vstate_1_ns_0_2_0__n line_9_ N_37_7_1 G_202 N_37_7_2 G_204 N_37_7_3 G_206 N_37_7_4 \
+#  G_208 N_37_7_5 G_212 N_324_1 G_214 N_324_2_0 line_4_0__n N_324_3 line_4_1__n N_9_0_1 \
+#  line_4_2__n N_234_1 line_4_3__n N_51_1 line_4_4__n N_46_1 line_4_5__n N_49_i_1 \
+#  line_4_6__n line_4_2__un3_n line_4_7__n line_4_2__un1_n line_4_8__n line_4_2__un0_n \
+#  line_4_9__n line_4_1__un3_n vState_1_0reg line_4_1__un1_n vState_1_1reg \
+#  line_4_1__un0_n N_79 line_4_0__un3_n vState_1_9_d line_4_0__un1_n hState_1_0reg \
+#  line_4_0__un0_n hState_1_1reg line_4_9__un3_n N_166_1 line_4_9__un1_n N_234 \
+#  line_4_9__un0_n line_4_7__un3_n N_349 line_4_7__un1_n N_352 line_4_7__un0_n \
+#  line_4_6__un3_n pixel14_i_0 line_4_6__un1_n N_91 line_4_6__un0_n N_49 \
+#  line_4_5__un3_n N_43 line_4_5__un1_n N_59 line_4_5__un0_n N_41 line_4_4__un3_n N_44 \
+#  line_4_4__un1_n N_35 line_4_4__un0_n N_45 line_4_3__un3_n N_34 line_4_3__un1_n N_46 \
+#  line_4_3__un0_n N_20 line_4_8__un3_n N_32 line_4_8__un1_n N_449 line_4_8__un0_n N_58 \
+#  N_33 N_450 N_50 N_39 N_51 N_53 N_21 N_47 N_53_1 N_53_3 N_37_7 line_3_8__n N_346 N_355 G_210 \
+#  G_216 G_218 N_102 N_103 N_444 N_57 N_101_3 N_334 N_337 N_340 N_37 N_101 vState14 N_18 N_19 \
+#  N_251 N_386 N_383 G_246 G_248 line11 line_3_9__n N_324 N_324_2 N_315 line_3_7__n \
+#  line_3_6__n line_3_5__n line_3_4__n line_3_3__n line_3_2__n line_3_1__n line_3_0__n \
+#  G_244 G_242 G_240 G_238 G_236 G_234 G_232 N_380 N_377 N_374 N_371 N_368 N_365 line_i_4__n \
+#  line_4_i_0__n line_i_0__n line_4_i_9__n line_4_i_1__n line_4_i_4__n line_4_i_5__n \
+#  line_i_6__n line_i_5__n line_i_7__n line_i_8__n line_4_i_8__n line_4_i_7__n \
+#  un3_pixel_i_9__n un3_pixel_i_8__n line_4_i_6__n vstate_1_i_0__n vstate_1_i_1__n \
+#  hstate_1_i_1__n hstate_1_i_0__n un3_pixel_i_4__n pixel_i_0_6__n un3_pixel_i_5__n \
+#  line_3_i_8__n line_4_i_3__n line_4_i_2__n un3_pixel_i_6__n reset_n_i pixel_i_0__n \
+#  vgaClock_c reset_n_c hsyncDFFSHreg vsyncDFFSHreg N_315_0 N_324_i line11_0 \
+#  pixel_i_7__n N_37_i vstate_1_ns_0_0__n N_251_i N_101_i N_19_i pixel_i_5__n N_18_i \
+#  N_20_i N_27_0 N_29_0 vState14_i N_26_i N_33_i N_32_i N_57_i pixel14_i_0_i N_79_i N_96_i \
+#  N_91_i N_102_i N_103_i N_83_i N_450_i N_47_i N_449_i N_45_i N_46_i N_43_i N_44_i \
+#  un3_pixel_i_7__n N_41_0 N_39_0 N_38_i N_35_0 N_34_i N_21_0 N_50_i N_51_i N_53_i N_9_0 \
+#  N_49_i N_38_i_1 N_38_i_2 N_41_0_1 N_91_i_1 N_91_i_2 N_91_i_3 N_91_i_4 N_91_i_5 N_91_i_6 \
+#  N_91_i_7 N_91_i_8 N_29_0_1 N_18_i_1 N_245_i_1 N_245_i_2 N_245_i_3 N_245_i_4 N_245_i_5 \
+#  N_53_1_0 N_53_2 N_47_1 N_47_2 N_32_i_1 N_444_1
+.model vga
+.inputs vgaClock.BLIF reset_n.BLIF N_444_2.BLIF N_444_3.BLIF N_101_3_1.BLIF \
+N_101_3_2.BLIF N_103_1.BLIF N_26_i_1.BLIF gnd_n_n.BLIF N_26_i_2.BLIF \
+video_0_reg.BLIF N_37_1.BLIF pixel_0_.BLIF N_37_2.BLIF pixel_1_.BLIF \
+N_37_3.BLIF pixel_2_.BLIF N_37_4.BLIF pixel_3_.BLIF N_37_5.BLIF pixel_4_.BLIF \
+N_37_6.BLIF pixel_5_.BLIF N_37_7_0.BLIF pixel_6_.BLIF N_37_8.BLIF \
+pixel_7_.BLIF N_251_1.BLIF pixel_8_.BLIF N_251_2.BLIF pixel_9_.BLIF \
+N_251_3.BLIF line_0_.BLIF N_251_4.BLIF line_1_.BLIF N_251_5.BLIF line_2_.BLIF \
+N_251_6.BLIF line_3_.BLIF N_251_7.BLIF line_4_.BLIF N_251_8.BLIF line_5_.BLIF \
+N_251_9.BLIF line_6_.BLIF N_251_10.BLIF line_7_.BLIF vstate_1_ns_0_1_0__n.BLIF \
+line_8_.BLIF vstate_1_ns_0_2_0__n.BLIF line_9_.BLIF N_37_7_1.BLIF G_202.BLIF \
+N_37_7_2.BLIF G_204.BLIF N_37_7_3.BLIF G_206.BLIF N_37_7_4.BLIF G_208.BLIF \
+N_37_7_5.BLIF G_212.BLIF N_324_1.BLIF G_214.BLIF N_324_2_0.BLIF \
+line_4_0__n.BLIF N_324_3.BLIF line_4_1__n.BLIF N_9_0_1.BLIF line_4_2__n.BLIF \
+N_234_1.BLIF line_4_3__n.BLIF N_51_1.BLIF line_4_4__n.BLIF N_46_1.BLIF \
+line_4_5__n.BLIF N_49_i_1.BLIF line_4_6__n.BLIF line_4_2__un3_n.BLIF \
+line_4_7__n.BLIF line_4_2__un1_n.BLIF line_4_8__n.BLIF line_4_2__un0_n.BLIF \
+line_4_9__n.BLIF line_4_1__un3_n.BLIF vState_1_0reg.BLIF line_4_1__un1_n.BLIF \
+vState_1_1reg.BLIF line_4_1__un0_n.BLIF N_79.BLIF line_4_0__un3_n.BLIF \
+vState_1_9_d.BLIF line_4_0__un1_n.BLIF hState_1_0reg.BLIF line_4_0__un0_n.BLIF \
+hState_1_1reg.BLIF line_4_9__un3_n.BLIF N_166_1.BLIF line_4_9__un1_n.BLIF \
+N_234.BLIF line_4_9__un0_n.BLIF line_4_7__un3_n.BLIF N_349.BLIF \
+line_4_7__un1_n.BLIF N_352.BLIF line_4_7__un0_n.BLIF line_4_6__un3_n.BLIF \
+pixel14_i_0.BLIF line_4_6__un1_n.BLIF N_91.BLIF line_4_6__un0_n.BLIF N_49.BLIF \
+line_4_5__un3_n.BLIF N_43.BLIF line_4_5__un1_n.BLIF N_59.BLIF \
+line_4_5__un0_n.BLIF N_41.BLIF line_4_4__un3_n.BLIF N_44.BLIF \
+line_4_4__un1_n.BLIF N_35.BLIF line_4_4__un0_n.BLIF N_45.BLIF \
+line_4_3__un3_n.BLIF N_34.BLIF line_4_3__un1_n.BLIF N_46.BLIF \
+line_4_3__un0_n.BLIF N_20.BLIF line_4_8__un3_n.BLIF N_32.BLIF \
+line_4_8__un1_n.BLIF N_449.BLIF line_4_8__un0_n.BLIF N_58.BLIF N_33.BLIF \
+N_450.BLIF N_50.BLIF N_39.BLIF N_51.BLIF N_53.BLIF N_21.BLIF N_47.BLIF \
+N_53_1.BLIF N_53_3.BLIF N_37_7.BLIF line_3_8__n.BLIF N_346.BLIF N_355.BLIF \
+G_210.BLIF G_216.BLIF G_218.BLIF N_102.BLIF N_103.BLIF N_444.BLIF N_57.BLIF \
+N_101_3.BLIF N_334.BLIF N_337.BLIF N_340.BLIF N_37.BLIF N_101.BLIF \
+vState14.BLIF N_18.BLIF N_19.BLIF N_251.BLIF N_386.BLIF N_383.BLIF G_246.BLIF \
+G_248.BLIF line11.BLIF line_3_9__n.BLIF N_324.BLIF N_324_2.BLIF N_315.BLIF \
+line_3_7__n.BLIF line_3_6__n.BLIF line_3_5__n.BLIF line_3_4__n.BLIF \
+line_3_3__n.BLIF line_3_2__n.BLIF line_3_1__n.BLIF line_3_0__n.BLIF G_244.BLIF \
+G_242.BLIF G_240.BLIF G_238.BLIF G_236.BLIF G_234.BLIF G_232.BLIF N_380.BLIF \
+N_377.BLIF N_374.BLIF N_371.BLIF N_368.BLIF N_365.BLIF line_i_4__n.BLIF \
+line_4_i_0__n.BLIF line_i_0__n.BLIF line_4_i_9__n.BLIF line_4_i_1__n.BLIF \
+line_4_i_4__n.BLIF line_4_i_5__n.BLIF line_i_6__n.BLIF line_i_5__n.BLIF \
+line_i_7__n.BLIF line_i_8__n.BLIF line_4_i_8__n.BLIF line_4_i_7__n.BLIF \
+un3_pixel_i_9__n.BLIF un3_pixel_i_8__n.BLIF line_4_i_6__n.BLIF \
+vstate_1_i_0__n.BLIF vstate_1_i_1__n.BLIF hstate_1_i_1__n.BLIF \
+hstate_1_i_0__n.BLIF un3_pixel_i_4__n.BLIF pixel_i_0_6__n.BLIF \
+un3_pixel_i_5__n.BLIF line_3_i_8__n.BLIF line_4_i_3__n.BLIF line_4_i_2__n.BLIF \
+un3_pixel_i_6__n.BLIF reset_n_i.BLIF pixel_i_0__n.BLIF vgaClock_c.BLIF \
+reset_n_c.BLIF hsyncDFFSHreg.BLIF vsyncDFFSHreg.BLIF N_315_0.BLIF N_324_i.BLIF \
+line11_0.BLIF pixel_i_7__n.BLIF N_37_i.BLIF vstate_1_ns_0_0__n.BLIF \
+N_251_i.BLIF N_101_i.BLIF N_19_i.BLIF pixel_i_5__n.BLIF N_18_i.BLIF \
+N_20_i.BLIF N_27_0.BLIF N_29_0.BLIF vState14_i.BLIF N_26_i.BLIF N_33_i.BLIF \
+N_32_i.BLIF N_57_i.BLIF pixel14_i_0_i.BLIF N_79_i.BLIF N_96_i.BLIF N_91_i.BLIF \
+N_102_i.BLIF N_103_i.BLIF N_83_i.BLIF N_450_i.BLIF N_47_i.BLIF N_449_i.BLIF \
+N_45_i.BLIF N_46_i.BLIF N_43_i.BLIF N_44_i.BLIF un3_pixel_i_7__n.BLIF \
+N_41_0.BLIF N_39_0.BLIF N_38_i.BLIF N_35_0.BLIF N_34_i.BLIF N_21_0.BLIF \
+N_50_i.BLIF N_51_i.BLIF N_53_i.BLIF N_9_0.BLIF N_49_i.BLIF N_38_i_1.BLIF \
+N_38_i_2.BLIF N_41_0_1.BLIF N_91_i_1.BLIF N_91_i_2.BLIF N_91_i_3.BLIF \
+N_91_i_4.BLIF N_91_i_5.BLIF N_91_i_6.BLIF N_91_i_7.BLIF N_91_i_8.BLIF \
+N_29_0_1.BLIF N_18_i_1.BLIF N_245_i_1.BLIF N_245_i_2.BLIF N_245_i_3.BLIF \
+N_245_i_4.BLIF N_245_i_5.BLIF N_53_1_0.BLIF N_53_2.BLIF N_47_1.BLIF \
+N_47_2.BLIF N_32_i_1.BLIF N_444_1.BLIF
+.outputs red_1_ green_1_ blue_1_ hState_1_ vState_1_ hsync vsync red_0_ \
+green_0_ blue_0_ hState_0_ vState_0_ hState_1_1reg.D hState_1_1reg.CE \
+hState_1_1reg.C hState_1_1reg.AR hState_1_0reg.D hState_1_0reg.CE \
+hState_1_0reg.C hState_1_0reg.AR vState_1_0reg.D vState_1_0reg.C \
+vState_1_0reg.AR vState_1_1reg.D vState_1_1reg.C vState_1_1reg.AR line_0_.D \
+line_0_.C line_0_.AR line_1_.D line_1_.C line_1_.AR line_2_.D line_2_.C \
+line_2_.AR line_3_.D line_3_.C line_3_.AR line_4_.D line_4_.C line_4_.AR \
+line_5_.D line_5_.C line_5_.AR line_6_.D line_6_.C line_6_.AR line_7_.D \
+line_7_.C line_7_.AR line_8_.D line_8_.C line_8_.AR line_9_.D line_9_.C \
+line_9_.AR pixel_4_.D pixel_4_.C pixel_4_.AR pixel_5_.D pixel_5_.C pixel_5_.AR \
+pixel_6_.D pixel_6_.C pixel_6_.AR pixel_7_.D pixel_7_.C pixel_7_.AR pixel_8_.D \
+pixel_8_.C pixel_8_.AR pixel_9_.D pixel_9_.C pixel_9_.AR pixel_0_.D pixel_0_.C \
+pixel_0_.AR pixel_1_.D pixel_1_.C pixel_1_.AR pixel_2_.D pixel_2_.C \
+pixel_2_.AR pixel_3_.D pixel_3_.C pixel_3_.AR vsyncDFFSHreg.D vsyncDFFSHreg.C \
+vsyncDFFSHreg.AP hsyncDFFSHreg.D hsyncDFFSHreg.C hsyncDFFSHreg.AP \
+video_0_reg.D video_0_reg.CE video_0_reg.C video_0_reg.AR N_444_2 N_444_3 \
+N_101_3_1 N_101_3_2 N_103_1 N_26_i_1 gnd_n_n N_26_i_2 N_37_1 N_37_2 N_37_3 \
+N_37_4 N_37_5 N_37_6 N_37_7_0 N_37_8 N_251_1 N_251_2 N_251_3 N_251_4 N_251_5 \
+N_251_6 N_251_7 N_251_8 N_251_9 N_251_10 vstate_1_ns_0_1_0__n \
+vstate_1_ns_0_2_0__n N_37_7_1 N_37_7_2 N_37_7_3 N_37_7_4 N_37_7_5 N_324_1 \
+N_324_2_0 line_4_0__n N_324_3 line_4_1__n N_9_0_1 line_4_2__n N_234_1 \
+line_4_3__n N_51_1 line_4_4__n N_46_1 line_4_5__n N_49_i_1 line_4_6__n \
+line_4_2__un3_n line_4_7__n line_4_2__un1_n line_4_8__n line_4_2__un0_n \
+line_4_9__n line_4_1__un3_n line_4_1__un1_n line_4_1__un0_n N_79 \
+line_4_0__un3_n vState_1_9_d line_4_0__un1_n line_4_0__un0_n line_4_9__un3_n \
+N_166_1 line_4_9__un1_n N_234 line_4_9__un0_n line_4_7__un3_n N_349 \
+line_4_7__un1_n N_352 line_4_7__un0_n line_4_6__un3_n pixel14_i_0 \
+line_4_6__un1_n N_91 line_4_6__un0_n N_49 line_4_5__un3_n N_43 line_4_5__un1_n \
+N_59 line_4_5__un0_n N_41 line_4_4__un3_n N_44 line_4_4__un1_n N_35 \
+line_4_4__un0_n N_45 line_4_3__un3_n N_34 line_4_3__un1_n N_46 line_4_3__un0_n \
+N_20 line_4_8__un3_n N_32 line_4_8__un1_n N_449 line_4_8__un0_n N_58 N_33 \
+N_450 N_50 N_39 N_51 N_53 N_21 N_47 N_53_1 N_53_3 N_37_7 line_3_8__n N_346 \
+N_355 N_102 N_103 N_444 N_57 N_101_3 N_334 N_337 N_340 N_37 N_101 vState14 \
+N_18 N_19 N_251 N_386 N_383 line11 line_3_9__n N_324 N_324_2 N_315 line_3_7__n \
+line_3_6__n line_3_5__n line_3_4__n line_3_3__n line_3_2__n line_3_1__n \
+line_3_0__n N_380 N_377 N_374 N_371 N_368 N_365 line_i_4__n line_4_i_0__n \
+line_i_0__n line_4_i_9__n line_4_i_1__n line_4_i_4__n line_4_i_5__n \
+line_i_6__n line_i_5__n line_i_7__n line_i_8__n line_4_i_8__n line_4_i_7__n \
+un3_pixel_i_9__n un3_pixel_i_8__n line_4_i_6__n vstate_1_i_0__n \
+vstate_1_i_1__n hstate_1_i_1__n hstate_1_i_0__n un3_pixel_i_4__n \
+pixel_i_0_6__n un3_pixel_i_5__n line_3_i_8__n line_4_i_3__n line_4_i_2__n \
+un3_pixel_i_6__n reset_n_i pixel_i_0__n vgaClock_c reset_n_c N_315_0 N_324_i \
+line11_0 pixel_i_7__n N_37_i vstate_1_ns_0_0__n N_251_i N_101_i N_19_i \
+pixel_i_5__n N_18_i N_20_i N_27_0 N_29_0 vState14_i N_26_i N_33_i N_32_i \
+N_57_i pixel14_i_0_i N_79_i N_96_i N_91_i N_102_i N_103_i N_83_i N_450_i \
+N_47_i N_449_i N_45_i N_46_i N_43_i N_44_i un3_pixel_i_7__n N_41_0 N_39_0 \
+N_38_i N_35_0 N_34_i N_21_0 N_50_i N_51_i N_53_i N_9_0 N_49_i N_38_i_1 \
+N_38_i_2 N_41_0_1 N_91_i_1 N_91_i_2 N_91_i_3 N_91_i_4 N_91_i_5 N_91_i_6 \
+N_91_i_7 N_91_i_8 N_29_0_1 N_18_i_1 N_245_i_1 N_245_i_2 N_245_i_3 N_245_i_4 \
+N_245_i_5 N_53_1_0 N_53_2 N_47_1 N_47_2 N_32_i_1 N_444_1 G_202 G_204 G_206 \
+G_208 G_212 G_214 G_210 G_216 G_218 G_246 G_248 G_244 G_242 G_240 G_238 G_236 \
+G_234 G_232
+.names N_9_0.BLIF hState_1_1reg.D
+0 1
+.names N_245_i_4.BLIF N_245_i_5.BLIF hState_1_0reg.D
+11 1
+.names vstate_1_ns_0_0__n.BLIF vState_1_0reg.D
+0 1
+.names N_102_i.BLIF N_103_i.BLIF vState_1_1reg.D
+11 1
+.names pixel14_i_0_i.BLIF G_210.BLIF pixel_5_.D
+11 1
+.names pixel14_i_0_i.BLIF G_216.BLIF pixel_8_.D
+11 1
+.names pixel14_i_0_i.BLIF G_218.BLIF pixel_9_.D
+11 1
+.names vState_1_9_d.BLIF vsyncDFFSHreg.D
+0 1
+.names N_234.BLIF hsyncDFFSHreg.D
+0 1
+.names vState_1_1reg.BLIF vstate_1_i_0__n.BLIF video_0_reg.CE
+11 1
+.names pixel_2_.BLIF pixel_3_.BLIF N_444_2
+11 1
+.names N_444_1.BLIF N_444_2.BLIF N_444_3
+11 1
+.names N_83_i.BLIF line_4_2__n.BLIF N_101_3_1
+11 1
+.names line_4_3__n.BLIF line_4_9__n.BLIF N_101_3_2
+11 1
+.names N_101_3.BLIF pixel14_i_0.BLIF N_103_1
+11 1
+.names pixel_1_.BLIF pixel_i_0__n.BLIF N_26_i_1
+11 1
+.names gnd_n_n
+.names G_204.BLIF G_206.BLIF N_26_i_2
+11 1
+.names G_218.BLIF vState_1_1reg.BLIF N_37_1
+11 1
+.names N_20.BLIF N_26_i.BLIF N_37_2
+11 1
+.names N_37_7.BLIF N_96_i.BLIF N_37_3
+11 1
+.names hState_1_0reg.BLIF hState_1_1reg.BLIF N_37_4
+11 1
+.names G_208.BLIF G_216.BLIF N_37_5
+11 1
+.names N_37_1.BLIF N_37_2.BLIF N_37_6
+11 1
+.names N_37_3.BLIF N_37_4.BLIF N_37_7_0
+11 1
+.names N_37_6.BLIF N_37_7_0.BLIF N_37_8
+11 1
+.names line_4_i_9__n.BLIF pixel14_i_0.BLIF N_251_1
+11 1
+.names vstate_1_i_0__n.BLIF vstate_1_i_1__n.BLIF N_251_2
+11 1
+.names N_96_i.BLIF line_4_0__n.BLIF N_251_3
+11 1
+.names line_4_i_1__n.BLIF line_4_i_4__n.BLIF N_251_4
+11 1
+.names line_4_i_5__n.BLIF line_4_i_6__n.BLIF N_251_5
+11 1
+.names line_4_i_7__n.BLIF line_4_i_8__n.BLIF N_251_6
+11 1
+.names N_251_1.BLIF N_251_2.BLIF N_251_7
+11 1
+.names N_251_3.BLIF N_251_4.BLIF N_251_8
+11 1
+.names N_251_5.BLIF N_251_6.BLIF N_251_9
+11 1
+.names N_251_7.BLIF N_251_8.BLIF N_251_10
+11 1
+.names N_49.BLIF N_251_i.BLIF vstate_1_ns_0_1_0__n
+11 1
+.names N_19.BLIF N_37_i.BLIF vstate_1_ns_0_2_0__n
+11 1
+.names N_324_2.BLIF line_4_1__n.BLIF N_37_7_1
+11 1
+.names line_4_9__n.BLIF line_4_i_0__n.BLIF N_37_7_2
+11 1
+.names line_4_i_7__n.BLIF line_4_i_8__n.BLIF N_37_7_3
+11 1
+.names N_37_7_1.BLIF N_37_7_2.BLIF N_37_7_4
+11 1
+.names N_37_7_3.BLIF line_i_4__n.BLIF N_37_7_5
+11 1
+.names N_315.BLIF N_324_2.BLIF N_324_1
+11 1
+.names line_i_4__n.BLIF line_i_7__n.BLIF N_324_2_0
+11 1
+.names line_4_0__un1_n.BLIF line_4_0__un0_n.BLIF line_4_0__n
+1- 1
+-1 1
+.names N_324_1.BLIF N_324_2_0.BLIF N_324_3
+11 1
+.names line_4_1__un1_n.BLIF line_4_1__un0_n.BLIF line_4_1__n
+1- 1
+-1 1
+.names N_50_i.BLIF N_51_i.BLIF N_9_0_1
+11 1
+.names line_4_2__un1_n.BLIF line_4_2__un0_n.BLIF line_4_2__n
+1- 1
+-1 1
+.names N_59.BLIF vState_1_1reg.BLIF N_234_1
+11 1
+.names line_4_3__un1_n.BLIF line_4_3__un0_n.BLIF line_4_3__n
+1- 1
+-1 1
+.names N_33.BLIF hState_1_1reg.BLIF N_51_1
+11 1
+.names line_4_4__un1_n.BLIF line_4_4__un0_n.BLIF line_4_4__n
+1- 1
+-1 1
+.names N_20.BLIF N_32.BLIF N_46_1
+11 1
+.names line_4_5__un1_n.BLIF line_4_5__un0_n.BLIF line_4_5__n
+1- 1
+-1 1
+.names N_91.BLIF vState_1_0reg.BLIF N_49_i_1
+11 1
+.names line_4_6__un1_n.BLIF line_4_6__un0_n.BLIF line_4_6__n
+1- 1
+-1 1
+.names pixel14_i_0.BLIF line_4_2__un3_n
+0 1
+.names line_4_7__un1_n.BLIF line_4_7__un0_n.BLIF line_4_7__n
+1- 1
+-1 1
+.names line_3_2__n.BLIF pixel14_i_0.BLIF line_4_2__un1_n
+11 1
+.names line_4_8__un1_n.BLIF line_4_8__un0_n.BLIF line_4_8__n
+1- 1
+-1 1
+.names line_2_.BLIF line_4_2__un3_n.BLIF line_4_2__un0_n
+11 1
+.names line_4_9__un1_n.BLIF line_4_9__un0_n.BLIF line_4_9__n
+1- 1
+-1 1
+.names pixel14_i_0.BLIF line_4_1__un3_n
+0 1
+.names line_3_1__n.BLIF pixel14_i_0.BLIF line_4_1__un1_n
+11 1
+.names line_1_.BLIF line_4_1__un3_n.BLIF line_4_1__un0_n
+11 1
+.names N_79_i.BLIF N_79
+0 1
+.names pixel14_i_0.BLIF line_4_0__un3_n
+0 1
+.names vstate_1_i_0__n.BLIF vstate_1_i_1__n.BLIF vState_1_9_d
+11 1
+.names line_3_0__n.BLIF pixel14_i_0.BLIF line_4_0__un1_n
+11 1
+.names line_0_.BLIF line_4_0__un3_n.BLIF line_4_0__un0_n
+11 1
+.names pixel14_i_0.BLIF line_4_9__un3_n
+0 1
+.names hState_1_1reg.BLIF hstate_1_i_0__n.BLIF N_166_1
+11 1
+.names line_3_9__n.BLIF pixel14_i_0.BLIF line_4_9__un1_n
+11 1
+.names N_234_1.BLIF vstate_1_i_0__n.BLIF N_234
+11 1
+.names line_9_.BLIF line_4_9__un3_n.BLIF line_4_9__un0_n
+11 1
+.names pixel14_i_0.BLIF line_4_7__un3_n
+0 1
+.names N_346.BLIF pixel_6_.BLIF N_349
+11 1
+.names line_3_7__n.BLIF pixel14_i_0.BLIF line_4_7__un1_n
+11 1
+.names N_349.BLIF pixel_7_.BLIF N_352
+11 1
+.names line_7_.BLIF line_4_7__un3_n.BLIF line_4_7__un0_n
+11 1
+.names pixel14_i_0.BLIF line_4_6__un3_n
+0 1
+.names pixel14_i_0_i.BLIF pixel14_i_0
+0 1
+.names line_3_6__n.BLIF pixel14_i_0.BLIF line_4_6__un1_n
+11 1
+.names N_91_i.BLIF N_91
+0 1
+.names line_6_.BLIF line_4_6__un3_n.BLIF line_4_6__un0_n
+11 1
+.names N_49_i.BLIF N_49
+0 1
+.names pixel14_i_0.BLIF line_4_5__un3_n
+0 1
+.names N_41.BLIF N_59.BLIF N_43
+11 1
+.names line_3_5__n.BLIF pixel14_i_0.BLIF line_4_5__un1_n
+11 1
+.names hstate_1_i_0__n.BLIF hstate_1_i_1__n.BLIF N_59
+11 1
+.names line_5_.BLIF line_4_5__un3_n.BLIF line_4_5__un0_n
+11 1
+.names N_41_0.BLIF N_41
+0 1
+.names pixel14_i_0.BLIF line_4_4__un3_n
+0 1
+.names N_35.BLIF N_166_1.BLIF N_44
+11 1
+.names line_3_4__n.BLIF pixel14_i_0.BLIF line_4_4__un1_n
+11 1
+.names N_35_0.BLIF N_35
+0 1
+.names line_4_.BLIF line_4_4__un3_n.BLIF line_4_4__un0_n
+11 1
+.names N_34.BLIF hstate_1_i_0__n.BLIF N_45
+11 1
+.names pixel14_i_0.BLIF line_4_3__un3_n
+0 1
+.names N_34_i.BLIF N_34
+0 1
+.names line_3_3__n.BLIF pixel14_i_0.BLIF line_4_3__un1_n
+11 1
+.names N_46_1.BLIF N_59.BLIF N_46
+11 1
+.names line_3_.BLIF line_4_3__un3_n.BLIF line_4_3__un0_n
+11 1
+.names N_20_i.BLIF N_20
+0 1
+.names pixel14_i_0.BLIF line_4_8__un3_n
+0 1
+.names N_32_i.BLIF N_32
+0 1
+.names line_3_8__n.BLIF pixel14_i_0.BLIF line_4_8__un1_n
+11 1
+.names N_38_i.BLIF N_58.BLIF N_449
+11 1
+.names line_8_.BLIF line_4_8__un3_n.BLIF line_4_8__un0_n
+11 1
+.names hState_1_1reg.BLIF vState_1_1reg.BLIF N_58
+11 1
+.names N_33_i.BLIF N_33
+0 1
+.names N_33_i.BLIF vstate_1_i_1__n.BLIF N_450
+11 1
+.names N_39.BLIF N_58.BLIF N_50
+11 1
+.names N_39_0.BLIF N_39
+0 1
+.names N_51_1.BLIF vstate_1_i_1__n.BLIF N_51
+11 1
+.names N_53_1_0.BLIF N_53_2.BLIF N_53
+11 1
+.names N_21_0.BLIF N_21
+0 1
+.names N_47_1.BLIF N_47_2.BLIF N_47
+11 1
+.names G_214.BLIF un3_pixel_i_4__n.BLIF N_53_1
+11 1
+.names N_21.BLIF N_34_i.BLIF N_53_3
+11 1
+.names N_37_7_4.BLIF N_37_7_5.BLIF N_37_7
+11 1
+.names line11.BLIF G_246.BLIF line_3_8__n
+11 1
+.names N_444.BLIF pixel_5_.BLIF N_346
+11 1
+.names N_352.BLIF pixel_8_.BLIF N_355
+11 1
+.names N_33.BLIF vstate_1_i_1__n.BLIF N_102
+11 1
+.names N_103_1.BLIF vState_1_0reg.BLIF N_103
+11 1
+.names N_444_3.BLIF pixel_4_.BLIF N_444
+11 1
+.names N_83_i.BLIF N_444.BLIF N_57
+11 1
+.names N_101_3_1.BLIF N_101_3_2.BLIF N_101_3
+11 1
+.names pixel_0_.BLIF pixel_1_.BLIF N_334
+11 1
+.names N_334.BLIF pixel_2_.BLIF N_337
+11 1
+.names N_337.BLIF pixel_3_.BLIF N_340
+11 1
+.names N_37_8.BLIF N_37_5.BLIF N_37
+11 1
+.names N_101_3.BLIF pixel14_i_0.BLIF N_101
+11 1
+.names N_37_7.BLIF N_96_i.BLIF vState14
+11 1
+.names N_18_i.BLIF N_18
+0 1
+.names N_19_i.BLIF N_19
+0 1
+.names N_251_10.BLIF N_251_9.BLIF N_251
+11 1
+.names N_383.BLIF line_8_.BLIF N_386
+11 1
+.names N_380.BLIF line_7_.BLIF N_383
+11 1
+.names line11_0.BLIF line11
+0 1
+.names line11.BLIF G_248.BLIF line_3_9__n
+11 1
+.names N_324_3.BLIF line_i_8__n.BLIF N_324
+11 1
+.names line_i_5__n.BLIF line_i_6__n.BLIF N_324_2
+11 1
+.names N_315_0.BLIF N_315
+0 1
+.names line11.BLIF G_244.BLIF line_3_7__n
+11 1
+.names line11.BLIF G_242.BLIF line_3_6__n
+11 1
+.names line11.BLIF G_240.BLIF line_3_5__n
+11 1
+.names line11.BLIF G_238.BLIF line_3_4__n
+11 1
+.names line11.BLIF G_236.BLIF line_3_3__n
+11 1
+.names line11.BLIF G_234.BLIF line_3_2__n
+11 1
+.names line11.BLIF G_232.BLIF line_3_1__n
+11 1
+.names line11.BLIF line_i_0__n.BLIF line_3_0__n
+11 1
+.names N_377.BLIF line_6_.BLIF N_380
+11 1
+.names N_374.BLIF line_5_.BLIF N_377
+11 1
+.names N_371.BLIF line_4_.BLIF N_374
+11 1
+.names N_368.BLIF line_3_.BLIF N_371
+11 1
+.names N_365.BLIF line_2_.BLIF N_368
+11 1
+.names line_0_.BLIF line_1_.BLIF N_365
+11 1
+.names line_4_.BLIF line_i_4__n
+0 1
+.names line_4_0__n.BLIF line_4_i_0__n
+0 1
+.names line_0_.BLIF line_i_0__n
+0 1
+.names line_4_9__n.BLIF line_4_i_9__n
+0 1
+.names line_4_1__n.BLIF line_4_i_1__n
+0 1
+.names line_4_4__n.BLIF line_4_i_4__n
+0 1
+.names line_4_5__n.BLIF line_4_i_5__n
+0 1
+.names line_6_.BLIF line_i_6__n
+0 1
+.names line_5_.BLIF line_i_5__n
+0 1
+.names line_7_.BLIF line_i_7__n
+0 1
+.names line_8_.BLIF line_i_8__n
+0 1
+.names line_4_8__n.BLIF line_4_i_8__n
+0 1
+.names line_4_7__n.BLIF line_4_i_7__n
+0 1
+.names G_218.BLIF un3_pixel_i_9__n
+0 1
+.names G_216.BLIF un3_pixel_i_8__n
+0 1
+.names line_4_6__n.BLIF line_4_i_6__n
+0 1
+.names vState_1_0reg.BLIF vstate_1_i_0__n
+0 1
+.names vState_1_1reg.BLIF vstate_1_i_1__n
+0 1
+.names hState_1_1reg.BLIF hstate_1_i_1__n
+0 1
+.names hState_1_0reg.BLIF hstate_1_i_0__n
+0 1
+.names G_208.BLIF un3_pixel_i_4__n
+0 1
+.names pixel_6_.BLIF pixel_i_0_6__n
+0 1
+.names G_210.BLIF un3_pixel_i_5__n
+0 1
+.names line_3_8__n.BLIF line_3_i_8__n
+0 1
+.names line_4_3__n.BLIF line_4_i_3__n
+0 1
+.names line_4_2__n.BLIF line_4_i_2__n
+0 1
+.names G_212.BLIF un3_pixel_i_6__n
+0 1
+.names reset_n_c.BLIF reset_n_i
+0 1
+.names pixel_0_.BLIF pixel_i_0__n
+0 1
+.names line_2_.BLIF line_3_.BLIF N_315_0
+11 1
+.names N_324.BLIF N_324_i
+0 1
+.names N_324_i.BLIF line_9_.BLIF line11_0
+11 1
+.names pixel_7_.BLIF pixel_i_7__n
+0 1
+.names N_37.BLIF N_37_i
+0 1
+.names vstate_1_ns_0_1_0__n.BLIF vstate_1_ns_0_2_0__n.BLIF vstate_1_ns_0_0__n
+11 1
+.names N_251.BLIF N_251_i
+0 1
+.names N_101.BLIF N_101_i
+0 1
+.names N_79_i.BLIF N_101_i.BLIF N_19_i
+11 1
+.names pixel_5_.BLIF pixel_i_5__n
+0 1
+.names N_18_i_1.BLIF pixel_i_5__n.BLIF N_18_i
+11 1
+.names N_18.BLIF N_83_i.BLIF N_20_i
+11 1
+.names N_26_i.BLIF vstate_1_i_0__n.BLIF N_27_0
+11 1
+.names N_29_0_1.BLIF G_218.BLIF N_29_0
+11 1
+.names vState14.BLIF vState14_i
+0 1
+.names N_26_i_1.BLIF N_26_i_2.BLIF N_26_i
+11 1
+.names N_91_i.BLIF vState_1_0reg.BLIF N_33_i
+11 1
+.names N_32_i_1.BLIF un3_pixel_i_9__n.BLIF N_32_i
+11 1
+.names N_57.BLIF N_57_i
+0 1
+.names N_20.BLIF N_57_i.BLIF pixel14_i_0_i
+11 1
+.names vState_1_0reg.BLIF vState_1_1reg.BLIF N_79_i
+11 1
+.names line_4_i_2__n.BLIF line_4_i_3__n.BLIF N_96_i
+11 1
+.names N_91_i_8.BLIF N_91_i_5.BLIF N_91_i
+11 1
+.names N_102.BLIF N_102_i
+0 1
+.names N_103.BLIF N_103_i
+0 1
+.names pixel_8_.BLIF pixel_9_.BLIF N_83_i
+11 1
+.names N_450.BLIF N_450_i
+0 1
+.names N_47.BLIF N_47_i
+0 1
+.names N_449.BLIF N_449_i
+0 1
+.names N_45.BLIF N_45_i
+0 1
+.names N_46.BLIF N_46_i
+0 1
+.names N_43.BLIF N_43_i
+0 1
+.names N_44.BLIF N_44_i
+0 1
+.names G_214.BLIF un3_pixel_i_7__n
+0 1
+.names N_41_0_1.BLIF un3_pixel_i_7__n.BLIF N_41_0
+11 1
+.names N_38_i.BLIF hState_1_0reg.BLIF N_39_0
+11 1
+.names N_38_i_1.BLIF N_38_i_2.BLIF N_38_i
+11 1
+.names N_29_0.BLIF un3_pixel_i_4__n.BLIF N_35_0
+11 1
+.names N_27_0.BLIF vState_1_1reg.BLIF N_34_i
+11 1
+.names N_20.BLIF N_32.BLIF N_21_0
+11 1
+.names N_50.BLIF N_50_i
+0 1
+.names N_51.BLIF N_51_i
+0 1
+.names N_53.BLIF N_53_i
+0 1
+.names N_9_0_1.BLIF N_53_i.BLIF N_9_0
+11 1
+.names N_49_i_1.BLIF vstate_1_i_1__n.BLIF N_49_i
+11 1
+.names N_27_0.BLIF N_29_0.BLIF N_38_i_1
+11 1
+.names G_208.BLIF vState14_i.BLIF N_38_i_2
+11 1
+.names pixel_6_.BLIF G_208.BLIF N_41_0_1
+11 1
+.names line_3_i_8__n.BLIF line_4_1__n.BLIF N_91_i_1
+11 1
+.names line_4_5__n.BLIF line_4_i_0__n.BLIF N_91_i_2
+11 1
+.names line_4_i_2__n.BLIF line_4_i_3__n.BLIF N_91_i_3
+11 1
+.names line_4_i_4__n.BLIF line_4_i_6__n.BLIF N_91_i_4
+11 1
+.names line_4_i_7__n.BLIF pixel14_i_0.BLIF N_91_i_5
+11 1
+.names N_91_i_1.BLIF N_91_i_2.BLIF N_91_i_6
+11 1
+.names N_91_i_3.BLIF N_91_i_4.BLIF N_91_i_7
+11 1
+.names N_91_i_6.BLIF N_91_i_7.BLIF N_91_i_8
+11 1
+.names N_20.BLIF G_216.BLIF N_29_0_1
+11 1
+.names pixel_i_7__n.BLIF pixel_i_0_6__n.BLIF N_18_i_1
+11 1
+.names N_43_i.BLIF N_44_i.BLIF N_245_i_1
+11 1
+.names N_45_i.BLIF N_46_i.BLIF N_245_i_2
+11 1
+.names N_47_i.BLIF N_449_i.BLIF N_245_i_3
+11 1
+.names N_245_i_1.BLIF N_245_i_2.BLIF N_245_i_4
+11 1
+.names N_245_i_3.BLIF N_450_i.BLIF N_245_i_5
+11 1
+.names N_53_1.BLIF N_53_3.BLIF N_53_1_0
+11 1
+.names hState_1_0reg.BLIF un3_pixel_i_6__n.BLIF N_53_2
+11 1
+.names N_53_1.BLIF N_53_3.BLIF N_47_1
+11 1
+.names hstate_1_i_1__n.BLIF un3_pixel_i_6__n.BLIF N_47_2
+11 1
+.names un3_pixel_i_5__n.BLIF un3_pixel_i_8__n.BLIF N_32_i_1
+11 1
+.names pixel_0_.BLIF pixel_1_.BLIF N_444_1
+11 1
+.names pixel_0_.BLIF pixel_1_.BLIF G_202
+01 1
+10 1
+11 0
+00 0
+.names pixel_2_.BLIF N_334.BLIF G_204
+01 1
+10 1
+11 0
+00 0
+.names pixel_3_.BLIF N_337.BLIF G_206
+01 1
+10 1
+11 0
+00 0
+.names pixel_4_.BLIF N_340.BLIF G_208
+01 1
+10 1
+11 0
+00 0
+.names pixel_6_.BLIF N_346.BLIF G_212
+01 1
+10 1
+11 0
+00 0
+.names pixel_7_.BLIF N_349.BLIF G_214
+01 1
+10 1
+11 0
+00 0
+.names pixel_5_.BLIF N_444.BLIF G_210
+01 1
+10 1
+11 0
+00 0
+.names pixel_8_.BLIF N_352.BLIF G_216
+01 1
+10 1
+11 0
+00 0
+.names pixel_9_.BLIF N_355.BLIF G_218
+01 1
+10 1
+11 0
+00 0
+.names line_8_.BLIF N_383.BLIF G_246
+01 1
+10 1
+11 0
+00 0
+.names line_9_.BLIF N_386.BLIF G_248
+01 1
+10 1
+11 0
+00 0
+.names line_7_.BLIF N_380.BLIF G_244
+01 1
+10 1
+11 0
+00 0
+.names line_6_.BLIF N_377.BLIF G_242
+01 1
+10 1
+11 0
+00 0
+.names line_5_.BLIF N_374.BLIF G_240
+01 1
+10 1
+11 0
+00 0
+.names line_4_.BLIF N_371.BLIF G_238
+01 1
+10 1
+11 0
+00 0
+.names line_3_.BLIF N_368.BLIF G_236
+01 1
+10 1
+11 0
+00 0
+.names line_2_.BLIF N_365.BLIF G_234
+01 1
+10 1
+11 0
+00 0
+.names line_0_.BLIF line_1_.BLIF G_232
+01 1
+10 1
+11 0
+00 0
+.names gnd_n_n.BLIF red_1_
+1 1
+0 0
+.names gnd_n_n.BLIF green_1_
+1 1
+0 0
+.names gnd_n_n.BLIF blue_1_
+1 1
+0 0
+.names hState_1_1reg.BLIF hState_1_
+1 1
+0 0
+.names vState_1_1reg.BLIF vState_1_
+1 1
+0 0
+.names hsyncDFFSHreg.BLIF hsync
+1 1
+0 0
+.names vsyncDFFSHreg.BLIF vsync
+1 1
+0 0
+.names video_0_reg.BLIF red_0_
+1 1
+0 0
+.names gnd_n_n.BLIF green_0_
+1 1
+0 0
+.names video_0_reg.BLIF blue_0_
+1 1
+0 0
+.names hState_1_0reg.BLIF hState_0_
+1 1
+0 0
+.names vState_1_0reg.BLIF vState_0_
+1 1
+0 0
+.names N_79.BLIF hState_1_1reg.CE
+1 1
+0 0
+.names vgaClock_c.BLIF hState_1_1reg.C
+1 1
+0 0
+.names reset_n_i.BLIF hState_1_1reg.AR
+1 1
+0 0
+.names N_79.BLIF hState_1_0reg.CE
+1 1
+0 0
+.names vgaClock_c.BLIF hState_1_0reg.C
+1 1
+0 0
+.names reset_n_i.BLIF hState_1_0reg.AR
+1 1
+0 0
+.names vgaClock_c.BLIF vState_1_0reg.C
+1 1
+0 0
+.names reset_n_i.BLIF vState_1_0reg.AR
+1 1
+0 0
+.names vgaClock_c.BLIF vState_1_1reg.C
+1 1
+0 0
+.names reset_n_i.BLIF vState_1_1reg.AR
+1 1
+0 0
+.names line_4_0__n.BLIF line_0_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_0_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_0_.AR
+1 1
+0 0
+.names line_4_1__n.BLIF line_1_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_1_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_1_.AR
+1 1
+0 0
+.names line_4_2__n.BLIF line_2_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_2_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_2_.AR
+1 1
+0 0
+.names line_4_3__n.BLIF line_3_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_3_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_3_.AR
+1 1
+0 0
+.names line_4_4__n.BLIF line_4_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_4_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_4_.AR
+1 1
+0 0
+.names line_4_5__n.BLIF line_5_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_5_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_5_.AR
+1 1
+0 0
+.names line_4_6__n.BLIF line_6_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_6_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_6_.AR
+1 1
+0 0
+.names line_4_7__n.BLIF line_7_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_7_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_7_.AR
+1 1
+0 0
+.names line_4_8__n.BLIF line_8_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_8_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_8_.AR
+1 1
+0 0
+.names line_4_9__n.BLIF line_9_.D
+1 1
+0 0
+.names vgaClock_c.BLIF line_9_.C
+1 1
+0 0
+.names reset_n_i.BLIF line_9_.AR
+1 1
+0 0
+.names G_208.BLIF pixel_4_.D
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_4_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_4_.AR
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_5_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_5_.AR
+1 1
+0 0
+.names G_212.BLIF pixel_6_.D
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_6_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_6_.AR
+1 1
+0 0
+.names G_214.BLIF pixel_7_.D
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_7_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_7_.AR
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_8_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_8_.AR
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_9_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_9_.AR
+1 1
+0 0
+.names pixel_i_0__n.BLIF pixel_0_.D
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_0_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_0_.AR
+1 1
+0 0
+.names G_202.BLIF pixel_1_.D
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_1_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_1_.AR
+1 1
+0 0
+.names G_204.BLIF pixel_2_.D
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_2_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_2_.AR
+1 1
+0 0
+.names G_206.BLIF pixel_3_.D
+1 1
+0 0
+.names vgaClock_c.BLIF pixel_3_.C
+1 1
+0 0
+.names reset_n_i.BLIF pixel_3_.AR
+1 1
+0 0
+.names vgaClock_c.BLIF vsyncDFFSHreg.C
+1 1
+0 0
+.names reset_n_i.BLIF vsyncDFFSHreg.AP
+1 1
+0 0
+.names vgaClock_c.BLIF hsyncDFFSHreg.C
+1 1
+0 0
+.names reset_n_i.BLIF hsyncDFFSHreg.AP
+1 1
+0 0
+.names N_166_1.BLIF video_0_reg.D
+1 1
+0 0
+.names vgaClock_c.BLIF video_0_reg.C
+1 1
+0 0
+.names reset_n_i.BLIF video_0_reg.AR
+1 1
+0 0
+.names vgaClock.BLIF vgaClock_c
+1 1
+0 0
+.names reset_n.BLIF reset_n_c
+1 1
+0 0
+.end

@@ -1,0 +1,91 @@
+#$ TOOL  ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE  Wed Jan 18 22:09:41 2012
+#$ MODULE  DebouncedFourBitCounter
+#$ PINS 8 stepButton:18 oneMHzClock:19 reset:20 direction:21 counter_3_:14
+ counter_2_:15 counter_1_:16 counter_0_:17
+#$ NODES 8 u1cs_counter_5_ u1d_debouncedSignal u1d_lastSample u1cs_counter_0_
+ u1cs_counter_1_ u1cs_counter_2_ u1cs_counter_3_ u1cs_counter_4_
+.model debouncedfourbitcounter 
+.inputs stepButton.BLIF oneMHzClock.BLIF reset.BLIF direction.BLIF \
+ u1cs_counter_5_.Q u1d_debouncedSignal.Q u1d_lastSample.Q u1cs_counter_0_.Q \
+ u1cs_counter_1_.Q u1cs_counter_2_.Q u1cs_counter_3_.Q u1cs_counter_4_.Q \
+ counter_0_.Q counter_1_.Q counter_2_.Q
+.outputs counter_3_.T counter_3_.C counter_3_.AR counter_2_.D.X1 counter_2_.D.X2 \
+ counter_2_.C counter_2_.AR counter_1_.D counter_1_.C counter_1_.AR counter_0_.D \
+ counter_0_.C counter_0_.AR u1cs_counter_5_.T u1cs_counter_5_.C \
+ u1d_debouncedSignal.D u1d_debouncedSignal.C u1d_lastSample.D u1d_lastSample.C \
+ u1cs_counter_0_.D u1cs_counter_0_.C u1cs_counter_1_.D u1cs_counter_1_.C \
+ u1cs_counter_2_.D u1cs_counter_2_.C u1cs_counter_3_.D u1cs_counter_3_.C \
+ u1cs_counter_4_.D.X1 u1cs_counter_4_.D.X2 u1cs_counter_4_.C
+.names direction.BLIF counter_0_.Q counter_1_.Q counter_2_.Q counter_3_.T
+0000 1
+1111 1
+.names u1d_debouncedSignal.Q counter_3_.C
+0 1
+.names reset.BLIF counter_3_.AR
+0 1
+.names direction.BLIF counter_0_.Q counter_1_.Q counter_2_.Q counter_2_.D.X1
+000- 1
+111- 1
+.names direction.BLIF counter_0_.Q counter_1_.Q counter_2_.Q counter_2_.D.X2
+---1 1
+.names u1d_debouncedSignal.Q counter_2_.C
+0 1
+.names reset.BLIF counter_2_.AR
+0 1
+.names direction.BLIF counter_0_.Q counter_1_.Q counter_1_.D
+000 1
+110 1
+101 1
+011 1
+.names u1d_debouncedSignal.Q counter_1_.C
+0 1
+.names reset.BLIF counter_1_.AR
+0 1
+.names counter_0_.Q counter_0_.D
+0 1
+.names u1d_debouncedSignal.Q counter_0_.C
+0 1
+.names reset.BLIF counter_0_.AR
+0 1
+.names u1cs_counter_0_.Q u1cs_counter_1_.Q u1cs_counter_2_.Q u1cs_counter_3_.Q u1cs_counter_4_.Q u1cs_counter_5_.T
+11111 1
+.names oneMHzClock.BLIF u1cs_counter_5_.C
+0 1
+.names stepButton.BLIF u1d_lastSample.Q u1d_debouncedSignal.D
+11 1
+.names u1cs_counter_5_.Q u1d_debouncedSignal.C
+1 1
+.names stepButton.BLIF u1d_lastSample.D
+1 1
+.names u1cs_counter_5_.Q u1d_lastSample.C
+1 1
+.names u1cs_counter_0_.Q u1cs_counter_0_.D
+0 1
+.names oneMHzClock.BLIF u1cs_counter_0_.C
+0 1
+.names u1cs_counter_0_.Q u1cs_counter_1_.Q u1cs_counter_1_.D
+10 1
+01 1
+.names oneMHzClock.BLIF u1cs_counter_1_.C
+0 1
+.names u1cs_counter_0_.Q u1cs_counter_1_.Q u1cs_counter_2_.Q u1cs_counter_2_.D
+110 1
+-01 1
+0-1 1
+.names oneMHzClock.BLIF u1cs_counter_2_.C
+0 1
+.names u1cs_counter_0_.Q u1cs_counter_1_.Q u1cs_counter_2_.Q u1cs_counter_3_.Q u1cs_counter_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+.names oneMHzClock.BLIF u1cs_counter_3_.C
+0 1
+.names u1cs_counter_0_.Q u1cs_counter_1_.Q u1cs_counter_2_.Q u1cs_counter_3_.Q u1cs_counter_4_.Q u1cs_counter_4_.D.X1
+1111- 1
+.names u1cs_counter_0_.Q u1cs_counter_1_.Q u1cs_counter_2_.Q u1cs_counter_3_.Q u1cs_counter_4_.Q u1cs_counter_4_.D.X2
+----1 1
+.names oneMHzClock.BLIF u1cs_counter_4_.C
+0 1
+.end

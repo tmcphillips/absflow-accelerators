@@ -1,0 +1,377 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// ------------------------------------------------------------------------------------------
+      Port          1      red[1:0]                      red                  1          2            -1
+      Port          2      green[1:0]                    green                  1          2            -1
+      Port          3      blue[1:0]                     blue                  1          2            -1
+      Port          4      hState[1:0]                   hState                  1          2            -1
+      Port          5      vState[1:0]                   vState                  1          2            -1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      red_1_                      red[1]                       1            0            
+        Port      red_0_                      red[0]                       1            1            
+        Port      green_1_                    green[1]                       2            0            
+        Port      green_0_                    green[0]                       2            1            
+        Port      blue_1_                     blue[1]                       3            0            
+        Port      blue_0_                     blue[0]                       3            1            
+        Port      hState_1_                   hState[1]                       4            0            
+        Port      hState_0_                   hState[0]                       4            1            
+        Port      vState_1_                   vState[1]                       5            0            
+        Port      vState_0_                   vState[0]                       5            1            
+End
+Section Cross Reference File
+Design 'vga' created Fri Feb 24 17:13:45 2012
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst         un3_pixel_i_9_                            un3_pixel_i[9]
+   Inst         pixel_3_i_0_9_                            pixel_3_i_0[9]
+   Inst            line_4_i_8_                               line_4_i[8]
+   Inst            line_4_i_7_                               line_4_i[7]
+   Inst              line_3_8_                                 line_3[8]
+   Inst              line_3_9_                                 line_3[9]
+   Inst            line_4_8__r                               line_4_8_.r
+   Inst            line_4_8__m                               line_4_8_.m
+   Inst            line_4_8__n                               line_4_8_.n
+   Inst            line_4_8__p                               line_4_8_.p
+   Inst             pixel_i_6_                                pixel_i[6]
+   Inst                line_0_                                   line[0]
+   Inst         un3_pixel_i_4_                            un3_pixel_i[4]
+   Inst                line_1_                                   line[1]
+   Inst   hState_1_ns_i_a2_0_o2_6_0_                hState_1_ns_i_a2_0_o2_6[0]
+   Inst                line_2_                                   line[2]
+   Inst   hState_1_ns_i_a2_0_o2_0_                  hState_1_ns_i_a2_0_o2[0]
+   Inst                line_3_                                   line[3]
+   Inst                line_4_                                   line[4]
+   Inst          hState_1_i_1_                             hState_1_i[1]
+   Inst                line_5_                                   line[5]
+   Inst          hState_1_i_0_                             hState_1_i[0]
+   Inst                line_6_                                   line[6]
+   Inst   hState_1_ns_i_a2_0_a2_7_0_                hState_1_ns_i_a2_0_a2_7[0]
+   Inst                line_7_                                   line[7]
+   Inst   hState_1_ns_i_a2_0_a2_6_0_                hState_1_ns_i_a2_0_a2_6[0]
+   Inst                line_8_                                   line[8]
+   Inst                line_9_                                   line[9]
+   Inst          vState_1_i_1_                             vState_1_i[1]
+   Inst               pixel_4_                                  pixel[4]
+   Inst          vState_1_i_0_                             vState_1_i[0]
+   Inst               pixel_5_                                  pixel[5]
+   Inst            line_4_i_6_                               line_4_i[6]
+   Inst               pixel_6_                                  pixel[6]
+   Inst            line_4_i_2_                               line_4_i[2]
+   Inst               pixel_7_                                  pixel[7]
+   Inst            line_4_i_3_                               line_4_i[3]
+   Inst               pixel_8_                                  pixel[8]
+   Inst            line_3_i_8_                               line_3_i[8]
+   Inst               pixel_9_                                  pixel[9]
+   Inst               pixel_0_                                  pixel[0]
+   Inst         un3_pixel_i_5_                            un3_pixel_i[5]
+   Inst               pixel_1_                                  pixel[1]
+   Inst         pixel_3_i_0_5_                            pixel_3_i_0[5]
+   Inst               pixel_2_                                  pixel[2]
+   Inst      pixel_3_i_0_o2_5_                         pixel_3_i_0_o2[5]
+   Inst               pixel_3_                                  pixel[3]
+   Inst   hState_1_ns_i_a2_i_o2_1_                  hState_1_ns_i_a2_i_o2[1]
+   Inst      pixel_3_i_0_a2_5_                         pixel_3_i_0_a2[5]
+   Inst               video_0_                                  video[0]
+   Inst                 red_0_                                    red[0]
+   Inst                 red_1_                                    red[1]
+   Inst               green_0_                                  green[0]
+   Inst   hState_1_ns_i_a2_0_o2_3_0_                hState_1_ns_i_a2_0_o2_3[0]
+   Inst               green_1_                                  green[1]
+   Inst   hState_1_ns_i_a2_i_o2_0_1_                hState_1_ns_i_a2_i_o2_0[1]
+   Inst                blue_0_                                   blue[0]
+   Inst   hState_1_ns_i_a2_0_a2_3_1_0_              hState_1_ns_i_a2_0_a2_3_1[0]
+   Inst                blue_1_                                   blue[1]
+   Inst         un3_pixel_i_6_                            un3_pixel_i[6]
+   Inst   hState_1_ns_i_a2_0_a2_3_3_0_              hState_1_ns_i_a2_0_a2_3_3[0]
+   Inst              hState_0_                                 hState[0]
+   Inst              hState_1_                                 hState[1]
+   Inst              vState_0_                                 vState[0]
+   Inst              vState_1_                                 vState[1]
+   Inst   hState_1_ns_i_a2_i_a2_0_1_                hState_1_ns_i_a2_i_a2_0[1]
+   Inst   hState_1_ns_i_a2_0_o2_5_0_                hState_1_ns_i_a2_0_o2_5[0]
+   Inst   hState_1_ns_i_a2_0_a2_2_1_0_              hState_1_ns_i_a2_0_a2_2_1[0]
+   Inst   hState_1_ns_i_a2_0_a2_2_0_                hState_1_ns_i_a2_0_a2_2[0]
+   Inst   vState_1_ns_0_i_a2_1_                     vState_1_ns_0_i_a2[1]
+   Inst   vState_1_ns_0_a5_0_i_1_0_                 vState_1_ns_0_a5_0_i_1[0]
+   Inst     vState_1_ns_0_i_1_                        vState_1_ns_0_i[1]
+   Inst   vState_1_ns_0_a5_0_i_0_                   vState_1_ns_0_a5_0_i[0]
+   Inst   hState_1_ns_i_a2_0_a2_0_                  hState_1_ns_i_a2_0_a2[0]
+   Inst   hState_1_ns_i_a2_0_a2_0_0_                hState_1_ns_i_a2_0_a2_0[0]
+   Inst   hState_1_ns_i_a2_0_a2_1_0_                hState_1_ns_i_a2_0_a2_1[0]
+   Inst   hState_1_ns_i_a2_0_a2_4_0_                hState_1_ns_i_a2_0_a2_4[0]
+   Inst   hState_1_ns_i_a2_0_a2_5_0_                hState_1_ns_i_a2_0_a2_5[0]
+   Inst   hState_1_ns_i_a2_i_a2_1_                  hState_1_ns_i_a2_i_a2[1]
+   Inst   hState_1_ns_i_a2_i_1_1_                   hState_1_ns_i_a2_i_1[1]
+   Inst   hState_1_ns_i_a2_i_1_                     hState_1_ns_i_a2_i[1]
+   Inst   hState_1_ns_i_a2_0_o2_0_0_                hState_1_ns_i_a2_0_o2_0[0]
+   Inst   hState_1_ns_i_a2_0_o2_2_0_                hState_1_ns_i_a2_0_o2_2[0]
+   Inst             pixel_i_0_                                pixel_i[0]
+   Inst   hState_1_ns_i_a2_i_a2_0_1_1_              hState_1_ns_i_a2_i_a2_0_1[1]
+   Inst   vState_1_ns_0_a5_1_0_                     vState_1_ns_0_a5_1[0]
+   Inst   vState_1_ns_0_a5_2_0_                     vState_1_ns_0_a5_2[0]
+   Inst   vState_1_ns_0_a5_3_0_                     vState_1_ns_0_a5_3[0]
+   Inst   vState_1_ns_0_a5_4_0_                     vState_1_ns_0_a5_4[0]
+   Inst   vState_1_ns_0_a5_5_0_                     vState_1_ns_0_a5_5[0]
+   Inst   vState_1_ns_0_a5_6_0_                     vState_1_ns_0_a5_6[0]
+   Inst   vState_1_ns_0_a5_7_0_                     vState_1_ns_0_a5_7[0]
+   Inst   vState_1_ns_0_a5_8_0_                     vState_1_ns_0_a5_8[0]
+   Inst   vState_1_ns_0_a5_9_0_                     vState_1_ns_0_a5_9[0]
+   Inst   vState_1_ns_0_a5_10_0_                    vState_1_ns_0_a5_10[0]
+   Inst    vState_1_ns_0_a5_0_                       vState_1_ns_0_a5[0]
+   Inst     vState_1_ns_0_1_0_                        vState_1_ns_0_1[0]
+   Inst     vState_1_ns_0_2_0_                        vState_1_ns_0_2[0]
+   Inst       vState_1_ns_0_0_                          vState_1_ns_0[0]
+   Inst   vState_1_ns_0_i_a2_0_4_2_1_               vState_1_ns_0_i_a2_0_4_2[1]
+   Inst   vState_1_ns_0_i_a2_0_4_1_                 vState_1_ns_0_i_a2_0_4[1]
+   Inst   vState_1_ns_0_i_a2_0_1_1_                 vState_1_ns_0_i_a2_0_1[1]
+   Inst   vState_1_ns_0_i_a2_0_1_                   vState_1_ns_0_i_a2_0[1]
+   Inst   hState_1_ns_i_a2_0_5_0_                   hState_1_ns_i_a2_0_5[0]
+   Inst   hState_1_ns_i_a2_0_0_                     hState_1_ns_i_a2_0[0]
+   Inst   hState_1_ns_i_a2_i_a2_1_1_1_              hState_1_ns_i_a2_i_a2_1_1[1]
+   Inst   hState_1_ns_i_a2_i_a2_1_2_1_              hState_1_ns_i_a2_i_a2_1_2[1]
+   Inst   hState_1_ns_i_a2_i_a2_1_1_                hState_1_ns_i_a2_i_a2_1[1]
+   Inst   hState_1_ns_i_a2_0_a2_3_0_0_              hState_1_ns_i_a2_0_a2_3_0[0]
+   Inst   hState_1_ns_i_a2_0_a2_3_2_0_              hState_1_ns_i_a2_0_a2_3_2[0]
+   Inst   hState_1_ns_i_a2_0_a2_3_0_                hState_1_ns_i_a2_0_a2_3[0]
+   Inst   hState_1_ns_i_a2_0_o2_1_1_0_              hState_1_ns_i_a2_0_o2_1_1[0]
+   Inst   hState_1_ns_i_a2_0_o2_1_0_                hState_1_ns_i_a2_0_o2_1[0]
+   Inst   vState_1_ns_0_i_a2_0_4_1_1_               vState_1_ns_0_i_a2_0_4_1[1]
+   Inst   hState_1_ns_i_a2_0_o2_7_1_0_              hState_1_ns_i_a2_0_o2_7_1[0]
+   Inst   hState_1_ns_i_a2_0_o2_7_0_                hState_1_ns_i_a2_0_o2_7[0]
+   Inst   hState_1_ns_i_a2_0_o2_11_1_0_             hState_1_ns_i_a2_0_o2_11_1[0]
+   Inst   hState_1_ns_i_a2_0_o2_11_0_               hState_1_ns_i_a2_0_o2_11[0]
+   Inst   hState_1_ns_i_a2_0_1_0_                   hState_1_ns_i_a2_0_1[0]
+   Inst   hState_1_ns_i_a2_0_2_0_                   hState_1_ns_i_a2_0_2[0]
+   Inst   hState_1_ns_i_a2_0_3_0_                   hState_1_ns_i_a2_0_3[0]
+   Inst   hState_1_ns_i_a2_0_4_0_                   hState_1_ns_i_a2_0_4[0]
+   Inst   hState_1_ns_i_a2_0_o2_3_i_0_              hState_1_ns_i_a2_0_o2_3_i[0]
+   Inst   hState_1_ns_i_a2_0_o2_2_i_0_              hState_1_ns_i_a2_0_o2_2_i[0]
+   Inst   hState_1_ns_i_a2_0_o2_0_i_0_              hState_1_ns_i_a2_0_o2_0_i[0]
+   Inst   hState_1_ns_i_a2_i_i_1_                   hState_1_ns_i_a2_i_i[1]
+   Inst   vState_1_ns_0_a5_0_i_i_0_                 vState_1_ns_0_a5_0_i_i[0]
+   Inst   hState_1_ns_i_a2_0_o2_9_1_0_              hState_1_ns_i_a2_0_o2_9_1[0]
+   Inst   hState_1_ns_i_a2_0_o2_9_2_0_              hState_1_ns_i_a2_0_o2_9_2[0]
+   Inst   hState_1_ns_i_a2_0_o2_9_0_                hState_1_ns_i_a2_0_o2_9[0]
+   Inst   hState_1_ns_i_a2_0_o2_4_1_0_              hState_1_ns_i_a2_0_o2_4_1[0]
+   Inst   hState_1_ns_i_a2_0_o2_4_0_                hState_1_ns_i_a2_0_o2_4[0]
+   Inst    pixel_3_i_0_o2_i_5_                       pixel_3_i_0_o2_i[5]
+   Inst         un3_pixel_i_7_                            un3_pixel_i[7]
+   Inst   hState_1_ns_i_a2_0_o2_4_i_0_              hState_1_ns_i_a2_0_o2_4_i[0]
+   Inst   hState_1_ns_i_a2_i_o2_0_i_1_              hState_1_ns_i_a2_i_o2_0_i[1]
+   Inst             pixel_i_7_                                pixel_i[7]
+   Inst     vState_1_ns_0_i_0_                        vState_1_ns_0_i[0]
+   Inst             pixel_i_5_                                pixel_i[5]
+   Inst   hState_1_ns_i_a2_0_o2_11_i_0_             hState_1_ns_i_a2_0_o2_11_i[0]
+   Inst   hState_1_ns_i_a2_0_o2_i_0_                hState_1_ns_i_a2_0_o2_i[0]
+   Inst   hState_1_ns_i_a2_i_o2_i_1_                hState_1_ns_i_a2_i_o2_i[1]
+   Inst   hState_1_ns_i_a2_0_o2_1_i_0_              hState_1_ns_i_a2_0_o2_1_i[0]
+   Inst            line_4_2__r                               line_4_2_.r
+   Inst            line_4_2__m                               line_4_2_.m
+   Inst            line_4_2__n                               line_4_2_.n
+   Inst            line_4_2__p                               line_4_2_.p
+   Inst            line_4_1__r                               line_4_1_.r
+   Inst            line_4_1__m                               line_4_1_.m
+   Inst            line_4_1__n                               line_4_1_.n
+   Inst            line_4_1__p                               line_4_1_.p
+   Inst            line_4_0__r                               line_4_0_.r
+   Inst            line_4_0__m                               line_4_0_.m
+   Inst            line_4_0__n                               line_4_0_.n
+   Inst            line_4_0__p                               line_4_0_.p
+   Inst              line_3_7_                                 line_3[7]
+   Inst              line_3_6_                                 line_3[6]
+   Inst              line_3_5_                                 line_3[5]
+   Inst              line_3_4_                                 line_3[4]
+   Inst              line_3_3_                                 line_3[3]
+   Inst              line_3_2_                                 line_3[2]
+   Inst              line_3_1_                                 line_3[1]
+   Inst              line_i_0_                                 line_i[0]
+   Inst              line_3_0_                                 line_3[0]
+   Inst              line_i_4_                                 line_i[4]
+   Inst            line_4_i_0_                               line_4_i[0]
+   Inst            line_4_9__r                               line_4_9_.r
+   Inst            line_4_9__m                               line_4_9_.m
+   Inst            line_4_9__n                               line_4_9_.n
+   Inst            line_4_9__p                               line_4_9_.p
+   Inst              line_i_7_                                 line_i[7]
+   Inst              line_i_8_                                 line_i[8]
+   Inst              line_i_6_                                 line_i[6]
+   Inst              line_i_5_                                 line_i[5]
+   Inst            line_4_i_5_                               line_4_i[5]
+   Inst            line_4_i_4_                               line_4_i[4]
+   Inst            line_4_i_1_                               line_4_i[1]
+   Inst            line_4_i_9_                               line_4_i[9]
+   Inst            line_4_7__r                               line_4_7_.r
+   Inst            line_4_7__m                               line_4_7_.m
+   Inst            line_4_7__n                               line_4_7_.n
+   Inst            line_4_7__p                               line_4_7_.p
+   Inst            line_4_6__r                               line_4_6_.r
+   Inst            line_4_6__m                               line_4_6_.m
+   Inst            line_4_6__n                               line_4_6_.n
+   Inst            line_4_6__p                               line_4_6_.p
+   Inst            line_4_5__r                               line_4_5_.r
+   Inst            line_4_5__m                               line_4_5_.m
+   Inst            line_4_5__n                               line_4_5_.n
+   Inst            line_4_5__p                               line_4_5_.p
+   Inst            line_4_4__r                               line_4_4_.r
+   Inst            line_4_4__m                               line_4_4_.m
+   Inst            line_4_4__n                               line_4_4_.n
+   Inst            line_4_4__p                               line_4_4_.p
+   Inst            line_4_3__r                               line_4_3_.r
+   Inst            line_4_3__m                               line_4_3_.m
+   Inst            line_4_3__n                               line_4_3_.n
+   Inst            line_4_3__p                               line_4_3_.p
+   Inst         un3_pixel_i_8_                            un3_pixel_i[8]
+   Inst         pixel_3_i_0_8_                            pixel_3_i_0[8]
+   Net                 gnd_n_n                                       GND
+   Net              video_4__n                                  video[4]
+   Net              pixel_0__n                                  pixel[0]
+   Net              pixel_1__n                                  pixel[1]
+   Net              pixel_2__n                                  pixel[2]
+   Net              pixel_3__n                                  pixel[3]
+   Net              pixel_4__n                                  pixel[4]
+   Net              pixel_5__n                                  pixel[5]
+   Net              pixel_6__n                                  pixel[6]
+   Net              pixel_7__n                                  pixel[7]
+   Net              pixel_8__n                                  pixel[8]
+   Net              pixel_9__n                                  pixel[9]
+   Net               line_0__n                                   line[0]
+   Net               line_1__n                                   line[1]
+   Net               line_2__n                                   line[2]
+   Net               line_3__n                                   line[3]
+   Net               line_4__n                                   line[4]
+   Net               line_5__n                                   line[5]
+   Net               line_6__n                                   line[6]
+   Net               line_7__n                                   line[7]
+   Net    vstate_1_ns_0_1_0__n                        vState_1_ns_0_1[0]
+   Net               line_8__n                                   line[8]
+   Net    vstate_1_ns_0_2_0__n                        vState_1_ns_0_2[0]
+   Net               line_9__n                                   line[9]
+   Net          un3_pixel_1__n                              un3_pixel[1]
+   Net          un3_pixel_2__n                              un3_pixel[2]
+   Net          un3_pixel_3__n                              un3_pixel[3]
+   Net          un3_pixel_4__n                              un3_pixel[4]
+   Net          un3_pixel_6__n                              un3_pixel[6]
+   Net          un3_pixel_7__n                              un3_pixel[7]
+   Net             line_4_0__n                                 line_4[0]
+   Net             line_4_1__n                                 line_4[1]
+   Net             line_4_2__n                                 line_4[2]
+   Net             line_4_3__n                                 line_4[3]
+   Net             line_4_4__n                                 line_4[4]
+   Net             line_4_5__n                                 line_4[5]
+   Net             line_4_6__n                                 line_4[6]
+   Net         line_4_2__un3_n                             line_4_2_.un3
+   Net             line_4_7__n                                 line_4[7]
+   Net         line_4_2__un1_n                             line_4_2_.un1
+   Net             line_4_8__n                                 line_4[8]
+   Net         line_4_2__un0_n                             line_4_2_.un0
+   Net             line_4_9__n                                 line_4[9]
+   Net         line_4_1__un3_n                             line_4_1_.un3
+   Net           vstate_1_0__n                               vState_1[0]
+   Net         line_4_1__un1_n                             line_4_1_.un1
+   Net           vstate_1_1__n                               vState_1[1]
+   Net         line_4_1__un0_n                             line_4_1_.un0
+   Net         line_4_0__un3_n                             line_4_0_.un3
+   Net         line_4_0__un1_n                             line_4_0_.un1
+   Net           hstate_1_0__n                               hState_1[0]
+   Net         line_4_0__un0_n                             line_4_0_.un0
+   Net           hstate_1_1__n                               hState_1[1]
+   Net         line_4_9__un3_n                             line_4_9_.un3
+   Net         line_4_9__un1_n                             line_4_9_.un1
+   Net         line_4_9__un0_n                             line_4_9_.un0
+   Net        vstate_1_ns_0__n                            vState_1_ns[0]
+   Net         line_4_7__un3_n                             line_4_7_.un3
+   Net         line_4_7__un1_n                             line_4_7_.un1
+   Net         line_4_7__un0_n                             line_4_7_.un0
+   Net         line_4_6__un3_n                             line_4_6_.un3
+   Net         line_4_6__un1_n                             line_4_6_.un1
+   Net         line_4_6__un0_n                             line_4_6_.un0
+   Net         line_4_5__un3_n                             line_4_5_.un3
+   Net         line_4_5__un1_n                             line_4_5_.un1
+   Net         line_4_5__un0_n                             line_4_5_.un0
+   Net         line_4_4__un3_n                             line_4_4_.un3
+   Net         line_4_4__un1_n                             line_4_4_.un1
+   Net         line_4_4__un0_n                             line_4_4_.un0
+   Net         line_4_3__un3_n                             line_4_3_.un3
+   Net         line_4_3__un1_n                             line_4_3_.un1
+   Net         line_4_3__un0_n                             line_4_3_.un0
+   Net         line_4_8__un3_n                             line_4_8_.un3
+   Net         line_4_8__un1_n                             line_4_8_.un1
+   Net         line_4_8__un0_n                             line_4_8_.un0
+   Net             line_3_8__n                                 line_3[8]
+   Net          un3_pixel_5__n                              un3_pixel[5]
+   Net          un3_pixel_8__n                              un3_pixel[8]
+   Net          un3_pixel_9__n                              un3_pixel[9]
+   Net           un2_line_8__n                               un2_line[8]
+   Net           un2_line_9__n                               un2_line[9]
+   Net             line_3_9__n                                 line_3[9]
+   Net             line_3_7__n                                 line_3[7]
+   Net             line_3_6__n                                 line_3[6]
+   Net             line_3_5__n                                 line_3[5]
+   Net             line_3_4__n                                 line_3[4]
+   Net             line_3_3__n                                 line_3[3]
+   Net             line_3_2__n                                 line_3[2]
+   Net             line_3_1__n                                 line_3[1]
+   Net             line_3_0__n                                 line_3[0]
+   Net           un2_line_7__n                               un2_line[7]
+   Net           un2_line_6__n                               un2_line[6]
+   Net           un2_line_5__n                               un2_line[5]
+   Net           un2_line_4__n                               un2_line[4]
+   Net           un2_line_3__n                               un2_line[3]
+   Net           un2_line_2__n                               un2_line[2]
+   Net           un2_line_1__n                               un2_line[1]
+   Net             line_i_4__n                                 line_i[4]
+   Net           line_4_i_0__n                               line_4_i[0]
+   Net             line_i_0__n                                 line_i[0]
+   Net           line_4_i_9__n                               line_4_i[9]
+   Net           line_4_i_1__n                               line_4_i[1]
+   Net           line_4_i_4__n                               line_4_i[4]
+   Net           line_4_i_5__n                               line_4_i[5]
+   Net             line_i_6__n                                 line_i[6]
+   Net             line_i_5__n                                 line_i[5]
+   Net             line_i_7__n                                 line_i[7]
+   Net             line_i_8__n                                 line_i[8]
+   Net           line_4_i_8__n                               line_4_i[8]
+   Net           line_4_i_7__n                               line_4_i[7]
+   Net        un3_pixel_i_9__n                            un3_pixel_i[9]
+   Net        un3_pixel_i_8__n                            un3_pixel_i[8]
+   Net           line_4_i_6__n                               line_4_i[6]
+   Net         vstate_1_i_0__n                             vState_1_i[0]
+   Net         vstate_1_i_1__n                             vState_1_i[1]
+   Net         hstate_1_i_1__n                             hState_1_i[1]
+   Net         hstate_1_i_0__n                             hState_1_i[0]
+   Net        un3_pixel_i_4__n                            un3_pixel_i[4]
+   Net          pixel_i_0_6__n                              pixel_i_0[6]
+   Net        un3_pixel_i_5__n                            un3_pixel_i[5]
+   Net           line_3_i_8__n                               line_3_i[8]
+   Net           line_4_i_3__n                               line_4_i[3]
+   Net           line_4_i_2__n                               line_4_i[2]
+   Net        un3_pixel_i_6__n                            un3_pixel_i[6]
+   Net            pixel_i_0__n                                pixel_i[0]
+   Net                red_0__n                                    red[0]
+   Net              green_0__n                                  green[0]
+   Net               blue_0__n                                   blue[0]
+   Net             hstate_0__n                                 hState[0]
+   Net             vstate_0__n                                 vState[0]
+   Net            pixel_i_7__n                                pixel_i[7]
+   Net      vstate_1_ns_0_0__n                          vState_1_ns_0[0]
+   Net            pixel_i_5__n                                pixel_i[5]
+   Net        un3_pixel_i_7__n                            un3_pixel_i[7]
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     vgaClock
+        Input     reset_n
+        Output     red_1_
+        Output     green_1_
+        Output     blue_1_
+        Output     hState_1_
+        Output     vState_1_
+        Output     hsync
+        Output     vsync
+        Output     red_0_
+        Output     green_0_
+        Output     blue_0_
+        Output     hState_0_
+        Output     vState_0_
+End

@@ -1,0 +1,631 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Thu Jan 26 13:48:51 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 26 opcode_n_3_:10'ke'  a_n_3_:24'ke'  b_n_3_:20'ke'  c_3_:34'ke'  a_led_3_:48'ke'  \
+#  b_led_3_:4'ke'  zf:38'ke'  cf:39'ke'  opcode_n_2_:9'ke'  opcode_n_1_:8'ke'  opcode_n_0_:7'ke'  \
+#  a_n_2_:26'ke'  a_n_1_:27'ke'  a_n_0_:28'ke'  b_n_2_:21'ke'  b_n_1_:22'ke'  b_n_0_:23'ke'  c_2_:33'ke'  \
+#  c_1_:32'ke'  c_0_:31'ke'  a_led_2_:47'ke'  a_led_1_:46'ke'  a_led_0_:45'ke'  b_led_2_:3'ke'  \
+#  b_led_1_:2'ke'  b_led_0_:40'ke' 
+#$ NODES 185 u0alu_n_62_n u0alu_c_2_0_1_ u0alu_c_4_3_ u0alu_G_31 u0alu_c_4_2_ \
+#  u0alu_G_30 u0alu_n_65_n u0alu_c_4_0_ u0alu_c_4_1_ u0alu_a_m_0__n u0alu_a_m_3__n \
+#  u0alu_un4_c_1_m_4__n u0alu_cf_3_m_2_n u0alu_n_44_n u0alu_cf_3_m_n u0alu_a_m_2_3__n \
+#  u0alu_n_18_n u0alu_n_15_n u0alu_n_28_n u0alu_n_24_n u0alu_n_27_n u0alu_n_23_n \
+#  u0alu_n_26_n u0alu_n_22_n u0alu_n_25_n u0alu_n_21_n u0alu_n_14_n u0alu_n_17_n \
+#  u0alu_n_13_n u0alu_n_16_n u0alu_n_10_n u0alu_n_6_n u0alu_n_9_n u0alu_n_5_n \
+#  u0alu_n_8_n u0alu_n_4_n u0alu_n_7_n u0alu_n_3_n u0alu_G_7 u0alu_G_5 u0alu_c_3_3__n \
+#  u0alu_c_2_3__n u0alu_c_3_2__n u0alu_c_2_2__n u0alu_c_3_1__n u0alu_c_2_1__n \
+#  u0alu_c_3_0__n u0alu_c_2_0__n u0alu_n_41_n b_n_i_0__n b_n_i_1__n b_n_i_2__n \
+#  b_n_i_3__n a_n_i_0__n a_n_i_1__n a_n_i_2__n a_n_i_3__n u0alu_un26_c_i_i_2__n \
+#  u0alu_un26_c_i_i_3__n opcode_n_i_0__n opcode_n_i_1__n opcode_n_i_2__n \
+#  opcode_n_i_3__n c_i_1__n c_i_0__n c_i_3__n c_i_2__n opcode_n_c_0__n opcode_n_c_1__n \
+#  opcode_n_c_2__n opcode_n_c_3__n a_n_c_0__n a_n_c_1__n a_n_c_2__n a_n_c_3__n \
+#  b_n_c_0__n b_n_c_1__n b_n_c_2__n b_n_c_3__n c_c_0__n c_c_1__n c_c_2__n c_c_3__n zf_c \
+#  cf_c u0alu_n_65_0_n u0alu_c_3_0_0__n u0alu_c_3_0_1__n u0alu_c_3_0_2__n \
+#  u0alu_c_3_0_3__n u0alu_un4_c_1_m_i_4__n u0alu_cf_3_m_i_n u0alu_a_m_i_3__n \
+#  u0alu_a_m_i_0__n cf_c_0 u0alu_n_62_0_n cf_c_0_1 cf_c_0_2 zf_c_1 zf_c_2 \
+#  u0alu_un4_c_1_m_1_4__n u0alu_un4_c_1_m_2_4__n u0alu_un4_c_1_m_3_4__n \
+#  u0alu_cf_3_m_1_n u0alu_cf_3_m_2_0_n u0alu_cf_3_m_3_n u0alu_cf_3_m_4_n \
+#  u0alu_a_m_1_3__n u0alu_a_m_2_0_3__n u0alu_a_m_1_0__n u0alu_a_m_2_0__n \
+#  u0alu_c_2_0_1_1_ u0alu_n_62_0_1_n u0alu_c_3_0_2__un3_n u0alu_c_3_0_2__un1_n \
+#  u0alu_c_3_0_2__un0_n u0alu_c_3_0_1__un3_n u0alu_c_3_0_1__un1_n \
+#  u0alu_c_3_0_1__un0_n u0alu_c_2_0_3__un3_n u0alu_c_2_0_3__un1_n \
+#  u0alu_c_2_0_3__un0_n u0alu_c_2_0_2__un3_n u0alu_c_2_0_2__un1_n \
+#  u0alu_c_2_0_2__un0_n u0alu_c_1_3__un3_n u0alu_c_1_3__un1_n u0alu_c_1_3__un0_n \
+#  u0alu_c_1_2__un3_n u0alu_c_1_2__un1_n u0alu_c_1_2__un0_n u0alu_c_1_1__un3_n \
+#  u0alu_c_1_1__un1_n u0alu_c_1_1__un0_n u0alu_c_1_0__un3_n u0alu_c_1_0__un1_n \
+#  u0alu_c_1_0__un0_n u0alu_c_0_3__un3_n u0alu_c_0_3__un1_n u0alu_c_0_3__un0_n \
+#  u0alu_c_0_2__un3_n u0alu_c_0_2__un1_n u0alu_c_0_2__un0_n u0alu_c_0_1__un3_n \
+#  u0alu_c_0_1__un1_n u0alu_c_0_1__un0_n u0alu_c_0_0__un3_n u0alu_c_0_0__un1_n \
+#  u0alu_c_0_0__un0_n u0alu_c_3__un3_n u0alu_c_3__un1_n u0alu_c_3__un0_n \
+#  u0alu_c_2__un3_n u0alu_c_2__un1_n u0alu_c_2__un0_n u0alu_c_1__un3_n \
+#  u0alu_c_1__un1_n u0alu_c_1__un0_n u0alu_c_0__un3_n u0alu_c_0__un1_n \
+#  u0alu_c_0__un0_n u0alu_c_5_3__un3_n u0alu_c_5_3__un1_n u0alu_c_5_3__un0_n \
+#  u0alu_c_5_2__un3_n u0alu_c_5_2__un1_n u0alu_c_5_2__un0_n u0alu_c_5_1__un3_n \
+#  u0alu_c_5_1__un1_n u0alu_c_5_1__un0_n u0alu_c_5_0__un3_n u0alu_c_5_0__un1_n \
+#  u0alu_c_5_0__un0_n u0alu_c_4_0_3__un3_n u0alu_c_4_0_3__un1_n u0alu_c_4_0_3__un0_n \
+#  u0alu_c_4_0_2__un3_n u0alu_c_4_0_2__un1_n u0alu_c_4_0_2__un0_n \
+#  u0alu_c_4_0_1__un3_n u0alu_c_4_0_1__un1_n u0alu_c_4_0_1__un0_n \
+#  u0alu_c_4_0_0__un3_n u0alu_c_4_0_0__un1_n u0alu_c_4_0_0__un0_n
+.model alu_demo
+.inputs opcode_n_3_.BLIF a_n_3_.BLIF b_n_3_.BLIF opcode_n_2_.BLIF \
+opcode_n_1_.BLIF opcode_n_0_.BLIF a_n_2_.BLIF a_n_1_.BLIF a_n_0_.BLIF \
+b_n_2_.BLIF b_n_1_.BLIF b_n_0_.BLIF u0alu_n_62_n.BLIF u0alu_c_2_0_1_.BLIF \
+u0alu_c_4_3_.BLIF u0alu_G_31.BLIF u0alu_c_4_2_.BLIF u0alu_G_30.BLIF \
+u0alu_n_65_n.BLIF u0alu_c_4_0_.BLIF u0alu_c_4_1_.BLIF u0alu_a_m_0__n.BLIF \
+u0alu_a_m_3__n.BLIF u0alu_un4_c_1_m_4__n.BLIF u0alu_cf_3_m_2_n.BLIF \
+u0alu_n_44_n.BLIF u0alu_cf_3_m_n.BLIF u0alu_a_m_2_3__n.BLIF u0alu_n_18_n.BLIF \
+u0alu_n_15_n.BLIF u0alu_n_28_n.BLIF u0alu_n_24_n.BLIF u0alu_n_27_n.BLIF \
+u0alu_n_23_n.BLIF u0alu_n_26_n.BLIF u0alu_n_22_n.BLIF u0alu_n_25_n.BLIF \
+u0alu_n_21_n.BLIF u0alu_n_14_n.BLIF u0alu_n_17_n.BLIF u0alu_n_13_n.BLIF \
+u0alu_n_16_n.BLIF u0alu_n_10_n.BLIF u0alu_n_6_n.BLIF u0alu_n_9_n.BLIF \
+u0alu_n_5_n.BLIF u0alu_n_8_n.BLIF u0alu_n_4_n.BLIF u0alu_n_7_n.BLIF \
+u0alu_n_3_n.BLIF u0alu_G_7.BLIF u0alu_G_5.BLIF u0alu_c_3_3__n.BLIF \
+u0alu_c_2_3__n.BLIF u0alu_c_3_2__n.BLIF u0alu_c_2_2__n.BLIF \
+u0alu_c_3_1__n.BLIF u0alu_c_2_1__n.BLIF u0alu_c_3_0__n.BLIF \
+u0alu_c_2_0__n.BLIF u0alu_n_41_n.BLIF b_n_i_0__n.BLIF b_n_i_1__n.BLIF \
+b_n_i_2__n.BLIF b_n_i_3__n.BLIF a_n_i_0__n.BLIF a_n_i_1__n.BLIF \
+a_n_i_2__n.BLIF a_n_i_3__n.BLIF u0alu_un26_c_i_i_2__n.BLIF \
+u0alu_un26_c_i_i_3__n.BLIF opcode_n_i_0__n.BLIF opcode_n_i_1__n.BLIF \
+opcode_n_i_2__n.BLIF opcode_n_i_3__n.BLIF c_i_1__n.BLIF c_i_0__n.BLIF \
+c_i_3__n.BLIF c_i_2__n.BLIF opcode_n_c_0__n.BLIF opcode_n_c_1__n.BLIF \
+opcode_n_c_2__n.BLIF opcode_n_c_3__n.BLIF a_n_c_0__n.BLIF a_n_c_1__n.BLIF \
+a_n_c_2__n.BLIF a_n_c_3__n.BLIF b_n_c_0__n.BLIF b_n_c_1__n.BLIF \
+b_n_c_2__n.BLIF b_n_c_3__n.BLIF c_c_0__n.BLIF c_c_1__n.BLIF c_c_2__n.BLIF \
+c_c_3__n.BLIF zf_c.BLIF cf_c.BLIF u0alu_n_65_0_n.BLIF u0alu_c_3_0_0__n.BLIF \
+u0alu_c_3_0_1__n.BLIF u0alu_c_3_0_2__n.BLIF u0alu_c_3_0_3__n.BLIF \
+u0alu_un4_c_1_m_i_4__n.BLIF u0alu_cf_3_m_i_n.BLIF u0alu_a_m_i_3__n.BLIF \
+u0alu_a_m_i_0__n.BLIF cf_c_0.BLIF u0alu_n_62_0_n.BLIF cf_c_0_1.BLIF \
+cf_c_0_2.BLIF zf_c_1.BLIF zf_c_2.BLIF u0alu_un4_c_1_m_1_4__n.BLIF \
+u0alu_un4_c_1_m_2_4__n.BLIF u0alu_un4_c_1_m_3_4__n.BLIF u0alu_cf_3_m_1_n.BLIF \
+u0alu_cf_3_m_2_0_n.BLIF u0alu_cf_3_m_3_n.BLIF u0alu_cf_3_m_4_n.BLIF \
+u0alu_a_m_1_3__n.BLIF u0alu_a_m_2_0_3__n.BLIF u0alu_a_m_1_0__n.BLIF \
+u0alu_a_m_2_0__n.BLIF u0alu_c_2_0_1_1_.BLIF u0alu_n_62_0_1_n.BLIF \
+u0alu_c_3_0_2__un3_n.BLIF u0alu_c_3_0_2__un1_n.BLIF u0alu_c_3_0_2__un0_n.BLIF \
+u0alu_c_3_0_1__un3_n.BLIF u0alu_c_3_0_1__un1_n.BLIF u0alu_c_3_0_1__un0_n.BLIF \
+u0alu_c_2_0_3__un3_n.BLIF u0alu_c_2_0_3__un1_n.BLIF u0alu_c_2_0_3__un0_n.BLIF \
+u0alu_c_2_0_2__un3_n.BLIF u0alu_c_2_0_2__un1_n.BLIF u0alu_c_2_0_2__un0_n.BLIF \
+u0alu_c_1_3__un3_n.BLIF u0alu_c_1_3__un1_n.BLIF u0alu_c_1_3__un0_n.BLIF \
+u0alu_c_1_2__un3_n.BLIF u0alu_c_1_2__un1_n.BLIF u0alu_c_1_2__un0_n.BLIF \
+u0alu_c_1_1__un3_n.BLIF u0alu_c_1_1__un1_n.BLIF u0alu_c_1_1__un0_n.BLIF \
+u0alu_c_1_0__un3_n.BLIF u0alu_c_1_0__un1_n.BLIF u0alu_c_1_0__un0_n.BLIF \
+u0alu_c_0_3__un3_n.BLIF u0alu_c_0_3__un1_n.BLIF u0alu_c_0_3__un0_n.BLIF \
+u0alu_c_0_2__un3_n.BLIF u0alu_c_0_2__un1_n.BLIF u0alu_c_0_2__un0_n.BLIF \
+u0alu_c_0_1__un3_n.BLIF u0alu_c_0_1__un1_n.BLIF u0alu_c_0_1__un0_n.BLIF \
+u0alu_c_0_0__un3_n.BLIF u0alu_c_0_0__un1_n.BLIF u0alu_c_0_0__un0_n.BLIF \
+u0alu_c_3__un3_n.BLIF u0alu_c_3__un1_n.BLIF u0alu_c_3__un0_n.BLIF \
+u0alu_c_2__un3_n.BLIF u0alu_c_2__un1_n.BLIF u0alu_c_2__un0_n.BLIF \
+u0alu_c_1__un3_n.BLIF u0alu_c_1__un1_n.BLIF u0alu_c_1__un0_n.BLIF \
+u0alu_c_0__un3_n.BLIF u0alu_c_0__un1_n.BLIF u0alu_c_0__un0_n.BLIF \
+u0alu_c_5_3__un3_n.BLIF u0alu_c_5_3__un1_n.BLIF u0alu_c_5_3__un0_n.BLIF \
+u0alu_c_5_2__un3_n.BLIF u0alu_c_5_2__un1_n.BLIF u0alu_c_5_2__un0_n.BLIF \
+u0alu_c_5_1__un3_n.BLIF u0alu_c_5_1__un1_n.BLIF u0alu_c_5_1__un0_n.BLIF \
+u0alu_c_5_0__un3_n.BLIF u0alu_c_5_0__un1_n.BLIF u0alu_c_5_0__un0_n.BLIF \
+u0alu_c_4_0_3__un3_n.BLIF u0alu_c_4_0_3__un1_n.BLIF u0alu_c_4_0_3__un0_n.BLIF \
+u0alu_c_4_0_2__un3_n.BLIF u0alu_c_4_0_2__un1_n.BLIF u0alu_c_4_0_2__un0_n.BLIF \
+u0alu_c_4_0_1__un3_n.BLIF u0alu_c_4_0_1__un1_n.BLIF u0alu_c_4_0_1__un0_n.BLIF \
+u0alu_c_4_0_0__un3_n.BLIF u0alu_c_4_0_0__un1_n.BLIF u0alu_c_4_0_0__un0_n.BLIF
+.outputs c_3_ a_led_3_ b_led_3_ zf cf c_2_ c_1_ c_0_ a_led_2_ a_led_1_ \
+a_led_0_ b_led_2_ b_led_1_ b_led_0_ u0alu_n_62_n u0alu_n_65_n u0alu_a_m_0__n \
+u0alu_a_m_3__n u0alu_un4_c_1_m_4__n u0alu_cf_3_m_2_n u0alu_n_44_n \
+u0alu_cf_3_m_n u0alu_a_m_2_3__n u0alu_n_18_n u0alu_n_15_n u0alu_n_28_n \
+u0alu_n_24_n u0alu_n_27_n u0alu_n_23_n u0alu_n_26_n u0alu_n_22_n u0alu_n_25_n \
+u0alu_n_21_n u0alu_n_14_n u0alu_n_17_n u0alu_n_13_n u0alu_n_16_n u0alu_n_10_n \
+u0alu_n_6_n u0alu_n_9_n u0alu_n_5_n u0alu_n_8_n u0alu_n_4_n u0alu_n_7_n \
+u0alu_n_3_n u0alu_c_3_3__n u0alu_c_2_3__n u0alu_c_3_2__n u0alu_c_2_2__n \
+u0alu_c_3_1__n u0alu_c_2_1__n u0alu_c_3_0__n u0alu_c_2_0__n u0alu_n_41_n \
+b_n_i_0__n b_n_i_1__n b_n_i_2__n b_n_i_3__n a_n_i_0__n a_n_i_1__n a_n_i_2__n \
+a_n_i_3__n u0alu_un26_c_i_i_2__n u0alu_un26_c_i_i_3__n opcode_n_i_0__n \
+opcode_n_i_1__n opcode_n_i_2__n opcode_n_i_3__n c_i_1__n c_i_0__n c_i_3__n \
+c_i_2__n opcode_n_c_0__n opcode_n_c_1__n opcode_n_c_2__n opcode_n_c_3__n \
+a_n_c_0__n a_n_c_1__n a_n_c_2__n a_n_c_3__n b_n_c_0__n b_n_c_1__n b_n_c_2__n \
+b_n_c_3__n c_c_0__n c_c_1__n c_c_2__n c_c_3__n zf_c cf_c u0alu_n_65_0_n \
+u0alu_c_3_0_0__n u0alu_c_3_0_1__n u0alu_c_3_0_2__n u0alu_c_3_0_3__n \
+u0alu_un4_c_1_m_i_4__n u0alu_cf_3_m_i_n u0alu_a_m_i_3__n u0alu_a_m_i_0__n \
+cf_c_0 u0alu_n_62_0_n cf_c_0_1 cf_c_0_2 zf_c_1 zf_c_2 u0alu_un4_c_1_m_1_4__n \
+u0alu_un4_c_1_m_2_4__n u0alu_un4_c_1_m_3_4__n u0alu_cf_3_m_1_n \
+u0alu_cf_3_m_2_0_n u0alu_cf_3_m_3_n u0alu_cf_3_m_4_n u0alu_a_m_1_3__n \
+u0alu_a_m_2_0_3__n u0alu_a_m_1_0__n u0alu_a_m_2_0__n u0alu_n_62_0_1_n \
+u0alu_c_3_0_2__un3_n u0alu_c_3_0_2__un1_n u0alu_c_3_0_2__un0_n \
+u0alu_c_3_0_1__un3_n u0alu_c_3_0_1__un1_n u0alu_c_3_0_1__un0_n \
+u0alu_c_2_0_3__un3_n u0alu_c_2_0_3__un1_n u0alu_c_2_0_3__un0_n \
+u0alu_c_2_0_2__un3_n u0alu_c_2_0_2__un1_n u0alu_c_2_0_2__un0_n \
+u0alu_c_1_3__un3_n u0alu_c_1_3__un1_n u0alu_c_1_3__un0_n u0alu_c_1_2__un3_n \
+u0alu_c_1_2__un1_n u0alu_c_1_2__un0_n u0alu_c_1_1__un3_n u0alu_c_1_1__un1_n \
+u0alu_c_1_1__un0_n u0alu_c_1_0__un3_n u0alu_c_1_0__un1_n u0alu_c_1_0__un0_n \
+u0alu_c_0_3__un3_n u0alu_c_0_3__un1_n u0alu_c_0_3__un0_n u0alu_c_0_2__un3_n \
+u0alu_c_0_2__un1_n u0alu_c_0_2__un0_n u0alu_c_0_1__un3_n u0alu_c_0_1__un1_n \
+u0alu_c_0_1__un0_n u0alu_c_0_0__un3_n u0alu_c_0_0__un1_n u0alu_c_0_0__un0_n \
+u0alu_c_3__un3_n u0alu_c_3__un1_n u0alu_c_3__un0_n u0alu_c_2__un3_n \
+u0alu_c_2__un1_n u0alu_c_2__un0_n u0alu_c_1__un3_n u0alu_c_1__un1_n \
+u0alu_c_1__un0_n u0alu_c_0__un3_n u0alu_c_0__un1_n u0alu_c_0__un0_n \
+u0alu_c_5_3__un3_n u0alu_c_5_3__un1_n u0alu_c_5_3__un0_n u0alu_c_5_2__un3_n \
+u0alu_c_5_2__un1_n u0alu_c_5_2__un0_n u0alu_c_5_1__un3_n u0alu_c_5_1__un1_n \
+u0alu_c_5_1__un0_n u0alu_c_5_0__un3_n u0alu_c_5_0__un1_n u0alu_c_5_0__un0_n \
+u0alu_c_4_0_3__un3_n u0alu_c_4_0_3__un1_n u0alu_c_4_0_3__un0_n \
+u0alu_c_4_0_2__un3_n u0alu_c_4_0_2__un1_n u0alu_c_4_0_2__un0_n \
+u0alu_c_4_0_1__un3_n u0alu_c_4_0_1__un1_n u0alu_c_4_0_1__un0_n \
+u0alu_c_4_0_0__un3_n u0alu_c_4_0_0__un1_n u0alu_c_4_0_0__un0_n u0alu_c_2_0_1_ \
+u0alu_c_4_3_ u0alu_G_31 u0alu_c_4_2_ u0alu_G_30 u0alu_c_4_0_ u0alu_c_4_1_ \
+u0alu_G_7 u0alu_G_5 u0alu_c_2_0_1_1_
+.names u0alu_n_62_0_n.BLIF u0alu_n_62_n
+0 1
+.names u0alu_n_65_0_n.BLIF u0alu_n_65_n
+0 1
+.names u0alu_a_m_1_0__n.BLIF u0alu_a_m_2_0__n.BLIF u0alu_a_m_0__n
+11 1
+.names u0alu_a_m_1_3__n.BLIF u0alu_a_m_2_0_3__n.BLIF u0alu_a_m_3__n
+11 1
+.names u0alu_un4_c_1_m_3_4__n.BLIF u0alu_n_44_n.BLIF u0alu_un4_c_1_m_4__n
+11 1
+.names opcode_n_i_2__n.BLIF opcode_n_i_3__n.BLIF u0alu_cf_3_m_2_n
+11 1
+.names a_n_i_2__n.BLIF u0alu_n_41_n.BLIF u0alu_n_44_n
+11 1
+.names u0alu_cf_3_m_4_n.BLIF u0alu_cf_3_m_3_n.BLIF u0alu_cf_3_m_n
+11 1
+.names opcode_n_i_1__n.BLIF opcode_n_i_2__n.BLIF u0alu_a_m_2_3__n
+11 1
+.names a_n_i_2__n.BLIF opcode_n_c_0__n.BLIF u0alu_n_18_n
+11 1
+.names a_n_i_1__n.BLIF opcode_n_i_0__n.BLIF u0alu_n_15_n
+11 1
+.names u0alu_c_5_3__un1_n.BLIF u0alu_c_5_3__un0_n.BLIF u0alu_n_28_n
+1- 1
+-1 1
+.names u0alu_c_4_0_3__un1_n.BLIF u0alu_c_4_0_3__un0_n.BLIF u0alu_n_24_n
+1- 1
+-1 1
+.names u0alu_c_5_2__un1_n.BLIF u0alu_c_5_2__un0_n.BLIF u0alu_n_27_n
+1- 1
+-1 1
+.names u0alu_c_4_0_2__un1_n.BLIF u0alu_c_4_0_2__un0_n.BLIF u0alu_n_23_n
+1- 1
+-1 1
+.names u0alu_c_5_1__un1_n.BLIF u0alu_c_5_1__un0_n.BLIF u0alu_n_26_n
+1- 1
+-1 1
+.names u0alu_c_4_0_1__un1_n.BLIF u0alu_c_4_0_1__un0_n.BLIF u0alu_n_22_n
+1- 1
+-1 1
+.names u0alu_c_5_0__un1_n.BLIF u0alu_c_5_0__un0_n.BLIF u0alu_n_25_n
+1- 1
+-1 1
+.names u0alu_c_4_0_0__un1_n.BLIF u0alu_c_4_0_0__un0_n.BLIF u0alu_n_21_n
+1- 1
+-1 1
+.names u0alu_c_2_0_3__un1_n.BLIF u0alu_c_2_0_3__un0_n.BLIF u0alu_n_14_n
+1- 1
+-1 1
+.names u0alu_c_3_0_2__un1_n.BLIF u0alu_c_3_0_2__un0_n.BLIF u0alu_n_17_n
+1- 1
+-1 1
+.names u0alu_c_2_0_2__un1_n.BLIF u0alu_c_2_0_2__un0_n.BLIF u0alu_n_13_n
+1- 1
+-1 1
+.names u0alu_c_3_0_1__un1_n.BLIF u0alu_c_3_0_1__un0_n.BLIF u0alu_n_16_n
+1- 1
+-1 1
+.names u0alu_c_1_3__un1_n.BLIF u0alu_c_1_3__un0_n.BLIF u0alu_n_10_n
+1- 1
+-1 1
+.names u0alu_c_0_3__un1_n.BLIF u0alu_c_0_3__un0_n.BLIF u0alu_n_6_n
+1- 1
+-1 1
+.names u0alu_c_1_2__un1_n.BLIF u0alu_c_1_2__un0_n.BLIF u0alu_n_9_n
+1- 1
+-1 1
+.names u0alu_c_0_2__un1_n.BLIF u0alu_c_0_2__un0_n.BLIF u0alu_n_5_n
+1- 1
+-1 1
+.names u0alu_c_1_1__un1_n.BLIF u0alu_c_1_1__un0_n.BLIF u0alu_n_8_n
+1- 1
+-1 1
+.names u0alu_c_0_1__un1_n.BLIF u0alu_c_0_1__un0_n.BLIF u0alu_n_4_n
+1- 1
+-1 1
+.names u0alu_c_1_0__un1_n.BLIF u0alu_c_1_0__un0_n.BLIF u0alu_n_7_n
+1- 1
+-1 1
+.names u0alu_c_0_0__un1_n.BLIF u0alu_c_0_0__un0_n.BLIF u0alu_n_3_n
+1- 1
+-1 1
+.names u0alu_c_3_0_3__n.BLIF u0alu_c_3_3__n
+0 1
+.names a_n_i_3__n.BLIF b_n_i_3__n.BLIF u0alu_c_2_3__n
+11 1
+.names u0alu_c_3_0_2__n.BLIF u0alu_c_3_2__n
+0 1
+.names a_n_i_2__n.BLIF b_n_i_2__n.BLIF u0alu_c_2_2__n
+11 1
+.names u0alu_c_3_0_1__n.BLIF u0alu_c_3_1__n
+0 1
+.names a_n_i_1__n.BLIF b_n_i_1__n.BLIF u0alu_c_2_1__n
+11 1
+.names u0alu_c_3_0_0__n.BLIF u0alu_c_3_0__n
+0 1
+.names a_n_i_0__n.BLIF b_n_i_0__n.BLIF u0alu_c_2_0__n
+11 1
+.names a_n_i_0__n.BLIF a_n_i_1__n.BLIF u0alu_n_41_n
+11 1
+.names b_n_c_0__n.BLIF b_n_i_0__n
+0 1
+.names b_n_c_1__n.BLIF b_n_i_1__n
+0 1
+.names b_n_c_2__n.BLIF b_n_i_2__n
+0 1
+.names b_n_c_3__n.BLIF b_n_i_3__n
+0 1
+.names a_n_c_0__n.BLIF a_n_i_0__n
+0 1
+.names a_n_c_1__n.BLIF a_n_i_1__n
+0 1
+.names a_n_c_2__n.BLIF a_n_i_2__n
+0 1
+.names a_n_c_3__n.BLIF a_n_i_3__n
+0 1
+.names u0alu_G_30.BLIF u0alu_un26_c_i_i_2__n
+0 1
+.names u0alu_G_31.BLIF u0alu_un26_c_i_i_3__n
+0 1
+.names opcode_n_c_0__n.BLIF opcode_n_i_0__n
+0 1
+.names opcode_n_c_1__n.BLIF opcode_n_i_1__n
+0 1
+.names opcode_n_c_2__n.BLIF opcode_n_i_2__n
+0 1
+.names opcode_n_c_3__n.BLIF opcode_n_i_3__n
+0 1
+.names c_c_1__n.BLIF c_i_1__n
+0 1
+.names c_c_0__n.BLIF c_i_0__n
+0 1
+.names c_c_3__n.BLIF c_i_3__n
+0 1
+.names c_c_2__n.BLIF c_i_2__n
+0 1
+.names u0alu_c_0__un1_n.BLIF u0alu_c_0__un0_n.BLIF c_c_0__n
+1- 1
+-1 1
+.names u0alu_c_1__un1_n.BLIF u0alu_c_1__un0_n.BLIF c_c_1__n
+1- 1
+-1 1
+.names u0alu_c_2__un1_n.BLIF u0alu_c_2__un0_n.BLIF c_c_2__n
+1- 1
+-1 1
+.names u0alu_c_3__un1_n.BLIF u0alu_c_3__un0_n.BLIF c_c_3__n
+1- 1
+-1 1
+.names zf_c_1.BLIF zf_c_2.BLIF zf_c
+11 1
+.names cf_c_0.BLIF cf_c
+0 1
+.names a_n_c_0__n.BLIF a_n_c_1__n.BLIF u0alu_n_65_0_n
+11 1
+.names a_n_c_0__n.BLIF b_n_c_0__n.BLIF u0alu_c_3_0_0__n
+11 1
+.names a_n_c_1__n.BLIF b_n_c_1__n.BLIF u0alu_c_3_0_1__n
+11 1
+.names a_n_c_2__n.BLIF b_n_c_2__n.BLIF u0alu_c_3_0_2__n
+11 1
+.names a_n_c_3__n.BLIF b_n_c_3__n.BLIF u0alu_c_3_0_3__n
+11 1
+.names u0alu_un4_c_1_m_4__n.BLIF u0alu_un4_c_1_m_i_4__n
+0 1
+.names u0alu_cf_3_m_n.BLIF u0alu_cf_3_m_i_n
+0 1
+.names u0alu_a_m_3__n.BLIF u0alu_a_m_i_3__n
+0 1
+.names u0alu_a_m_0__n.BLIF u0alu_a_m_i_0__n
+0 1
+.names cf_c_0_1.BLIF cf_c_0_2.BLIF cf_c_0
+11 1
+.names u0alu_n_62_0_1_n.BLIF a_n_c_1__n.BLIF u0alu_n_62_0_n
+11 1
+.names u0alu_cf_3_m_i_n.BLIF u0alu_un4_c_1_m_i_4__n.BLIF cf_c_0_1
+11 1
+.names u0alu_a_m_i_0__n.BLIF u0alu_a_m_i_3__n.BLIF cf_c_0_2
+11 1
+.names c_i_0__n.BLIF c_i_1__n.BLIF zf_c_1
+11 1
+.names c_i_2__n.BLIF c_i_3__n.BLIF zf_c_2
+11 1
+.names u0alu_cf_3_m_2_n.BLIF a_n_i_3__n.BLIF u0alu_un4_c_1_m_1_4__n
+11 1
+.names opcode_n_c_0__n.BLIF opcode_n_c_1__n.BLIF u0alu_un4_c_1_m_2_4__n
+11 1
+.names u0alu_un4_c_1_m_1_4__n.BLIF u0alu_un4_c_1_m_2_4__n.BLIF \
+u0alu_un4_c_1_m_3_4__n
+11 1
+.names u0alu_n_65_0_n.BLIF u0alu_cf_3_m_2_n.BLIF u0alu_cf_3_m_1_n
+11 1
+.names a_n_c_2__n.BLIF a_n_c_3__n.BLIF u0alu_cf_3_m_2_0_n
+11 1
+.names opcode_n_c_1__n.BLIF opcode_n_i_0__n.BLIF u0alu_cf_3_m_3_n
+11 1
+.names u0alu_cf_3_m_1_n.BLIF u0alu_cf_3_m_2_0_n.BLIF u0alu_cf_3_m_4_n
+11 1
+.names a_n_i_3__n.BLIF opcode_n_c_0__n.BLIF u0alu_a_m_1_3__n
+11 1
+.names opcode_n_i_3__n.BLIF u0alu_a_m_2_3__n.BLIF u0alu_a_m_2_0_3__n
+11 1
+.names a_n_i_0__n.BLIF opcode_n_i_0__n.BLIF u0alu_a_m_1_0__n
+11 1
+.names opcode_n_i_3__n.BLIF u0alu_a_m_2_3__n.BLIF u0alu_a_m_2_0__n
+11 1
+.names a_n_c_2__n.BLIF a_n_c_0__n.BLIF u0alu_n_62_0_1_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_3_0_2__un3_n
+0 1
+.names a_n_i_1__n.BLIF opcode_n_c_0__n.BLIF u0alu_c_3_0_2__un1_n
+11 1
+.names a_n_i_3__n.BLIF u0alu_c_3_0_2__un3_n.BLIF u0alu_c_3_0_2__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_3_0_1__un3_n
+0 1
+.names a_n_i_0__n.BLIF opcode_n_c_0__n.BLIF u0alu_c_3_0_1__un1_n
+11 1
+.names a_n_i_2__n.BLIF u0alu_c_3_0_1__un3_n.BLIF u0alu_c_3_0_1__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_2_0_3__un3_n
+0 1
+.names u0alu_G_7.BLIF opcode_n_c_0__n.BLIF u0alu_c_2_0_3__un1_n
+11 1
+.names u0alu_un26_c_i_i_3__n.BLIF u0alu_c_2_0_3__un3_n.BLIF \
+u0alu_c_2_0_3__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_2_0_2__un3_n
+0 1
+.names u0alu_G_5.BLIF opcode_n_c_0__n.BLIF u0alu_c_2_0_2__un1_n
+11 1
+.names u0alu_un26_c_i_i_2__n.BLIF u0alu_c_2_0_2__un3_n.BLIF \
+u0alu_c_2_0_2__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_1_3__un3_n
+0 1
+.names u0alu_c_4_3_.BLIF opcode_n_c_0__n.BLIF u0alu_c_1_3__un1_n
+11 1
+.names a_n_c_3__n.BLIF u0alu_c_1_3__un3_n.BLIF u0alu_c_1_3__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_1_2__un3_n
+0 1
+.names u0alu_c_4_2_.BLIF opcode_n_c_0__n.BLIF u0alu_c_1_2__un1_n
+11 1
+.names a_n_c_2__n.BLIF u0alu_c_1_2__un3_n.BLIF u0alu_c_1_2__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_1_1__un3_n
+0 1
+.names u0alu_c_4_1_.BLIF opcode_n_c_0__n.BLIF u0alu_c_1_1__un1_n
+11 1
+.names a_n_c_1__n.BLIF u0alu_c_1_1__un3_n.BLIF u0alu_c_1_1__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_1_0__un3_n
+0 1
+.names u0alu_c_4_0_.BLIF opcode_n_c_0__n.BLIF u0alu_c_1_0__un1_n
+11 1
+.names a_n_c_0__n.BLIF u0alu_c_1_0__un3_n.BLIF u0alu_c_1_0__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_0_3__un3_n
+0 1
+.names u0alu_c_2_3__n.BLIF opcode_n_c_0__n.BLIF u0alu_c_0_3__un1_n
+11 1
+.names u0alu_c_3_3__n.BLIF u0alu_c_0_3__un3_n.BLIF u0alu_c_0_3__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_0_2__un3_n
+0 1
+.names u0alu_c_2_2__n.BLIF opcode_n_c_0__n.BLIF u0alu_c_0_2__un1_n
+11 1
+.names u0alu_c_3_2__n.BLIF u0alu_c_0_2__un3_n.BLIF u0alu_c_0_2__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_0_1__un3_n
+0 1
+.names u0alu_c_2_1__n.BLIF opcode_n_c_0__n.BLIF u0alu_c_0_1__un1_n
+11 1
+.names u0alu_c_3_1__n.BLIF u0alu_c_0_1__un3_n.BLIF u0alu_c_0_1__un0_n
+11 1
+.names opcode_n_c_0__n.BLIF u0alu_c_0_0__un3_n
+0 1
+.names u0alu_c_2_0__n.BLIF opcode_n_c_0__n.BLIF u0alu_c_0_0__un1_n
+11 1
+.names u0alu_c_3_0__n.BLIF u0alu_c_0_0__un3_n.BLIF u0alu_c_0_0__un0_n
+11 1
+.names opcode_n_c_2__n.BLIF u0alu_c_3__un3_n
+0 1
+.names u0alu_n_24_n.BLIF opcode_n_c_2__n.BLIF u0alu_c_3__un1_n
+11 1
+.names u0alu_n_28_n.BLIF u0alu_c_3__un3_n.BLIF u0alu_c_3__un0_n
+11 1
+.names opcode_n_c_2__n.BLIF u0alu_c_2__un3_n
+0 1
+.names u0alu_n_23_n.BLIF opcode_n_c_2__n.BLIF u0alu_c_2__un1_n
+11 1
+.names u0alu_n_27_n.BLIF u0alu_c_2__un3_n.BLIF u0alu_c_2__un0_n
+11 1
+.names opcode_n_c_2__n.BLIF u0alu_c_1__un3_n
+0 1
+.names u0alu_n_22_n.BLIF opcode_n_c_2__n.BLIF u0alu_c_1__un1_n
+11 1
+.names u0alu_n_26_n.BLIF u0alu_c_1__un3_n.BLIF u0alu_c_1__un0_n
+11 1
+.names opcode_n_c_2__n.BLIF u0alu_c_0__un3_n
+0 1
+.names u0alu_n_21_n.BLIF opcode_n_c_2__n.BLIF u0alu_c_0__un1_n
+11 1
+.names u0alu_n_25_n.BLIF u0alu_c_0__un3_n.BLIF u0alu_c_0__un0_n
+11 1
+.names opcode_n_c_1__n.BLIF u0alu_c_5_3__un3_n
+0 1
+.names u0alu_n_14_n.BLIF opcode_n_c_1__n.BLIF u0alu_c_5_3__un1_n
+11 1
+.names u0alu_n_18_n.BLIF u0alu_c_5_3__un3_n.BLIF u0alu_c_5_3__un0_n
+11 1
+.names opcode_n_c_1__n.BLIF u0alu_c_5_2__un3_n
+0 1
+.names u0alu_n_13_n.BLIF opcode_n_c_1__n.BLIF u0alu_c_5_2__un1_n
+11 1
+.names u0alu_n_17_n.BLIF u0alu_c_5_2__un3_n.BLIF u0alu_c_5_2__un0_n
+11 1
+.names opcode_n_c_1__n.BLIF u0alu_c_5_1__un3_n
+0 1
+.names u0alu_c_2_0_1_.BLIF opcode_n_c_1__n.BLIF u0alu_c_5_1__un1_n
+11 1
+.names u0alu_n_16_n.BLIF u0alu_c_5_1__un3_n.BLIF u0alu_c_5_1__un0_n
+11 1
+.names opcode_n_c_1__n.BLIF u0alu_c_5_0__un3_n
+0 1
+.names a_n_c_0__n.BLIF opcode_n_c_1__n.BLIF u0alu_c_5_0__un1_n
+11 1
+.names u0alu_n_15_n.BLIF u0alu_c_5_0__un3_n.BLIF u0alu_c_5_0__un0_n
+11 1
+.names opcode_n_c_1__n.BLIF u0alu_c_4_0_3__un3_n
+0 1
+.names u0alu_n_6_n.BLIF opcode_n_c_1__n.BLIF u0alu_c_4_0_3__un1_n
+11 1
+.names u0alu_n_10_n.BLIF u0alu_c_4_0_3__un3_n.BLIF u0alu_c_4_0_3__un0_n
+11 1
+.names opcode_n_c_1__n.BLIF u0alu_c_4_0_2__un3_n
+0 1
+.names u0alu_n_5_n.BLIF opcode_n_c_1__n.BLIF u0alu_c_4_0_2__un1_n
+11 1
+.names u0alu_n_9_n.BLIF u0alu_c_4_0_2__un3_n.BLIF u0alu_c_4_0_2__un0_n
+11 1
+.names opcode_n_c_1__n.BLIF u0alu_c_4_0_1__un3_n
+0 1
+.names u0alu_n_4_n.BLIF opcode_n_c_1__n.BLIF u0alu_c_4_0_1__un1_n
+11 1
+.names u0alu_n_8_n.BLIF u0alu_c_4_0_1__un3_n.BLIF u0alu_c_4_0_1__un0_n
+11 1
+.names opcode_n_c_1__n.BLIF u0alu_c_4_0_0__un3_n
+0 1
+.names u0alu_n_3_n.BLIF opcode_n_c_1__n.BLIF u0alu_c_4_0_0__un1_n
+11 1
+.names u0alu_n_7_n.BLIF u0alu_c_4_0_0__un3_n.BLIF u0alu_c_4_0_0__un0_n
+11 1
+.names a_n_i_1__n.BLIF u0alu_c_2_0_1_1_.BLIF u0alu_c_2_0_1_
+01 1
+10 1
+11 0
+00 0
+.names b_n_i_3__n.BLIF a_n_i_3__n.BLIF u0alu_c_4_3_
+01 1
+10 1
+11 0
+00 0
+.names u0alu_n_62_n.BLIF a_n_i_3__n.BLIF u0alu_G_31
+01 1
+10 1
+11 0
+00 0
+.names b_n_i_2__n.BLIF a_n_i_2__n.BLIF u0alu_c_4_2_
+01 1
+10 1
+11 0
+00 0
+.names u0alu_n_65_n.BLIF a_n_i_2__n.BLIF u0alu_G_30
+01 1
+10 1
+11 0
+00 0
+.names b_n_i_0__n.BLIF a_n_i_0__n.BLIF u0alu_c_4_0_
+01 1
+10 1
+11 0
+00 0
+.names b_n_i_1__n.BLIF a_n_i_1__n.BLIF u0alu_c_4_1_
+01 1
+10 1
+11 0
+00 0
+.names u0alu_n_44_n.BLIF a_n_i_3__n.BLIF u0alu_G_7
+01 1
+10 1
+11 0
+00 0
+.names u0alu_n_41_n.BLIF a_n_i_2__n.BLIF u0alu_G_5
+01 1
+10 1
+11 0
+00 0
+.names a_n_i_0__n.BLIF opcode_n_i_0__n.BLIF u0alu_c_2_0_1_1_
+01 1
+10 1
+11 0
+00 0
+.names c_c_3__n.BLIF c_3_
+1 1
+0 0
+.names a_n_i_3__n.BLIF a_led_3_
+1 1
+0 0
+.names b_n_i_3__n.BLIF b_led_3_
+1 1
+0 0
+.names zf_c.BLIF zf
+1 1
+0 0
+.names cf_c.BLIF cf
+1 1
+0 0
+.names c_c_2__n.BLIF c_2_
+1 1
+0 0
+.names c_c_1__n.BLIF c_1_
+1 1
+0 0
+.names c_c_0__n.BLIF c_0_
+1 1
+0 0
+.names a_n_i_2__n.BLIF a_led_2_
+1 1
+0 0
+.names a_n_i_1__n.BLIF a_led_1_
+1 1
+0 0
+.names a_n_i_0__n.BLIF a_led_0_
+1 1
+0 0
+.names b_n_i_2__n.BLIF b_led_2_
+1 1
+0 0
+.names b_n_i_1__n.BLIF b_led_1_
+1 1
+0 0
+.names b_n_i_0__n.BLIF b_led_0_
+1 1
+0 0
+.names opcode_n_0_.BLIF opcode_n_c_0__n
+1 1
+0 0
+.names opcode_n_1_.BLIF opcode_n_c_1__n
+1 1
+0 0
+.names opcode_n_2_.BLIF opcode_n_c_2__n
+1 1
+0 0
+.names opcode_n_3_.BLIF opcode_n_c_3__n
+1 1
+0 0
+.names a_n_0_.BLIF a_n_c_0__n
+1 1
+0 0
+.names a_n_1_.BLIF a_n_c_1__n
+1 1
+0 0
+.names a_n_2_.BLIF a_n_c_2__n
+1 1
+0 0
+.names a_n_3_.BLIF a_n_c_3__n
+1 1
+0 0
+.names b_n_0_.BLIF b_n_c_0__n
+1 1
+0 0
+.names b_n_1_.BLIF b_n_c_1__n
+1 1
+0 0
+.names b_n_2_.BLIF b_n_c_2__n
+1 1
+0 0
+.names b_n_3_.BLIF b_n_c_3__n
+1 1
+0 0
+.end

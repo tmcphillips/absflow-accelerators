@@ -1,0 +1,35 @@
+module ThreeWayMultiplexer interface([a3..a0],[b3..b0],[c3..c0],[d3..d0],[select1,select0] -> [out3..out0])  
+
+declarations
+
+	// declare three banks of 4 input pins each
+	a0..a3 	pin;
+	b0..b3 	pin;
+	c0..c3 	pin;
+	d0..d3 	pin;
+
+	// declare a 2-bit (4-way selector)
+	select0,select1 pin;
+
+	// declare 4 output pins	
+	out0..out3 pin istype 'com';
+
+	// declare input sets
+	A 	= [a3..a0];
+	B 	= [b3..b0];
+	C 	= [c3..c0];
+	D	= [d3..d0];	
+	select 	= [select1, select0];
+
+	// declare output sets
+	Out	= [out3..out0];
+
+equations
+
+	when 	  (select == 0) then	Out = A;
+	else when (select == 1) then	Out = B;
+	else when (select == 2) then	Out = C;
+	else when (select == 3) then	Out = D;
+
+end
+

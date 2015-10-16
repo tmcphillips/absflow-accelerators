@@ -1,0 +1,20 @@
+module OctalLatchDemo
+
+	OctalLatch interface([d7..d0],le,oe -> [q7..q0]);
+	latch functional_block OctalLatch;
+
+	!oe 	 pin 24;
+	le 	 pin 26;
+	!d0..!d7 pin 7..10, 14..16, 20;
+	q0..q7   pin 31..34, 38..40, 45;
+
+equations
+
+	latch.[d7..d0] = [d7..d0];
+
+	latch.le = le;
+	latch.oe = oe;
+
+	[q7..q0] = latch.[q7..q0];
+
+end

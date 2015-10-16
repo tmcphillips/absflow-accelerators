@@ -1,0 +1,7 @@
+. FourBitCPU fourbitcpu.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v
+u0rs.u1rc.uitff TFlipFlop fourbitcpu.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v
+u0rs.u1rc.u0tff TFlipFlop fourbitcpu.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v
+u0rs.u1rc RippleCounter fourbitcpu.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v
+u1pbd ButtonPressDetector fourbitcpu.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v
+u2alu FourBitALU fourbitcpu.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v
+u0rs RippleScaler fourbitcpu.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v

@@ -1,0 +1,33 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:17:09 2012
+#$ MODULE threewaymultiplexer
+#$ JEDECFILE threewaymultiplexer
+#$ PINS 22 a0 a1 a2 a3 b0 b1 b2 b3 c0 c1 c2 c3 d0 d1 d2 d3 select0 select1 out0 out1 out2 out3
+#$ INTERFACE threewaymultiplexer  22 a0'i'  a1'i'  a2'i'  a3'i'  b0'i'  b1'i'  b2'i'  b3'i'  c0'i'  c1'i'  c2'i'  c3'i'  d0'i'  d1'i'  d2'i'  d3'i'  select0'i'  \
+#  select1'i'  out0'o'  out1'o'  out2'o'  out3'o' 
+.model threewaymultiplexer
+.inputs a3.BLIF select0.BLIF select1.BLIF a2.BLIF a1.BLIF a0.BLIF b3.BLIF \
+b2.BLIF b1.BLIF b0.BLIF c3.BLIF c2.BLIF c1.BLIF c0.BLIF d3.BLIF d2.BLIF \
+d1.BLIF d0.BLIF
+.outputs out0 out1 out2 out3
+.names select0.BLIF select1.BLIF a0.BLIF b0.BLIF c0.BLIF d0.BLIF out0
+001--- 1
+10-1-- 1
+01--1- 1
+11---1 1
+.names select0.BLIF select1.BLIF a1.BLIF b1.BLIF c1.BLIF d1.BLIF out1
+001--- 1
+10-1-- 1
+01--1- 1
+11---1 1
+.names select0.BLIF select1.BLIF a2.BLIF b2.BLIF c2.BLIF d2.BLIF out2
+001--- 1
+10-1-- 1
+01--1- 1
+11---1 1
+.names a3.BLIF select0.BLIF select1.BLIF b3.BLIF c3.BLIF d3.BLIF out3
+100--- 1
+-101-- 1
+-01-1- 1
+-11--1 1
+.end

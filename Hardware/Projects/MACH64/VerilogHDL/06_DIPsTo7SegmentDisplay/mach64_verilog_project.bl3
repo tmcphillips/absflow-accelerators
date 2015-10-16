@@ -1,0 +1,84 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Jan 25 17:15:07 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 11 dipSwitches_n_3_:14'ke'  a:20'ke'  b:21'ke'  c:22'ke'  d:23'ke'  e:24'ke'  f:26'ke'  g:27'ke'  \
+#  dipSwitches_n_2_:15'ke'  dipSwitches_n_1_:16'ke'  dipSwitches_n_0_:17'ke' 
+.model dipsto7segmentdisplay
+.inputs dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF
+.outputs a b c d e f g
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF a
+011- 1
+10-0 1
+-00- 1
+1-0- 1
+-1-1 1
+0--1 1
+0100 0
+1011 0
+0010 0
+1110 0
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF b
+-11- 1
+1-00 1
+0-10 1
+1-11 1
+-1-1 1
+1010 0
+0-00 0
+-001 0
+00-1 0
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF c
+-1-0 1
+-11- 1
+10-- 1
+01-- 1
+--10 1
+1101 0
+000- 0
+00-1 0
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF d
+-100 1
+-001 1
+11-1 1
+0-1- 1
+-010 1
+0101 0
+1110 0
+1011 0
+-000 0
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF e
+00-- 1
+0-0- 1
+-1-1 1
+--01 1
+101- 0
+-110 0
+1--0 0
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF f
+101- 1
+0-0- 1
+01-- 1
+--11 1
+-0-1 1
+0010 0
+110- 0
+1-00 0
+11-0 0
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF g
+-010 1
+10-1 1
+0-0- 1
+01-- 1
+-10- 1
+1000 0
+0011 0
+111- 0
+.end

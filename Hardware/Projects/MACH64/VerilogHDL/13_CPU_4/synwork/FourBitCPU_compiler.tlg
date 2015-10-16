@@ -1,0 +1,24 @@
+Selecting top level module FourBitCPU
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001010
+   Generated name = RippleCounter_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001010
+   Generated name = RippleScaler_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\buttonpressdetector.v":4:7:4:25|Synthesizing module ButtonPressDetector
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\fourbitalu.v":4:7:4:16|Synthesizing module FourBitALU
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\fourbitcpu.v":5:7:5:16|Synthesizing module FourBitCPU
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\fourbitcpu.v":66:1:66:6|Pruning Register inc_pc 
+
+@W: CL247 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\fourbitalu.v":5:18:5:23|Input port bit 4 of opcode[4:0] is unused
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\buttonpressdetector.v":20:1:20:6|Trying to extract state machine for register state

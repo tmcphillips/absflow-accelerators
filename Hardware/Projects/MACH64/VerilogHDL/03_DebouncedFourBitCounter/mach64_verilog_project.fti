@@ -1,0 +1,67 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Wed Jan 18 22:09:44 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION stepButton:*_*_18
+DATA LOCATION oneMHzClock:*_*_19
+DATA LOCATION reset:C_*_20
+DATA LOCATION direction:C_*_21
+DATA LOCATION counter_3_:B_8_14
+DATA LOCATION counter_2_:B_11_15
+DATA LOCATION counter_1_:B_1_16
+DATA LOCATION counter_0_:B_3_17
+DATA LOCATION u1cs_counter_5_:D_5
+DATA LOCATION u1d_debouncedSignal:D_7
+DATA LOCATION u1d_lastSample:D_9
+DATA LOCATION u1cs_counter_0_:D_12
+DATA LOCATION u1cs_counter_1_:C_7
+DATA LOCATION u1cs_counter_2_:D_1
+DATA LOCATION u1cs_counter_3_:A_7
+DATA LOCATION u1cs_counter_4_:D_3
+
+// Signals direction
+DATA IO_DIR stepButton:IN
+DATA IO_DIR oneMHzClock:IN
+DATA IO_DIR reset:IN
+DATA IO_DIR direction:IN
+DATA IO_DIR counter_3_:OUT
+DATA IO_DIR counter_2_:OUT
+DATA IO_DIR counter_1_:OUT
+DATA IO_DIR counter_0_:OUT
+
+// Global Clocks
+DATA GLB_CLOCK oneMHzClock:2
+
+// Signals using Shared Clock or CE
+DATA tBCLK counter_3_.C
+DATA tBCLK counter_2_.C
+DATA tBCLK counter_1_.C
+DATA tBCLK counter_0_.C
+DATA tBCLK u1d_debouncedSignal.C
+DATA tBCLK u1d_lastSample.C
+
+// Signals using Shared Init Pterm
+DATA tBSR counter_3_.AR
+DATA tBSR counter_2_.AR
+DATA tBSR counter_1_.AR
+DATA tBSR counter_0_.AR
+
+// Block Load Adders
+DATA tBLA u1cs_counter_1_:2
+DATA tBLA u1cs_counter_0_:2
+DATA tBLA u1cs_counter_3_:1
+DATA tBLA u1cs_counter_2_:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM counter_3_
+DATA tOSM counter_2_
+DATA tOSM counter_1_
+DATA tOSM counter_0_

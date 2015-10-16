@@ -1,0 +1,61 @@
+%%% protect protected_file
+@E
+@ 
+#
+#
+#
+# Created by Synplify Verilog HDL Compiler version comp550rc, Build 030R from Synplicity, Inc.
+# Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+# Synthesis Netlist written on Wed Jan 18 21:49:01 2012
+#
+#
+#OPTIONS:"|-top|TFlipFlop|-I|c:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\|-I|C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib|-v2001|-encrypt|-pro|-ll|2000|-compiler_compatible|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\bin\\c_ver.exe":1298500924
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib\\vlog\\hypermods.v":1298501016
+#CUR:"C:\\ispLEVER_Classic1_5\\ispcpld\\..\\cae_library\\synthesis\\verilog\\mach.v":1244664000
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\mach64_verilog_project.h":1326950180
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\fourbitripplecounter.v":1326952053
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\debouncer.v":1326914241
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\synchronousclockscaler.v":1326940434
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\tflipflop.v":1326952031
+f "C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"; # file 0
+af .is_verilog 1;
+f "C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"; # file 1
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\mach64_verilog_project.h"; # file 2
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\fourbitripplecounter.v"; # file 3
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\debouncer.v"; # file 4
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\synchronousclockscaler.v"; # file 5
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\tflipflop.v"; # file 6
+af .is_verilog 1;
+@E
+@ 
+ftell;
+@E@MR@4n::4(::R46I	FsRDawHDbwFPbRCDsHF
+o;N3PRHC#PsFHDo;R4
+RNP3_H#PHCsDRFo4N;
+PFR3shHoNRlC"DawHDbwF;b"
+@HR@.n:::4..c:4R	ODR	OD;H
+NR03sDs_FHNoMl"CRO"D	;
+
+
+
+@HR@dn:::4.d.:4R00R;H
+NR03sDs_FHNoMl"CR0
+";
+@FR@cn:::4.c.:4RJJR;H
+NR03sDs_FHNoMl"CRJ
+";b@R@n::(4(j::R.jHRMPk_M4ORD	k_M4ORD	O;D	
+@bR@Un:::4cU6:4RPHMR.J_R.J_R
+J;b@R@j::44::4.sR0k0CRsRkC0Csk;R
+b@:@j4::44R:.V#NDCNRVDR#CV#NDCb;
+Rn@@:4(::n(:RV8VCRRJJ_RJ.MRk4D_O	;R0
+RNH3Ds0_HFsolMNCJR""C;
+;
+
+
+

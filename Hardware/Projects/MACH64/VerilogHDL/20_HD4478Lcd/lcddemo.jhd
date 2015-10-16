@@ -1,0 +1,4 @@
+MODULE LCDWriter DEFIN lcddemo.v
+MODULE LcdDemo DEFIN lcddemo.v
+	SUBMODULE LCDWriter
+		INSTANCE u0lcdw

@@ -1,0 +1,83 @@
+import ovm_pkg::*;
+import fourbitcounter_transactions_pkg::*;
+
+module testbench_driver (
+  ref tlm_fifo #(fourbitcounter_operation) op_fifo,
+  ref tlm_fifo #(fourbitcounter_operation) op2prd_fifo,
+  output bit         clock,
+ 	output bit         up,
+	output bit         down,
+	output bit 	       load,
+	output bit 		      reset,
+	input bit          ack,
+	output logic [3:0] value      );
+	
+	fourbitcounter_operation request;
+	string                   m = "";
+	
+	initial $sformat(m, "%m");
+	
+	initial begin : clockgen
+	  clock = 0;
+	  forever #10 clock = ~clock;
+	end
+	
+	initial begin : resetgen
+	  
+	  up = 0;
+    down = 0;
+    load = 0;
+
+    reset = 1;
+	  @(posedge clock);
+	  @(posedge clock);
+	  reset = 0;
+	  
+	end
+    
+  always @(negedge clock) begin : drive_transactions
+    
+    if (op_fifo.try_get(request)) begin : new_transaction
+      
+      ovm_top.ovm_report_info(m, request.convert2string(), 300);
+      
+      // forward current request to predictor
+      op2prd_fifo.put(request.clone);
+
+      // send the request argument to the DUT
+      value = request.arg;
+      
+      // send the operation-specific control signal to the DUT
+      case (request.op)
+        up_op:    up = 1;
+        down_op:  down = 1;          
+        load_op:  load = 1;
+        reset_op: reset = 1;
+        no_op:    ;     
+      endcase
+        
+      // hold signals to the DUT for the requested number of positive clock edges
+      repeat(request.hold) @(posedge clock);
+        
+      // clear signals to DUT after another half clock cycle
+      @(negedge clock);
+      up = 0;
+      down = 0;
+      load = 0;
+      reset = 0;
+
+      // keep signals to DUT low for requested number of positive clock edges
+      if (request.waits > 0)
+        repeat(request.waits) @(posedge clock);
+        
+      end
+
+  end
+  
+  task wait_zero_to_seven_clocks;
+    logic [2:0] waittime;
+    waittime = $random;
+    repeat (waittime) @(posedge clock);  
+  endtask
+
+endmodule

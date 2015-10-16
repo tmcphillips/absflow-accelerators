@@ -1,0 +1,40 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: dipsto7segementdisplay
+
+#Mon Jan 23 19:57:31 2012
+
+$ Start of Compile
+#Mon Jan 23 19:57:31 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\bcddigittosevensegment.v"
+@E: CS219 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":1:35:1:35|Expecting one of the keywords module, primitive or macromodule
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\hexdigittosevensegment.v"
+@E: CS219 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":2:35:2:35|Expecting one of the keywords module, primitive or macromodule
+@W: CS133 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":5:47:5:49|ignoring property loc
+@W: CS133 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":6:34:6:36|ignoring property loc
+@W: CS133 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":7:34:7:36|ignoring property loc
+@W: CS133 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":8:34:8:36|ignoring property loc
+@W: CS133 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":9:34:9:36|ignoring property loc
+@W: CS133 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":10:34:10:36|ignoring property loc
+@W: CS133 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":11:34:11:36|ignoring property loc
+@W: CS133 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":12:34:12:36|ignoring property loc
+@W: CG978 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":17:3:17:24|An instance name was not specified - using generated name II_0
+@W: CG978 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":19:3:19:24|An instance name was not specified - using generated name II_0
+2 syntax errors
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jan 23 19:57:31 2012
+
+###########################################################]

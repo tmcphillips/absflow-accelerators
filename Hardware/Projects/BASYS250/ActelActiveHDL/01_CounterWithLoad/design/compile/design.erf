@@ -1,0 +1,22 @@
+MESSAGE "Pass 1. Scanning modules hierarchy."
+MESSAGE "Module \$root found in current working library."
+BEGINPROGRESS Compiling...
+UPDATEPROGRESS 35
+WARNING VCP2515 "Undefined module: DCM_SP was used. Port connection rules will not be checked at such instantiations." "C:/Users/tmcphillips/Designs/Projects/BASYS250/VerilogHDL/01_CounterWithLoad/design/src/fourbitcounterwithload.v" 23 1
+MESSAGE "Pass 2. Processing instantiations."
+UPDATEPROGRESS 45
+MESSAGE "Pass 3. Processing behavioral statements."
+UPDATEPROGRESS 80
+MESSAGE "ELB/DAG code generating."
+MESSAGE "Module \$root found in current working library."
+UPDATEPROGRESS 82
+UPDATEPROGRESS 85
+UPDATEPROGRESS 87
+UPDATEPROGRESS 90
+UPDATEPROGRESS 92
+UPDATEPROGRESS 95
+UPDATEPROGRESS 97
+UPDATEPROGRESS 100
+MESSAGE "$root top modules: testbench."
+ENDPROGRESS Compiling...
+SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time : 0[s]."

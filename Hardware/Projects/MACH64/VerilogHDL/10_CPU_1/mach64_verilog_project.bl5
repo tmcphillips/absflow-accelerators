@@ -1,0 +1,221 @@
+#$ TOOL  ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE  Sun Jan 29 11:44:37 2012
+#$ MODULE  FourBitCPU
+#$ PINS 20 opcode_n_3_:10 data_n_3_:24 step:31 oneMHzClock:18 opcode_n_2_:9
+ opcode_n_1_:8 opcode_n_0_:7 data_n_2_:26 data_n_1_:27 data_n_0_:28 a_reg_3_:48
+ b_reg_3_:4 zf:38 cf:39 a_reg_2_:47 a_reg_1_:46 a_reg_0_:45 b_reg_2_:3 b_reg_1_:2
+ b_reg_0_:40
+#$ NODES 14 u0rs_u1rc_genblk1_8__uitff_q un1_opcode u0rs_u1rc_u0tff_q
+ u0rs_u1rc_genblk1_0__uitff_q u0rs_u1rc_genblk1_1__uitff_q
+ u0rs_u1rc_genblk1_2__uitff_q u0rs_u1rc_genblk1_3__uitff_q
+ u0rs_u1rc_genblk1_4__uitff_q u0rs_u1rc_genblk1_5__uitff_q
+ u0rs_u1rc_genblk1_6__uitff_q u0rs_u1rc_genblk1_7__uitff_q u1pbd_state_0_
+ u1pbd_state_1_ u1pbd_state_2_
+.model fourbitcpu 
+.inputs opcode_n_3_.BLIF data_n_3_.BLIF step.BLIF oneMHzClock.BLIF \
+ opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF data_n_2_.BLIF data_n_1_.BLIF \
+ data_n_0_.BLIF u0rs_u1rc_genblk1_8__uitff_q.Q un1_opcode.BLIF \
+ u0rs_u1rc_u0tff_q.Q u0rs_u1rc_genblk1_0__uitff_q.Q \
+ u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.Q \
+ u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.Q \
+ u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.Q \
+ u0rs_u1rc_genblk1_7__uitff_q.Q u1pbd_state_0_.Q u1pbd_state_1_.Q \
+ u1pbd_state_2_.Q a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q b_reg_0_.Q \
+ b_reg_1_.Q b_reg_2_.Q b_reg_3_.Q
+.outputs a_reg_3_.D.X1 a_reg_3_.D.X2 a_reg_3_.C a_reg_3_.CE b_reg_3_.D \
+ b_reg_3_.C b_reg_3_.CE zf.D.X1 zf.D.X2 zf.C zf.CE cf.D cf.C cf.CE a_reg_2_.D.X1 \
+ a_reg_2_.D.X2 a_reg_2_.C a_reg_2_.CE a_reg_1_.D.X1 a_reg_1_.D.X2 a_reg_1_.C \
+ a_reg_1_.CE a_reg_0_.D a_reg_0_.C a_reg_0_.CE b_reg_2_.D b_reg_2_.C b_reg_2_.CE \
+ b_reg_1_.D b_reg_1_.C b_reg_1_.CE b_reg_0_.D b_reg_0_.C b_reg_0_.CE \
+ u0rs_u1rc_genblk1_8__uitff_q.D u0rs_u1rc_genblk1_8__uitff_q.C un1_opcode \
+ u0rs_u1rc_u0tff_q.D u0rs_u1rc_u0tff_q.C u0rs_u1rc_genblk1_0__uitff_q.D \
+ u0rs_u1rc_genblk1_0__uitff_q.C u0rs_u1rc_genblk1_1__uitff_q.D \
+ u0rs_u1rc_genblk1_1__uitff_q.C u0rs_u1rc_genblk1_2__uitff_q.D \
+ u0rs_u1rc_genblk1_2__uitff_q.C u0rs_u1rc_genblk1_3__uitff_q.D \
+ u0rs_u1rc_genblk1_3__uitff_q.C u0rs_u1rc_genblk1_4__uitff_q.D \
+ u0rs_u1rc_genblk1_4__uitff_q.C u0rs_u1rc_genblk1_5__uitff_q.D \
+ u0rs_u1rc_genblk1_5__uitff_q.C u0rs_u1rc_genblk1_6__uitff_q.D \
+ u0rs_u1rc_genblk1_6__uitff_q.C u0rs_u1rc_genblk1_7__uitff_q.D \
+ u0rs_u1rc_genblk1_7__uitff_q.C u1pbd_state_0_.D u1pbd_state_0_.C \
+ u1pbd_state_1_.D u1pbd_state_1_.C u1pbd_state_2_.D u1pbd_state_2_.C
+.names opcode_n_3_.BLIF data_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q b_reg_3_.Q a_reg_3_.D.X1
+0-010000-- 1
+0-001--1-- 1
+0-0-1111-- 1
+0-100---0- 1
+0-10----01 1
+0-1-0---01 1
+0-1-1---10 1
+10-------- 1
+.names opcode_n_3_.BLIF opcode_n_1_.BLIF a_reg_3_.Q a_reg_3_.D.X2
+011 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q a_reg_3_.C
+01 1
+.names un1_opcode.BLIF a_reg_3_.CE
+1 1
+.names data_n_3_.BLIF b_reg_3_.D
+0 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q b_reg_3_.C
+01 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF b_reg_3_.CE
+1101 1
+.names opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q b_reg_0_.Q b_reg_1_.Q b_reg_2_.Q b_reg_3_.Q zf.D.X1
+001000----- 1
+00-0000---- 1
+0-01000---- 1
+0111111---- 1
+1001111---- 1
+1010---1--- 1
+101-0---1-- 1
+101--0---1- 1
+101---0---1 1
+101---1---0 1
+101--1---0- 1
+101-1---0-- 1
+1011---0--- 1
+11000000000 1
+1111---1--- 1
+111-1---1-- 1
+111--1---1- 1
+111---1---1 1
+.names opcode_n_2_.BLIF opcode_n_0_.BLIF zf.D.X2
+11 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q zf.C
+01 1
+.names opcode_n_3_.BLIF zf.CE
+0 1
+.names opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q cf.D
+0100000 1
+0-11111 1
+0001--- 1
+001---1 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q cf.C
+01 1
+.names opcode_n_3_.BLIF cf.CE
+0 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF data_n_2_.BLIF a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q b_reg_2_.Q a_reg_2_.D.X1
+0000----1- 1
+0010-00--- 1
+0001--1--- 1
+00-1-11--- 1
+0100---0-- 1
+010----0-1 1
+01-0---0-1 1
+01-1---1-0 1
+1---0----- 1
+.names opcode_n_3_.BLIF opcode_n_1_.BLIF a_reg_2_.Q a_reg_2_.D.X2
+011 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q a_reg_2_.C
+01 1
+.names un1_opcode.BLIF a_reg_2_.CE
+1 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF data_n_1_.BLIF a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q b_reg_1_.Q a_reg_1_.D.X1
+1---0---- 1
+001--01-- 1
+01-0--0-0 1
+000--1-1- 1
+0001-1--- 1
+001--10-- 1
+010---0-1 1
+0111--1-1 1
+0101--1-0 1
+0000-0-1- 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF data_n_1_.BLIF a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q b_reg_1_.Q a_reg_1_.D.X2
+0-10----- 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q a_reg_1_.C
+01 1
+.names un1_opcode.BLIF a_reg_1_.CE
+1 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF data_n_0_.BLIF a_reg_0_.Q a_reg_1_.Q b_reg_0_.Q a_reg_0_.D
+0110---1 1
+0000--1- 1
+0101-1-0 1
+0110-1-- 1
+010--0-1 1
+0100-0-- 1
+001--0-- 1
+011--1-1 1
+1---0--- 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q a_reg_0_.C
+01 1
+.names un1_opcode.BLIF a_reg_0_.CE
+1 1
+.names data_n_2_.BLIF b_reg_2_.D
+0 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q b_reg_2_.C
+01 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF b_reg_2_.CE
+1101 1
+.names data_n_1_.BLIF b_reg_1_.D
+0 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q b_reg_1_.C
+01 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF b_reg_1_.CE
+1101 1
+.names data_n_0_.BLIF b_reg_0_.D
+0 1
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q b_reg_0_.C
+01 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF b_reg_0_.CE
+1101 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.C
+0 1
+.names opcode_n_3_.BLIF opcode_n_2_.BLIF opcode_n_1_.BLIF opcode_n_0_.BLIF un1_opcode
+-110 1
+0--- 1
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_u0tff_q.D
+0 1
+.names oneMHzClock.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_0__uitff_q.D
+0 1
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_genblk1_0__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.C
+0 1
+.names step.BLIF u1pbd_state_0_.Q u1pbd_state_2_.Q u1pbd_state_0_.D
+00- 1
+-01 1
+0-1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1pbd_state_0_.C
+1 1
+.names step.BLIF u1pbd_state_0_.Q u1pbd_state_1_.Q u1pbd_state_2_.Q u1pbd_state_1_.D
+-011 1
+01-- 1
+0-1- 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1pbd_state_1_.C
+1 1
+.names step.BLIF u1pbd_state_0_.Q u1pbd_state_1_.Q u1pbd_state_2_.Q u1pbd_state_2_.D
+011- 1
+-011 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1pbd_state_2_.C
+1 1
+.end

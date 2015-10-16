@@ -1,0 +1,34 @@
+Selecting top level module FourBitCounterWithLoad
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001010
+   Generated name = RippleCounter_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001010
+   Generated name = RippleScaler_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\buttonpressdetector.v":4:7:4:25|Synthesizing module ButtonPressDetector
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v":4:7:4:19|Synthesizing module UpDownCounter
+
+	SIZE=32'b00000000000000000000000000000100
+	IDLE=2'b00
+	UP_ACK=2'b01
+	DOWN_ACK=2'b10
+   Generated name = UpDownCounter_4s_0_1_2
+
+@A: CL106 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v":25:1:25:6|Register counter with async load is being synthesized in compatability mode. A Synthesis/Simulation mismatch is possible.
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v":25:1:25:6|Feedback mux created for signal state[1:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\fourbitcounterwithload.v":7:7:7:28|Synthesizing module FourBitCounterWithLoad
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\updowncounter.v":25:1:25:6|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\05_fourbitcounterwithload\buttonpressdetector.v":20:1:20:6|Trying to extract state machine for register state

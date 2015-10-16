@@ -1,0 +1,144 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Tue Feb 21 17:01:24 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION ntscClock:*_*_43
+DATA LOCATION left_n:B_*_14
+DATA LOCATION right_n:B_*_15
+DATA LOCATION up_n:B_*_16
+DATA LOCATION down_n:B_*_17
+DATA LOCATION video_2_:D_6_34
+DATA LOCATION hState_1_:C_6_23
+DATA LOCATION vState_1_:C_2_21
+DATA LOCATION video_1_:D_4_33
+DATA LOCATION video_0_:D_2_32
+DATA LOCATION hState_0_:C_4_22
+DATA LOCATION vState_0_:C_1_20
+DATA LOCATION scanX_0_:A_8
+DATA LOCATION scanY_3_:C_7
+DATA LOCATION scanY_4_:C_10
+DATA LOCATION scanY_5_:C_3
+DATA LOCATION scanY_6_:A_5
+DATA LOCATION scanY_7_:A_0
+DATA LOCATION scanY_8_:C_0
+DATA LOCATION ballY_0_:D_1
+DATA LOCATION ballY_1_:D_8
+DATA LOCATION ballY_2_:D_11
+DATA LOCATION ballY_3_:B_1
+DATA LOCATION ballY_4_:B_3
+DATA LOCATION ballY_5_:B_5
+DATA LOCATION ballX_0_:B_2
+DATA LOCATION ballX_1_:B_4
+DATA LOCATION ballX_2_:B_7
+DATA LOCATION ballX_3_:A_3
+DATA LOCATION ballX_4_:A_6
+DATA LOCATION ballX_5_:A_9
+DATA LOCATION scanX_1_:A_10
+DATA LOCATION scanX_2_:A_7
+DATA LOCATION scanX_3_:B_9
+DATA LOCATION scanX_4_:C_11
+DATA LOCATION scanX_5_:D_7
+DATA LOCATION scanX_6_:D_3
+DATA LOCATION scanX_7_:D_9
+DATA LOCATION N_108_0:D_0
+DATA LOCATION scanY_0_:C_5
+DATA LOCATION scanY_1_:C_9
+DATA LOCATION scanY_2_:C_8
+DATA LOCATION N_64_0:B_0
+DATA LOCATION G_20:A_1
+DATA LOCATION video_0_sqmuxa_3_4:D_5
+DATA LOCATION video_0_sqmuxa_3_6:A_4
+DATA LOCATION video_0_sqmuxa_3_7:B_12
+DATA LOCATION N_146:A_2
+DATA LOCATION N_149:A_11
+DATA LOCATION N_152:D_10
+DATA LOCATION N_155:A_13
+DATA LOCATION N_183:C_12
+DATA LOCATION video_7_1__n:D_13
+DATA LOCATION scanY11:C_13
+
+// Signals direction
+DATA IO_DIR ntscClock:IN
+DATA IO_DIR left_n:IN
+DATA IO_DIR right_n:IN
+DATA IO_DIR up_n:IN
+DATA IO_DIR down_n:IN
+DATA IO_DIR video_2_:OUT
+DATA IO_DIR hState_1_:OUT
+DATA IO_DIR vState_1_:OUT
+DATA IO_DIR video_1_:OUT
+DATA IO_DIR video_0_:OUT
+DATA IO_DIR hState_0_:OUT
+DATA IO_DIR vState_0_:OUT
+
+// Global Clocks
+DATA GLB_CLOCK ntscClock:0
+
+// Signals using Shared Clock or CE
+DATA tBCLK vState_1_.CE
+DATA tBCLK vState_0_.CE
+DATA tBCLK scanY_3_.CE
+DATA tBCLK scanY_4_.CE
+DATA tBCLK scanY_5_.CE
+DATA tBCLK scanY_8_.CE
+DATA tBCLK ballY_0_.C
+DATA tBCLK ballY_1_.C
+DATA tBCLK ballY_2_.C
+DATA tBCLK ballY_3_.C
+DATA tBCLK ballY_4_.C
+DATA tBCLK ballY_5_.C
+DATA tBCLK ballX_0_.C
+DATA tBCLK ballX_1_.C
+DATA tBCLK ballX_2_.C
+DATA tBCLK ballX_3_.C
+DATA tBCLK ballX_4_.C
+DATA tBCLK ballX_5_.C
+DATA tBCLK scanY_0_.CE
+DATA tBCLK scanY_1_.CE
+DATA tBCLK scanY_2_.CE
+
+// Block Load Adders
+DATA tBLA scanX_5_:3
+DATA tBLA scanX_4_:3
+DATA tBLA scanX_3_:3
+DATA tBLA scanX_2_:3
+DATA tBLA scanY_8_:3
+DATA tBLA N_155:2
+DATA tBLA scanX_7_:2
+DATA tBLA scanX_6_:2
+DATA tBLA scanX_1_:2
+DATA tBLA scanY_6_:2
+DATA tBLA scanX_0_:2
+DATA tBLA hState_0_:2
+DATA tBLA hState_1_:2
+DATA tBLA N_183:1
+DATA tBLA N_152:1
+DATA tBLA ballX_4_:1
+DATA tBLA ballX_3_:1
+DATA tBLA ballY_4_:1
+DATA tBLA ballY_3_:1
+DATA tBLA scanY_7_:1
+DATA tBLA scanY_5_:1
+DATA tBLA scanY_4_:1
+DATA tBLA scanY_3_:1
+DATA tBLA vState_0_:1
+DATA tBLA vState_1_:1
+DATA tBLA left_n:1
+DATA tBLA up_n:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM video_2_
+DATA tOSM hState_1_
+DATA tOSM vState_1_
+DATA tOSM video_1_
+DATA tOSM video_0_
+DATA tOSM hState_0_
+DATA tOSM vState_0_

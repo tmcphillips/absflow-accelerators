@@ -1,0 +1,124 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+L0_debounced.D = !runButton & L1_lastSample.Q ; (1 pterm, 2 signals)
+L0_debounced.C = P0_s9.Q ; (1 pterm, 1 signal)
+
+L1_lastSample.D = !runButton ; (1 pterm, 1 signal)
+L1_lastSample.C = P0_s9.Q ; (1 pterm, 1 signal)
+
+P0_s0.D = !P0_s0.Q ; (1 pterm, 1 signal)
+P0_s0.C = clock ; (1 pterm, 1 signal)
+
+P0_s1.D = !P0_s1.Q ; (1 pterm, 1 signal)
+P0_s1.C = P0_s0.Q ; (1 pterm, 1 signal)
+
+P0_s2.D = !P0_s2.Q ; (1 pterm, 1 signal)
+P0_s2.C = P0_s1.Q ; (1 pterm, 1 signal)
+
+P0_s3.D = !P0_s3.Q ; (1 pterm, 1 signal)
+P0_s3.C = P0_s2.Q ; (1 pterm, 1 signal)
+
+P0_s4.D = !P0_s4.Q ; (1 pterm, 1 signal)
+P0_s4.C = P0_s3.Q ; (1 pterm, 1 signal)
+
+P0_s5.D = !P0_s5.Q ; (1 pterm, 1 signal)
+P0_s5.C = P0_s4.Q ; (1 pterm, 1 signal)
+
+P0_s6.D = !P0_s6.Q ; (1 pterm, 1 signal)
+P0_s6.C = P0_s5.Q ; (1 pterm, 1 signal)
+
+P0_s7.D = !P0_s7.Q ; (1 pterm, 1 signal)
+P0_s7.C = P0_s6.Q ; (1 pterm, 1 signal)
+
+P0_s8.D = !P0_s8.Q ; (1 pterm, 1 signal)
+P0_s8.C = P0_s7.Q ; (1 pterm, 1 signal)
+
+P0_s9.D = !P0_s9.Q ; (1 pterm, 1 signal)
+P0_s9.C = P0_s8.Q ; (1 pterm, 1 signal)
+
+a0.D = !pc0.Q & !pc1.Q & pc2.Q & a0.Q
+    # !pc0.Q & pc1.Q & !pc2.Q & !a0.Q
+    # pc0.Q & !pc1.Q & !pc2.Q & !a0.Q
+    # pc0.Q & pc1.Q & !pc2.Q & a0.Q ; (4 pterms, 4 signals)
+a0.C = L0_debounced.Q ; (1 pterm, 1 signal)
+a0.AR = !reset ; (1 pterm, 1 signal)
+
+a1.T = !pc0.Q & pc1.Q & !pc2.Q & !a0.Q
+    # pc0.Q & !pc1.Q & !pc2.Q & !a0.Q
+    # !pc0.Q & !pc1.Q & !pc2.Q & !a1.Q
+    # pc1.Q & pc2.Q & a1.Q
+    # pc0.Q & pc2.Q & a1.Q ; (5 pterms, 5 signals)
+a1.C = L0_debounced.Q ; (1 pterm, 1 signal)
+a1.AR = !reset ; (1 pterm, 1 signal)
+
+a2.T.X1 = pc2.Q & a2.Q
+    # !pc0.Q & pc1.Q & !pc2.Q & !a0.Q & !a1.Q
+    # pc0.Q & !pc1.Q & !pc2.Q & !a0.Q & !a1.Q ; (3 pterms, 6 signals)
+a2.T.X2 = !pc0.Q & !pc1.Q & a2.Q ; (1 pterm, 3 signals)
+a2.C = L0_debounced.Q ; (1 pterm, 1 signal)
+a2.AR = !reset ; (1 pterm, 1 signal)
+
+a3.T = !pc0.Q & pc1.Q & !pc2.Q & !a0.Q & !a1.Q & !a2.Q
+    # pc0.Q & !pc1.Q & !pc2.Q & !a0.Q & !a1.Q & !a2.Q
+    # !pc0.Q & !pc1.Q & !pc2.Q & !a3.Q
+    # pc1.Q & pc2.Q & a3.Q
+    # pc0.Q & pc2.Q & a3.Q ; (5 pterms, 7 signals)
+a3.C = L0_debounced.Q ; (1 pterm, 1 signal)
+a3.AR = !reset ; (1 pterm, 1 signal)
+
+b0.D = b0.Q ; (1 pterm, 1 signal)
+b0.C = L0_debounced.Q ; (1 pterm, 1 signal)
+b0.AR = !reset ; (1 pterm, 1 signal)
+
+b1.D = b1.Q ; (1 pterm, 1 signal)
+b1.C = L0_debounced.Q ; (1 pterm, 1 signal)
+b1.AR = !reset ; (1 pterm, 1 signal)
+
+b2.D = b2.Q ; (1 pterm, 1 signal)
+b2.C = L0_debounced.Q ; (1 pterm, 1 signal)
+b2.AR = !reset ; (1 pterm, 1 signal)
+
+b3.D = b3.Q ; (1 pterm, 1 signal)
+b3.C = L0_debounced.Q ; (1 pterm, 1 signal)
+b3.AR = !reset ; (1 pterm, 1 signal)
+
+cf.D = !pc0.Q & pc1.Q & !pc2.Q & !a0.Q & !a1.Q & !a2.Q & !a3.Q
+    # pc0.Q & !pc1.Q & !pc2.Q & !a0.Q & !a1.Q & !a2.Q & !a3.Q
+    # !pc0.Q & !pc1.Q & cf.Q
+    # pc2.Q & cf.Q
+    # pc0.Q & pc1.Q & cf.Q ; (5 pterms, 8 signals)
+cf.C = L0_debounced.Q ; (1 pterm, 1 signal)
+cf.AR = !reset ; (1 pterm, 1 signal)
+
+pc0.D = pc1.Q & !pc2.Q & !zf.Q
+    # !pc0.Q & pc1.Q
+    # !pc0.Q & !pc2.Q ; (3 pterms, 4 signals)
+pc0.C = L0_debounced.Q ; (1 pterm, 1 signal)
+pc0.AR = !reset ; (1 pterm, 1 signal)
+
+pc1.D = !pc0.Q & pc1.Q
+    # pc0.Q & !pc1.Q ; (2 pterms, 2 signals)
+pc1.C = L0_debounced.Q ; (1 pterm, 1 signal)
+pc1.AR = !reset ; (1 pterm, 1 signal)
+
+pc2.D = pc0.Q & pc1.Q & !pc2.Q & zf.Q
+    # !pc0.Q & pc1.Q & pc2.Q
+    # pc0.Q & !pc1.Q & pc2.Q ; (3 pterms, 4 signals)
+pc2.C = L0_debounced.Q ; (1 pterm, 1 signal)
+pc2.AR = !reset ; (1 pterm, 1 signal)
+
+zf.D = !pc0.Q & pc1.Q & !pc2.Q & a0.Q & !a1.Q & !a2.Q & !a3.Q
+    # pc0.Q & !pc1.Q & !pc2.Q & a0.Q & !a1.Q & !a2.Q & !a3.Q
+    # !pc0.Q & !pc1.Q & zf.Q
+    # pc2.Q & zf.Q
+    # pc0.Q & pc1.Q & zf.Q ; (5 pterms, 8 signals)
+zf.C = L0_debounced.Q ; (1 pterm, 1 signal)
+zf.AR = !reset ; (1 pterm, 1 signal)
+

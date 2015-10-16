@@ -1,0 +1,227 @@
+$WAVE4
+$RESOLUTION 1000000000
+$ENDTIME 2000000
+I 1 "e#V4#wirec4 01zx"
+$OUT 1 1 "u0sut/u2bpd/wasPressed"
+$S 2 1 7 0 pReq
+I 2 "e#V3#regc4 01zx"
+$S 3 2 upButton
+$S 4 1 "u0sut/upAck"
+$S 5 2 testClock
+$IN 6 1 0 5 "u0sut/system"
+I 3 "a#V8#[2:0]reg1 ricd2 0 e#V3#regc4 01zx"
+$BUS S 7 3 3 6 0 "u2bpd/state"
+$SC 8-+2
+$S +1 2 resetButton
+$S +1 1 "u0sut/debouncingClock"
+I 4 "a#V9#[3:0]wire1 ricd3 0 e#V4#wirec4 01zx"
+$BUS S +1 4 4 counter
+$SC +1-+3
+$IN +1 1 "u0sut/u2bpd/clock"
+$IN +1 1 12 0 buttonDown
+P 0 1-19 CS "1"
+P 0 5 Stimulator "CLK:FRM:Override:10.000000;4;1;0;50;1:Clock:1:"
+$WAVES 1
+=0 T 0
+=1 D 0 5
+=2 D 270k 5
+=3 D 80k 5
+=4 D 520k 5
+*3
+$VALUES
+V 1
+x
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 2
+*0
+*1
+*2
+*3
+*4
+*3
+$VALUES
+V 1
+x
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 4
+*0
+*1
+=5 D 310k 5
+=6 D 40k 5
+=7 D 560k 5
+*6
+$VALUES
+V 1
+x
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 6
+*0
+=8 D 0 1
+R 1 400 =9 D 5k 1
+$VALUES
+V 1
+x
+R 2 200 0 1
+V 1
+0
+$END
+$WAVES +6
+*0
+=10 D 0 2
+=11 D 0 4
+=12 D 10k 4
+R 1 99 =13 D 20k 4
+$VALUES
+V 1
+x
+R 2 51 0 1
+$END
+$WAVES +2
+*0
+=14 D 20k 2
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*14
+$VALUES
+V 2
+x
+0
+$END
+$WAVES +1
+*0
+*14
+=15 D 890k 5
+$VALUES
+V 3
+x
+0
+1
+$END
+$WAVES +1
+*0
+*14
+=16 D 290k 5
+=17 D 600k 5
+$VALUES
+V 4
+x
+0
+1
+0
+$END
+$WAVES +1
+*0
+*10
+*11
+*12
+R 1 99 *13
+$VALUES
+V 1
+x
+R 2 51 0 1
+$END
+$WAVES +1
+*0
+*8
+=18 D 150k 1
+=19 D 400k 1
+R 1 2 =20 D 200k 1
+$VALUES
+V 1
+x
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 3
+*0
+=21 T 150k
+=22 T 400k
+R 1 2 =23 T 200k
+$VALUES
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 5
+*0
+R 1 400 =24 T 5k
+$VALUES
+R 2 200 0 1
+V 1
+0
+$END
+$WAVES 8
+*0
+*1
+=25 D 230k 4
+=26 D 120k 5
+=27 D 480k 4
+*26
+$VALUES
+V 1
+x
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES 9
+*0
+*1
+=28 D 150k 4
+=29 D 80k 4
+=30 D 520k 4
+*29
+$VALUES
+V 1
+x
+R 2 2 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+*1
+=31 D 70k 4
+*29
+R 1 2 =32 D 40k 4
+*6
+*3
+R 1 2 =33 D 200k 4
+R 1 2 *32
+*6
+*3
+*32
+=34 D 1010k 3
+$VALUES
+V 1
+x
+R 2 7 0 1
+V 1
+0
+$END
+$WAVES +1
+*0
+=35 T 20k
+=36 T 30k
+$VALUES
+V 3
+0
+1
+0
+$END
+$ENDWAVE

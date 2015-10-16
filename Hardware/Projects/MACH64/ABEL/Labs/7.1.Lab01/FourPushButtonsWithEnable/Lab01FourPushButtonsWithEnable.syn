@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 1.4 
+PROJECT Lab01SinglePushButton
+DESIGN lab01fourpushbuttonswithenable Normal
+DEVKIT LC4064V-75T48I
+ENTRY ABEL/Schematic
+MODULE Lab01FourPushButtonsWithEnable.abl
+MODSTYLE Lab01FourPushButtonsWithEnable Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE Lab01FourPushButtonsWithEnable

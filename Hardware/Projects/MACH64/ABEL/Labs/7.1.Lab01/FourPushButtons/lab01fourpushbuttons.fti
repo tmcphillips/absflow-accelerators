@@ -1,0 +1,36 @@
+#PLAFILE     lab01fourpushbuttons.bl5
+#DATE        Sat Nov 26 11:05:15 2011
+
+#DESIGN      lab01fourpushbuttons
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION pb0:C_*_21
+DATA LOCATION pb1:C_*_22
+DATA LOCATION pb2:C_*_23
+DATA LOCATION pb3:C_*_24
+DATA LOCATION led0:D_1_31
+DATA LOCATION led1:D_3_32
+DATA LOCATION led2:D_6_33
+DATA LOCATION led3:D_10_34
+
+// Signals direction
+DATA IO_DIR pb0:IN
+DATA IO_DIR pb1:IN
+DATA IO_DIR pb2:IN
+DATA IO_DIR pb3:IN
+DATA IO_DIR led0:OUT
+DATA IO_DIR led1:OUT
+DATA IO_DIR led2:OUT
+DATA IO_DIR led3:OUT
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM led0
+DATA tOSM led1
+DATA tOSM led2
+DATA tOSM led3

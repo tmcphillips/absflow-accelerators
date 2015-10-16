@@ -1,0 +1,65 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+q0.D = s0 & s1 & s2 & !d
+    # !s0 & q0.Q
+    # !s1 & q0.Q
+    # !s2 & q0.Q ; (4 pterms, 5 signals)
+q0.LH = !g ; (1 pterm, 1 signal)
+q0.AR = !clr ; (1 pterm, 1 signal)
+
+q1.D = !s0 & s1 & s2 & !d
+    # s0 & q1.Q
+    # !s1 & q1.Q
+    # !s2 & q1.Q ; (4 pterms, 5 signals)
+q1.LH = !g ; (1 pterm, 1 signal)
+q1.AR = !clr ; (1 pterm, 1 signal)
+
+q2.D = s0 & !s1 & s2 & !d
+    # !s0 & q2.Q
+    # s1 & q2.Q
+    # !s2 & q2.Q ; (4 pterms, 5 signals)
+q2.LH = !g ; (1 pterm, 1 signal)
+q2.AR = !clr ; (1 pterm, 1 signal)
+
+q3.D = !s0 & !s1 & s2 & !d
+    # s0 & q3.Q
+    # s1 & q3.Q
+    # !s2 & q3.Q ; (4 pterms, 5 signals)
+q3.LH = !g ; (1 pterm, 1 signal)
+q3.AR = !clr ; (1 pterm, 1 signal)
+
+q4.D = s0 & s1 & !s2 & !d
+    # !s0 & q4.Q
+    # !s1 & q4.Q
+    # s2 & q4.Q ; (4 pterms, 5 signals)
+q4.LH = !g ; (1 pterm, 1 signal)
+q4.AR = !clr ; (1 pterm, 1 signal)
+
+q5.D = !s0 & s1 & !s2 & !d
+    # s0 & q5.Q
+    # !s1 & q5.Q
+    # s2 & q5.Q ; (4 pterms, 5 signals)
+q5.LH = !g ; (1 pterm, 1 signal)
+q5.AR = !clr ; (1 pterm, 1 signal)
+
+q6.D = s0 & !s1 & !s2 & !d
+    # !s0 & q6.Q
+    # s1 & q6.Q
+    # s2 & q6.Q ; (4 pterms, 5 signals)
+q6.LH = !g ; (1 pterm, 1 signal)
+q6.AR = !clr ; (1 pterm, 1 signal)
+
+q7.D = !s0 & !s1 & !s2 & !d
+    # s0 & q7.Q
+    # s1 & q7.Q
+    # s2 & q7.Q ; (4 pterms, 5 signals)
+q7.LH = !g ; (1 pterm, 1 signal)
+q7.AR = !clr ; (1 pterm, 1 signal)
+

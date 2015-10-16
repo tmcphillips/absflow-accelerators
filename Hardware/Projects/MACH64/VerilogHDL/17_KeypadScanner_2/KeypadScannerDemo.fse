@@ -1,0 +1,12 @@
+
+fsm_encoding {8131131} sequential
+
+fsm_state_encoding {8131131} 0001 {00}
+
+fsm_state_encoding {8131131} 0010 {01}
+
+fsm_state_encoding {8131131} 0100 {10}
+
+fsm_state_encoding {8131131} 1000 {11}
+
+fsm_registers {8131131} {rowDrivers_reg_1[1]}  {rowDrivers_reg_1[0]} 

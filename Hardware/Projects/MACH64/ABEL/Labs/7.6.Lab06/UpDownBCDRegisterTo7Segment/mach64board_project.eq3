@@ -1,0 +1,116 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+B0_debounced.D = !downButton & B1_lastSample.Q ; (1 pterm, 2 signals)
+B0_debounced.C = T0_s9.Q ; (1 pterm, 1 signal)
+
+B1_lastSample.D = !downButton ; (1 pterm, 1 signal)
+B1_lastSample.C = T0_s9.Q ; (1 pterm, 1 signal)
+
+T0_s0.D = !T0_s0.Q ; (1 pterm, 1 signal)
+T0_s0.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s1.D = T0_s1.Q & !T0_s0.Q
+    # !T0_s1.Q & T0_s0.Q ; (2 pterms, 2 signals)
+T0_s1.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s2.D = !T0_s2.Q & T0_s1.Q & T0_s0.Q
+    # T0_s2.Q & !T0_s1.Q
+    # T0_s2.Q & !T0_s0.Q ; (3 pterms, 3 signals)
+T0_s2.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s3.D = !T0_s3.Q & T0_s2.Q & T0_s1.Q & T0_s0.Q
+    # T0_s3.Q & !T0_s1.Q
+    # T0_s3.Q & !T0_s2.Q
+    # T0_s3.Q & !T0_s0.Q ; (4 pterms, 4 signals)
+T0_s3.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s4.D.X1 = T0_s4.Q ; (1 pterm, 1 signal)
+T0_s4.D.X2 = T0_s3.Q & T0_s2.Q & T0_s1.Q & T0_s0.Q ; (1 pterm, 4 signals)
+T0_s4.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s5.T = T0_s4.Q & T0_s3.Q & T0_s2.Q & T0_s1.Q & T0_s0.Q ; (1 pterm, 5 signals)
+T0_s5.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s6.T = T0_s5.Q & T0_s4.Q & T0_s3.Q & T0_s2.Q & T0_s1.Q & T0_s0.Q ; (1 pterm, 6 signals)
+T0_s6.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s7.T = T0_s6.Q & T0_s5.Q & T0_s4.Q & T0_s3.Q & T0_s2.Q & T0_s1.Q & T0_s0.Q ; (1 pterm, 7 signals)
+T0_s7.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s8.T = T0_s7.Q & T0_s6.Q & T0_s5.Q & T0_s4.Q & T0_s3.Q & T0_s2.Q & T0_s1.Q
+       & T0_s0.Q ; (1 pterm, 8 signals)
+T0_s8.C = oneMHzClock ; (1 pterm, 1 signal)
+
+T0_s9.T = T0_s8.Q & T0_s7.Q & T0_s6.Q & T0_s5.Q & T0_s4.Q & T0_s3.Q & T0_s2.Q
+       & T0_s1.Q & T0_s0.Q ; (1 pterm, 9 signals)
+T0_s9.C = oneMHzClock ; (1 pterm, 1 signal)
+
+V0_d0.D = !V0_d0.Q & !V0_d1.Q & !V0_d2.Q
+    # upButton & !V0_d0.Q
+    # !V0_d0.Q & !V0_d3.Q ; (3 pterms, 5 signals)
+V0_d0.C = !( !X0_debounced.Q & !B0_debounced.Q ) ; (1 pterm, 2 signals)
+
+V0_d1.D = upButton & !V0_d0.Q & !V0_d1.Q & V0_d2.Q
+    # !upButton & V0_d0.Q & !V0_d1.Q & !V0_d3.Q
+    # !upButton & !V0_d0.Q & V0_d1.Q & !V0_d3.Q
+    # upButton & !V0_d0.Q & !V0_d1.Q & V0_d3.Q
+    # upButton & V0_d0.Q & V0_d1.Q ; (5 pterms, 5 signals)
+V0_d1.C = !( !X0_debounced.Q & !B0_debounced.Q ) ; (1 pterm, 2 signals)
+
+V0_d2.T = upButton & !V0_d0.Q & !V0_d1.Q & V0_d2.Q
+    # !upButton & V0_d0.Q & V0_d1.Q & !V0_d3.Q
+    # upButton & !V0_d0.Q & !V0_d1.Q & V0_d3.Q
+    # !upButton & V0_d2.Q & V0_d3.Q ; (4 pterms, 5 signals)
+V0_d2.C = !( !X0_debounced.Q & !B0_debounced.Q ) ; (1 pterm, 2 signals)
+
+V0_d3.T.X1 = !upButton & V0_d3.Q
+    # !upButton & !V0_d0.Q & !V0_d1.Q & !V0_d2.Q & !V0_d3.Q
+    # !upButton & V0_d0.Q & V0_d1.Q & V0_d2.Q & !V0_d3.Q ; (3 pterms, 5 signals)
+V0_d3.T.X2 = !V0_d0.Q & !V0_d1.Q & !V0_d2.Q ; (1 pterm, 3 signals)
+V0_d3.C = !( !X0_debounced.Q & !B0_debounced.Q ) ; (1 pterm, 2 signals)
+
+X0_debounced.D = !upButton & X1_lastSample.Q ; (1 pterm, 2 signals)
+X0_debounced.C = T0_s9.Q ; (1 pterm, 1 signal)
+
+X1_lastSample.D = !upButton ; (1 pterm, 1 signal)
+X1_lastSample.C = T0_s9.Q ; (1 pterm, 1 signal)
+
+a = !V0_d0.Q & !V0_d2.Q & !V0_d3.Q
+    # !V0_d1.Q & !V0_d2.Q & V0_d3.Q
+    # V0_d0.Q & V0_d2.Q & !V0_d3.Q
+    # V0_d1.Q & !V0_d3.Q ; (4 pterms, 4 signals)
+
+b = V0_d0.Q & V0_d1.Q & !V0_d3.Q
+    # !V0_d0.Q & !V0_d1.Q & !V0_d3.Q
+    # !V0_d1.Q & !V0_d2.Q
+    # !V0_d2.Q & !V0_d3.Q ; (4 pterms, 4 signals)
+
+c = !V0_d1.Q & !V0_d2.Q
+    # V0_d2.Q & !V0_d3.Q
+    # V0_d0.Q & !V0_d3.Q ; (3 pterms, 4 signals)
+
+d.X1 = V0_d0.Q & !V0_d1.Q & !V0_d3.Q
+    # !V0_d0.Q & V0_d1.Q & !V0_d3.Q
+    # V0_d1.Q & !V0_d2.Q & !V0_d3.Q ; (3 pterms, 4 signals)
+d.X2 = !V0_d1.Q & !V0_d2.Q ; (1 pterm, 2 signals)
+
+e = !V0_d0.Q & !V0_d1.Q & !V0_d2.Q
+    # !V0_d0.Q & V0_d1.Q & !V0_d3.Q ; (2 pterms, 4 signals)
+
+f = !V0_d0.Q & !V0_d1.Q & !V0_d2.Q
+    # !V0_d0.Q & V0_d2.Q & !V0_d3.Q
+    # !V0_d1.Q & !V0_d2.Q & V0_d3.Q
+    # !V0_d1.Q & V0_d2.Q & !V0_d3.Q ; (4 pterms, 4 signals)
+
+g = !V0_d0.Q & V0_d1.Q & !V0_d3.Q
+    # !V0_d1.Q & !V0_d2.Q & V0_d3.Q
+    # V0_d1.Q & !V0_d2.Q & !V0_d3.Q
+    # !V0_d1.Q & V0_d2.Q & !V0_d3.Q ; (4 pterms, 4 signals)
+

@@ -1,0 +1,5 @@
+Selecting top level module RippleCounter
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+

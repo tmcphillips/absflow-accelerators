@@ -1,0 +1,78 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Mon Feb 06 17:06:09 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 6 counter_3_:14'ke'  clock:10'ke'  reset:20'ke'  counter_2_:15'ke'  counter_1_:16'ke'  \
+#  counter_0_:17'ke' 
+#$ NODES 4 counterDFFRH_0_reg counterDFFRH_1_reg counterDFFRH_2_reg \
+#  counterDFFRH_3_reg
+.model fourbitcounter
+.inputs clock.BLIF reset.BLIF counterDFFRH_0_reg.BLIF counterDFFRH_1_reg.BLIF \
+counterDFFRH_2_reg.BLIF counterDFFRH_3_reg.BLIF
+.outputs counter_3_ counter_2_ counter_1_ counter_0_ counterDFFRH_0_reg.D \
+counterDFFRH_0_reg.C counterDFFRH_0_reg.AR counterDFFRH_1_reg.D \
+counterDFFRH_1_reg.C counterDFFRH_1_reg.AR counterDFFRH_2_reg.D \
+counterDFFRH_2_reg.C counterDFFRH_2_reg.AR counterDFFRH_3_reg.D \
+counterDFFRH_3_reg.C counterDFFRH_3_reg.AR
+.names counterDFFRH_0_reg.BLIF counterDFFRH_0_reg.D
+0 1
+1 0
+.names counterDFFRH_3_reg.BLIF counter_3_
+1 1
+0 0
+.names counterDFFRH_2_reg.BLIF counter_2_
+1 1
+0 0
+.names counterDFFRH_1_reg.BLIF counter_1_
+1 1
+0 0
+.names counterDFFRH_0_reg.BLIF counter_0_
+1 1
+0 0
+.names clock.BLIF counterDFFRH_0_reg.C
+0 1
+1 0
+.names reset.BLIF counterDFFRH_0_reg.AR
+0 1
+1 0
+.names counterDFFRH_0_reg.BLIF counterDFFRH_1_reg.BLIF counterDFFRH_1_reg.D
+10 1
+01 1
+00 0
+11 0
+.names clock.BLIF counterDFFRH_1_reg.C
+0 1
+1 0
+.names reset.BLIF counterDFFRH_1_reg.AR
+0 1
+1 0
+.names counterDFFRH_0_reg.BLIF counterDFFRH_1_reg.BLIF counterDFFRH_2_reg.BLIF \
+counterDFFRH_2_reg.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names clock.BLIF counterDFFRH_2_reg.C
+0 1
+1 0
+.names reset.BLIF counterDFFRH_2_reg.AR
+0 1
+1 0
+.names counterDFFRH_0_reg.BLIF counterDFFRH_1_reg.BLIF counterDFFRH_2_reg.BLIF \
+counterDFFRH_3_reg.BLIF counterDFFRH_3_reg.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names clock.BLIF counterDFFRH_3_reg.C
+0 1
+1 0
+.names reset.BLIF counterDFFRH_3_reg.AR
+0 1
+1 0
+.end

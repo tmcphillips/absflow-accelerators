@@ -1,0 +1,32 @@
+//
+// Software Version :  ispLEVER Classic 1.4.01.04.23.l1  
+// Project Name	    :  mach64board_project
+// Targeted Device  :  LC4064V-75T48I
+// Date             :  Mon Jan 16 16:17:17 2012
+//
+                   GNDIO0          SYS           5
+                   VCCIO0          SYS           6
+                       s0          IN            7
+                       s1          IN            8
+                      VCC          SYS           12
+                      GND          SYS           13
+                       c0          IN            14
+                       c1          IN            15
+                       c2          IN            16
+                       c3          IN            17
+                       b0          IN            20
+                       b1          IN            21
+                       b2          IN            22
+                       b3          IN            23
+                       a0          IN            24
+                       a1          IN            26
+                       a2          IN            27
+                       a3          IN            28
+                   GNDIO1          SYS           29
+                   VCCIO1          SYS           30
+                       y0          OUT           31
+                       y1          OUT           32
+                       y2          OUT           33
+                       y3          OUT           34
+                      VCC          SYS           36
+                      GND          SYS           37

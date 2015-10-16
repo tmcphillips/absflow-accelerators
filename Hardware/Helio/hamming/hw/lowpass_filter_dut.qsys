@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element lowpass_filter
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6C6U23C8ES" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="soc_hamming_hps.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clock" internal="lowpass_filter.clock" type="clock" dir="end" />
+ <interface name="reset" internal="lowpass_filter.reset" type="reset" dir="end" />
+ <interface
+   name="cutoff"
+   internal="lowpass_filter.cutoff"
+   type="avalon"
+   dir="end" />
+ <interface name="source" internal="lowpass_filter.avalon_streaming_source" />
+ <interface name="sink" internal="lowpass_filter.avalon_streaming_sink" />
+ <interface
+   name="in"
+   internal="lowpass_filter.in"
+   type="avalon_streaming"
+   dir="end" />
+ <interface
+   name="out"
+   internal="lowpass_filter.out"
+   type="avalon_streaming"
+   dir="start" />
+ <interface name="busy" internal="lowpass_filter.busy" type="conduit" dir="end" />
+ <module
+   kind="lowpass_filter_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="lowpass_filter">
+  <parameter name="WIDTH" value="8" />
+  <parameter name="FORWARD_DELIMITERS" value="0" />
+  <parameter name="EOP_ON_EXCEED" value="0" />
+  <parameter name="NEW_EOP_VALUE" value="255" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="false" />
+</system>

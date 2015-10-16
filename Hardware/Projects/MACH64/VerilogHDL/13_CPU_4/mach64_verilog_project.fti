@@ -1,0 +1,133 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Sun Jan 29 22:24:39 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION step:D_*_31
+DATA LOCATION reset_n:D_*_32
+DATA LOCATION oneMHzClock:*_*_18
+DATA LOCATION use_a_reg:B_7_10
+DATA LOCATION a_reg_3_:A_8_48
+DATA LOCATION b_reg_3_:A_2_4
+DATA LOCATION pc_2_:C_10_26
+DATA LOCATION zf:D_9_38
+DATA LOCATION cf:D_11_39
+DATA LOCATION a_reg_2_:A_6_47
+DATA LOCATION a_reg_1_:A_4_46
+DATA LOCATION a_reg_0_:A_3_45
+DATA LOCATION b_reg_2_:A_0_3
+DATA LOCATION b_reg_1_:A_1_2
+DATA LOCATION b_reg_0_:D_2_40
+DATA LOCATION pc_1_:C_1_27
+DATA LOCATION pc_0_:C_3_28
+DATA LOCATION u0rs_u1rc_genblk1_8__uitff_q:B_2
+DATA LOCATION u0rs_u1rc_u0tff_q:A_13
+DATA LOCATION u0rs_u1rc_genblk1_0__uitff_q:A_5
+DATA LOCATION u0rs_u1rc_genblk1_1__uitff_q:A_7
+DATA LOCATION u0rs_u1rc_genblk1_2__uitff_q:A_9
+DATA LOCATION u0rs_u1rc_genblk1_3__uitff_q:A_10
+DATA LOCATION u0rs_u1rc_genblk1_4__uitff_q:A_11
+DATA LOCATION u0rs_u1rc_genblk1_5__uitff_q:A_12
+DATA LOCATION u0rs_u1rc_genblk1_6__uitff_q:B_3
+DATA LOCATION u0rs_u1rc_genblk1_7__uitff_q:B_5
+DATA LOCATION u1pbd_state_0_:B_0
+DATA LOCATION u1pbd_state_1_:B_1
+DATA LOCATION u1pbd_state_2_:B_9
+DATA LOCATION b_reg_3__0:B_12
+DATA LOCATION zf_0:C_6
+
+// Signals direction
+DATA IO_DIR step:IN
+DATA IO_DIR reset_n:IN
+DATA IO_DIR oneMHzClock:IN
+DATA IO_DIR use_a_reg:OUT
+DATA IO_DIR a_reg_3_:OUT
+DATA IO_DIR b_reg_3_:OUT
+DATA IO_DIR pc_2_:OUT
+DATA IO_DIR zf:OUT
+DATA IO_DIR cf:OUT
+DATA IO_DIR a_reg_2_:OUT
+DATA IO_DIR a_reg_1_:OUT
+DATA IO_DIR a_reg_0_:OUT
+DATA IO_DIR b_reg_2_:OUT
+DATA IO_DIR b_reg_1_:OUT
+DATA IO_DIR b_reg_0_:OUT
+DATA IO_DIR pc_1_:OUT
+DATA IO_DIR pc_0_:OUT
+
+// Global Clocks
+DATA GLB_CLOCK oneMHzClock:1
+
+// Signals using Shared Clock or CE
+DATA tBCLK a_reg_3_.C
+DATA tBCLK b_reg_3_.C
+DATA tBCLK pc_2_.C
+DATA tBCLK zf.C
+DATA tBCLK cf.C
+DATA tBCLK a_reg_2_.C
+DATA tBCLK a_reg_1_.C
+DATA tBCLK a_reg_0_.C
+DATA tBCLK b_reg_2_.C
+DATA tBCLK b_reg_1_.C
+DATA tBCLK b_reg_0_.C
+DATA tBCLK pc_1_.C
+DATA tBCLK pc_0_.C
+DATA tBCLK u1pbd_state_0_.C
+DATA tBCLK u1pbd_state_1_.C
+DATA tBCLK u1pbd_state_2_.C
+
+// Signals using Shared Init Pterm
+DATA tBSR a_reg_3_.AR
+DATA tBSR b_reg_3_.AR
+DATA tBSR pc_2_.AR
+DATA tBSR zf.AR
+DATA tBSR cf.AR
+DATA tBSR a_reg_2_.AR
+DATA tBSR a_reg_1_.AR
+DATA tBSR a_reg_0_.AR
+DATA tBSR b_reg_2_.AR
+DATA tBSR b_reg_1_.AR
+DATA tBSR b_reg_0_.AR
+DATA tBSR pc_1_.AR
+DATA tBSR pc_0_.AR
+
+// Block Load Adders
+DATA tBLA u1pbd_state_2_:3
+DATA tBLA u1pbd_state_0_:3
+DATA tBLA pc_0_:3
+DATA tBLA pc_1_:3
+DATA tBLA pc_2_:3
+DATA tBLA reset_n:2
+DATA tBLA b_reg_3__0:1
+DATA tBLA u0rs_u1rc_genblk1_5__uitff_q:1
+DATA tBLA b_reg_0_:1
+DATA tBLA b_reg_1_:1
+DATA tBLA b_reg_2_:1
+DATA tBLA a_reg_0_:1
+DATA tBLA a_reg_1_:1
+DATA tBLA a_reg_2_:1
+DATA tBLA b_reg_3_:1
+DATA tBLA a_reg_3_:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM use_a_reg
+DATA tOSM a_reg_3_
+DATA tOSM b_reg_3_
+DATA tOSM pc_2_
+DATA tOSM zf
+DATA tOSM cf
+DATA tOSM a_reg_2_
+DATA tOSM a_reg_1_
+DATA tOSM a_reg_0_
+DATA tOSM b_reg_2_
+DATA tOSM b_reg_1_
+DATA tOSM b_reg_0_
+DATA tOSM pc_1_
+DATA tOSM pc_0_

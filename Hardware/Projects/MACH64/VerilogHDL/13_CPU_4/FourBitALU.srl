@@ -1,0 +1,143 @@
+%%% protect protected_file
+@E
+@ 
+#
+#
+#
+# Created by Synplify Verilog HDL Compiler version comp550rc, Build 030R from Synplicity, Inc.
+# Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+# Synthesis Netlist written on Sun Jan 29 20:29:38 2012
+#
+#
+#OPTIONS:"|-top|FourBitALU|-I|c:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\|-I|C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib|-v2001|-encrypt|-pro|-ll|2000|-compiler_compatible|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\bin\\c_ver.exe":1298500924
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib\\vlog\\hypermods.v":1298501016
+#CUR:"C:\\ispLEVER_Classic1_5\\ispcpld\\..\\cae_library\\synthesis\\verilog\\mach.v":1244664000
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\mach64_verilog_project.h":1327895084
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\fourbitcpu.v":1327897665
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\fourbitalu.v":1327897755
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\cpu_opcodes.v":1327895664
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\ripplescaler.v":1327018055
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\ripplecounter.v":1327261824
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\tflipflop.v":1327607389
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\buttonpressdetector.v":1327346088
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\10_cpu_4\\cpu_opcodes.v":1327895664
+f "C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"; # file 0
+af .is_verilog 1;
+f "C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"; # file 1
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\mach64_verilog_project.h"; # file 2
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\fourbitcpu.v"; # file 3
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\fourbitalu.v"; # file 4
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\cpu_opcodes.v"; # file 5
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\ripplescaler.v"; # file 6
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\ripplecounter.v"; # file 7
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\tflipflop.v"; # file 8
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\buttonpressdetector.v"; # file 9
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\cpu_opcodes.v"; # file 10
+af .is_verilog 1;
+@E
+@ 
+ftell;
+@E@MR@cc::c(::R4nI	FsRkwFs0AHqRpzPHCsD;Fo
+RNP3PH#CDsHF4oR;P
+NR#3H_sPCHoDFR
+4;N3PRFosHhCNlRF"wkHsA0zqp"N;
+PDR3NuMoNlsN#mR"uh_q7__qAuRm__m)qR_AmXu_mq)__mARum_haR_qmQu_hqB_R_mu7_ BquRm_p1]_mqRu]_1)R_qmQu_hAB_R_mu7_ BAuRm_uKvR_muKmZRuh_KZuRm_RKBmKu_hmBRum_huuRm__p7quRm__p7A
+";NmPRuh_q7__qAnR4;P
+NR_mumq)__4AR(N;
+PuRm_)Xm_Aq_R;4U
+RNPmhu_mqa_R;4g
+RNPmQu_hqB_R;.j
+RNPm7u_ qB_R;.4
+RNPm1u_]qp_R;..
+RNPm1u_]q)_R;.d
+RNPmQu_hAB_R;.U
+RNPm7u_ AB_R;.g
+RNPmKu_v4uR.N;
+PuRm_RKZ4
+d;NmPRuh_KZcR4;P
+NR_muK4BRdN;
+PuRm_BKhR;4c
+RNPmhu_mjuR;P
+NR_mupq7_R
+4;NmPRu7_p_.AR;P
+NR$3#M0_N0sVFl#N0HRxC"_muq_h7q=_A6uRm__m)q=_A6uRm_)Xm_Aq_=m6Rum_ha=_q6uRm_BQh_6q=R_mu7_ BqR=6m1u_]qp_=m6Ru]_1)=_q6uRm_BQh_6A=R_mu7_ BAR=6mKu_v6u=R_muK6Z=R_muK=hZ6uRm_=KB6uRm_BKh=m6Rum_huR=6mpu_7=_q6uRm__p7AR=6"N;
+P#R3$NM_0F0Vs0lNRu"m_7qh_Aq_=mARu)_m_Aq_=mARum_X)__qAR=Amhu_mqa_=mARuh_QB=_qAuRm_B7 _Aq=R_mu1_]pqR=Am1u_]q)_=mARuh_QB=_AAuRm_B7 _AA=R_muK=vuAuRm_=KZAuRm_ZKh=mARuB_K=mARuh_KBR=Amhu_mAu=R_mupq7_=mARu7_p_AA=R
+";
+@HR@6c:::4U6d:.ROFbFr8Cc9:jROFbFr8Cc9:j;H
+NR03sDs_FHNoMl"CRFFbO8;C"
+@HR@nc:::4UnU:4RdNr:Rj9N:rdj
+9;N3HRs_0DFosHMCNlR""N;
+
+
+
+@HR@(c:::4U(U:4RdLr:Rj9L:rdj
+9;N3HRs_0DFosHMCNlR""L;
+
+
+
+@FR@Uc:::4UUU:4RdOr:Rj9O:rdj
+9;N3HRs_0DFosHMCNlR""O;
+
+
+
+@FR@gc:::4dgc:4RRxVx
+V;N3HRs_0DFosHMCNlRV"x"
+;
+
+@FR@4c:j.:4::4j4OdRVVRO;H
+NR03sDs_FHNoMl"CRO;V"
+@bR@nc:::4UnU:4RPHMRckM_dOr:Rj9k_McO:rdjN9Rrjd:9b;
+Rc@@::4644j:66:4RPHMROFbF_8CHRMPFFbO8HC_MFPRb8OFC9rj;R
+b@:@c446:j6:4:R46HRMPFFbO8HC_M4P_ROFbF_8CH_MP4bRFOCF8r;49
+@bR@4c:6j:4::464H6RMFPRb8OFCM_HPR_.FFbO8HC_M.P_ROFbFr8C.
+9;b@R@c6:4::4j446:6MRHPbRFOCF8_PHM_FdRb8OFCM_HPR_dFFbO8dCr9b;
+Rc@@::dn4d(:nd:.RPHMRgkM_rOVjk9RMOg_V9rjR4Nr9b;
+Rc@@::dn4d(:nd:.RPHMR4kMjV_OrRj9kjM4_rOVjN9Rr;.9
+@bR@dc:n(:4::dn.HdRMkPRM_44OjVr9MRk4O4_V9rjRdNr9b;
+Rj@@:44::.4:Rk0sCsR0k0CRs;kC
+@bR@4j::44::V.RNCD#RDVN#VCRNCD#;R
+b@:@c..d:4d:.:R.nNPM8R.O_rjd:9_RO.:rdjN9Rrjd:9rRLd9:j;R
+b@:@c..6:j6:.:R.6FRsPOr_dd9:jRdO_rjd:9rRNd9:jRdLr:;j9
+@bR@.c:(4:.::.(.GnRFRsPOr_cd9:jRcO_rjd:9rRNd9:jRdLr:;j9
+@bR@dc:cc:4::dc.N4RMR8Pk_M4FFbO8kCRMF4_b8OFCbRFOCF8rRj9FFbO8dCr9b;
+Rc@@::c.c.:c:R44NPM8R4kM_OFbF_8C4MRk4b_FOCF8_F4Rb8OFC9rjROFbFr8C4F9Rb8OFC9r.;R
+b@:@c.cd:::.d4NdRMR8Pk_M4FFbO8HC_MkPRMF4_b8OFCM_HPbRFOCF8_PHMROFbF_8CH_MP4R
+RRbRFOCF8_PHM_
+.;b@R@c6:.:.c:6.:4R8NMPMRk4b_FOCF8_k.RMF4_b8OFCR_.FFbO8jCr9bRFOCF8_PHM_F4Rb8OFCM_HP;_.
+@bR@.c:(::c.4(:dMRN8kPRMF4_b8OFCR_dk_M4FFbO8dC_ROFbFr8C4F9Rb8OFCM_HPbRFOCF8_PHM_
+.;b@R@cg:.:.c:g4:4R8NMPMRk4b_FOCF8_kcRMF4_b8OFCR_cFFbO8jCr9bRFOCF8rR49FFbO8HC_M.P_;R
+b@:@cd44:c4:d:R.4NPM8R4kM_OFbF_8C6MRk4b_FOCF8_F6Rb8OFC9rdROFbF_8CH;MP
+@bR@dc:g::cd4g:4MRN8kPRMF4_b8OFCR_nk_M4FFbO8nC_ROFbFr8C4F9Rb8OFC9r.ROFbF_8CH;MP
+@bR@dc:4::cd44:4MRN8kPRMF4_b8OFCR_(k_M4FFbO8(C_ROFbFr8C.F9Rb8OFCM_HPbRFOCF8_PHM_R4
+RFRRb8OFCM_HP;_d
+@bR@dc:c::cd4c:4MRN8kPRMF4_b8OFCR_Uk_M4FFbO8UC_ROFbFr8CjF9Rb8OFC9r.ROFbF_8CH_MP4R
+RRbRFOCF8_PHM_
+d;b@R@cn:d::4(d.n:dMRN8OPRVR_dOdV_RckM_jOr9MRkgV_OrRj9kjM4_rOVjk9RM_44OjVr9b;
+Rc@@::.4d4:.:FnRskPRMF4_b8OFCR_gk_M4FFbO8gC_R4kM_OFbF_8C(MRk4b_FOCF8_
+6;b@R@c4:.:.d:4R:nFRsPk_M4FFbO84C_jMRk4b_FOCF8_R4jk_M4FFbO8UC_R4kM_OFbF;8C
+@bR@dc:..:4::d.6N.R8k8RMOc__c4r:Rj9k_McOr_4c9:jRdNr:Rj90Csk;R
+b@:@cd46:n6:d:R6nNR88knM._dOr:Rj9knM._dOr:Rj9N:rdj09Rs,kC0Csk,k0sCs,0k
+C;b@R@c4:.:.d:4R:nbGlkRROVOVVRNCD#,OFbF_8CH_MP.MRkc__O49rc,4kM_OFbF_8CgVRO_kd,MF4_b8OFCj_4
+RRRRdNr9M,k4b_FOCF8_NnRr,j9k_M4FFbO84C_;R
+b@:@c.d4:::.4nlRbkOGRrjd:9rROd9:jR.O_rjd:9M,k4b_FOCF8_PHMRdO_rjd:9M,k4b_FOCF8_R.
+RORR_dcr:,j9k_M4FFbO8dC_RckM_dOr:,49k_McOr_4jk9,MF4_b8OFCR_ck_McOr_4d9:j,4kM_OFbF_8CgR
+RRMRk.On_rjd:9M,k4b_FOCF8_R4jN:r.jV9,NCD#,4kM_OFbF_8CnNRVD,#CN:rd4k9,MF4_b8OFC;_4
+@bR@cc:Uc:4::cU.HjRMkPRMxc_V9rjRckM_rxVjO9Rr;j9
+@bR@cc:Uc:4::cU.HjRMkPRMx6_V9rjR6kM_rxVjO9Rr;49
+@bR@cc:Uc:4::cU.HjRMkPRMxn_V9rjRnkM_rxVjO9Rr;.9
+@bR@cc:Uc:4::cU.HjRMkPRMx(_V9rjR(kM_rxVjO9Rr;d9
+@bR@dc:n(:4::dn.NdRMR8PxxVRVMRkcV_xrRj9k_M6xjVr9MRknV_xrRj9k_M(xjVr9C;
+;
+
+
+

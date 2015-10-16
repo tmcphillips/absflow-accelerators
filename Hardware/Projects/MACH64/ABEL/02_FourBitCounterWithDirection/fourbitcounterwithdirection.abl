@@ -1,0 +1,58 @@
+MODULE FourBitCounter
+
+TITLE 'Four bit counter with manual clock and reset'
+
+DECLARATIONS
+
+
+//   	Wiring diagram
+//
+//   	Outputs for driving LEDs
+//
+//  	B8  (14)  ->  L0 
+//   	B10 (15)  ->  L1
+//   	B12 (16)  ->  L2
+//   	B14 (17)  ->  L3
+//
+//   	Inputs from pushbuttons
+//
+//   	CLK1_IN (18) <- J17 (0)
+//	C0      (20) <- J17 (3)
+//
+//	Input from DIP switch
+//
+//	C2 (21) <- DS15
+
+
+
+DECLARATIONS
+
+	// use PB0 as the clock input
+	!clock pin 18;
+
+	// use PB3 as the reset signal
+	!reset pin 20;
+
+	// use DS14 as the direction control signal
+	direction pin 21;
+
+	// use four registered bits as a counter
+	// and to drive the four LEDs
+	q3..q0 pin 14..17 istype 'reg';
+	counter = [q3..q0];
+
+
+EQUATIONS
+
+	// configure the counter with clock and reset signals
+	counter.clk = clock;
+	counter.ar = reset;
+
+	// increment the counter on each push of PB0
+	when (direction) then
+		counter := counter + 1;
+	else 
+		counter := counter - 1;
+
+END 
+

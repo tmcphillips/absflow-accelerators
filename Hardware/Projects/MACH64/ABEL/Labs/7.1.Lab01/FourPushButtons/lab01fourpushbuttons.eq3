@@ -1,0 +1,17 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+led0 = !pb0 ; (1 pterm, 1 signal)
+
+led1 = !pb1 ; (1 pterm, 1 signal)
+
+led2 = !pb2 ; (1 pterm, 1 signal)
+
+led3 = !pb3 ; (1 pterm, 1 signal)
+

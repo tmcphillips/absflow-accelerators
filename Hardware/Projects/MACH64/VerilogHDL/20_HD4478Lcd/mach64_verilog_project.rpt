@@ -1,0 +1,654 @@
+|--------------------------------------------------------------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Fitter Report File        -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+Project_Summary
+~~~~~~~~~~~~~~~
+Project Name         :  mach64_verilog_project
+Project Path         :  C:\Users\tmcphillips\Designs\Projects\MACH64\VerilogHDL\20_HD4478Lcd
+Project Fitted on    :  Thu Feb 09 10:02:36 2012
+
+Device               :  M4064_32
+Package              :  48
+GLB Input Mux Size   :  10
+Available Blocks     :  4
+Speed                :  -7.5
+Part Number          :  LC4064V-75T48I
+Source Format        :  Pure_Verilog_HDL
+
+
+// Project 'mach64_verilog_project' Fit Successfully! //
+
+
+Compilation_Times
+~~~~~~~~~~~~~~~~~
+Prefit Time                     0 secs
+Load Design Time                0.03 secs
+Partition Time                  0.08 secs
+Place Time                      0.01 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+Design_Summary
+~~~~~~~~~~~~~~
+Total Input Pins                3
+Total Logic Functions           42
+  Total Output Pins             5
+  Total Bidir I/O Pins          8
+  Total Buried Nodes            29
+Total Flip-Flops                41
+  Total D Flip-Flops            39
+  Total T Flip-Flops            2
+  Total Latches                 0
+Total Product Terms             189
+
+Total Reserved Pins             0
+Total Locked Pins               16
+Total Locked Nodes              0
+
+Total Unique Output Enables     8
+Total Unique Clocks             1
+Total Unique Clock Enables      7
+Total Unique Resets             1
+Total Unique Presets            1
+
+Fmax Logic Levels               2
+
+
+Device_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~~~~
+                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+Dedicated Pins
+  Clock/Input Pins                  4        1      3    -->    25
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           30       15     15    -->    50
+Logic Functions                    64       42     22    -->    65
+  Input Registers                  32        0     32    -->     0
+
+GLB Inputs                        144       70     74    -->    48
+Logical Product Terms             320       94    226    -->    29
+Occupied GLBs                       4        4      0    -->   100
+Macrocells                         64       42     22    -->    65
+
+Control Product Terms:
+  GLB Clock/Clock Enables           4        3      1    -->    75
+  GLB Reset/Presets                 4        0      4    -->     0
+  Macrocell Clocks                 64        0     64    -->     0
+  Macrocell Clock Enables          64        5     59    -->     7
+  Macrocell Enables                64        4     60    -->     6
+  Macrocell Resets                 64        0     64    -->     0
+  Macrocell Presets                64        0     64    -->     0
+
+Global Routing Pool               100       34     66    -->    34
+  GRP from IFB                     ..        3     ..    -->    ..
+    (from input signals)           ..        2     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        1     ..    -->    ..
+  GRP from MFB                     ..       31     ..    -->    ..
+----------------------------------------------------------------------
+
+<Note> 1 : The available PT is the product term that has not been used.
+<Note> 2 : IFB is I/O feedback.
+<Note> 3 : MFB is macrocell feedback.
+
+
+
+GLB_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~
+                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+-------------------------------------------------------------------------------------------
+  GLB    A     13     8    21      3/8      0   13      0              3       24       13
+  GLB    B      2    12    14      0/8      0    8      0              8       17        8
+  GLB    C      9    15    24      5/8      0   14      0              2       24       14
+  GLB    D      4     7    11      7/8      0    7      0              9       29        7
+-------------------------------------------------------------------------------------------
+TOTALS:        28    42    70     15/32     0   42      0             22       94       42
+
+<Note> 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+<Note> 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+
+GLB_Control_Summary
+~~~~~~~~~~~~~~~~~~~
+           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+  GLB    A   1      0         0      3      1      0      0
+  GLB    B   0      0         0      0      0      0      0
+  GLB    C   1      0         0      2      0      0      0
+  GLB    D   1      0         0      0      3      0      0
+------------------------------------------------------------------------------
+
+<Note> 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+
+Optimizer_and_Fitter_Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              Yes
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+<Note> 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+<Note> 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+
+Pinout_Listing
+~~~~~~~~~~~~~~
+      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+----------------------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |
+2     |  I_O  |   0  |A10 |        |                 |       |
+3     |  I_O  |   0  |A12 |        |                 |       |
+4     |  I_O  |   0  |A14 |        |                 |       |
+5     |GNDIO0 |   -  |    |        |                 |       |
+6     |VCCIO0 |   -  |    |        |                 |       |
+7     |  I_O  |   0  |B0  |        |                 |       |
+8     |  I_O  |   0  |B2  |        |                 |       |
+9     |  I_O  |   0  |B4  |        |                 |       |
+10    |  I_O  |   0  |B6  |        |                 |       |
+11    | TCK   |   -  |    |        |                 |       |
+12    | VCC   |   -  |    |        |                 |       |
+13    | GND   |   -  |    |        |                 |       |
+14    |  I_O  |   0  |B8  |        |                 |       |
+15    |  I_O  |   0  |B10 |        |                 |       |
+16    |  I_O  |   0  |B12 |        |                 |       |
+17    |  I_O  |   0  |B14 |        |                 |       |
+18    |INCLK1 |   0  |    |        |                 |       |
+19    |INCLK2 |   1  |    |        |                 |       |
+20    |  I_O  |   1  |C0  |    *   |LVCMOS18         | Input |reset_n
+21    |  I_O  |   1  |C2  |    *   |LVCMOS18         | Input |start_n
+22    |  I_O  |   1  |C4  |        |                 |       |
+23    |  I_O  |   1  |C6  |        |                 |       |
+24    |  I_O  |   1  |C8  |        |                 |       |
+25    | TMS   |   -  |    |        |                 |       |
+26    |  I_O  |   1  |C10 |    *   |LVCMOS18         | Output|lcd_rs
+27    |  I_O  |   1  |C12 |    *   |LVCMOS18         | Output|lcd_rw
+28    |  I_O  |   1  |C14 |    *   |LVCMOS18         | Output|lcd_e
+29    |GNDIO1 |   -  |    |        |                 |       |
+30    |VCCIO1 |   -  |    |        |                 |       |
+31    |  I_O  |   1  |D0  |    *   |LVCMOS18         |Tri-Out|lcd_data_0_
+32    |  I_O  |   1  |D2  |    *   |LVCMOS18         |Tri-Out|lcd_data_1_
+33    |  I_O  |   1  |D4  |    *   |LVCMOS18         |Tri-Out|lcd_data_2_
+34    |  I_O  |   1  |D6  |    *   |LVCMOS18         |Tri-Out|lcd_data_3_
+35    | TDO   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    |  I_O  |   1  |D8  |    *   |LVCMOS18         |Tri-Out|lcd_data_4_
+39    |  I_O  |   1  |D10 |    *   |LVCMOS18         |Tri-Out|lcd_data_5_
+40    |  I_O  |   1  |D12 |    *   |LVCMOS18         |Tri-Out|lcd_data_6_
+41    | I_O/OE|   1  |D14 |        |                 |       |
+42    |INCLK3 |   1  |    |        |                 |       |
+43    |INCLK0 |   0  |    |    *   |LVCMOS18         | Input |clock
+44    | I_O/OE|   0  |A0  |        |                 |       |
+45    |  I_O  |   0  |A2  |    *   |LVCMOS18         | Bidir |lcd_data_7_
+46    |  I_O  |   0  |A4  |    *   |LVCMOS18         | Output|wack
+47    |  I_O  |   0  |A6  |    *   |LVCMOS18         | Output|wreq
+48    |  I_O  |   0  |A8  |        |                 |       |
+----------------------------------------------------------------------------------------
+
+<Note> GLB Pad : This notation refers to the GLB I/O pad number in the device.
+<Note> Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+<Note> Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+
+Input_Signal_List
+~~~~~~~~~~~~~~~~~
+                Input
+         Pin    Fanout
+ Pin GLB Type           Pullup Signal
+--------------------------------------
+  43  -- INCLK    ----      Up clock
+  20   C  I/O   4 ABCD      Up reset_n
+  21   C  I/O   1 -B--      Up start_n
+--------------------------------------
+
+
+
+Output_Signal_List
+~~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+------------------------------------------------------------------------
+  31   D  7  1   5  1 DFF    * R * *       ----  Fast     Up lcd_data_0_
+  32   D  7  1   3  1 DFF    * R * *       ----  Fast     Up lcd_data_1_
+  33   D  7  1   4  1 DFF    * R * *       ----  Fast     Up lcd_data_2_
+  34   D  7  1   4  1 DFF    * R * *       ----  Fast     Up lcd_data_3_
+  38   D  8  1   4  1 DFF    * R * *       ----  Fast     Up lcd_data_4_
+  39   D  7  1   5  1 DFF    * R * *       ----  Fast     Up lcd_data_5_
+  40   D  7  1   4  1 DFF    * R * *       ----  Fast     Up lcd_data_6_
+  28   C  7  1   2  1 DFF    * R *         ----  Fast     Up lcd_e
+  26   C 14  1   4  1 DFF    * R *         ----  Fast     Up lcd_rs
+  27   C  3  1   2  1 DFF    * R *         ----  Fast     Up lcd_rw
+  46   A  3  1   2  1 DFF    * R *       2 -BC-  Fast     Up wack
+  47   A  3  1   2  1 DFF    * R *       1 --C-  Fast     Up wreq
+------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Bidir_Signal_List
+~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+------------------------------------------------------------------------
+  45   A  8  1   4  1 DFF    * R * *     1 A---  Fast     Up lcd_data_7_
+------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Buried_Signal_List
+~~~~~~~~~~~~~~~~~~
+        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P         Signal
+----------------------------------------------------------------------
+ 1   B  9  1   3  1 DFF    * R       3 ABC-  inst_state
+ 3   C  4  1   3  1 DFF    * R       4 ABCD  pc_0_
+ 0   B  5  1   4  1 DFF    * R       4 ABCD  pc_1_
+ 2   B  6  1   2  1 DFF    * R       4 ABCD  pc_2_
+ 9   B  6  1   1  1 TFF    * R       4 ABCD  pc_3_
+12   B  7  1   1  1 TFF    * R       4 ABCD  pc_4_
+ 0   A  3  -   2  1 DFF    * R *     1 A---  u0lcdw_busyFlag
+ 7   A  5  1   2  1 DFF    * R       1 A---  u0lcdw_outData_cl_0_
+ 6   C  5  1   2  1 DFF    * R       2 --CD  u0lcdw_outData_cl_1_0_reg
+ 5   B  5  1   2  1 DFF    * R       2 -B-D  u0lcdw_outData_cl_2_0_reg
+ 5   A  5  1   2  1 DFF    * R       2 A--D  u0lcdw_outData_cl_3_0_reg
+ 3   A  5  1   2  1 DFF    * R       1 A---  u0lcdw_outData_cl_4_0_reg
+ 3   B  5  1   2  1 DFF    * R       1 -B--  u0lcdw_outData_cl_5_0_reg
+ 5   C  5  1   2  1 DFF    * R       1 --C-  u0lcdw_outData_cl_6_0_reg
+ 1   A  5  1   2  1 DFF    * R       2 A--D  u0lcdw_outData_cl_7_0_reg
+ 4   C 14  1   2  1 DFF  *   S       3 ABC-  u0lcdw_state_0_
+10   A  2  1   1  1 DFF    * R       1 --C-  u0lcdw_state_10_
+13   C  2  1   1  1 DFF    * R       2 A-C-  u0lcdw_state_11_
+13   A  3  1   1  1 DFF    * R       2 A-C-  u0lcdw_state_12_
+ 7   C  3  1   1  1 DFF    * R       4 ABCD  u0lcdw_state_1_
+ 9   A  2  1   1  1 DFF    * R       1 --C-  u0lcdw_state_2_
+ 9   C  2  1   1  1 DFF    * R       1 --C-  u0lcdw_state_3_
+ 8   C  2  1   1  1 DFF    * R       3 ABC-  u0lcdw_state_4_
+11   C  2  1   1  1 DFF    * R       1 --C-  u0lcdw_state_5_
+11   A  2  1   1  1 DFF    * R       2 A-C-  u0lcdw_state_6_
+ 8   A  4  1   2  1 DFF    * R       1 --C-  u0lcdw_state_7_
+12   C  2  1   1  1 DFF    * R       1 --C-  u0lcdw_state_8_
+10   C  2  1   1  1 DFF    * R       2 A-C-  u0lcdw_state_9_
+ 7   B  7  -   2  1 COM              1 A---  wreq_0
+--   A  1   1  0 PTOE             ----     lcd_data_3_.OE
+--   B  1   1  0 PTOE             ----     lcd_data_2_.OE
+--   C  1   1  0 PTOE             ----     lcd_data_1_.OE
+--   D  1   1  0 PTOE             ----     lcd_data_0_.OE
+----------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+PostFit_Equations
+~~~~~~~~~~~~~~~~~
+inst_state.D = !( !inst_state.Q & pc_0_.Q & !pc_1_.Q & !pc_2_.Q & !pc_3_.Q
+       & pc_4_.Q
+    # start_n & !inst_state.Q
+    # wack.Q & inst_state.Q ) ; (3 pterms, 8 signals)
+inst_state.C = clock ; (1 pterm, 1 signal)
+inst_state.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_0_.D = !( !pc_0_.Q & pc_1_.Q & pc_3_.Q
+    # !pc_1_.Q & !pc_3_.Q & !pc_4_.Q
+    # pc_0_.Q & pc_2_.Q
+    # !pc_0_.Q & !pc_2_.Q & !pc_4_.Q
+    # pc_0_.Q & pc_4_.Q ) ; (5 pterms, 5 signals)
+lcd_data_0_.OE = u0lcdw_outData_cl_7_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_0_.C = clock ; (1 pterm, 1 signal)
+lcd_data_0_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_1_.D = pc_0_.Q & !pc_1_.Q & !pc_2_.Q & !pc_4_.Q
+    # pc_1_.Q & !pc_2_.Q & pc_3_.Q
+    # !pc_1_.Q & pc_2_.Q & pc_3_.Q ; (3 pterms, 5 signals)
+lcd_data_1_.OE = u0lcdw_outData_cl_6_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_1_.C = clock ; (1 pterm, 1 signal)
+lcd_data_1_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_2_.D = !pc_1_.Q & !pc_2_.Q & !pc_4_.Q
+    # pc_1_.Q & pc_3_.Q
+    # pc_1_.Q & pc_2_.Q
+    # !pc_0_.Q & !pc_4_.Q ; (4 pterms, 5 signals)
+lcd_data_2_.OE = u0lcdw_outData_cl_5_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_2_.C = clock ; (1 pterm, 1 signal)
+lcd_data_2_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_3_.D = pc_0_.Q & pc_2_.Q & !pc_3_.Q
+    # !pc_1_.Q & !pc_2_.Q & pc_3_.Q
+    # !pc_0_.Q & !pc_2_.Q & !pc_4_.Q
+    # !pc_0_.Q & pc_3_.Q ; (4 pterms, 5 signals)
+lcd_data_3_.OE = u0lcdw_outData_cl_4_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_3_.C = clock ; (1 pterm, 1 signal)
+lcd_data_3_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_4_.D = !pc_0_.Q & !pc_1_.Q & !pc_2_.Q & !pc_3_.Q & !pc_4_.Q
+    # pc_0_.Q & pc_1_.Q & !pc_2_.Q & pc_3_.Q
+    # pc_0_.Q & !pc_1_.Q & pc_2_.Q & pc_3_.Q ; (3 pterms, 5 signals)
+lcd_data_4_.OE = u0lcdw_outData_cl_3_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_4_.C = clock ; (1 pterm, 1 signal)
+lcd_data_4_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_5_.D = !pc_0_.Q & !pc_1_.Q & !pc_2_.Q
+    # pc_1_.Q & pc_2_.Q
+    # !pc_1_.Q & pc_3_.Q
+    # !pc_0_.Q & pc_3_.Q ; (4 pterms, 4 signals)
+lcd_data_5_.OE = u0lcdw_outData_cl_2_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_5_.C = clock ; (1 pterm, 1 signal)
+lcd_data_5_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_5_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_6_.D = !( !pc_0_.Q & pc_1_.Q & !pc_2_.Q
+    # !pc_0_.Q & !pc_1_.Q & !pc_3_.Q
+    # !pc_2_.Q & !pc_3_.Q ) ; (3 pterms, 4 signals)
+lcd_data_6_.OE = u0lcdw_outData_cl_1_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_6_.C = clock ; (1 pterm, 1 signal)
+lcd_data_6_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_6_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_7_.D = !pc_0_.Q & !pc_1_.Q & pc_2_.Q & !pc_3_.Q
+    # !pc_0_.Q & pc_1_.Q & !pc_2_.Q & pc_3_.Q
+    # pc_0_.Q & pc_4_.Q ; (3 pterms, 5 signals)
+lcd_data_7_.OE = u0lcdw_outData_cl_0_.Q ; (1 pterm, 1 signal)
+lcd_data_7_.C = clock ; (1 pterm, 1 signal)
+lcd_data_7_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_7_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_e.D = !( !u0lcdw_state_2_.Q & !u0lcdw_state_7_.Q & !u0lcdw_state_6_.Q ) ; (1 pterm, 3 signals)
+lcd_e.C = clock ; (1 pterm, 1 signal)
+lcd_e.CE = !( !u0lcdw_state_0_.Q & !u0lcdw_state_2_.Q & !u0lcdw_state_3_.Q
+       & !u0lcdw_state_7_.Q & !u0lcdw_state_10_.Q ) ; (1 pterm, 5 signals)
+lcd_e.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_rs.D = !( !u0lcdw_state_1_.Q & !u0lcdw_state_3_.Q & !u0lcdw_state_7_.Q
+       & !u0lcdw_state_9_.Q & !u0lcdw_state_5_.Q & !u0lcdw_state_11_.Q
+    # !pc_0_.Q & !pc_1_.Q & !pc_3_.Q & !pc_4_.Q
+    # !pc_0_.Q & pc_1_.Q & !pc_2_.Q
+    # !pc_2_.Q & !pc_3_.Q & !pc_4_.Q ) ; (4 pterms, 11 signals)
+lcd_rs.C = clock ; (1 pterm, 1 signal)
+lcd_rs.CE = !( !u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q & !u0lcdw_state_6_.Q ) ; (1 pterm, 3 signals)
+lcd_rs.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_rw.D = u0lcdw_state_6_.Q ; (1 pterm, 1 signal)
+lcd_rw.C = clock ; (1 pterm, 1 signal)
+lcd_rw.CE = !( !u0lcdw_state_0_.Q & !u0lcdw_state_6_.Q ) ; (1 pterm, 2 signals)
+lcd_rw.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_0_.D = wack.Q & inst_state.Q & !pc_0_.Q
+    # !inst_state.Q & pc_0_.Q
+    # !wack.Q & pc_0_.Q ; (3 pterms, 3 signals)
+pc_0_.C = clock ; (1 pterm, 1 signal)
+pc_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_1_.D = wack.Q & inst_state.Q & pc_0_.Q & !pc_1_.Q
+    # !pc_0_.Q & pc_1_.Q
+    # !inst_state.Q & pc_1_.Q
+    # !wack.Q & pc_1_.Q ; (4 pterms, 4 signals)
+pc_1_.C = clock ; (1 pterm, 1 signal)
+pc_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_2_.D.X1 = wack.Q & inst_state.Q & pc_0_.Q & pc_1_.Q ; (1 pterm, 4 signals)
+pc_2_.D.X2 = pc_2_.Q ; (1 pterm, 1 signal)
+pc_2_.C = clock ; (1 pterm, 1 signal)
+pc_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_3_.T = wack.Q & inst_state.Q & pc_0_.Q & pc_1_.Q & pc_2_.Q ; (1 pterm, 5 signals)
+pc_3_.C = clock ; (1 pterm, 1 signal)
+pc_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_4_.T = wack.Q & inst_state.Q & pc_0_.Q & pc_1_.Q & pc_2_.Q & pc_3_.Q ; (1 pterm, 6 signals)
+pc_4_.C = clock ; (1 pterm, 1 signal)
+pc_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_busyFlag.D = lcd_data_7_.PIN ; (1 pterm, 1 signal)
+u0lcdw_busyFlag.C = clock ; (1 pterm, 1 signal)
+u0lcdw_busyFlag.CE = u0lcdw_state_9_.Q ; (1 pterm, 1 signal)
+u0lcdw_busyFlag.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_0_.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_0_.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_0_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_1_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_1_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_1_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_1_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_2_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_2_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_2_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_2_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_3_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_3_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_3_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_3_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_4_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_4_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_4_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_4_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_5_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_5_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_5_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_5_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_6_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_6_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_6_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_6_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_7_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_7_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_7_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_7_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_0_.D = !wreq.Q & !u0lcdw_state_1_.Q & !u0lcdw_state_4_.Q
+       & !u0lcdw_state_2_.Q & !u0lcdw_state_3_.Q & !u0lcdw_state_7_.Q
+       & !u0lcdw_state_10_.Q & !u0lcdw_state_9_.Q & !u0lcdw_state_5_.Q
+       & !u0lcdw_state_6_.Q & !u0lcdw_state_8_.Q & !u0lcdw_state_11_.Q
+    # !u0lcdw_state_3_.Q & !u0lcdw_state_7_.Q & !u0lcdw_state_9_.Q
+       & !u0lcdw_state_5_.Q & !u0lcdw_state_11_.Q & u0lcdw_state_12_.Q ; (2 pterms, 13 signals)
+u0lcdw_state_0_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_0_.AP = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_10_.D = u0lcdw_state_9_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_10_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_10_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_11_.D = u0lcdw_state_10_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_11_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_11_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_12_.D = !u0lcdw_busyFlag.Q & u0lcdw_state_11_.Q ; (1 pterm, 2 signals)
+u0lcdw_state_12_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_12_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_1_.D = wreq.Q & u0lcdw_state_0_.Q ; (1 pterm, 2 signals)
+u0lcdw_state_1_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_2_.D = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_2_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_3_.D = u0lcdw_state_5_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_3_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_4_.D = u0lcdw_state_3_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_4_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_5_.D = u0lcdw_state_2_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_5_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_5_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_6_.D = u0lcdw_state_4_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_6_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_6_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_7_.D = u0lcdw_state_6_.Q
+    # u0lcdw_busyFlag.Q & u0lcdw_state_11_.Q ; (2 pterms, 3 signals)
+u0lcdw_state_7_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_7_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_8_.D = u0lcdw_state_7_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_8_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_8_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_9_.D = u0lcdw_state_8_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_9_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_9_.AR = !reset_n ; (1 pterm, 1 signal)
+
+wack.D = u0lcdw_state_12_.Q ; (1 pterm, 1 signal)
+wack.C = clock ; (1 pterm, 1 signal)
+wack.CE = !( !u0lcdw_state_0_.Q & !u0lcdw_state_12_.Q ) ; (1 pterm, 2 signals)
+wack.AR = !reset_n ; (1 pterm, 1 signal)
+
+wreq.D = !inst_state.Q ; (1 pterm, 1 signal)
+wreq.C = clock ; (1 pterm, 1 signal)
+wreq.CE = !( wreq_0 ) ; (1 pterm, 1 signal)
+wreq.AR = !reset_n ; (1 pterm, 1 signal)
+
+wreq_0 = start_n & !inst_state.Q
+    # !inst_state.Q & pc_0_.Q & !pc_1_.Q & !pc_2_.Q & !pc_3_.Q & pc_4_.Q ; (2 pterms, 7 signals)
+
+
+
+

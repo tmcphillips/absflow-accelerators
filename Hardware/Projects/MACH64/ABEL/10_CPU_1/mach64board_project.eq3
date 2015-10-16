@@ -1,0 +1,175 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+L0_debounced.D = !runButton & L1_lastSample.Q ; (1 pterm, 2 signals)
+L0_debounced.C = P0_s9.Q ; (1 pterm, 1 signal)
+
+L1_lastSample.D = !runButton ; (1 pterm, 1 signal)
+L1_lastSample.C = P0_s9.Q ; (1 pterm, 1 signal)
+
+P0_s0.D = !P0_s0.Q ; (1 pterm, 1 signal)
+P0_s0.C = clock ; (1 pterm, 1 signal)
+
+P0_s1.D = P0_s1.Q & !P0_s0.Q
+    # !P0_s1.Q & P0_s0.Q ; (2 pterms, 2 signals)
+P0_s1.C = clock ; (1 pterm, 1 signal)
+
+P0_s2.D = !P0_s2.Q & P0_s1.Q & P0_s0.Q
+    # P0_s2.Q & !P0_s1.Q
+    # P0_s2.Q & !P0_s0.Q ; (3 pterms, 3 signals)
+P0_s2.C = clock ; (1 pterm, 1 signal)
+
+P0_s3.D = !P0_s3.Q & P0_s2.Q & P0_s1.Q & P0_s0.Q
+    # P0_s3.Q & !P0_s1.Q
+    # P0_s3.Q & !P0_s2.Q
+    # P0_s3.Q & !P0_s0.Q ; (4 pterms, 4 signals)
+P0_s3.C = clock ; (1 pterm, 1 signal)
+
+P0_s4.D.X1 = P0_s4.Q ; (1 pterm, 1 signal)
+P0_s4.D.X2 = P0_s3.Q & P0_s2.Q & P0_s1.Q & P0_s0.Q ; (1 pterm, 4 signals)
+P0_s4.C = clock ; (1 pterm, 1 signal)
+
+P0_s5.T = P0_s4.Q & P0_s3.Q & P0_s2.Q & P0_s1.Q & P0_s0.Q ; (1 pterm, 5 signals)
+P0_s5.C = clock ; (1 pterm, 1 signal)
+
+P0_s6.T = P0_s5.Q & P0_s4.Q & P0_s3.Q & P0_s2.Q & P0_s1.Q & P0_s0.Q ; (1 pterm, 6 signals)
+P0_s6.C = clock ; (1 pterm, 1 signal)
+
+P0_s7.T = P0_s6.Q & P0_s5.Q & P0_s4.Q & P0_s3.Q & P0_s2.Q & P0_s1.Q & P0_s0.Q ; (1 pterm, 7 signals)
+P0_s7.C = clock ; (1 pterm, 1 signal)
+
+P0_s8.T = P0_s7.Q & P0_s6.Q & P0_s5.Q & P0_s4.Q & P0_s3.Q & P0_s2.Q & P0_s1.Q
+       & P0_s0.Q ; (1 pterm, 8 signals)
+P0_s8.C = clock ; (1 pterm, 1 signal)
+
+P0_s9.T = P0_s8.Q & P0_s7.Q & P0_s6.Q & P0_s5.Q & P0_s4.Q & P0_s3.Q & P0_s2.Q
+       & P0_s1.Q & P0_s0.Q ; (1 pterm, 9 signals)
+P0_s9.C = clock ; (1 pterm, 1 signal)
+
+a0.D = !op0 & op1 & op2 & !op3 & b0.Q
+    # op0 & !op1 & op2 & a0.Q & !b0.Q
+    # op0 & !op1 & op2 & op3 & a0.Q
+    # !op0 & !op1 & !op2 & !op3 & a1.Q
+    # op1 & op2 & !op3 & a0.Q & b0.Q
+    # !op0 & op1 & op2 & op3 & !d0
+    # !op1 & op2 & !op3 & !a0.Q & b0.Q
+    # !op0 & op1 & op2 & !op3 & a0.Q
+    # op1 & !op2 & !op3 & !a0.Q
+    # !op0 & !op1 & op2 & !op3 & !a0.Q ; (10 pterms, 8 signals)
+a0.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+a1.D.X1 = !op0 & op1 & !op3 & a0.Q & a1.Q
+    # !op0 & op1 & op2 & !op3 & a1.Q
+    # !op0 & !op1 & !op2 & !op3 & a2.Q
+    # op0 & !op2 & !op3 & a0.Q & !a1.Q
+    # op0 & !op1 & !op2 & !op3 & a0.Q
+    # op0 & !op1 & op2 & !op3 & b1.Q
+    # !op0 & !op1 & op2 & !op3 & !a1.Q
+    # !op0 & op2 & !op3 & !a1.Q & b1.Q
+    # op0 & op2 & !op3 & a1.Q & b1.Q
+    # !op0 & op1 & op2 & op3 & !d1
+    # !op0 & op1 & !op2 & !op3 & !a0.Q & !a1.Q
+    # op0 & op1 & !op2 & !op3 & !a0.Q & a1.Q ; (12 pterms, 9 signals)
+a1.D.X2 = op0 & !op1 & op2 & a1.Q ; (1 pterm, 4 signals)
+a1.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+a2.D = !op0 & op1 & op2 & !op3 & b2.Q
+    # op0 & op1 & !op2 & !op3 & !a0.Q & a2.Q
+    # op1 & !op2 & !op3 & a0.Q & !a1.Q & a2.Q
+    # !op0 & op1 & !op3 & a1.Q & a2.Q
+    # !op0 & op1 & !op2 & !op3 & !a0.Q & !a1.Q & !a2.Q
+    # op0 & !op2 & !op3 & a0.Q & a1.Q & !a2.Q
+    # !op1 & op2 & !op3 & !a2.Q & b2.Q
+    # op0 & !op1 & op2 & a2.Q & !b2.Q
+    # op0 & !op1 & op2 & op3 & a2.Q
+    # !op0 & !op1 & !op2 & !op3 & a3.Q
+    # op0 & !op1 & !op2 & !op3 & a1.Q
+    # !op0 & !op1 & op2 & !op3 & !a2.Q
+    # !op0 & op1 & op2 & op3 & !d2
+    # op1 & op2 & !op3 & a2.Q & b2.Q
+    # !op0 & op1 & op2 & !op3 & a2.Q ; (15 pterms, 10 signals)
+a2.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+a3.D = !op0 & op2 & !op3 & !a3.Q & b3.Q
+    # op0 & op1 & !op2 & !op3 & !a0.Q & a3.Q
+    # op1 & !op2 & !op3 & a0.Q & !a1.Q & a3.Q
+    # op1 & !op2 & !op3 & a1.Q & !a2.Q & a3.Q
+    # !op0 & op1 & !op3 & a2.Q & a3.Q
+    # !op0 & op1 & !op2 & !op3 & !a0.Q & !a1.Q & !a2.Q & !a3.Q
+    # op0 & !op2 & !op3 & a0.Q & a1.Q & a2.Q & !a3.Q
+    # op0 & !op1 & op2 & a3.Q & !b3.Q
+    # op0 & !op1 & op2 & op3 & a3.Q
+    # !op1 & op2 & !op3 & !a3.Q & b3.Q
+    # op0 & !op1 & !op2 & !op3 & a2.Q
+    # !op0 & !op1 & op2 & !op3 & !a3.Q
+    # !op0 & op1 & op2 & op3 & !d3
+    # op1 & op2 & !op3 & a3.Q & b3.Q
+    # !op0 & op1 & op2 & !op3 & a3.Q ; (15 pterms, 10 signals)
+a3.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+b0.D = op0 & !op1 & op2 & op3 & !d0
+    # !op0 & op1 & op2 & b0.Q
+    # !op3 & b0.Q ; (3 pterms, 6 signals)
+b0.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+b1.D = op0 & !op1 & op2 & op3 & !d1
+    # !op0 & op1 & op2 & b1.Q
+    # !op3 & b1.Q ; (3 pterms, 6 signals)
+b1.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+b2.D = op0 & !op1 & op2 & op3 & !d2
+    # !op0 & op1 & op2 & b2.Q
+    # !op3 & b2.Q ; (3 pterms, 6 signals)
+b2.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+b3.D = op0 & !op1 & op2 & op3 & !d3
+    # !op0 & op1 & op2 & b3.Q
+    # !op3 & b3.Q ; (3 pterms, 6 signals)
+b3.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+cf.D = !op0 & op1 & !op2 & !op3 & !a0.Q & !a1.Q & !a2.Q & !a3.Q
+    # op0 & !op2 & !op3 & a0.Q & a1.Q & a2.Q & a3.Q
+    # !op0 & op1 & op2 & op3 & cf.Q
+    # op0 & !op1 & op2 & op3 & cf.Q
+    # !op0 & !op1 & !op2 & !op3 & a0.Q
+    # op0 & !op1 & !op2 & !op3 & a3.Q ; (6 pterms, 9 signals)
+cf.C = L0_debounced.Q ; (1 pterm, 1 signal)
+
+zf.D = !( !op0 & op2 & !op3 & !a2.Q & b3.Q
+    # !op0 & op2 & !op3 & !a2.Q & b1.Q
+    # !op0 & op2 & !op3 & !a2.Q & b2.Q
+    # !op0 & op1 & op2 & !op3 & b0.Q
+    # op0 & !op1 & op2 & !op3 & a3.Q & !b3.Q
+    # !op0 & !op3 & !a0.Q & a1.Q
+    # op0 & !op1 & !op3 & a2.Q & !b2.Q
+    # op0 & !op1 & !op3 & a1.Q & !b1.Q
+    # !op0 & op2 & !op3 & a0.Q & !a3.Q
+    # op0 & !op1 & !op3 & a0.Q & !b0.Q
+    # !op0 & !op1 & op2 & !a1.Q
+    # op1 & op2 & !op3 & a3.Q & b3.Q
+    # op1 & op2 & !op3 & a2.Q & b2.Q
+    # op0 & !op2 & a0.Q & !a1.Q
+    # !op1 & !op2 & a2.Q
+    # op1 & op2 & !op3 & a0.Q & b0.Q
+    # op1 & op2 & !op3 & a1.Q & b1.Q
+    # !op2 & a1.Q & !a2.Q
+    # !op2 & a2.Q & !a3.Q
+    # !op0 & !op3 & !a2.Q & a3.Q
+    # !op0 & op1 & !op3 & a2.Q
+    # !op1 & op2 & !op3 & !a0.Q & b0.Q
+    # !op1 & op2 & !op3 & !a1.Q & b1.Q
+    # !op1 & op2 & !op3 & !a2.Q & b2.Q
+    # !op1 & op2 & !op3 & !a3.Q & b3.Q
+    # op1 & !op2 & !a0.Q
+    # op0 & op1 & op3
+    # !op0 & !op1 & op3
+    # !op2 & op3
+    # op3 & !zf.Q ) ; (30 pterms, 13 signals)
+zf.C = L0_debounced.Q ; (1 pterm, 1 signal)
+

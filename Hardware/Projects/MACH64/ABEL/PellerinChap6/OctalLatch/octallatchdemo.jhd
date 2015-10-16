@@ -1,0 +1,3 @@
+MODULE OctalLatchDemo
+	SUBMODULE octallatch
+		INSTANCE latch

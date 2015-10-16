@@ -1,0 +1,248 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:12:57 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE dipsto7segmentdisplay
+#$ PINS 13 d0:17 d1:16 d2:15 d3:14 a:20 b:21 c:22 d:23 e:24 f:26 g:27 enableHex:31 \
+#  enableDisplay:28
+#$ NODES 22 HexLEDSegmentLookup>d0'co'  HexLEDSegmentLookup>d1'co'  \
+#  HexLEDSegmentLookup>d2'co'  HexLEDSegmentLookup>d3'co'  HexLEDSegmentLookup>a'co,o'  \
+#  HexLEDSegmentLookup>b'co,o'  HexLEDSegmentLookup>c'co,o'  HexLEDSegmentLookup>d'co,o'  \
+#  HexLEDSegmentLookup>e'co,o'  HexLEDSegmentLookup>f'co,o'  HexLEDSegmentLookup>g'co,o'  \
+#  BCDLEDSegmentLookup>d0'co'  BCDLEDSegmentLookup>d1'co'  BCDLEDSegmentLookup>d2'co'  \
+#  BCDLEDSegmentLookup>d3'co'  BCDLEDSegmentLookup>a'co,o'  BCDLEDSegmentLookup>b'co,o'  \
+#  BCDLEDSegmentLookup>c'co,o'  BCDLEDSegmentLookup>d'co,o'  BCDLEDSegmentLookup>e'co,o'  \
+#  BCDLEDSegmentLookup>f'co,o'  BCDLEDSegmentLookup>g'co,o' 
+.model dipsto7segmentdisplay
+.inputs enableDisplay.BLIF d0.BLIF d1.BLIF d2.BLIF d3.BLIF \
+HexLEDSegmentLookup>a.BLIF enableHex.BLIF HexLEDSegmentLookup>b.BLIF \
+HexLEDSegmentLookup>c.BLIF HexLEDSegmentLookup>d.BLIF \
+HexLEDSegmentLookup>e.BLIF HexLEDSegmentLookup>f.BLIF \
+HexLEDSegmentLookup>g.BLIF BCDLEDSegmentLookup>a.BLIF \
+BCDLEDSegmentLookup>b.BLIF BCDLEDSegmentLookup>c.BLIF \
+BCDLEDSegmentLookup>d.BLIF BCDLEDSegmentLookup>e.BLIF \
+BCDLEDSegmentLookup>f.BLIF BCDLEDSegmentLookup>g.BLIF \
+HexLEDSegmentLookup>d0.BLIF HexLEDSegmentLookup>d1.BLIF \
+HexLEDSegmentLookup>d2.BLIF HexLEDSegmentLookup>d3.BLIF \
+BCDLEDSegmentLookup>d0.BLIF BCDLEDSegmentLookup>d1.BLIF \
+BCDLEDSegmentLookup>d2.BLIF BCDLEDSegmentLookup>d3.BLIF
+.outputs a b c d e f g HexLEDSegmentLookup>d0 HexLEDSegmentLookup>d1 \
+HexLEDSegmentLookup>d2 HexLEDSegmentLookup>d3 BCDLEDSegmentLookup>d0 \
+BCDLEDSegmentLookup>d1 BCDLEDSegmentLookup>d2 BCDLEDSegmentLookup>d3 a.OE b.OE \
+c.OE d.OE e.OE f.OE g.OE HexLEDSegmentLookup>a HexLEDSegmentLookup>b \
+HexLEDSegmentLookup>c HexLEDSegmentLookup>d HexLEDSegmentLookup>e \
+HexLEDSegmentLookup>f HexLEDSegmentLookup>g BCDLEDSegmentLookup>a \
+BCDLEDSegmentLookup>b BCDLEDSegmentLookup>c BCDLEDSegmentLookup>d \
+BCDLEDSegmentLookup>e BCDLEDSegmentLookup>f BCDLEDSegmentLookup>g
+\
+
+.subckt hextosevensegment d0.BLIF=HexLEDSegmentLookup>d0.BLIF d1.BLIF=HexLEDSegmentLookup>d1.BLIF \
+ d2.BLIF=HexLEDSegmentLookup>d2.BLIF d3.BLIF=HexLEDSegmentLookup>d3.BLIF a=HexLEDSegmentLookup>a \
+ b=HexLEDSegmentLookup>b c=HexLEDSegmentLookup>c d=HexLEDSegmentLookup>d e=HexLEDSegmentLookup>e \
+ f=HexLEDSegmentLookup>f g=HexLEDSegmentLookup>g
+\
+
+.subckt bcdtosevensegment d0.BLIF=BCDLEDSegmentLookup>d0.BLIF d1.BLIF=BCDLEDSegmentLookup>d1.BLIF \
+ d2.BLIF=BCDLEDSegmentLookup>d2.BLIF d3.BLIF=BCDLEDSegmentLookup>d3.BLIF a=BCDLEDSegmentLookup>a \
+ b=BCDLEDSegmentLookup>b c=BCDLEDSegmentLookup>c d=BCDLEDSegmentLookup>d e=BCDLEDSegmentLookup>e \
+ f=BCDLEDSegmentLookup>f g=BCDLEDSegmentLookup>g
+.names HexLEDSegmentLookup>a.BLIF enableHex.BLIF BCDLEDSegmentLookup>a.BLIF a
+10- 1
+-11 1
+.names enableHex.BLIF HexLEDSegmentLookup>b.BLIF BCDLEDSegmentLookup>b.BLIF b
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>c.BLIF BCDLEDSegmentLookup>c.BLIF c
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>d.BLIF BCDLEDSegmentLookup>d.BLIF d
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>e.BLIF BCDLEDSegmentLookup>e.BLIF e
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>f.BLIF BCDLEDSegmentLookup>f.BLIF f
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>g.BLIF BCDLEDSegmentLookup>g.BLIF g
+01- 1
+1-1 1
+.names d0.BLIF HexLEDSegmentLookup>d0
+0 1
+.names d1.BLIF HexLEDSegmentLookup>d1
+0 1
+.names d2.BLIF HexLEDSegmentLookup>d2
+0 1
+.names d3.BLIF HexLEDSegmentLookup>d3
+0 1
+.names d0.BLIF BCDLEDSegmentLookup>d0
+0 1
+.names d1.BLIF BCDLEDSegmentLookup>d1
+0 1
+.names d2.BLIF BCDLEDSegmentLookup>d2
+0 1
+.names d3.BLIF BCDLEDSegmentLookup>d3
+0 1
+.names enableDisplay.BLIF a.OE
+0 1
+.names enableDisplay.BLIF b.OE
+0 1
+.names enableDisplay.BLIF c.OE
+0 1
+.names enableDisplay.BLIF d.OE
+0 1
+.names enableDisplay.BLIF e.OE
+0 1
+.names enableDisplay.BLIF f.OE
+0 1
+.names enableDisplay.BLIF g.OE
+0 1
+.end
+.model hextosevensegment
+.inputs d0.BLIF d1.BLIF d2.BLIF d3.BLIF
+.outputs a b c d e f g
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF a
+1111 1
+0111 1
+0011 1
+0101 1
+1001 1
+1110 1
+0110 1
+1010 1
+0010 1
+1100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF b
+0111 1
+0011 1
+1101 1
+1001 1
+0001 1
+1010 1
+0010 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF c
+0111 1
+1011 1
+0011 1
+1101 1
+0101 1
+1001 1
+0001 1
+0110 1
+1010 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF d
+1011 1
+0011 1
+1101 1
+0101 1
+1001 1
+1110 1
+0110 1
+0010 1
+1100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF e
+1111 1
+1011 1
+1101 1
+1110 1
+0110 1
+1010 1
+0010 1
+1100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF f
+1111 1
+1011 1
+0101 1
+1001 1
+1110 1
+0110 1
+1010 1
+1100 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF g
+1111 1
+1011 1
+0011 1
+1101 1
+0101 1
+1001 1
+1110 1
+0110 1
+1010 1
+0010 1
+0100 1
+1000 1
+.end
+.model bcdtosevensegment
+.inputs d0.BLIF d1.BLIF d2.BLIF d3.BLIF
+.outputs a b c d e f g
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF a
+0111 1
+0011 1
+0101 1
+1001 1
+0110 1
+0010 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF b
+0111 1
+0011 1
+1001 1
+0001 1
+0010 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF c
+0111 1
+0011 1
+0101 1
+1001 1
+0001 1
+0110 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF d
+0011 1
+0101 1
+1001 1
+0110 1
+0010 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF e
+0110 1
+0010 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF f
+0101 1
+1001 1
+0110 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF g
+0011 1
+0101 1
+1001 1
+0110 1
+0010 1
+0100 1
+1000 1
+.end

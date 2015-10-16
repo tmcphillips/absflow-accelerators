@@ -1,0 +1,21 @@
+Selecting top level module LcdDemo
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v":141:7:141:15|Synthesizing module LCDWriter
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v":1:7:1:13|Synthesizing module LcdDemo
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v":177:1:177:6|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 13 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   0101
+   0110
+   0111
+   1000
+   1001
+   1010
+   1011
+   1100

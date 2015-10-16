@@ -1,0 +1,13 @@
+JDF B
+// Created by Version 1.4 
+PROJECT UntitledProject
+DESIGN mach64board_project Normal
+DEVKIT LC4064V-75T48I
+ENTRY ABEL/Schematic
+MODULE sertoparshiftregister.abl
+MODSTYLE SerToParShiftRegister Normal
+MODULE sertoparshiftregisterdemo.abl
+MODSTYLE SerToParShiftRegisterDemo Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE SerToParShiftRegisterDemo

@@ -1,0 +1,53 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+a = !( !dipSwitches_n_3_ & dipSwitches_n_2_ & !dipSwitches_n_1_
+       & !dipSwitches_n_0_
+    # dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_1_
+       & dipSwitches_n_0_
+    # !dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_1_
+       & !dipSwitches_n_0_
+    # dipSwitches_n_3_ & dipSwitches_n_2_ & dipSwitches_n_1_
+       & !dipSwitches_n_0_ ) ; (4 pterms, 4 signals)
+
+b = !( dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_1_
+       & !dipSwitches_n_0_
+    # !dipSwitches_n_3_ & !dipSwitches_n_1_ & !dipSwitches_n_0_
+    # !dipSwitches_n_2_ & !dipSwitches_n_1_ & dipSwitches_n_0_
+    # !dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_0_ ) ; (4 pterms, 4 signals)
+
+c = !( dipSwitches_n_3_ & dipSwitches_n_2_ & !dipSwitches_n_1_
+       & dipSwitches_n_0_
+    # !dipSwitches_n_3_ & !dipSwitches_n_2_ & !dipSwitches_n_1_
+    # !dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_0_ ) ; (3 pterms, 4 signals)
+
+d = !( !dipSwitches_n_3_ & dipSwitches_n_2_ & !dipSwitches_n_1_
+       & dipSwitches_n_0_
+    # dipSwitches_n_3_ & dipSwitches_n_2_ & dipSwitches_n_1_
+       & !dipSwitches_n_0_
+    # dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_1_
+       & dipSwitches_n_0_
+    # !dipSwitches_n_2_ & !dipSwitches_n_1_ & !dipSwitches_n_0_ ) ; (4 pterms, 4 signals)
+
+e = !( dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_1_
+    # dipSwitches_n_2_ & dipSwitches_n_1_ & !dipSwitches_n_0_
+    # dipSwitches_n_3_ & !dipSwitches_n_0_ ) ; (3 pterms, 4 signals)
+
+f = !( !dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_1_
+       & !dipSwitches_n_0_
+    # dipSwitches_n_3_ & dipSwitches_n_2_ & !dipSwitches_n_1_
+    # dipSwitches_n_3_ & !dipSwitches_n_1_ & !dipSwitches_n_0_
+    # dipSwitches_n_3_ & dipSwitches_n_2_ & !dipSwitches_n_0_ ) ; (4 pterms, 4 signals)
+
+g = !( dipSwitches_n_3_ & !dipSwitches_n_2_ & !dipSwitches_n_1_
+       & !dipSwitches_n_0_
+    # !dipSwitches_n_3_ & !dipSwitches_n_2_ & dipSwitches_n_1_
+       & dipSwitches_n_0_
+    # dipSwitches_n_3_ & dipSwitches_n_2_ & dipSwitches_n_1_ ) ; (3 pterms, 4 signals)
+

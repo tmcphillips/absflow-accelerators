@@ -1,0 +1,26 @@
+module AddressableLatchDemo
+
+declarations
+
+	AddressableLatch interface ([S2..S0],D,G,Clr -> [Q7..Q0]);
+	latch functional_block AddressableLatch;
+
+	!s0..!s2 pin 7..9;
+	!d	 pin 17;
+	!g	 pin 26;
+	!clr	 pin 20;
+	
+	q0..q7	 pin 31..34,38..40, 45;
+
+equations
+
+	latch.[S2..S0] 	= [s2..s0];	
+
+	latch.D		= d;
+	latch.G 	= g;
+	latch.Clr 	= clr;
+
+	[q7..q0] 	= latch.[Q7..Q0];
+
+end
+

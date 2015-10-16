@@ -1,0 +1,160 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Wed Feb 15 16:03:00 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION button_n_1_:C_*_21
+DATA LOCATION octaveSelect_n_1_:B_*_16
+DATA LOCATION oneMHzClock:*_*_43
+DATA LOCATION reset_n:B_*_14
+DATA LOCATION noiseOn_n:B_*_15
+DATA LOCATION button_n_2_:C_*_22
+DATA LOCATION button_n_3_:C_*_23
+DATA LOCATION button_n_4_:C_*_24
+DATA LOCATION octaveSelect_n_0_:B_*_17
+DATA LOCATION noteOutC:D_0_31
+DATA LOCATION noteOutD:D_2_32
+DATA LOCATION noteOutE:D_4_33
+DATA LOCATION noteOutF:D_6_34
+DATA LOCATION u0rc_u0tff_q:B_12
+DATA LOCATION u0rc_genblk1_0__uitff_q:B_7
+DATA LOCATION u1cs_outclock:C_9
+DATA LOCATION u2cs_outclock:D_10
+DATA LOCATION u3cs_outclock:A_10
+DATA LOCATION u4cs_outclock:B_13
+DATA LOCATION lfsr_0_:A_4
+DATA LOCATION lfsr_5_:C_3
+DATA LOCATION lfsr_4_:A_0
+DATA LOCATION lfsr_1_:C_4
+DATA LOCATION lfsr_2_:C_5
+DATA LOCATION lfsr_3_:A_1
+DATA LOCATION lfsr_6_:C_6
+DATA LOCATION lfsr_7_:A_5
+DATA LOCATION u4cs_count_0_:B_9
+DATA LOCATION u4cs_count_1_:B_10
+DATA LOCATION u4cs_count_2_:B_0
+DATA LOCATION u4cs_count_3_:B_1
+DATA LOCATION u4cs_count_4_:B_8
+DATA LOCATION u4cs_count_5_:B_11
+DATA LOCATION u4cs_count_6_:B_3
+DATA LOCATION u4cs_count_7_:B_4
+DATA LOCATION u4cs_count_8_:B_2
+DATA LOCATION u3cs_count_0_:A_11
+DATA LOCATION u3cs_count_1_:A_6
+DATA LOCATION u3cs_count_2_:B_5
+DATA LOCATION u3cs_count_3_:A_2
+DATA LOCATION u3cs_count_4_:A_8
+DATA LOCATION u3cs_count_5_:A_3
+DATA LOCATION u3cs_count_6_:A_9
+DATA LOCATION u3cs_count_7_:A_12
+DATA LOCATION u3cs_count_8_:A_7
+DATA LOCATION u2cs_count_0_:D_11
+DATA LOCATION u2cs_count_1_:D_12
+DATA LOCATION u2cs_count_2_:D_5
+DATA LOCATION u2cs_count_3_:D_3
+DATA LOCATION u2cs_count_4_:D_8
+DATA LOCATION u2cs_count_5_:D_13
+DATA LOCATION u2cs_count_6_:D_7
+DATA LOCATION u2cs_count_7_:D_1
+DATA LOCATION u2cs_count_8_:D_9
+DATA LOCATION u1cs_count_0_:C_10
+DATA LOCATION u1cs_count_1_:C_11
+DATA LOCATION u1cs_count_2_:C_1
+DATA LOCATION u1cs_count_3_:C_7
+DATA LOCATION u1cs_count_4_:C_8
+DATA LOCATION u1cs_count_5_:C_12
+DATA LOCATION u1cs_count_6_:C_2
+DATA LOCATION u1cs_count_7_:C_0
+DATA LOCATION u1cs_count_8_:C_13
+DATA LOCATION u4cs_n_20_n:B_14
+DATA LOCATION u1cs_n_17_n:C_15
+DATA LOCATION u2cs_n_17_n:D_14
+DATA LOCATION u2cs_count26_n:D_15
+DATA LOCATION u3cs_n_11_n:A_13
+DATA LOCATION u3cs_n_23_n:A_14
+DATA LOCATION u3cs_count40_n:A_15
+DATA LOCATION N_5_i:B_6
+DATA LOCATION u1cs_count12_7_n:C_14
+
+// Signals direction
+DATA IO_DIR button_n_1_:IN
+DATA IO_DIR octaveSelect_n_1_:IN
+DATA IO_DIR oneMHzClock:IN
+DATA IO_DIR reset_n:IN
+DATA IO_DIR noiseOn_n:IN
+DATA IO_DIR button_n_2_:IN
+DATA IO_DIR button_n_3_:IN
+DATA IO_DIR button_n_4_:IN
+DATA IO_DIR octaveSelect_n_0_:IN
+DATA IO_DIR noteOutC:OUT
+DATA IO_DIR noteOutD:OUT
+DATA IO_DIR noteOutE:OUT
+DATA IO_DIR noteOutF:OUT
+
+// Global Clocks
+DATA GLB_CLOCK oneMHzClock:0
+
+// Signals using Shared Clock or CE
+DATA tBCLK u1cs_outclock.C
+DATA tBCLK u2cs_outclock.C
+DATA tBCLK u3cs_outclock.C
+DATA tBCLK u4cs_outclock.C
+DATA tBCLK u4cs_count_0_.C
+DATA tBCLK u4cs_count_1_.C
+DATA tBCLK u4cs_count_2_.C
+DATA tBCLK u4cs_count_3_.C
+DATA tBCLK u4cs_count_4_.C
+DATA tBCLK u4cs_count_5_.C
+DATA tBCLK u4cs_count_6_.C
+DATA tBCLK u4cs_count_7_.C
+DATA tBCLK u4cs_count_8_.C
+DATA tBCLK u3cs_count_0_.C
+DATA tBCLK u3cs_count_1_.C
+DATA tBCLK u3cs_count_2_.C
+DATA tBCLK u3cs_count_3_.C
+DATA tBCLK u3cs_count_4_.C
+DATA tBCLK u3cs_count_5_.C
+DATA tBCLK u3cs_count_6_.C
+DATA tBCLK u3cs_count_7_.C
+DATA tBCLK u3cs_count_8_.C
+DATA tBCLK u2cs_count_0_.C
+DATA tBCLK u2cs_count_1_.C
+DATA tBCLK u2cs_count_2_.C
+DATA tBCLK u2cs_count_3_.C
+DATA tBCLK u2cs_count_4_.C
+DATA tBCLK u2cs_count_5_.C
+DATA tBCLK u2cs_count_6_.C
+DATA tBCLK u2cs_count_7_.C
+DATA tBCLK u2cs_count_8_.C
+DATA tBCLK u1cs_count_0_.C
+DATA tBCLK u1cs_count_1_.C
+DATA tBCLK u1cs_count_2_.C
+DATA tBCLK u1cs_count_3_.C
+DATA tBCLK u1cs_count_4_.C
+DATA tBCLK u1cs_count_5_.C
+DATA tBCLK u1cs_count_6_.C
+DATA tBCLK u1cs_count_7_.C
+DATA tBCLK u1cs_count_8_.C
+
+// Block Load Adders
+DATA tBLA N_5_i:3
+DATA tBLA u1cs_outclock:2
+DATA tBLA u3cs_count_2_:1
+DATA tBLA u3cs_count_1_:1
+DATA tBLA u3cs_count_0_:1
+DATA tBLA lfsr_0_:1
+DATA tBLA u3cs_outclock:1
+DATA tBLA reset_n:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM noteOutC
+DATA tOSM noteOutD
+DATA tOSM noteOutE
+DATA tOSM noteOutF

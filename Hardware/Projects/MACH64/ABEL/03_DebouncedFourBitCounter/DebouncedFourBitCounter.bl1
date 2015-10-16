@@ -1,0 +1,74 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Jan 18 09:43:55 2012
+#$ TITLE Four bit counter with debounced step
+#$ MODULE debouncedfourbitcounter
+#$ JEDECFILE debouncedfourbitcounter
+#$ PINS 8 oneMHzClock:19 stepButton:18 reset:20 stepDirectionUp:21 q0:14 q1:15 \
+#  q2:16 q3:17
+#$ NODES 5 debouncedStep>rawSignal'co'  debouncedStep>samplingClock'co'  \
+#  debouncedStep>debounced'co'  oneKHzClock>inclock'co'  oneKHzClock>outclock'co' 
+#$ INTERFACE debouncer  3 rawSignal'i'  samplingClock'i'  debounced'o' 
+#$ INTERFACE tenbitscaler  2 inclock'i'  outclock'o' 
+#$ INSTANCE debouncedStep debouncer 3 debouncedStep>rawSignal \
+#  debouncedStep>samplingClock debouncedStep>debounced
+#$ INSTANCE oneKHzClock tenbitscaler 2 oneKHzClock>inclock oneKHzClock>outclock
+.model debouncedfourbitcounter
+.inputs oneMHzClock.BLIF oneKHzClock>outclock.BLIF stepButton.BLIF \
+debouncedStep>debounced.BLIF reset.BLIF q3.BLIF q2.BLIF q1.BLIF q0.BLIF \
+stepDirectionUp.BLIF
+.outputs debouncedStep>rawSignal debouncedStep>samplingClock \
+oneKHzClock>inclock q3.C q2.C q1.C q0.C q3.AR q2.AR q1.AR q0.AR q3.REG q2.REG \
+q1.REG q0.REG
+.names stepButton.BLIF debouncedStep>rawSignal
+0 1
+.names reset.BLIF q3.AR
+0 1
+.names reset.BLIF q2.AR
+0 1
+.names reset.BLIF q1.AR
+0 1
+.names reset.BLIF q0.AR
+0 1
+.names q3.BLIF q2.BLIF q1.BLIF q0.BLIF stepDirectionUp.BLIF q3.REG
+11--1 1
+1-1-1 1
+1--11 1
+10--0 1
+1-0-0 1
+1--00 1
+00001 1
+01110 1
+.names q2.BLIF q1.BLIF q0.BLIF stepDirectionUp.BLIF q2.REG
+11-1 1
+1-11 1
+10-0 1
+1-00 1
+0001 1
+0110 1
+.names q1.BLIF q0.BLIF stepDirectionUp.BLIF q1.REG
+111 1
+001 1
+010 1
+100 1
+.names q0.BLIF stepDirectionUp.BLIF q0.REG
+01 1
+00 1
+.names oneKHzClock>outclock.BLIF debouncedStep>samplingClock
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock>inclock
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q3.C
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q2.C
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q1.C
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q0.C
+1 1
+0 0
+.end

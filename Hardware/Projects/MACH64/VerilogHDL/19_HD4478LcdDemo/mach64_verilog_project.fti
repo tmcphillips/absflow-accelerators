@@ -1,0 +1,194 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Wed Feb 08 16:19:01 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION reset_n:C_*_20
+DATA LOCATION start_n:C_*_21
+DATA LOCATION clock:*_*_43
+DATA LOCATION data_5_:D_0_39
+DATA LOCATION data_4_:D_8_38
+DATA LOCATION data_7_:A_2_45
+DATA LOCATION e:C_0_28
+DATA LOCATION rw:C_2_27
+DATA LOCATION rs:C_1_26
+DATA LOCATION wack:A_4_46
+DATA LOCATION wreq:A_6_47
+DATA LOCATION data_6_:D_1_40
+DATA LOCATION data_3_:D_6_34
+DATA LOCATION data_2_:D_4_33
+DATA LOCATION data_1_:D_3_32
+DATA LOCATION data_0_:D_2_31
+DATA LOCATION inst_register:B_0
+DATA LOCATION writeValue_0_:A_1
+DATA LOCATION writeValue_1_:A_3
+DATA LOCATION writeValue_2_:A_5
+DATA LOCATION writeValue_3_:A_7
+DATA LOCATION writeValue_4_:A_8
+DATA LOCATION writeValue_6_:B_1
+DATA LOCATION state_14_:B_2
+DATA LOCATION state_0_:B_9
+DATA LOCATION state_1_:A_9
+DATA LOCATION state_2_:A_13
+DATA LOCATION state_3_:B_3
+DATA LOCATION state_4_:B_10
+DATA LOCATION state_5_:B_4
+DATA LOCATION state_6_:B_11
+DATA LOCATION state_7_:B_5
+DATA LOCATION state_8_:B_12
+DATA LOCATION state_9_:B_6
+DATA LOCATION state_10_:B_13
+DATA LOCATION state_11_:B_7
+DATA LOCATION state_12_:B_14
+DATA LOCATION state_13_:B_8
+DATA LOCATION II_0_state_0_:A_10
+DATA LOCATION II_0_state_4_:C_7
+DATA LOCATION II_0_state_1_:A_14
+DATA LOCATION II_0_outData_cl_7_0_reg:C_4
+DATA LOCATION II_0_outData_cl_6_0_reg:C_5
+DATA LOCATION II_0_outData_cl_5_0_reg:D_9
+DATA LOCATION II_0_outData_cl_4_0_reg:D_10
+DATA LOCATION II_0_outData_cl_3_0_reg:D_11
+DATA LOCATION II_0_outData_cl_2_0_reg:D_12
+DATA LOCATION II_0_outData_cl_1_0_reg:D_13
+DATA LOCATION II_0_outData_cl_0_:D_14
+DATA LOCATION II_0_state_9_:C_8
+DATA LOCATION II_0_state_2_:D_5
+DATA LOCATION II_0_state_3_:A_15
+DATA LOCATION II_0_state_7_:C_6
+DATA LOCATION II_0_state_10_:C_9
+DATA LOCATION II_0_busyFlag:C_3
+DATA LOCATION II_0_state_5_:C_10
+DATA LOCATION II_0_state_6_:C_11
+DATA LOCATION II_0_state_8_:C_12
+DATA LOCATION II_0_state_11_:C_13
+DATA LOCATION II_0_state_12_:C_14
+DATA LOCATION II_0_state_13_:D_7
+DATA LOCATION un1_state40_i:A_0
+DATA LOCATION wreq_0:A_11
+DATA LOCATION inst_register_0:A_12
+
+// Signals direction
+DATA IO_DIR reset_n:IN
+DATA IO_DIR start_n:IN
+DATA IO_DIR clock:IN
+DATA IO_DIR data_5_:TRI
+DATA IO_DIR data_4_:TRI
+DATA IO_DIR data_7_:BI
+DATA IO_DIR e:OUT
+DATA IO_DIR rw:OUT
+DATA IO_DIR rs:OUT
+DATA IO_DIR wack:OUT
+DATA IO_DIR wreq:OUT
+DATA IO_DIR data_6_:TRI
+DATA IO_DIR data_3_:TRI
+DATA IO_DIR data_2_:TRI
+DATA IO_DIR data_1_:TRI
+DATA IO_DIR data_0_:TRI
+
+// Global Clocks
+DATA GLB_CLOCK clock:0
+
+// Signals using Shared Clock or CE
+DATA tBCLK data_5_.CE
+DATA tBCLK e.CE
+DATA tBCLK rw.CE
+DATA tBCLK rs.CE
+DATA tBCLK data_6_.CE
+DATA tBCLK data_3_.CE
+DATA tBCLK data_2_.CE
+DATA tBCLK data_1_.CE
+DATA tBCLK data_0_.CE
+DATA tBCLK writeValue_0_.CE
+DATA tBCLK writeValue_1_.CE
+DATA tBCLK writeValue_2_.CE
+DATA tBCLK writeValue_3_.CE
+DATA tBCLK writeValue_4_.CE
+DATA tBCLK writeValue_6_.CE
+DATA tBCLK II_0_outData_cl_7_0_reg.CE
+DATA tBCLK II_0_outData_cl_6_0_reg.CE
+DATA tBCLK II_0_outData_cl_5_0_reg.CE
+DATA tBCLK II_0_outData_cl_4_0_reg.CE
+DATA tBCLK II_0_outData_cl_3_0_reg.CE
+DATA tBCLK II_0_outData_cl_2_0_reg.CE
+DATA tBCLK II_0_outData_cl_1_0_reg.CE
+DATA tBCLK II_0_outData_cl_0_.CE
+
+// Signals using Shared Init Pterm
+DATA tBSR wreq.AR
+DATA tBSR inst_register.AR
+DATA tBSR state_14_.AR
+DATA tBSR state_0_.PR
+DATA tBSR state_1_.AR
+DATA tBSR state_2_.AR
+DATA tBSR state_3_.AR
+DATA tBSR state_4_.AR
+DATA tBSR state_5_.AR
+DATA tBSR state_6_.AR
+DATA tBSR state_7_.AR
+DATA tBSR state_8_.AR
+DATA tBSR state_9_.AR
+DATA tBSR state_10_.AR
+DATA tBSR state_11_.AR
+DATA tBSR state_12_.AR
+DATA tBSR state_13_.AR
+DATA tBSR II_0_state_0_.PR
+DATA tBSR II_0_state_4_.AR
+DATA tBSR II_0_state_1_.AR
+DATA tBSR II_0_state_9_.AR
+DATA tBSR II_0_state_3_.AR
+DATA tBSR II_0_state_7_.AR
+DATA tBSR II_0_state_10_.AR
+DATA tBSR II_0_state_5_.AR
+DATA tBSR II_0_state_6_.AR
+DATA tBSR II_0_state_8_.AR
+DATA tBSR II_0_state_11_.AR
+DATA tBSR II_0_state_12_.AR
+
+// Signals using global PT OEs
+DATA tGPTOE data_3_
+DATA tGPTOE data_2_
+DATA tGPTOE data_1_
+DATA tGPTOE data_0_
+
+// Block Load Adders
+DATA tBLA reset_n:3
+DATA tBLA II_0_state_1_:2
+DATA tBLA II_0_state_0_:2
+DATA tBLA un1_state40_i:1
+DATA tBLA II_0_outData_cl_0_:1
+DATA tBLA II_0_outData_cl_5_0_reg:1
+DATA tBLA II_0_outData_cl_6_0_reg:1
+DATA tBLA II_0_state_4_:1
+DATA tBLA state_12_:1
+DATA tBLA state_10_:1
+DATA tBLA state_8_:1
+DATA tBLA state_6_:1
+DATA tBLA state_4_:1
+DATA tBLA state_2_:1
+DATA tBLA state_1_:1
+DATA tBLA state_14_:1
+DATA tBLA wack:1
+DATA tBLA start_n:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM data_5_
+DATA tOSM data_4_
+DATA tOSM data_7_
+DATA tOSM e
+DATA tOSM rw
+DATA tOSM rs
+DATA tOSM wack
+DATA tOSM wreq
+DATA tOSM data_6_
+DATA tOSM data_3_
+DATA tOSM data_2_
+DATA tOSM data_1_
+DATA tOSM data_0_

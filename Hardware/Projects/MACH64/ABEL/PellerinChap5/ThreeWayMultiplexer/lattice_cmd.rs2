@@ -1,0 +1,1 @@
+-nodal -src mach64board_project.bl5 -type BLIF -presrc mach64board_project.bl3 -crf mach64board_project.crf -sif mach64board_project.sif -devfile "C:/ispLEVER_Classic1_4/ispcpld/dat/lc4k/m4s_64_32.dev" -lci mach64board_project.lct

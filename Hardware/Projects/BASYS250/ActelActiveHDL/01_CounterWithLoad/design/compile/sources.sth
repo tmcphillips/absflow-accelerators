@@ -1,0 +1,9 @@
+[Files List]
+C:\Program Files\Aldec\Active-HDL 7.2SE\Vlib\Std/src/standard.vhd=S
+C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design/src/tflipflop.v=S
+C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design/src/fourbitcounterwithload.v=S
+C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design/src/ripplecounter.v=S
+C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design/src/updowncounter.v=S
+C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design/src/buttonpressdetector.v=S
+C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design/src/ripplescaler.v=S
+C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design/src/testbench.v=S

@@ -1,0 +1,16 @@
+reset_n  i
+start_n  i
+data[7]  b
+data[6]  b
+data[5]  b
+data[4]  b
+data[3]  b
+data[2]  b
+data[1]  b
+data[0]  b
+e  o
+rw  o
+rs  o
+wack  o
+wreq  o
+clock  i

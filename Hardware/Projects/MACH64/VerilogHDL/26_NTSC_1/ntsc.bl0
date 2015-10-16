@@ -1,0 +1,1292 @@
+#$ DATE Sat Feb 18 19:15:06 2012
+#$ TOOL EDIF2BLIF version IspLever 1.0 
+#$ MODULE ntsc
+#$ PINS 13 video_3_:34'ke'  state_3_:23'ke'  ntscClock:43'ke'  left_n:14'ke'  right_n:15'ke'  up_n:16'ke'  down_n:17'ke'  video_2_:33'ke'  video_1_:32'ke'  video_0_:31'ke'  state_2_:22'ke'  state_1_:21'ke'  state_0_:20'ke' 
+#$ NODES 470 down_n_c gnd_n_n video_1_1reg video_1_2reg video_1_3reg x_0_ stateDFF_0reg G_108 xpos_0_ stateDFF_1reg \
+#  xpos_1_ xpos_2_ stateDFF_2reg xpos_3_ xpos_4_ stateDFF_3reg G_145 ypos_0_ ypos_i_1__n ypos_1_ \
+#  N_117_0 ypos_2_ ypos_i_2__n ypos_3_ N_119_0 ypos_4_ N_122_i G_174 N_128_i G_176 \
+#  N_129_0 G_178 N_28_8_i G_180 y_4_i_4__n x_1_ N_28_4_i x_2_ y_4_i_2__n x_3_ \
+#  N_28_3_i x_4_ y_4_i_1__n x_5_ N_28_2_i x_6_ N_52_i x_7_ N_51_i y_0_ \
+#  N_58_i y_1_ y_2_ state_19_0_1__n y_3_ N_62_i y_4_ N_45_i y_5_ N_44_i \
+#  y_6_ N_43_i y_7_ N_42_i y_8_ N_39_i x_3_5__n x_3_6__n N_60_i x_3_7__n \
+#  N_49_i y_4_0_ N_41_i y_4_1__n N_37_i y_4_2__n N_40_i y_4_3__n N_38_i y_4_4__n \
+#  N_36_i y_4_5__n N_46_i y_4_6__n N_50_i y_4_7__n N_47_i y_4_8__n N_48_i video_0_sqmuxa \
+#  N_38_1_i video25_i G_87 video19_i G_88 video29_i G_89 N_29_0 N_78 state40_i \
+#  N_80 N_26_i N_81 N_25_i N_82 N_24_i N_83 N_55_i N_84 N_56_i \
+#  N_85 N_23_i N_86 N_53_i N_87 N_54_i N_88 N_22_0 N_89 N_21_i \
+#  N_90 N_92 video25_1_i N_105 N_106 xpos_i_0__n N_107 N_78_0 N_108 xpos_i_1__n \
+#  N_114 N_80_0 N_115 xpos_i_2__n N_117 N_82_0 N_118 N_85_i N_119 N_91_i \
+#  N_120 N_92_0 N_121 ypos_i_0__n N_122 N_115_0 N_123 N_142_i N_125 N_143_i \
+#  N_126 N_144_i N_127 N_145_0 N_129 N_114_i N_142 N_125_i N_143 N_126_i \
+#  N_144 N_127_0 N_145 N_118_i N_154 N_120_i N_157 N_121_i N_160 N_123_0 \
+#  G_129 N_105_i G_124 N_106_i G_116 N_107_i G_113 N_108_0 G_166 N_87_i \
+#  G_161 N_88_i G_153 N_89_i G_150 N_90_0 N_81_i N_83_i state23_6 N_84_i \
+#  state8_2 N_86_0 x12_2 un1_video19_i_1 state3 un1_video19_i_2 G_182 un1_video19_i_3 state8 N_15_i_1 \
+#  x12 N_15_i_2 G_186 N_15_i_3 G_184 N_15_i_4 N_169 N_20_i_1 N_166 N_20_i_2 \
+#  N_163 N_20_i_3 N_91 state23_6_1 video21 state3_1 N_250 state3_2 video25_1 state3_3 \
+#  N_39 state3_4 N_22 state3_5 N_44 state8_1 N_21 state8_2_0 N_45 state8_3 \
+#  N_60 state8_4 N_48 state8_5 video29_1 x12_1 N_61 x12_2_0 N_52 x12_3 \
+#  N_62 x12_4 N_56 x12_5 N_26 video21_1 N_53 N_59_1 N_54 N_36_1 \
+#  N_55 N_18_i_1 N_24 N_18_i_2 state40 N_18_i_3 N_29 N_18_i_4 state80 N_18_i_5 \
+#  video29 state_19_0_1_1__n video19 state_19_0_2_1__n video25 state_19_0_3_1__n N_38_1 state_19_0_4_1__n N_43 state_19_0_5_1__n \
+#  N_47 N_49_1 N_46 N_50_1 N_50 N_53_1 N_36 N_53_2 N_38 N_54_1 \
+#  N_37 N_55_1 N_40 N_37_1 N_41 N_40_1 N_59 N_40_2 N_36_2 N_41_1 \
+#  N_49 N_43_1 N_42 N_46_1 state19 N_47_1 state13 video25_1_0 N_51 state13_1 \
+#  N_58 state13_2 G_90 state13_3 G_91 state13_4 G_93 N_51_1 G_95 N_51_2 \
+#  G_94 N_250_1 G_96 N_250_2 y_3_8__n N_250_3 G_202 N_250_4 y11_5 N_250_5 \
+#  N_28_8 N_250_6 state40_4 N_250_7 y11 N_28_8_i_1 G_212 N_28_8_i_2 G_204 N_28_8_i_3 \
+#  G_210 state80_1 G_206 state80_2 G_208 state19_1 y_3_2__n state19_2 y_3_1__n state19_3 \
+#  G_200 state19_4 G_198 state19_5 N_197 state40_1 N_194 state40_2 N_191 state40_3 \
+#  N_188 state40_4_0 N_185 state40_5 N_182 state40_6 N_179 y11_1 N_128 y11_2 \
+#  up_n_i y11_3 y11_i y11_4 y_1_i_3__n y11_5_1 y_1_i_6__n y11_5_2 y_1_i_7__n G_145_1 \
+#  y_1_i_5__n G_150_1 y_1_i_4__n G_153_1 y_i_1__n G_161_1 y_i_0_8__n G_166_1 y_i_0_2__n G_87_1 \
+#  y_4_i_0__n G_88_1 y_3_i_0_8__n G_89_1 y_4_i_3__n G_108_1 y_4_i_8__n G_113_1 state23_6_i G_116_1 \
+#  N_72_i G_124_1 N_70_i G_129_1 N_71_i N_145_0_1 N_69_i N_127_0_1 N_67_i N_123_0_1 \
+#  N_66_i N_123_0_2 N_65_i N_121_1 N_63_i N_120_1 N_64_i N_120_2 state_i_2__n N_108_0_1 \
+#  state_i_3__n N_90_0_1 state13_i N_86_0_1 state_i_1__n N_86_0_2 state_i_0__n N_84_1 state3_i N_83_1 \
+#  state8_i N_83_2 state19_i y_4_8__un3_n N_61_i y_4_8__un1_n N_59_i y_4_8__un0_n N_250_i_0 y_4_7__un3_n \
+#  right_n_i y_4_7__un1_n left_n_i y_4_7__un0_n down_n_i y_4_6__un3_n x12_i y_4_6__un1_n x_3_i_5__n y_4_6__un0_n \
+#  x_2_i_3__n y_4_5__un3_n x_i_0__n y_4_5__un1_n x_i_1__n y_4_5__un0_n x_i_0_3__n y_4_4__un3_n x_2_i_4__n y_4_4__un1_n \
+#  x_2_i_0_5__n y_4_4__un0_n x_2_i_2__n y_4_3__un3_n x_2_i_1__n y_4_3__un1_n x_3_i_6__n y_4_3__un0_n x_3_i_7__n y_4_2__un3_n \
+#  y_4_2__un1_n y_4_2__un0_n y_4_1__un3_n y_4_1__un1_n video_0_sqmuxa_i y_4_1__un0_n ntscClock_c left_n_c right_n_c up_n_c \
+#  
+.model ntsc
+.inputs ntscClock.BLIF left_n.BLIF right_n.BLIF up_n.BLIF down_n.BLIF down_n_c.BLIF gnd_n_n.BLIF video_1_1reg.BLIF video_1_2reg.BLIF \
+  video_1_3reg.BLIF x_0_.BLIF stateDFF_0reg.BLIF G_108.BLIF xpos_0_.BLIF stateDFF_1reg.BLIF xpos_1_.BLIF xpos_2_.BLIF stateDFF_2reg.BLIF \
+  xpos_3_.BLIF xpos_4_.BLIF stateDFF_3reg.BLIF G_145.BLIF ypos_0_.BLIF ypos_i_1__n.BLIF ypos_1_.BLIF N_117_0.BLIF ypos_2_.BLIF \
+  ypos_i_2__n.BLIF ypos_3_.BLIF N_119_0.BLIF ypos_4_.BLIF N_122_i.BLIF G_174.BLIF N_128_i.BLIF G_176.BLIF N_129_0.BLIF \
+  G_178.BLIF N_28_8_i.BLIF G_180.BLIF y_4_i_4__n.BLIF x_1_.BLIF N_28_4_i.BLIF x_2_.BLIF y_4_i_2__n.BLIF x_3_.BLIF \
+  N_28_3_i.BLIF x_4_.BLIF y_4_i_1__n.BLIF x_5_.BLIF N_28_2_i.BLIF x_6_.BLIF N_52_i.BLIF x_7_.BLIF N_51_i.BLIF \
+  y_0_.BLIF N_58_i.BLIF y_1_.BLIF y_2_.BLIF state_19_0_1__n.BLIF y_3_.BLIF N_62_i.BLIF y_4_.BLIF N_45_i.BLIF \
+  y_5_.BLIF N_44_i.BLIF y_6_.BLIF N_43_i.BLIF y_7_.BLIF N_42_i.BLIF y_8_.BLIF N_39_i.BLIF x_3_5__n.BLIF \
+  x_3_6__n.BLIF N_60_i.BLIF x_3_7__n.BLIF N_49_i.BLIF y_4_0_.BLIF N_41_i.BLIF y_4_1__n.BLIF N_37_i.BLIF y_4_2__n.BLIF \
+  N_40_i.BLIF y_4_3__n.BLIF N_38_i.BLIF y_4_4__n.BLIF N_36_i.BLIF y_4_5__n.BLIF N_46_i.BLIF y_4_6__n.BLIF N_50_i.BLIF \
+  y_4_7__n.BLIF N_47_i.BLIF y_4_8__n.BLIF N_48_i.BLIF video_0_sqmuxa.BLIF N_38_1_i.BLIF video25_i.BLIF G_87.BLIF video19_i.BLIF \
+  G_88.BLIF video29_i.BLIF G_89.BLIF N_29_0.BLIF N_78.BLIF state40_i.BLIF N_80.BLIF N_26_i.BLIF N_81.BLIF \
+  N_25_i.BLIF N_82.BLIF N_24_i.BLIF N_83.BLIF N_55_i.BLIF N_84.BLIF N_56_i.BLIF N_85.BLIF N_23_i.BLIF \
+  N_86.BLIF N_53_i.BLIF N_87.BLIF N_54_i.BLIF N_88.BLIF N_22_0.BLIF N_89.BLIF N_21_i.BLIF N_90.BLIF \
+  N_92.BLIF video25_1_i.BLIF N_105.BLIF N_106.BLIF xpos_i_0__n.BLIF N_107.BLIF N_78_0.BLIF N_108.BLIF xpos_i_1__n.BLIF \
+  N_114.BLIF N_80_0.BLIF N_115.BLIF xpos_i_2__n.BLIF N_117.BLIF N_82_0.BLIF N_118.BLIF N_85_i.BLIF N_119.BLIF \
+  N_91_i.BLIF N_120.BLIF N_92_0.BLIF N_121.BLIF ypos_i_0__n.BLIF N_122.BLIF N_115_0.BLIF N_123.BLIF N_142_i.BLIF \
+  N_125.BLIF N_143_i.BLIF N_126.BLIF N_144_i.BLIF N_127.BLIF N_145_0.BLIF N_129.BLIF N_114_i.BLIF N_142.BLIF \
+  N_125_i.BLIF N_143.BLIF N_126_i.BLIF N_144.BLIF N_127_0.BLIF N_145.BLIF N_118_i.BLIF N_154.BLIF N_120_i.BLIF \
+  N_157.BLIF N_121_i.BLIF N_160.BLIF N_123_0.BLIF G_129.BLIF N_105_i.BLIF G_124.BLIF N_106_i.BLIF G_116.BLIF \
+  N_107_i.BLIF G_113.BLIF N_108_0.BLIF G_166.BLIF N_87_i.BLIF G_161.BLIF N_88_i.BLIF G_153.BLIF N_89_i.BLIF \
+  G_150.BLIF N_90_0.BLIF N_81_i.BLIF N_83_i.BLIF state23_6.BLIF N_84_i.BLIF state8_2.BLIF N_86_0.BLIF x12_2.BLIF \
+  un1_video19_i_1.BLIF state3.BLIF un1_video19_i_2.BLIF G_182.BLIF un1_video19_i_3.BLIF state8.BLIF N_15_i_1.BLIF x12.BLIF N_15_i_2.BLIF \
+  G_186.BLIF N_15_i_3.BLIF G_184.BLIF N_15_i_4.BLIF N_169.BLIF N_20_i_1.BLIF N_166.BLIF N_20_i_2.BLIF N_163.BLIF \
+  N_20_i_3.BLIF N_91.BLIF state23_6_1.BLIF video21.BLIF state3_1.BLIF N_250.BLIF state3_2.BLIF video25_1.BLIF state3_3.BLIF \
+  N_39.BLIF state3_4.BLIF N_22.BLIF state3_5.BLIF N_44.BLIF state8_1.BLIF N_21.BLIF state8_2_0.BLIF N_45.BLIF \
+  state8_3.BLIF N_60.BLIF state8_4.BLIF N_48.BLIF state8_5.BLIF video29_1.BLIF x12_1.BLIF N_61.BLIF x12_2_0.BLIF \
+  N_52.BLIF x12_3.BLIF N_62.BLIF x12_4.BLIF N_56.BLIF x12_5.BLIF N_26.BLIF video21_1.BLIF N_53.BLIF \
+  N_59_1.BLIF N_54.BLIF N_36_1.BLIF N_55.BLIF N_18_i_1.BLIF N_24.BLIF N_18_i_2.BLIF state40.BLIF N_18_i_3.BLIF \
+  N_29.BLIF N_18_i_4.BLIF state80.BLIF N_18_i_5.BLIF video29.BLIF state_19_0_1_1__n.BLIF video19.BLIF state_19_0_2_1__n.BLIF video25.BLIF \
+  state_19_0_3_1__n.BLIF N_38_1.BLIF state_19_0_4_1__n.BLIF N_43.BLIF state_19_0_5_1__n.BLIF N_47.BLIF N_49_1.BLIF N_46.BLIF N_50_1.BLIF \
+  N_50.BLIF N_53_1.BLIF N_36.BLIF N_53_2.BLIF N_38.BLIF N_54_1.BLIF N_37.BLIF N_55_1.BLIF N_40.BLIF \
+  N_37_1.BLIF N_41.BLIF N_40_1.BLIF N_59.BLIF N_40_2.BLIF N_36_2.BLIF N_41_1.BLIF N_49.BLIF N_43_1.BLIF \
+  N_42.BLIF N_46_1.BLIF state19.BLIF N_47_1.BLIF state13.BLIF video25_1_0.BLIF N_51.BLIF state13_1.BLIF N_58.BLIF \
+  state13_2.BLIF G_90.BLIF state13_3.BLIF G_91.BLIF state13_4.BLIF G_93.BLIF N_51_1.BLIF G_95.BLIF N_51_2.BLIF \
+  G_94.BLIF N_250_1.BLIF G_96.BLIF N_250_2.BLIF y_3_8__n.BLIF N_250_3.BLIF G_202.BLIF N_250_4.BLIF y11_5.BLIF \
+  N_250_5.BLIF N_28_8.BLIF N_250_6.BLIF state40_4.BLIF N_250_7.BLIF y11.BLIF N_28_8_i_1.BLIF G_212.BLIF N_28_8_i_2.BLIF \
+  G_204.BLIF N_28_8_i_3.BLIF G_210.BLIF state80_1.BLIF G_206.BLIF state80_2.BLIF G_208.BLIF state19_1.BLIF y_3_2__n.BLIF \
+  state19_2.BLIF y_3_1__n.BLIF state19_3.BLIF G_200.BLIF state19_4.BLIF G_198.BLIF state19_5.BLIF N_197.BLIF state40_1.BLIF \
+  N_194.BLIF state40_2.BLIF N_191.BLIF state40_3.BLIF N_188.BLIF state40_4_0.BLIF N_185.BLIF state40_5.BLIF N_182.BLIF \
+  state40_6.BLIF N_179.BLIF y11_1.BLIF N_128.BLIF y11_2.BLIF up_n_i.BLIF y11_3.BLIF y11_i.BLIF y11_4.BLIF \
+  y_1_i_3__n.BLIF y11_5_1.BLIF y_1_i_6__n.BLIF y11_5_2.BLIF y_1_i_7__n.BLIF G_145_1.BLIF y_1_i_5__n.BLIF G_150_1.BLIF y_1_i_4__n.BLIF \
+  G_153_1.BLIF y_i_1__n.BLIF G_161_1.BLIF y_i_0_8__n.BLIF G_166_1.BLIF y_i_0_2__n.BLIF G_87_1.BLIF y_4_i_0__n.BLIF G_88_1.BLIF \
+  y_3_i_0_8__n.BLIF G_89_1.BLIF y_4_i_3__n.BLIF G_108_1.BLIF y_4_i_8__n.BLIF G_113_1.BLIF state23_6_i.BLIF G_116_1.BLIF N_72_i.BLIF \
+  G_124_1.BLIF N_70_i.BLIF G_129_1.BLIF N_71_i.BLIF N_145_0_1.BLIF N_69_i.BLIF N_127_0_1.BLIF N_67_i.BLIF N_123_0_1.BLIF \
+  N_66_i.BLIF N_123_0_2.BLIF N_65_i.BLIF N_121_1.BLIF N_63_i.BLIF N_120_1.BLIF N_64_i.BLIF N_120_2.BLIF state_i_2__n.BLIF \
+  N_108_0_1.BLIF state_i_3__n.BLIF N_90_0_1.BLIF state13_i.BLIF N_86_0_1.BLIF state_i_1__n.BLIF N_86_0_2.BLIF state_i_0__n.BLIF N_84_1.BLIF \
+  state3_i.BLIF N_83_1.BLIF state8_i.BLIF N_83_2.BLIF state19_i.BLIF y_4_8__un3_n.BLIF N_61_i.BLIF y_4_8__un1_n.BLIF N_59_i.BLIF \
+  y_4_8__un0_n.BLIF N_250_i_0.BLIF y_4_7__un3_n.BLIF right_n_i.BLIF y_4_7__un1_n.BLIF left_n_i.BLIF y_4_7__un0_n.BLIF down_n_i.BLIF y_4_6__un3_n.BLIF \
+  x12_i.BLIF y_4_6__un1_n.BLIF x_3_i_5__n.BLIF y_4_6__un0_n.BLIF x_2_i_3__n.BLIF y_4_5__un3_n.BLIF x_i_0__n.BLIF y_4_5__un1_n.BLIF x_i_1__n.BLIF \
+  y_4_5__un0_n.BLIF x_i_0_3__n.BLIF y_4_4__un3_n.BLIF x_2_i_4__n.BLIF y_4_4__un1_n.BLIF x_2_i_0_5__n.BLIF y_4_4__un0_n.BLIF x_2_i_2__n.BLIF y_4_3__un3_n.BLIF \
+  x_2_i_1__n.BLIF y_4_3__un1_n.BLIF x_3_i_6__n.BLIF y_4_3__un0_n.BLIF x_3_i_7__n.BLIF y_4_2__un3_n.BLIF y_4_2__un1_n.BLIF y_4_2__un0_n.BLIF y_4_1__un3_n.BLIF \
+  y_4_1__un1_n.BLIF video_0_sqmuxa_i.BLIF y_4_1__un0_n.BLIF ntscClock_c.BLIF left_n_c.BLIF right_n_c.BLIF up_n_c.BLIF  
+.outputs video_3_ state_3_ video_2_ video_1_ video_0_ state_2_ state_1_ state_0_ ypos_0_.D ypos_0_.C ypos_1_.D \
+  ypos_1_.C ypos_2_.D ypos_2_.C ypos_3_.D ypos_3_.C ypos_4_.D ypos_4_.C stateDFF_0reg.D stateDFF_0reg.C stateDFF_1reg.D stateDFF_1reg.C \
+  stateDFF_2reg.D stateDFF_2reg.C stateDFF_3reg.D stateDFF_3reg.C video_1_1reg.D video_1_1reg.CE video_1_1reg.C video_1_2reg.D video_1_2reg.CE video_1_2reg.C video_1_3reg.D \
+  video_1_3reg.CE video_1_3reg.C y_0_.D y_0_.C y_1_.D y_1_.C y_2_.D y_2_.C y_3_.D y_3_.C y_4_.D \
+  y_4_.C y_5_.D y_5_.C y_6_.D y_6_.C y_7_.D y_7_.C y_8_.D y_8_.C xpos_0_.D xpos_0_.C \
+  xpos_1_.D xpos_1_.C xpos_2_.D xpos_2_.C xpos_3_.D xpos_3_.C xpos_4_.D xpos_4_.C x_1_.D x_1_.C x_2_.D \
+  x_2_.C x_3_.D x_3_.C x_4_.D x_4_.C x_5_.D x_5_.C x_6_.D x_6_.C x_7_.D x_7_.C \
+  x_0_.D x_0_.C G_212.X1 G_212.X2 G_210.X1 G_210.X2 G_208.X1 G_208.X2 G_206.X1 G_206.X2 G_204.X1 \
+  G_204.X2 G_202.X1 G_202.X2 G_200.X1 G_200.X2 G_198.X1 G_198.X2 G_108_1.X1 G_108_1.X2 G_108.X1 G_108.X2 \
+  G_113_1.X1 G_113_1.X2 G_113.X1 G_113.X2 G_116_1.X1 G_116_1.X2 G_116.X1 G_116.X2 G_124_1.X1 G_124_1.X2 G_124.X1 \
+  G_124.X2 G_129_1.X1 G_129_1.X2 G_129.X1 G_129.X2 G_145.X1 G_145.X2 G_150_1.X1 G_150_1.X2 G_150.X1 G_150.X2 \
+  G_153_1.X1 G_153_1.X2 G_153.X1 G_153.X2 G_161_1.X1 G_161_1.X2 G_161.X1 G_161.X2 G_166_1.X1 G_166_1.X2 G_166.X1 \
+  G_166.X2 G_87_1.X1 G_87_1.X2 G_87.X1 G_87.X2 G_88_1.X1 G_88_1.X2 G_88.X1 G_88.X2 G_89_1.X1 G_89_1.X2 \
+  G_89.X1 G_89.X2 G_93.X1 G_93.X2 G_145_1.X1 G_145_1.X2 y_4_0_.X1 y_4_0_.X2 G_91.X1 G_91.X2 G_90.X1 \
+  G_90.X2 G_96.X1 G_96.X2 G_95.X1 G_95.X2 G_94.X1 G_94.X2 G_186.X1 G_186.X2 G_184.X1 G_184.X2 \
+  G_182.X1 G_182.X2 G_180.X1 G_180.X2 G_174.X1 G_174.X2 G_176.X1 G_176.X2 G_178.X1 G_178.X2 down_n_c \
+  gnd_n_n ypos_i_1__n N_117_0 ypos_i_2__n N_119_0 N_122_i N_128_i N_129_0 N_28_8_i y_4_i_4__n N_28_4_i \
+  y_4_i_2__n N_28_3_i y_4_i_1__n N_28_2_i N_52_i N_51_i N_58_i state_19_0_1__n N_62_i N_45_i N_44_i \
+  N_43_i N_42_i N_39_i x_3_5__n x_3_6__n N_60_i x_3_7__n N_49_i N_41_i y_4_1__n N_37_i \
+  y_4_2__n N_40_i y_4_3__n N_38_i y_4_4__n N_36_i y_4_5__n N_46_i y_4_6__n N_50_i y_4_7__n \
+  N_47_i y_4_8__n N_48_i video_0_sqmuxa N_38_1_i video25_i video19_i video29_i N_29_0 N_78 state40_i \
+  N_80 N_26_i N_81 N_25_i N_82 N_24_i N_83 N_55_i N_84 N_56_i N_85 \
+  N_23_i N_86 N_53_i N_87 N_54_i N_88 N_22_0 N_89 N_21_i N_90 N_92 \
+  video25_1_i N_105 N_106 xpos_i_0__n N_107 N_78_0 N_108 xpos_i_1__n N_114 N_80_0 N_115 \
+  xpos_i_2__n N_117 N_82_0 N_118 N_85_i N_119 N_91_i N_120 N_92_0 N_121 ypos_i_0__n \
+  N_122 N_115_0 N_123 N_142_i N_125 N_143_i N_126 N_144_i N_127 N_145_0 N_129 \
+  N_114_i N_142 N_125_i N_143 N_126_i N_144 N_127_0 N_145 N_118_i N_154 N_120_i \
+  N_157 N_121_i N_160 N_123_0 N_105_i N_106_i N_107_i N_108_0 N_87_i N_88_i N_89_i \
+  N_90_0 N_81_i N_83_i state23_6 N_84_i state8_2 N_86_0 x12_2 un1_video19_i_1 state3 un1_video19_i_2 \
+  un1_video19_i_3 state8 N_15_i_1 x12 N_15_i_2 N_15_i_3 N_15_i_4 N_169 N_20_i_1 N_166 N_20_i_2 \
+  N_163 N_20_i_3 N_91 state23_6_1 video21 state3_1 N_250 state3_2 video25_1 state3_3 N_39 \
+  state3_4 N_22 state3_5 N_44 state8_1 N_21 state8_2_0 N_45 state8_3 N_60 state8_4 \
+  N_48 state8_5 video29_1 x12_1 N_61 x12_2_0 N_52 x12_3 N_62 x12_4 N_56 \
+  x12_5 N_26 video21_1 N_53 N_59_1 N_54 N_36_1 N_55 N_18_i_1 N_24 N_18_i_2 \
+  state40 N_18_i_3 N_29 N_18_i_4 state80 N_18_i_5 video29 state_19_0_1_1__n video19 state_19_0_2_1__n video25 \
+  state_19_0_3_1__n N_38_1 state_19_0_4_1__n N_43 state_19_0_5_1__n N_47 N_49_1 N_46 N_50_1 N_50 N_53_1 \
+  N_36 N_53_2 N_38 N_54_1 N_37 N_55_1 N_40 N_37_1 N_41 N_40_1 N_59 \
+  N_40_2 N_36_2 N_41_1 N_49 N_43_1 N_42 N_46_1 state19 N_47_1 state13 video25_1_0 \
+  N_51 state13_1 N_58 state13_2 state13_3 state13_4 N_51_1 N_51_2 N_250_1 N_250_2 y_3_8__n \
+  N_250_3 N_250_4 y11_5 N_250_5 N_28_8 N_250_6 state40_4 N_250_7 y11 N_28_8_i_1 N_28_8_i_2 \
+  N_28_8_i_3 state80_1 state80_2 state19_1 y_3_2__n state19_2 y_3_1__n state19_3 state19_4 state19_5 N_197 \
+  state40_1 N_194 state40_2 N_191 state40_3 N_188 state40_4_0 N_185 state40_5 N_182 state40_6 \
+  N_179 y11_1 N_128 y11_2 up_n_i y11_3 y11_i y11_4 y_1_i_3__n y11_5_1 y_1_i_6__n \
+  y11_5_2 y_1_i_7__n y_1_i_5__n y_1_i_4__n y_i_1__n y_i_0_8__n y_i_0_2__n y_4_i_0__n y_3_i_0_8__n y_4_i_3__n y_4_i_8__n \
+  state23_6_i N_72_i N_70_i N_71_i N_145_0_1 N_69_i N_127_0_1 N_67_i N_123_0_1 N_66_i N_123_0_2 \
+  N_65_i N_121_1 N_63_i N_120_1 N_64_i N_120_2 state_i_2__n N_108_0_1 state_i_3__n N_90_0_1 state13_i \
+  N_86_0_1 state_i_1__n N_86_0_2 state_i_0__n N_84_1 state3_i N_83_1 state8_i N_83_2 state19_i y_4_8__un3_n \
+  N_61_i y_4_8__un1_n N_59_i y_4_8__un0_n N_250_i_0 y_4_7__un3_n right_n_i y_4_7__un1_n left_n_i y_4_7__un0_n down_n_i \
+  y_4_6__un3_n x12_i y_4_6__un1_n x_3_i_5__n y_4_6__un0_n x_2_i_3__n y_4_5__un3_n x_i_0__n y_4_5__un1_n x_i_1__n y_4_5__un0_n \
+  x_i_0_3__n y_4_4__un3_n x_2_i_4__n y_4_4__un1_n x_2_i_0_5__n y_4_4__un0_n x_2_i_2__n y_4_3__un3_n x_2_i_1__n y_4_3__un1_n x_3_i_6__n \
+  y_4_3__un0_n x_3_i_7__n y_4_2__un3_n y_4_2__un1_n y_4_2__un0_n y_4_1__un3_n y_4_1__un1_n video_0_sqmuxa_i y_4_1__un0_n ntscClock_c left_n_c \
+  right_n_c up_n_c
+.names  N_24_i.BLIF N_24
+0 1
+.names  G_150_1.BLIF G_150.X1
+1 1
+.names  N_55.BLIF N_55_i
+0 1
+.names  N_56.BLIF N_56_i
+0 1
+.names  y_8_.BLIF ypos_1_.C
+1 1
+.names  ypos_1_.BLIF G_150.X2
+1 1
+.names  N_53.BLIF N_53_i
+0 1
+.names  N_54.BLIF N_54_i
+0 1
+.names  N_22_0.BLIF N_22
+0 1
+.names  N_129.BLIF G_153_1.X1
+1 1
+.names  N_21_i.BLIF N_21
+0 1
+.names  y_8_.BLIF ypos_2_.C
+1 1
+.names  video25_1.BLIF video25_1_i
+0 1
+.names  up_n_c.BLIF G_153_1.X2
+1 1
+.names  xpos_0_.BLIF xpos_i_0__n
+0 1
+.names  N_78_0.BLIF N_78
+0 1
+.names  xpos_1_.BLIF xpos_i_1__n
+0 1
+.names  y_8_.BLIF ypos_3_.C
+1 1
+.names  G_153_1.BLIF G_153.X1
+1 1
+.names  N_80_0.BLIF N_80
+0 1
+.names  xpos_2_.BLIF xpos_i_2__n
+0 1
+.names  ypos_2_.BLIF G_153.X2
+1 1
+.names  N_82_0.BLIF N_82
+0 1
+.names  N_85.BLIF N_85_i
+0 1
+.names  y_8_.BLIF ypos_4_.C
+1 1
+.names  N_37.BLIF N_37_i
+0 1
+.names  N_123.BLIF G_161_1.X1
+1 1
+.names  N_40.BLIF N_40_i
+0 1
+.names  N_38.BLIF N_38_i
+0 1
+.names  up_n_c.BLIF G_161_1.X2
+1 1
+.names  N_36.BLIF N_36_i
+0 1
+.names  ntscClock_c.BLIF stateDFF_0reg.C
+1 1
+.names  N_46.BLIF N_46_i
+0 1
+.names  N_50.BLIF N_50_i
+0 1
+.names  G_161_1.BLIF G_161.X1
+1 1
+.names  N_47.BLIF N_47_i
+0 1
+.names  N_48.BLIF N_48_i
+0 1
+.names  ntscClock_c.BLIF stateDFF_1reg.C
+1 1
+.names  ypos_3_.BLIF G_161.X2
+1 1
+.names  N_38_1.BLIF N_38_1_i
+0 1
+.names  video25.BLIF video25_i
+0 1
+.names  video19.BLIF video19_i
+0 1
+.names  N_145.BLIF G_166_1.X1
+1 1
+.names  video29.BLIF video29_i
+0 1
+.names  ntscClock_c.BLIF stateDFF_2reg.C
+1 1
+.names  N_29_0.BLIF N_29
+0 1
+.names  up_n_c.BLIF G_166_1.X2
+1 1
+.names  state40.BLIF state40_i
+0 1
+.names  N_26_i.BLIF N_26
+0 1
+.names  y_4_2__n.BLIF y_4_i_2__n
+0 1
+.names  ntscClock_c.BLIF stateDFF_3reg.C
+1 1
+.names  G_166_1.BLIF G_166.X1
+1 1
+.names  y_4_1__n.BLIF y_4_i_1__n
+0 1
+.names  N_52.BLIF N_52_i
+0 1
+.names  ypos_4_.BLIF G_166.X2
+1 1
+.names  N_51.BLIF N_51_i
+0 1
+.names  N_58.BLIF N_58_i
+0 1
+.names  video_0_sqmuxa_i.BLIF video_1_1reg.CE
+1 1
+.names  state_19_0_1__n.BLIF stateDFF_1reg.D
+0 1
+.names  N_154.BLIF G_87_1.X1
+1 1
+.names  N_62.BLIF N_62_i
+0 1
+.names  ntscClock_c.BLIF video_1_1reg.C
+1 1
+.names  N_45.BLIF N_45_i
+0 1
+.names  x_2_.BLIF G_87_1.X2
+1 1
+.names  N_44.BLIF N_44_i
+0 1
+.names  N_43.BLIF N_43_i
+0 1
+.names  N_42.BLIF N_42_i
+0 1
+.names  video_0_sqmuxa_i.BLIF video_1_2reg.CE
+1 1
+.names  G_87_1.BLIF G_87.X1
+1 1
+.names  N_39.BLIF N_39_i
+0 1
+.names  N_60.BLIF N_60_i
+0 1
+.names  ntscClock_c.BLIF video_1_2reg.C
+1 1
+.names  xpos_0_.BLIF G_87.X2
+1 1
+.names  N_49.BLIF N_49_i
+0 1
+.names  ntscClock.BLIF ntscClock_c
+1 1
+.names  N_41.BLIF N_41_i
+0 1
+.names  left_n.BLIF left_n_c
+1 1
+.names  ypos_1_.BLIF ypos_i_1__n
+0 1
+.names  N_157.BLIF G_88_1.X1
+1 1
+.names  right_n.BLIF right_n_c
+1 1
+.names  N_117_0.BLIF N_117
+0 1
+.names  video_0_sqmuxa_i.BLIF video_1_3reg.CE
+1 1
+.names  up_n.BLIF up_n_c
+1 1
+.names  ypos_2_.BLIF ypos_i_2__n
+0 1
+.names  x_3_.BLIF G_88_1.X2
+1 1
+.names  down_n.BLIF down_n_c
+1 1
+.names  N_119_0.BLIF N_119
+0 1
+.names  ntscClock_c.BLIF video_1_3reg.C
+1 1
+.names  gnd_n_n.BLIF video_0_
+1 1
+.names  N_122.BLIF N_122_i
+0 1
+.names  video_1_1reg.BLIF video_1_
+1 1
+.names  N_128.BLIF N_128_i
+0 1
+.names  G_88_1.BLIF G_88.X1
+1 1
+.names  video_1_2reg.BLIF video_2_
+1 1
+.names  N_129_0.BLIF N_129
+0 1
+.names  y_4_0_.BLIF y_0_.D
+1 1
+.names  video_1_3reg.BLIF video_3_
+1 1
+.names  N_28_8_i.BLIF N_28_8
+0 1
+.names  xpos_1_.BLIF G_88.X2
+1 1
+.names  stateDFF_0reg.BLIF state_0_
+1 1
+.names  y_4_4__n.BLIF y_4_i_4__n
+0 1
+.names  ntscClock_c.BLIF y_0_.C
+1 1
+.names  stateDFF_1reg.BLIF state_1_
+1 1
+.names  y_0_.BLIF y_1_.BLIF N_179
+11 1
+.names  stateDFF_2reg.BLIF state_2_
+1 1
+.names  N_122_i.BLIF N_128_i.BLIF N_129_0
+11 1
+.names  N_160.BLIF G_89_1.X1
+1 1
+.names  stateDFF_3reg.BLIF state_3_
+1 1
+.names  N_117.BLIF N_127.BLIF N_128
+11 1
+.names  y_4_1__n.BLIF y_1_.D
+1 1
+.names  N_84_1.BLIF N_87.BLIF N_84
+11 1
+.names  up_n_c.BLIF ypos_i_2__n.BLIF N_119_0
+11 1
+.names  x_4_.BLIF G_89_1.X2
+1 1
+.names  N_78.BLIF N_80.BLIF N_83_1
+11 1
+.names  up_n_i.BLIF ypos_2_.BLIF N_118
+11 1
+.names  ntscClock_c.BLIF y_1_.C
+1 1
+.names  N_82.BLIF left_n_i.BLIF N_83_2
+11 1
+.names  up_n_c.BLIF ypos_i_1__n.BLIF N_117_0
+11 1
+.names  N_83_1.BLIF N_83_2.BLIF N_83
+11 1
+.names  up_n_c.BLIF up_n_i
+0 1
+.names  G_89_1.BLIF G_89.X1
+1 1
+.names  N_121_i.BLIF N_122_i.BLIF N_123_0_2
+11 1
+.names  up_n_i.BLIF ypos_1_.BLIF N_122
+11 1
+.names  y_4_2__n.BLIF y_2_.D
+1 1
+.names  N_123_0_1.BLIF N_123_0_2.BLIF N_123_0
+11 1
+.names  y11_i.BLIF G_212.BLIF y_3_8__n
+11 1
+.names  xpos_2_.BLIF G_89.X2
+1 1
+.names  N_119.BLIF N_114.BLIF N_121_1
+11 1
+.names  ntscClock_c.BLIF y_2_.C
+1 1
+.names  N_121_1.BLIF N_117.BLIF N_121
+11 1
+.names  N_115.BLIF N_117.BLIF N_120_1
+11 1
+.names  y_4_3__n.BLIF G_93.X1
+1 1
+.names  N_119.BLIF up_n_i.BLIF N_120_2
+11 1
+.names  y_4_3__n.BLIF y_3_.D
+1 1
+.names  N_120_1.BLIF N_120_2.BLIF N_120
+11 1
+.names  ypos_1_.BLIF G_93.X2
+1 1
+.names  N_107_i.BLIF N_105_i.BLIF N_108_0_1
+11 1
+.names  ntscClock_c.BLIF y_3_.C
+1 1
+.names  N_108_0_1.BLIF N_106_i.BLIF N_108_0
+11 1
+.names  N_89_i.BLIF N_87_i.BLIF N_90_0_1
+11 1
+.names  ypos_0_.BLIF G_145_1.X1
+1 1
+.names  N_90_0_1.BLIF N_88_i.BLIF N_90_0
+11 1
+.names  N_194.BLIF y_7_.BLIF N_197
+11 1
+.names  y_4_4__n.BLIF y_4_.D
+1 1
+.names  N_81_i.BLIF N_83_i.BLIF N_86_0_1
+11 1
+.names  N_191.BLIF y_6_.BLIF N_194
+11 1
+.names  down_n_c.BLIF G_145_1.X2
+1 1
+.names  N_84_i.BLIF N_85_i.BLIF N_86_0_2
+11 1
+.names  N_188.BLIF y_5_.BLIF N_191
+11 1
+.names  ntscClock_c.BLIF y_4_.C
+1 1
+.names  N_86_0_1.BLIF N_86_0_2.BLIF N_86_0
+11 1
+.names  N_185.BLIF y_4_.BLIF N_188
+11 1
+.names  N_80.BLIF N_82.BLIF N_84_1
+11 1
+.names  N_182.BLIF y_3_.BLIF N_185
+11 1
+.names  x12.BLIF y_4_0_.X1
+1 1
+.names  N_179.BLIF y_2_.BLIF N_182
+11 1
+.names  y_4_5__n.BLIF y_5_.D
+1 1
+.names  G_210.BLIF y_1_i_7__n
+0 1
+.names  y_0_.BLIF y_4_0_.X2
+1 1
+.names  G_206.BLIF y_1_i_5__n
+0 1
+.names  ntscClock_c.BLIF y_5_.C
+1 1
+.names  G_202.BLIF y_1_i_3__n
+0 1
+.names  G_208.BLIF y_1_i_6__n
+0 1
+.names  x_3_6__n.BLIF G_91.X1
+1 1
+.names  x12.BLIF y_4_8__un3_n
+0 1
+.names  y_4_6__n.BLIF y_6_.D
+1 1
+.names  y_3_8__n.BLIF x12.BLIF y_4_8__un1_n
+11 1
+.names  xpos_4_.BLIF G_91.X2
+1 1
+.names  y_8_.BLIF y_4_8__un3_n.BLIF y_4_8__un0_n
+11 1
+.names  ntscClock_c.BLIF y_6_.C
+1 1
+.names  y_4_8__un1_n.BLIF y_4_8__un0_n.BLIF y_4_8__n
+1- 1
+-1 1
+.names  x12.BLIF y_4_7__un3_n
+0 1
+.names  x_3_5__n.BLIF G_90.X1
+1 1
+.names  N_144_i.BLIF N_142_i.BLIF N_145_0_1
+11 1
+.names  G_210.BLIF x12.BLIF y_4_7__un1_n
+11 1
+.names  y_4_7__n.BLIF y_7_.D
+1 1
+.names  N_145_0_1.BLIF N_143_i.BLIF N_145_0
+11 1
+.names  y_7_.BLIF y_4_7__un3_n.BLIF y_4_7__un0_n
+11 1
+.names  xpos_3_.BLIF G_90.X2
+1 1
+.names  N_126_i.BLIF N_114_i.BLIF N_127_0_1
+11 1
+.names  y_4_7__un1_n.BLIF y_4_7__un0_n.BLIF y_4_7__n
+1- 1
+-1 1
+.names  ntscClock_c.BLIF y_7_.C
+1 1
+.names  N_127_0_1.BLIF N_125_i.BLIF N_127_0
+11 1
+.names  x12.BLIF y_4_6__un3_n
+0 1
+.names  N_118_i.BLIF N_120_i.BLIF N_123_0_1
+11 1
+.names  G_208.BLIF x12.BLIF y_4_6__un1_n
+11 1
+.names  y_4_6__n.BLIF G_96.X1
+1 1
+.names  y_6_.BLIF y_4_6__un3_n.BLIF y_4_6__un0_n
+11 1
+.names  y_4_8__n.BLIF y_8_.D
+1 1
+.names  y_4_6__un1_n.BLIF y_4_6__un0_n.BLIF y_4_6__n
+1- 1
+-1 1
+.names  ypos_4_.BLIF G_96.X2
+1 1
+.names  x12.BLIF y_4_5__un3_n
+0 1
+.names  ntscClock_c.BLIF y_8_.C
+1 1
+.names  G_206.BLIF x12.BLIF y_4_5__un1_n
+11 1
+.names  y_5_.BLIF y_4_5__un3_n.BLIF y_4_5__un0_n
+11 1
+.names  y_4_5__n.BLIF G_95.X1
+1 1
+.names  y_4_5__un1_n.BLIF y_4_5__un0_n.BLIF y_4_5__n
+1- 1
+-1 1
+.names  x12.BLIF y_4_4__un3_n
+0 1
+.names  y_8_.BLIF xpos_0_.C
+1 1
+.names  ypos_3_.BLIF G_95.X2
+1 1
+.names  G_204.BLIF x12.BLIF y_4_4__un1_n
+11 1
+.names  y_4_.BLIF y_4_4__un3_n.BLIF y_4_4__un0_n
+11 1
+.names  y_4_4__un1_n.BLIF y_4_4__un0_n.BLIF y_4_4__n
+1- 1
+-1 1
+.names  y_4_4__n.BLIF G_94.X1
+1 1
+.names  x12.BLIF y_4_3__un3_n
+0 1
+.names  y_8_.BLIF xpos_1_.C
+1 1
+.names  G_202.BLIF x12.BLIF y_4_3__un1_n
+11 1
+.names  ypos_2_.BLIF G_94.X2
+1 1
+.names  y_3_.BLIF y_4_3__un3_n.BLIF y_4_3__un0_n
+11 1
+.names  y_4_3__un1_n.BLIF y_4_3__un0_n.BLIF y_4_3__n
+1- 1
+-1 1
+.names  x12.BLIF y_4_2__un3_n
+0 1
+.names  y_8_.BLIF xpos_2_.C
+1 1
+.names  N_169.BLIF G_186.X1
+1 1
+.names  y_4_1__n.BLIF y_4_4__n.BLIF state40_2
+11 1
+.names  y_3_2__n.BLIF x12.BLIF y_4_2__un1_n
+11 1
+.names  y_4_7__n.BLIF y_4_i_0__n.BLIF state40_3
+11 1
+.names  y_2_.BLIF y_4_2__un3_n.BLIF y_4_2__un0_n
+11 1
+.names  x_7_.BLIF G_186.X2
+1 1
+.names  y_i_0_2__n.BLIF y_i_0_8__n.BLIF state40_4_0
+11 1
+.names  y_4_2__un1_n.BLIF y_4_2__un0_n.BLIF y_4_2__n
+1- 1
+-1 1
+.names  state40_1.BLIF state40_2.BLIF state40_5
+11 1
+.names  x12.BLIF y_4_1__un3_n
+0 1
+.names  y_8_.BLIF xpos_3_.C
+1 1
+.names  state40_3.BLIF state40_4_0.BLIF state40_6
+11 1
+.names  y_3_1__n.BLIF x12.BLIF y_4_1__un1_n
+11 1
+.names  N_166.BLIF G_184.X1
+1 1
+.names  state40_5.BLIF state40_6.BLIF state40
+11 1
+.names  y_1_.BLIF y_4_1__un3_n.BLIF y_4_1__un0_n
+11 1
+.names  y_1_i_4__n.BLIF y_i_1__n.BLIF y11_1
+11 1
+.names  y_4_1__un1_n.BLIF y_4_1__un0_n.BLIF y_4_1__n
+1- 1
+-1 1
+.names  x_6_.BLIF G_184.X2
+1 1
+.names  y11_5.BLIF y_0_.BLIF y11_2
+11 1
+.names  y11_i.BLIF G_200.BLIF y_3_2__n
+11 1
+.names  y_8_.BLIF xpos_4_.C
+1 1
+.names  y_2_.BLIF G_212.BLIF y11_3
+11 1
+.names  y11_i.BLIF G_198.BLIF y_3_1__n
+11 1
+.names  y11_1.BLIF y11_2.BLIF y11_4
+11 1
+.names  y11.BLIF y11_i
+0 1
+.names  N_163.BLIF G_182.X1
+1 1
+.names  y11_4.BLIF y11_3.BLIF y11
+11 1
+.names  G_174.BLIF x_1_.D
+1 1
+.names  y_1_i_3__n.BLIF y_1_i_5__n.BLIF y11_5_1
+11 1
+.names  state23_6.BLIF state23_6_i
+0 1
+.names  x_5_.BLIF G_182.X2
+1 1
+.names  y_1_i_6__n.BLIF y_1_i_7__n.BLIF y11_5_2
+11 1
+.names  y_4_i_0__n.BLIF y_4_i_1__n.BLIF N_28_2_i
+11 1
+.names  ntscClock_c.BLIF x_1_.C
+1 1
+.names  y11_5_1.BLIF y11_5_2.BLIF y11_5
+11 1
+.names  y_1_i_3__n.BLIF y_4_i_2__n.BLIF N_28_3_i
+11 1
+.names  y11_5.BLIF y_4_i_4__n.BLIF N_28_4_i
+11 1
+.names  N_160.BLIF G_180.X1
+1 1
+.names  N_250_7.BLIF N_71_i.BLIF N_250
+11 1
+.names  y_4_5__n.BLIF y_4_6__n.BLIF state40_4
+11 1
+.names  G_176.BLIF x_2_.D
+1 1
+.names  N_28_2_i.BLIF N_28_3_i.BLIF N_28_8_i_1
+11 1
+.names  y_4_8__n.BLIF y_4_i_8__n
+0 1
+.names  x_4_.BLIF G_180.X2
+1 1
+.names  N_28_4_i.BLIF state23_6.BLIF N_28_8_i_2
+11 1
+.names  y_3_8__n.BLIF y_3_i_0_8__n
+0 1
+.names  ntscClock_c.BLIF x_2_.C
+1 1
+.names  N_28_8_i_1.BLIF N_28_8_i_2.BLIF N_28_8_i_3
+11 1
+.names  y_4_3__n.BLIF y_4_i_3__n
+0 1
+.names  N_28_8_i_3.BLIF y_3_8__n.BLIF N_28_8_i
+11 1
+.names  y_2_.BLIF y_i_0_2__n
+0 1
+.names  x_0_.BLIF G_174.X1
+1 1
+.names  N_28_2_i.BLIF N_28_3_i.BLIF state80_1
+11 1
+.names  y_4_0_.BLIF y_4_i_0__n
+0 1
+.names  G_178.BLIF x_3_.D
+1 1
+.names  N_28_4_i.BLIF y_4_i_8__n.BLIF state80_2
+11 1
+.names  y_8_.BLIF y_i_0_8__n
+0 1
+.names  x_1_.BLIF G_174.X2
+1 1
+.names  state80_1.BLIF state80_2.BLIF state80
+11 1
+.names  ntscClock_c.BLIF x_3_.C
+1 1
+.names  N_28_2_i.BLIF state40_4.BLIF state19_1
+11 1
+.names  y_1_.BLIF y_i_1__n
+0 1
+.names  y_4_.BLIF y_3_i_0_8__n.BLIF state19_2
+11 1
+.names  G_204.BLIF y_1_i_4__n
+0 1
+.names  N_154.BLIF G_176.X1
+1 1
+.names  y_4_2__n.BLIF y_4_7__n.BLIF state19_3
+11 1
+.names  N_123.BLIF ypos_3_.BLIF N_144
+11 1
+.names  G_180.BLIF x_4_.D
+1 1
+.names  state19_1.BLIF state19_2.BLIF state19_4
+11 1
+.names  G_87.BLIF N_63_i
+0 1
+.names  x_2_.BLIF G_176.X2
+1 1
+.names  state19_3.BLIF y_4_i_3__n.BLIF state19_5
+11 1
+.names  G_88.BLIF N_64_i
+0 1
+.names  ntscClock_c.BLIF x_4_.C
+1 1
+.names  state19_4.BLIF state19_5.BLIF state19
+11 1
+.names  G_90.BLIF N_66_i
+0 1
+.names  state40_4.BLIF G_202.BLIF state40_1
+11 1
+.names  G_89.BLIF N_65_i
+0 1
+.names  N_157.BLIF G_178.X1
+1 1
+.names  x_3_5__n.BLIF x_i_0__n.BLIF state13_1
+11 1
+.names  G_93.BLIF N_69_i
+0 1
+.names  x_3_5__n.BLIF x_5_.D
+1 1
+.names  state8_2.BLIF x12_2.BLIF state13_2
+11 1
+.names  G_91.BLIF N_67_i
+0 1
+.names  x_3_.BLIF G_178.X2
+1 1
+.names  x_1_.BLIF G_176.BLIF state13_3
+11 1
+.names  G_94.BLIF N_70_i
+0 1
+.names  ntscClock_c.BLIF x_5_.C
+1 1
+.names  state13_1.BLIF state13_2.BLIF state13_4
+11 1
+.names  G_95.BLIF N_71_i
+0 1
+.names  state13_4.BLIF state13_3.BLIF state13
+11 1
+.names  G_96.BLIF N_72_i
+0 1
+.names  G_145.BLIF ypos_0_.D
+1 1
+.names  N_25_i.BLIF state80.BLIF N_51_1
+11 1
+.names  x_3_6__n.BLIF x_6_.D
+1 1
+.names  G_108.BLIF xpos_0_.D
+1 1
+.names  stateDFF_1reg.BLIF stateDFF_2reg.BLIF N_51_2
+11 1
+.names  N_51_1.BLIF N_51_2.BLIF N_51
+11 1
+.names  ntscClock_c.BLIF x_6_.C
+1 1
+.names  N_72_i.BLIF N_63_i.BLIF N_250_1
+11 1
+.names  N_64_i.BLIF N_65_i.BLIF N_250_2
+11 1
+.names  N_66_i.BLIF N_67_i.BLIF N_250_3
+11 1
+.names  N_38.BLIF stateDFF_3reg.BLIF N_42
+11 1
+.names  x_3_7__n.BLIF x_7_.D
+1 1
+.names  N_69_i.BLIF N_70_i.BLIF N_250_4
+11 1
+.names  stateDFF_0reg.BLIF stateDFF_2reg.BLIF video29_1
+11 1
+.names  N_250_1.BLIF N_250_2.BLIF N_250_5
+11 1
+.names  stateDFF_3reg.BLIF video29_1.BLIF video29
+11 1
+.names  ntscClock_c.BLIF x_7_.C
+1 1
+.names  N_250_3.BLIF N_250_4.BLIF N_250_6
+11 1
+.names  stateDFF_0reg.BLIF state_i_0__n
+0 1
+.names  N_250_5.BLIF N_250_6.BLIF N_250_7
+11 1
+.names  state_i_0__n.BLIF state_i_2__n.BLIF N_36_2
+11 1
+.names  N_21_i.BLIF N_29.BLIF N_37_1
+11 1
+.names  N_36_2.BLIF state_i_3__n.BLIF video19
+11 1
+.names  x_i_0__n.BLIF x_0_.D
+1 1
+.names  N_37_1.BLIF stateDFF_2reg.BLIF N_37
+11 1
+.names  stateDFF_0reg.BLIF stateDFF_3reg.BLIF video25_1
+11 1
+.names  N_21.BLIF state3_i.BLIF N_40_1
+11 1
+.names  stateDFF_1reg.BLIF state_i_1__n
+0 1
+.names  ntscClock_c.BLIF x_0_.C
+1 1
+.names  stateDFF_2reg.BLIF state_i_0__n.BLIF N_40_2
+11 1
+.names  state13.BLIF state13_i
+0 1
+.names  N_40_1.BLIF N_40_2.BLIF N_40
+11 1
+.names  N_58.BLIF state13_i.BLIF N_60
+11 1
+.names  N_21_i.BLIF N_28_8_i.BLIF N_41_1
+11 1
+.names  stateDFF_2reg.BLIF state_i_2__n
+0 1
+.names  N_197.BLIF G_212.X1
+1 1
+.names  N_41_1.BLIF stateDFF_0reg.BLIF N_41
+11 1
+.names  stateDFF_3reg.BLIF state_i_3__n
+0 1
+.names  stateDFF_1reg.BLIF state_i_0__n.BLIF N_43_1
+11 1
+.names  state_i_2__n.BLIF state_i_3__n.BLIF N_58
+11 1
+.names  y_8_.BLIF G_212.X2
+1 1
+.names  N_43_1.BLIF state_i_2__n.BLIF N_43
+11 1
+.names  up_n_i.BLIF ypos_3_.BLIF N_142
+11 1
+.names  N_21_i.BLIF N_28_8.BLIF N_46_1
+11 1
+.names  N_123.BLIF up_n_i.BLIF N_143
+11 1
+.names  N_46_1.BLIF stateDFF_0reg.BLIF N_46
+11 1
+.names  N_26_i.BLIF state_i_2__n.BLIF N_62
+11 1
+.names  N_194.BLIF G_210.X1
+1 1
+.names  N_26.BLIF state_i_1__n.BLIF N_47_1
+11 1
+.names  stateDFF_1reg.BLIF stateDFF_3reg.BLIF N_21_i
+11 1
+.names  N_47_1.BLIF state_i_2__n.BLIF N_47
+11 1
+.names  N_53_i.BLIF N_54_i.BLIF N_22_0
+11 1
+.names  y_7_.BLIF G_210.X2
+1 1
+.names  video25_1.BLIF state_i_1__n.BLIF video25_1_0
+11 1
+.names  N_55_i.BLIF N_56_i.BLIF N_23_i
+11 1
+.names  video25_1_0.BLIF state_i_2__n.BLIF video25
+11 1
+.names  state_i_1__n.BLIF state_i_3__n.BLIF N_24_i
+11 1
+.names  N_62_i.BLIF N_44_i.BLIF state_19_0_3_1__n
+11 1
+.names  state23_6.BLIF state_i_0__n.BLIF N_25_i
+11 1
+.names  N_191.BLIF G_208.X1
+1 1
+.names  state_19_0_1_1__n.BLIF state_19_0_2_1__n.BLIF state_19_0_4_1__n
+11 1
+.names  N_25_i.BLIF state40_i.BLIF N_26_i
+11 1
+.names  state_19_0_3_1__n.BLIF N_45_i.BLIF state_19_0_5_1__n
+11 1
+.names  state23_6.BLIF state80.BLIF N_29_0
+11 1
+.names  y_6_.BLIF G_208.X2
+1 1
+.names  state_19_0_4_1__n.BLIF state_19_0_5_1__n.BLIF state_19_0_1__n
+11 1
+.names  N_61.BLIF N_61_i
+0 1
+.names  N_24_i.BLIF state19_i.BLIF N_49_1
+11 1
+.names  N_59.BLIF N_59_i
+0 1
+.names  N_49_1.BLIF state23_6.BLIF N_49
+11 1
+.names  state19.BLIF state19_i
+0 1
+.names  N_188.BLIF G_206.X1
+1 1
+.names  N_21_i.BLIF N_25_i.BLIF N_50_1
+11 1
+.names  state8.BLIF state8_i
+0 1
+.names  N_50_1.BLIF state80.BLIF N_50
+11 1
+.names  N_24.BLIF video29_1.BLIF N_38_1
+11 1
+.names  y_5_.BLIF G_206.X2
+1 1
+.names  state19.BLIF state23_6.BLIF N_53_1
+11 1
+.names  N_38_1.BLIF state8.BLIF N_38
+11 1
+.names  stateDFF_2reg.BLIF state_i_3__n.BLIF N_53_2
+11 1
+.names  state3.BLIF state3_i
+0 1
+.names  N_53_1.BLIF N_53_2.BLIF N_53
+11 1
+.names  left_n_c.BLIF left_n_i
+0 1
+.names  N_185.BLIF G_204.X1
+1 1
+.names  state3.BLIF stateDFF_0reg.BLIF N_54_1
+11 1
+.names  left_n_i.BLIF xpos_1_.BLIF N_85
+11 1
+.names  N_54_1.BLIF state_i_2__n.BLIF N_54
+11 1
+.names  right_n_c.BLIF right_n_i
+0 1
+.names  y_4_.BLIF G_204.X2
+1 1
+.names  state8_i.BLIF stateDFF_1reg.BLIF N_55_1
+11 1
+.names  right_n_c.BLIF xpos_i_0__n.BLIF N_78_0
+11 1
+.names  N_55_1.BLIF video29_1.BLIF N_55
+11 1
+.names  state23_6.BLIF video21.BLIF video_0_sqmuxa
+11 1
+.names  x12_4.BLIF x12_5.BLIF x12
+11 1
+.names  N_250.BLIF video21.BLIF video_1_3reg.D
+11 1
+.names  N_182.BLIF G_202.X1
+1 1
+.names  state_i_3__n.BLIF stateDFF_2reg.BLIF video21_1
+11 1
+.names  N_250.BLIF N_250_i_0
+0 1
+.names  video21_1.BLIF state_i_1__n.BLIF video21
+11 1
+.names  N_250_i_0.BLIF video21.BLIF video_1_2reg.D
+11 1
+.names  y_3_.BLIF G_202.X2
+1 1
+.names  state23_6.BLIF state40.BLIF N_59_1
+11 1
+.names  N_22.BLIF state_i_1__n.BLIF N_39
+11 1
+.names  N_59_1.BLIF state_i_1__n.BLIF N_59
+11 1
+.names  N_21_i.BLIF state23_6_i.BLIF N_44
+11 1
+.names  N_36_2.BLIF N_59_i.BLIF N_36_1
+11 1
+.names  N_60.BLIF stateDFF_1reg.BLIF N_45
+11 1
+.names  N_179.BLIF G_200.X1
+1 1
+.names  N_36_1.BLIF N_61_i.BLIF N_36
+11 1
+.names  N_61.BLIF video29_1.BLIF N_48
+11 1
+.names  N_43_i.BLIF N_46_i.BLIF N_18_i_1
+11 1
+.names  N_62.BLIF state_i_1__n.BLIF N_52
+11 1
+.names  y_2_.BLIF G_200.X2
+1 1
+.names  N_47_i.BLIF N_48_i.BLIF N_18_i_2
+11 1
+.names  state_i_0__n.BLIF state_i_3__n.BLIF N_56
+11 1
+.names  N_49_i.BLIF N_50_i.BLIF N_18_i_3
+11 1
+.names  state8.BLIF stateDFF_1reg.BLIF N_61
+11 1
+.names  N_18_i_1.BLIF N_18_i_2.BLIF N_18_i_4
+11 1
+.names  down_n_i.BLIF up_n_i.BLIF N_125
+11 1
+.names  y_0_.BLIF G_198.X1
+1 1
+.names  N_18_i_3.BLIF N_60_i.BLIF N_18_i_5
+11 1
+.names  down_n_c.BLIF ypos_i_0__n.BLIF N_115_0
+11 1
+.names  N_18_i_4.BLIF N_18_i_5.BLIF stateDFF_2reg.D
+11 1
+.names  down_n_c.BLIF down_n_i
+0 1
+.names  y_1_.BLIF G_198.X2
+1 1
+.names  N_23_i.BLIF N_39_i.BLIF state_19_0_1_1__n
+11 1
+.names  down_n_i.BLIF ypos_0_.BLIF N_114
+11 1
+.names  N_42_i.BLIF N_43_i.BLIF state_19_0_2_1__n
+11 1
+.names  N_86.BLIF xpos_3_.BLIF N_107
+11 1
+.names  x_i_0__n.BLIF x_i_1__n.BLIF state3_3
+11 1
+.names  N_86.BLIF left_n_i.BLIF N_106
+11 1
+.names  xpos_0_.BLIF G_108_1.X1
+1 1
+.names  state3_1.BLIF state3_2.BLIF state3_4
+11 1
+.names  left_n_i.BLIF xpos_3_.BLIF N_105
+11 1
+.names  state3_3.BLIF x_i_0_3__n.BLIF state3_5
+11 1
+.names  N_85_i.BLIF N_91_i.BLIF N_92_0
+11 1
+.names  left_n_c.BLIF G_108_1.X2
+1 1
+.names  state3_4.BLIF state3_5.BLIF state3
+11 1
+.names  N_80.BLIF N_90.BLIF N_91
+11 1
+.names  state8_2.BLIF x_0_.BLIF state8_1
+11 1
+.names  left_n_i.BLIF xpos_0_.BLIF N_89
+11 1
+.names  x_2_.BLIF x_4_.BLIF state8_2_0
+11 1
+.names  left_n_i.BLIF right_n_i.BLIF N_88
+11 1
+.names  G_108_1.BLIF G_108.X1
+1 1
+.names  G_176.BLIF x_2_i_3__n.BLIF state8_3
+11 1
+.names  right_n_i.BLIF xpos_0_.BLIF N_87
+11 1
+.names  state8_1.BLIF state8_2_0.BLIF state8_4
+11 1
+.names  left_n_c.BLIF xpos_i_2__n.BLIF N_82_0
+11 1
+.names  right_n_c.BLIF G_108.X2
+1 1
+.names  state8_3.BLIF x_3_i_5__n.BLIF state8_5
+11 1
+.names  left_n_i.BLIF xpos_2_.BLIF N_81
+11 1
+.names  state8_4.BLIF state8_5.BLIF state8
+11 1
+.names  left_n_c.BLIF xpos_i_1__n.BLIF N_80_0
+11 1
+.names  x12_2.BLIF x_0_.BLIF x12_1
+11 1
+.names  N_157.BLIF x_3_.BLIF N_160
+11 1
+.names  N_90.BLIF G_113_1.X1
+1 1
+.names  x_6_.BLIF G_184.BLIF x12_2_0
+11 1
+.names  N_154.BLIF x_2_.BLIF N_157
+11 1
+.names  G_186.BLIF x_2_i_1__n.BLIF x12_3
+11 1
+.names  x_0_.BLIF x_1_.BLIF N_154
+11 1
+.names  left_n_c.BLIF G_113_1.X2
+1 1
+.names  x12_1.BLIF x12_2_0.BLIF x12_4
+11 1
+.names  x12_i.BLIF G_186.BLIF x_3_7__n
+11 1
+.names  x12_3.BLIF x_2_i_2__n.BLIF x12_5
+11 1
+.names  x12_i.BLIF G_184.BLIF x_3_6__n
+11 1
+.names  un1_video19_i_1.BLIF un1_video19_i_2.BLIF un1_video19_i_3
+11 1
+.names  x12.BLIF x12_i
+0 1
+.names  G_113_1.BLIF G_113.X1
+1 1
+.names  un1_video19_i_3.BLIF video25_1_i.BLIF video_1_1reg.D
+11 1
+.names  x12_i.BLIF G_182.BLIF x_3_5__n
+11 1
+.names  N_39_i.BLIF N_41_i.BLIF N_15_i_1
+11 1
+.names  xpos_1_.BLIF G_113.X2
+1 1
+.names  N_36_i.BLIF N_37_i.BLIF N_15_i_2
+11 1
+.names  N_38_i.BLIF N_40_i.BLIF N_15_i_3
+11 1
+.names  N_15_i_1.BLIF N_15_i_2.BLIF N_15_i_4
+11 1
+.names  N_92.BLIF G_116_1.X1
+1 1
+.names  N_15_i_4.BLIF N_15_i_3.BLIF stateDFF_0reg.D
+11 1
+.names  N_166.BLIF x_6_.BLIF N_169
+11 1
+.names  N_51_i.BLIF N_52_i.BLIF N_20_i_1
+11 1
+.names  N_163.BLIF x_5_.BLIF N_166
+11 1
+.names  left_n_c.BLIF G_116_1.X2
+1 1
+.names  N_23_i.BLIF N_24.BLIF N_20_i_2
+11 1
+.names  N_160.BLIF x_4_.BLIF N_163
+11 1
+.names  N_20_i_1.BLIF N_20_i_2.BLIF N_20_i_3
+11 1
+.names  up_n_i.BLIF ypos_0_.BLIF N_126
+11 1
+.names  N_20_i_3.BLIF N_58_i.BLIF stateDFF_3reg.D
+11 1
+.names  x_3_7__n.BLIF x_3_i_7__n
+0 1
+.names  G_116_1.BLIF G_116.X1
+1 1
+.names  x_0_.BLIF x_7_.BLIF state23_6_1
+11 1
+.names  x_3_i_6__n.BLIF x_3_i_7__n.BLIF state8_2
+11 1
+.names  state23_6_1.BLIF x_3_i_7__n.BLIF state23_6
+11 1
+.names  G_176.BLIF x_2_i_2__n
+0 1
+.names  xpos_2_.BLIF G_116.X2
+1 1
+.names  state8_2.BLIF x_2_.BLIF state3_1
+11 1
+.names  G_174.BLIF x_2_i_1__n
+0 1
+.names  x_2_i_4__n.BLIF x_2_i_0_5__n.BLIF state3_2
+11 1
+.names  x_2_i_3__n.BLIF x_2_i_4__n.BLIF x12_2
+11 1
+.names  N_123_0.BLIF N_123
+0 1
+.names  G_180.BLIF x_2_i_4__n
+0 1
+.names  N_86.BLIF G_124_1.X1
+1 1
+.names  N_105.BLIF N_105_i
+0 1
+.names  G_182.BLIF x_2_i_0_5__n
+0 1
+.names  N_106.BLIF N_106_i
+0 1
+.names  x_1_.BLIF x_i_1__n
+0 1
+.names  left_n_c.BLIF G_124_1.X2
+1 1
+.names  N_107.BLIF N_107_i
+0 1
+.names  x_3_.BLIF x_i_0_3__n
+0 1
+.names  N_108_0.BLIF N_108
+0 1
+.names  x_0_.BLIF x_i_0__n
+0 1
+.names  N_87.BLIF N_87_i
+0 1
+.names  x_3_5__n.BLIF x_3_i_5__n
+0 1
+.names  G_124_1.BLIF G_124.X1
+1 1
+.names  N_88.BLIF N_88_i
+0 1
+.names  G_178.BLIF x_2_i_3__n
+0 1
+.names  N_89.BLIF N_89_i
+0 1
+.names  xpos_3_.BLIF G_124.X2
+1 1
+.names  N_90_0.BLIF N_90
+0 1
+.names  N_81.BLIF N_81_i
+0 1
+.names  N_83.BLIF N_83_i
+0 1
+.names  G_116.BLIF xpos_2_.D
+0 1
+.names  N_108.BLIF G_129_1.X1
+1 1
+.names  N_84.BLIF N_84_i
+0 1
+.names  G_124.BLIF xpos_3_.D
+0 1
+.names  N_86_0.BLIF N_86
+0 1
+.names  G_129.BLIF xpos_4_.D
+0 1
+.names  left_n_c.BLIF G_129_1.X2
+1 1
+.names  N_38_1_i.BLIF video19_i.BLIF un1_video19_i_1
+11 1
+.names  x_3_6__n.BLIF x_3_i_6__n
+0 1
+.names  video25_i.BLIF video29_i.BLIF un1_video19_i_2
+11 1
+.names  video_0_sqmuxa.BLIF video_0_sqmuxa_i
+0 1
+.names  N_91.BLIF N_91_i
+0 1
+.names  G_113.BLIF xpos_1_.D
+0 1
+.names  G_129_1.BLIF G_129.X1
+1 1
+.names  N_92_0.BLIF N_92
+0 1
+.names  G_150.BLIF ypos_1_.D
+0 1
+.names  ypos_0_.BLIF ypos_i_0__n
+0 1
+.names  G_153.BLIF ypos_2_.D
+0 1
+.names  xpos_4_.BLIF G_129.X2
+1 1
+.names  N_115_0.BLIF N_115
+0 1
+.names  G_161.BLIF ypos_3_.D
+0 1
+.names  N_142.BLIF N_142_i
+0 1
+.names  G_166.BLIF ypos_4_.D
+0 1
+.names  N_143.BLIF N_143_i
+0 1
+.names  gnd_n_n
+.names  G_145_1.BLIF G_145.X1
+1 1
+.names  N_144.BLIF N_144_i
+0 1
+.names  N_145_0.BLIF N_145
+0 1
+.names  up_n_c.BLIF G_145.X2
+1 1
+.names  N_114.BLIF N_114_i
+0 1
+.names  N_125.BLIF N_125_i
+0 1
+.names  N_126.BLIF N_126_i
+0 1
+.names  N_127.BLIF G_150_1.X1
+1 1
+.names  N_127_0.BLIF N_127
+0 1
+.names  N_118.BLIF N_118_i
+0 1
+.names  up_n_c.BLIF G_150_1.X2
+1 1
+.names  N_120.BLIF N_120_i
+0 1
+.names  y_8_.BLIF ypos_0_.C
+1 1
+.names  N_121.BLIF N_121_i
+0 1
+.end

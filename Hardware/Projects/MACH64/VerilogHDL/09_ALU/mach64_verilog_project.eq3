@@ -1,0 +1,99 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+a_led_0_ = !a_n_0_ ; (1 pterm, 1 signal)
+
+a_led_1_ = !a_n_1_ ; (1 pterm, 1 signal)
+
+a_led_2_ = !a_n_2_ ; (1 pterm, 1 signal)
+
+a_led_3_ = !a_n_3_ ; (1 pterm, 1 signal)
+
+b_led_0_ = !b_n_0_ ; (1 pterm, 1 signal)
+
+b_led_1_ = !b_n_1_ ; (1 pterm, 1 signal)
+
+b_led_2_ = !b_n_2_ ; (1 pterm, 1 signal)
+
+b_led_3_ = !b_n_3_ ; (1 pterm, 1 signal)
+
+c_0_.X1 = !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & !a_n_1_
+    # opcode_n_2_ & !opcode_n_0_ & !a_n_0_
+    # opcode_n_2_ & !a_n_0_ & !b_n_0_
+    # opcode_n_2_ & !opcode_n_1_ & opcode_n_0_ & a_n_0_ & b_n_0_
+    # !opcode_n_2_ & opcode_n_1_ & a_n_0_
+    # opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & !b_n_0_ ; (6 pterms, 6 signals)
+c_0_.X2 = opcode_n_2_ & !opcode_n_1_ ; (1 pterm, 2 signals)
+
+c_1_.X1 = !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & !a_n_2_
+    # !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_0_
+    # !opcode_n_2_ & opcode_n_0_ & !a_n_0_
+    # opcode_n_2_ & opcode_n_0_ & !a_n_1_ & b_n_1_
+    # opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & a_n_1_
+    # opcode_n_2_ & !opcode_n_1_ & a_n_1_ & !b_n_1_
+    # opcode_n_2_ & !opcode_n_0_ & a_n_1_ & !b_n_1_ ; (7 pterms, 7 signals)
+c_1_.X2 = opcode_n_1_ & !a_n_1_ ; (1 pterm, 2 signals)
+
+c_2_ = c_c_2__n ; (1 pterm, 1 signal)
+
+c_3_ = c_c_3__n ; (1 pterm, 1 signal)
+
+c_c_2__n.X1 = !a_n_3_ & !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_
+    # !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_1_ & a_n_0_
+    # !opcode_n_2_ & !opcode_n_1_ & opcode_n_0_ & !a_n_1_
+    # !opcode_n_2_ & opcode_n_0_ & !a_n_1_ & !a_n_0_
+    # opcode_n_2_ & opcode_n_0_ & !a_n_2_ & b_n_2_
+    # opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & a_n_2_
+    # opcode_n_2_ & !opcode_n_1_ & a_n_2_ & !b_n_2_
+    # opcode_n_2_ & !opcode_n_0_ & a_n_2_ & !b_n_2_ ; (8 pterms, 8 signals)
+c_c_2__n.X2 = opcode_n_1_ & !a_n_2_ ; (1 pterm, 2 signals)
+
+c_c_3__n.X1 = !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_2_ & a_n_1_
+       & a_n_0_
+    # !opcode_n_2_ & !opcode_n_1_ & opcode_n_0_ & !a_n_2_
+    # !opcode_n_2_ & opcode_n_0_ & !a_n_2_ & !a_n_1_ & !a_n_0_
+    # !a_n_3_ & b_n_3_ & opcode_n_2_ & opcode_n_0_
+    # a_n_3_ & !b_n_3_ & opcode_n_2_ & !opcode_n_1_
+    # a_n_3_ & opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_
+    # a_n_3_ & !b_n_3_ & opcode_n_2_ & !opcode_n_0_ ; (7 pterms, 8 signals)
+c_c_3__n.X2 = !a_n_3_ & opcode_n_1_ ; (1 pterm, 2 signals)
+
+cf = !opcode_n_3_ & a_n_3_ & !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_
+       & a_n_2_ & a_n_1_ & a_n_0_
+    # !opcode_n_3_ & !a_n_3_ & !opcode_n_2_ & opcode_n_0_ & !a_n_2_ & !a_n_1_
+       & !a_n_0_
+    # !opcode_n_3_ & !a_n_3_ & !opcode_n_2_ & !opcode_n_1_ & opcode_n_0_
+    # !opcode_n_3_ & !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & !a_n_0_ ; (4 pterms, 8 signals)
+
+zf.X1 = opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & !a_n_1_ & !a_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # opcode_n_2_ & !opcode_n_1_ & !a_n_1_ & !a_n_0_ & !b_n_1_ & !b_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # !opcode_n_2_ & !opcode_n_1_ & opcode_n_0_ & a_n_0_ & !c_c_2__n
+       & !c_c_3__n
+    # !opcode_n_1_ & opcode_n_0_ & !a_n_1_ & a_n_0_ & !b_n_1_ & b_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # !opcode_n_2_ & !opcode_n_1_ & !opcode_n_0_ & a_n_2_ & a_n_1_ & !c_c_2__n
+       & !c_c_3__n
+    # opcode_n_2_ & opcode_n_0_ & a_n_1_ & !a_n_0_ & b_n_1_ & !b_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # !opcode_n_1_ & opcode_n_0_ & a_n_1_ & a_n_0_ & b_n_1_ & b_n_0_
+       & !c_c_2__n & !c_c_3__n
+    # !opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_1_ & !a_n_0_ & !c_c_2__n
+       & !c_c_3__n
+    # !opcode_n_2_ & opcode_n_1_ & opcode_n_0_ & !a_n_1_ & !a_n_0_ & !c_c_2__n
+       & !c_c_3__n
+    # opcode_n_2_ & opcode_n_1_ & !opcode_n_0_ & a_n_1_ & a_n_0_ & b_n_1_
+       & b_n_0_ & !c_c_2__n & !c_c_3__n
+    # opcode_n_2_ & opcode_n_1_ & opcode_n_0_ & !a_n_1_ & !b_n_1_ & !c_c_2__n
+       & !c_c_3__n
+    # opcode_n_2_ & opcode_n_1_ & opcode_n_0_ & !a_n_0_ & !b_n_0_ & !c_c_2__n
+       & !c_c_3__n ; (12 pterms, 10 signals)
+zf.X2 = opcode_n_2_ & opcode_n_1_ & opcode_n_0_ & !c_c_2__n & !c_c_3__n ; (1 pterm, 5 signals)
+

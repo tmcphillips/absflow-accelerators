@@ -1,0 +1,60 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+a = d0 & d2 & d3
+    # d1 & d2 & !d3
+    # !d0 & !d2 & d3
+    # !d1 & !d2 & !enableHex
+    # d0 & !d3 & !enableHex
+    # !d1 & d3 ; (6 pterms, 5 signals)
+a.OE = !enableDisplay ; (1 pterm, 1 signal)
+
+b = !d0 & d1 & !d3 & !enableHex
+    # !d0 & !d1 & d3
+    # d0 & d2 & !enableHex
+    # d0 & d1 & d3
+    # d1 & d2
+    # d2 & d3 ; (6 pterms, 5 signals)
+b.OE = !enableDisplay ; (1 pterm, 1 signal)
+
+c = d2 & !d3 & !enableHex
+    # !d2 & d3
+    # d1 & d2
+    # !d0 & d3
+    # !d0 & d1 & !enableHex ; (5 pterms, 5 signals)
+c.OE = !enableDisplay ; (1 pterm, 1 signal)
+
+d = !( d0 & !d1 & d2 & !d3
+    # !d0 & d1 & d2 & d3
+    # d0 & d1 & !d2 & d3
+    # !d0 & !d1 & !d2
+    # !d1 & !d3 & enableHex
+    # !d2 & !d3 & enableHex ) ; (6 pterms, 5 signals)
+d.OE = !enableDisplay ; (1 pterm, 1 signal)
+
+e = d0 & d1 & d2
+    # d0 & !d1 & d3
+    # !d2 & !d3 & !enableHex
+    # !d1 & !d3 & !enableHex ; (4 pterms, 5 signals)
+e.OE = !enableDisplay ; (1 pterm, 1 signal)
+
+f.X1 = d0 & !d2 & d3
+    # !d0 & d1 & d3
+    # !d1 & !d3 & !enableHex
+    # d0 & d1 & !d2 & !enableHex ; (4 pterms, 5 signals)
+f.X2 = d1 & d2 ; (1 pterm, 2 signals)
+f.OE = !enableDisplay ; (1 pterm, 1 signal)
+
+g = !( d0 & d1 & !d2 & !d3
+    # !d0 & !d1 & !d2 & d3
+    # d1 & d2 & d3
+    # !d1 & !d3 & enableHex
+    # !d2 & !d3 & enableHex ) ; (5 pterms, 5 signals)
+g.OE = !enableDisplay ; (1 pterm, 1 signal)
+

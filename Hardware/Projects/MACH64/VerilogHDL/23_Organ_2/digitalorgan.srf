@@ -1,0 +1,97 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 23_organ_2
+
+#Wed Feb 15 14:49:54 2012
+
+$ Start of Compile
+#Wed Feb 15 14:49:54 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\digitalorgan.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\digitalorgan.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\ripplecounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\ripplecounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\tflipflop.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\digitalorgan.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\clocksynthesizer.v"
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\digitalorgan.v changed - recompiling
+Selecting top level module DigitalOrgan
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000000011
+   Generated name = RippleCounter_3s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000011110100001001000000
+	OUT_FREQ=32'b00000000000000000000010000010111
+	BITS=32'b00000000000000000000000000001001
+	TOGGLE_PERIOD=32'b00000000000000000000000111011101
+   Generated name = ClockSynthesizer_1000000s_1047s_9s_477s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000011110100001001000000
+	OUT_FREQ=32'b00000000000000000000010010010111
+	BITS=32'b00000000000000000000000000001001
+	TOGGLE_PERIOD=32'b00000000000000000000000110101001
+   Generated name = ClockSynthesizer_1000000s_1175s_9s_425s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000011110100001001000000
+	OUT_FREQ=32'b00000000000000000000010100100111
+	BITS=32'b00000000000000000000000000001001
+	TOGGLE_PERIOD=32'b00000000000000000000000101111011
+   Generated name = ClockSynthesizer_1000000s_1319s_9s_379s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000011110100001001000000
+	OUT_FREQ=32'b00000000000000000000010101110101
+	BITS=32'b00000000000000000000000000001001
+	TOGGLE_PERIOD=32'b00000000000000000000000101100101
+   Generated name = ClockSynthesizer_1000000s_1397s_9s_357s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\digitalorgan.v":4:7:4:18|Synthesizing module DigitalOrgan
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Feb 15 14:49:55 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\23_organ_2\synlog\digitalorgan_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             43 uses
+IBUF            7 uses
+OBUF            4 uses
+AND2            94 uses
+XOR2            36 uses
+INV             31 uses
+OR2             3 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Feb 15 14:49:56 2012
+
+###########################################################]

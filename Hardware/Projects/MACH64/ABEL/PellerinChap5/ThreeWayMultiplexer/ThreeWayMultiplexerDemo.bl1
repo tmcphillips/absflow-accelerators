@@ -1,0 +1,78 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:17:09 2012
+#$ MODULE threewaymultiplexerdemo
+#$ JEDECFILE threewaymultiplexerdemo
+#$ PINS 18 a0:24 a1:26 a2:27 a3:28 b0:20 b1:21 b2:22 b3:23 c0:14 c1:15 c2:16 c3:17 s0:7 \
+#  s1:8 y0:31 y1:32 y2:33 y3:34
+#$ NODES 22 multiplexer>a0'co'  multiplexer>a1'co'  multiplexer>a2'co'  multiplexer>a3'co'  \
+#  multiplexer>b0'co'  multiplexer>b1'co'  multiplexer>b2'co'  multiplexer>b3'co'  \
+#  multiplexer>c0'co'  multiplexer>c1'co'  multiplexer>c2'co'  multiplexer>c3'co'  \
+#  multiplexer>d0'co'  multiplexer>d1'co'  multiplexer>d2'co'  multiplexer>d3'co'  \
+#  multiplexer>select0'co'  multiplexer>select1'co'  multiplexer>out0'co'  multiplexer>out1'co'  \
+#  multiplexer>out2'co'  multiplexer>out3'co' 
+#$ INTERFACE threewaymultiplexer  22 a0'i'  a1'i'  a2'i'  a3'i'  b0'i'  b1'i'  b2'i'  b3'i'  c0'i'  c1'i'  c2'i'  c3'i'  d0'1,i'  d1'1,i'  d2'1,i'  d3'1,i'  select0'i'  \
+#  select1'i'  out0'o'  out1'o'  out2'o'  out3'o' 
+#$ INSTANCE multiplexer threewaymultiplexer 22 multiplexer>a0 multiplexer>a1 \
+#  multiplexer>a2 multiplexer>a3 multiplexer>b0 multiplexer>b1 multiplexer>b2 \
+#  multiplexer>b3 multiplexer>c0 multiplexer>c1 multiplexer>c2 multiplexer>c3 \
+#  multiplexer>d0 multiplexer>d1 multiplexer>d2 multiplexer>d3 multiplexer>select0 \
+#  multiplexer>select1 multiplexer>out0 multiplexer>out1 multiplexer>out2 \
+#  multiplexer>out3
+.model threewaymultiplexerdemo
+.inputs a3.BLIF a2.BLIF a1.BLIF a0.BLIF b3.BLIF b2.BLIF b1.BLIF b0.BLIF \
+c3.BLIF c2.BLIF c1.BLIF c0.BLIF s1.BLIF s0.BLIF multiplexer>out3.BLIF \
+multiplexer>out2.BLIF multiplexer>out1.BLIF multiplexer>out0.BLIF
+.outputs multiplexer>a0 multiplexer>a1 multiplexer>a2 multiplexer>a3 \
+multiplexer>b0 multiplexer>b1 multiplexer>b2 multiplexer>b3 multiplexer>c0 \
+multiplexer>c1 multiplexer>c2 multiplexer>c3 multiplexer>d0 multiplexer>d1 \
+multiplexer>d2 multiplexer>d3 multiplexer>select0 multiplexer>select1 y0 y1 y2 \
+y3
+.names a0.BLIF multiplexer>a0
+0 1
+.names a1.BLIF multiplexer>a1
+0 1
+.names a2.BLIF multiplexer>a2
+0 1
+.names a3.BLIF multiplexer>a3
+0 1
+.names b0.BLIF multiplexer>b0
+0 1
+.names b1.BLIF multiplexer>b1
+0 1
+.names b2.BLIF multiplexer>b2
+0 1
+.names b3.BLIF multiplexer>b3
+0 1
+.names c0.BLIF multiplexer>c0
+0 1
+.names c1.BLIF multiplexer>c1
+0 1
+.names c2.BLIF multiplexer>c2
+0 1
+.names c3.BLIF multiplexer>c3
+0 1
+.names multiplexer>d0
+ 1
+.names multiplexer>d1
+ 1
+.names multiplexer>d2
+ 1
+.names multiplexer>d3
+ 1
+.names s0.BLIF multiplexer>select0
+0 1
+.names s1.BLIF multiplexer>select1
+0 1
+.names multiplexer>out0.BLIF y0
+1 1
+0 0
+.names multiplexer>out1.BLIF y1
+1 1
+0 0
+.names multiplexer>out2.BLIF y2
+1 1
+0 0
+.names multiplexer>out3.BLIF y3
+1 1
+0 0
+.end

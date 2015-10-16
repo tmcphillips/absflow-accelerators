@@ -1,0 +1,6 @@
+Selecting top level module ntscPong
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v":17:7:17:14|Synthesizing module ntscPong
+
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v":183:1:183:6|Feedback mux created for signal ballY[5:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v":60:1:60:6|Trying to extract state machine for register vState
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v":60:1:60:6|Trying to extract state machine for register hState

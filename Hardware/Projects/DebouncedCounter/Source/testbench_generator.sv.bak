@@ -1,0 +1,77 @@
+import fourbitcounter_transactions_pkg::*;
+import ovm_pkg::*;
+
+module testbench_generator(ref tlm_fifo #(fourbitcounter_operation) op_fifo);
+  
+  fourbitcounter_operation t;
+    
+  task run;
+
+    t = new(reset_op, 0, 5, 5);
+    op_fifo.put(t.clone);
+    
+    
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, i, 5);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(down_op, 0, i, 5);
+        op_fifo.put(t.clone);
+      end
+      
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(load_op, 0, i, 5);
+        t.arg = $random;
+        op_fifo.put(t.clone);
+      end
+    
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(reset_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+
+    
+//    repeat(1000) begin
+//      t.random();
+//      op_fifo.put(t.clone);      
+//    end
+    
+    #500000;
+		
+		ovm_top.die();
+				
+		$stop;
+    
+  endtask
+    
+endmodule

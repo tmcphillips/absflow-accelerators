@@ -1,0 +1,18 @@
+module OctalLatch interface([d7..d0],le,oe -> [q7..q0])
+
+	oe 	pin;
+	le     	pin;
+	d7..d0 	pin;
+	q7..q0 	pin istype 'reg';
+	
+	data = [d7..d0];
+	latch = [q7..q0];
+
+equations
+
+	latch := data;
+
+	latch.le = le;
+	latch.oe = oe;
+
+end

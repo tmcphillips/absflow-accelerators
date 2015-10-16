@@ -1,0 +1,803 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Thu Feb 02 14:00:36 2012
+#$ PROPERTY LATTICE PULL DEFAULT = DOWN
+#$ MODULE mach64_verilog_project
+#$ PINS 15 keypadRows_3_:28'ke'  keypadColumns_2_:22'ke'  keypadRows_2_:27'ke'  \
+#  segments_6_:31'ke'  keypadRows_1_:26'ke'  oneMHzClock:19'ke'  keypadRows_0_:24'ke'  \
+#  keypadColumns_1_:21'ke'  keypadColumns_0_:20'ke'  segments_5_:32'ke'  segments_4_:33'ke'  \
+#  segments_3_:34'ke'  segments_2_:38'ke'  segments_1_:39'ke'  segments_0_:40'ke' 
+#$ NODES 172 u0rs_u1rc_genblk1_8__uitff_q u1ks_activeKey_reg_0_ \
+#  u1ks_activeKey_reg_1_ u1ks_activeKey_reg_2_ u1ks_activeKey_reg_3_ \
+#  u2slpf_stableValue_reg_0_ u2slpf_stableValue_reg_1_ u2slpf_stableValue_reg_2_ \
+#  u2slpf_stableValue_reg_3_ u0rs_u1rc_u0tff_q u0rs_u1rc_genblk1_0__uitff_q \
+#  u0rs_u1rc_genblk1_1__uitff_q u0rs_u1rc_genblk1_2__uitff_q \
+#  u0rs_u1rc_genblk1_3__uitff_q u0rs_u1rc_genblk1_4__uitff_q \
+#  u0rs_u1rc_genblk1_5__uitff_q u0rs_u1rc_genblk1_6__uitff_q \
+#  u0rs_u1rc_genblk1_7__uitff_q N_36 N_33 N_37 N_39 N_40 N_30 N_42 N_47 N_43 N_44 N_45 N_48 \
+#  N_41 N_46 N_38 u2slpf_state_reg_0_ u2slpf_state_reg_1_ \
+#  u2slpf_valueHistory_reg_1__0_ u2slpf_valueHistory_reg_1__1_ \
+#  u2slpf_valueHistory_reg_1__2_ u2slpf_valueHistory_reg_1__3_ \
+#  u2slpf_valueHistory_reg_2__0_ u2slpf_valueHistory_reg_2__1_ \
+#  u2slpf_valueHistory_reg_2__2_ u2slpf_valueHistory_reg_2__3_ \
+#  u2slpf_un1_rawvalue_0__n u2slpf_un1_rawvalue_1__n u2slpf_un1_rawvalue_2__n \
+#  u2slpf_un1_rawvalue_3__n u2slpf_valueHistory_reg_3__0_ \
+#  u2slpf_valueHistory_reg_3__1_ u2slpf_valueHistory_reg_3__2_ \
+#  u2slpf_valueHistory_reg_3__3_ u2slpf_un1_rawvalue_1_n u2slpf_stablevalue_reg3_n \
+#  u2slpf_stablevalue_reg_0_sqmuxa_n u2slpf_G_23 u2slpf_G_24 u2slpf_G_25 u2slpf_G_26 \
+#  u2slpf_G_28 u2slpf_G_29 u2slpf_G_30 u2slpf_G_31 u2slpf_n_58_n u2slpf_n_59_n \
+#  u1ks_un1_activekey_reg9_n u1ks_n_54_n u1ks_n_15_n u1ks_n_17_n u1ks_n_18_n \
+#  u1ks_n_19_n u1ks_n_20_n u1ks_n_21_n u1ks_n_22_n u1ks_un1_activeKey_reg9_0_x2 \
+#  u1ks_un1_activeKey_reg9_0_x2_0 keypress_i_2__n keypress_i_0__n keypress_i_3__n \
+#  keypress_i_1__n u0rs_counter_i_4__n u0rs_counter_i_3__n u0rs_counter_i_5__n \
+#  u0rs_counter_i_8__n u0rs_counter_i_7__n u0rs_counter_i_6__n u0rs_counter_i_2__n \
+#  u0rs_counter_i_1__n u0rs_counter_i_0__n u2slpf_state_reg_i_0__n \
+#  u2slpf_stablevalue_reg3_i_n u2slpf_un1_rawvalue_1_i_n u2slpf_n_65_i_n \
+#  u2slpf_n_66_i_n u2slpf_n_67_i_n u2slpf_n_68_i_n u2slpf_n_60_i_n u2slpf_n_61_i_n \
+#  u2slpf_n_62_i_n u2slpf_n_63_i_n keypadrows_i_0__n keypadrows_i_2__n \
+#  keypadrows_i_1__n keypadrows_i_3__n keypadcolumns_i_1__n keypadcolumns_i_2__n \
+#  oneMHzClock_c keypadrows_c_0__n keypadrows_c_1__n keypadrows_c_2__n \
+#  keypadrows_c_3__n keypadcolumns_c_0__n u1ks_activeColumn_reg_1_0_reg \
+#  u1ks_activeColumn_reg_1_1_reg N_43_i N_27_i N_40_i N_42_i N_21_i N_39_i N_47_i N_38_i \
+#  N_19_i N_36_i N_37_i N_33_i N_46_i N_32_0 N_44_i N_45_i N_31_0 N_30_i N_29_i N_41_i N_25_i \
+#  N_23_i N_48_i N_17_i u2slpf_n_58_i_n u2slpf_n_59_i_n u1ks_n_21_i_n u1ks_n_22_i_n \
+#  u1ks_un1_activekey_reg9_0_n u1ks_n_19_i_n u1ks_n_20_i_n u1ks_n_54_i_n \
+#  u1ks_n_17_i_n u1ks_n_18_i_n u1ks_n_15_i_n u1ks_n_5_0_n u1ks_n_21_1_n u1ks_n_22_1_n \
+#  u2slpf_un1_rawvalue_1_0__n u2slpf_un1_rawvalue_2_0__n u2slpf_un1_rawvalue_1_1__n \
+#  u2slpf_un1_rawvalue_2_1__n u2slpf_un1_rawvalue_1_2__n u2slpf_un1_rawvalue_2_2__n \
+#  u2slpf_un1_rawvalue_1_3__n u2slpf_un1_rawvalue_2_3__n N_19_i_1 N_21_i_1 N_27_i_1 \
+#  N_38_1 N_41_1 N_46_1 u2slpf_stablevalue_reg3_1_n u2slpf_stablevalue_reg3_2_n \
+#  u2slpf_un1_rawvalue_1_1_n u2slpf_un1_rawvalue_1_2_n u1ks_n_42_i_1_n \
+#  u1ks_n_42_i_2_n u1ks_n_40_i_1_n
+.model keypadscannerdemo
+.inputs keypadRows_3_.BLIF oneMHzClock.BLIF keypadRows_2_.BLIF \
+keypadRows_1_.BLIF keypadRows_0_.BLIF u0rs_u1rc_genblk1_8__uitff_q.BLIF \
+u1ks_activeKey_reg_0_.BLIF u1ks_activeKey_reg_1_.BLIF \
+u1ks_activeKey_reg_2_.BLIF u1ks_activeKey_reg_3_.BLIF \
+u2slpf_stableValue_reg_0_.BLIF u2slpf_stableValue_reg_1_.BLIF \
+u2slpf_stableValue_reg_2_.BLIF u2slpf_stableValue_reg_3_.BLIF \
+u0rs_u1rc_u0tff_q.BLIF u0rs_u1rc_genblk1_0__uitff_q.BLIF \
+u0rs_u1rc_genblk1_1__uitff_q.BLIF u0rs_u1rc_genblk1_2__uitff_q.BLIF \
+u0rs_u1rc_genblk1_3__uitff_q.BLIF u0rs_u1rc_genblk1_4__uitff_q.BLIF \
+u0rs_u1rc_genblk1_5__uitff_q.BLIF u0rs_u1rc_genblk1_6__uitff_q.BLIF \
+u0rs_u1rc_genblk1_7__uitff_q.BLIF N_36.BLIF N_33.BLIF N_37.BLIF N_39.BLIF \
+N_40.BLIF N_30.BLIF N_42.BLIF N_47.BLIF N_43.BLIF N_44.BLIF N_45.BLIF \
+N_48.BLIF N_41.BLIF N_46.BLIF N_38.BLIF u2slpf_state_reg_0_.BLIF \
+u2slpf_state_reg_1_.BLIF u2slpf_valueHistory_reg_1__0_.BLIF \
+u2slpf_valueHistory_reg_1__1_.BLIF u2slpf_valueHistory_reg_1__2_.BLIF \
+u2slpf_valueHistory_reg_1__3_.BLIF u2slpf_valueHistory_reg_2__0_.BLIF \
+u2slpf_valueHistory_reg_2__1_.BLIF u2slpf_valueHistory_reg_2__2_.BLIF \
+u2slpf_valueHistory_reg_2__3_.BLIF u2slpf_un1_rawvalue_0__n.BLIF \
+u2slpf_un1_rawvalue_1__n.BLIF u2slpf_un1_rawvalue_2__n.BLIF \
+u2slpf_un1_rawvalue_3__n.BLIF u2slpf_valueHistory_reg_3__0_.BLIF \
+u2slpf_valueHistory_reg_3__1_.BLIF u2slpf_valueHistory_reg_3__2_.BLIF \
+u2slpf_valueHistory_reg_3__3_.BLIF u2slpf_un1_rawvalue_1_n.BLIF \
+u2slpf_stablevalue_reg3_n.BLIF u2slpf_stablevalue_reg_0_sqmuxa_n.BLIF \
+u2slpf_G_23.BLIF u2slpf_G_24.BLIF u2slpf_G_25.BLIF u2slpf_G_26.BLIF \
+u2slpf_G_28.BLIF u2slpf_G_29.BLIF u2slpf_G_30.BLIF u2slpf_G_31.BLIF \
+u2slpf_n_58_n.BLIF u2slpf_n_59_n.BLIF u1ks_un1_activekey_reg9_n.BLIF \
+u1ks_n_54_n.BLIF u1ks_n_15_n.BLIF u1ks_n_17_n.BLIF u1ks_n_18_n.BLIF \
+u1ks_n_19_n.BLIF u1ks_n_20_n.BLIF u1ks_n_21_n.BLIF u1ks_n_22_n.BLIF \
+u1ks_un1_activeKey_reg9_0_x2.BLIF u1ks_un1_activeKey_reg9_0_x2_0.BLIF \
+keypress_i_2__n.BLIF keypress_i_0__n.BLIF keypress_i_3__n.BLIF \
+keypress_i_1__n.BLIF u0rs_counter_i_4__n.BLIF u0rs_counter_i_3__n.BLIF \
+u0rs_counter_i_5__n.BLIF u0rs_counter_i_8__n.BLIF u0rs_counter_i_7__n.BLIF \
+u0rs_counter_i_6__n.BLIF u0rs_counter_i_2__n.BLIF u0rs_counter_i_1__n.BLIF \
+u0rs_counter_i_0__n.BLIF u2slpf_state_reg_i_0__n.BLIF \
+u2slpf_stablevalue_reg3_i_n.BLIF u2slpf_un1_rawvalue_1_i_n.BLIF \
+u2slpf_n_65_i_n.BLIF u2slpf_n_66_i_n.BLIF u2slpf_n_67_i_n.BLIF \
+u2slpf_n_68_i_n.BLIF u2slpf_n_60_i_n.BLIF u2slpf_n_61_i_n.BLIF \
+u2slpf_n_62_i_n.BLIF u2slpf_n_63_i_n.BLIF keypadrows_i_0__n.BLIF \
+keypadrows_i_2__n.BLIF keypadrows_i_1__n.BLIF keypadrows_i_3__n.BLIF \
+keypadcolumns_i_1__n.BLIF keypadcolumns_i_2__n.BLIF oneMHzClock_c.BLIF \
+keypadrows_c_0__n.BLIF keypadrows_c_1__n.BLIF keypadrows_c_2__n.BLIF \
+keypadrows_c_3__n.BLIF keypadcolumns_c_0__n.BLIF \
+u1ks_activeColumn_reg_1_0_reg.BLIF u1ks_activeColumn_reg_1_1_reg.BLIF \
+N_43_i.BLIF N_27_i.BLIF N_40_i.BLIF N_42_i.BLIF N_21_i.BLIF N_39_i.BLIF \
+N_47_i.BLIF N_38_i.BLIF N_19_i.BLIF N_36_i.BLIF N_37_i.BLIF N_33_i.BLIF \
+N_46_i.BLIF N_32_0.BLIF N_44_i.BLIF N_45_i.BLIF N_31_0.BLIF N_30_i.BLIF \
+N_29_i.BLIF N_41_i.BLIF N_25_i.BLIF N_23_i.BLIF N_48_i.BLIF N_17_i.BLIF \
+u2slpf_n_58_i_n.BLIF u2slpf_n_59_i_n.BLIF u1ks_n_21_i_n.BLIF \
+u1ks_n_22_i_n.BLIF u1ks_un1_activekey_reg9_0_n.BLIF u1ks_n_19_i_n.BLIF \
+u1ks_n_20_i_n.BLIF u1ks_n_54_i_n.BLIF u1ks_n_17_i_n.BLIF u1ks_n_18_i_n.BLIF \
+u1ks_n_15_i_n.BLIF u1ks_n_5_0_n.BLIF u1ks_n_21_1_n.BLIF u1ks_n_22_1_n.BLIF \
+u2slpf_un1_rawvalue_1_0__n.BLIF u2slpf_un1_rawvalue_2_0__n.BLIF \
+u2slpf_un1_rawvalue_1_1__n.BLIF u2slpf_un1_rawvalue_2_1__n.BLIF \
+u2slpf_un1_rawvalue_1_2__n.BLIF u2slpf_un1_rawvalue_2_2__n.BLIF \
+u2slpf_un1_rawvalue_1_3__n.BLIF u2slpf_un1_rawvalue_2_3__n.BLIF N_19_i_1.BLIF \
+N_21_i_1.BLIF N_27_i_1.BLIF N_38_1.BLIF N_41_1.BLIF N_46_1.BLIF \
+u2slpf_stablevalue_reg3_1_n.BLIF u2slpf_stablevalue_reg3_2_n.BLIF \
+u2slpf_un1_rawvalue_1_1_n.BLIF u2slpf_un1_rawvalue_1_2_n.BLIF \
+u1ks_n_42_i_1_n.BLIF u1ks_n_42_i_2_n.BLIF u1ks_n_40_i_1_n.BLIF
+.outputs keypadColumns_2_ segments_6_ keypadColumns_1_ keypadColumns_0_ \
+segments_5_ segments_4_ segments_3_ segments_2_ segments_1_ segments_0_ \
+u1ks_activeColumn_reg_1_0_reg.D u1ks_activeColumn_reg_1_0_reg.C \
+u1ks_activeColumn_reg_1_1_reg.D u1ks_activeColumn_reg_1_1_reg.C \
+u1ks_activeKey_reg_0_.D u1ks_activeKey_reg_0_.CE u1ks_activeKey_reg_0_.C \
+u1ks_activeKey_reg_1_.D u1ks_activeKey_reg_1_.CE u1ks_activeKey_reg_1_.C \
+u1ks_activeKey_reg_2_.D u1ks_activeKey_reg_2_.CE u1ks_activeKey_reg_2_.C \
+u1ks_activeKey_reg_3_.D u1ks_activeKey_reg_3_.CE u1ks_activeKey_reg_3_.C \
+u2slpf_valueHistory_reg_1__1_.D u2slpf_valueHistory_reg_1__1_.CE \
+u2slpf_valueHistory_reg_1__1_.C u2slpf_valueHistory_reg_1__2_.D \
+u2slpf_valueHistory_reg_1__2_.CE u2slpf_valueHistory_reg_1__2_.C \
+u2slpf_valueHistory_reg_1__3_.D u2slpf_valueHistory_reg_1__3_.CE \
+u2slpf_valueHistory_reg_1__3_.C u2slpf_state_reg_0_.D u2slpf_state_reg_0_.C \
+u2slpf_state_reg_1_.D u2slpf_state_reg_1_.C u2slpf_stableValue_reg_0_.D \
+u2slpf_stableValue_reg_0_.CE u2slpf_stableValue_reg_0_.C \
+u2slpf_stableValue_reg_1_.D u2slpf_stableValue_reg_1_.CE \
+u2slpf_stableValue_reg_1_.C u2slpf_stableValue_reg_2_.D \
+u2slpf_stableValue_reg_2_.CE u2slpf_stableValue_reg_2_.C \
+u2slpf_stableValue_reg_3_.D u2slpf_stableValue_reg_3_.CE \
+u2slpf_stableValue_reg_3_.C u2slpf_valueHistory_reg_3__0_.D \
+u2slpf_valueHistory_reg_3__0_.CE u2slpf_valueHistory_reg_3__0_.C \
+u2slpf_valueHistory_reg_3__1_.D u2slpf_valueHistory_reg_3__1_.CE \
+u2slpf_valueHistory_reg_3__1_.C u2slpf_valueHistory_reg_3__2_.D \
+u2slpf_valueHistory_reg_3__2_.CE u2slpf_valueHistory_reg_3__2_.C \
+u2slpf_valueHistory_reg_3__3_.D u2slpf_valueHistory_reg_3__3_.CE \
+u2slpf_valueHistory_reg_3__3_.C u2slpf_valueHistory_reg_2__0_.D \
+u2slpf_valueHistory_reg_2__0_.CE u2slpf_valueHistory_reg_2__0_.C \
+u2slpf_valueHistory_reg_2__1_.D u2slpf_valueHistory_reg_2__1_.CE \
+u2slpf_valueHistory_reg_2__1_.C u2slpf_valueHistory_reg_2__2_.D \
+u2slpf_valueHistory_reg_2__2_.CE u2slpf_valueHistory_reg_2__2_.C \
+u2slpf_valueHistory_reg_2__3_.D u2slpf_valueHistory_reg_2__3_.CE \
+u2slpf_valueHistory_reg_2__3_.C u2slpf_valueHistory_reg_1__0_.D \
+u2slpf_valueHistory_reg_1__0_.CE u2slpf_valueHistory_reg_1__0_.C \
+u0rs_u1rc_genblk1_5__uitff_q.D u0rs_u1rc_genblk1_5__uitff_q.C \
+u0rs_u1rc_genblk1_7__uitff_q.D u0rs_u1rc_genblk1_7__uitff_q.C \
+u0rs_u1rc_u0tff_q.D u0rs_u1rc_u0tff_q.C u0rs_u1rc_genblk1_1__uitff_q.D \
+u0rs_u1rc_genblk1_1__uitff_q.C u0rs_u1rc_genblk1_0__uitff_q.D \
+u0rs_u1rc_genblk1_0__uitff_q.C u0rs_u1rc_genblk1_2__uitff_q.D \
+u0rs_u1rc_genblk1_2__uitff_q.C u0rs_u1rc_genblk1_6__uitff_q.D \
+u0rs_u1rc_genblk1_6__uitff_q.C u0rs_u1rc_genblk1_8__uitff_q.D \
+u0rs_u1rc_genblk1_8__uitff_q.C u0rs_u1rc_genblk1_4__uitff_q.D \
+u0rs_u1rc_genblk1_4__uitff_q.C u0rs_u1rc_genblk1_3__uitff_q.D \
+u0rs_u1rc_genblk1_3__uitff_q.C N_36 N_33 N_37 N_39 N_40 N_30 N_42 N_47 N_43 \
+N_44 N_45 N_48 N_41 N_46 N_38 u2slpf_un1_rawvalue_0__n \
+u2slpf_un1_rawvalue_1__n u2slpf_un1_rawvalue_2__n u2slpf_un1_rawvalue_3__n \
+u2slpf_un1_rawvalue_1_n u2slpf_stablevalue_reg3_n \
+u2slpf_stablevalue_reg_0_sqmuxa_n u2slpf_n_58_n u2slpf_n_59_n \
+u1ks_un1_activekey_reg9_n u1ks_n_54_n u1ks_n_15_n u1ks_n_17_n u1ks_n_18_n \
+u1ks_n_19_n u1ks_n_20_n u1ks_n_21_n u1ks_n_22_n keypress_i_2__n \
+keypress_i_0__n keypress_i_3__n keypress_i_1__n u0rs_counter_i_4__n \
+u0rs_counter_i_3__n u0rs_counter_i_5__n u0rs_counter_i_8__n \
+u0rs_counter_i_7__n u0rs_counter_i_6__n u0rs_counter_i_2__n \
+u0rs_counter_i_1__n u0rs_counter_i_0__n u2slpf_state_reg_i_0__n \
+u2slpf_stablevalue_reg3_i_n u2slpf_un1_rawvalue_1_i_n u2slpf_n_65_i_n \
+u2slpf_n_66_i_n u2slpf_n_67_i_n u2slpf_n_68_i_n u2slpf_n_60_i_n \
+u2slpf_n_61_i_n u2slpf_n_62_i_n u2slpf_n_63_i_n keypadrows_i_0__n \
+keypadrows_i_2__n keypadrows_i_1__n keypadrows_i_3__n keypadcolumns_i_1__n \
+keypadcolumns_i_2__n oneMHzClock_c keypadrows_c_0__n keypadrows_c_1__n \
+keypadrows_c_2__n keypadrows_c_3__n keypadcolumns_c_0__n N_43_i N_27_i N_40_i \
+N_42_i N_21_i N_39_i N_47_i N_38_i N_19_i N_36_i N_37_i N_33_i N_46_i N_32_0 \
+N_44_i N_45_i N_31_0 N_30_i N_29_i N_41_i N_25_i N_23_i N_48_i N_17_i \
+u2slpf_n_58_i_n u2slpf_n_59_i_n u1ks_n_21_i_n u1ks_n_22_i_n \
+u1ks_un1_activekey_reg9_0_n u1ks_n_19_i_n u1ks_n_20_i_n u1ks_n_54_i_n \
+u1ks_n_17_i_n u1ks_n_18_i_n u1ks_n_15_i_n u1ks_n_5_0_n u1ks_n_21_1_n \
+u1ks_n_22_1_n u2slpf_un1_rawvalue_1_0__n u2slpf_un1_rawvalue_2_0__n \
+u2slpf_un1_rawvalue_1_1__n u2slpf_un1_rawvalue_2_1__n \
+u2slpf_un1_rawvalue_1_2__n u2slpf_un1_rawvalue_2_2__n \
+u2slpf_un1_rawvalue_1_3__n u2slpf_un1_rawvalue_2_3__n N_19_i_1 N_21_i_1 \
+N_27_i_1 N_38_1 N_41_1 N_46_1 u2slpf_stablevalue_reg3_1_n \
+u2slpf_stablevalue_reg3_2_n u2slpf_un1_rawvalue_1_1_n \
+u2slpf_un1_rawvalue_1_2_n u1ks_n_42_i_1_n u1ks_n_42_i_2_n u1ks_n_40_i_1_n \
+u2slpf_G_23 u2slpf_G_24 u2slpf_G_25 u2slpf_G_26 u2slpf_G_28 u2slpf_G_29 \
+u2slpf_G_30 u2slpf_G_31 u1ks_un1_activeKey_reg9_0_x2 \
+u1ks_un1_activeKey_reg9_0_x2_0
+.names u1ks_n_40_i_1_n.BLIF u1ks_n_17_i_n.BLIF u1ks_activeKey_reg_0_.D
+11 1
+.names u1ks_n_42_i_1_n.BLIF u1ks_n_42_i_2_n.BLIF u1ks_activeKey_reg_1_.D
+11 1
+.names u1ks_n_5_0_n.BLIF u1ks_activeKey_reg_2_.D
+0 1
+.names u2slpf_n_58_i_n.BLIF u2slpf_n_59_i_n.BLIF u2slpf_state_reg_0_.D
+11 1
+.names u2slpf_n_58_i_n.BLIF u2slpf_state_reg_0_.BLIF u2slpf_state_reg_1_.D
+11 1
+.names oneMHzClock_c.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u0rs_u1rc_genblk1_8__uitff_q.D
+0 1
+.names N_33.BLIF u2slpf_stableValue_reg_1_.BLIF N_36
+11 1
+.names N_33_i.BLIF N_33
+0 1
+.names u2slpf_stableValue_reg_2_.BLIF u2slpf_stableValue_reg_3_.BLIF N_37
+11 1
+.names u2slpf_stableValue_reg_1_.BLIF u2slpf_stableValue_reg_3_.BLIF N_39
+11 1
+.names N_30.BLIF u2slpf_stableValue_reg_3_.BLIF N_40
+11 1
+.names N_30_i.BLIF N_30
+0 1
+.names N_47.BLIF u2slpf_stableValue_reg_0_.BLIF N_42
+11 1
+.names u2slpf_stableValue_reg_2_.BLIF keypress_i_1__n.BLIF N_47
+11 1
+.names N_33_i.BLIF u2slpf_stableValue_reg_1_.BLIF N_43
+11 1
+.names N_33_i.BLIF keypress_i_1__n.BLIF N_44
+11 1
+.names N_48.BLIF u2slpf_stableValue_reg_0_.BLIF N_45
+11 1
+.names N_30_i.BLIF keypress_i_3__n.BLIF N_48
+11 1
+.names N_41_1.BLIF keypress_i_2__n.BLIF N_41
+11 1
+.names N_46_1.BLIF u2slpf_stableValue_reg_2_.BLIF N_46
+11 1
+.names N_38_1.BLIF keypress_i_3__n.BLIF N_38
+11 1
+.names u2slpf_un1_rawvalue_1_0__n.BLIF u2slpf_un1_rawvalue_2_0__n.BLIF \
+u2slpf_un1_rawvalue_0__n
+11 1
+.names u2slpf_un1_rawvalue_1_1__n.BLIF u2slpf_un1_rawvalue_2_1__n.BLIF \
+u2slpf_un1_rawvalue_1__n
+11 1
+.names u2slpf_un1_rawvalue_1_2__n.BLIF u2slpf_un1_rawvalue_2_2__n.BLIF \
+u2slpf_un1_rawvalue_2__n
+11 1
+.names u2slpf_un1_rawvalue_1_3__n.BLIF u2slpf_un1_rawvalue_2_3__n.BLIF \
+u2slpf_un1_rawvalue_3__n
+11 1
+.names u2slpf_un1_rawvalue_1_1_n.BLIF u2slpf_un1_rawvalue_1_2_n.BLIF \
+u2slpf_un1_rawvalue_1_n
+11 1
+.names u2slpf_stablevalue_reg3_1_n.BLIF u2slpf_stablevalue_reg3_2_n.BLIF \
+u2slpf_stablevalue_reg3_n
+11 1
+.names u2slpf_stablevalue_reg3_n.BLIF u2slpf_state_reg_i_0__n.BLIF \
+u2slpf_stablevalue_reg_0_sqmuxa_n
+11 1
+.names u2slpf_state_reg_1_.BLIF u2slpf_un1_rawvalue_1_i_n.BLIF u2slpf_n_58_n
+11 1
+.names u2slpf_stablevalue_reg3_i_n.BLIF u2slpf_state_reg_i_0__n.BLIF \
+u2slpf_n_59_n
+11 1
+.names u1ks_un1_activekey_reg9_0_n.BLIF u1ks_un1_activekey_reg9_n
+0 1
+.names keypadcolumns_i_2__n.BLIF keypadrows_c_1__n.BLIF u1ks_n_54_n
+11 1
+.names u1ks_activeColumn_reg_1_1_reg.BLIF keypadrows_c_1__n.BLIF u1ks_n_15_n
+11 1
+.names keypadcolumns_i_1__n.BLIF keypadrows_c_2__n.BLIF u1ks_n_17_n
+11 1
+.names u1ks_activeColumn_reg_1_0_reg.BLIF keypadrows_i_2__n.BLIF u1ks_n_18_n
+11 1
+.names u1ks_activeColumn_reg_1_0_reg.BLIF keypadrows_i_3__n.BLIF u1ks_n_19_n
+11 1
+.names u1ks_activeColumn_reg_1_1_reg.BLIF keypadrows_i_1__n.BLIF u1ks_n_20_n
+11 1
+.names u1ks_n_21_1_n.BLIF keypadrows_i_2__n.BLIF u1ks_n_21_n
+11 1
+.names u1ks_n_22_1_n.BLIF keypadrows_i_3__n.BLIF u1ks_n_22_n
+11 1
+.names u2slpf_stableValue_reg_2_.BLIF keypress_i_2__n
+0 1
+.names u2slpf_stableValue_reg_0_.BLIF keypress_i_0__n
+0 1
+.names u2slpf_stableValue_reg_3_.BLIF keypress_i_3__n
+0 1
+.names u2slpf_stableValue_reg_1_.BLIF keypress_i_1__n
+0 1
+.names u0rs_u1rc_genblk1_3__uitff_q.BLIF u0rs_counter_i_4__n
+0 1
+.names u0rs_u1rc_genblk1_2__uitff_q.BLIF u0rs_counter_i_3__n
+0 1
+.names u0rs_u1rc_genblk1_4__uitff_q.BLIF u0rs_counter_i_5__n
+0 1
+.names u0rs_u1rc_genblk1_7__uitff_q.BLIF u0rs_counter_i_8__n
+0 1
+.names u0rs_u1rc_genblk1_6__uitff_q.BLIF u0rs_counter_i_7__n
+0 1
+.names u0rs_u1rc_genblk1_5__uitff_q.BLIF u0rs_counter_i_6__n
+0 1
+.names u0rs_u1rc_genblk1_1__uitff_q.BLIF u0rs_counter_i_2__n
+0 1
+.names u0rs_u1rc_genblk1_0__uitff_q.BLIF u0rs_counter_i_1__n
+0 1
+.names u0rs_u1rc_u0tff_q.BLIF u0rs_counter_i_0__n
+0 1
+.names u2slpf_state_reg_0_.BLIF u2slpf_state_reg_i_0__n
+0 1
+.names u2slpf_stablevalue_reg3_n.BLIF u2slpf_stablevalue_reg3_i_n
+0 1
+.names u2slpf_un1_rawvalue_1_n.BLIF u2slpf_un1_rawvalue_1_i_n
+0 1
+.names u2slpf_G_28.BLIF u2slpf_n_65_i_n
+0 1
+.names u2slpf_G_29.BLIF u2slpf_n_66_i_n
+0 1
+.names u2slpf_G_30.BLIF u2slpf_n_67_i_n
+0 1
+.names u2slpf_G_31.BLIF u2slpf_n_68_i_n
+0 1
+.names u2slpf_G_23.BLIF u2slpf_n_60_i_n
+0 1
+.names u2slpf_G_24.BLIF u2slpf_n_61_i_n
+0 1
+.names u2slpf_G_25.BLIF u2slpf_n_62_i_n
+0 1
+.names u2slpf_G_26.BLIF u2slpf_n_63_i_n
+0 1
+.names keypadrows_c_0__n.BLIF keypadrows_i_0__n
+0 1
+.names keypadrows_c_2__n.BLIF keypadrows_i_2__n
+0 1
+.names keypadrows_c_1__n.BLIF keypadrows_i_1__n
+0 1
+.names keypadrows_c_3__n.BLIF keypadrows_i_3__n
+0 1
+.names u1ks_activeColumn_reg_1_0_reg.BLIF keypadcolumns_i_1__n
+0 1
+.names u1ks_activeColumn_reg_1_1_reg.BLIF keypadcolumns_i_2__n
+0 1
+.names keypadcolumns_i_1__n.BLIF keypadcolumns_i_2__n.BLIF \
+keypadcolumns_c_0__n
+11 1
+.names N_43.BLIF N_43_i
+0 1
+.names N_27_i_1.BLIF N_43_i.BLIF N_27_i
+11 1
+.names N_40.BLIF N_40_i
+0 1
+.names N_42.BLIF N_42_i
+0 1
+.names N_21_i_1.BLIF keypress_i_0__n.BLIF N_21_i
+11 1
+.names N_39.BLIF N_39_i
+0 1
+.names N_47.BLIF N_47_i
+0 1
+.names N_38.BLIF N_38_i
+0 1
+.names N_19_i_1.BLIF N_38_i.BLIF N_19_i
+11 1
+.names N_36.BLIF N_36_i
+0 1
+.names N_37.BLIF N_37_i
+0 1
+.names u2slpf_stableValue_reg_2_.BLIF keypress_i_0__n.BLIF N_33_i
+11 1
+.names N_46.BLIF N_46_i
+0 1
+.names N_40_i.BLIF N_46_i.BLIF N_32_0
+11 1
+.names N_44.BLIF N_44_i
+0 1
+.names N_45.BLIF N_45_i
+0 1
+.names N_44_i.BLIF N_45_i.BLIF N_31_0
+11 1
+.names keypress_i_1__n.BLIF keypress_i_2__n.BLIF N_30_i
+11 1
+.names N_31_0.BLIF N_40_i.BLIF N_29_i
+11 1
+.names N_41.BLIF N_41_i
+0 1
+.names N_40_i.BLIF N_41_i.BLIF N_25_i
+11 1
+.names N_31_0.BLIF N_32_0.BLIF N_23_i
+11 1
+.names N_48.BLIF N_48_i
+0 1
+.names N_32_0.BLIF N_48_i.BLIF N_17_i
+11 1
+.names u2slpf_n_58_n.BLIF u2slpf_n_58_i_n
+0 1
+.names u2slpf_n_59_n.BLIF u2slpf_n_59_i_n
+0 1
+.names u1ks_n_21_n.BLIF u1ks_n_21_i_n
+0 1
+.names u1ks_n_22_n.BLIF u1ks_n_22_i_n
+0 1
+.names u1ks_n_21_i_n.BLIF u1ks_n_22_i_n.BLIF u1ks_un1_activekey_reg9_0_n
+11 1
+.names u1ks_n_19_n.BLIF u1ks_n_19_i_n
+0 1
+.names u1ks_n_20_n.BLIF u1ks_n_20_i_n
+0 1
+.names u1ks_n_54_n.BLIF u1ks_n_54_i_n
+0 1
+.names u1ks_n_17_n.BLIF u1ks_n_17_i_n
+0 1
+.names u1ks_n_18_n.BLIF u1ks_n_18_i_n
+0 1
+.names u1ks_n_15_n.BLIF u1ks_n_15_i_n
+0 1
+.names keypadrows_i_2__n.BLIF u1ks_n_15_i_n.BLIF u1ks_n_5_0_n
+11 1
+.names u1ks_un1_activeKey_reg9_0_x2_0.BLIF keypadrows_i_0__n.BLIF \
+u1ks_n_21_1_n
+11 1
+.names u1ks_un1_activeKey_reg9_0_x2.BLIF keypadrows_i_1__n.BLIF u1ks_n_22_1_n
+11 1
+.names u1ks_activeKey_reg_0_.BLIF u2slpf_valueHistory_reg_1__0_.BLIF \
+u2slpf_un1_rawvalue_1_0__n
+11 1
+.names u2slpf_valueHistory_reg_2__0_.BLIF u2slpf_valueHistory_reg_3__0_.BLIF \
+u2slpf_un1_rawvalue_2_0__n
+11 1
+.names u1ks_activeKey_reg_1_.BLIF u2slpf_valueHistory_reg_1__1_.BLIF \
+u2slpf_un1_rawvalue_1_1__n
+11 1
+.names u2slpf_valueHistory_reg_2__1_.BLIF u2slpf_valueHistory_reg_3__1_.BLIF \
+u2slpf_un1_rawvalue_2_1__n
+11 1
+.names u1ks_activeKey_reg_2_.BLIF u2slpf_valueHistory_reg_1__2_.BLIF \
+u2slpf_un1_rawvalue_1_2__n
+11 1
+.names u2slpf_valueHistory_reg_2__2_.BLIF u2slpf_valueHistory_reg_3__2_.BLIF \
+u2slpf_un1_rawvalue_2_2__n
+11 1
+.names u1ks_activeKey_reg_3_.BLIF u2slpf_valueHistory_reg_1__3_.BLIF \
+u2slpf_un1_rawvalue_1_3__n
+11 1
+.names u2slpf_valueHistory_reg_2__3_.BLIF u2slpf_valueHistory_reg_3__3_.BLIF \
+u2slpf_un1_rawvalue_2_3__n
+11 1
+.names N_36_i.BLIF N_37_i.BLIF N_19_i_1
+11 1
+.names N_39_i.BLIF N_47_i.BLIF N_21_i_1
+11 1
+.names N_40_i.BLIF N_42_i.BLIF N_27_i_1
+11 1
+.names u2slpf_stableValue_reg_0_.BLIF keypress_i_2__n.BLIF N_38_1
+11 1
+.names u2slpf_stableValue_reg_1_.BLIF keypress_i_0__n.BLIF N_41_1
+11 1
+.names u2slpf_stableValue_reg_0_.BLIF u2slpf_stableValue_reg_1_.BLIF N_46_1
+11 1
+.names u2slpf_n_65_i_n.BLIF u2slpf_n_66_i_n.BLIF u2slpf_stablevalue_reg3_1_n
+11 1
+.names u2slpf_n_67_i_n.BLIF u2slpf_n_68_i_n.BLIF u2slpf_stablevalue_reg3_2_n
+11 1
+.names u2slpf_n_60_i_n.BLIF u2slpf_n_61_i_n.BLIF u2slpf_un1_rawvalue_1_1_n
+11 1
+.names u2slpf_n_62_i_n.BLIF u2slpf_n_63_i_n.BLIF u2slpf_un1_rawvalue_1_2_n
+11 1
+.names keypadrows_i_0__n.BLIF u1ks_n_19_i_n.BLIF u1ks_n_42_i_1_n
+11 1
+.names u1ks_n_20_i_n.BLIF u1ks_n_54_i_n.BLIF u1ks_n_42_i_2_n
+11 1
+.names u1ks_n_18_i_n.BLIF keypadrows_i_0__n.BLIF u1ks_n_40_i_1_n
+11 1
+.names u1ks_activeKey_reg_0_.BLIF u2slpf_stableValue_reg_0_.BLIF u2slpf_G_23
+01 1
+10 1
+11 0
+00 0
+.names u1ks_activeKey_reg_1_.BLIF u2slpf_stableValue_reg_1_.BLIF u2slpf_G_24
+01 1
+10 1
+11 0
+00 0
+.names u1ks_activeKey_reg_2_.BLIF u2slpf_stableValue_reg_2_.BLIF u2slpf_G_25
+01 1
+10 1
+11 0
+00 0
+.names u1ks_activeKey_reg_3_.BLIF u2slpf_stableValue_reg_3_.BLIF u2slpf_G_26
+01 1
+10 1
+11 0
+00 0
+.names u1ks_activeKey_reg_0_.BLIF u2slpf_un1_rawvalue_0__n.BLIF u2slpf_G_28
+01 1
+10 1
+11 0
+00 0
+.names u1ks_activeKey_reg_1_.BLIF u2slpf_un1_rawvalue_1__n.BLIF u2slpf_G_29
+01 1
+10 1
+11 0
+00 0
+.names u1ks_activeKey_reg_2_.BLIF u2slpf_un1_rawvalue_2__n.BLIF u2slpf_G_30
+01 1
+10 1
+11 0
+00 0
+.names u1ks_activeKey_reg_3_.BLIF u2slpf_un1_rawvalue_3__n.BLIF u2slpf_G_31
+01 1
+10 1
+11 0
+00 0
+.names keypadrows_c_0__n.BLIF keypadrows_c_2__n.BLIF \
+u1ks_un1_activeKey_reg9_0_x2
+01 1
+10 1
+11 0
+00 0
+.names keypadrows_c_1__n.BLIF keypadrows_c_3__n.BLIF \
+u1ks_un1_activeKey_reg9_0_x2_0
+01 1
+10 1
+11 0
+00 0
+.names u1ks_activeColumn_reg_1_1_reg.BLIF keypadColumns_2_
+1 1
+0 0
+.names N_29_i.BLIF segments_6_
+1 1
+0 0
+.names u1ks_activeColumn_reg_1_0_reg.BLIF keypadColumns_1_
+1 1
+0 0
+.names keypadcolumns_c_0__n.BLIF keypadColumns_0_
+1 1
+0 0
+.names N_27_i.BLIF segments_5_
+1 1
+0 0
+.names N_25_i.BLIF segments_4_
+1 1
+0 0
+.names N_23_i.BLIF segments_3_
+1 1
+0 0
+.names N_21_i.BLIF segments_2_
+1 1
+0 0
+.names N_19_i.BLIF segments_1_
+1 1
+0 0
+.names N_17_i.BLIF segments_0_
+1 1
+0 0
+.names keypadcolumns_c_0__n.BLIF u1ks_activeColumn_reg_1_0_reg.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1ks_activeColumn_reg_1_0_reg.C
+1 1
+0 0
+.names u1ks_activeColumn_reg_1_0_reg.BLIF u1ks_activeColumn_reg_1_1_reg.D
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1ks_activeColumn_reg_1_1_reg.C
+1 1
+0 0
+.names u1ks_un1_activekey_reg9_n.BLIF u1ks_activeKey_reg_0_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1ks_activeKey_reg_0_.C
+1 1
+0 0
+.names u1ks_un1_activekey_reg9_n.BLIF u1ks_activeKey_reg_1_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1ks_activeKey_reg_1_.C
+1 1
+0 0
+.names u1ks_un1_activekey_reg9_n.BLIF u1ks_activeKey_reg_2_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1ks_activeKey_reg_2_.C
+1 1
+0 0
+.names u1ks_n_54_n.BLIF u1ks_activeKey_reg_3_.D
+1 1
+0 0
+.names u1ks_un1_activekey_reg9_n.BLIF u1ks_activeKey_reg_3_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u1ks_activeKey_reg_3_.C
+1 1
+0 0
+.names u1ks_activeKey_reg_1_.BLIF u2slpf_valueHistory_reg_1__1_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_1__1_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_1__1_.C
+1 1
+0 0
+.names u1ks_activeKey_reg_2_.BLIF u2slpf_valueHistory_reg_1__2_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_1__2_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_1__2_.C
+1 1
+0 0
+.names u1ks_activeKey_reg_3_.BLIF u2slpf_valueHistory_reg_1__3_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_1__3_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_1__3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_state_reg_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_state_reg_1_.C
+1 1
+0 0
+.names u1ks_activeKey_reg_0_.BLIF u2slpf_stableValue_reg_0_.D
+1 1
+0 0
+.names u2slpf_stablevalue_reg_0_sqmuxa_n.BLIF u2slpf_stableValue_reg_0_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_stableValue_reg_0_.C
+1 1
+0 0
+.names u1ks_activeKey_reg_1_.BLIF u2slpf_stableValue_reg_1_.D
+1 1
+0 0
+.names u2slpf_stablevalue_reg_0_sqmuxa_n.BLIF u2slpf_stableValue_reg_1_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_stableValue_reg_1_.C
+1 1
+0 0
+.names u1ks_activeKey_reg_2_.BLIF u2slpf_stableValue_reg_2_.D
+1 1
+0 0
+.names u2slpf_stablevalue_reg_0_sqmuxa_n.BLIF u2slpf_stableValue_reg_2_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_stableValue_reg_2_.C
+1 1
+0 0
+.names u1ks_activeKey_reg_3_.BLIF u2slpf_stableValue_reg_3_.D
+1 1
+0 0
+.names u2slpf_stablevalue_reg_0_sqmuxa_n.BLIF u2slpf_stableValue_reg_3_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_stableValue_reg_3_.C
+1 1
+0 0
+.names u2slpf_valueHistory_reg_2__0_.BLIF u2slpf_valueHistory_reg_3__0_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_3__0_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_3__0_.C
+1 1
+0 0
+.names u2slpf_valueHistory_reg_2__1_.BLIF u2slpf_valueHistory_reg_3__1_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_3__1_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_3__1_.C
+1 1
+0 0
+.names u2slpf_valueHistory_reg_2__2_.BLIF u2slpf_valueHistory_reg_3__2_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_3__2_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_3__2_.C
+1 1
+0 0
+.names u2slpf_valueHistory_reg_2__3_.BLIF u2slpf_valueHistory_reg_3__3_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_3__3_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_3__3_.C
+1 1
+0 0
+.names u2slpf_valueHistory_reg_1__0_.BLIF u2slpf_valueHistory_reg_2__0_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_2__0_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_2__0_.C
+1 1
+0 0
+.names u2slpf_valueHistory_reg_1__1_.BLIF u2slpf_valueHistory_reg_2__1_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_2__1_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_2__1_.C
+1 1
+0 0
+.names u2slpf_valueHistory_reg_1__2_.BLIF u2slpf_valueHistory_reg_2__2_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_2__2_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_2__2_.C
+1 1
+0 0
+.names u2slpf_valueHistory_reg_1__3_.BLIF u2slpf_valueHistory_reg_2__3_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_2__3_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_2__3_.C
+1 1
+0 0
+.names u1ks_activeKey_reg_0_.BLIF u2slpf_valueHistory_reg_1__0_.D
+1 1
+0 0
+.names u2slpf_state_reg_i_0__n.BLIF u2slpf_valueHistory_reg_1__0_.CE
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.BLIF u2slpf_valueHistory_reg_1__0_.C
+1 1
+0 0
+.names u0rs_counter_i_6__n.BLIF u0rs_u1rc_genblk1_5__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_5__n.BLIF u0rs_u1rc_genblk1_5__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_8__n.BLIF u0rs_u1rc_genblk1_7__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_7__n.BLIF u0rs_u1rc_genblk1_7__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_0__n.BLIF u0rs_u1rc_u0tff_q.D
+1 1
+0 0
+.names u0rs_counter_i_2__n.BLIF u0rs_u1rc_genblk1_1__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_1__n.BLIF u0rs_u1rc_genblk1_1__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_1__n.BLIF u0rs_u1rc_genblk1_0__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_0__n.BLIF u0rs_u1rc_genblk1_0__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_3__n.BLIF u0rs_u1rc_genblk1_2__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_2__n.BLIF u0rs_u1rc_genblk1_2__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_7__n.BLIF u0rs_u1rc_genblk1_6__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_6__n.BLIF u0rs_u1rc_genblk1_6__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_8__n.BLIF u0rs_u1rc_genblk1_8__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_5__n.BLIF u0rs_u1rc_genblk1_4__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_4__n.BLIF u0rs_u1rc_genblk1_4__uitff_q.C
+1 1
+0 0
+.names u0rs_counter_i_4__n.BLIF u0rs_u1rc_genblk1_3__uitff_q.D
+1 1
+0 0
+.names u0rs_counter_i_3__n.BLIF u0rs_u1rc_genblk1_3__uitff_q.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneMHzClock_c
+1 1
+0 0
+.names keypadRows_0_.BLIF keypadrows_c_0__n
+1 1
+0 0
+.names keypadRows_1_.BLIF keypadrows_c_1__n
+1 1
+0 0
+.names keypadRows_2_.BLIF keypadrows_c_2__n
+1 1
+0 0
+.names keypadRows_3_.BLIF keypadrows_c_3__n
+1 1
+0 0
+.end

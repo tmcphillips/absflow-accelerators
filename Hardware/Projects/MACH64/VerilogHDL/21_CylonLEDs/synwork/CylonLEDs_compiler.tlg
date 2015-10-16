@@ -1,0 +1,47 @@
+Selecting top level module CylonLEDs
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000010000
+   Generated name = RippleCounter_16s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000010000
+   Generated name = RippleScaler_16s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":3:7:3:15|Synthesizing module CylonLEDs
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register brightness_0_[3:0] 
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register brightness_1_[3:0] 
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register brightness_10_[3:0] 
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register brightness_11_[3:0] 
+
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_9_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_8_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_7_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_6_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_5_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_4_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_3_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Feedback mux created for signal brightness_2_[3:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_7_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_6_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_5_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_4_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_9_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_8_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_3_[3:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v":25:1:25:6|Pruning Register bit 3 of brightness_2_[3:0] 
+

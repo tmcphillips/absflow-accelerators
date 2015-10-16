@@ -1,0 +1,26 @@
+module TenBitScaler interface (inclock -> outclock);
+
+declarations
+
+	// input unscaled clock signal		
+	inclock pin istype 'com';
+
+	// output scaled clock signal
+	outclock pin istype 'com';
+
+	// 10 bit register
+	s9..s0 node istype 'reg';	
+	scaler 	= [s9..s0];
+	
+equations
+
+	// clock the scaling register using the input clock signal
+	scaler.clk = inclock;
+
+	// increment scalar on each input clock pulse
+	scaler := scaler + 1;
+
+	// output the highest order bit of the scaling register
+	outclock = s9;
+end
+

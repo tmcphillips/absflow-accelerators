@@ -1,0 +1,11 @@
+JDF B
+// Created by Version 1.5 
+PROJECT UntitledProject
+DESIGN fourbitcounter Normal
+DEVKIT LC4064V-75T48I
+ENTRY ABEL/Schematic
+MODULE fourbitc.abl
+MODSTYLE FourBitCounter Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE FourBitCounter

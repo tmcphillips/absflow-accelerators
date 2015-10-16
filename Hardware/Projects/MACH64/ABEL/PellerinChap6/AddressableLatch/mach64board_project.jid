@@ -1,0 +1,2 @@
+. AddressableLatchDemo addressablelatchdemo.abl "c:\users\tmcphillips\hobbies\mach64 projects\pellerinchap6\addressablelatch\addressablelatchdemo.abl"
+latch AddressableLatch addressablelatch.abl "c:\users\tmcphillips\hobbies\mach64 projects\pellerinchap6\addressablelatch\addressablelatch.abl"

@@ -1,0 +1,312 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:09:37 2012
+#$ TITLE Four bit counter with load
+#$ MODULE mach64board_project
+#$ JEDECFILE fourbitcounterwithload
+#$ PINS 14 oneMHzClock:19 upButton:18 downButton:23 loadButton:22 reset:20 \
+#  stepDirectionUp:21 d0:31 d1:32 d2:33 d3:34 q0:14 q1:15 q2:16 q3:17
+#$ NODES 16 debouncedUp>debounced'co,o'  debouncedDown>debounced'co,o'  \
+#  debouncedLoad>debounced'co,o'  oneKHzClock/s9 oneKHzClock/s8 oneKHzClock/s7 \
+#  oneKHzClock/s6 oneKHzClock/s5 oneKHzClock/s4 oneKHzClock/s3 oneKHzClock/s2 \
+#  oneKHzClock/s1 oneKHzClock/s0 debouncedUp/lastSample debouncedDown/lastSample \
+#  debouncedLoad/lastSample
+.model fourbitcounterwithload
+.inputs oneMHzClock.BLIF upButton.BLIF downButton.BLIF loadButton.BLIF \
+debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF reset.BLIF d3.BLIF d2.BLIF d1.BLIF d0.BLIF \
+q3.BLIF q2.BLIF q1.BLIF q0.BLIF stepDirectionUp.BLIF oneKHzClock/s9.BLIF \
+oneKHzClock/s8.BLIF oneKHzClock/s7.BLIF oneKHzClock/s6.BLIF \
+oneKHzClock/s5.BLIF oneKHzClock/s4.BLIF oneKHzClock/s3.BLIF \
+oneKHzClock/s2.BLIF oneKHzClock/s1.BLIF oneKHzClock/s0.BLIF \
+debouncedUp/lastSample.BLIF debouncedDown/lastSample.BLIF \
+debouncedLoad/lastSample.BLIF
+.outputs q3.C q2.C q1.C q0.C q3.AR q2.AR q1.AR q0.AR q0.REG oneKHzClock/s9.C \
+oneKHzClock/s8.C oneKHzClock/s7.C oneKHzClock/s6.C oneKHzClock/s5.C \
+oneKHzClock/s4.C oneKHzClock/s3.REG oneKHzClock/s3.C oneKHzClock/s2.REG \
+oneKHzClock/s2.C oneKHzClock/s1.REG oneKHzClock/s1.C oneKHzClock/s0.REG \
+oneKHzClock/s0.C debouncedUp>debounced.REG debouncedUp>debounced.C \
+debouncedUp/lastSample.REG debouncedUp/lastSample.C \
+debouncedDown>debounced.REG debouncedDown>debounced.C \
+debouncedDown/lastSample.REG debouncedDown/lastSample.C \
+debouncedLoad>debounced.REG debouncedLoad>debounced.C \
+debouncedLoad/lastSample.REG debouncedLoad/lastSample.C q1.REG.X1 q1.REG.X2 \
+q2.REG.X1 q2.REG.X2 q3.REG.X1 q3.REG.X2 oneKHzClock/s9.REG.X1 \
+oneKHzClock/s9.REG.X2 oneKHzClock/s8.REG.X1 oneKHzClock/s8.REG.X2 \
+oneKHzClock/s7.REG.X1 oneKHzClock/s7.REG.X2 oneKHzClock/s6.REG.X1 \
+oneKHzClock/s6.REG.X2 oneKHzClock/s5.REG.X1 oneKHzClock/s5.REG.X2 \
+oneKHzClock/s4.REG.X1 oneKHzClock/s4.REG.X2
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF q3.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF q2.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF q1.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF q0.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names reset.BLIF q3.AR
+0 1
+1 0
+.names reset.BLIF q2.AR
+0 1
+1 0
+.names reset.BLIF q1.AR
+0 1
+1 0
+.names reset.BLIF q0.AR
+0 1
+1 0
+.names loadButton.BLIF d0.BLIF q0.BLIF q0.REG
+1-0 1
+00- 1
+1-1 0
+01- 0
+.names oneKHzClock/s3.BLIF oneKHzClock/s2.BLIF oneKHzClock/s1.BLIF \
+oneKHzClock/s0.BLIF oneKHzClock/s3.REG
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names oneKHzClock/s2.BLIF oneKHzClock/s1.BLIF oneKHzClock/s0.BLIF \
+oneKHzClock/s2.REG
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names oneKHzClock/s1.BLIF oneKHzClock/s0.BLIF oneKHzClock/s1.REG
+10 1
+01 1
+00 0
+11 0
+.names oneKHzClock/s0.BLIF oneKHzClock/s0.REG
+0 1
+1 0
+.names upButton.BLIF debouncedUp/lastSample.BLIF debouncedUp>debounced.REG
+01 1
+1- 0
+-0 0
+.names downButton.BLIF debouncedDown/lastSample.BLIF \
+debouncedDown>debounced.REG
+01 1
+1- 0
+-0 0
+.names loadButton.BLIF debouncedLoad/lastSample.BLIF \
+debouncedLoad>debounced.REG
+01 1
+1- 0
+-0 0
+.names oneMHzClock.BLIF oneKHzClock/s9.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s8.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s7.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s6.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s5.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s4.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s3.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s2.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s1.C
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock/s0.C
+1 1
+0 0
+.names oneKHzClock/s9.BLIF debouncedUp>debounced.C
+1 1
+0 0
+.names upButton.BLIF debouncedUp/lastSample.REG
+0 1
+1 0
+.names oneKHzClock/s9.BLIF debouncedUp/lastSample.C
+1 1
+0 0
+.names oneKHzClock/s9.BLIF debouncedDown>debounced.C
+1 1
+0 0
+.names downButton.BLIF debouncedDown/lastSample.REG
+0 1
+1 0
+.names oneKHzClock/s9.BLIF debouncedDown/lastSample.C
+1 1
+0 0
+.names oneKHzClock/s9.BLIF debouncedLoad>debounced.C
+1 1
+0 0
+.names loadButton.BLIF debouncedLoad/lastSample.REG
+0 1
+1 0
+.names oneKHzClock/s9.BLIF debouncedLoad/lastSample.C
+1 1
+0 0
+.names loadButton.BLIF q1.BLIF q1.REG.X1
+10 1
+0- 0
+-1 0
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d1.BLIF q1.BLIF q0.BLIF \
+stepDirectionUp.BLIF q1.REG.X2
+--00--- 1
+0-1--00 1
+-01--01 1
+1-1--10 1
+-11--11 1
+--01--- 0
+-01--11 0
+-11--01 0
+0-1--10 0
+1-1--00 0
+.names loadButton.BLIF q2.BLIF q2.REG.X1
+11 1
+0- 0
+-0 0
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d2.BLIF q2.BLIF q1.BLIF \
+q0.BLIF stepDirectionUp.BLIF q2.REG.X2
+--00---- 1
+1-1--000 1
+-11--001 1
+0-1--110 1
+-01--111 1
+--01---- 0
+--1--01- 0
+--1--10- 0
+-11--1-1 0
+-01--0-1 0
+1-1--1-0 0
+0-1--0-0 0
+.names loadButton.BLIF q3.BLIF q3.REG.X1
+11 1
+0- 0
+-0 0
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d3.BLIF q3.BLIF q2.BLIF \
+q1.BLIF q0.BLIF stepDirectionUp.BLIF q3.REG.X2
+--00----- 1
+1-1--0000 1
+-11--0001 1
+0-1--1110 1
+-01--1111 1
+--01----- 0
+--1--01-- 0
+--1--10-- 0
+--1--0-1- 0
+--1--1-0- 0
+-11--1--1 0
+-01--0--1 0
+1-1--1--0 0
+0-1--0--0 0
+.names oneKHzClock/s9.BLIF oneKHzClock/s9.REG.X1
+1 1
+0 0
+.names oneKHzClock/s9.BLIF oneKHzClock/s8.BLIF oneKHzClock/s7.BLIF \
+oneKHzClock/s6.BLIF oneKHzClock/s5.BLIF oneKHzClock/s4.BLIF \
+oneKHzClock/s3.BLIF oneKHzClock/s2.BLIF oneKHzClock/s1.BLIF \
+oneKHzClock/s0.BLIF oneKHzClock/s9.REG.X2
+-111111111 1
+-0-------- 0
+--0------- 0
+---0------ 0
+----0----- 0
+-----0---- 0
+------0--- 0
+-------0-- 0
+--------0- 0
+---------0 0
+.names oneKHzClock/s8.BLIF oneKHzClock/s8.REG.X1
+1 1
+0 0
+.names oneKHzClock/s8.BLIF oneKHzClock/s7.BLIF oneKHzClock/s6.BLIF \
+oneKHzClock/s5.BLIF oneKHzClock/s4.BLIF oneKHzClock/s3.BLIF \
+oneKHzClock/s2.BLIF oneKHzClock/s1.BLIF oneKHzClock/s0.BLIF \
+oneKHzClock/s8.REG.X2
+-11111111 1
+-0------- 0
+--0------ 0
+---0----- 0
+----0---- 0
+-----0--- 0
+------0-- 0
+-------0- 0
+--------0 0
+.names oneKHzClock/s7.BLIF oneKHzClock/s7.REG.X1
+1 1
+0 0
+.names oneKHzClock/s7.BLIF oneKHzClock/s6.BLIF oneKHzClock/s5.BLIF \
+oneKHzClock/s4.BLIF oneKHzClock/s3.BLIF oneKHzClock/s2.BLIF \
+oneKHzClock/s1.BLIF oneKHzClock/s0.BLIF oneKHzClock/s7.REG.X2
+-1111111 1
+-0------ 0
+--0----- 0
+---0---- 0
+----0--- 0
+-----0-- 0
+------0- 0
+-------0 0
+.names oneKHzClock/s6.BLIF oneKHzClock/s6.REG.X1
+1 1
+0 0
+.names oneKHzClock/s6.BLIF oneKHzClock/s5.BLIF oneKHzClock/s4.BLIF \
+oneKHzClock/s3.BLIF oneKHzClock/s2.BLIF oneKHzClock/s1.BLIF \
+oneKHzClock/s0.BLIF oneKHzClock/s6.REG.X2
+-111111 1
+-0----- 0
+--0---- 0
+---0--- 0
+----0-- 0
+-----0- 0
+------0 0
+.names oneKHzClock/s5.BLIF oneKHzClock/s5.REG.X1
+1 1
+0 0
+.names oneKHzClock/s5.BLIF oneKHzClock/s4.BLIF oneKHzClock/s3.BLIF \
+oneKHzClock/s2.BLIF oneKHzClock/s1.BLIF oneKHzClock/s0.BLIF \
+oneKHzClock/s5.REG.X2
+-11111 1
+-0---- 0
+--0--- 0
+---0-- 0
+----0- 0
+-----0 0
+.names oneKHzClock/s4.BLIF oneKHzClock/s4.REG.X1
+1 1
+0 0
+.names oneKHzClock/s4.BLIF oneKHzClock/s3.BLIF oneKHzClock/s2.BLIF \
+oneKHzClock/s1.BLIF oneKHzClock/s0.BLIF oneKHzClock/s4.REG.X2
+-1111 1
+-0--- 0
+--0-- 0
+---0- 0
+----0 0
+.end

@@ -1,0 +1,24 @@
+
+fsm_encoding {3571571} sequential
+
+fsm_state_encoding {3571571} VERT_SYNC {00}
+
+fsm_state_encoding {3571571} VERT_BACK_PORCH {01}
+
+fsm_state_encoding {3571571} VERT_ACTIVE_VIDEO {10}
+
+fsm_state_encoding {3571571} VERT_FRONT_PORCH {11}
+
+fsm_registers {3571571} {vState_1[1]}  {vState_1[0]} 
+
+fsm_encoding {3571572} sequential
+
+fsm_state_encoding {3571572} HORIZ_SYNC {00}
+
+fsm_state_encoding {3571572} HORIZ_BACK_PORCH {01}
+
+fsm_state_encoding {3571572} HORIZ_ACTIVE_VIDEO {10}
+
+fsm_state_encoding {3571572} HORIZ_FRONT_PORCH {11}
+
+fsm_registers {3571572} {hState_1[1]}  {hState_1[0]} 

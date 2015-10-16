@@ -1,0 +1,7 @@
+direction		i
+reset		i
+clock		i
+q0		o
+q1		o
+q2		o
+q3		o

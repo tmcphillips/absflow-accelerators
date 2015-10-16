@@ -1,0 +1,24 @@
+module BcdUpCounter interface (up -> [d3..d0]);
+
+declarations
+
+	// input clock signal
+	up pin;
+
+	// 4-bit  register for holding decimal digit
+	d3..d0 pin istype 'reg';
+	digit = [d3..d0];
+
+equations
+
+	// clock digit register using input clock signal
+	digit.clk = up;
+
+	// increment decimal digit modulo 10 on each scaled clock pulse
+	when (digit == 9) then {
+		digit := 0;
+	} else {
+		digit := digit + 1;
+	}
+
+end

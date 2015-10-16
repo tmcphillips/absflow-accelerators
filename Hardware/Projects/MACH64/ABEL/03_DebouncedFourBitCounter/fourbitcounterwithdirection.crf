@@ -1,0 +1,24 @@
+// Signal Name Cross Reference File
+// ispLEVER Classic 1.5.00.05.39.l1
+
+// Design 'fourbitcounterwithdirection' created Wed Jan 18 09:43:55 2012
+
+
+// LEGEND:  '>'  Functional Block Port Separator
+//          '/'  Hierarchy Path Separator
+//          '@'  Automatically Generated Node
+
+
+// Hierarchical Name                    Short Name
+debouncedStep>debounced              	D0_debounced
+debouncedStep/lastSample             	D1_lastSample
+oneKHzClock/s9                       	S0_s9
+oneKHzClock/s8                       	S0_s8
+oneKHzClock/s7                       	S0_s7
+oneKHzClock/s6                       	S0_s6
+oneKHzClock/s5                       	S0_s5
+oneKHzClock/s4                       	S0_s4
+oneKHzClock/s3                       	S0_s3
+oneKHzClock/s2                       	S0_s2
+oneKHzClock/s1                       	S0_s1
+oneKHzClock/s0                       	S0_s0

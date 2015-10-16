@@ -1,0 +1,3 @@
+. DebouncedFourBitCounter debouncedfourbitcounter.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncedfourbitcounter.v
+u1cs SynchronousClockScaler debouncedfourbitcounter.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncedfourbitcounter.v
+u1d Debouncer debouncedfourbitcounter.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncedfourbitcounter.v

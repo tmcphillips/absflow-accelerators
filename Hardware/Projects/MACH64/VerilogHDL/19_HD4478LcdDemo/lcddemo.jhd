@@ -1,0 +1,14 @@
+MODULE LCDWriter DEFIN lcddemo.v
+MODULE LcdDemo DEFIN lcddemo.v
+MODULE RippleScaler DEFIN ripplescaler.v
+	SUBMODULE RippleCounter
+		INSTANCE u1rc
+MODULE RippleCounter DEFIN ripplecounter.v
+	SUBMODULE TFlipFlop
+		INSTANCE uitff
+	SUBMODULE TFlipFlop
+		INSTANCE u0tff
+MODULE TFlipFlop DEFIN tflipflop.v
+DEPEND INCLUDED_FILE tflipflop.v
+DEPEND INCLUDED_FILE ripplecounter.v
+DEPEND INCLUDED_FILE ripplescaler.v

@@ -1,0 +1,39 @@
+module BcdUpDownCounter interface (step, direction, [m3..m0]=9 -> [d3..d0]);
+
+declarations
+
+	// input signals
+	step, direction pin;
+	m3..m0 pin;
+	max = [m3..m0];
+
+	// declare 4-bit register for holding decimal digit
+	d3..d0 pin istype 'reg';
+	digit = [d3..d0];
+
+	// set the polarity of the direction signal (up when direction is HIGH)
+	up = 1;
+
+equations
+
+	// clock digit register using input clock signal
+	digit.clk = step;
+
+	// increment decimal digit modulo 10 on each scaled clock pulse
+	when (direction == up) then {
+
+		when (digit < max) then {
+			digit := digit + 1;
+		} else {
+			digit := 0;
+		}
+
+	} else {
+
+		when (digit > 0) then {
+			digit := digit - 1;
+		} else {
+			digit := max;
+		}
+	}	
+end

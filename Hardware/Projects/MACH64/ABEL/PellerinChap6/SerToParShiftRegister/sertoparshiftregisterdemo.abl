@@ -1,0 +1,23 @@
+module SerToParShiftRegisterDemo
+
+declarations
+
+	SerToParShiftRegister interface(D,Clk,Clr->[Q7..Q0]);
+	shift functional_block SerToParShiftRegister;
+
+	!data	pin 7;
+	!rotate	pin 8;
+
+	!clk	pin 26;
+	 clr	pin 20;
+	q0..q7	pin 31..34,38..40,45;
+
+equations
+
+	shift.D	  =  data # (rotate & q7);
+	shift.Clk =  clk;
+	shift.Clr = !clr;
+	[q7..q0]  = shift.[Q7..Q0];
+
+end
+

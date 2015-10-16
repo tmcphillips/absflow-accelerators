@@ -1,0 +1,352 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Mon Jan 23 11:19:57 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 13 dipSwitches_n_3_:14'ke'  counter_3_:34'ke'  upButton_n:24'ke'  \
+#  downButton_n:23'ke'  loadButton_n:22'ke'  resetButton_n:21'ke'  oneMHzClock:42'ke'  \
+#  dipSwitches_n_2_:15'ke'  dipSwitches_n_1_:16'ke'  dipSwitches_n_0_:17'ke'  counter_2_:33'ke'  \
+#  counter_1_:32'ke'  counter_0_:31'ke' 
+#$ NODES 22 u1rs_u1rc_genblk1_8__uitff_q u4udc_state_0_ u4udc_state_1_ \
+#  u1rs_u1rc_u0tff_q u1rs_u1rc_genblk1_0__uitff_q u1rs_u1rc_genblk1_1__uitff_q \
+#  u1rs_u1rc_genblk1_2__uitff_q u1rs_u1rc_genblk1_3__uitff_q \
+#  u1rs_u1rc_genblk1_4__uitff_q u1rs_u1rc_genblk1_5__uitff_q \
+#  u1rs_u1rc_genblk1_6__uitff_q u1rs_u1rc_genblk1_7__uitff_q u3bpd_state_0_ \
+#  u3bpd_state_1_ u3bpd_state_2_ u2bpd_state_0_ u2bpd_state_1_ u2bpd_state_2_ \
+#  u4udc_counter_1_0_reg u4udc_counter_1_1_reg u4udc_counter_1_2_reg \
+#  u4udc_counter_1_3_reg
+.model fourbitcounterwithload
+.inputs dipSwitches_n_3_.BLIF upButton_n.BLIF downButton_n.BLIF \
+loadButton_n.BLIF resetButton_n.BLIF oneMHzClock.BLIF dipSwitches_n_2_.BLIF \
+dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF u1rs_u1rc_genblk1_8__uitff_q.BLIF \
+u4udc_state_0_.BLIF u4udc_state_1_.BLIF u1rs_u1rc_u0tff_q.BLIF \
+u1rs_u1rc_genblk1_0__uitff_q.BLIF u1rs_u1rc_genblk1_1__uitff_q.BLIF \
+u1rs_u1rc_genblk1_2__uitff_q.BLIF u1rs_u1rc_genblk1_3__uitff_q.BLIF \
+u1rs_u1rc_genblk1_4__uitff_q.BLIF u1rs_u1rc_genblk1_5__uitff_q.BLIF \
+u1rs_u1rc_genblk1_6__uitff_q.BLIF u1rs_u1rc_genblk1_7__uitff_q.BLIF \
+u3bpd_state_0_.BLIF u3bpd_state_1_.BLIF u3bpd_state_2_.BLIF \
+u2bpd_state_0_.BLIF u2bpd_state_1_.BLIF u2bpd_state_2_.BLIF \
+u4udc_counter_1_0_reg.BLIF u4udc_counter_1_1_reg.BLIF \
+u4udc_counter_1_2_reg.BLIF u4udc_counter_1_3_reg.BLIF
+.outputs counter_3_ counter_2_ counter_1_ counter_0_ u2bpd_state_0_.D \
+u2bpd_state_0_.C u2bpd_state_1_.D u2bpd_state_1_.C u2bpd_state_2_.D \
+u2bpd_state_2_.C u3bpd_state_0_.D u3bpd_state_0_.C u3bpd_state_1_.D \
+u3bpd_state_1_.C u3bpd_state_2_.D u3bpd_state_2_.C u4udc_state_0_.D \
+u4udc_state_0_.CE u4udc_state_0_.C u4udc_state_1_.D u4udc_state_1_.CE \
+u4udc_state_1_.C u4udc_counter_1_0_reg.C u4udc_counter_1_0_reg.AR \
+u4udc_counter_1_0_reg.AP u4udc_counter_1_1_reg.C u4udc_counter_1_1_reg.AR \
+u4udc_counter_1_1_reg.AP u4udc_counter_1_2_reg.C u4udc_counter_1_2_reg.AR \
+u4udc_counter_1_2_reg.AP u4udc_counter_1_3_reg.C u4udc_counter_1_3_reg.AR \
+u4udc_counter_1_3_reg.AP u1rs_u1rc_genblk1_8__uitff_q.D \
+u1rs_u1rc_genblk1_8__uitff_q.C u1rs_u1rc_genblk1_3__uitff_q.D \
+u1rs_u1rc_genblk1_3__uitff_q.C u1rs_u1rc_u0tff_q.D u1rs_u1rc_u0tff_q.C \
+u1rs_u1rc_genblk1_1__uitff_q.D u1rs_u1rc_genblk1_1__uitff_q.C \
+u1rs_u1rc_genblk1_2__uitff_q.D u1rs_u1rc_genblk1_2__uitff_q.C \
+u1rs_u1rc_genblk1_5__uitff_q.D u1rs_u1rc_genblk1_5__uitff_q.C \
+u1rs_u1rc_genblk1_4__uitff_q.D u1rs_u1rc_genblk1_4__uitff_q.C \
+u1rs_u1rc_genblk1_0__uitff_q.D u1rs_u1rc_genblk1_0__uitff_q.C \
+u1rs_u1rc_genblk1_6__uitff_q.D u1rs_u1rc_genblk1_6__uitff_q.C \
+u1rs_u1rc_genblk1_7__uitff_q.D u1rs_u1rc_genblk1_7__uitff_q.C \
+u4udc_counter_1_0_reg.D.X1 u4udc_counter_1_0_reg.D.X2 \
+u4udc_counter_1_1_reg.D.X1 u4udc_counter_1_1_reg.D.X2 \
+u4udc_counter_1_2_reg.D.X1 u4udc_counter_1_2_reg.D.X2 \
+u4udc_counter_1_3_reg.D.X1 u4udc_counter_1_3_reg.D.X2
+.names upButton_n.BLIF u4udc_state_0_.BLIF u2bpd_state_0_.BLIF \
+u2bpd_state_2_.BLIF u2bpd_state_0_.D
+0-00 1
+-101 1
+0-11 1
+-001 0
+1-1- 0
+--10 0
+1--0 0
+.names upButton_n.BLIF u2bpd_state_0_.BLIF u2bpd_state_1_.BLIF \
+u2bpd_state_2_.BLIF u2bpd_state_1_.D
+-011 1
+01-- 1
+0-1- 1
+11-- 0
+-00- 0
+1--0 0
+.names upButton_n.BLIF u2bpd_state_0_.BLIF u2bpd_state_1_.BLIF \
+u2bpd_state_2_.BLIF u2bpd_state_2_.D
+011- 1
+-011 1
+11-- 0
+-0-0 0
+--0- 0
+.names downButton_n.BLIF u4udc_state_1_.BLIF u3bpd_state_0_.BLIF \
+u3bpd_state_2_.BLIF u3bpd_state_0_.D
+0-00 1
+-101 1
+0-11 1
+-001 0
+1-1- 0
+--10 0
+1--0 0
+.names downButton_n.BLIF u3bpd_state_0_.BLIF u3bpd_state_1_.BLIF \
+u3bpd_state_2_.BLIF u3bpd_state_1_.D
+-011 1
+01-- 1
+0-1- 1
+11-- 0
+-00- 0
+1--0 0
+.names downButton_n.BLIF u3bpd_state_0_.BLIF u3bpd_state_1_.BLIF \
+u3bpd_state_2_.BLIF u3bpd_state_2_.D
+011- 1
+-011 1
+11-- 0
+-0-0 0
+--0- 0
+.names u4udc_state_0_.BLIF u4udc_state_1_.BLIF u2bpd_state_0_.BLIF \
+u2bpd_state_2_.BLIF u4udc_state_0_.D
+0001 1
+--1- 0
+-1-- 0
+1--- 0
+---0 0
+.names loadButton_n.BLIF resetButton_n.BLIF dipSwitches_n_0_.BLIF \
+u4udc_counter_1_0_reg.AR
+-0- 1
+0-1 1
+11- 0
+-10 0
+.names loadButton_n.BLIF resetButton_n.BLIF dipSwitches_n_0_.BLIF \
+u4udc_counter_1_0_reg.AP
+010 1
+-0- 0
+1-- 0
+--1 0
+.names loadButton_n.BLIF resetButton_n.BLIF dipSwitches_n_1_.BLIF \
+u4udc_counter_1_1_reg.AR
+-0- 1
+0-1 1
+11- 0
+-10 0
+.names loadButton_n.BLIF resetButton_n.BLIF dipSwitches_n_1_.BLIF \
+u4udc_counter_1_1_reg.AP
+010 1
+-0- 0
+1-- 0
+--1 0
+.names loadButton_n.BLIF resetButton_n.BLIF dipSwitches_n_2_.BLIF \
+u4udc_counter_1_2_reg.AR
+-0- 1
+0-1 1
+11- 0
+-10 0
+.names loadButton_n.BLIF resetButton_n.BLIF dipSwitches_n_2_.BLIF \
+u4udc_counter_1_2_reg.AP
+010 1
+-0- 0
+1-- 0
+--1 0
+.names dipSwitches_n_3_.BLIF loadButton_n.BLIF resetButton_n.BLIF \
+u4udc_counter_1_3_reg.AR
+10- 1
+--0 1
+-11 0
+0-1 0
+.names dipSwitches_n_3_.BLIF loadButton_n.BLIF resetButton_n.BLIF \
+u4udc_counter_1_3_reg.AP
+001 1
+-1- 0
+1-- 0
+--0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u1rs_u1rc_genblk1_8__uitff_q.D
+0 1
+1 0
+.names oneMHzClock.BLIF u1rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names u4udc_counter_1_3_reg.BLIF counter_3_
+1 1
+0 0
+.names u4udc_counter_1_2_reg.BLIF counter_2_
+1 1
+0 0
+.names u4udc_counter_1_1_reg.BLIF counter_1_
+1 1
+0 0
+.names u4udc_counter_1_0_reg.BLIF counter_0_
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u2bpd_state_0_.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u2bpd_state_1_.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u2bpd_state_2_.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u3bpd_state_0_.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u3bpd_state_1_.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u3bpd_state_2_.C
+1 1
+0 0
+.names loadButton_n.BLIF resetButton_n.BLIF u4udc_state_0_.CE
+11 1
+0- 0
+-0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_state_0_.C
+1 1
+0 0
+.names u4udc_state_0_.BLIF u4udc_state_1_.BLIF u3bpd_state_0_.BLIF \
+u3bpd_state_2_.BLIF u2bpd_state_0_.BLIF u2bpd_state_2_.BLIF u4udc_state_1_.D
+00011- 1
+0001-0 1
+---0-- 0
+--1--- 0
+-1---- 0
+1----- 0
+----01 0
+.names loadButton_n.BLIF resetButton_n.BLIF u4udc_state_1_.CE
+11 1
+0- 0
+-0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_state_1_.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_counter_1_0_reg.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_counter_1_1_reg.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_counter_1_2_reg.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_8__uitff_q.BLIF u4udc_counter_1_3_reg.C
+1 1
+0 0
+.names u1rs_u1rc_genblk1_7__uitff_q.BLIF u1rs_u1rc_genblk1_8__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_3__uitff_q.BLIF u1rs_u1rc_genblk1_3__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_2__uitff_q.BLIF u1rs_u1rc_genblk1_3__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_u0tff_q.BLIF u1rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_1__uitff_q.BLIF u1rs_u1rc_genblk1_1__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_0__uitff_q.BLIF u1rs_u1rc_genblk1_1__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_2__uitff_q.BLIF u1rs_u1rc_genblk1_2__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_1__uitff_q.BLIF u1rs_u1rc_genblk1_2__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_5__uitff_q.BLIF u1rs_u1rc_genblk1_5__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_4__uitff_q.BLIF u1rs_u1rc_genblk1_5__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_4__uitff_q.BLIF u1rs_u1rc_genblk1_4__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_3__uitff_q.BLIF u1rs_u1rc_genblk1_4__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_0__uitff_q.BLIF u1rs_u1rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_u0tff_q.BLIF u1rs_u1rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_6__uitff_q.BLIF u1rs_u1rc_genblk1_6__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_5__uitff_q.BLIF u1rs_u1rc_genblk1_6__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_7__uitff_q.BLIF u1rs_u1rc_genblk1_7__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_6__uitff_q.BLIF u1rs_u1rc_genblk1_7__uitff_q.C
+0 1
+1 0
+.names u4udc_counter_1_0_reg.BLIF u4udc_counter_1_0_reg.D.X1
+1 1
+0 0
+.names u4udc_state_0_.BLIF u4udc_state_1_.BLIF u3bpd_state_0_.BLIF \
+u3bpd_state_2_.BLIF u2bpd_state_0_.BLIF u2bpd_state_2_.BLIF \
+u4udc_counter_1_0_reg.BLIF u4udc_counter_1_0_reg.D.X2
+0001--- 1
+00--01- 1
+1------ 0
+-1----- 0
+--1-1-- 0
+---01-- 0
+--1--0- 0
+---0-0- 0
+.names u4udc_counter_1_1_reg.BLIF u4udc_counter_1_1_reg.D.X1
+1 1
+0 0
+.names u4udc_state_0_.BLIF u4udc_state_1_.BLIF u3bpd_state_0_.BLIF \
+u3bpd_state_2_.BLIF u2bpd_state_0_.BLIF u2bpd_state_2_.BLIF \
+u4udc_counter_1_0_reg.BLIF u4udc_counter_1_1_reg.BLIF \
+u4udc_counter_1_1_reg.D.X2
+00011-0- 1
+0001-00- 1
+00--011- 1
+1------- 0
+-1------ 0
+----1-1- 0
+-----01- 0
+--1---0- 0
+---0--0- 0
+----010- 0
+.names u4udc_counter_1_2_reg.BLIF u4udc_counter_1_2_reg.D.X1
+1 1
+0 0
+.names u4udc_state_0_.BLIF u4udc_state_1_.BLIF u3bpd_state_0_.BLIF \
+u3bpd_state_2_.BLIF u2bpd_state_0_.BLIF u2bpd_state_2_.BLIF \
+u4udc_counter_1_0_reg.BLIF u4udc_counter_1_1_reg.BLIF \
+u4udc_counter_1_2_reg.BLIF u4udc_counter_1_2_reg.D.X2
+00011-00- 1
+0001-000- 1
+00--0111- 1
+1-------- 0
+-1------- 0
+----1-1-- 0
+-----01-- 0
+--1---0-- 0
+---0--0-- 0
+------01- 0
+------10- 0
+----010-- 0
+.names u4udc_counter_1_3_reg.BLIF u4udc_counter_1_3_reg.D.X1
+1 1
+0 0
+.names u4udc_state_0_.BLIF u4udc_state_1_.BLIF u3bpd_state_0_.BLIF \
+u3bpd_state_2_.BLIF u2bpd_state_0_.BLIF u2bpd_state_2_.BLIF \
+u4udc_counter_1_0_reg.BLIF u4udc_counter_1_1_reg.BLIF \
+u4udc_counter_1_2_reg.BLIF u4udc_counter_1_3_reg.BLIF \
+u4udc_counter_1_3_reg.D.X2
+00011-000- 1
+0001-0000- 1
+00--01111- 1
+1--------- 0
+-1-------- 0
+----1-1--- 0
+-----01--- 0
+--1---0--- 0
+---0--0--- 0
+------01-- 0
+------10-- 0
+------0-1- 0
+------1-0- 0
+----010--- 0
+.end

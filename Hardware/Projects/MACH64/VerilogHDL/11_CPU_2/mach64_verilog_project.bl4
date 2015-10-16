@@ -1,0 +1,318 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Sun Jan 29 14:46:56 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 16 b_reg_3_:4'ke'  step:31'ke'  reset_n:32'ke'  oneMHzClock:18'ke'  b_reg_1_:2'ke'  \
+#  b_reg_0_:40'ke'  a_reg_3_:48'ke'  pc_2_:26'ke'  zf:38'ke'  cf:39'ke'  a_reg_2_:47'ke'  a_reg_1_:46'ke'  \
+#  a_reg_0_:45'ke'  b_reg_2_:3'ke'  pc_1_:27'ke'  pc_0_:28'ke' 
+#$ NODES 13 u0rs_u1rc_genblk1_8__uitff_q u0rs_u1rc_u0tff_q \
+#  u0rs_u1rc_genblk1_0__uitff_q u0rs_u1rc_genblk1_1__uitff_q \
+#  u0rs_u1rc_genblk1_2__uitff_q u0rs_u1rc_genblk1_3__uitff_q \
+#  u0rs_u1rc_genblk1_4__uitff_q u0rs_u1rc_genblk1_5__uitff_q \
+#  u0rs_u1rc_genblk1_6__uitff_q u0rs_u1rc_genblk1_7__uitff_q u1pbd_state_0_ \
+#  u1pbd_state_1_ u1pbd_state_2_
+.model fourbitcpu
+.inputs step.BLIF reset_n.BLIF oneMHzClock.BLIF b_reg_2_.Q \
+u0rs_u1rc_genblk1_8__uitff_q.Q u0rs_u1rc_u0tff_q.Q \
+u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.Q \
+u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.Q \
+u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.Q \
+u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.Q u1pbd_state_0_.Q \
+u1pbd_state_1_.Q u1pbd_state_2_.Q a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q \
+pc_0_.Q pc_1_.Q pc_2_.Q
+.outputs b_reg_3_ b_reg_1_ b_reg_0_ u1pbd_state_0_.C u1pbd_state_1_.C \
+u1pbd_state_2_.C pc_1_.C pc_1_.AR pc_2_.C pc_2_.AR a_reg_0_.CE a_reg_0_.C \
+a_reg_0_.AR a_reg_1_.CE a_reg_1_.C a_reg_1_.AR a_reg_2_.CE a_reg_2_.C \
+a_reg_2_.AR a_reg_3_.CE a_reg_3_.C a_reg_3_.AR zf.CE zf.C zf.AR cf.CE cf.C \
+cf.AR b_reg_2_.C b_reg_2_.AR pc_0_.C pc_0_.AR u0rs_u1rc_genblk1_5__uitff_q.C \
+u0rs_u1rc_genblk1_7__uitff_q.C u0rs_u1rc_u0tff_q.C \
+u0rs_u1rc_genblk1_1__uitff_q.C u0rs_u1rc_genblk1_0__uitff_q.C \
+u0rs_u1rc_genblk1_2__uitff_q.C u0rs_u1rc_genblk1_6__uitff_q.C \
+u0rs_u1rc_genblk1_8__uitff_q.C u0rs_u1rc_genblk1_4__uitff_q.C \
+u0rs_u1rc_genblk1_3__uitff_q.C b_reg_2_.D u0rs_u1rc_genblk1_8__uitff_q.D \
+u0rs_u1rc_u0tff_q.D u0rs_u1rc_genblk1_0__uitff_q.D \
+u0rs_u1rc_genblk1_1__uitff_q.D u0rs_u1rc_genblk1_2__uitff_q.D \
+u0rs_u1rc_genblk1_3__uitff_q.D u0rs_u1rc_genblk1_4__uitff_q.D \
+u0rs_u1rc_genblk1_5__uitff_q.D u0rs_u1rc_genblk1_6__uitff_q.D \
+u0rs_u1rc_genblk1_7__uitff_q.D u1pbd_state_0_.D u1pbd_state_1_.D \
+u1pbd_state_2_.D a_reg_0_.D a_reg_1_.D a_reg_2_.T a_reg_3_.T zf.D cf.D pc_0_.D \
+pc_1_.D pc_2_.D
+.names b_reg_3_
+.names b_reg_1_
+.names b_reg_0_
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q pc_1_.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF pc_1_.AR
+0 1
+1 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q pc_2_.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF pc_2_.AR
+0 1
+1 0
+.names pc_0_.Q pc_1_.Q pc_2_.Q a_reg_0_.CE
+-1- 1
+0-- 1
+--1 1
+100 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q a_reg_0_.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF a_reg_0_.AR
+0 1
+1 0
+.names pc_0_.Q pc_1_.Q pc_2_.Q a_reg_1_.CE
+-1- 1
+0-- 1
+--1 1
+100 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q a_reg_1_.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF a_reg_1_.AR
+0 1
+1 0
+.names pc_0_.Q pc_1_.Q pc_2_.Q a_reg_2_.CE
+-1- 1
+0-- 1
+--1 1
+100 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q a_reg_2_.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF a_reg_2_.AR
+0 1
+1 0
+.names pc_0_.Q pc_1_.Q pc_2_.Q a_reg_3_.CE
+-1- 1
+0-- 1
+--1 1
+100 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q a_reg_3_.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF a_reg_3_.AR
+0 1
+1 0
+.names pc_1_.Q pc_2_.Q zf.CE
+1- 1
+-1 1
+00 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q zf.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF zf.AR
+0 1
+1 0
+.names pc_1_.Q pc_2_.Q cf.CE
+1- 1
+-1 1
+00 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q cf.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF cf.AR
+0 1
+1 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q b_reg_2_.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF b_reg_2_.AR
+0 1
+1 0
+.names u1pbd_state_0_.Q u1pbd_state_2_.Q pc_0_.C
+01 1
+1- 0
+-0 0
+.names reset_n.BLIF pc_0_.AR
+0 1
+1 0
+.names u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.C
+0 1
+1 0
+.names oneMHzClock.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1pbd_state_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1pbd_state_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1pbd_state_2_.C
+1 1
+0 0
+.names b_reg_2_.Q pc_0_.Q pc_1_.Q pc_2_.Q b_reg_2_.D
+-100 1
+1--- 1
+0-1- 0
+00-- 0
+0--1 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.D
+0 1
+1 0
+.names step.BLIF u1pbd_state_0_.Q u1pbd_state_2_.Q u1pbd_state_0_.D
+00- 1
+-01 1
+0-1 1
+11- 0
+-10 0
+1-0 0
+.names step.BLIF u1pbd_state_0_.Q u1pbd_state_1_.Q u1pbd_state_2_.Q \
+u1pbd_state_1_.D
+-011 1
+01-- 1
+0-1- 1
+11-- 0
+-00- 0
+1--0 0
+.names step.BLIF u1pbd_state_0_.Q u1pbd_state_1_.Q u1pbd_state_2_.Q \
+u1pbd_state_2_.D
+011- 1
+-011 1
+11-- 0
+-0-0 0
+--0- 0
+.names a_reg_0_.Q pc_0_.Q pc_1_.Q pc_2_.Q a_reg_0_.D
+1010 1
+0--1 1
+-1-0 0
+--00 0
+1--1 0
+0--0 0
+.names a_reg_0_.Q a_reg_1_.Q pc_0_.Q pc_1_.Q pc_2_.Q a_reg_1_.D
+-10-0 1
+1-1-0 1
+10--1 1
+01--1 1
+---00 1
+-0010 0
+0-110 0
+11--1 0
+00--1 0
+.names b_reg_2_.Q a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q pc_0_.Q pc_1_.Q pc_2_.Q \
+a_reg_2_.T
+1--0010 1
+--10110 1
+--011-0 1
+-11---1 1
+---1-00 1
+--0101- 0
+0---010 0
+--11-10 0
+--001-- 0
+---0-00 0
+-0----1 0
+--0---1 0
+.names a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q pc_0_.Q pc_1_.Q pc_2_.Q \
+a_reg_3_.T
+--10110 1
+111---1 1
+--011-0 1
+---1-00 1
+----010 0
+--11-10 0
+---0-00 0
+--00--- 0
+-0----1 0
+0-----1 0
+--0---1 0
+.names b_reg_2_.Q a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q pc_0_.Q pc_2_.Q \
+zf.D
+-1111-1 1
+00000-0 1
+-000-10 1
+1---00- 0
+--0-10- 0
+----0-1 0
+---1--0 0
+--0---1 0
+-1-0--- 0
+-01---- 0
+.names a_reg_0_.Q a_reg_1_.Q a_reg_2_.Q a_reg_3_.Q pc_0_.Q pc_1_.Q pc_2_.Q \
+cf.D
+1111--1 1
+---1110 1
+-----00 0
+----0-0 0
+---0--- 0
+--0---1 0
+-0----1 0
+0-----1 0
+.names pc_0_.Q pc_0_.D
+0 1
+1 0
+.names pc_0_.Q pc_1_.Q pc_1_.D
+10 1
+01 1
+00 0
+11 0
+.names pc_0_.Q pc_1_.Q pc_2_.Q pc_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.end

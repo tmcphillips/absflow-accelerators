@@ -1,0 +1,19 @@
+JDF B
+// Created by Version 1.5 
+PROJECT Mach64_Verilog_Project
+DESIGN mach64_verilog_project Normal
+DEVKIT LC4064V-75T48I
+ENTRY Pure Verilog HDL
+MODULE decadecountertosevensegment.v
+MODSTYLE RippleCounter Normal
+MODSTYLE UpDownCounter Normal
+MODSTYLE ButtonPressDetector Normal
+MODSTYLE BcdDecadeCounter Normal
+MODSTYLE HexDigitToSevenSegment Normal
+MODSTYLE JKFlipFlop Normal
+MODSTYLE RippleScaler Normal
+MODSTYLE TFlipFlop Normal
+MODSTYLE DecadeCounterToSevenSegment Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE DecadeCounterToSevenSegment

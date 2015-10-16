@@ -1,0 +1,13 @@
+oneMHzClock  i
+button_n[1]  i
+button_n[2]  i
+button_n[3]  i
+button_n[4]  i
+octaveSelect_n[1]  i
+octaveSelect_n[0]  i
+reset_n  i
+noiseOn_n  i
+noteOutC  o
+noteOutD  o
+noteOutE  o
+noteOutF  o

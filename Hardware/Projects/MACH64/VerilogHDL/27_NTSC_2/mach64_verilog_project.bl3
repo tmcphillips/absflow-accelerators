@@ -1,0 +1,1207 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Tue Feb 21 17:01:15 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 12 video_2_:34'ke'  hState_1_:23'ke'  vState_1_:21'ke'  ntscClock:43'ke'  left_n:14'ke'  \
+#  right_n:15'ke'  up_n:16'ke'  down_n:17'ke'  video_1_:33'ke'  video_0_:32'ke'  hState_0_:22'ke'  \
+#  vState_0_:20'ke' 
+#$ NODES 49 scanX_0_ scanY_3_ scanY_4_ scanY_5_ scanY_6_ scanY_7_ scanY_8_ ballY_0_ \
+#  ballY_1_ ballY_2_ ballY_3_ ballY_4_ ballY_5_ ballX_0_ ballX_1_ ballX_2_ ballX_3_ \
+#  ballX_4_ ballX_5_ scanX_1_ scanX_2_ scanX_3_ scanX_4_ scanX_5_ scanX_6_ scanX_7_ \
+#  N_108_0 scanY_0_ scanY_1_ scanY_2_ N_64_0 G_20 video_0_sqmuxa_3_4 video_0_sqmuxa_3_6 \
+#  video_0_sqmuxa_3_7 N_146 N_149 N_152 N_155 N_183 video_7_1__n scanY11 videoDFF_0reg \
+#  videoDFF_1reg videoDFF_2reg hStateDFF_0reg hStateDFF_1reg vStateDFFC_0reg \
+#  vStateDFFC_1reg
+.model ntsc
+.inputs ntscClock.BLIF left_n.BLIF right_n.BLIF up_n.BLIF down_n.BLIF \
+scanX_0_.BLIF scanY_3_.BLIF scanY_4_.BLIF scanY_5_.BLIF scanY_6_.BLIF \
+scanY_7_.BLIF scanY_8_.BLIF ballY_0_.BLIF ballY_1_.BLIF ballY_2_.BLIF \
+ballY_3_.BLIF ballY_4_.BLIF ballY_5_.BLIF ballX_0_.BLIF ballX_1_.BLIF \
+ballX_2_.BLIF ballX_3_.BLIF ballX_4_.BLIF ballX_5_.BLIF scanX_1_.BLIF \
+scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF scanX_5_.BLIF scanX_6_.BLIF \
+scanX_7_.BLIF N_108_0.BLIF scanY_0_.BLIF scanY_1_.BLIF scanY_2_.BLIF \
+N_64_0.BLIF G_20.BLIF video_0_sqmuxa_3_4.BLIF video_0_sqmuxa_3_6.BLIF \
+video_0_sqmuxa_3_7.BLIF N_146.BLIF N_149.BLIF N_152.BLIF N_155.BLIF N_183.BLIF \
+video_7_1__n.BLIF scanY11.BLIF videoDFF_0reg.BLIF videoDFF_1reg.BLIF \
+videoDFF_2reg.BLIF hStateDFF_0reg.BLIF hStateDFF_1reg.BLIF \
+vStateDFFC_0reg.BLIF vStateDFFC_1reg.BLIF
+.outputs video_2_ hState_1_ vState_1_ video_1_ video_0_ hState_0_ vState_0_ \
+vStateDFFC_0reg.CE vStateDFFC_0reg.C vStateDFFC_1reg.D vStateDFFC_1reg.CE \
+vStateDFFC_1reg.C scanY_0_.D scanY_0_.CE scanY_0_.C scanY_1_.D scanY_1_.CE \
+scanY_1_.C scanY_2_.D scanY_2_.CE scanY_2_.C scanY_3_.D scanY_3_.CE scanY_3_.C \
+scanY_4_.CE scanY_4_.C scanY_5_.CE scanY_5_.C scanY_6_.D scanY_6_.CE \
+scanY_6_.C scanY_7_.D scanY_7_.CE scanY_7_.C scanY_8_.D scanY_8_.CE scanY_8_.C \
+ballX_2_.C ballX_3_.D ballX_3_.C ballX_4_.C ballX_5_.C ballY_0_.D ballY_0_.C \
+ballY_1_.C ballY_2_.C ballY_3_.D ballY_3_.C ballY_4_.C ballY_5_.C \
+hStateDFF_0reg.D hStateDFF_0reg.C hStateDFF_1reg.C videoDFF_0reg.D \
+videoDFF_0reg.C videoDFF_1reg.D videoDFF_1reg.C videoDFF_2reg.C scanX_0_.D \
+scanX_0_.C scanX_1_.D scanX_1_.C scanX_2_.D scanX_2_.C scanX_3_.D scanX_3_.C \
+scanX_4_.D scanX_4_.C scanX_5_.D scanX_5_.C scanX_6_.D scanX_6_.C scanX_7_.C \
+ballX_0_.D ballX_0_.C ballX_1_.C video_0_sqmuxa_3_4 video_0_sqmuxa_3_6 \
+video_0_sqmuxa_3_7 N_146 N_149 N_152 N_155 N_183 video_7_1__n scanY11 \
+scanY_4_.D.X1 scanY_4_.D.X2 scanY_5_.D.X1 scanY_5_.D.X2 ballY_1_.D.X1 \
+ballY_1_.D.X2 ballY_2_.D.X1 ballY_2_.D.X2 ballY_4_.D.X1 ballY_4_.D.X2 \
+ballY_5_.D.X1 ballY_5_.D.X2 ballX_1_.D.X1 ballX_1_.D.X2 ballX_2_.D.X1 \
+ballX_2_.D.X2 ballX_4_.D.X1 ballX_4_.D.X2 ballX_5_.D.X1 ballX_5_.D.X2 \
+scanX_7_.D.X1 scanX_7_.D.X2 N_108_0.X1 N_108_0.X2 N_64_0.X1 N_64_0.X2 G_20.X1 \
+G_20.X2 videoDFF_2reg.D.X1 videoDFF_2reg.D.X2 hStateDFF_1reg.D.X1 \
+hStateDFF_1reg.D.X2 vStateDFFC_0reg.D.X1 vStateDFFC_0reg.D.X2
+.names scanY_3_.BLIF scanY_4_.BLIF scanY_5_.BLIF scanY_6_.BLIF scanY_7_.BLIF \
+scanY_8_.BLIF scanY_0_.BLIF scanY_1_.BLIF scanY_2_.BLIF scanY11.BLIF \
+vStateDFFC_0reg.BLIF vStateDFFC_1reg.BLIF vStateDFFC_1reg.D
+111110100-10 1
+---------0-1 1
+----------01 1
+---------111 0
+----------00 0
+--------1--0 0
+-------1---0 0
+------0----0 0
+-----1-----0 0
+----0------0 0
+---0-------0 0
+--0--------0 0
+-0---------0 0
+0----------0 0
+.names scanY_0_.BLIF scanY_0_.D
+0 1
+1 0
+.names scanY_0_.BLIF scanY_1_.BLIF scanY11.BLIF vStateDFFC_0reg.BLIF \
+vStateDFFC_1reg.BLIF scanY_1_.D
+10-0- 1
+01-0- 1
+100-- 1
+010-- 1
+10--0 1
+01--0 1
+--111 0
+00--- 0
+11--- 0
+.names scanY_0_.BLIF scanY_1_.BLIF scanY_2_.BLIF scanY11.BLIF \
+vStateDFFC_0reg.BLIF vStateDFFC_1reg.BLIF scanY_2_.D
+110-0- 1
+1100-- 1
+110--0 1
+-01-0- 1
+0-1-0- 1
+-010-- 1
+0-10-- 1
+-01--0 1
+0-1--0 1
+111--- 0
+---111 0
+-00--- 0
+0-0--- 0
+.names scanY_6_.BLIF scanY_7_.BLIF scanY_8_.BLIF N_183.BLIF scanY11.BLIF \
+vStateDFFC_0reg.BLIF vStateDFFC_1reg.BLIF scanY_8_.D
+1101-0- 1
+11010-- 1
+1101--0 1
+--10-0- 1
+-01--0- 1
+0-1--0- 1
+--100-- 1
+-01-0-- 1
+0-1-0-- 1
+--10--0 1
+-01---0 1
+0-1---0 1
+1111--- 0
+----111 0
+--00--- 0
+-00---- 0
+0-0---- 0
+.names left_n.BLIF ballX_3_.BLIF N_64_0.BLIF ballX_3_.D
+100 1
+010 1
+001 1
+111 1
+000 0
+110 0
+101 0
+011 0
+.names up_n.BLIF ballY_3_.BLIF N_108_0.BLIF ballY_3_.D
+100 1
+010 1
+001 1
+111 1
+000 0
+110 0
+101 0
+011 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF N_152.BLIF N_155.BLIF \
+hStateDFF_0reg.BLIF hStateDFF_1reg.BLIF hStateDFF_0reg.D
+-------1--10 1
+--1-------11 1
+----0--0--1- 1
+-----10---1- 1
+-1----1---1- 1
+--0--0----1- 1
+-0--1-----1- 1
+1010011101-0 1
+1010111111-0 1
+1010000000-0 1
+1010100010-0 1
+111-010000-1 1
+111-110010-1 1
+---1------1- 1
+1---------1- 1
+-----0----01 0
+-----0---10- 0
+-0---1-0--0- 0
+-1--------00 0
+------1--00- 0
+------01--0- 0
+---1------00 0
+---------101 0
+01101000---0 0
+00000111---1 0
+----1---0-0- 0
+----0---1-0- 0
+--0-------0- 0
+0---------0- 0
+.names hStateDFF_0reg.BLIF hStateDFF_1reg.BLIF vStateDFFC_0reg.BLIF \
+vStateDFFC_1reg.BLIF videoDFF_0reg.D
+1001 1
+-11- 1
+0-1- 1
+0--0 1
+10-0 0
+110- 0
+101- 0
+0-01 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanX_0_.D
+0-------0- 1
+0------0-- 1
+0-----0--- 1
+0----0---- 1
+0---1----- 1
+0--1------ 1
+0-1------- 1
+01-------- 1
+0--------0 1
+-000011111 0
+1--------- 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF N_155.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanX_5_.D
+-----0--1-- 1
+-----1--00- 1
+-----1-00-- 1
+-----10-0-- 1
+----11--0-- 1
+---1-1--0-- 1
+--1--1--0-- 1
+-1---1--0-- 1
+1----1--0-- 1
+-----1--0-0 1
+00000-11011 0
+-----0--0-- 0
+-----1--1-- 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF N_155.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanX_6_.D
+-----10-1-- 1
+-----01---- 1
+------1-00- 1
+------100-- 1
+----1-1-0-- 1
+---1--1-0-- 1
+--1---1-0-- 1
+-1----1-0-- 1
+1-----1-0-- 1
+------1-0-0 1
+00000111-11 0
+-----11-1-- 0
+------0-0-- 0
+-----00---- 0
+.names scanY_3_.BLIF scanY_4_.BLIF ballY_0_.BLIF ballY_1_.BLIF \
+video_0_sqmuxa_3_4
+0000 1
+1010 1
+0101 1
+1111 1
+1-0- 0
+0-1- 0
+-1-0 0
+-0-1 0
+.names scanY_7_.BLIF scanY_8_.BLIF ballY_4_.BLIF ballY_5_.BLIF \
+video_0_sqmuxa_3_6
+0000 1
+1010 1
+0101 1
+1111 1
+1-0- 0
+0-1- 0
+-1-0 0
+-0-1 0
+.names ballX_0_.BLIF ballX_1_.BLIF ballX_2_.BLIF ballX_3_.BLIF scanX_2_.BLIF \
+scanX_3_.BLIF scanX_4_.BLIF scanX_5_.BLIF N_146.BLIF N_149.BLIF N_152.BLIF \
+N_155.BLIF video_0_sqmuxa_3_7
+000000000000 1
+100010000000 1
+010001000000 1
+110011000000 1
+001000100000 1
+101010100000 1
+011001100000 1
+111011100000 1
+000100010000 1
+100110010000 1
+010101010000 1
+110111010000 1
+001100110000 1
+101110110000 1
+011101110000 1
+111111110000 1
+100000001000 1
+000010001000 1
+110001001000 1
+010011001000 1
+101000101000 1
+001010101000 1
+111001101000 1
+011011101000 1
+100100011000 1
+000110011000 1
+110101011000 1
+010111011000 1
+101100111000 1
+001110111000 1
+111101111000 1
+011111111000 1
+010000000100 1
+110010000100 1
+000001000100 1
+100011000100 1
+011000100100 1
+111010100100 1
+001001100100 1
+101011100100 1
+010100010100 1
+110110010100 1
+000101010100 1
+100111010100 1
+011100110100 1
+111110110100 1
+001101110100 1
+101111110100 1
+110000001100 1
+010010001100 1
+100001001100 1
+000011001100 1
+111000101100 1
+011010101100 1
+101001101100 1
+001011101100 1
+110100011100 1
+010110011100 1
+100101011100 1
+000111011100 1
+111100111100 1
+011110111100 1
+101101111100 1
+001111111100 1
+001000000010 1
+101010000010 1
+011001000010 1
+111011000010 1
+000000100010 1
+100010100010 1
+010001100010 1
+110011100010 1
+001100010010 1
+101110010010 1
+011101010010 1
+111111010010 1
+000100110010 1
+100110110010 1
+010101110010 1
+110111110010 1
+101000001010 1
+001010001010 1
+111001001010 1
+011011001010 1
+100000101010 1
+000010101010 1
+110001101010 1
+010011101010 1
+101100011010 1
+001110011010 1
+111101011010 1
+011111011010 1
+100100111010 1
+000110111010 1
+110101111010 1
+010111111010 1
+011000000110 1
+111010000110 1
+001001000110 1
+101011000110 1
+010000100110 1
+110010100110 1
+000001100110 1
+100011100110 1
+011100010110 1
+111110010110 1
+001101010110 1
+101111010110 1
+010100110110 1
+110110110110 1
+000101110110 1
+100111110110 1
+111000001110 1
+011010001110 1
+101001001110 1
+001011001110 1
+110000101110 1
+010010101110 1
+100001101110 1
+000011101110 1
+111100011110 1
+011110011110 1
+101101011110 1
+001111011110 1
+110100111110 1
+010110111110 1
+100101111110 1
+000111111110 1
+000100000001 1
+100110000001 1
+010101000001 1
+110111000001 1
+001100100001 1
+101110100001 1
+011101100001 1
+111111100001 1
+000000010001 1
+100010010001 1
+010001010001 1
+110011010001 1
+001000110001 1
+101010110001 1
+011001110001 1
+111011110001 1
+100100001001 1
+000110001001 1
+110101001001 1
+010111001001 1
+101100101001 1
+001110101001 1
+111101101001 1
+011111101001 1
+100000011001 1
+000010011001 1
+110001011001 1
+010011011001 1
+101000111001 1
+001010111001 1
+111001111001 1
+011011111001 1
+010100000101 1
+110110000101 1
+000101000101 1
+100111000101 1
+011100100101 1
+111110100101 1
+001101100101 1
+101111100101 1
+010000010101 1
+110010010101 1
+000001010101 1
+100011010101 1
+011000110101 1
+111010110101 1
+001001110101 1
+101011110101 1
+110100001101 1
+010110001101 1
+100101001101 1
+000111001101 1
+111100101101 1
+011110101101 1
+101101101101 1
+001111101101 1
+110000011101 1
+010010011101 1
+100001011101 1
+000011011101 1
+111000111101 1
+011010111101 1
+101001111101 1
+001011111101 1
+001100000011 1
+101110000011 1
+011101000011 1
+111111000011 1
+000100100011 1
+100110100011 1
+010101100011 1
+110111100011 1
+001000010011 1
+101010010011 1
+011001010011 1
+111011010011 1
+000000110011 1
+100010110011 1
+010001110011 1
+110011110011 1
+101100001011 1
+001110001011 1
+111101001011 1
+011111001011 1
+100100101011 1
+000110101011 1
+110101101011 1
+010111101011 1
+101000011011 1
+001010011011 1
+111001011011 1
+011011011011 1
+100000111011 1
+000010111011 1
+110001111011 1
+010011111011 1
+011100000111 1
+111110000111 1
+001101000111 1
+101111000111 1
+010100100111 1
+110110100111 1
+000101100111 1
+100111100111 1
+011000010111 1
+111010010111 1
+001001010111 1
+101011010111 1
+010000110111 1
+110010110111 1
+000001110111 1
+100011110111 1
+111100001111 1
+011110001111 1
+101101001111 1
+001111001111 1
+110100101111 1
+010110101111 1
+100101101111 1
+000111101111 1
+111000011111 1
+011010011111 1
+101001011111 1
+001011011111 1
+110000111111 1
+010010111111 1
+100001111111 1
+000011111111 1
+--1---0---0- 0
+--0---1---0- 0
+--0---0---1- 0
+--1---1---1- 0
+-1---0---0-- 0
+-0---1---0-- 0
+-0---0---1-- 0
+-1---1---1-- 0
+1---0---0--- 0
+0---1---0--- 0
+0---0---1--- 0
+1---1---1--- 0
+---1---0---0 0
+---0---1---0 0
+---0---0---1 0
+---1---1---1 0
+.names scanX_0_.BLIF scanX_1_.BLIF N_146
+11 1
+0- 0
+-0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF N_149
+111 1
+-0- 0
+0-- 0
+--0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF N_152
+1111 1
+--0- 0
+-0-- 0
+0--- 0
+---0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+N_155
+11111 1
+---0- 0
+--0-- 0
+-0--- 0
+0---- 0
+----0 0
+.names scanY_3_.BLIF scanY_4_.BLIF scanY_5_.BLIF scanY_0_.BLIF scanY_1_.BLIF \
+scanY_2_.BLIF N_183
+111111 1
+----0- 0
+---0-- 0
+--0--- 0
+-0---- 0
+0----- 0
+-----0 0
+.names hStateDFF_0reg.BLIF hStateDFF_1reg.BLIF vStateDFFC_0reg.BLIF \
+vStateDFFC_1reg.BLIF video_7_1__n
+1100 1
+--1- 0
+-0-- 0
+0--- 0
+---1 0
+.names scanY_3_.BLIF scanY_4_.BLIF scanY_5_.BLIF scanY_6_.BLIF scanY_7_.BLIF \
+scanY_8_.BLIF scanY_0_.BLIF scanY_1_.BLIF scanY_2_.BLIF scanY11
+000001101 1
+-------1- 0
+------0-- 0
+-----0--- 0
+----1---- 0
+---1----- 0
+--1------ 0
+-1------- 0
+1-------- 0
+--------0 0
+.names videoDFF_2reg.BLIF video_2_
+1 1
+0 0
+.names hStateDFF_1reg.BLIF hState_1_
+1 1
+0 0
+.names vStateDFFC_1reg.BLIF vState_1_
+1 1
+0 0
+.names videoDFF_1reg.BLIF video_1_
+1 1
+0 0
+.names videoDFF_0reg.BLIF video_0_
+1 1
+0 0
+.names hStateDFF_0reg.BLIF hState_0_
+1 1
+0 0
+.names vStateDFFC_0reg.BLIF vState_0_
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF vStateDFFC_0reg.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF vStateDFFC_0reg.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF vStateDFFC_1reg.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF vStateDFFC_1reg.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_0_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_0_.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_1_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_1_.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_2_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_2_.C
+1 1
+0 0
+.names scanY_3_.BLIF scanY_0_.BLIF scanY_1_.BLIF scanY_2_.BLIF scanY_3_.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_3_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_3_.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_4_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_4_.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_5_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_5_.C
+1 1
+0 0
+.names scanY_6_.BLIF N_183.BLIF scanY_6_.D
+10 1
+01 1
+00 0
+11 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_6_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_6_.C
+1 1
+0 0
+.names scanY_6_.BLIF scanY_7_.BLIF N_183.BLIF scanY_7_.D
+101 1
+01- 1
+-10 1
+111 0
+00- 0
+-00 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_7_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_7_.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanY_8_.CE
+0000011111 1
+--------0- 0
+-------0-- 0
+------0--- 0
+-----0---- 0
+----1----- 0
+---1------ 0
+--1------- 0
+-1-------- 0
+1--------- 0
+---------0 0
+.names ntscClock.BLIF scanY_8_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_2_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_3_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_4_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_5_.C
+1 1
+0 0
+.names up_n.BLIF down_n.BLIF ballY_0_.BLIF ballY_0_.D
+100 1
+010 1
+001 1
+111 1
+000 0
+110 0
+101 0
+011 0
+.names scanY_8_.BLIF ballY_0_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_1_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_2_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_3_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_4_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_5_.C
+1 1
+0 0
+.names ntscClock.BLIF hStateDFF_0reg.C
+1 1
+0 0
+.names ntscClock.BLIF hStateDFF_1reg.C
+1 1
+0 0
+.names ntscClock.BLIF videoDFF_0reg.C
+1 1
+0 0
+.names video_7_1__n.BLIF videoDFF_1reg.D
+1 1
+0 0
+.names ntscClock.BLIF videoDFF_1reg.C
+1 1
+0 0
+.names ntscClock.BLIF videoDFF_2reg.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_0_.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_1_.D
+10 1
+01 1
+00 0
+11 0
+.names ntscClock.BLIF scanX_1_.C
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names ntscClock.BLIF scanX_2_.C
+1 1
+0 0
+.names scanX_3_.BLIF N_149.BLIF scanX_3_.D
+10 1
+01 1
+00 0
+11 0
+.names ntscClock.BLIF scanX_3_.C
+1 1
+0 0
+.names scanX_4_.BLIF N_152.BLIF scanX_4_.D
+10 1
+01 1
+00 0
+11 0
+.names ntscClock.BLIF scanX_4_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_5_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_6_.C
+1 1
+0 0
+.names ntscClock.BLIF scanX_7_.C
+1 1
+0 0
+.names left_n.BLIF right_n.BLIF ballX_0_.BLIF ballX_0_.D
+100 1
+010 1
+001 1
+111 1
+000 0
+110 0
+101 0
+011 0
+.names scanY_8_.BLIF ballX_0_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_1_.C
+1 1
+0 0
+.names scanY_4_.BLIF scanY_4_.D.X1
+1 1
+0 0
+.names scanY_3_.BLIF scanY_4_.BLIF scanY_0_.BLIF scanY_1_.BLIF scanY_2_.BLIF \
+scanY_4_.D.X2
+1-111 1
+0---- 0
+--0-- 0
+---0- 0
+----0 0
+.names scanY_5_.BLIF scanY_5_.D.X1
+1 1
+0 0
+.names scanY_3_.BLIF scanY_4_.BLIF scanY_5_.BLIF scanY_0_.BLIF scanY_1_.BLIF \
+scanY_2_.BLIF scanY_5_.D.X2
+11-111 1
+0----- 0
+-0---- 0
+---0-- 0
+----0- 0
+-----0 0
+.names ballY_1_.BLIF ballY_1_.D.X1
+1 1
+0 0
+.names up_n.BLIF down_n.BLIF ballY_0_.BLIF ballY_1_.BLIF ballY_1_.D.X2
+010- 1
+101- 1
+11-- 0
+00-- 0
+0-1- 0
+1-0- 0
+.names ballY_2_.BLIF ballY_2_.D.X1
+1 1
+0 0
+.names up_n.BLIF down_n.BLIF ballY_0_.BLIF ballY_1_.BLIF ballY_2_.BLIF \
+ballY_2_.D.X2
+0100- 1
+1011- 1
+11--- 0
+00--- 0
+0-1-- 0
+1-0-- 0
+0--1- 0
+1--0- 0
+.names ballY_4_.BLIF ballY_4_.D.X1
+1 1
+0 0
+.names up_n.BLIF ballY_3_.BLIF ballY_4_.BLIF N_108_0.BLIF ballY_4_.D.X2
+00-1 1
+11-0 1
+01-- 0
+10-- 0
+1--1 0
+0--0 0
+.names ballY_5_.BLIF ballY_5_.D.X1
+1 1
+0 0
+.names up_n.BLIF ballY_3_.BLIF ballY_4_.BLIF ballY_5_.BLIF N_108_0.BLIF \
+ballY_5_.D.X2
+000-1 1
+111-0 1
+01--- 0
+10--- 0
+0-1-- 0
+1-0-- 0
+1---1 0
+0---0 0
+.names ballX_1_.BLIF ballX_1_.D.X1
+1 1
+0 0
+.names left_n.BLIF right_n.BLIF ballX_0_.BLIF ballX_1_.BLIF ballX_1_.D.X2
+010- 1
+101- 1
+11-- 0
+00-- 0
+0-1- 0
+1-0- 0
+.names ballX_2_.BLIF ballX_2_.D.X1
+1 1
+0 0
+.names left_n.BLIF right_n.BLIF ballX_0_.BLIF ballX_1_.BLIF ballX_2_.BLIF \
+ballX_2_.D.X2
+0100- 1
+1011- 1
+11--- 0
+00--- 0
+0-1-- 0
+1-0-- 0
+0--1- 0
+1--0- 0
+.names ballX_4_.BLIF ballX_4_.D.X1
+1 1
+0 0
+.names left_n.BLIF ballX_3_.BLIF ballX_4_.BLIF N_64_0.BLIF ballX_4_.D.X2
+00-1 1
+11-0 1
+01-- 0
+10-- 0
+1--1 0
+0--0 0
+.names ballX_5_.BLIF ballX_5_.D.X1
+1 1
+0 0
+.names left_n.BLIF ballX_3_.BLIF ballX_4_.BLIF ballX_5_.BLIF N_64_0.BLIF \
+ballX_5_.D.X2
+000-1 1
+111-0 1
+01--- 0
+10--- 0
+0-1-- 0
+1-0-- 0
+1---1 0
+0---0 0
+.names scanX_7_.BLIF scanX_7_.D.X1
+1 1
+0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF N_155.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF scanX_7_.D.X2
+-----11-1-- 1
+00000111-11 1
+-----0----- 0
+------0---- 0
+1-------0-- 0
+-1------0-- 0
+--1-----0-- 0
+---1----0-- 0
+----1---0-- 0
+-------00-- 0
+--------00- 0
+--------0-0 0
+.names up_n.BLIF down_n.BLIF N_108_0.X1
+10 1
+0- 0
+-1 0
+.names up_n.BLIF down_n.BLIF ballY_0_.BLIF ballY_1_.BLIF ballY_2_.BLIF \
+N_108_0.X2
+1-111 1
+11--- 1
+-1000 1
+0-1-- 0
+-00-- 0
+0--1- 0
+-0-0- 0
+0---1 0
+-0--0 0
+.names left_n.BLIF right_n.BLIF N_64_0.X1
+10 1
+0- 0
+-1 0
+.names left_n.BLIF right_n.BLIF ballX_0_.BLIF ballX_1_.BLIF ballX_2_.BLIF \
+N_64_0.X2
+1-111 1
+11--- 1
+-1000 1
+0-1-- 0
+-00-- 0
+0--1- 0
+-0-0- 0
+0---1 0
+-0--0 0
+.names ballX_5_.BLIF G_20.X1
+0 1
+1 0
+.names scanX_0_.BLIF ballX_5_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF \
+scanX_4_.BLIF scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF G_20.X2
+0-------0 1
+--0-----0 1
+---0----0 1
+----0---0 1
+-----0--0 1
+------0-0 1
+-------00 1
+1-1111111 1
+0-------1 0
+--0-----1 0
+---0----1 0
+----0---1 0
+-----0--1 0
+------0-1 0
+-------01 0
+1-1111110 0
+.names G_20.BLIF video_0_sqmuxa_3_4.BLIF videoDFF_2reg.D.X1
+01 1
+1- 0
+-0 0
+.names scanY_5_.BLIF scanY_6_.BLIF ballY_2_.BLIF ballY_3_.BLIF ballX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF G_20.BLIF video_0_sqmuxa_3_4.BLIF \
+video_0_sqmuxa_3_6.BLIF video_0_sqmuxa_3_7.BLIF N_155.BLIF video_7_1__n.BLIF \
+videoDFF_2reg.D.X2
+0-1----01---- 1
+-0-1---01---- 1
+-------010--- 1
+-------01-0-- 1
+-------01---0 1
+----01001--1- 1
+-1-0---01---- 1
+1-0----01---- 1
+----00101---- 1
+----0-101--0- 1
+----10001---- 1
+----1-001--0- 1
+----11101--1- 1
+-------1----- 0
+--------0---- 0
+1111101--11-1 0
+0101101--11-1 0
+1010101--11-1 0
+0000101--11-1 0
+1111000--11-1 0
+0101000--11-1 0
+1010000--11-1 0
+0000000--11-1 0
+11111-1--1101 0
+01011-1--1101 0
+10101-1--1101 0
+00001-1--1101 0
+11110-0--1101 0
+01010-0--1101 0
+10100-0--1101 0
+00000-0--1101 0
+1111011--1111 0
+0101011--1111 0
+1010011--1111 0
+0000011--1111 0
+1111110--1111 0
+0101110--1111 0
+1010110--1111 0
+0000110--1111 0
+.names scanX_2_.BLIF hStateDFF_1reg.BLIF hStateDFF_1reg.D.X1
+01 1
+1- 0
+-0 0
+.names scanX_0_.BLIF scanX_1_.BLIF scanX_2_.BLIF scanX_3_.BLIF scanX_4_.BLIF \
+scanX_5_.BLIF scanX_6_.BLIF scanX_7_.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF hStateDFF_1reg.D.X2
+00-0011111 1
+--1------1 1
+011010001- 1
+1-0------- 0
+-10------- 0
+--01------ 0
+--0-1----- 0
+--0--0---- 0
+--0---0--- 0
+--0----0-- 0
+--0-----0- 0
+1--------0 0
+-0-------0 0
+---1-----0 0
+----0----0 0
+-----1---0 0
+------1--0 0
+-------1-0 0
+--------00 0
+.names vStateDFFC_0reg.BLIF vStateDFFC_1reg.BLIF vStateDFFC_0reg.D.X1
+10 1
+0- 0
+-1 0
+.names scanY_3_.BLIF scanY_4_.BLIF scanY_5_.BLIF scanY_6_.BLIF scanY_7_.BLIF \
+scanY_8_.BLIF scanY_0_.BLIF scanY_1_.BLIF scanY_2_.BLIF N_183.BLIF \
+scanY11.BLIF vStateDFFC_0reg.BLIF vStateDFFC_1reg.BLIF vStateDFFC_0reg.D.X2
+0110101101-00 1
+0111101100-00 1
+111110100--10 1
+1110011110-01 1
+1111101111-01 1
+----------011 1
+-0---------0- 0
+--0--------0- 0
+------0----0- 0
+-------0---0- 0
+-0----------0 0
+--0---------0 0
+----0-------0 0
+-----1------0 0
+------0-----0 0
+--------1---0 0
+---10------0- 0
+---1-1-----0- 0
+----------111 0
+0----------01 0
+--------0--01 0
+1--0--------0 0
+1------1----0 0
+0------0----0 0
+---0-----0--0 0
+0----------10 0
+1----------00 0
+---01------01 0
+---0-0-----01 0
+---0-----1-01 0
+---1-----0-01 0
+0--1-----1--0 0
+.end

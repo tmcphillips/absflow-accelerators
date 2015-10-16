@@ -1,0 +1,18 @@
+module SerToParShiftRegister interface(D,Clk,Clr->[Q7..Q0])
+
+declarations
+
+	D, Clk, Clr pin;
+	Q0..Q7	    pin istype 'reg,buffer';
+
+equations
+
+	Q0       := D;
+	[Q7..Q1] := [Q6..Q0];
+
+
+	[Q0..Q7].clk =  Clk;
+	[Q0..Q7].ar  =  Clr;
+
+end
+

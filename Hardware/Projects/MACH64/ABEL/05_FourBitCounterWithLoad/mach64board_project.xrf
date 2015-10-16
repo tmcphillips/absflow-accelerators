@@ -1,0 +1,31 @@
+Signal Name Cross Reference File
+
+ispLEVER Classic 1.4.01.04.23.l1
+
+Design 'mach64board_project' created Mon Jan 16 15:09:37 2012
+
+Title:  Four bit counter with load
+
+ LEGEND:  '>'  Functional Block Port Separator
+          '/'  Hierarchy Path Separator
+          '@'  Automatically Generated Node
+
+
+Short Name                              Hierarchical Name
+----------                              -----------------
+B0_debounced                         	debouncedDown>debounced
+B1_lastSample                        	debouncedDown/lastSample
+L0_debounced                         	debouncedLoad>debounced
+L1_lastSample                        	debouncedLoad/lastSample
+S0_s0                                	oneKHzClock/s0
+S0_s1                                	oneKHzClock/s1
+S0_s2                                	oneKHzClock/s2
+S0_s3                                	oneKHzClock/s3
+S0_s4                                	oneKHzClock/s4
+S0_s5                                	oneKHzClock/s5
+S0_s6                                	oneKHzClock/s6
+S0_s7                                	oneKHzClock/s7
+S0_s8                                	oneKHzClock/s8
+S0_s9                                	oneKHzClock/s9
+X0_debounced                         	debouncedUp>debounced
+X1_lastSample                        	debouncedUp/lastSample

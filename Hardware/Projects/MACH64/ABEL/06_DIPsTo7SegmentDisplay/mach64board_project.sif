@@ -1,0 +1,207 @@
+// Node Statistic Information File
+// Tool:  ispLEVER Classic 1.4.01.04.23.l1
+// Design 'dipsto7segmentdisplay' created   Mon Jan 16 15:12:09 2012
+
+// Fmax Logic Level: 0.
+
+// Path: 
+
+// Signal Name: a
+// Type: Tri
+BEGIN a
+Fanin Number		5
+Pterm Number		6
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+Fanin Input     	d1.BLIF             	0
+Fanin Input     	d2.BLIF             	0
+Fanin Input     	d3.BLIF             	0
+Fanin Input     	enableHex.BLIF      	0
+END
+
+// Signal Name: a.OE
+// Type: Tri
+BEGIN a.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	enableDisplay.BLIF  	0
+END
+
+// Signal Name: b
+// Type: Tri
+BEGIN b
+Fanin Number		5
+Pterm Number		6
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+Fanin Input     	d1.BLIF             	0
+Fanin Input     	d2.BLIF             	0
+Fanin Input     	d3.BLIF             	0
+Fanin Input     	enableHex.BLIF      	0
+END
+
+// Signal Name: b.OE
+// Type: Tri
+BEGIN b.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	enableDisplay.BLIF  	0
+END
+
+// Signal Name: c
+// Type: Tri
+BEGIN c
+Fanin Number		5
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+Fanin Input     	d1.BLIF             	0
+Fanin Input     	d2.BLIF             	0
+Fanin Input     	d3.BLIF             	0
+Fanin Input     	enableHex.BLIF      	0
+END
+
+// Signal Name: c.OE
+// Type: Tri
+BEGIN c.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	enableDisplay.BLIF  	0
+END
+
+// Signal Name: d
+// Type: Tri
+BEGIN d
+Fanin Number		5
+Pterm Number		6
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+Fanin Input     	d1.BLIF             	0
+Fanin Input     	d2.BLIF             	0
+Fanin Input     	d3.BLIF             	0
+Fanin Input     	enableHex.BLIF      	0
+END
+
+// Signal Name: d.OE
+// Type: Tri
+BEGIN d.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	enableDisplay.BLIF  	0
+END
+
+// Signal Name: e
+// Type: Tri
+BEGIN e
+Fanin Number		5
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+Fanin Input     	d1.BLIF             	0
+Fanin Input     	d2.BLIF             	0
+Fanin Input     	d3.BLIF             	0
+Fanin Input     	enableHex.BLIF      	0
+END
+
+// Signal Name: e.OE
+// Type: Tri
+BEGIN e.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	enableDisplay.BLIF  	0
+END
+
+// Signal Name: f.X1
+// Type: Tri
+BEGIN f.X1
+Fanin Number		5
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+Fanin Input     	d1.BLIF             	0
+Fanin Input     	d2.BLIF             	0
+Fanin Input     	d3.BLIF             	0
+Fanin Input     	enableHex.BLIF      	0
+END
+
+// Signal Name: f.X2
+// Type: Tri
+BEGIN f.X2
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+Fanin Input     	d1.BLIF             	0
+Fanin Input     	d2.BLIF             	0
+Fanin Input     	d3.BLIF             	0
+Fanin Input     	enableHex.BLIF      	0
+END
+
+// Signal Name: f.OE
+// Type: Tri
+BEGIN f.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	enableDisplay.BLIF  	0
+END
+
+// Signal Name: g
+// Type: Tri
+BEGIN g
+Fanin Number		5
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+Fanin Input     	d1.BLIF             	0
+Fanin Input     	d2.BLIF             	0
+Fanin Input     	d3.BLIF             	0
+Fanin Input     	enableHex.BLIF      	0
+END
+
+// Signal Name: g.OE
+// Type: Tri
+BEGIN g.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	enableDisplay.BLIF  	0
+END
+
+// Design 'dipsto7segmentdisplay' used clock signal list:
+

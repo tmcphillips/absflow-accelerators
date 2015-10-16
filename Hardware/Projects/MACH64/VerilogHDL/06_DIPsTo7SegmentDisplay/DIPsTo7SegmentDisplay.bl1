@@ -1,0 +1,216 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Jan 25 17:15:07 2012
+#$ MODULE dipsto7segmentdisplay
+#$ PINS 11 dipSwitches_n_3_:14'ke'  a:20'ke'  b:21'ke'  c:22'ke'  d:23'ke'  e:24'ke'  f:26'ke'  g:27'ke'  \
+#  dipSwitches_n_2_:15'ke'  dipSwitches_n_1_:16'ke'  dipSwitches_n_0_:17'ke' 
+#$ NODES 74 N_10 N_11 N_14 N_16 N_23 N_27 N_28 N_29 N_47 N_50 N_52 N_53 N_62 N_63 N_64 N_65 \
+#  N_66 N_67 N_68 N_69 N_70 N_72 genblk1_u1hdtss_segments_1_i_0_x2_3_ \
+#  dipswitches_n_i_2__n dipswitches_n_i_1__n dipswitches_n_i_3__n \
+#  dipswitches_n_i_0__n dipswitches_n_c_0__n dipswitches_n_c_1__n \
+#  dipswitches_n_c_2__n dipswitches_n_c_3__n f_c g_c N_16_0 N_14_0 N_11_0 N_28_i N_70_i \
+#  N_10_0 N_65_i N_68_i N_69_i N_21_i N_66_i N_67_i N_15_i N_63_i N_64_i f_c_0 N_53_i N_62_i \
+#  N_19_i N_50_i N_52_i N_17_i N_29_i N_47_i N_13_i N_23_i N_27_i N_72_i g_c_0 N_66_1 \
+#  N_21_i_1 N_15_i_1 f_c_0_1 N_13_i_1 g_c_0_1 g_c_0_2 N_69_1 N_67_1 N_53_1 N_52_1 N_50_1
+.model dipsto7segmentdisplay
+.inputs dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+dipSwitches_n_0_.BLIF N_10.BLIF N_11.BLIF N_14.BLIF N_16.BLIF N_23.BLIF \
+N_27.BLIF N_28.BLIF N_29.BLIF N_47.BLIF N_50.BLIF N_52.BLIF N_53.BLIF \
+N_62.BLIF N_63.BLIF N_64.BLIF N_65.BLIF N_66.BLIF N_67.BLIF N_68.BLIF \
+N_69.BLIF N_70.BLIF N_72.BLIF genblk1_u1hdtss_segments_1_i_0_x2_3_.BLIF \
+dipswitches_n_i_2__n.BLIF dipswitches_n_i_1__n.BLIF dipswitches_n_i_3__n.BLIF \
+dipswitches_n_i_0__n.BLIF dipswitches_n_c_0__n.BLIF dipswitches_n_c_1__n.BLIF \
+dipswitches_n_c_2__n.BLIF dipswitches_n_c_3__n.BLIF f_c.BLIF g_c.BLIF \
+N_16_0.BLIF N_14_0.BLIF N_11_0.BLIF N_28_i.BLIF N_70_i.BLIF N_10_0.BLIF \
+N_65_i.BLIF N_68_i.BLIF N_69_i.BLIF N_21_i.BLIF N_66_i.BLIF N_67_i.BLIF \
+N_15_i.BLIF N_63_i.BLIF N_64_i.BLIF f_c_0.BLIF N_53_i.BLIF N_62_i.BLIF \
+N_19_i.BLIF N_50_i.BLIF N_52_i.BLIF N_17_i.BLIF N_29_i.BLIF N_47_i.BLIF \
+N_13_i.BLIF N_23_i.BLIF N_27_i.BLIF N_72_i.BLIF g_c_0.BLIF N_66_1.BLIF \
+N_21_i_1.BLIF N_15_i_1.BLIF f_c_0_1.BLIF N_13_i_1.BLIF g_c_0_1.BLIF \
+g_c_0_2.BLIF N_69_1.BLIF N_67_1.BLIF N_53_1.BLIF N_52_1.BLIF N_50_1.BLIF
+.outputs a b c d e f g N_10 N_11 N_14 N_16 N_23 N_27 N_28 N_29 N_47 N_50 N_52 \
+N_53 N_62 N_63 N_64 N_65 N_66 N_67 N_68 N_69 N_70 N_72 dipswitches_n_i_2__n \
+dipswitches_n_i_1__n dipswitches_n_i_3__n dipswitches_n_i_0__n \
+dipswitches_n_c_0__n dipswitches_n_c_1__n dipswitches_n_c_2__n \
+dipswitches_n_c_3__n f_c g_c N_16_0 N_14_0 N_11_0 N_28_i N_70_i N_10_0 N_65_i \
+N_68_i N_69_i N_21_i N_66_i N_67_i N_15_i N_63_i N_64_i f_c_0 N_53_i N_62_i \
+N_19_i N_50_i N_52_i N_17_i N_29_i N_47_i N_13_i N_23_i N_27_i N_72_i g_c_0 \
+N_66_1 N_21_i_1 N_15_i_1 f_c_0_1 N_13_i_1 g_c_0_1 g_c_0_2 N_69_1 N_67_1 N_53_1 \
+N_52_1 N_50_1 genblk1_u1hdtss_segments_1_i_0_x2_3_
+.names N_10_0.BLIF N_10
+0 1
+.names N_11_0.BLIF N_11
+0 1
+.names N_14_0.BLIF N_14
+0 1
+.names N_16_0.BLIF N_16
+0 1
+.names N_11.BLIF dipswitches_n_c_2__n.BLIF N_23
+11 1
+.names dipswitches_n_c_0__n.BLIF dipswitches_n_i_1__n.BLIF N_27
+11 1
+.names N_11_0.BLIF dipswitches_n_i_2__n.BLIF N_28
+11 1
+.names dipswitches_n_c_3__n.BLIF dipswitches_n_i_0__n.BLIF N_29
+11 1
+.names N_14_0.BLIF dipswitches_n_c_2__n.BLIF N_47
+11 1
+.names N_50_1.BLIF dipswitches_n_i_3__n.BLIF N_50
+11 1
+.names N_52_1.BLIF dipswitches_n_c_3__n.BLIF N_52
+11 1
+.names N_53_1.BLIF dipswitches_n_i_2__n.BLIF N_53
+11 1
+.names N_10.BLIF dipswitches_n_i_0__n.BLIF N_62
+11 1
+.names N_16.BLIF dipswitches_n_c_0__n.BLIF N_63
+11 1
+.names dipswitches_n_c_2__n.BLIF dipswitches_n_i_3__n.BLIF N_64
+11 1
+.names N_11_0.BLIF genblk1_u1hdtss_segments_1_i_0_x2_3_.BLIF N_65
+11 1
+.names N_66_1.BLIF dipswitches_n_i_2__n.BLIF N_66
+11 1
+.names N_67_1.BLIF dipswitches_n_i_3__n.BLIF N_67
+11 1
+.names N_72.BLIF dipswitches_n_i_3__n.BLIF N_68
+11 1
+.names N_69_1.BLIF dipswitches_n_i_3__n.BLIF N_69
+11 1
+.names dipswitches_n_i_1__n.BLIF dipswitches_n_i_3__n.BLIF N_70
+11 1
+.names N_14_0.BLIF dipswitches_n_i_2__n.BLIF N_72
+11 1
+.names dipswitches_n_c_2__n.BLIF dipswitches_n_i_2__n
+0 1
+.names dipswitches_n_c_1__n.BLIF dipswitches_n_i_1__n
+0 1
+.names dipswitches_n_c_3__n.BLIF dipswitches_n_i_3__n
+0 1
+.names dipswitches_n_c_0__n.BLIF dipswitches_n_i_0__n
+0 1
+.names f_c_0.BLIF f_c
+0 1
+.names g_c_0.BLIF g_c
+0 1
+.names dipswitches_n_c_2__n.BLIF dipswitches_n_i_1__n.BLIF N_16_0
+11 1
+.names dipswitches_n_c_1__n.BLIF dipswitches_n_i_0__n.BLIF N_14_0
+11 1
+.names dipswitches_n_c_1__n.BLIF dipswitches_n_c_3__n.BLIF N_11_0
+11 1
+.names N_28.BLIF N_28_i
+0 1
+.names N_70.BLIF N_70_i
+0 1
+.names N_28_i.BLIF N_70_i.BLIF N_10_0
+11 1
+.names N_65.BLIF N_65_i
+0 1
+.names N_68.BLIF N_68_i
+0 1
+.names N_69.BLIF N_69_i
+0 1
+.names N_21_i_1.BLIF N_69_i.BLIF N_21_i
+11 1
+.names N_66.BLIF N_66_i
+0 1
+.names N_67.BLIF N_67_i
+0 1
+.names N_15_i_1.BLIF N_67_i.BLIF N_15_i
+11 1
+.names N_63.BLIF N_63_i
+0 1
+.names N_64.BLIF N_64_i
+0 1
+.names f_c_0_1.BLIF N_63_i.BLIF f_c_0
+11 1
+.names N_53.BLIF N_53_i
+0 1
+.names N_62.BLIF N_62_i
+0 1
+.names N_53_i.BLIF N_62_i.BLIF N_19_i
+11 1
+.names N_50.BLIF N_50_i
+0 1
+.names N_52.BLIF N_52_i
+0 1
+.names N_50_i.BLIF N_52_i.BLIF N_17_i
+11 1
+.names N_29.BLIF N_29_i
+0 1
+.names N_47.BLIF N_47_i
+0 1
+.names N_13_i_1.BLIF N_47_i.BLIF N_13_i
+11 1
+.names N_23.BLIF N_23_i
+0 1
+.names N_27.BLIF N_27_i
+0 1
+.names N_72.BLIF N_72_i
+0 1
+.names g_c_0_1.BLIF g_c_0_2.BLIF g_c_0
+11 1
+.names dipswitches_n_i_0__n.BLIF dipswitches_n_i_1__n.BLIF N_66_1
+11 1
+.names N_65_i.BLIF N_68_i.BLIF N_21_i_1
+11 1
+.names N_65_i.BLIF N_66_i.BLIF N_15_i_1
+11 1
+.names N_64_i.BLIF N_10_0.BLIF f_c_0_1
+11 1
+.names N_28_i.BLIF N_29_i.BLIF N_13_i_1
+11 1
+.names N_10_0.BLIF N_23_i.BLIF g_c_0_1
+11 1
+.names N_27_i.BLIF N_72_i.BLIF g_c_0_2
+11 1
+.names N_16_0.BLIF dipswitches_n_i_0__n.BLIF N_69_1
+11 1
+.names N_16_0.BLIF dipswitches_n_c_0__n.BLIF N_67_1
+11 1
+.names N_11.BLIF dipswitches_n_c_0__n.BLIF N_53_1
+11 1
+.names N_16_0.BLIF dipswitches_n_c_0__n.BLIF N_52_1
+11 1
+.names N_14.BLIF dipswitches_n_i_2__n.BLIF N_50_1
+11 1
+.names N_21_i.BLIF a
+1 1
+0 0
+.names N_19_i.BLIF b
+1 1
+0 0
+.names N_17_i.BLIF c
+1 1
+0 0
+.names N_15_i.BLIF d
+1 1
+0 0
+.names N_13_i.BLIF e
+1 1
+0 0
+.names f_c.BLIF f
+1 1
+0 0
+.names g_c.BLIF g
+1 1
+0 0
+.names dipSwitches_n_0_.BLIF dipswitches_n_c_0__n
+1 1
+0 0
+.names dipSwitches_n_1_.BLIF dipswitches_n_c_1__n
+1 1
+0 0
+.names dipSwitches_n_2_.BLIF dipswitches_n_c_2__n
+1 1
+0 0
+.names dipSwitches_n_3_.BLIF dipswitches_n_c_3__n
+1 1
+0 0
+.names dipswitches_n_c_0__n.BLIF dipswitches_n_c_2__n.BLIF \
+genblk1_u1hdtss_segments_1_i_0_x2_3_
+01 1
+10 1
+11 0
+00 0
+.end

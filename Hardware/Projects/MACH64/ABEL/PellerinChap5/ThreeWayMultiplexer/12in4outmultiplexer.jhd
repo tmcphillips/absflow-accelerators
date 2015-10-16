@@ -1,0 +1,3 @@
+MODULE ThreeWayMultiplexerDemo
+	SUBMODULE threewaymultiplexer
+		INSTANCE multiplexer

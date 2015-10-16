@@ -1,0 +1,76 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Thu Jan 26 11:53:29 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION stepButton_n:B_*_14
+DATA LOCATION oneMHzClock:*_*_43
+DATA LOCATION a:C_0_20
+DATA LOCATION b:C_2_21
+DATA LOCATION c:C_4_22
+DATA LOCATION d:C_6_23
+DATA LOCATION e:C_9_24
+DATA LOCATION f:C_1_26
+DATA LOCATION g:C_3_27
+DATA LOCATION u1rs_u1rc_genblk1_8__uitff_q:A_1
+DATA LOCATION u4udc_u0jkff_q:A_3
+DATA LOCATION u4udc_u1jkff_q:C_7
+DATA LOCATION u4udc_u2jkff_q:C_5
+DATA LOCATION u4udc_u3jkff_q:C_12
+DATA LOCATION u1rs_u1rc_u0tff_q:B_12
+DATA LOCATION u1rs_u1rc_genblk1_0__uitff_q:B_1
+DATA LOCATION u1rs_u1rc_genblk1_1__uitff_q:B_3
+DATA LOCATION u1rs_u1rc_genblk1_2__uitff_q:B_5
+DATA LOCATION u1rs_u1rc_genblk1_3__uitff_q:B_7
+DATA LOCATION u1rs_u1rc_genblk1_4__uitff_q:A_5
+DATA LOCATION u1rs_u1rc_genblk1_5__uitff_q:A_7
+DATA LOCATION u1rs_u1rc_genblk1_6__uitff_q:A_9
+DATA LOCATION u1rs_u1rc_genblk1_7__uitff_q:A_12
+DATA LOCATION u2bpd_state_0_:A_0
+DATA LOCATION u2bpd_state_1_:B_0
+DATA LOCATION u2bpd_state_2_:B_9
+
+// Signals direction
+DATA IO_DIR stepButton_n:IN
+DATA IO_DIR oneMHzClock:IN
+DATA IO_DIR a:OUT
+DATA IO_DIR b:OUT
+DATA IO_DIR c:OUT
+DATA IO_DIR d:OUT
+DATA IO_DIR e:OUT
+DATA IO_DIR f:OUT
+DATA IO_DIR g:OUT
+
+// Global Clocks
+DATA GLB_CLOCK oneMHzClock:0
+
+// Signals using Shared Clock or CE
+DATA tBCLK u4udc_u1jkff_q.C
+DATA tBCLK u4udc_u3jkff_q.C
+DATA tBCLK u2bpd_state_0_.C
+DATA tBCLK u2bpd_state_1_.C
+DATA tBCLK u2bpd_state_2_.C
+
+// Block Load Adders
+DATA tBLA u2bpd_state_2_:1
+DATA tBLA u2bpd_state_0_:1
+DATA tBLA u1rs_u1rc_genblk1_3__uitff_q:1
+DATA tBLA u4udc_u0jkff_q:1
+DATA tBLA u1rs_u1rc_genblk1_8__uitff_q:1
+DATA tBLA stepButton_n:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM a
+DATA tOSM b
+DATA tOSM c
+DATA tOSM d
+DATA tOSM e
+DATA tOSM f
+DATA tOSM g

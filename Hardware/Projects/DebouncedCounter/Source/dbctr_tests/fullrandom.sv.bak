@@ -1,0 +1,19 @@
+    
+//    repeat(1000) begin
+//      t.random(seed);
+//      gen2drv_operation_fifo.put(t.clone);      
+//    end
+    
+    
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, 4, i);
+        gen2drv_operation_fifo.put(t.clone);
+      end
+
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(down_op, 0, 4, i);
+        gen2drv_operation_fifo.put(t.clone);
+      end  

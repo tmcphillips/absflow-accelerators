@@ -1,0 +1,10 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ MODULE logicgateexplorations
+S5;
+pb0 pb1 -> led_and led_or led_xor 
+$
+11->000;
+10->010;
+01->011;
+00->110;
+$

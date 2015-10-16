@@ -1,0 +1,5 @@
+Selecting top level module ALU_Demo
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\alu.v":4:7:4:9|Synthesizing module ALU
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\aludemo.v":3:7:3:14|Synthesizing module ALU_Demo
+

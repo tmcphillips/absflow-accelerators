@@ -1,0 +1,434 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:07:27 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE alu_5_demo
+#$ PINS 16 clock:18 runButton:31 reset:32 pc0:20 pc1:21 pc2:22 a0:45 a1:46 a2:47 a3:48 \
+#  b0:2 b1:3 b2:4 b3:40 zf:38 cf:39
+#$ NODES 44 alu>A0'co'  alu>A1'co'  alu>A2'co'  alu>A3'co'  alu>B0'co'  alu>B1'co'  alu>B2'co'  alu>B3'co'  \
+#  alu>Op0'co'  alu>Op1'co'  alu>Op2'co'  alu>Op3'co'  alu>C0'co,o'  alu>C1'co,o'  alu>C2'co,o'  alu>C3'co,o'  \
+#  alu>CF'co,o'  alu>ZF'co,o'  scaler>inclock'co'  scaler>outclock'co,o'  debouncer>rawSignal'co'  \
+#  debouncer>samplingClock'co'  debouncer>debounced'co,o'  run inc_pc op0 op1 op2 op3 arg0 arg1 \
+#  arg2 arg3 scaler/s9 scaler/s8 scaler/s7 scaler/s6 scaler/s5 scaler/s4 scaler/s3 \
+#  scaler/s2 scaler/s1 scaler/s0 debouncer/lastSample
+.model alu_5_demo
+.inputs reset.BLIF clock.BLIF scaler>outclock.BLIF runButton.BLIF \
+debouncer>debounced.BLIF run.BLIF op3.BLIF op2.BLIF op1.BLIF op0.BLIF a3.BLIF \
+a2.BLIF a1.BLIF a0.BLIF b3.BLIF b2.BLIF b1.BLIF b0.BLIF alu>C3.BLIF \
+alu>C2.BLIF alu>C1.BLIF alu>C0.BLIF alu>ZF.BLIF alu>CF.BLIF arg3.BLIF \
+arg2.BLIF arg1.BLIF arg0.BLIF zf.BLIF cf.BLIF pc2.BLIF pc1.BLIF pc0.BLIF \
+inc_pc.BLIF alu>A0.BLIF alu>A1.BLIF alu>A2.BLIF alu>A3.BLIF alu>B0.BLIF \
+alu>B1.BLIF alu>B2.BLIF alu>B3.BLIF alu>Op0.BLIF alu>Op1.BLIF alu>Op2.BLIF \
+alu>Op3.BLIF scaler>inclock.BLIF scaler/s9.BLIF scaler/s8.BLIF scaler/s7.BLIF \
+scaler/s6.BLIF scaler/s5.BLIF scaler/s4.BLIF scaler/s3.BLIF scaler/s2.BLIF \
+scaler/s1.BLIF scaler/s0.BLIF debouncer>rawSignal.BLIF \
+debouncer>samplingClock.BLIF debouncer/lastSample.BLIF
+.outputs alu>A0 alu>A1 alu>A2 alu>A3 alu>B0 alu>B1 alu>B2 alu>B3 alu>Op0 \
+alu>Op1 alu>Op2 alu>Op3 scaler>inclock debouncer>rawSignal \
+debouncer>samplingClock run inc_pc op0 op1 op2 op3 arg0 arg1 arg2 arg3 pc2.AR \
+pc1.AR pc0.AR a3.AR a2.AR a1.AR a0.AR b3.AR b2.AR b1.AR b0.AR zf.AR cf.AR a3.C \
+a2.C a1.C a0.C b3.C b2.C b1.C b0.C zf.C cf.C pc2.C pc1.C pc0.C a3.REG a2.REG \
+a1.REG a0.REG b3.REG b2.REG b1.REG b0.REG zf.REG cf.REG pc2.REG pc1.REG \
+pc0.REG alu>C0 alu>C1 alu>C2 alu>C3 alu>CF alu>ZF scaler>outclock scaler/s9.T \
+scaler/s9.C scaler/s8.T scaler/s8.C scaler/s7.T scaler/s7.C scaler/s6.T \
+scaler/s6.C scaler/s5.T scaler/s5.C scaler/s4.T scaler/s4.C scaler/s3.T \
+scaler/s3.C scaler/s2.T scaler/s2.C scaler/s1.T scaler/s1.C scaler/s0.T \
+scaler/s0.C debouncer>debounced.REG debouncer>debounced.C \
+debouncer/lastSample.REG debouncer/lastSample.C
+\
+
+.subckt alu_5 A0.BLIF=alu>A0.BLIF A1.BLIF=alu>A1.BLIF A2.BLIF=alu>A2.BLIF A3.BLIF=alu>A3.BLIF \
+ B0.BLIF=alu>B0.BLIF B1.BLIF=alu>B1.BLIF B2.BLIF=alu>B2.BLIF B3.BLIF=alu>B3.BLIF Op0.BLIF=alu>Op0.BLIF \
+ Op1.BLIF=alu>Op1.BLIF Op2.BLIF=alu>Op2.BLIF Op3.BLIF=alu>Op3.BLIF C0.BLIF=alu>C0.BLIF \
+ C1.BLIF=alu>C1.BLIF C2.BLIF=alu>C2.BLIF C3.BLIF=alu>C3.BLIF C0=alu>C0 C1=alu>C1 C2=alu>C2 \
+ C3=alu>C3 CF=alu>CF ZF=alu>ZF
+\
+
+.subckt tenbitripplecounter inclock.BLIF=scaler>inclock.BLIF s9.BLIF=scaler/s9.BLIF \
+ s8.BLIF=scaler/s8.BLIF s7.BLIF=scaler/s7.BLIF s6.BLIF=scaler/s6.BLIF s5.BLIF=scaler/s5.BLIF \
+ s4.BLIF=scaler/s4.BLIF s3.BLIF=scaler/s3.BLIF s2.BLIF=scaler/s2.BLIF s1.BLIF=scaler/s1.BLIF \
+ s0.BLIF=scaler/s0.BLIF outclock=scaler>outclock s9.T=scaler/s9.T s9.C=scaler/s9.C \
+ s8.T=scaler/s8.T s8.C=scaler/s8.C s7.T=scaler/s7.T s7.C=scaler/s7.C s6.T=scaler/s6.T \
+ s6.C=scaler/s6.C s5.T=scaler/s5.T s5.C=scaler/s5.C s4.T=scaler/s4.T s4.C=scaler/s4.C \
+ s3.T=scaler/s3.T s3.C=scaler/s3.C s2.T=scaler/s2.T s2.C=scaler/s2.C s1.T=scaler/s1.T \
+ s1.C=scaler/s1.C s0.T=scaler/s0.T s0.C=scaler/s0.C
+\
+
+.subckt debouncer rawSignal.BLIF=debouncer>rawSignal.BLIF samplingClock.BLIF=debouncer>samplingClock.BLIF \
+ lastSample.BLIF=debouncer/lastSample.BLIF debounced.REG=debouncer>debounced.REG debounced.C=debouncer>debounced.C \
+ lastSample.REG=debouncer/lastSample.REG lastSample.C=debouncer/lastSample.C
+.names runButton.BLIF debouncer>rawSignal
+0 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF zf.BLIF inc_pc
+1---- 1
+-0--- 1
+01101 1
+01010 1
+.names pc2.BLIF pc1.BLIF pc0.BLIF op0
+001 1
+010 1
+.names pc2.BLIF pc1.BLIF pc0.BLIF op1
+011 1
+.names pc2.BLIF pc1.BLIF pc0.BLIF op2
+011 1
+001 1
+010 1
+100 1
+.names pc2.BLIF pc1.BLIF pc0.BLIF op3
+001 1
+010 1
+.names pc2.BLIF pc1.BLIF pc0.BLIF arg0
+011 1
+.names pc2.BLIF pc1.BLIF pc0.BLIF arg1
+000 1
+.names pc2.BLIF pc1.BLIF pc0.BLIF arg2
+001 1
+.names pc2.BLIF pc1.BLIF pc0.BLIF arg3
+000 1
+.names reset.BLIF pc2.AR
+0 1
+.names reset.BLIF pc1.AR
+0 1
+.names reset.BLIF pc0.AR
+0 1
+.names reset.BLIF a3.AR
+0 1
+.names reset.BLIF a2.AR
+0 1
+.names reset.BLIF a1.AR
+0 1
+.names reset.BLIF a0.AR
+0 1
+.names reset.BLIF b3.AR
+0 1
+.names reset.BLIF b2.AR
+0 1
+.names reset.BLIF b1.AR
+0 1
+.names reset.BLIF b0.AR
+0 1
+.names reset.BLIF zf.AR
+0 1
+.names reset.BLIF cf.AR
+0 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a3.BLIF alu>C3.BLIF arg3.BLIF \
+a3.REG
+1----1- 1
+00111-- 1
+01011-- 1
+01101-- 1
+01001-- 1
+0000--1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a2.BLIF alu>C2.BLIF arg2.BLIF \
+a2.REG
+1----1- 1
+00111-- 1
+01011-- 1
+01101-- 1
+01001-- 1
+0000--1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a1.BLIF alu>C1.BLIF arg1.BLIF \
+a1.REG
+1----1- 1
+00111-- 1
+01011-- 1
+01101-- 1
+01001-- 1
+0000--1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a0.BLIF alu>C0.BLIF arg0.BLIF \
+a0.REG
+1----1- 1
+00111-- 1
+01011-- 1
+01101-- 1
+01001-- 1
+0000--1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF b3.BLIF arg3.BLIF b3.REG
+1---1- 1
+01011- 1
+01101- 1
+01001- 1
+00001- 1
+0011-1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF b2.BLIF arg2.BLIF b2.REG
+1---1- 1
+01011- 1
+01101- 1
+01001- 1
+00001- 1
+0011-1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF b1.BLIF arg1.BLIF b1.REG
+1---1- 1
+01011- 1
+01101- 1
+01001- 1
+00001- 1
+0011-1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF b0.BLIF arg0.BLIF b0.REG
+1---1- 1
+01011- 1
+01101- 1
+01001- 1
+00001- 1
+0011-1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF alu>ZF.BLIF zf.BLIF zf.REG
+1---1- 1
+0011-1 1
+0101-1 1
+0110-1 1
+0100-1 1
+0000-1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF alu>CF.BLIF cf.BLIF cf.REG
+1---1- 1
+0011-1 1
+0101-1 1
+0110-1 1
+0100-1 1
+0000-1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF arg2.BLIF zf.BLIF pc2.BLIF pc1.BLIF \
+pc0.BLIF inc_pc.BLIF pc2.REG
+------10-1 1
+------1-01 1
+------0111 1
+01001----- 1
+010111---- 1
+011010---- 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF arg1.BLIF zf.BLIF pc1.BLIF pc0.BLIF \
+inc_pc.BLIF pc1.REG
+------011 1
+------101 1
+01001---- 1
+010111--- 1
+011010--- 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF arg0.BLIF zf.BLIF pc0.BLIF \
+inc_pc.BLIF pc0.REG
+------01 1
+01001--- 1
+010111-- 1
+011010-- 1
+.names a0.BLIF alu>A0
+1 1
+0 0
+.names a1.BLIF alu>A1
+1 1
+0 0
+.names a2.BLIF alu>A2
+1 1
+0 0
+.names a3.BLIF alu>A3
+1 1
+0 0
+.names b0.BLIF alu>B0
+1 1
+0 0
+.names b1.BLIF alu>B1
+1 1
+0 0
+.names b2.BLIF alu>B2
+1 1
+0 0
+.names b3.BLIF alu>B3
+1 1
+0 0
+.names op0.BLIF alu>Op0
+1 1
+0 0
+.names op1.BLIF alu>Op1
+1 1
+0 0
+.names op2.BLIF alu>Op2
+1 1
+0 0
+.names op3.BLIF alu>Op3
+1 1
+0 0
+.names clock.BLIF scaler>inclock
+1 1
+0 0
+.names scaler>outclock.BLIF debouncer>samplingClock
+1 1
+0 0
+.names debouncer>debounced.BLIF run
+1 1
+0 0
+.names run.BLIF a3.C
+1 1
+0 0
+.names run.BLIF a2.C
+1 1
+0 0
+.names run.BLIF a1.C
+1 1
+0 0
+.names run.BLIF a0.C
+1 1
+0 0
+.names run.BLIF b3.C
+1 1
+0 0
+.names run.BLIF b2.C
+1 1
+0 0
+.names run.BLIF b1.C
+1 1
+0 0
+.names run.BLIF b0.C
+1 1
+0 0
+.names run.BLIF zf.C
+1 1
+0 0
+.names run.BLIF cf.C
+1 1
+0 0
+.names run.BLIF pc2.C
+1 1
+0 0
+.names run.BLIF pc1.C
+1 1
+0 0
+.names run.BLIF pc0.C
+1 1
+0 0
+.end
+.model alu_5
+.inputs A3.BLIF B3.BLIF Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF B2.BLIF \
+A1.BLIF B1.BLIF A0.BLIF B0.BLIF C0.BLIF C1.BLIF C2.BLIF C3.BLIF
+.outputs C3 C2 C1 C0 ZF CF
+.names A3.BLIF B3.BLIF Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF A1.BLIF \
+A0.BLIF C3
+0-1101--- 1
+1-1001--- 1
+-11001--- 1
+--01111-- 1
+010101--- 1
+100101--- 1
+110001--- 1
+1-10111-- 1
+1-00110-- 1
+1-1011-1- 1
+1-0011-0- 1
+1-1011--1 1
+1-0011--0 1
+0-0011111 1
+0-1011000 1
+.names A3.BLIF Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF B2.BLIF A1.BLIF \
+A0.BLIF C2
+11111---- 1
+-10011--- 1
+-11010--- 1
+-1001-1-- 1
+-0111--1- 1
+-000111-- 1
+-010101-- 1
+-010110-- 1
+-10111-1- 1
+-00111-0- 1
+-10111--1 1
+-00111--0 1
+-00110-11 1
+-10110-00 1
+.names Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF A1.BLIF B1.BLIF A0.BLIF C1
+11111--- 1
+1001-1-- 1
+1101-0-- 1
+1001--1- 1
+0111---1 1
+0001-11- 1
+0101-01- 1
+0101-10- 1
+1011-1-1 1
+0011-0-1 1
+0011-1-0 1
+1011-0-0 1
+.names Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A1.BLIF A0.BLIF B0.BLIF C0
+11111-- 1
+1001-1- 1
+1011-0- 1
+0011-0- 1
+1101-0- 1
+1001--1 1
+0001-11 1
+0101-01 1
+0101-10 1
+.names C0.BLIF C1.BLIF C2.BLIF C3.BLIF ZF
+0000 1
+.names A3.BLIF Op0.BLIF Op1.BLIF Op2.BLIF Op3.BLIF A2.BLIF A1.BLIF A0.BLIF CF
+10111--- 1
+-1111--1 1
+10011111 1
+01011000 1
+.end
+.model tenbitripplecounter
+.inputs inclock.BLIF s0.BLIF s1.BLIF s2.BLIF s3.BLIF s4.BLIF s5.BLIF s6.BLIF \
+s7.BLIF s8.BLIF s9.BLIF
+.outputs outclock s0.T s1.T s2.T s3.T s4.T s5.T s6.T s7.T s8.T s9.T s0.C s1.C \
+s2.C s3.C s4.C s5.C s6.C s7.C s8.C s9.C
+.names s0.T
+ 1
+.names s1.T
+ 1
+.names s2.T
+ 1
+.names s3.T
+ 1
+.names s4.T
+ 1
+.names s5.T
+ 1
+.names s6.T
+ 1
+.names s7.T
+ 1
+.names s8.T
+ 1
+.names s9.T
+ 1
+.names s9.BLIF outclock
+1 1
+0 0
+.names inclock.BLIF s0.C
+1 1
+0 0
+.names s0.BLIF s1.C
+1 1
+0 0
+.names s1.BLIF s2.C
+1 1
+0 0
+.names s2.BLIF s3.C
+1 1
+0 0
+.names s3.BLIF s4.C
+1 1
+0 0
+.names s4.BLIF s5.C
+1 1
+0 0
+.names s5.BLIF s6.C
+1 1
+0 0
+.names s6.BLIF s7.C
+1 1
+0 0
+.names s7.BLIF s8.C
+1 1
+0 0
+.names s8.BLIF s9.C
+1 1
+0 0
+.end
+.model debouncer
+.inputs samplingClock.BLIF rawSignal.BLIF lastSample.BLIF
+.outputs lastSample.C lastSample.REG debounced.C debounced.REG
+.names rawSignal.BLIF lastSample.BLIF debounced.REG
+11 1
+.names samplingClock.BLIF lastSample.C
+1 1
+0 0
+.names rawSignal.BLIF lastSample.REG
+1 1
+0 0
+.names samplingClock.BLIF debounced.C
+1 1
+0 0
+.end

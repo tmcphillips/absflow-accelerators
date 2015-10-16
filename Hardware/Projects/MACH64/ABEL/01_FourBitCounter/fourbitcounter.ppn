@@ -1,0 +1,20 @@
+//
+// Software Version :  ispLEVER Classic 1.5.00.05.39.l1  
+// Project Name	    :  fourbitcounter
+// Targeted Device  :  LC4064V-75T48I
+// Date             :  Tue Jan 17 19:29:25 2012
+//
+                   GNDIO0          SYS           5
+                   VCCIO0          SYS           6
+                      VCC          SYS           12
+                      GND          SYS           13
+                       q3          OUT           14
+                       q2          OUT           15
+                       q1          OUT           16
+                       q0          OUT           17
+                    clock          IN            18
+                    reset          IN            20
+                   GNDIO1          SYS           29
+                   VCCIO1          SYS           30
+                      VCC          SYS           36
+                      GND          SYS           37

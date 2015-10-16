@@ -1,0 +1,28 @@
+      
+    for (int i = 6; i > 0; i--)
+      repeat (1) begin
+        t = new(up_op, 0, i, 2);
+        gen2drv_operation_fifo.put(t.clone);
+      end
+
+   // wrapup;
+
+    for (int i = 6; i > 0; i--)
+      repeat (32) begin
+        t = new(down_op, 0, i, 5);
+        gen2drv_operation_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i > 0; i--)
+      repeat (32) begin
+        t = new(load_op, 0, i, 5);
+        t.arg = $random;
+        gen2drv_operation_fifo.put(t.clone);
+      end
+
+
+
+
+
+
+

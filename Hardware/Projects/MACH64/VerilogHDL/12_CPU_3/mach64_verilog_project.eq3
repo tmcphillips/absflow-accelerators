@@ -1,0 +1,140 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+a_reg_0_.D = !a_reg_0_.Q & pc_0_.Q
+    # !a_reg_0_.Q & pc_1_.Q ; (2 pterms, 3 signals)
+a_reg_0_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+a_reg_0_.CE = a_reg_3__0 ; (1 pterm, 1 signal)
+a_reg_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+a_reg_1_.D.X1 = a_reg_1_.Q & pc_1_.Q & pc_0_.Q
+    # pc_2_.Q & a_reg_1_.Q & pc_0_.Q
+    # !a_reg_0_.Q & !pc_1_.Q & !pc_0_.Q
+    # !pc_2_.Q & !a_reg_1_.Q & !pc_1_.Q & pc_0_.Q
+    # pc_2_.Q & a_reg_1_.Q & pc_1_.Q & !pc_0_.Q
+    # !pc_2_.Q & !a_reg_1_.Q & pc_1_.Q & !pc_0_.Q ; (6 pterms, 5 signals)
+a_reg_1_.D.X2 = a_reg_0_.Q ; (1 pterm, 1 signal)
+a_reg_1_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+a_reg_1_.CE = a_reg_3__0 ; (1 pterm, 1 signal)
+a_reg_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+a_reg_2_.D = !( !pc_2_.Q & !a_reg_2_.Q & a_reg_0_.Q
+    # pc_2_.Q & !a_reg_2_.Q & !a_reg_1_.Q
+    # !a_reg_2_.Q & a_reg_1_.Q & !a_reg_0_.Q
+    # !pc_2_.Q & a_reg_2_.Q & !a_reg_1_.Q & !a_reg_0_.Q
+    # pc_2_.Q & a_reg_2_.Q & a_reg_1_.Q & a_reg_0_.Q
+    # !pc_1_.Q & !pc_0_.Q
+    # pc_1_.Q & pc_0_.Q ) ; (7 pterms, 6 signals)
+a_reg_2_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+a_reg_2_.CE = a_reg_3__0 ; (1 pterm, 1 signal)
+a_reg_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+a_reg_3_.T = !pc_2_.Q & !a_reg_2_.Q & !a_reg_1_.Q & !a_reg_0_.Q & !pc_1_.Q
+       & pc_0_.Q
+    # !pc_2_.Q & !a_reg_2_.Q & !a_reg_1_.Q & !a_reg_0_.Q & pc_1_.Q & !pc_0_.Q
+    # a_reg_2_.Q & a_reg_1_.Q & a_reg_0_.Q & pc_1_.Q & pc_0_.Q
+    # pc_2_.Q & a_reg_2_.Q & a_reg_1_.Q & a_reg_0_.Q & pc_1_.Q
+    # pc_2_.Q & a_reg_2_.Q & a_reg_1_.Q & a_reg_0_.Q & pc_0_.Q
+    # !a_reg_3_.Q & !pc_1_.Q & !pc_0_.Q ; (6 pterms, 7 signals)
+a_reg_3_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+a_reg_3_.CE = a_reg_3__0 ; (1 pterm, 1 signal)
+a_reg_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+a_reg_3__0 = !pc_2_.Q & !pc_0_.Q
+    # !pc_2_.Q & !pc_1_.Q ; (2 pterms, 3 signals)
+
+b_reg_0_ = 0 ; (0 pterm, 0 signal)
+
+b_reg_1_ = 0 ; (0 pterm, 0 signal)
+
+b_reg_2_ = 0 ; (0 pterm, 0 signal)
+
+b_reg_3_ = 0 ; (0 pterm, 0 signal)
+
+cf.D = a_reg_3_.Q & a_reg_2_.Q & a_reg_1_.Q & a_reg_0_.Q & pc_1_.Q & pc_0_.Q
+    # !a_reg_3_.Q & !pc_2_.Q & !a_reg_2_.Q & !a_reg_1_.Q & !a_reg_0_.Q
+       & !pc_1_.Q
+    # !a_reg_3_.Q & !pc_2_.Q & !a_reg_2_.Q & !a_reg_1_.Q & !a_reg_0_.Q
+       & !pc_0_.Q
+    # a_reg_3_.Q & pc_2_.Q & a_reg_2_.Q & a_reg_1_.Q & a_reg_0_.Q ; (4 pterms, 7 signals)
+cf.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+cf.CE = zf_0 ; (1 pterm, 1 signal)
+cf.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_0_.D = !pc_2_.Q & !zf.Q & pc_1_.Q
+    # !pc_2_.Q & !pc_0_.Q ; (2 pterms, 4 signals)
+pc_0_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+pc_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_1_.D = !pc_1_.Q & pc_0_.Q
+    # pc_1_.Q & !pc_0_.Q ; (2 pterms, 2 signals)
+pc_1_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+pc_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_2_.D = !pc_2_.Q & zf.Q & pc_1_.Q & pc_0_.Q ; (1 pterm, 4 signals)
+pc_2_.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+pc_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_0__uitff_q.D = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_0__uitff_q.C = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_1__uitff_q.D = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_1__uitff_q.C = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_2__uitff_q.D = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_2__uitff_q.C = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_3__uitff_q.D = !u0rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_3__uitff_q.C = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_4__uitff_q.D = !u0rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_4__uitff_q.C = !u0rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_5__uitff_q.D = !u0rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_5__uitff_q.C = !u0rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_6__uitff_q.D = !u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_6__uitff_q.C = !u0rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_7__uitff_q.D = !u0rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_7__uitff_q.C = !u0rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_8__uitff_q.D = !u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_8__uitff_q.C = !u0rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_u0tff_q.D = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u1pbd_state_0_.D = !step & !u1pbd_state_0_.Q
+    # !u1pbd_state_0_.Q & u1pbd_state_2_.Q
+    # !step & u1pbd_state_2_.Q ; (3 pterms, 3 signals)
+u1pbd_state_0_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1pbd_state_1_.D = !u1pbd_state_0_.Q & u1pbd_state_1_.Q & u1pbd_state_2_.Q
+    # !step & u1pbd_state_0_.Q
+    # !step & u1pbd_state_1_.Q ; (3 pterms, 4 signals)
+u1pbd_state_1_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1pbd_state_2_.D = !step & u1pbd_state_0_.Q & u1pbd_state_1_.Q
+    # !u1pbd_state_0_.Q & u1pbd_state_1_.Q & u1pbd_state_2_.Q ; (2 pterms, 4 signals)
+u1pbd_state_2_.C = u0rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+zf.D = a_reg_3_.Q & a_reg_2_.Q & a_reg_1_.Q & a_reg_0_.Q & pc_1_.Q & pc_0_.Q
+    # !a_reg_3_.Q & !pc_2_.Q & !a_reg_2_.Q & !a_reg_1_.Q & a_reg_0_.Q
+       & !pc_1_.Q
+    # !a_reg_3_.Q & !pc_2_.Q & !a_reg_2_.Q & !a_reg_1_.Q & a_reg_0_.Q
+       & !pc_0_.Q
+    # a_reg_3_.Q & pc_2_.Q & a_reg_2_.Q & a_reg_1_.Q & a_reg_0_.Q ; (4 pterms, 7 signals)
+zf.C = !u1pbd_state_0_.Q & u1pbd_state_2_.Q ; (1 pterm, 2 signals)
+zf.CE = zf_0 ; (1 pterm, 1 signal)
+zf.AR = !reset_n ; (1 pterm, 1 signal)
+
+zf_0 = pc_1_.Q & !pc_0_.Q
+    # !pc_1_.Q & pc_0_.Q ; (2 pterms, 2 signals)
+

@@ -1,0 +1,818 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Feb 15 16:02:51 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 13 button_n_1_:21'ke'  octaveSelect_n_1_:16'ke'  oneMHzClock:43'ke'  reset_n:14'ke'  \
+#  noiseOn_n:15'ke'  noteOutC:31'ke'  noteOutD:32'ke'  noteOutE:33'ke'  noteOutF:34'ke'  \
+#  button_n_2_:22'ke'  button_n_3_:23'ke'  button_n_4_:24'ke'  octaveSelect_n_0_:17'ke' 
+#$ NODES 59 u0rc_u0tff_q u0rc_genblk1_0__uitff_q u1cs_outclock u2cs_outclock \
+#  u3cs_outclock u4cs_outclock lfsr_0_ lfsr_5_ lfsr_4_ lfsr_1_ lfsr_2_ lfsr_3_ lfsr_6_ \
+#  lfsr_7_ u4cs_count_0_ u4cs_count_1_ u4cs_count_2_ u4cs_count_3_ u4cs_count_4_ \
+#  u4cs_count_5_ u4cs_count_6_ u4cs_count_7_ u4cs_count_8_ u3cs_count_0_ u3cs_count_1_ \
+#  u3cs_count_2_ u3cs_count_3_ u3cs_count_4_ u3cs_count_5_ u3cs_count_6_ u3cs_count_7_ \
+#  u3cs_count_8_ u2cs_count_0_ u2cs_count_1_ u2cs_count_2_ u2cs_count_3_ u2cs_count_4_ \
+#  u2cs_count_5_ u2cs_count_6_ u2cs_count_7_ u2cs_count_8_ u1cs_count_0_ u1cs_count_1_ \
+#  u1cs_count_2_ u1cs_count_3_ u1cs_count_4_ u1cs_count_5_ u1cs_count_6_ u1cs_count_7_ \
+#  u1cs_count_8_ u4cs_n_20_n u1cs_n_17_n u2cs_n_17_n u2cs_count26_n u3cs_n_11_n \
+#  u3cs_n_23_n u3cs_count40_n N_5_i u1cs_count12_7_n
+.model digitalorgan
+.inputs button_n_1_.BLIF octaveSelect_n_1_.BLIF oneMHzClock.BLIF reset_n.BLIF \
+noiseOn_n.BLIF button_n_2_.BLIF button_n_3_.BLIF button_n_4_.BLIF \
+octaveSelect_n_0_.BLIF u0rc_u0tff_q.Q u0rc_genblk1_0__uitff_q.Q \
+u1cs_outclock.Q u2cs_outclock.Q u3cs_outclock.Q u4cs_outclock.Q lfsr_0_.Q \
+lfsr_5_.Q lfsr_4_.Q lfsr_1_.Q lfsr_2_.Q lfsr_3_.Q lfsr_6_.Q lfsr_7_.Q \
+u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_6_.Q u4cs_count_7_.Q \
+u4cs_count_8_.Q u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q \
+u3cs_count_3_.Q u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_6_.Q \
+u3cs_count_7_.Q u3cs_count_8_.Q u2cs_count_0_.Q u2cs_count_1_.Q \
+u2cs_count_2_.Q u2cs_count_3_.Q u2cs_count_4_.Q u2cs_count_5_.Q \
+u2cs_count_6_.Q u2cs_count_7_.Q u2cs_count_8_.Q u1cs_count_0_.Q \
+u1cs_count_1_.Q u1cs_count_2_.Q u1cs_count_3_.Q u1cs_count_4_.Q \
+u1cs_count_5_.Q u1cs_count_6_.Q u1cs_count_7_.Q u1cs_count_8_.Q \
+u4cs_n_20_n.BLIF u1cs_n_17_n.BLIF u2cs_n_17_n.BLIF u2cs_count26_n.BLIF \
+u3cs_n_11_n.BLIF u3cs_n_23_n.BLIF u3cs_count40_n.BLIF N_5_i.BLIF \
+u1cs_count12_7_n.BLIF
+.outputs noteOutC noteOutD noteOutE noteOutF u1cs_count_0_.C u1cs_count_1_.C \
+u1cs_count_2_.C u1cs_count_3_.C u1cs_count_4_.C u1cs_count_5_.C \
+u1cs_count_6_.C u1cs_count_7_.C u1cs_count_8_.C u1cs_outclock.C \
+u2cs_count_0_.C u2cs_count_1_.C u2cs_count_2_.C u2cs_count_3_.C \
+u2cs_count_4_.C u2cs_count_5_.C u2cs_count_6_.C u2cs_count_7_.C \
+u2cs_count_8_.C u2cs_outclock.C u3cs_count_0_.C u3cs_count_1_.C \
+u3cs_count_2_.C u3cs_count_3_.C u3cs_count_4_.C u3cs_count_5_.C \
+u3cs_count_6_.C u3cs_count_7_.C u3cs_count_8_.C u3cs_outclock.C \
+u4cs_count_0_.C u4cs_count_1_.C u4cs_count_2_.C u4cs_count_3_.C \
+u4cs_count_4_.C u4cs_count_5_.C u4cs_count_6_.C u4cs_count_7_.C \
+u4cs_count_8_.C u4cs_outclock.C lfsr_0_.C lfsr_0_.AR lfsr_1_.C lfsr_1_.AP \
+lfsr_2_.C lfsr_2_.AP lfsr_3_.C lfsr_3_.AP lfsr_4_.C lfsr_4_.AP lfsr_5_.C \
+lfsr_5_.AP lfsr_6_.C lfsr_6_.AP lfsr_7_.C lfsr_7_.AP u0rc_u0tff_q.C \
+u0rc_genblk1_0__uitff_q.C u4cs_n_20_n u1cs_n_17_n u2cs_n_17_n u2cs_count26_n \
+u3cs_n_11_n u3cs_n_23_n u3cs_count40_n N_5_i u1cs_count12_7_n u0rc_u0tff_q.D \
+u0rc_genblk1_0__uitff_q.D u1cs_outclock.D u2cs_outclock.D u3cs_outclock.D \
+u4cs_outclock.T lfsr_0_.D lfsr_5_.D lfsr_4_.D lfsr_1_.D lfsr_2_.D lfsr_3_.D \
+lfsr_6_.D lfsr_7_.D u4cs_count_0_.D u4cs_count_1_.D u4cs_count_2_.D \
+u4cs_count_3_.D u4cs_count_4_.D u4cs_count_5_.T u4cs_count_6_.D \
+u4cs_count_7_.D u4cs_count_8_.D u3cs_count_0_.D u3cs_count_1_.D \
+u3cs_count_2_.D u3cs_count_3_.D u3cs_count_4_.D u3cs_count_5_.D \
+u3cs_count_6_.D u3cs_count_7_.D u3cs_count_8_.D u2cs_count_0_.D \
+u2cs_count_1_.D u2cs_count_2_.D u2cs_count_3_.D u2cs_count_4_.D \
+u2cs_count_5_.D u2cs_count_6_.D u2cs_count_7_.D u2cs_count_8_.D \
+u1cs_count_0_.D u1cs_count_1_.D u1cs_count_2_.D u1cs_count_3_.D \
+u1cs_count_4_.D u1cs_count_5_.D u1cs_count_6_.D u1cs_count_7_.D \
+u1cs_count_8_.T
+.names button_n_1_.BLIF noiseOn_n.BLIF u1cs_outclock.Q lfsr_0_.Q noteOutC
+011- 1
+0-11 1
+-0-0 0
+--0- 0
+1--- 0
+.names noiseOn_n.BLIF button_n_2_.BLIF u2cs_outclock.Q lfsr_0_.Q noteOutD
+101- 1
+-011 1
+0--0 0
+--0- 0
+-1-- 0
+.names noiseOn_n.BLIF button_n_3_.BLIF u3cs_outclock.Q lfsr_0_.Q noteOutE
+101- 1
+-011 1
+0--0 0
+--0- 0
+-1-- 0
+.names noiseOn_n.BLIF button_n_4_.BLIF u4cs_outclock.Q lfsr_0_.Q noteOutF
+101- 1
+-011 1
+0--0 0
+--0- 0
+-1-- 0
+.names reset_n.BLIF lfsr_0_.AR
+0 1
+1 0
+.names reset_n.BLIF lfsr_1_.AP
+0 1
+1 0
+.names reset_n.BLIF lfsr_2_.AP
+0 1
+1 0
+.names reset_n.BLIF lfsr_3_.AP
+0 1
+1 0
+.names reset_n.BLIF lfsr_4_.AP
+0 1
+1 0
+.names reset_n.BLIF lfsr_5_.AP
+0 1
+1 0
+.names reset_n.BLIF lfsr_6_.AP
+0 1
+1 0
+.names reset_n.BLIF lfsr_7_.AP
+0 1
+1 0
+.names oneMHzClock.BLIF u0rc_u0tff_q.C
+0 1
+1 0
+.names u0rc_u0tff_q.Q u0rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_n_20_n
+111111 1
+----0- 0
+---0-- 0
+--0--- 0
+-0---- 0
+0----- 0
+-----0 0
+.names u1cs_count_0_.Q u1cs_count_1_.Q u1cs_count_2_.Q u1cs_count_3_.Q \
+u1cs_count_4_.Q u1cs_n_17_n
+11111 1
+---0- 0
+--0-- 0
+-0--- 0
+0---- 0
+----0 0
+.names u2cs_count_0_.Q u2cs_count_1_.Q u2cs_count_2_.Q u2cs_count_3_.Q \
+u2cs_count_4_.Q u2cs_n_17_n
+11111 1
+---0- 0
+--0-- 0
+-0--- 0
+0---- 0
+----0 0
+.names u2cs_count_0_.Q u2cs_count_1_.Q u2cs_count_2_.Q u2cs_count_3_.Q \
+u2cs_count_4_.Q u2cs_count_5_.Q u2cs_count_6_.Q u2cs_count_7_.Q \
+u2cs_count_8_.Q u2cs_count26_n
+000101011 1
+-------0- 0
+------1-- 0
+-----0--- 0
+----1---- 0
+---0----- 0
+--1------ 0
+-1------- 0
+1-------- 0
+--------0 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_n_11_n
+111 1
+-0- 0
+0-- 0
+--0 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_6_.Q u3cs_n_23_n
+1111111 1
+-----0- 0
+----0-- 0
+---0--- 0
+--0---- 0
+-0----- 0
+0------ 0
+------0 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_6_.Q u3cs_count_7_.Q \
+u3cs_count_8_.Q u3cs_count40_n
+010111101 1
+-------1- 0
+------0-- 0
+-----0--- 0
+----0---- 0
+---0----- 0
+--1------ 0
+-0------- 0
+1-------- 0
+--------0 0
+.names octaveSelect_n_1_.BLIF oneMHzClock.BLIF octaveSelect_n_0_.BLIF \
+u0rc_u0tff_q.Q u0rc_genblk1_0__uitff_q.Q N_5_i
+0-11- 1
+010-- 1
+1---1 1
+0-10- 0
+000-- 0
+1---0 0
+.names u1cs_count_0_.Q u1cs_count_1_.Q u1cs_count_2_.Q u1cs_count_3_.Q \
+u1cs_count_4_.Q u1cs_count_5_.Q u1cs_count_6_.Q u1cs_count_7_.Q \
+u1cs_count_8_.Q u1cs_count12_7_n
+111010111 1
+001110111 1
+-0-0----- 0
+1--1----- 0
+01------- 0
+-------0- 0
+------0-- 0
+-----1--- 0
+----0---- 0
+--0------ 0
+--------0 0
+.names N_5_i.BLIF u1cs_count_0_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_count_1_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_count_2_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_count_3_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_count_4_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_count_5_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_count_6_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_count_7_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_count_8_.C
+1 1
+0 0
+.names N_5_i.BLIF u1cs_outclock.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_0_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_1_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_2_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_3_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_4_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_5_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_6_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_7_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_count_8_.C
+1 1
+0 0
+.names N_5_i.BLIF u2cs_outclock.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_0_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_1_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_2_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_3_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_4_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_5_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_6_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_7_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_count_8_.C
+1 1
+0 0
+.names N_5_i.BLIF u3cs_outclock.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_0_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_1_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_2_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_3_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_4_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_5_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_6_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_7_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_count_8_.C
+1 1
+0 0
+.names N_5_i.BLIF u4cs_outclock.C
+1 1
+0 0
+.names u1cs_outclock.Q lfsr_0_.C
+1 1
+0 0
+.names u1cs_outclock.Q lfsr_1_.C
+1 1
+0 0
+.names u1cs_outclock.Q lfsr_2_.C
+1 1
+0 0
+.names u1cs_outclock.Q lfsr_3_.C
+1 1
+0 0
+.names u1cs_outclock.Q lfsr_4_.C
+1 1
+0 0
+.names u1cs_outclock.Q lfsr_5_.C
+1 1
+0 0
+.names u1cs_outclock.Q lfsr_6_.C
+1 1
+0 0
+.names u1cs_outclock.Q lfsr_7_.C
+1 1
+0 0
+.names u0rc_u0tff_q.Q u0rc_u0tff_q.D
+0 1
+1 0
+.names u0rc_genblk1_0__uitff_q.Q u0rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u1cs_outclock.Q u1cs_count_0_.Q u1cs_count12_7_n.BLIF u1cs_outclock.D
+001 1
+11- 1
+1-0 1
+101 0
+01- 0
+0-0 0
+.names u2cs_outclock.Q u2cs_count26_n.BLIF u2cs_outclock.D
+10 1
+01 1
+00 0
+11 0
+.names u3cs_outclock.Q u3cs_count40_n.BLIF u3cs_outclock.D
+10 1
+01 1
+00 0
+11 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_6_.Q u4cs_count_7_.Q \
+u4cs_count_8_.Q u4cs_outclock.T
+001001101 1
+-------1- 0
+------0-- 0
+-----0--- 0
+----1---- 0
+---1----- 0
+--0------ 0
+-1------- 0
+1-------- 0
+--------0 0
+.names lfsr_1_.Q lfsr_0_.D
+1 1
+0 0
+.names lfsr_6_.Q lfsr_5_.D
+1 1
+0 0
+.names lfsr_0_.Q lfsr_5_.Q lfsr_4_.D
+10 1
+01 1
+00 0
+11 0
+.names lfsr_2_.Q lfsr_1_.D
+1 1
+0 0
+.names lfsr_3_.Q lfsr_2_.D
+1 1
+0 0
+.names lfsr_0_.Q lfsr_4_.Q lfsr_3_.D
+10 1
+01 1
+00 0
+11 0
+.names lfsr_7_.Q lfsr_6_.D
+1 1
+0 0
+.names lfsr_0_.Q lfsr_7_.D
+1 1
+0 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_6_.Q u4cs_count_7_.Q \
+u4cs_count_8_.Q u4cs_count_0_.D
+0------1- 1
+0-----0-- 1
+0----0--- 1
+0---1---- 1
+0--1----- 1
+0-0------ 1
+01------- 1
+0-------0 1
+-01001101 0
+1-------- 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_1_.D
+10 1
+01 1
+00 0
+11 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_6_.Q u4cs_count_7_.Q \
+u4cs_count_8_.Q u4cs_count_2_.D
+-011----- 1
+-01-1---- 1
+-01--0--- 1
+-01---0-- 1
+-01----1- 1
+-01-----0 1
+110------ 1
+011------ 1
+101------ 1
+00-001101 0
+111------ 0
+-00------ 0
+0-0------ 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_4_.D
+11110 1
+---01 1
+--0-1 1
+-0--1 1
+0---1 1
+11111 0
+---00 0
+--0-0 0
+-0--0 0
+0---0 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_6_.Q u4cs_count_7_.Q \
+u4cs_count_8_.Q u4cs_count_5_.T
+001001101 1
+11111---- 1
+0---1---- 0
+0----0--- 0
+0-----0-- 0
+0------1- 0
+---10---- 0
+-1-0----- 0
+10------- 0
+0-------0 0
+--0------ 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_6_.Q u4cs_count_7_.Q \
+u4cs_count_8_.Q u4cs_n_20_n.BLIF u4cs_count_6_.D
+------0--1 1
+------1-00 1
+------11-0 1
+-----01--0 1
+----1-1--0 1
+---1--1--0 1
+--0---1--0 1
+-1----1--0 1
+1-----1--0 1
+001001101- 0
+------0--0 0
+------1--1 0
+.names u4cs_count_6_.Q u4cs_count_7_.Q u4cs_n_20_n.BLIF u4cs_count_7_.D
+101 1
+01- 1
+-10 1
+111 0
+00- 0
+-00 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_6_.Q u4cs_count_7_.Q \
+u4cs_count_8_.Q u4cs_n_20_n.BLIF u4cs_count_8_.D
+------1101 1
+-----0-01- 1
+----1--01- 1
+---1---01- 1
+--0----01- 1
+-1-----01- 1
+1------01- 1
+-------110 1
+------0-1- 1
+00100110-- 0
+------1111 0
+------0-0- 0
+-------00- 0
+--------00 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_6_.Q u3cs_count_7_.Q \
+u3cs_count_8_.Q u3cs_count_0_.D
+0------1- 1
+0-----0-- 1
+0----0--- 1
+0---0---- 1
+0--0----- 1
+0-1------ 1
+00------- 1
+0-------0 1
+-10111101 0
+1-------- 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_6_.Q u3cs_count_7_.Q \
+u3cs_count_8_.Q u3cs_count_1_.D
+10------- 1
+01-----1- 1
+01----0-- 1
+01---0--- 1
+01--0---- 1
+01-0----- 1
+011------ 1
+01------0 1
+0-0111101 0
+11------- 0
+00------- 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count40_n.BLIF u3cs_count_3_.D
+11100 1
+--010 1
+-0-10 1
+0--10 1
+1111- 0
+--00- 0
+-0-0- 0
+0--0- 0
+----1 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count40_n.BLIF u3cs_count_4_.D
+111100 1
+---010 1
+--0-10 1
+-0--10 1
+0---10 1
+11111- 0
+---00- 0
+--0-0- 0
+-0--0- 0
+0---0- 0
+-----1 0
+.names u3cs_count_3_.Q u3cs_count_4_.Q u3cs_count_5_.Q u3cs_n_11_n.BLIF \
+u3cs_count40_n.BLIF u3cs_count_5_.D
+11010 1
+--100 1
+-01-0 1
+0-1-0 1
+1111- 0
+--00- 0
+-00-- 0
+0-0-- 0
+----1 0
+.names u3cs_count_3_.Q u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_6_.Q \
+u3cs_n_11_n.BLIF u3cs_count40_n.BLIF u3cs_count_6_.D
+111010 1
+---100 1
+--01-0 1
+-0-1-0 1
+0--1-0 1
+11111- 0
+---00- 0
+--00-- 0
+-0-0-- 0
+0--0-- 0
+-----1 0
+.names u3cs_count_7_.Q u3cs_n_23_n.BLIF u3cs_count_7_.D
+10 1
+01 1
+00 0
+11 0
+.names u3cs_count_7_.Q u3cs_count_8_.Q u3cs_n_23_n.BLIF u3cs_count40_n.BLIF \
+u3cs_count_8_.D
+1010 1
+-100 1
+01-0 1
+111- 0
+-00- 0
+00-- 0
+---1 0
+.names u2cs_count_0_.Q u2cs_count_1_.Q u2cs_count_2_.Q u2cs_count_3_.Q \
+u2cs_count_4_.Q u2cs_count_5_.Q u2cs_count_6_.Q u2cs_count_7_.Q \
+u2cs_count_8_.Q u2cs_count_0_.D
+0------0- 1
+0-----1-- 1
+0----0--- 1
+0---1---- 1
+0--0----- 1
+0-1------ 1
+01------- 1
+0-------0 1
+-00101011 0
+1-------- 0
+.names u2cs_count_0_.Q u2cs_count_1_.Q u2cs_count_1_.D
+10 1
+01 1
+00 0
+11 0
+.names u2cs_count_0_.Q u2cs_count_1_.Q u2cs_count_2_.Q u2cs_count_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names u2cs_count_0_.Q u2cs_count_1_.Q u2cs_count_2_.Q u2cs_count_3_.Q \
+u2cs_count_4_.Q u2cs_count_5_.Q u2cs_count_6_.Q u2cs_count_7_.Q \
+u2cs_count_8_.Q u2cs_count_3_.D
+01-1----- 1
+0--11---- 1
+0--1-0--- 1
+0--1--1-- 1
+1-01----- 1
+-011----- 1
+0--1---0- 1
+0--1----0 1
+1110----- 1
+000-01011 0
+1111----- 0
+--00----- 0
+-0-0----- 0
+0--0----- 0
+.names u2cs_count_0_.Q u2cs_count_1_.Q u2cs_count_2_.Q u2cs_count_3_.Q \
+u2cs_count_4_.Q u2cs_count_4_.D
+11110 1
+---01 1
+--0-1 1
+-0--1 1
+0---1 1
+11111 0
+---00 0
+--0-0 0
+-0--0 0
+0---0 0
+.names u2cs_count_5_.Q u2cs_n_17_n.BLIF u2cs_count26_n.BLIF u2cs_count_5_.D
+100 1
+010 1
+00- 0
+11- 0
+--1 0
+.names u2cs_count_5_.Q u2cs_count_6_.Q u2cs_n_17_n.BLIF u2cs_count_6_.D
+101 1
+01- 1
+-10 1
+111 0
+00- 0
+-00 0
+.names u2cs_count_5_.Q u2cs_count_6_.Q u2cs_count_7_.Q u2cs_n_17_n.BLIF \
+u2cs_count26_n.BLIF u2cs_count_7_.D
+11010 1
+--100 1
+-01-0 1
+0-1-0 1
+1111- 0
+--00- 0
+-00-- 0
+0-0-- 0
+----1 0
+.names u2cs_count_5_.Q u2cs_count_6_.Q u2cs_count_7_.Q u2cs_count_8_.Q \
+u2cs_n_17_n.BLIF u2cs_count26_n.BLIF u2cs_count_8_.D
+111010 1
+---100 1
+--01-0 1
+-0-1-0 1
+0--1-0 1
+11111- 0
+---00- 0
+--00-- 0
+-0-0-- 0
+0--0-- 0
+-----1 0
+.names u1cs_count_0_.Q u1cs_count_1_.Q u1cs_count_2_.Q u1cs_count_3_.Q \
+u1cs_count_4_.Q u1cs_count_5_.Q u1cs_count_6_.Q u1cs_count_7_.Q \
+u1cs_count_8_.Q u1cs_count_0_.D
+0------0- 1
+0-----0-- 1
+0----1--- 1
+0---0---- 1
+0--0----- 1
+0-0------ 1
+01------- 1
+0-------0 1
+-01110111 0
+1-------- 0
+.names u1cs_count_0_.Q u1cs_count_1_.Q u1cs_count_1_.D
+10 1
+01 1
+00 0
+11 0
+.names u1cs_count_0_.Q u1cs_count_1_.Q u1cs_count_2_.Q u1cs_count_3_.Q \
+u1cs_count_4_.Q u1cs_count_5_.Q u1cs_count_6_.Q u1cs_count_7_.Q \
+u1cs_count_8_.Q u1cs_count_2_.D
+-010----- 1
+-01-0---- 1
+-01--1--- 1
+-01---0-- 1
+-01----0- 1
+-01-----0 1
+110------ 1
+011------ 1
+101------ 1
+00-110111 0
+111------ 0
+-00------ 0
+0-0------ 0
+.names u1cs_count_0_.Q u1cs_count_1_.Q u1cs_count_2_.Q u1cs_count_3_.Q \
+u1cs_count_4_.Q u1cs_count_5_.Q u1cs_count_6_.Q u1cs_count_7_.Q \
+u1cs_count_8_.Q u1cs_count_3_.D
+-0-10---- 1
+-0-1-1--- 1
+-0-1--0-- 1
+-0-1---0- 1
+-0-1----0 1
+1110----- 1
+10-1----- 1
+01-1----- 1
+--01----- 1
+001-10111 0
+1111----- 0
+--00----- 0
+-0-0----- 0
+0--0----- 0
+.names u1cs_count_0_.Q u1cs_count_1_.Q u1cs_count_2_.Q u1cs_count_3_.Q \
+u1cs_count_4_.Q u1cs_count12_7_n.BLIF u1cs_count_4_.D
+11110- 1
+1--01- 1
+1-0-1- 1
+10--1- 1
+0---10 1
+11111- 0
+---00- 0
+--0-0- 0
+-0--0- 0
+0---0- 0
+0----1 0
+.names u1cs_count_5_.Q u1cs_n_17_n.BLIF u1cs_count_5_.D
+10 1
+01 1
+00 0
+11 0
+.names u1cs_count_0_.Q u1cs_count_5_.Q u1cs_count_6_.Q u1cs_n_17_n.BLIF \
+u1cs_count12_7_n.BLIF u1cs_count_6_.D
+1101- 1
+-1010 1
+1-10- 1
+101-- 1
+--100 1
+-01-0 1
+-111- 0
+--00- 0
+-00-- 0
+0---1 0
+.names u1cs_count_0_.Q u1cs_count_5_.Q u1cs_count_6_.Q u1cs_count_7_.Q \
+u1cs_n_17_n.BLIF u1cs_count12_7_n.BLIF u1cs_count_7_.D
+11101- 1
+-11010 1
+1--10- 1
+1-01-- 1
+10-1-- 1
+---100 1
+--01-0 1
+-0-1-0 1
+-1111- 0
+---00- 0
+--00-- 0
+-0-0-- 0
+0----1 0
+.names u1cs_count_0_.Q u1cs_count_1_.Q u1cs_count_2_.Q u1cs_count_3_.Q \
+u1cs_count_4_.Q u1cs_count_5_.Q u1cs_count_6_.Q u1cs_count_7_.Q \
+u1cs_count_8_.Q u1cs_count12_7_n.BLIF u1cs_count_8_.T
+11111111-- 1
+0-------11 1
+0-------0- 0
+1------0-- 0
+1-----0--- 0
+1----0---- 0
+1---0----- 0
+1--0------ 0
+1-0------- 0
+10-------- 0
+0--------0 0
+.end

@@ -1,0 +1,33 @@
+Selecting top level module FourBitCPU
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001010
+   Generated name = RippleCounter_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001010
+   Generated name = RippleScaler_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\buttonpressdetector.v":4:7:4:25|Synthesizing module ButtonPressDetector
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitalu.v":4:7:4:16|Synthesizing module FourBitALU
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":5:7:5:16|Synthesizing module FourBitCPU
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":56:1:56:6|Pruning Register inc_pc 
+
+@W: CL190 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":56:1:56:6|Optimizing register bit b_reg[0] to a constant 0
+@W: CL190 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":56:1:56:6|Optimizing register bit b_reg[1] to a constant 0
+@W: CL190 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":56:1:56:6|Optimizing register bit b_reg[2] to a constant 0
+@W: CL190 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":56:1:56:6|Optimizing register bit b_reg[3] to a constant 0
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":56:1:56:6|Pruning Register b_reg[3:0] 
+
+@W: CL156 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":20:12:20:17|*Input opcode[7][1:0] to this expression [pmux] has undriven bits which are being tied to 0 - a simulation mismatch is possible
+@W: CL156 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":20:12:20:17|*Input opcode[7][3] to this expression [pmux] has undriven bits which are being tied to 0 - a simulation mismatch is possible
+@W: CL156 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":21:12:21:14|*Input arg[1][3:0] to this expression [pmux] has undriven bits which are being tied to 0 - a simulation mismatch is possible
+@W: CL156 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":21:12:21:14|*Input arg[2][3:0] to this expression [pmux] has undriven bits which are being tied to 0 - a simulation mismatch is possible
+@W: CL156 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\fourbitcpu.v":21:12:21:14|*Input arg[7][3:0] to this expression [pmux] has undriven bits which are being tied to 0 - a simulation mismatch is possible
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_3\buttonpressdetector.v":20:1:20:6|Trying to extract state machine for register state

@@ -1,0 +1,237 @@
+#$ TOOL  ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE  Wed Feb 01 12:03:39 2012
+#$ MODULE  KeypadScannerDemo
+#$ PROPERTY  LATTICE PULL DEFAULT = DOWN
+#$ PINS 15 rows_3_:28 segments_6_:31 oneMHzClock:19 rows_2_:27 rows_1_:26
+ rows_0_:24 columns_0_:20 segments_5_:32 segments_4_:33 segments_3_:34
+ segments_2_:38 segments_1_:39 segments_0_:40 columns_2_:22 columns_1_:21
+#$ NODES 28 u0rs_u1rc_genblk1_8__uitff_q u1ks_key_reg_0_ u1ks_key_reg_1_
+ u1ks_key_reg_2_ u1ks_key_reg_3_ u0rs_u1rc_u0tff_q u0rs_u1rc_genblk1_0__uitff_q
+ u0rs_u1rc_genblk1_1__uitff_q u0rs_u1rc_genblk1_2__uitff_q
+ u0rs_u1rc_genblk1_3__uitff_q u0rs_u1rc_genblk1_4__uitff_q
+ u0rs_u1rc_genblk1_5__uitff_q u0rs_u1rc_genblk1_6__uitff_q
+ u0rs_u1rc_genblk1_7__uitff_q u1ks_pressed_reg_3__0_ u1ks_pressed_reg_3__1_
+ u1ks_pressed_reg_3__2_ u1ks_pressed_reg_3__3_ u1ks_pressed_reg_2__0_
+ u1ks_pressed_reg_2__1_ u1ks_pressed_reg_2__2_ u1ks_pressed_reg_2__3_
+ u1ks_pressed_reg_1__0_ u1ks_pressed_reg_1__1_ u1ks_pressed_reg_1__2_
+ u1ks_pressed_reg_1__3_ u1ks_un1_pressed_reg_1_5_n u1ks_key_reg_0__0
+.model keypadscannerdemo 
+.inputs rows_3_.BLIF oneMHzClock.BLIF rows_2_.BLIF rows_1_.BLIF rows_0_.BLIF \
+ u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_key_reg_0_.Q u1ks_key_reg_1_.Q \
+ u1ks_key_reg_2_.Q u1ks_key_reg_3_.Q u0rs_u1rc_u0tff_q.Q \
+ u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.Q \
+ u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.Q \
+ u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.Q \
+ u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.Q \
+ u1ks_pressed_reg_3__0_.Q u1ks_pressed_reg_3__1_.Q u1ks_pressed_reg_3__2_.Q \
+ u1ks_pressed_reg_3__3_.Q u1ks_pressed_reg_2__0_.Q u1ks_pressed_reg_2__1_.Q \
+ u1ks_pressed_reg_2__2_.Q u1ks_pressed_reg_2__3_.Q u1ks_pressed_reg_1__0_.Q \
+ u1ks_pressed_reg_1__1_.Q u1ks_pressed_reg_1__2_.Q u1ks_pressed_reg_1__3_.Q \
+ u1ks_un1_pressed_reg_1_5_n.BLIF columns_1_.Q columns_2_.Q u1ks_key_reg_0__0.BLIF
+.outputs segments_6_ columns_0_ segments_5_ segments_4_ segments_3_.X1 \
+ segments_3_.X2 segments_2_ segments_1_ segments_0_ columns_2_.D columns_2_.C \
+ columns_1_.D columns_1_.C u0rs_u1rc_genblk1_8__uitff_q.D \
+ u0rs_u1rc_genblk1_8__uitff_q.C u1ks_key_reg_0_.D u1ks_key_reg_0_.C \
+ u1ks_key_reg_0_.CE- u1ks_key_reg_1_.D u1ks_key_reg_1_.C u1ks_key_reg_1_.CE- \
+ u1ks_key_reg_2_.D u1ks_key_reg_2_.C u1ks_key_reg_2_.CE- u1ks_key_reg_3_.D \
+ u1ks_key_reg_3_.C u1ks_key_reg_3_.CE- u0rs_u1rc_u0tff_q.D u0rs_u1rc_u0tff_q.C \
+ u0rs_u1rc_genblk1_0__uitff_q.D u0rs_u1rc_genblk1_0__uitff_q.C \
+ u0rs_u1rc_genblk1_1__uitff_q.D u0rs_u1rc_genblk1_1__uitff_q.C \
+ u0rs_u1rc_genblk1_2__uitff_q.D u0rs_u1rc_genblk1_2__uitff_q.C \
+ u0rs_u1rc_genblk1_3__uitff_q.D u0rs_u1rc_genblk1_3__uitff_q.C \
+ u0rs_u1rc_genblk1_4__uitff_q.D u0rs_u1rc_genblk1_4__uitff_q.C \
+ u0rs_u1rc_genblk1_5__uitff_q.D u0rs_u1rc_genblk1_5__uitff_q.C \
+ u0rs_u1rc_genblk1_6__uitff_q.D u0rs_u1rc_genblk1_6__uitff_q.C \
+ u0rs_u1rc_genblk1_7__uitff_q.D u0rs_u1rc_genblk1_7__uitff_q.C \
+ u1ks_pressed_reg_3__0_.D u1ks_pressed_reg_3__0_.C u1ks_pressed_reg_3__1_.D \
+ u1ks_pressed_reg_3__1_.C u1ks_pressed_reg_3__2_.D u1ks_pressed_reg_3__2_.C \
+ u1ks_pressed_reg_3__3_.D u1ks_pressed_reg_3__3_.C u1ks_pressed_reg_2__0_.D \
+ u1ks_pressed_reg_2__0_.C u1ks_pressed_reg_2__1_.D u1ks_pressed_reg_2__1_.C \
+ u1ks_pressed_reg_2__2_.D u1ks_pressed_reg_2__2_.C u1ks_pressed_reg_2__3_.D \
+ u1ks_pressed_reg_2__3_.C u1ks_pressed_reg_1__0_.D u1ks_pressed_reg_1__0_.C \
+ u1ks_pressed_reg_1__0_.CE u1ks_pressed_reg_1__1_.D u1ks_pressed_reg_1__1_.C \
+ u1ks_pressed_reg_1__1_.CE u1ks_pressed_reg_1__2_.D u1ks_pressed_reg_1__2_.C \
+ u1ks_pressed_reg_1__2_.CE u1ks_pressed_reg_1__3_.D u1ks_pressed_reg_1__3_.C \
+ u1ks_pressed_reg_1__3_.CE u1ks_un1_pressed_reg_1_5_n u1ks_key_reg_0__0
+.names u1ks_key_reg_0_.Q u1ks_key_reg_1_.Q u1ks_key_reg_2_.Q u1ks_key_reg_3_.Q segments_6_
+0-00 1
+-001 1
+1-10 1
+-1-0 1
+.names columns_1_.Q columns_2_.Q columns_0_
+00 1
+.names u1ks_key_reg_0_.Q u1ks_key_reg_1_.Q u1ks_key_reg_2_.Q u1ks_key_reg_3_.Q segments_5_
+11-0 1
+-00- 1
+00-0 1
+--00 1
+.names u1ks_key_reg_0_.Q u1ks_key_reg_1_.Q u1ks_key_reg_2_.Q u1ks_key_reg_3_.Q segments_4_
+-00- 1
+--10 1
+1--0 1
+.names u1ks_key_reg_0_.Q u1ks_key_reg_1_.Q u1ks_key_reg_2_.Q u1ks_key_reg_3_.Q segments_3_.X1
+10-0 1
+01-0 1
+-100 1
+.names u1ks_key_reg_1_.Q u1ks_key_reg_2_.Q segments_3_.X2
+00 1
+.names u1ks_key_reg_0_.Q u1ks_key_reg_1_.Q u1ks_key_reg_2_.Q u1ks_key_reg_3_.Q segments_2_
+000- 1
+01-0 1
+.names u1ks_key_reg_0_.Q u1ks_key_reg_1_.Q u1ks_key_reg_2_.Q u1ks_key_reg_3_.Q segments_1_
+000- 1
+-001 1
+0-10 1
+-010 1
+.names u1ks_key_reg_0_.Q u1ks_key_reg_1_.Q u1ks_key_reg_2_.Q u1ks_key_reg_3_.Q segments_0_
+01-0 1
+-001 1
+-100 1
+-010 1
+.names columns_1_.Q columns_2_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q columns_2_.C
+1 1
+.names columns_1_.Q columns_2_.Q columns_1_.D
+00 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q columns_1_.C
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.C
+0 1
+.names u1ks_pressed_reg_1__0_.Q u1ks_key_reg_0_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_key_reg_0_.C
+1 1
+.names u1ks_key_reg_0__0.BLIF u1ks_key_reg_0_.CE-
+1 1
+.names u1ks_pressed_reg_1__1_.Q u1ks_key_reg_1_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_key_reg_1_.C
+1 1
+.names u1ks_key_reg_0__0.BLIF u1ks_key_reg_1_.CE-
+1 1
+.names u1ks_pressed_reg_1__2_.Q u1ks_key_reg_2_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_key_reg_2_.C
+1 1
+.names u1ks_key_reg_0__0.BLIF u1ks_key_reg_2_.CE-
+1 1
+.names u1ks_pressed_reg_1__3_.Q u1ks_key_reg_3_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_key_reg_3_.C
+1 1
+.names u1ks_key_reg_0__0.BLIF u1ks_key_reg_3_.CE-
+1 1
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_u0tff_q.D
+0 1
+.names oneMHzClock.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_0__uitff_q.D
+0 1
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_genblk1_0__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.C
+0 1
+.names u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.D
+0 1
+.names u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.C
+0 1
+.names u1ks_pressed_reg_2__0_.Q u1ks_pressed_reg_3__0_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_3__0_.C
+1 1
+.names u1ks_pressed_reg_2__1_.Q u1ks_pressed_reg_3__1_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_3__1_.C
+1 1
+.names u1ks_pressed_reg_2__2_.Q u1ks_pressed_reg_3__2_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_3__2_.C
+1 1
+.names u1ks_pressed_reg_2__3_.Q u1ks_pressed_reg_3__3_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_3__3_.C
+1 1
+.names u1ks_pressed_reg_1__0_.Q u1ks_pressed_reg_2__0_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_2__0_.C
+1 1
+.names u1ks_pressed_reg_1__1_.Q u1ks_pressed_reg_2__1_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_2__1_.C
+1 1
+.names u1ks_pressed_reg_1__2_.Q u1ks_pressed_reg_2__2_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_2__2_.C
+1 1
+.names u1ks_pressed_reg_1__3_.Q u1ks_pressed_reg_2__3_.D
+1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_2__3_.C
+1 1
+.names rows_2_.BLIF rows_0_.BLIF columns_1_.Q u1ks_pressed_reg_1__0_.D
+000 1
+1-1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_1__0_.C
+1 1
+.names u1ks_un1_pressed_reg_1_5_n.BLIF u1ks_pressed_reg_1__0_.CE
+1 1
+.names rows_3_.BLIF rows_2_.BLIF rows_1_.BLIF columns_1_.Q columns_2_.Q u1ks_pressed_reg_1__1_.D
+-1000 1
+1-0-0 1
+--1-1 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_1__1_.C
+1 1
+.names u1ks_un1_pressed_reg_1_5_n.BLIF u1ks_pressed_reg_1__1_.CE
+1 1
+.names rows_2_.BLIF rows_1_.BLIF columns_2_.Q u1ks_pressed_reg_1__2_.D
+1-- 1
+-11 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_1__2_.C
+1 1
+.names u1ks_un1_pressed_reg_1_5_n.BLIF u1ks_pressed_reg_1__2_.CE
+1 1
+.names rows_1_.BLIF columns_2_.Q u1ks_pressed_reg_1__3_.D
+10 1
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_pressed_reg_1__3_.C
+1 1
+.names u1ks_un1_pressed_reg_1_5_n.BLIF u1ks_pressed_reg_1__3_.CE
+1 1
+.names rows_3_.BLIF rows_2_.BLIF rows_1_.BLIF rows_0_.BLIF u1ks_un1_pressed_reg_1_5_n
+1000 1
+0100 1
+0010 1
+0001 1
+.names u1ks_pressed_reg_3__0_.Q u1ks_pressed_reg_3__1_.Q u1ks_pressed_reg_3__2_.Q u1ks_pressed_reg_3__3_.Q u1ks_pressed_reg_2__0_.Q u1ks_pressed_reg_2__1_.Q u1ks_pressed_reg_2__2_.Q u1ks_pressed_reg_2__3_.Q u1ks_pressed_reg_1__0_.Q u1ks_pressed_reg_1__1_.Q u1ks_pressed_reg_1__2_.Q u1ks_pressed_reg_1__3_.Q u1ks_key_reg_0__0
+---0-------1 1
+-------0---1 1
+0-------1--- 1
+----0---1--- 1
+-0-------1-- 1
+-----0---1-- 1
+--0-------1- 1
+------0---1- 1
+.end

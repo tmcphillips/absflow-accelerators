@@ -1,0 +1,712 @@
+|--------------------------------------------------------------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Fitter Report File        -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+Project_Summary
+~~~~~~~~~~~~~~~
+Project Name         :  mach64_verilog_project
+Project Path         :  C:\Users\tmcphillips\Designs\Projects\MACH64\VerilogHDL\25_Organ_4
+Project Fitted on    :  Fri Feb 17 11:35:30 2012
+
+Device               :  M4064_32
+Package              :  48
+GLB Input Mux Size   :  10
+Available Blocks     :  4
+Speed                :  -7.5
+Part Number          :  LC4064V-75T48I
+Source Format        :  Pure_Verilog_HDL
+
+
+// Project 'mach64_verilog_project' Fit Successfully! //
+
+
+Compilation_Times
+~~~~~~~~~~~~~~~~~
+Prefit Time                     0 secs
+Load Design Time                0.05 secs
+Partition Time                  0.08 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+Design_Summary
+~~~~~~~~~~~~~~
+Total Input Pins                1
+Total Logic Functions           61
+  Total Output Pins             4
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            57
+Total Flip-Flops                57
+  Total D Flip-Flops            47
+  Total T Flip-Flops            10
+  Total Latches                 0
+Total Product Terms             183
+
+Total Reserved Pins             0
+Total Locked Pins               5
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             21
+Total Unique Clock Enables      0
+Total Unique Resets             0
+Total Unique Presets            0
+
+Fmax Logic Levels               1
+
+
+Device_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~~~~
+                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+Dedicated Pins
+  Clock/Input Pins                  4        1      3    -->    25
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           30        4     26    -->    13
+Logic Functions                    64       61      3    -->    95
+  Input Registers                  32        0     32    -->     0
+
+GLB Inputs                        144       69     75    -->    47
+Logical Product Terms             320      153    167    -->    47
+Occupied GLBs                       4        4      0    -->   100
+Macrocells                         64       61      3    -->    95
+
+Control Product Terms:
+  GLB Clock/Clock Enables           4        4      0    -->   100
+  GLB Reset/Presets                 4        0      4    -->     0
+  Macrocell Clocks                 64       27     37    -->    42
+  Macrocell Clock Enables          64        0     64    -->     0
+  Macrocell Enables                64        0     64    -->     0
+  Macrocell Resets                 64        0     64    -->     0
+  Macrocell Presets                64        0     64    -->     0
+
+Global Routing Pool               100       57     43    -->    57
+  GRP from IFB                     ..        0     ..    -->    ..
+    (from input signals)           ..        0     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..       57     ..    -->    ..
+----------------------------------------------------------------------
+
+<Note> 1 : The available PT is the product term that has not been used.
+<Note> 2 : IFB is I/O feedback.
+<Note> 3 : MFB is macrocell feedback.
+
+
+
+GLB_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~
+                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+-------------------------------------------------------------------------------------------
+  GLB    A      4    13    17      0/8      0   15      0              1       35       15
+  GLB    B      1    14    15      0/8      0   15      0              1       33       15
+  GLB    C      0    13    13      0/8      0   15      0              1       45       15
+  GLB    D      9    15    24      4/8      0   16      0              0       40       16
+-------------------------------------------------------------------------------------------
+TOTALS:        14    55    69      4/32     0   61      0              3      153       61
+
+<Note> 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+<Note> 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+
+GLB_Control_Summary
+~~~~~~~~~~~~~~~~~~~
+           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+  GLB    A   1      0         7      0      0      0      0
+  GLB    B   1      0         8      0      0      0      0
+  GLB    C   1      0         7      0      0      0      0
+  GLB    D   1      0         5      0      0      0      0
+------------------------------------------------------------------------------
+
+<Note> 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+
+Optimizer_and_Fitter_Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              No
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+<Note> 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+<Note> 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+
+Pinout_Listing
+~~~~~~~~~~~~~~
+      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+--------------------------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |
+2     |  I_O  |   0  |A10 |        |                 |       |
+3     |  I_O  |   0  |A12 |        |                 |       |
+4     |  I_O  |   0  |A14 |        |                 |       |
+5     |GNDIO0 |   -  |    |        |                 |       |
+6     |VCCIO0 |   -  |    |        |                 |       |
+7     |  I_O  |   0  |B0  |        |                 |       |
+8     |  I_O  |   0  |B2  |        |                 |       |
+9     |  I_O  |   0  |B4  |        |                 |       |
+10    |  I_O  |   0  |B6  |        |                 |       |
+11    | TCK   |   -  |    |        |                 |       |
+12    | VCC   |   -  |    |        |                 |       |
+13    | GND   |   -  |    |        |                 |       |
+14    |  I_O  |   0  |B8  |        |                 |       |
+15    |  I_O  |   0  |B10 |        |                 |       |
+16    |  I_O  |   0  |B12 |        |                 |       |
+17    |  I_O  |   0  |B14 |        |                 |       |
+18    |INCLK1 |   0  |    |        |                 |       |
+19    |INCLK2 |   1  |    |        |                 |       |
+20    |  I_O  |   1  |C0  |        |                 |       |
+21    |  I_O  |   1  |C2  |        |                 |       |
+22    |  I_O  |   1  |C4  |        |                 |       |
+23    |  I_O  |   1  |C6  |        |                 |       |
+24    |  I_O  |   1  |C8  |        |                 |       |
+25    | TMS   |   -  |    |        |                 |       |
+26    |  I_O  |   1  |C10 |        |                 |       |
+27    |  I_O  |   1  |C12 |        |                 |       |
+28    |  I_O  |   1  |C14 |        |                 |       |
+29    |GNDIO1 |   -  |    |        |                 |       |
+30    |VCCIO1 |   -  |    |        |                 |       |
+31    |  I_O  |   1  |D0  |    *   |LVCMOS18         | Output|toneOut_1_
+32    |  I_O  |   1  |D2  |    *   |LVCMOS18         | Output|toneOut_2_
+33    |  I_O  |   1  |D4  |    *   |LVCMOS18         | Output|toneOut_3_
+34    |  I_O  |   1  |D6  |    *   |LVCMOS18         | Output|toneOut_4_
+35    | TDO   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    |  I_O  |   1  |D8  |        |                 |       |
+39    |  I_O  |   1  |D10 |        |                 |       |
+40    |  I_O  |   1  |D12 |        |                 |       |
+41    | I_O/OE|   1  |D14 |        |                 |       |
+42    |INCLK3 |   1  |    |        |                 |       |
+43    |INCLK0 |   0  |    |    *   |LVCMOS18         | Input |oneMHzClock
+44    | I_O/OE|   0  |A0  |        |                 |       |
+45    |  I_O  |   0  |A2  |        |                 |       |
+46    |  I_O  |   0  |A4  |        |                 |       |
+47    |  I_O  |   0  |A6  |        |                 |       |
+48    |  I_O  |   0  |A8  |        |                 |       |
+--------------------------------------------------------------------------------------------
+
+<Note> GLB Pad : This notation refers to the GLB I/O pad number in the device.
+<Note> Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+<Note> Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+
+Input_Signal_List
+~~~~~~~~~~~~~~~~~
+                Input
+         Pin    Fanout
+ Pin GLB Type           Pullup Signal
+------------------------------------------
+  43  -- INCLK    ----      Up oneMHzClock
+------------------------------------------
+
+
+
+Output_Signal_List
+~~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+-----------------------------------------------------------------------
+  31   D  6  -   3  1 COM                  ----  Fast     Up toneOut_1_
+  32   D  6  -   3  1 COM                  ----  Fast     Up toneOut_2_
+  33   D  6  -   3  1 COM                  ----  Fast     Up toneOut_3_
+  34   D  6  -   3  1 COM                  ----  Fast     Up toneOut_4_
+-----------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Bidir_Signal_List
+~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Buried_Signal_List
+~~~~~~~~~~~~~~~~~~
+        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P         Signal
+--------------------------------------------------------------------------
+14   C  6  1   2  1 DFF      R       1 ---D  currentNote_1_
+ 9   C  6  1   3  1 DFF      R       1 ---D  currentNote_2_
+ 4   C  6  1   4  1 DFF      R       1 ---D  currentNote_3_
+13   C  6  1   2  1 DFF      R       1 ---D  currentNote_4_
+ 3   C  6  1   4  1 DFF      R       1 ---D  inst_breakAfterNote
+ 7   A  2  1   2  1 DFF      R       2 A-C-  songLineIndex_0_
+12   C  3  1   2  1 DFF      R       2 A-C-  songLineIndex_1_
+ 8   C  4  1   3  1 DFF      R       2 A-C-  songLineIndex_2_
+ 0   A  5  1   5  1 DFF      R       2 A-C-  songLineIndex_3_
+11   C  6  1   2  1 DFF      R       1 --C-  songLineIndex_4_
+ 8   A  2  1   2  1 DFF      R       1 A---  u0rs_u1rc_genblk1_0__uitff_q
+ 9   A  2  1   2  1 DFF      R       1 A---  u0rs_u1rc_genblk1_1__uitff_q
+ 4   A  2  1   2  1 DFF      R       4 ABCD  u0rs_u1rc_genblk1_2__uitff_q
+14   A  1  1   1  1 DFF      R       1 A---  u0rs_u1rc_u0tff_q
+ 3   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_0__uitff_q
+ 7   D  2  1   2  1 DFF      R       1 ---D  u1rs_u1rc_genblk1_10__uitff_q
+ 4   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_1__uitff_q
+ 5   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_2__uitff_q
+ 6   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_3__uitff_q
+ 7   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_4__uitff_q
+ 8   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_5__uitff_q
+ 9   B  2  1   2  1 DFF      R       2 -B-D  u1rs_u1rc_genblk1_6__uitff_q
+ 9   D  2  1   2  1 DFF      R       1 ---D  u1rs_u1rc_genblk1_7__uitff_q
+10   D  2  1   2  1 DFF      R       1 ---D  u1rs_u1rc_genblk1_8__uitff_q
+11   D  2  1   2  1 DFF      R       1 ---D  u1rs_u1rc_genblk1_9__uitff_q
+ 2   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_u0tff_q
+ 5   A  2  1   2  1 DFF      R       2 A--D  u2rc_genblk1_0__uitff_q
+ 6   A  2  1   2  1 DFF      R       3 A-CD  u2rc_genblk1_1__uitff_q
+ 8   D  2  1   2  1 DFF      R       2 A--D  u2rc_u0tff_q
+ 5   C  7  1   3  1 DFF      R       1 --C-  u3cs_count_0_
+ 1   C  7  1   4  1 DFF      R       1 --C-  u3cs_count_1_
+ 2   C  4  1   4  1 DFF      R       1 --C-  u3cs_count_2_
+ 0   C  7  1   4  1 DFF      R       1 --C-  u3cs_count_3_
+ 6   C  7  1   3  1 TFF      R       1 --C-  u3cs_count_4_
+ 7   C  7  1   3  1 TFF      R       1 --C-  u3cs_count_5_
+10   C  7  1   2  1 TFF      R       1 ---D  u3cs_outclock
+10   B  7  1   2  1 DFF      R       1 -B--  u4cs_count_0_
+11   B  3  1   2  1 DFF      R       1 -B--  u4cs_count_1_
+ 0   B  7  1   4  1 DFF      R       1 -B--  u4cs_count_2_
+ 1   B  5  1   4  1 DFF      R       1 -B--  u4cs_count_3_
+12   B  7  1   2  1 TFF      R       1 -B--  u4cs_count_4_
+13   B  7  1   2  1 TFF      R       1 -B--  u4cs_count_5_
+14   B  7  1   1  1 TFF      R       1 ---D  u4cs_outclock
+11   A  7  1   2  1 DFF      R       1 A---  u5cs_count_0_
+ 3   A  7  1   3  1 DFF      R       1 A---  u5cs_count_1_
+ 1   A  7  1   4  1 DFF      R       1 A---  u5cs_count_2_
+ 2   A  7  1   3  1 DFF      R       1 A---  u5cs_count_3_
+10   A  6  1   2  1 DFF      R       1 A---  u5cs_count_4_
+12   A  7  1   2  1 TFF      R       1 A---  u5cs_count_5_
+13   A  7  1   1  1 TFF      R       1 ---D  u5cs_outclock
+13   D  7  1   2  1 DFF      R       1 ---D  u6cs_count_0_
+ 5   D  7  1   3  1 DFF      R       1 ---D  u6cs_count_1_
+ 1   D  7  1   4  1 DFF      R       1 ---D  u6cs_count_2_
+ 3   D  5  1   4  1 DFF      R       1 ---D  u6cs_count_3_
+12   D  6  1   2  1 DFF      R       1 ---D  u6cs_count_4_
+14   D  7  1   2  1 TFF      R       1 ---D  u6cs_count_5_
+15   D  7  1   1  1 TFF      R       1 ---D  u6cs_outclock
+--------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+PostFit_Equations
+~~~~~~~~~~~~~~~~~
+currentNote_1_.D = !songLineIndex_0_.Q & songLineIndex_1_.Q
+       & !songLineIndex_2_.Q & !songLineIndex_3_.Q
+    # songLineIndex_2_.Q & songLineIndex_3_.Q & songLineIndex_4_.Q ; (2 pterms, 5 signals)
+currentNote_1_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+currentNote_2_.D = !songLineIndex_1_.Q & !songLineIndex_2_.Q
+       & songLineIndex_3_.Q
+    # !songLineIndex_2_.Q & songLineIndex_3_.Q & !songLineIndex_4_.Q
+    # songLineIndex_0_.Q & !songLineIndex_2_.Q ; (3 pterms, 5 signals)
+currentNote_2_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+currentNote_3_.D = !songLineIndex_0_.Q & songLineIndex_1_.Q
+       & !songLineIndex_2_.Q & songLineIndex_3_.Q & songLineIndex_4_.Q
+    # !songLineIndex_0_.Q & !songLineIndex_1_.Q & songLineIndex_2_.Q
+       & !songLineIndex_4_.Q
+    # !songLineIndex_0_.Q & !songLineIndex_1_.Q & !songLineIndex_3_.Q
+    # songLineIndex_2_.Q & !songLineIndex_3_.Q ; (4 pterms, 5 signals)
+currentNote_3_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+currentNote_4_.D = songLineIndex_1_.Q & songLineIndex_2_.Q
+       & songLineIndex_3_.Q & !songLineIndex_4_.Q
+    # songLineIndex_0_.Q & songLineIndex_2_.Q & songLineIndex_3_.Q
+       & !songLineIndex_4_.Q ; (2 pterms, 5 signals)
+currentNote_4_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+inst_breakAfterNote.D = !( !songLineIndex_0_.Q & songLineIndex_2_.Q
+       & songLineIndex_3_.Q & songLineIndex_4_.Q
+    # !songLineIndex_1_.Q & songLineIndex_2_.Q & songLineIndex_3_.Q
+       & songLineIndex_4_.Q
+    # !songLineIndex_0_.Q & songLineIndex_1_.Q & songLineIndex_3_.Q
+       & !songLineIndex_4_.Q
+    # !songLineIndex_0_.Q & songLineIndex_1_.Q & songLineIndex_2_.Q
+       & !songLineIndex_4_.Q ) ; (4 pterms, 5 signals)
+inst_breakAfterNote.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+songLineIndex_0_.D = !songLineIndex_0_.Q ; (1 pterm, 1 signal)
+songLineIndex_0_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+songLineIndex_1_.D = songLineIndex_0_.Q & !songLineIndex_1_.Q
+    # !songLineIndex_0_.Q & songLineIndex_1_.Q ; (2 pterms, 2 signals)
+songLineIndex_1_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+songLineIndex_2_.D = songLineIndex_0_.Q & songLineIndex_1_.Q
+       & !songLineIndex_2_.Q
+    # !songLineIndex_1_.Q & songLineIndex_2_.Q
+    # !songLineIndex_0_.Q & songLineIndex_2_.Q ; (3 pterms, 3 signals)
+songLineIndex_2_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+songLineIndex_3_.D = songLineIndex_0_.Q & songLineIndex_1_.Q
+       & songLineIndex_2_.Q & !songLineIndex_3_.Q
+    # !songLineIndex_2_.Q & songLineIndex_3_.Q
+    # !songLineIndex_1_.Q & songLineIndex_3_.Q
+    # !songLineIndex_0_.Q & songLineIndex_3_.Q ; (4 pterms, 4 signals)
+songLineIndex_3_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+songLineIndex_4_.D.X1 = songLineIndex_0_.Q & songLineIndex_1_.Q
+       & songLineIndex_2_.Q & songLineIndex_3_.Q ; (1 pterm, 4 signals)
+songLineIndex_4_.D.X2 = songLineIndex_4_.Q ; (1 pterm, 1 signal)
+songLineIndex_4_.C = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+toneOut_1_ = !( u2rc_u0tff_q.Q & u2rc_genblk1_0__uitff_q.Q
+       & u2rc_genblk1_1__uitff_q.Q & inst_breakAfterNote.Q
+    # !u3cs_outclock.Q
+    # !currentNote_1_.Q ) ; (3 pterms, 6 signals)
+
+toneOut_2_ = !( u2rc_u0tff_q.Q & u2rc_genblk1_0__uitff_q.Q
+       & u2rc_genblk1_1__uitff_q.Q & inst_breakAfterNote.Q
+    # !u4cs_outclock.Q
+    # !currentNote_2_.Q ) ; (3 pterms, 6 signals)
+
+toneOut_3_ = !( u2rc_u0tff_q.Q & u2rc_genblk1_0__uitff_q.Q
+       & u2rc_genblk1_1__uitff_q.Q & inst_breakAfterNote.Q
+    # !u5cs_outclock.Q
+    # !currentNote_3_.Q ) ; (3 pterms, 6 signals)
+
+toneOut_4_ = !( u2rc_u0tff_q.Q & u2rc_genblk1_0__uitff_q.Q
+       & u2rc_genblk1_1__uitff_q.Q & inst_breakAfterNote.Q
+    # !u6cs_outclock.Q
+    # !currentNote_4_.Q ) ; (3 pterms, 6 signals)
+
+u0rs_u1rc_genblk1_0__uitff_q.D = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_0__uitff_q.C = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_1__uitff_q.D = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_1__uitff_q.C = !u0rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_genblk1_2__uitff_q.D = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_genblk1_2__uitff_q.C = !u0rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rs_u1rc_u0tff_q.D = !u0rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u0rs_u1rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_0__uitff_q.D = !u1rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_0__uitff_q.C = !u1rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_10__uitff_q.D = !u1rs_u1rc_genblk1_10__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_10__uitff_q.C = !u1rs_u1rc_genblk1_9__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_1__uitff_q.D = !u1rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_1__uitff_q.C = !u1rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_2__uitff_q.D = !u1rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_2__uitff_q.C = !u1rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_3__uitff_q.D = !u1rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_3__uitff_q.C = !u1rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_4__uitff_q.D = !u1rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_4__uitff_q.C = !u1rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_5__uitff_q.D = !u1rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_5__uitff_q.C = !u1rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_6__uitff_q.D = !u1rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_6__uitff_q.C = !u1rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_7__uitff_q.D = !u1rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_7__uitff_q.C = !u1rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_8__uitff_q.D = !u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_8__uitff_q.C = !u1rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_9__uitff_q.D = !u1rs_u1rc_genblk1_9__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_9__uitff_q.C = !u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_u0tff_q.D = !u1rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_u0tff_q.C = !u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2rc_genblk1_0__uitff_q.D = !u2rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u2rc_genblk1_0__uitff_q.C = !u2rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u2rc_genblk1_1__uitff_q.D = !u2rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u2rc_genblk1_1__uitff_q.C = !u2rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2rc_u0tff_q.D = !u2rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u2rc_u0tff_q.C = !u1rs_u1rc_genblk1_10__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3cs_count_0_.D = !( u3cs_count_1_.Q & !u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q
+    # u3cs_count_0_.Q ) ; (2 pterms, 6 signals)
+u3cs_count_0_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3cs_count_1_.D = !( u3cs_count_1_.Q & !u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q
+    # !u3cs_count_0_.Q & !u3cs_count_1_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q ) ; (3 pterms, 6 signals)
+u3cs_count_1_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3cs_count_2_.D = u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+    # !u3cs_count_1_.Q & u3cs_count_2_.Q
+    # !u3cs_count_0_.Q & u3cs_count_2_.Q ; (3 pterms, 3 signals)
+u3cs_count_2_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3cs_count_3_.D.X1 = u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q
+    # !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q ; (2 pterms, 6 signals)
+u3cs_count_3_.D.X2 = u3cs_count_3_.Q ; (1 pterm, 1 signal)
+u3cs_count_3_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3cs_count_4_.T = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q & u3cs_count_3_.Q ; (2 pterms, 6 signals)
+u3cs_count_4_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3cs_count_5_.T = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q ; (2 pterms, 6 signals)
+u3cs_count_5_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3cs_outclock.T = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q ; (1 pterm, 6 signals)
+u3cs_outclock.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4cs_count_0_.D = !( !u4cs_count_1_.Q & u4cs_count_2_.Q & !u4cs_count_3_.Q
+       & u4cs_count_4_.Q & u4cs_count_5_.Q
+    # u4cs_count_0_.Q ) ; (2 pterms, 6 signals)
+u4cs_count_0_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4cs_count_1_.D = u4cs_count_0_.Q & !u4cs_count_1_.Q
+    # !u4cs_count_0_.Q & u4cs_count_1_.Q ; (2 pterms, 2 signals)
+u4cs_count_1_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4cs_count_2_.D = !( !u4cs_count_0_.Q & !u4cs_count_1_.Q & !u4cs_count_3_.Q
+       & u4cs_count_4_.Q & u4cs_count_5_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+    # !u4cs_count_1_.Q & !u4cs_count_2_.Q
+    # !u4cs_count_0_.Q & !u4cs_count_2_.Q ) ; (4 pterms, 6 signals)
+u4cs_count_2_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4cs_count_3_.D = u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q
+    # !u4cs_count_2_.Q & u4cs_count_3_.Q
+    # !u4cs_count_1_.Q & u4cs_count_3_.Q
+    # !u4cs_count_0_.Q & u4cs_count_3_.Q ; (4 pterms, 4 signals)
+u4cs_count_3_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4cs_count_4_.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & u4cs_count_4_.Q & u4cs_count_5_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q & u4cs_count_3_.Q ; (2 pterms, 6 signals)
+u4cs_count_4_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4cs_count_5_.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & u4cs_count_4_.Q & u4cs_count_5_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q & u4cs_count_3_.Q
+       & u4cs_count_4_.Q ; (2 pterms, 6 signals)
+u4cs_count_5_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4cs_outclock.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & u4cs_count_4_.Q & u4cs_count_5_.Q ; (1 pterm, 6 signals)
+u4cs_outclock.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u5cs_count_0_.D = !( u5cs_count_1_.Q & u5cs_count_2_.Q & u5cs_count_3_.Q
+       & !u5cs_count_4_.Q & u5cs_count_5_.Q
+    # u5cs_count_0_.Q ) ; (2 pterms, 6 signals)
+u5cs_count_0_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u5cs_count_1_.D = !( u5cs_count_1_.Q & u5cs_count_2_.Q & u5cs_count_3_.Q
+       & !u5cs_count_4_.Q & u5cs_count_5_.Q
+    # !u5cs_count_0_.Q & !u5cs_count_1_.Q
+    # u5cs_count_0_.Q & u5cs_count_1_.Q ) ; (3 pterms, 6 signals)
+u5cs_count_1_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u5cs_count_2_.D = !( u5cs_count_1_.Q & u5cs_count_2_.Q & u5cs_count_3_.Q
+       & !u5cs_count_4_.Q & u5cs_count_5_.Q
+    # u5cs_count_0_.Q & u5cs_count_1_.Q & u5cs_count_2_.Q
+    # !u5cs_count_1_.Q & !u5cs_count_2_.Q
+    # !u5cs_count_0_.Q & !u5cs_count_2_.Q ) ; (4 pterms, 6 signals)
+u5cs_count_2_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u5cs_count_3_.D.X1 = u5cs_count_0_.Q & u5cs_count_1_.Q & u5cs_count_2_.Q
+    # !u5cs_count_0_.Q & u5cs_count_1_.Q & u5cs_count_2_.Q & u5cs_count_3_.Q
+       & !u5cs_count_4_.Q & u5cs_count_5_.Q ; (2 pterms, 6 signals)
+u5cs_count_3_.D.X2 = u5cs_count_3_.Q ; (1 pterm, 1 signal)
+u5cs_count_3_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u5cs_count_4_.D.X1 = u5cs_count_0_.Q & u5cs_count_1_.Q & u5cs_count_2_.Q
+       & u5cs_count_3_.Q ; (1 pterm, 4 signals)
+u5cs_count_4_.D.X2 = u5cs_count_4_.Q ; (1 pterm, 1 signal)
+u5cs_count_4_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u5cs_count_5_.T = !u5cs_count_0_.Q & u5cs_count_1_.Q & u5cs_count_2_.Q
+       & u5cs_count_3_.Q & !u5cs_count_4_.Q & u5cs_count_5_.Q
+    # u5cs_count_0_.Q & u5cs_count_1_.Q & u5cs_count_2_.Q & u5cs_count_3_.Q
+       & u5cs_count_4_.Q ; (2 pterms, 6 signals)
+u5cs_count_5_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u5cs_outclock.T = !u5cs_count_0_.Q & u5cs_count_1_.Q & u5cs_count_2_.Q
+       & u5cs_count_3_.Q & !u5cs_count_4_.Q & u5cs_count_5_.Q ; (1 pterm, 6 signals)
+u5cs_outclock.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u6cs_count_0_.D = !( u6cs_count_1_.Q & u6cs_count_2_.Q & !u6cs_count_3_.Q
+       & !u6cs_count_4_.Q & u6cs_count_5_.Q
+    # u6cs_count_0_.Q ) ; (2 pterms, 6 signals)
+u6cs_count_0_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u6cs_count_1_.D = !( u6cs_count_1_.Q & u6cs_count_2_.Q & !u6cs_count_3_.Q
+       & !u6cs_count_4_.Q & u6cs_count_5_.Q
+    # !u6cs_count_0_.Q & !u6cs_count_1_.Q
+    # u6cs_count_0_.Q & u6cs_count_1_.Q ) ; (3 pterms, 6 signals)
+u6cs_count_1_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u6cs_count_2_.D = !( u6cs_count_1_.Q & u6cs_count_2_.Q & !u6cs_count_3_.Q
+       & !u6cs_count_4_.Q & u6cs_count_5_.Q
+    # u6cs_count_0_.Q & u6cs_count_1_.Q & u6cs_count_2_.Q
+    # !u6cs_count_1_.Q & !u6cs_count_2_.Q
+    # !u6cs_count_0_.Q & !u6cs_count_2_.Q ) ; (4 pterms, 6 signals)
+u6cs_count_2_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u6cs_count_3_.D = u6cs_count_0_.Q & u6cs_count_1_.Q & u6cs_count_2_.Q
+       & !u6cs_count_3_.Q
+    # !u6cs_count_2_.Q & u6cs_count_3_.Q
+    # !u6cs_count_1_.Q & u6cs_count_3_.Q
+    # !u6cs_count_0_.Q & u6cs_count_3_.Q ; (4 pterms, 4 signals)
+u6cs_count_3_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u6cs_count_4_.D.X1 = u6cs_count_0_.Q & u6cs_count_1_.Q & u6cs_count_2_.Q
+       & u6cs_count_3_.Q ; (1 pterm, 4 signals)
+u6cs_count_4_.D.X2 = u6cs_count_4_.Q ; (1 pterm, 1 signal)
+u6cs_count_4_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u6cs_count_5_.T = !u6cs_count_0_.Q & u6cs_count_1_.Q & u6cs_count_2_.Q
+       & !u6cs_count_3_.Q & !u6cs_count_4_.Q & u6cs_count_5_.Q
+    # u6cs_count_0_.Q & u6cs_count_1_.Q & u6cs_count_2_.Q & u6cs_count_3_.Q
+       & u6cs_count_4_.Q ; (2 pterms, 6 signals)
+u6cs_count_5_.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u6cs_outclock.T = !u6cs_count_0_.Q & u6cs_count_1_.Q & u6cs_count_2_.Q
+       & !u6cs_count_3_.Q & !u6cs_count_4_.Q & u6cs_count_5_.Q ; (1 pterm, 6 signals)
+u6cs_outclock.C = u0rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+
+
+

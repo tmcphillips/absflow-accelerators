@@ -1,0 +1,58 @@
+#PLAFILE     mach64board_project.bl5
+#DATE        Mon Jan 16 15:13:00 2012
+
+#DESIGN      mach64board_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION d0:B_*_17
+DATA LOCATION d1:B_*_16
+DATA LOCATION d2:B_*_15
+DATA LOCATION d3:B_*_14
+DATA LOCATION enableHex:D_*_31
+DATA LOCATION enableDisplay:C_*_28
+DATA LOCATION a:C_1_20
+DATA LOCATION b:C_3_21
+DATA LOCATION c:C_5_22
+DATA LOCATION d:C_7_23
+DATA LOCATION e:C_9_24
+DATA LOCATION f:C_0_26
+DATA LOCATION g:C_12_27
+
+// Signals direction
+DATA IO_DIR d0:IN
+DATA IO_DIR d1:IN
+DATA IO_DIR d2:IN
+DATA IO_DIR d3:IN
+DATA IO_DIR enableHex:IN
+DATA IO_DIR enableDisplay:IN
+DATA IO_DIR a:TRI
+DATA IO_DIR b:TRI
+DATA IO_DIR c:TRI
+DATA IO_DIR d:TRI
+DATA IO_DIR e:TRI
+DATA IO_DIR f:TRI
+DATA IO_DIR g:TRI
+
+// Signals using global PT OEs
+DATA tGPTOE a
+DATA tGPTOE b
+DATA tGPTOE c
+DATA tGPTOE d
+DATA tGPTOE e
+DATA tGPTOE f
+DATA tGPTOE g
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM a
+DATA tOSM b
+DATA tOSM c
+DATA tOSM d
+DATA tOSM e
+DATA tOSM f
+DATA tOSM g

@@ -1,0 +1,114 @@
+module FourBitCounterWithLoad
+
+title 'Four bit counter with load'
+
+// 	MACH64 Inputs
+//
+//		Input from on-board 1 MHz oscillator
+//		CLK2/19	<- 	OSC
+//
+//  		Inputs from pushbuttons
+//  		CLK1/18	<- 	J17 (PB0)  -- up
+//		C6/23	<-	J17 (PB1)  -- down
+//		C4/20 	<- 	J17 (PB2)  -- reset
+//		C0/22 	<- 	J17 (PB3)  -- load
+//
+//		Counter value load inputs from DIP switch
+//		D0/31	<- 	DS0
+//		D2/32 	<- 	DS1 
+//		D3/33 	<- 	DS2
+//		D4/34	<- 	DS3
+
+//		Direction control input from DIP switch
+//		C2 (21) <- 	DS15
+//
+//	MACH64 Outputs
+//
+//   		Outputs for driving LEDs
+//  		B8  (14)  	->	L0
+//   		B10 (15)  	->	L1
+//   		B12 (16)  	->	L2
+//   		B14 (17)  	->	L3
+//
+
+declarations
+
+	// declare imported module interfaces
+	TenBitScaler interface (inclock -> outclock);
+	Debouncer interface (rawSignal, samplingClock -> debounced);
+
+	// use the on-board 1 MHz clock
+	oneMHzClock pin 19;
+
+	// use pushbutton 0 as the counter increment button
+	!upButton pin 18;
+
+	// use pushbutton 1 as the counter decrement button
+	!downButton pin 23;
+
+	// use pushbutton 2 as the data load button
+	!loadButton pin 22;
+
+	// use push button 3 as the reset signal
+	!reset pin 20;
+
+	// use DIP switch 15 as the step direction control 
+	!stepDirectionUp pin 21;
+
+	// user four unregistered pins as the data input for loading the counter
+	!d0..!d3 pin 31..34;
+	data = [d3..d0];
+
+	// use the TenBitScaler module to scale down the clock input to the debouncers
+	oneKHzClock functional_block TenBitScaler;
+
+	// debounce the step button
+	debouncedUp functional_block Debouncer;
+
+	// debounce the down button
+	debouncedDown functional_block Debouncer;
+
+	// ebounce the load button
+	debouncedLoad functional_block Debouncer;
+
+	// use four registered pins as the step counter
+	// and expose them as pins to drive the four LEDs
+	q0..q3 pin 14..17 istype 'reg';
+	counter = [q3..q0];
+
+equations
+
+	// use the onboard 1 MHz clock as input to the clock scaler
+	oneKHzClock.inclock = oneMHzClock;
+
+	// debounce the step button using the 1 KHz clock
+	debouncedUp.samplingClock = oneKHzClock.outclock;
+	debouncedUp.rawSignal = upButton;
+
+	// debounce the down button using the 1 KHz clock
+	debouncedDown.samplingClock = oneKHzClock.outclock;
+	debouncedDown.rawSignal = downButton;
+
+	// debounce the load button using the 1 KHz clock
+	debouncedLoad.samplingClock = oneKHzClock.outclock;
+	debouncedLoad.rawSignal = loadButton;
+
+	// update the counter when the up, down, or load buttons are pressed
+	counter.clk = debouncedUp.debounced # debouncedDown.debounced # debouncedLoad.debounced;
+
+	// reset the counter using the un-debounced reset signal
+	counter.ar = reset;
+
+	// copy data from DS0-DS3 to counter if the load button is pressed 
+	when (loadButton) then
+		counter := data;
+
+	// otherwise step the counter forward or back depending on direction switch and button pressed
+	else
+		when (stepDirectionUp & upButton # !stepDirectionUp & downButton) then
+			counter := counter + 1;
+		else 
+			counter := counter - 1;
+
+end 
+

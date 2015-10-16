@@ -1,0 +1,24 @@
+// Signal Name Cross Reference File
+// ispLEVER Classic 1.4.01.04.23.l1
+
+// Design 'mach64board_project' created Mon Jan 16 16:08:30 2012
+
+
+// LEGEND:  '>'  Functional Block Port Separator
+//          '/'  Hierarchy Path Separator
+//          '@'  Automatically Generated Node
+
+
+// Hierarchical Name                    Short Name
+debouncer>debounced                  	L0_debounced
+scaler/s9                            	P0_s9
+scaler/s8                            	P0_s8
+scaler/s7                            	P0_s7
+scaler/s6                            	P0_s6
+scaler/s5                            	P0_s5
+scaler/s4                            	P0_s4
+scaler/s3                            	P0_s3
+scaler/s2                            	P0_s2
+scaler/s1                            	P0_s1
+scaler/s0                            	P0_s0
+debouncer/lastSample                 	L1_lastSample

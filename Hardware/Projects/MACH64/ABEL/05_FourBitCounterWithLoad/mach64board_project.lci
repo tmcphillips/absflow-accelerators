@@ -1,0 +1,124 @@
+
+[Device]
+Family = lc4k;
+PartNumber = LC4064V-75T48I;
+Package = 48TQFP;
+PartType = LC4064V;
+Speed = -7.5;
+Operating_condition = IND;
+Status = Production;
+
+[Revision]
+Parent = lc4k64v.lci;
+DATE = 2002;
+TIME = 0:00:00;
+Source_Format = ABEL_Schematic;
+Synthesis = Synplify;
+
+[Ignore Assignments]
+
+[Clear Assignments]
+
+[Backannotate Assignments]
+
+[Global Constraints]
+
+[Location Assignments]
+layer = OFF;
+oneMHzClock = pin, 19, -, -, -;
+upButton = pin, 18, -, -, -;
+downButton = pin, 23, -, -, -;
+loadButton = pin, 22, -, -, -;
+reset = pin, 20, -, -, -;
+stepDirectionUp = pin, 21, -, -, -;
+d0 = pin, 31, -, -, -;
+d1 = pin, 32, -, -, -;
+d2 = pin, 33, -, -, -;
+d3 = pin, 34, -, -, -;
+q0 = pin, 14, -, -, -;
+q1 = pin, 15, -, -, -;
+q2 = pin, 16, -, -, -;
+q3 = pin, 17, -, -, -;
+
+[Group Assignments]
+layer = OFF;
+
+[Resource Reservations]
+layer = OFF;
+
+[Fitter Report Format]
+
+[Power]
+
+[Source Constraint Option]
+
+[Fast Bypass]
+
+[OSM Bypass]
+
+[Input Registers]
+
+[Netlist/Delay Format]
+
+[IO Types]
+layer = OFF;
+
+[Pullup]
+
+[Slewrate]
+
+[Region]
+
+[Timing Constraints]
+
+[HSI Attributes]
+
+[Input Delay]
+
+[opt global constraints list]
+
+[Explorer User Settings]
+
+[Pin attributes list]
+
+[global constraints list]
+
+[Global Constraints Process Update]
+
+[pin lock limitation]
+
+[LOCATION ASSIGNMENTS LIST]
+
+[RESOURCE RESERVATIONS LIST]
+
+[individual constraints list]
+
+[Attributes list setting]
+
+[Timing Analyzer]
+
+[PLL Assignments]
+
+[Dual Function Macrocell]
+
+[Explorer Results]
+
+[VHDL synplify constraints]
+
+[VHDL spectrum constraints]
+
+[verilog synplify constraints]
+
+[verilog spectrum constraints]
+
+[VHDL synplify constraints list]
+
+[VHDL spectrum constraints list]
+
+[verilog synplify constraints list]
+
+[verilog spectrum constraints list]
+
+[ORP Bypass]
+
+[Register Powerup]

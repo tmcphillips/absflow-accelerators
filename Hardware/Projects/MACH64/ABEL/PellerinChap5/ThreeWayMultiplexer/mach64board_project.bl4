@@ -1,0 +1,43 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:17:09 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE threewaymultiplexerdemo
+#$ PINS 18 a0:24 a1:26 a2:27 a3:28 b0:20 b1:21 b2:22 b3:23 c0:14 c1:15 c2:16 c3:17 s0:7 \
+#  s1:8 y0:31 y1:32 y2:33 y3:34
+.model threewaymultiplexerdemo
+.inputs a3.BLIF a2.BLIF a1.BLIF a0.BLIF b3.BLIF b2.BLIF b1.BLIF b0.BLIF \
+c3.BLIF c2.BLIF c1.BLIF c0.BLIF s1.BLIF s0.BLIF
+.outputs y0 y1 y2 y3
+.names a0.BLIF b0.BLIF c0.BLIF s1.BLIF s0.BLIF y0
+-0--0 1
+--00- 1
+0--11 1
+---00 1
+-1-10 0
+--101 0
+1--11 0
+.names a1.BLIF b1.BLIF c1.BLIF s1.BLIF s0.BLIF y1
+-0--0 1
+--00- 1
+0--11 1
+---00 1
+-1-10 0
+--101 0
+1--11 0
+.names a2.BLIF b2.BLIF c2.BLIF s1.BLIF s0.BLIF y2
+-0--0 1
+--00- 1
+0--11 1
+---00 1
+-1-10 0
+--101 0
+1--11 0
+.names a3.BLIF b3.BLIF c3.BLIF s1.BLIF s0.BLIF y3
+-0--0 1
+--00- 1
+0--11 1
+---00 1
+-1-10 0
+--101 0
+1--11 0
+.end

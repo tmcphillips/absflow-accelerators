@@ -1,0 +1,1362 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Tue Feb 21 17:01:15 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 12 video_2_:34'ke'  hState_1_:23'ke'  vState_1_:21'ke'  ntscClock:43'ke'  left_n:14'ke'  \
+#  right_n:15'ke'  up_n:16'ke'  down_n:17'ke'  video_1_:33'ke'  video_0_:32'ke'  hState_0_:22'ke'  \
+#  vState_0_:20'ke' 
+#$ NODES 391 bally_i_4__n N_124_0 ballx_i_0__n N_56_0 scanX_0_ ballx_i_1__n scanY_3_ \
+#  N_58_0 scanY_4_ ballx_i_2__n scanY_5_ N_60_0 scanY_6_ N_63_i scanY_7_ N_69_i scanY_8_ \
+#  N_70_0 ballY_0_ bally_i_0__n ballY_1_ N_100_0 ballY_2_ bally_i_1__n ballY_3_ N_102_0 \
+#  ballY_4_ bally_i_2__n ballY_5_ N_104_0 G_39 N_107_i ballX_0_ N_113_i ballX_1_ N_114_0 \
+#  ballX_2_ hstate_c_i_1__n ballX_3_ N_29_i ballX_4_ N_30_i ballX_5_ N_32_i G_83 N_31_i \
+#  G_119 video_7_0_0__n G_121 N_131_i G_123 N_132_i G_125 N_133_i scanX_1_ N_134_0 scanX_2_ \
+#  N_99_i scanX_3_ N_110_i scanX_4_ N_111_i scanX_5_ N_112_0 scanX_6_ N_103_i scanX_7_ \
+#  N_105_i G_145 N_106_i G_147 N_108_0 G_149 N_79_i G_151 N_91_i G_153 N_92_0 G_155 N_87_i \
+#  G_157 N_88_i scanY_0_ N_89_i scanY_1_ N_90_0 scanY_2_ ballx_i_4__n scanX_0_sqmuxa \
+#  N_80_0 N_55_i N_66_i N_67_i N_68_0 N_59_i N_61_i N_62_i N_64_0 G_15 video_7_0_1_0__n G_16 \
+#  video_7_1_1__n G_17 N_32_1 G_18 hState13_1 G_19 hState13_2 G_20 hState13_3 N_55 \
+#  hState13_4 N_56 hState13_5 N_58 hState3_1 N_59 hState3_2 N_60 hState3_3 N_61 hState3_4_0 \
+#  N_62 hState3_5 N_63 video_0_sqmuxa_3_1 N_64 video_0_sqmuxa_3_2 N_66 \
+#  video_0_sqmuxa_3_3 N_67 video_0_sqmuxa_3_4 N_68 video_0_sqmuxa_3_5 N_70 \
+#  video_0_sqmuxa_3_6 N_79 video_0_sqmuxa_3_7 N_80 video_0_sqmuxa_3_8 N_87 \
+#  video_0_sqmuxa_3_9 N_88 video_0_sqmuxa_3_10 N_89 video_0_sqmuxa_3_11 N_90 vState3_1 \
+#  N_91 vState3_2 N_92 vState3_3 N_99 vState3_4 N_100 vState3_5 N_102 vState3_6 N_103 \
+#  vState3_7 N_104 vState13_1 N_105 vState13_2 N_106 vState13_3 N_107 vState13_4 N_108 \
+#  hState8_1 N_110 hState8_2 N_111 hState8_3 N_112 hState8_4 N_114 hState8_5 N_131 \
+#  scanX12_1 N_132 scanX12_2 N_133 scanX12_3 N_134 scanX12_4 N_136 scanX12_5 N_146 \
+#  scanX12_6 N_149 scanY11_6_1 N_152 scanY11_6_2 N_155 vState8_1_0 N_158 vState8_2 N_161 \
+#  vState8_3 N_174 vState8_4 N_177 vState8_5 N_183 vState8_6 N_186 scanY11_1 video_7_1__n \
+#  scanY11_2 G_66 scanY11_3 G_63 scanY_0_sqmuxa_1 G_58 G_83_1 G_47 G_88_1 G_44 G_91_1 G_110 \
+#  G_102_1 G_107 G_107_1 G_102 G_110_1 G_91 G_15_1 G_88 G_16_1 video36 G_17_1 N_30 G_18_1 N_29 \
+#  G_19_1 N_31 G_20_1 N_32 G_39_1 N_171 G_44_1 G_22 G_47_1 G_23 G_58_1 N_180 G_63_1 scanX12 \
+#  G_66_1 G_127 N_134_0_1 hState13 N_112_0_1 hState3_4 N_108_0_1 hState8 N_108_0_2 hState3 \
+#  N_106_1 hstate_6_1_0__n_9_n N_105_1 hstate_6_1_0__n_3_n N_105_2 hstate_6_1_0__n_6_n \
+#  N_90_0_1 G_24 N_68_0_1 G_25 N_64_0_1 G_26 N_64_0_2 G_27 N_62_1 N_189 N_61_1 N_113 N_61_2 \
+#  N_69 vstate_8_1_0__m9_un3_n vstate_8_1_0__m9_un1_n N_123 vstate_8_1_0__m9_un0_n \
+#  N_124 vstate_8_1_0__m8_un3_n N_135 vstate_8_1_0__m8_un1_n vstate_8_1_0__n_3_n \
+#  vstate_8_1_0__m8_un0_n vState3 vstate_8_1_0__m5_un3_n vState13 \
+#  vstate_8_1_0__m5_un1_n vstate_8_1_0__n_6_n vstate_8_1_0__m5_un0_n vState8_1 \
+#  vstate_8_1_0__m6_un3_n scanY11_6 vstate_8_1_0__m6_un1_n G_131 \
+#  vstate_8_1_0__m6_un0_n G_129 vstate_8_1_0__m2_un3_n vstate_8_1_0__m2_un1_n G_143 \
+#  vstate_8_1_0__m2_un0_n scanY_0_sqmuxa hstate_6_1_0__m5_un3_n vState8 \
+#  hstate_6_1_0__m5_un1_n scanY11 hstate_6_1_0__m5_un0_n hstate_6_1_0__m2_un3_n \
+#  vstate_8_1_0__n_9_n hstate_6_1_0__m2_un1_n hstate_6_1_0__m2_un0_n \
+#  hstate_6_1_0__m9_un3_n scanY_0_sqmuxa_i hstate_6_1_0__m9_un1_n vState8_i \
+#  hstate_6_1_0__m9_un0_n scanY11_i hstate_6_1_0__m8_un3_n vstate_i_1__n \
+#  hstate_6_1_0__m8_un1_n vstate_i_0__n hstate_6_1_0__m8_un0_n scany_1_i_7__n \
+#  hstate_6_1_0__m6_un3_n scany_1_i_8__n hstate_6_1_0__m6_un1_n scany_1_i_2__n \
+#  hstate_6_1_0__m6_un0_n scany_1_i_3__n scany_1_i_1__n scany_1_i_6__n scany_1_i_5__n \
+#  scany_1_i_4__n scany_i_1__n scanx_i_0_3__n scanx_i_4__n scanx_i_0__n scanx_2_i_7__n \
+#  scanx_2_i_6__n scanx_2_i_2__n scanx_2_i_4__n scanx_2_i_1__n scanx_2_i_5__n \
+#  scanx_2_i_3__n scanX_0_sqmuxa_i scanx_i_0_2__n vstate_8_1_0__n_3_i_n vState3_i \
+#  vState13_i up_n_i right_n_i left_n_i down_n_i N_39_i N_38_i N_41_i N_40_i N_43_i N_42_i \
+#  N_48_i N_47_i N_50_i N_49_i hstate_i_0__n hState3_i hState13_i hState8_i scanX12_i \
+#  hstate_6_1_0__n_3_i_n N_46_i N_45_i ntscClock_c left_n_c right_n_c up_n_c down_n_c \
+#  videoDFF_0reg videoDFF_1reg videoDFF_2reg hStateDFF_0reg hStateDFF_1reg \
+#  vStateDFFC_0reg vStateDFFC_1reg N_135_i N_123_i N_136_0
+.model ntsc
+.inputs ntscClock.BLIF left_n.BLIF right_n.BLIF up_n.BLIF down_n.BLIF \
+bally_i_4__n.BLIF N_124_0.BLIF ballx_i_0__n.BLIF N_56_0.BLIF scanX_0_.BLIF \
+ballx_i_1__n.BLIF scanY_3_.BLIF N_58_0.BLIF scanY_4_.BLIF ballx_i_2__n.BLIF \
+scanY_5_.BLIF N_60_0.BLIF scanY_6_.BLIF N_63_i.BLIF scanY_7_.BLIF N_69_i.BLIF \
+scanY_8_.BLIF N_70_0.BLIF ballY_0_.BLIF bally_i_0__n.BLIF ballY_1_.BLIF \
+N_100_0.BLIF ballY_2_.BLIF bally_i_1__n.BLIF ballY_3_.BLIF N_102_0.BLIF \
+ballY_4_.BLIF bally_i_2__n.BLIF ballY_5_.BLIF N_104_0.BLIF G_39.BLIF \
+N_107_i.BLIF ballX_0_.BLIF N_113_i.BLIF ballX_1_.BLIF N_114_0.BLIF \
+ballX_2_.BLIF hstate_c_i_1__n.BLIF ballX_3_.BLIF N_29_i.BLIF ballX_4_.BLIF \
+N_30_i.BLIF ballX_5_.BLIF N_32_i.BLIF G_83.BLIF N_31_i.BLIF G_119.BLIF \
+video_7_0_0__n.BLIF G_121.BLIF N_131_i.BLIF G_123.BLIF N_132_i.BLIF G_125.BLIF \
+N_133_i.BLIF scanX_1_.BLIF N_134_0.BLIF scanX_2_.BLIF N_99_i.BLIF \
+scanX_3_.BLIF N_110_i.BLIF scanX_4_.BLIF N_111_i.BLIF scanX_5_.BLIF \
+N_112_0.BLIF scanX_6_.BLIF N_103_i.BLIF scanX_7_.BLIF N_105_i.BLIF G_145.BLIF \
+N_106_i.BLIF G_147.BLIF N_108_0.BLIF G_149.BLIF N_79_i.BLIF G_151.BLIF \
+N_91_i.BLIF G_153.BLIF N_92_0.BLIF G_155.BLIF N_87_i.BLIF G_157.BLIF \
+N_88_i.BLIF scanY_0_.BLIF N_89_i.BLIF scanY_1_.BLIF N_90_0.BLIF scanY_2_.BLIF \
+ballx_i_4__n.BLIF scanX_0_sqmuxa.BLIF N_80_0.BLIF N_55_i.BLIF N_66_i.BLIF \
+N_67_i.BLIF N_68_0.BLIF N_59_i.BLIF N_61_i.BLIF N_62_i.BLIF N_64_0.BLIF \
+G_15.BLIF video_7_0_1_0__n.BLIF G_16.BLIF video_7_1_1__n.BLIF G_17.BLIF \
+N_32_1.BLIF G_18.BLIF hState13_1.BLIF G_19.BLIF hState13_2.BLIF G_20.BLIF \
+hState13_3.BLIF N_55.BLIF hState13_4.BLIF N_56.BLIF hState13_5.BLIF N_58.BLIF \
+hState3_1.BLIF N_59.BLIF hState3_2.BLIF N_60.BLIF hState3_3.BLIF N_61.BLIF \
+hState3_4_0.BLIF N_62.BLIF hState3_5.BLIF N_63.BLIF video_0_sqmuxa_3_1.BLIF \
+N_64.BLIF video_0_sqmuxa_3_2.BLIF N_66.BLIF video_0_sqmuxa_3_3.BLIF N_67.BLIF \
+video_0_sqmuxa_3_4.BLIF N_68.BLIF video_0_sqmuxa_3_5.BLIF N_70.BLIF \
+video_0_sqmuxa_3_6.BLIF N_79.BLIF video_0_sqmuxa_3_7.BLIF N_80.BLIF \
+video_0_sqmuxa_3_8.BLIF N_87.BLIF video_0_sqmuxa_3_9.BLIF N_88.BLIF \
+video_0_sqmuxa_3_10.BLIF N_89.BLIF video_0_sqmuxa_3_11.BLIF N_90.BLIF \
+vState3_1.BLIF N_91.BLIF vState3_2.BLIF N_92.BLIF vState3_3.BLIF N_99.BLIF \
+vState3_4.BLIF N_100.BLIF vState3_5.BLIF N_102.BLIF vState3_6.BLIF N_103.BLIF \
+vState3_7.BLIF N_104.BLIF vState13_1.BLIF N_105.BLIF vState13_2.BLIF \
+N_106.BLIF vState13_3.BLIF N_107.BLIF vState13_4.BLIF N_108.BLIF \
+hState8_1.BLIF N_110.BLIF hState8_2.BLIF N_111.BLIF hState8_3.BLIF N_112.BLIF \
+hState8_4.BLIF N_114.BLIF hState8_5.BLIF N_131.BLIF scanX12_1.BLIF N_132.BLIF \
+scanX12_2.BLIF N_133.BLIF scanX12_3.BLIF N_134.BLIF scanX12_4.BLIF N_136.BLIF \
+scanX12_5.BLIF N_146.BLIF scanX12_6.BLIF N_149.BLIF scanY11_6_1.BLIF \
+N_152.BLIF scanY11_6_2.BLIF N_155.BLIF vState8_1_0.BLIF N_158.BLIF \
+vState8_2.BLIF N_161.BLIF vState8_3.BLIF N_174.BLIF vState8_4.BLIF N_177.BLIF \
+vState8_5.BLIF N_183.BLIF vState8_6.BLIF N_186.BLIF scanY11_1.BLIF \
+video_7_1__n.BLIF scanY11_2.BLIF G_66.BLIF scanY11_3.BLIF G_63.BLIF \
+scanY_0_sqmuxa_1.BLIF G_58.BLIF G_83_1.BLIF G_47.BLIF G_88_1.BLIF G_44.BLIF \
+G_91_1.BLIF G_110.BLIF G_102_1.BLIF G_107.BLIF G_107_1.BLIF G_102.BLIF \
+G_110_1.BLIF G_91.BLIF G_15_1.BLIF G_88.BLIF G_16_1.BLIF video36.BLIF \
+G_17_1.BLIF N_30.BLIF G_18_1.BLIF N_29.BLIF G_19_1.BLIF N_31.BLIF G_20_1.BLIF \
+N_32.BLIF G_39_1.BLIF N_171.BLIF G_44_1.BLIF G_22.BLIF G_47_1.BLIF G_23.BLIF \
+G_58_1.BLIF N_180.BLIF G_63_1.BLIF scanX12.BLIF G_66_1.BLIF G_127.BLIF \
+N_134_0_1.BLIF hState13.BLIF N_112_0_1.BLIF hState3_4.BLIF N_108_0_1.BLIF \
+hState8.BLIF N_108_0_2.BLIF hState3.BLIF N_106_1.BLIF hstate_6_1_0__n_9_n.BLIF \
+N_105_1.BLIF hstate_6_1_0__n_3_n.BLIF N_105_2.BLIF hstate_6_1_0__n_6_n.BLIF \
+N_90_0_1.BLIF G_24.BLIF N_68_0_1.BLIF G_25.BLIF N_64_0_1.BLIF G_26.BLIF \
+N_64_0_2.BLIF G_27.BLIF N_62_1.BLIF N_189.BLIF N_61_1.BLIF N_113.BLIF \
+N_61_2.BLIF N_69.BLIF vstate_8_1_0__m9_un3_n.BLIF vstate_8_1_0__m9_un1_n.BLIF \
+N_123.BLIF vstate_8_1_0__m9_un0_n.BLIF N_124.BLIF vstate_8_1_0__m8_un3_n.BLIF \
+N_135.BLIF vstate_8_1_0__m8_un1_n.BLIF vstate_8_1_0__n_3_n.BLIF \
+vstate_8_1_0__m8_un0_n.BLIF vState3.BLIF vstate_8_1_0__m5_un3_n.BLIF \
+vState13.BLIF vstate_8_1_0__m5_un1_n.BLIF vstate_8_1_0__n_6_n.BLIF \
+vstate_8_1_0__m5_un0_n.BLIF vState8_1.BLIF vstate_8_1_0__m6_un3_n.BLIF \
+scanY11_6.BLIF vstate_8_1_0__m6_un1_n.BLIF G_131.BLIF \
+vstate_8_1_0__m6_un0_n.BLIF G_129.BLIF vstate_8_1_0__m2_un3_n.BLIF \
+vstate_8_1_0__m2_un1_n.BLIF G_143.BLIF vstate_8_1_0__m2_un0_n.BLIF \
+scanY_0_sqmuxa.BLIF hstate_6_1_0__m5_un3_n.BLIF vState8.BLIF \
+hstate_6_1_0__m5_un1_n.BLIF scanY11.BLIF hstate_6_1_0__m5_un0_n.BLIF \
+hstate_6_1_0__m2_un3_n.BLIF vstate_8_1_0__n_9_n.BLIF \
+hstate_6_1_0__m2_un1_n.BLIF hstate_6_1_0__m2_un0_n.BLIF \
+hstate_6_1_0__m9_un3_n.BLIF scanY_0_sqmuxa_i.BLIF hstate_6_1_0__m9_un1_n.BLIF \
+vState8_i.BLIF hstate_6_1_0__m9_un0_n.BLIF scanY11_i.BLIF \
+hstate_6_1_0__m8_un3_n.BLIF vstate_i_1__n.BLIF hstate_6_1_0__m8_un1_n.BLIF \
+vstate_i_0__n.BLIF hstate_6_1_0__m8_un0_n.BLIF scany_1_i_7__n.BLIF \
+hstate_6_1_0__m6_un3_n.BLIF scany_1_i_8__n.BLIF hstate_6_1_0__m6_un1_n.BLIF \
+scany_1_i_2__n.BLIF hstate_6_1_0__m6_un0_n.BLIF scany_1_i_3__n.BLIF \
+scany_1_i_1__n.BLIF scany_1_i_6__n.BLIF scany_1_i_5__n.BLIF \
+scany_1_i_4__n.BLIF scany_i_1__n.BLIF scanx_i_0_3__n.BLIF scanx_i_4__n.BLIF \
+scanx_i_0__n.BLIF scanx_2_i_7__n.BLIF scanx_2_i_6__n.BLIF scanx_2_i_2__n.BLIF \
+scanx_2_i_4__n.BLIF scanx_2_i_1__n.BLIF scanx_2_i_5__n.BLIF \
+scanx_2_i_3__n.BLIF scanX_0_sqmuxa_i.BLIF scanx_i_0_2__n.BLIF \
+vstate_8_1_0__n_3_i_n.BLIF vState3_i.BLIF vState13_i.BLIF up_n_i.BLIF \
+right_n_i.BLIF left_n_i.BLIF down_n_i.BLIF N_39_i.BLIF N_38_i.BLIF N_41_i.BLIF \
+N_40_i.BLIF N_43_i.BLIF N_42_i.BLIF N_48_i.BLIF N_47_i.BLIF N_50_i.BLIF \
+N_49_i.BLIF hstate_i_0__n.BLIF hState3_i.BLIF hState13_i.BLIF hState8_i.BLIF \
+scanX12_i.BLIF hstate_6_1_0__n_3_i_n.BLIF N_46_i.BLIF N_45_i.BLIF \
+ntscClock_c.BLIF left_n_c.BLIF right_n_c.BLIF up_n_c.BLIF down_n_c.BLIF \
+videoDFF_0reg.BLIF videoDFF_1reg.BLIF videoDFF_2reg.BLIF hStateDFF_0reg.BLIF \
+hStateDFF_1reg.BLIF vStateDFFC_0reg.BLIF vStateDFFC_1reg.BLIF N_135_i.BLIF \
+N_123_i.BLIF N_136_0.BLIF
+.outputs video_2_ hState_1_ vState_1_ video_1_ video_0_ hState_0_ vState_0_ \
+vStateDFFC_0reg.D vStateDFFC_0reg.CE vStateDFFC_0reg.C vStateDFFC_1reg.D \
+vStateDFFC_1reg.CE vStateDFFC_1reg.C scanY_0_.D scanY_0_.CE scanY_0_.C \
+scanY_1_.D scanY_1_.CE scanY_1_.C scanY_2_.D scanY_2_.CE scanY_2_.C scanY_3_.D \
+scanY_3_.CE scanY_3_.C scanY_4_.D scanY_4_.CE scanY_4_.C scanY_5_.D \
+scanY_5_.CE scanY_5_.C scanY_6_.D scanY_6_.CE scanY_6_.C scanY_7_.D \
+scanY_7_.CE scanY_7_.C scanY_8_.D scanY_8_.CE scanY_8_.C ballX_2_.D ballX_2_.C \
+ballX_3_.D ballX_3_.C ballX_4_.D ballX_4_.C ballX_5_.D ballX_5_.C ballY_0_.D \
+ballY_0_.C ballY_1_.D ballY_1_.C ballY_2_.D ballY_2_.C ballY_3_.D ballY_3_.C \
+ballY_4_.D ballY_4_.C ballY_5_.D ballY_5_.C hStateDFF_0reg.D hStateDFF_0reg.C \
+hStateDFF_1reg.D hStateDFF_1reg.C videoDFF_0reg.D videoDFF_0reg.C \
+videoDFF_1reg.D videoDFF_1reg.C videoDFF_2reg.D videoDFF_2reg.C scanX_0_.D \
+scanX_0_.C scanX_1_.D scanX_1_.C scanX_2_.D scanX_2_.C scanX_3_.D scanX_3_.C \
+scanX_4_.D scanX_4_.C scanX_5_.D scanX_5_.C scanX_6_.D scanX_6_.C scanX_7_.D \
+scanX_7_.C ballX_0_.D ballX_0_.C ballX_1_.D ballX_1_.C bally_i_4__n N_124_0 \
+ballx_i_0__n N_56_0 ballx_i_1__n N_58_0 ballx_i_2__n N_60_0 N_63_i N_69_i \
+N_70_0 bally_i_0__n N_100_0 bally_i_1__n N_102_0 bally_i_2__n N_104_0 N_107_i \
+N_113_i N_114_0 hstate_c_i_1__n N_29_i N_30_i N_32_i N_31_i video_7_0_0__n \
+N_131_i N_132_i N_133_i N_134_0 N_99_i N_110_i N_111_i N_112_0 N_103_i N_105_i \
+N_106_i N_108_0 N_79_i N_91_i N_92_0 N_87_i N_88_i N_89_i N_90_0 ballx_i_4__n \
+scanX_0_sqmuxa N_80_0 N_55_i N_66_i N_67_i N_68_0 N_59_i N_61_i N_62_i N_64_0 \
+video_7_0_1_0__n video_7_1_1__n N_32_1 hState13_1 hState13_2 hState13_3 N_55 \
+hState13_4 N_56 hState13_5 N_58 hState3_1 N_59 hState3_2 N_60 hState3_3 N_61 \
+hState3_4_0 N_62 hState3_5 N_63 video_0_sqmuxa_3_1 N_64 video_0_sqmuxa_3_2 \
+N_66 video_0_sqmuxa_3_3 N_67 video_0_sqmuxa_3_4 N_68 video_0_sqmuxa_3_5 N_70 \
+video_0_sqmuxa_3_6 N_79 video_0_sqmuxa_3_7 N_80 video_0_sqmuxa_3_8 N_87 \
+video_0_sqmuxa_3_9 N_88 video_0_sqmuxa_3_10 N_89 video_0_sqmuxa_3_11 N_90 \
+vState3_1 N_91 vState3_2 N_92 vState3_3 N_99 vState3_4 N_100 vState3_5 N_102 \
+vState3_6 N_103 vState3_7 N_104 vState13_1 N_105 vState13_2 N_106 vState13_3 \
+N_107 vState13_4 N_108 hState8_1 N_110 hState8_2 N_111 hState8_3 N_112 \
+hState8_4 N_114 hState8_5 N_131 scanX12_1 N_132 scanX12_2 N_133 scanX12_3 \
+N_134 scanX12_4 N_136 scanX12_5 N_146 scanX12_6 N_149 scanY11_6_1 N_152 \
+scanY11_6_2 N_155 vState8_1_0 N_158 vState8_2 N_161 vState8_3 N_174 vState8_4 \
+N_177 vState8_5 N_183 vState8_6 N_186 scanY11_1 video_7_1__n scanY11_2 \
+scanY11_3 scanY_0_sqmuxa_1 video36 N_30 N_29 N_31 N_32 N_171 N_180 scanX12 \
+N_134_0_1 hState13 N_112_0_1 hState3_4 N_108_0_1 hState8 N_108_0_2 hState3 \
+N_106_1 hstate_6_1_0__n_9_n N_105_1 hstate_6_1_0__n_3_n N_105_2 \
+hstate_6_1_0__n_6_n N_90_0_1 N_68_0_1 N_64_0_1 N_64_0_2 N_62_1 N_189 N_61_1 \
+N_113 N_61_2 N_69 vstate_8_1_0__m9_un3_n vstate_8_1_0__m9_un1_n N_123 \
+vstate_8_1_0__m9_un0_n N_124 vstate_8_1_0__m8_un3_n N_135 \
+vstate_8_1_0__m8_un1_n vstate_8_1_0__n_3_n vstate_8_1_0__m8_un0_n vState3 \
+vstate_8_1_0__m5_un3_n vState13 vstate_8_1_0__m5_un1_n vstate_8_1_0__n_6_n \
+vstate_8_1_0__m5_un0_n vState8_1 vstate_8_1_0__m6_un3_n scanY11_6 \
+vstate_8_1_0__m6_un1_n vstate_8_1_0__m6_un0_n vstate_8_1_0__m2_un3_n \
+vstate_8_1_0__m2_un1_n vstate_8_1_0__m2_un0_n scanY_0_sqmuxa \
+hstate_6_1_0__m5_un3_n vState8 hstate_6_1_0__m5_un1_n scanY11 \
+hstate_6_1_0__m5_un0_n hstate_6_1_0__m2_un3_n vstate_8_1_0__n_9_n \
+hstate_6_1_0__m2_un1_n hstate_6_1_0__m2_un0_n hstate_6_1_0__m9_un3_n \
+scanY_0_sqmuxa_i hstate_6_1_0__m9_un1_n vState8_i hstate_6_1_0__m9_un0_n \
+scanY11_i hstate_6_1_0__m8_un3_n vstate_i_1__n hstate_6_1_0__m8_un1_n \
+vstate_i_0__n hstate_6_1_0__m8_un0_n scany_1_i_7__n hstate_6_1_0__m6_un3_n \
+scany_1_i_8__n hstate_6_1_0__m6_un1_n scany_1_i_2__n hstate_6_1_0__m6_un0_n \
+scany_1_i_3__n scany_1_i_1__n scany_1_i_6__n scany_1_i_5__n scany_1_i_4__n \
+scany_i_1__n scanx_i_0_3__n scanx_i_4__n scanx_i_0__n scanx_2_i_7__n \
+scanx_2_i_6__n scanx_2_i_2__n scanx_2_i_4__n scanx_2_i_1__n scanx_2_i_5__n \
+scanx_2_i_3__n scanX_0_sqmuxa_i scanx_i_0_2__n vstate_8_1_0__n_3_i_n vState3_i \
+vState13_i up_n_i right_n_i left_n_i down_n_i N_39_i N_38_i N_41_i N_40_i \
+N_43_i N_42_i N_48_i N_47_i N_50_i N_49_i hstate_i_0__n hState3_i hState13_i \
+hState8_i scanX12_i hstate_6_1_0__n_3_i_n N_46_i N_45_i ntscClock_c left_n_c \
+right_n_c up_n_c down_n_c N_135_i N_123_i N_136_0 G_39 G_83 G_119 G_121 G_123 \
+G_125 G_145 G_147 G_149 G_151 G_153 G_155 G_157 G_15 G_16 G_17 G_18 G_19 G_20 \
+G_66 G_63 G_58 G_83_1 G_47 G_88_1 G_44 G_91_1 G_110 G_102_1 G_107 G_107_1 \
+G_102 G_110_1 G_91 G_15_1 G_88 G_16_1 G_17_1 G_18_1 G_19_1 G_20_1 G_39_1 \
+G_44_1 G_22 G_47_1 G_23 G_58_1 G_63_1 G_66_1 G_127 G_24 G_25 G_26 G_27 G_131 \
+G_129 G_143
+.names vstate_8_1_0__m6_un1_n.BLIF vstate_8_1_0__m6_un0_n.BLIF \
+vStateDFFC_0reg.D
+1- 1
+-1 1
+.names vstate_8_1_0__m9_un1_n.BLIF vstate_8_1_0__m9_un0_n.BLIF \
+vStateDFFC_1reg.D
+1- 1
+-1 1
+.names scanY_0_.BLIF scanY_0_.D
+0 1
+.names scanY_0_sqmuxa_i.BLIF G_143.BLIF scanY_1_.D
+11 1
+.names scanY_0_sqmuxa_i.BLIF G_145.BLIF scanY_2_.D
+11 1
+.names scanY_0_sqmuxa_i.BLIF G_157.BLIF scanY_8_.D
+11 1
+.names G_47.BLIF ballX_2_.D
+0 1
+.names G_58.BLIF ballX_3_.D
+0 1
+.names G_63.BLIF ballX_4_.D
+0 1
+.names G_66.BLIF ballX_5_.D
+0 1
+.names G_88.BLIF ballY_1_.D
+0 1
+.names G_91.BLIF ballY_2_.D
+0 1
+.names G_102.BLIF ballY_3_.D
+0 1
+.names G_107.BLIF ballY_4_.D
+0 1
+.names G_110.BLIF ballY_5_.D
+0 1
+.names hstate_6_1_0__m6_un1_n.BLIF hstate_6_1_0__m6_un0_n.BLIF \
+hStateDFF_0reg.D
+1- 1
+-1 1
+.names hstate_6_1_0__m9_un1_n.BLIF hstate_6_1_0__m9_un0_n.BLIF \
+hStateDFF_1reg.D
+1- 1
+-1 1
+.names video_7_0_0__n.BLIF videoDFF_0reg.D
+0 1
+.names video_0_sqmuxa_3_10.BLIF video_0_sqmuxa_3_11.BLIF videoDFF_2reg.D
+11 1
+.names scanX_0_sqmuxa_i.BLIF scanx_i_0__n.BLIF scanX_0_.D
+11 1
+.names scanX_0_sqmuxa_i.BLIF G_127.BLIF scanX_5_.D
+11 1
+.names scanX_0_sqmuxa_i.BLIF G_129.BLIF scanX_6_.D
+11 1
+.names scanX_0_sqmuxa_i.BLIF G_131.BLIF scanX_7_.D
+11 1
+.names G_44.BLIF ballX_1_.D
+0 1
+.names ballY_4_.BLIF bally_i_4__n
+0 1
+.names bally_i_4__n.BLIF up_n_c.BLIF N_124_0
+11 1
+.names ballX_0_.BLIF ballx_i_0__n
+0 1
+.names ballx_i_0__n.BLIF right_n_c.BLIF N_56_0
+11 1
+.names ballX_1_.BLIF ballx_i_1__n
+0 1
+.names ballx_i_1__n.BLIF left_n_c.BLIF N_58_0
+11 1
+.names ballX_2_.BLIF ballx_i_2__n
+0 1
+.names ballx_i_2__n.BLIF left_n_c.BLIF N_60_0
+11 1
+.names N_63.BLIF N_63_i
+0 1
+.names N_69.BLIF N_69_i
+0 1
+.names N_63_i.BLIF N_69_i.BLIF N_70_0
+11 1
+.names ballY_0_.BLIF bally_i_0__n
+0 1
+.names bally_i_0__n.BLIF down_n_c.BLIF N_100_0
+11 1
+.names ballY_1_.BLIF bally_i_1__n
+0 1
+.names bally_i_1__n.BLIF up_n_c.BLIF N_102_0
+11 1
+.names ballY_2_.BLIF bally_i_2__n
+0 1
+.names bally_i_2__n.BLIF up_n_c.BLIF N_104_0
+11 1
+.names N_107.BLIF N_107_i
+0 1
+.names N_113.BLIF N_113_i
+0 1
+.names N_107_i.BLIF N_113_i.BLIF N_114_0
+11 1
+.names hStateDFF_1reg.BLIF hstate_c_i_1__n
+0 1
+.names hStateDFF_0reg.BLIF hstate_c_i_1__n.BLIF N_29_i
+11 1
+.names N_30.BLIF N_30_i
+0 1
+.names N_32.BLIF N_32_i
+0 1
+.names N_31.BLIF N_31_i
+0 1
+.names video_7_0_1_0__n.BLIF N_32_i.BLIF video_7_0_0__n
+11 1
+.names N_131.BLIF N_131_i
+0 1
+.names N_132.BLIF N_132_i
+0 1
+.names N_133.BLIF N_133_i
+0 1
+.names N_134_0_1.BLIF N_132_i.BLIF N_134_0
+11 1
+.names N_99.BLIF N_99_i
+0 1
+.names N_110.BLIF N_110_i
+0 1
+.names N_111.BLIF N_111_i
+0 1
+.names N_112_0_1.BLIF N_110_i.BLIF N_112_0
+11 1
+.names N_103.BLIF N_103_i
+0 1
+.names N_105.BLIF N_105_i
+0 1
+.names N_106.BLIF N_106_i
+0 1
+.names N_108_0_1.BLIF N_108_0_2.BLIF N_108_0
+11 1
+.names N_79.BLIF N_79_i
+0 1
+.names N_91.BLIF N_91_i
+0 1
+.names N_79_i.BLIF N_91_i.BLIF N_92_0
+11 1
+.names N_87.BLIF N_87_i
+0 1
+.names N_88.BLIF N_88_i
+0 1
+.names N_89.BLIF N_89_i
+0 1
+.names N_90_0_1.BLIF N_88_i.BLIF N_90_0
+11 1
+.names ballX_4_.BLIF ballx_i_4__n
+0 1
+.names scanX12.BLIF video36.BLIF scanX_0_sqmuxa
+11 1
+.names ballx_i_4__n.BLIF left_n_c.BLIF N_80_0
+11 1
+.names N_55.BLIF N_55_i
+0 1
+.names N_66.BLIF N_66_i
+0 1
+.names N_67.BLIF N_67_i
+0 1
+.names N_68_0_1.BLIF N_66_i.BLIF N_68_0
+11 1
+.names N_59.BLIF N_59_i
+0 1
+.names N_61.BLIF N_61_i
+0 1
+.names N_62.BLIF N_62_i
+0 1
+.names N_64_0_1.BLIF N_64_0_2.BLIF N_64_0
+11 1
+.names N_31_i.BLIF N_30_i.BLIF video_7_0_1_0__n
+11 1
+.names video36.BLIF vstate_i_0__n.BLIF video_7_1_1__n
+11 1
+.names N_29_i.BLIF vStateDFFC_1reg.BLIF N_32_1
+11 1
+.names hState3_4.BLIF scanX_0_.BLIF hState13_1
+11 1
+.names scanX_5_.BLIF G_127.BLIF hState13_2
+11 1
+.names scanx_2_i_1__n.BLIF scanx_2_i_2__n.BLIF hState13_3
+11 1
+.names ballX_0_.BLIF right_n_i.BLIF N_55
+11 1
+.names hState13_1.BLIF hState13_2.BLIF hState13_4
+11 1
+.names N_56_0.BLIF N_56
+0 1
+.names hState13_3.BLIF scanx_2_i_4__n.BLIF hState13_5
+11 1
+.names N_58_0.BLIF N_58
+0 1
+.names hState3_4.BLIF scanX_0_.BLIF hState3_1
+11 1
+.names ballX_2_.BLIF left_n_i.BLIF N_59
+11 1
+.names scanX_2_.BLIF G_121.BLIF hState3_2
+11 1
+.names N_60_0.BLIF N_60
+0 1
+.names scanx_2_i_4__n.BLIF scanx_2_i_5__n.BLIF hState3_3
+11 1
+.names N_61_1.BLIF N_61_2.BLIF N_61
+11 1
+.names hState3_1.BLIF hState3_2.BLIF hState3_4_0
+11 1
+.names N_62_1.BLIF N_58.BLIF N_62
+11 1
+.names hState3_3.BLIF scanx_i_0_3__n.BLIF hState3_5
+11 1
+.names ballX_1_.BLIF left_n_i.BLIF N_63
+11 1
+.names N_38_i.BLIF N_39_i.BLIF video_0_sqmuxa_3_1
+11 1
+.names N_64_0.BLIF N_64
+0 1
+.names N_40_i.BLIF N_41_i.BLIF video_0_sqmuxa_3_2
+11 1
+.names left_n_i.BLIF right_n_i.BLIF N_66
+11 1
+.names N_42_i.BLIF N_43_i.BLIF video_0_sqmuxa_3_3
+11 1
+.names ballX_0_.BLIF left_n_i.BLIF N_67
+11 1
+.names N_45_i.BLIF N_46_i.BLIF video_0_sqmuxa_3_4
+11 1
+.names N_68_0.BLIF N_68
+0 1
+.names N_47_i.BLIF N_48_i.BLIF video_0_sqmuxa_3_5
+11 1
+.names N_70_0.BLIF N_70
+0 1
+.names N_49_i.BLIF N_50_i.BLIF video_0_sqmuxa_3_6
+11 1
+.names ballX_4_.BLIF left_n_i.BLIF N_79
+11 1
+.names video_0_sqmuxa_3_1.BLIF video_0_sqmuxa_3_2.BLIF video_0_sqmuxa_3_7
+11 1
+.names N_80_0.BLIF N_80
+0 1
+.names video_0_sqmuxa_3_3.BLIF video_0_sqmuxa_3_4.BLIF video_0_sqmuxa_3_8
+11 1
+.names ballX_3_.BLIF left_n_i.BLIF N_87
+11 1
+.names video_0_sqmuxa_3_5.BLIF video_0_sqmuxa_3_6.BLIF video_0_sqmuxa_3_9
+11 1
+.names N_64.BLIF left_n_i.BLIF N_88
+11 1
+.names video_0_sqmuxa_3_7.BLIF video_0_sqmuxa_3_8.BLIF video_0_sqmuxa_3_10
+11 1
+.names N_64.BLIF ballX_3_.BLIF N_89
+11 1
+.names video_0_sqmuxa_3_9.BLIF video_7_1__n.BLIF video_0_sqmuxa_3_11
+11 1
+.names N_90_0.BLIF N_90
+0 1
+.names scany_1_i_8__n.BLIF scanY_0_.BLIF vState3_1
+11 1
+.names N_80.BLIF N_90.BLIF N_91
+11 1
+.names G_145.BLIF G_149.BLIF vState3_2
+11 1
+.names N_92_0.BLIF N_92
+0 1
+.names G_151.BLIF G_153.BLIF vState3_3
+11 1
+.names ballY_0_.BLIF down_n_i.BLIF N_99
+11 1
+.names G_155.BLIF scany_1_i_1__n.BLIF vState3_4
+11 1
+.names N_100_0.BLIF N_100
+0 1
+.names vState3_1.BLIF vState3_2.BLIF vState3_5
+11 1
+.names N_102_0.BLIF N_102
+0 1
+.names vState3_3.BLIF vState3_4.BLIF vState3_6
+11 1
+.names ballY_2_.BLIF up_n_i.BLIF N_103
+11 1
+.names vState3_5.BLIF vState3_6.BLIF vState3_7
+11 1
+.names N_104_0.BLIF N_104
+0 1
+.names scany_1_i_2__n.BLIF scany_1_i_7__n.BLIF vState13_1
+11 1
+.names N_105_1.BLIF N_105_2.BLIF N_105
+11 1
+.names scanY11_6.BLIF scanY_0_.BLIF vState13_2
+11 1
+.names N_106_1.BLIF N_102.BLIF N_106
+11 1
+.names scanY_1_.BLIF G_157.BLIF vState13_3
+11 1
+.names ballY_1_.BLIF up_n_i.BLIF N_107
+11 1
+.names vState13_1.BLIF vState13_2.BLIF vState13_4
+11 1
+.names N_108_0.BLIF N_108
+0 1
+.names hState3_4.BLIF scanX_1_.BLIF hState8_1
+11 1
+.names down_n_i.BLIF up_n_i.BLIF N_110
+11 1
+.names scanX_4_.BLIF G_121.BLIF hState8_2
+11 1
+.names ballY_0_.BLIF up_n_i.BLIF N_111
+11 1
+.names scanx_2_i_3__n.BLIF scanx_2_i_5__n.BLIF hState8_3
+11 1
+.names N_112_0.BLIF N_112
+0 1
+.names hState8_1.BLIF hState8_2.BLIF hState8_4
+11 1
+.names N_114_0.BLIF N_114
+0 1
+.names hState8_3.BLIF scanx_i_0__n.BLIF hState8_5
+11 1
+.names ballY_3_.BLIF up_n_i.BLIF N_131
+11 1
+.names scanX_5_.BLIF G_129.BLIF scanX12_1
+11 1
+.names N_108.BLIF up_n_i.BLIF N_132
+11 1
+.names G_131.BLIF scanx_2_i_1__n.BLIF scanX12_2
+11 1
+.names N_108.BLIF ballY_3_.BLIF N_133
+11 1
+.names scanx_i_0__n.BLIF scanx_i_4__n.BLIF scanX12_3
+11 1
+.names N_134_0.BLIF N_134
+0 1
+.names scanx_i_0_2__n.BLIF scanx_i_0_3__n.BLIF scanX12_4
+11 1
+.names N_136_0.BLIF N_136
+0 1
+.names scanX12_1.BLIF scanX12_2.BLIF scanX12_5
+11 1
+.names scanX_0_.BLIF scanX_1_.BLIF N_146
+11 1
+.names scanX12_3.BLIF scanX12_4.BLIF scanX12_6
+11 1
+.names N_146.BLIF scanX_2_.BLIF N_149
+11 1
+.names scany_1_i_3__n.BLIF scany_1_i_4__n.BLIF scanY11_6_1
+11 1
+.names N_149.BLIF scanX_3_.BLIF N_152
+11 1
+.names scany_1_i_5__n.BLIF scany_1_i_6__n.BLIF scanY11_6_2
+11 1
+.names N_152.BLIF scanX_4_.BLIF N_155
+11 1
+.names G_147.BLIF G_149.BLIF vState8_1_0
+11 1
+.names N_155.BLIF scanX_5_.BLIF N_158
+11 1
+.names G_151.BLIF G_153.BLIF vState8_2
+11 1
+.names N_158.BLIF scanX_6_.BLIF N_161
+11 1
+.names G_155.BLIF scany_1_i_2__n.BLIF vState8_3
+11 1
+.names N_171.BLIF scanY_2_.BLIF N_174
+11 1
+.names scany_1_i_8__n.BLIF vState8_1.BLIF vState8_4
+11 1
+.names N_174.BLIF scanY_3_.BLIF N_177
+11 1
+.names vState8_1_0.BLIF vState8_2.BLIF vState8_5
+11 1
+.names N_180.BLIF scanY_5_.BLIF N_183
+11 1
+.names vState8_3.BLIF vState8_4.BLIF vState8_6
+11 1
+.names N_183.BLIF scanY_6_.BLIF N_186
+11 1
+.names scanY11_6.BLIF G_145.BLIF scanY11_1
+11 1
+.names video_7_1_1__n.BLIF vstate_i_1__n.BLIF video_7_1__n
+11 1
+.names G_157.BLIF scany_1_i_7__n.BLIF scanY11_2
+11 1
+.names scanY11_1.BLIF scanY11_2.BLIF scanY11_3
+11 1
+.names scanY11.BLIF vStateDFFC_0reg.BLIF scanY_0_sqmuxa_1
+11 1
+.names hStateDFF_0reg.BLIF hStateDFF_1reg.BLIF video36
+11 1
+.names N_29.BLIF vStateDFFC_0reg.BLIF N_30
+11 1
+.names N_29_i.BLIF N_29
+0 1
+.names hstate_i_0__n.BLIF vstate_i_1__n.BLIF N_31
+11 1
+.names N_32_1.BLIF vstate_i_0__n.BLIF N_32
+11 1
+.names scanY_0_.BLIF scanY_1_.BLIF N_171
+11 1
+.names N_177.BLIF scanY_4_.BLIF N_180
+11 1
+.names scanX12_5.BLIF scanX12_6.BLIF scanX12
+11 1
+.names N_133_i.BLIF N_131_i.BLIF N_134_0_1
+11 1
+.names hState13_4.BLIF hState13_5.BLIF hState13
+11 1
+.names N_111_i.BLIF N_99_i.BLIF N_112_0_1
+11 1
+.names scanx_2_i_6__n.BLIF scanx_2_i_7__n.BLIF hState3_4
+11 1
+.names N_103_i.BLIF N_105_i.BLIF N_108_0_1
+11 1
+.names hState8_4.BLIF hState8_5.BLIF hState8
+11 1
+.names N_106_i.BLIF N_107_i.BLIF N_108_0_2
+11 1
+.names hState3_4_0.BLIF hState3_5.BLIF hState3
+11 1
+.names N_104.BLIF N_99.BLIF N_106_1
+11 1
+.names hstate_6_1_0__m8_un1_n.BLIF hstate_6_1_0__m8_un0_n.BLIF \
+hstate_6_1_0__n_9_n
+1- 1
+-1 1
+.names N_100.BLIF N_102.BLIF N_105_1
+11 1
+.names hstate_6_1_0__m2_un1_n.BLIF hstate_6_1_0__m2_un0_n.BLIF \
+hstate_6_1_0__n_3_n
+1- 1
+-1 1
+.names N_104.BLIF up_n_i.BLIF N_105_2
+11 1
+.names hstate_6_1_0__m5_un1_n.BLIF hstate_6_1_0__m5_un0_n.BLIF \
+hstate_6_1_0__n_6_n
+1- 1
+-1 1
+.names N_89_i.BLIF N_87_i.BLIF N_90_0_1
+11 1
+.names N_67_i.BLIF N_55_i.BLIF N_68_0_1
+11 1
+.names N_59_i.BLIF N_61_i.BLIF N_64_0_1
+11 1
+.names N_62_i.BLIF N_63_i.BLIF N_64_0_2
+11 1
+.names N_60.BLIF N_55.BLIF N_62_1
+11 1
+.names N_186.BLIF scanY_7_.BLIF N_189
+11 1
+.names N_56.BLIF N_58.BLIF N_61_1
+11 1
+.names N_102.BLIF N_112.BLIF N_113
+11 1
+.names N_60.BLIF left_n_i.BLIF N_61_2
+11 1
+.names N_58.BLIF N_68.BLIF N_69
+11 1
+.names vStateDFFC_0reg.BLIF vstate_8_1_0__m9_un3_n
+0 1
+.names vstate_8_1_0__n_9_n.BLIF vStateDFFC_0reg.BLIF vstate_8_1_0__m9_un1_n
+11 1
+.names ballY_4_.BLIF up_n_i.BLIF N_123
+11 1
+.names vStateDFFC_1reg.BLIF vstate_8_1_0__m9_un3_n.BLIF vstate_8_1_0__m9_un0_n
+11 1
+.names N_124_0.BLIF N_124
+0 1
+.names vStateDFFC_1reg.BLIF vstate_8_1_0__m8_un3_n
+0 1
+.names N_124.BLIF N_134.BLIF N_135
+11 1
+.names scanY11_i.BLIF vStateDFFC_1reg.BLIF vstate_8_1_0__m8_un1_n
+11 1
+.names vstate_8_1_0__m2_un1_n.BLIF vstate_8_1_0__m2_un0_n.BLIF \
+vstate_8_1_0__n_3_n
+1- 1
+-1 1
+.names vState8.BLIF vstate_8_1_0__m8_un3_n.BLIF vstate_8_1_0__m8_un0_n
+11 1
+.names vState3_7.BLIF scany_1_i_3__n.BLIF vState3
+11 1
+.names vStateDFFC_1reg.BLIF vstate_8_1_0__m5_un3_n
+0 1
+.names vState13_4.BLIF vState13_3.BLIF vState13
+11 1
+.names scanY11_i.BLIF vStateDFFC_1reg.BLIF vstate_8_1_0__m5_un1_n
+11 1
+.names vstate_8_1_0__m5_un1_n.BLIF vstate_8_1_0__m5_un0_n.BLIF \
+vstate_8_1_0__n_6_n
+1- 1
+-1 1
+.names vState8_i.BLIF vstate_8_1_0__m5_un3_n.BLIF vstate_8_1_0__m5_un0_n
+11 1
+.names scanY_0_.BLIF scany_i_1__n.BLIF vState8_1
+11 1
+.names vStateDFFC_0reg.BLIF vstate_8_1_0__m6_un3_n
+0 1
+.names scanY11_6_1.BLIF scanY11_6_2.BLIF scanY11_6
+11 1
+.names vstate_8_1_0__n_6_n.BLIF vStateDFFC_0reg.BLIF vstate_8_1_0__m6_un1_n
+11 1
+.names vstate_8_1_0__n_3_i_n.BLIF vstate_8_1_0__m6_un3_n.BLIF \
+vstate_8_1_0__m6_un0_n
+11 1
+.names vStateDFFC_1reg.BLIF vstate_8_1_0__m2_un3_n
+0 1
+.names vState13_i.BLIF vStateDFFC_1reg.BLIF vstate_8_1_0__m2_un1_n
+11 1
+.names vState3_i.BLIF vstate_8_1_0__m2_un3_n.BLIF vstate_8_1_0__m2_un0_n
+11 1
+.names scanY_0_sqmuxa_1.BLIF vStateDFFC_1reg.BLIF scanY_0_sqmuxa
+11 1
+.names hStateDFF_1reg.BLIF hstate_6_1_0__m5_un3_n
+0 1
+.names vState8_5.BLIF vState8_6.BLIF vState8
+11 1
+.names scanX12_i.BLIF hStateDFF_1reg.BLIF hstate_6_1_0__m5_un1_n
+11 1
+.names scanY11_3.BLIF vState8_1.BLIF scanY11
+11 1
+.names hState8_i.BLIF hstate_6_1_0__m5_un3_n.BLIF hstate_6_1_0__m5_un0_n
+11 1
+.names hStateDFF_1reg.BLIF hstate_6_1_0__m2_un3_n
+0 1
+.names vstate_8_1_0__m8_un1_n.BLIF vstate_8_1_0__m8_un0_n.BLIF \
+vstate_8_1_0__n_9_n
+1- 1
+-1 1
+.names hState13_i.BLIF hStateDFF_1reg.BLIF hstate_6_1_0__m2_un1_n
+11 1
+.names hState3_i.BLIF hstate_6_1_0__m2_un3_n.BLIF hstate_6_1_0__m2_un0_n
+11 1
+.names hStateDFF_0reg.BLIF hstate_6_1_0__m9_un3_n
+0 1
+.names scanY_0_sqmuxa.BLIF scanY_0_sqmuxa_i
+0 1
+.names hstate_6_1_0__n_9_n.BLIF hStateDFF_0reg.BLIF hstate_6_1_0__m9_un1_n
+11 1
+.names vState8.BLIF vState8_i
+0 1
+.names hStateDFF_1reg.BLIF hstate_6_1_0__m9_un3_n.BLIF hstate_6_1_0__m9_un0_n
+11 1
+.names scanY11.BLIF scanY11_i
+0 1
+.names hStateDFF_1reg.BLIF hstate_6_1_0__m8_un3_n
+0 1
+.names vStateDFFC_1reg.BLIF vstate_i_1__n
+0 1
+.names scanX12_i.BLIF hStateDFF_1reg.BLIF hstate_6_1_0__m8_un1_n
+11 1
+.names vStateDFFC_0reg.BLIF vstate_i_0__n
+0 1
+.names hState8.BLIF hstate_6_1_0__m8_un3_n.BLIF hstate_6_1_0__m8_un0_n
+11 1
+.names G_155.BLIF scany_1_i_7__n
+0 1
+.names hStateDFF_0reg.BLIF hstate_6_1_0__m6_un3_n
+0 1
+.names G_157.BLIF scany_1_i_8__n
+0 1
+.names hstate_6_1_0__n_6_n.BLIF hStateDFF_0reg.BLIF hstate_6_1_0__m6_un1_n
+11 1
+.names G_145.BLIF scany_1_i_2__n
+0 1
+.names hstate_6_1_0__n_3_i_n.BLIF hstate_6_1_0__m6_un3_n.BLIF \
+hstate_6_1_0__m6_un0_n
+11 1
+.names G_147.BLIF scany_1_i_3__n
+0 1
+.names G_143.BLIF scany_1_i_1__n
+0 1
+.names G_153.BLIF scany_1_i_6__n
+0 1
+.names G_151.BLIF scany_1_i_5__n
+0 1
+.names G_149.BLIF scany_1_i_4__n
+0 1
+.names scanY_1_.BLIF scany_i_1__n
+0 1
+.names scanX_3_.BLIF scanx_i_0_3__n
+0 1
+.names scanX_4_.BLIF scanx_i_4__n
+0 1
+.names scanX_0_.BLIF scanx_i_0__n
+0 1
+.names G_131.BLIF scanx_2_i_7__n
+0 1
+.names G_129.BLIF scanx_2_i_6__n
+0 1
+.names G_121.BLIF scanx_2_i_2__n
+0 1
+.names G_125.BLIF scanx_2_i_4__n
+0 1
+.names G_119.BLIF scanx_2_i_1__n
+0 1
+.names G_127.BLIF scanx_2_i_5__n
+0 1
+.names G_123.BLIF scanx_2_i_3__n
+0 1
+.names scanX_0_sqmuxa.BLIF scanX_0_sqmuxa_i
+0 1
+.names scanX_2_.BLIF scanx_i_0_2__n
+0 1
+.names vstate_8_1_0__n_3_n.BLIF vstate_8_1_0__n_3_i_n
+0 1
+.names vState3.BLIF vState3_i
+0 1
+.names vState13.BLIF vState13_i
+0 1
+.names up_n_c.BLIF up_n_i
+0 1
+.names right_n_c.BLIF right_n_i
+0 1
+.names left_n_c.BLIF left_n_i
+0 1
+.names down_n_c.BLIF down_n_i
+0 1
+.names G_16.BLIF N_39_i
+0 1
+.names G_15.BLIF N_38_i
+0 1
+.names G_18.BLIF N_41_i
+0 1
+.names G_17.BLIF N_40_i
+0 1
+.names G_20.BLIF N_43_i
+0 1
+.names G_19.BLIF N_42_i
+0 1
+.names G_25.BLIF N_48_i
+0 1
+.names G_24.BLIF N_47_i
+0 1
+.names G_27.BLIF N_50_i
+0 1
+.names G_26.BLIF N_49_i
+0 1
+.names hStateDFF_0reg.BLIF hstate_i_0__n
+0 1
+.names hState3.BLIF hState3_i
+0 1
+.names hState13.BLIF hState13_i
+0 1
+.names hState8.BLIF hState8_i
+0 1
+.names scanX12.BLIF scanX12_i
+0 1
+.names hstate_6_1_0__n_3_n.BLIF hstate_6_1_0__n_3_i_n
+0 1
+.names G_23.BLIF N_46_i
+0 1
+.names G_22.BLIF N_45_i
+0 1
+.names N_135.BLIF N_135_i
+0 1
+.names N_123.BLIF N_123_i
+0 1
+.names N_123_i.BLIF N_135_i.BLIF N_136_0
+11 1
+.names G_39_1.BLIF right_n_c.BLIF G_39
+01 1
+10 1
+11 0
+00 0
+.names G_83_1.BLIF up_n_c.BLIF G_83
+01 1
+10 1
+11 0
+00 0
+.names scanX_0_.BLIF scanX_1_.BLIF G_119
+01 1
+10 1
+11 0
+00 0
+.names scanX_2_.BLIF N_146.BLIF G_121
+01 1
+10 1
+11 0
+00 0
+.names scanX_3_.BLIF N_149.BLIF G_123
+01 1
+10 1
+11 0
+00 0
+.names scanX_4_.BLIF N_152.BLIF G_125
+01 1
+10 1
+11 0
+00 0
+.names scanY_2_.BLIF N_171.BLIF G_145
+01 1
+10 1
+11 0
+00 0
+.names scanY_3_.BLIF N_174.BLIF G_147
+01 1
+10 1
+11 0
+00 0
+.names scanY_4_.BLIF N_177.BLIF G_149
+01 1
+10 1
+11 0
+00 0
+.names scanY_5_.BLIF N_180.BLIF G_151
+01 1
+10 1
+11 0
+00 0
+.names scanY_6_.BLIF N_183.BLIF G_153
+01 1
+10 1
+11 0
+00 0
+.names scanY_7_.BLIF N_186.BLIF G_155
+01 1
+10 1
+11 0
+00 0
+.names scanY_8_.BLIF N_189.BLIF G_157
+01 1
+10 1
+11 0
+00 0
+.names scanX_2_.BLIF G_15_1.BLIF G_15
+01 1
+10 1
+11 0
+00 0
+.names scanX_3_.BLIF G_16_1.BLIF G_16
+01 1
+10 1
+11 0
+00 0
+.names scanX_4_.BLIF G_17_1.BLIF G_17
+01 1
+10 1
+11 0
+00 0
+.names scanX_5_.BLIF G_18_1.BLIF G_18
+01 1
+10 1
+11 0
+00 0
+.names scanX_6_.BLIF G_19_1.BLIF G_19
+01 1
+10 1
+11 0
+00 0
+.names scanX_7_.BLIF G_20_1.BLIF G_20
+01 1
+10 1
+11 0
+00 0
+.names G_66_1.BLIF left_n_c.BLIF G_66
+01 1
+10 1
+11 0
+00 0
+.names G_63_1.BLIF left_n_c.BLIF G_63
+01 1
+10 1
+11 0
+00 0
+.names G_58_1.BLIF left_n_c.BLIF G_58
+01 1
+10 1
+11 0
+00 0
+.names ballY_0_.BLIF down_n_c.BLIF G_83_1
+01 1
+10 1
+11 0
+00 0
+.names G_47_1.BLIF left_n_c.BLIF G_47
+01 1
+10 1
+11 0
+00 0
+.names ballY_1_.BLIF N_112.BLIF G_88_1
+01 1
+10 1
+11 0
+00 0
+.names G_44_1.BLIF left_n_c.BLIF G_44
+01 1
+10 1
+11 0
+00 0
+.names ballY_2_.BLIF N_114.BLIF G_91_1
+01 1
+10 1
+11 0
+00 0
+.names G_110_1.BLIF up_n_c.BLIF G_110
+01 1
+10 1
+11 0
+00 0
+.names ballY_3_.BLIF N_108.BLIF G_102_1
+01 1
+10 1
+11 0
+00 0
+.names G_107_1.BLIF up_n_c.BLIF G_107
+01 1
+10 1
+11 0
+00 0
+.names ballY_4_.BLIF N_134.BLIF G_107_1
+01 1
+10 1
+11 0
+00 0
+.names G_102_1.BLIF up_n_c.BLIF G_102
+01 1
+10 1
+11 0
+00 0
+.names ballY_5_.BLIF N_136.BLIF G_110_1
+01 1
+10 1
+11 0
+00 0
+.names G_91_1.BLIF up_n_c.BLIF G_91
+01 1
+10 1
+11 0
+00 0
+.names ballX_0_.BLIF N_146.BLIF G_15_1
+01 1
+10 1
+11 0
+00 0
+.names G_88_1.BLIF up_n_c.BLIF G_88
+01 1
+10 1
+11 0
+00 0
+.names ballX_1_.BLIF N_149.BLIF G_16_1
+01 1
+10 1
+11 0
+00 0
+.names ballX_2_.BLIF N_152.BLIF G_17_1
+01 1
+10 1
+11 0
+00 0
+.names ballX_3_.BLIF N_155.BLIF G_18_1
+01 1
+10 1
+11 0
+00 0
+.names ballX_4_.BLIF N_158.BLIF G_19_1
+01 1
+10 1
+11 0
+00 0
+.names ballX_5_.BLIF N_161.BLIF G_20_1
+01 1
+10 1
+11 0
+00 0
+.names ballX_0_.BLIF left_n_c.BLIF G_39_1
+01 1
+10 1
+11 0
+00 0
+.names ballX_1_.BLIF N_68.BLIF G_44_1
+01 1
+10 1
+11 0
+00 0
+.names scanY_3_.BLIF ballY_0_.BLIF G_22
+01 1
+10 1
+11 0
+00 0
+.names ballX_2_.BLIF N_70.BLIF G_47_1
+01 1
+10 1
+11 0
+00 0
+.names scanY_4_.BLIF ballY_1_.BLIF G_23
+01 1
+10 1
+11 0
+00 0
+.names ballX_3_.BLIF N_64.BLIF G_58_1
+01 1
+10 1
+11 0
+00 0
+.names ballX_4_.BLIF N_90.BLIF G_63_1
+01 1
+10 1
+11 0
+00 0
+.names ballX_5_.BLIF N_92.BLIF G_66_1
+01 1
+10 1
+11 0
+00 0
+.names scanX_5_.BLIF N_155.BLIF G_127
+01 1
+10 1
+11 0
+00 0
+.names scanY_5_.BLIF ballY_2_.BLIF G_24
+01 1
+10 1
+11 0
+00 0
+.names scanY_6_.BLIF ballY_3_.BLIF G_25
+01 1
+10 1
+11 0
+00 0
+.names scanY_7_.BLIF ballY_4_.BLIF G_26
+01 1
+10 1
+11 0
+00 0
+.names scanY_8_.BLIF ballY_5_.BLIF G_27
+01 1
+10 1
+11 0
+00 0
+.names scanX_7_.BLIF N_161.BLIF G_131
+01 1
+10 1
+11 0
+00 0
+.names scanX_6_.BLIF N_158.BLIF G_129
+01 1
+10 1
+11 0
+00 0
+.names scanY_0_.BLIF scanY_1_.BLIF G_143
+01 1
+10 1
+11 0
+00 0
+.names videoDFF_2reg.BLIF video_2_
+1 1
+0 0
+.names hStateDFF_1reg.BLIF hState_1_
+1 1
+0 0
+.names vStateDFFC_1reg.BLIF vState_1_
+1 1
+0 0
+.names videoDFF_1reg.BLIF video_1_
+1 1
+0 0
+.names videoDFF_0reg.BLIF video_0_
+1 1
+0 0
+.names hStateDFF_0reg.BLIF hState_0_
+1 1
+0 0
+.names vStateDFFC_0reg.BLIF vState_0_
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF vStateDFFC_0reg.CE
+1 1
+0 0
+.names ntscClock_c.BLIF vStateDFFC_0reg.C
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF vStateDFFC_1reg.CE
+1 1
+0 0
+.names ntscClock_c.BLIF vStateDFFC_1reg.C
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_0_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_0_.C
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_1_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_1_.C
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_2_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_2_.C
+1 1
+0 0
+.names G_147.BLIF scanY_3_.D
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_3_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_3_.C
+1 1
+0 0
+.names G_149.BLIF scanY_4_.D
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_4_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_4_.C
+1 1
+0 0
+.names G_151.BLIF scanY_5_.D
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_5_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_5_.C
+1 1
+0 0
+.names G_153.BLIF scanY_6_.D
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_6_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_6_.C
+1 1
+0 0
+.names G_155.BLIF scanY_7_.D
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_7_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_7_.C
+1 1
+0 0
+.names scanX_0_sqmuxa.BLIF scanY_8_.CE
+1 1
+0 0
+.names ntscClock_c.BLIF scanY_8_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_2_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_3_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_4_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_5_.C
+1 1
+0 0
+.names G_83.BLIF ballY_0_.D
+1 1
+0 0
+.names scanY_8_.BLIF ballY_0_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_1_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_2_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_3_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_4_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballY_5_.C
+1 1
+0 0
+.names ntscClock_c.BLIF hStateDFF_0reg.C
+1 1
+0 0
+.names ntscClock_c.BLIF hStateDFF_1reg.C
+1 1
+0 0
+.names ntscClock_c.BLIF videoDFF_0reg.C
+1 1
+0 0
+.names video_7_1__n.BLIF videoDFF_1reg.D
+1 1
+0 0
+.names ntscClock_c.BLIF videoDFF_1reg.C
+1 1
+0 0
+.names ntscClock_c.BLIF videoDFF_2reg.C
+1 1
+0 0
+.names ntscClock_c.BLIF scanX_0_.C
+1 1
+0 0
+.names G_119.BLIF scanX_1_.D
+1 1
+0 0
+.names ntscClock_c.BLIF scanX_1_.C
+1 1
+0 0
+.names G_121.BLIF scanX_2_.D
+1 1
+0 0
+.names ntscClock_c.BLIF scanX_2_.C
+1 1
+0 0
+.names G_123.BLIF scanX_3_.D
+1 1
+0 0
+.names ntscClock_c.BLIF scanX_3_.C
+1 1
+0 0
+.names G_125.BLIF scanX_4_.D
+1 1
+0 0
+.names ntscClock_c.BLIF scanX_4_.C
+1 1
+0 0
+.names ntscClock_c.BLIF scanX_5_.C
+1 1
+0 0
+.names ntscClock_c.BLIF scanX_6_.C
+1 1
+0 0
+.names ntscClock_c.BLIF scanX_7_.C
+1 1
+0 0
+.names G_39.BLIF ballX_0_.D
+1 1
+0 0
+.names scanY_8_.BLIF ballX_0_.C
+1 1
+0 0
+.names scanY_8_.BLIF ballX_1_.C
+1 1
+0 0
+.names ntscClock.BLIF ntscClock_c
+1 1
+0 0
+.names left_n.BLIF left_n_c
+1 1
+0 0
+.names right_n.BLIF right_n_c
+1 1
+0 0
+.names up_n.BLIF up_n_c
+1 1
+0 0
+.names down_n.BLIF down_n_c
+1 1
+0 0
+.end

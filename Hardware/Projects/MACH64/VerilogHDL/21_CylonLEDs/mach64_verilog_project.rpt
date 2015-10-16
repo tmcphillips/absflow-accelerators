@@ -1,0 +1,781 @@
+|--------------------------------------------------------------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Fitter Report File        -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+Project_Summary
+~~~~~~~~~~~~~~~
+Project Name         :  mach64_verilog_project
+Project Path         :  C:\Users\tmcphillips\Designs\Projects\MACH64\VerilogHDL\21_CylonLEDs
+Project Fitted on    :  Sat Feb 11 20:45:03 2012
+
+Device               :  M4064_32
+Package              :  48
+GLB Input Mux Size   :  10
+Available Blocks     :  4
+Speed                :  -7.5
+Part Number          :  LC4064V-75T48I
+Source Format        :  Pure_Verilog_HDL
+
+
+// Project 'mach64_verilog_project' Fit Successfully! //
+
+
+Compilation_Times
+~~~~~~~~~~~~~~~~~
+Prefit Time                     0 secs
+Load Design Time                0.03 secs
+Partition Time                  0.09 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+Design_Summary
+~~~~~~~~~~~~~~
+Total Input Pins                2
+Total Logic Functions           58
+  Total Output Pins             8
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            50
+Total Flip-Flops                57
+  Total D Flip-Flops            56
+  Total T Flip-Flops            1
+  Total Latches                 0
+Total Product Terms             250
+
+Total Reserved Pins             0
+Total Locked Pins               10
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             18
+Total Unique Clock Enables      2
+Total Unique Resets             1
+Total Unique Presets            1
+
+Fmax Logic Levels               2
+
+
+Device_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~~~~
+                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+Dedicated Pins
+  Clock/Input Pins                  4        1      3    -->    25
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           30        9     21    -->    30
+Logic Functions                    64       58      6    -->    90
+  Input Registers                  32        0     32    -->     0
+
+GLB Inputs                        144       74     70    -->    51
+Logical Product Terms             320      207    113    -->    64
+Occupied GLBs                       4        4      0    -->   100
+Macrocells                         64       58      6    -->    90
+
+Control Product Terms:
+  GLB Clock/Clock Enables           4        4      0    -->   100
+  GLB Reset/Presets                 4        0      4    -->     0
+  Macrocell Clocks                 64       14     50    -->    21
+  Macrocell Clock Enables          64       25     39    -->    39
+  Macrocell Enables                64        0     64    -->     0
+  Macrocell Resets                 64        4     60    -->     6
+  Macrocell Presets                64        1     63    -->     1
+
+Global Routing Pool               100       51     49    -->    51
+  GRP from IFB                     ..        1     ..    -->    ..
+    (from input signals)           ..        1     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..       50     ..    -->    ..
+----------------------------------------------------------------------
+
+<Note> 1 : The available PT is the product term that has not been used.
+<Note> 2 : IFB is I/O feedback.
+<Note> 3 : MFB is macrocell feedback.
+
+
+
+GLB_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~
+                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+-------------------------------------------------------------------------------------------
+  GLB    A      2     7     9      0/8      0   16      0              0       50       16
+  GLB    B      3    16    19      0/8      0   16      0              0       35       16
+  GLB    C      5    12    17      2/8      0   16      0              0       55       15
+  GLB    D     24     5    29      7/8      0   10      5              1       67       16
+-------------------------------------------------------------------------------------------
+TOTALS:        34    40    74      9/32     0   58      5              1      207       63
+
+<Note> 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+<Note> 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+
+GLB_Control_Summary
+~~~~~~~~~~~~~~~~~~~
+           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+  GLB    A   1      0         0     12      0      3      0
+  GLB    B   1      0        11      5      0      0      0
+  GLB    C   1      0         2      8      0      1      1
+  GLB    D   1      0         1      0      0      0      0
+------------------------------------------------------------------------------
+
+<Note> 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+
+Optimizer_and_Fitter_Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              No
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+<Note> 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+<Note> 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+
+Pinout_Listing
+~~~~~~~~~~~~~~
+      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+--------------------------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |
+2     |  I_O  |   0  |A10 |        |                 |       |
+3     |  I_O  |   0  |A12 |        |                 |       |
+4     |  I_O  |   0  |A14 |        |                 |       |
+5     |GNDIO0 |   -  |    |        |                 |       |
+6     |VCCIO0 |   -  |    |        |                 |       |
+7     |  I_O  |   0  |B0  |        |                 |       |
+8     |  I_O  |   0  |B2  |        |                 |       |
+9     |  I_O  |   0  |B4  |        |                 |       |
+10    |  I_O  |   0  |B6  |        |                 |       |
+11    | TCK   |   -  |    |        |                 |       |
+12    | VCC   |   -  |    |        |                 |       |
+13    | GND   |   -  |    |        |                 |       |
+14    |  I_O  |   0  |B8  |        |                 |       |
+15    |  I_O  |   0  |B10 |        |                 |       |
+16    |  I_O  |   0  |B12 |        |                 |       |
+17    |  I_O  |   0  |B14 |        |                 |       |
+18    |INCLK1 |   0  |    |        |                 |       |
+19    |INCLK2 |   1  |    |        |                 |       |
+20    |  I_O  |   1  |C0  |        |                 |       |
+21    |  I_O  |   1  |C2  |        |                 |       |
+22    |  I_O  |   1  |C4  |        |                 |       |
+23    |  I_O  |   1  |C6  |        |                 |       |
+24    |  I_O  |   1  |C8  |    *   |LVCMOS18         | Input |reset_n
+25    | TMS   |   -  |    |        |                 |       |
+26    |  I_O  |   1  |C10 |        |                 |       |
+27    |  I_O  |   1  |C12 |        |                 |       |
+28    |  I_O  |   1  |C14 |    *   |LVCMOS18         | Output|LED_7_
+29    |GNDIO1 |   -  |    |        |                 |       |
+30    |VCCIO1 |   -  |    |        |                 |       |
+31    |  I_O  |   1  |D0  |    *   |LVCMOS18         | Output|LED_0_
+32    |  I_O  |   1  |D2  |    *   |LVCMOS18         | Output|LED_1_
+33    |  I_O  |   1  |D4  |    *   |LVCMOS18         | Output|LED_2_
+34    |  I_O  |   1  |D6  |    *   |LVCMOS18         | Output|LED_3_
+35    | TDO   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    |  I_O  |   1  |D8  |    *   |LVCMOS18         | Output|LED_4_
+39    |  I_O  |   1  |D10 |    *   |LVCMOS18         | Output|LED_5_
+40    |  I_O  |   1  |D12 |    *   |LVCMOS18         | Output|LED_6_
+41    | I_O/OE|   1  |D14 |        |                 |       |
+42    |INCLK3 |   1  |    |        |                 |       |
+43    |INCLK0 |   0  |    |    *   |LVCMOS18         | Input |oneMHzClock
+44    | I_O/OE|   0  |A0  |        |                 |       |
+45    |  I_O  |   0  |A2  |        |                 |       |
+46    |  I_O  |   0  |A4  |        |                 |       |
+47    |  I_O  |   0  |A6  |        |                 |       |
+48    |  I_O  |   0  |A8  |        |                 |       |
+--------------------------------------------------------------------------------------------
+
+<Note> GLB Pad : This notation refers to the GLB I/O pad number in the device.
+<Note> Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+<Note> Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+
+Input_Signal_List
+~~~~~~~~~~~~~~~~~
+                Input
+         Pin    Fanout
+ Pin GLB Type           Pullup Signal
+------------------------------------------
+  43  -- INCLK    ----      Up oneMHzClock
+  24   C  I/O   3 ABC-      Up reset_n
+------------------------------------------
+
+
+
+Output_Signal_List
+~~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+-------------------------------------------------------------------
+  31   D  7  1   9  2 DFF      R           ----  Fast     Up LED_0_
+  32   D  7  1   9  2 DFF      R           ----  Fast     Up LED_1_
+  33   D  7  1   9  2 DFF      R           ----  Fast     Up LED_2_
+  34   D  7  1   9  2 DFF      R           ----  Fast     Up LED_3_
+  38   D  7  1   9  2 DFF      R           ----  Fast     Up LED_4_
+  39   D  7  1   9  2 DFF      R           ----  Fast     Up LED_5_
+  40   D  7  1   9  3 DFF      R           ----  Fast     Up LED_6_
+  28   C  7  1   9  2 DFF      R           ----  Fast     Up LED_7_
+-------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Bidir_Signal_List
+~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Buried_Signal_List
+~~~~~~~~~~~~~~~~~~
+        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P         Signal
+--------------------------------------------------------------------------
+12   A  5  1   2  1 DFF      R *     1 ---D  brightness_2__0_
+ 7   A  7  1   3  1 DFF      R *     1 ---D  brightness_2__1_
+ 0   C  7  1   4  1 DFF      R *     1 ---D  brightness_2__2_
+ 0   B  7  1   3  1 DFF      R *     1 ---D  brightness_3__0_
+ 8   A  7  1   3  1 DFF      R *     1 ---D  brightness_3__1_
+ 2   C  7  1   4  2 DFF      R *     1 ---D  brightness_3__2_
+ 7   C  6  1   3  1 DFF      R *     1 ---D  brightness_4__0_
+ 9   A  7  1   3  1 DFF      R *     1 ---D  brightness_4__1_
+ 2   A  7  1   4  1 DFF      R *     1 ---D  brightness_4__2_
+ 4   B  5  1   2  1 DFF      R *     1 ---D  brightness_5__0_
+ 8   C  7  1   3  1 DFF      R *     1 ---D  brightness_5__1_
+ 4   C  7  1   4  1 DFF      R *     1 ---D  brightness_5__2_
+13   A  5  1   2  1 DFF      R *     1 ---D  brightness_6__0_
+ 1   B  7  1   3  1 DFF      R *     1 ---D  brightness_6__1_
+ 5   C  7  1   4  1 DFF      R *     1 ---D  brightness_6__2_
+10   A  6  1   3  1 DFF      R *     1 ---D  brightness_7__0_
+11   A  7  1   3  1 DFF      R *     1 ---D  brightness_7__1_
+ 3   A  7  1   4  1 DFF      R *     1 ---D  brightness_7__2_
+ 9   C  7  1   3  1 DFF      R *     1 ---D  brightness_8__0_
+ 2   B  7  1   3  1 DFF      R *     1 ---D  brightness_8__1_
+ 4   A  7  1   4  1 DFF      R *     1 ---D  brightness_8__2_
+ 5   B  5  1   2  1 DFF      R *     1 --C-  brightness_9__0_
+10   C  7  1   3  1 DFF      R *     1 --C-  brightness_9__1_
+ 5   A  7  1   4  1 DFF      R *     1 --C-  brightness_9__2_
+ 3   C  3  1   2  1 DFF  *   S       3 ABC-  center_0_
+ 0   A  5  1   5  1 DFF    * R       3 ABC-  center_1_
+ 1   A  6  1   4  1 DFF    * R       3 ABC-  center_2_
+11   C  6  1   3  1 TFF    * R       3 ABC-  center_3_
+15   A  1  1   1  1 DFF      R       3 A-CD  duty_0_
+15   C  2  1   2  1 DFF      R       2 --CD  duty_1_
+12   C  3  1   3  1 DFF      R       2 --CD  duty_2_
+ 6   C  4  1   4  1 DFF      R       2 --CD  duty_3_
+ 6   A  4  1   3  1 DFF    * R *     3 ABC-  inst_direction
+15   D  2  1   1  1 DFF      R       2 -B-D  u1rs_u1rc_genblk1_0__uitff_q
+12   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_10__uitff_q
+13   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_11__uitff_q
+14   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_12__uitff_q
+15   B  2  1   2  2 DFF      R       1 -B--  u1rs_u1rc_genblk1_13__uitff_q
+ 3   B  2  1   2  1 DFF      R       3 ABC-  u1rs_u1rc_genblk1_14__uitff_q
+ 6   B  2  1   2  1 DFF      R       2 -B-D  u1rs_u1rc_genblk1_1__uitff_q
+ 0   D  2  1   2  1 DFF      R       2 --CD  u1rs_u1rc_genblk1_2__uitff_q
+13   C  2  1   2  1 DFF      R       1 --C-  u1rs_u1rc_genblk1_3__uitff_q
+14   C  2  1   2  1 DFF      R       2 -BC-  u1rs_u1rc_genblk1_4__uitff_q
+ 7   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_5__uitff_q
+ 8   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_6__uitff_q
+ 9   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_7__uitff_q
+10   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_8__uitff_q
+11   B  2  1   2  1 DFF      R       1 -B--  u1rs_u1rc_genblk1_9__uitff_q
+14   D  1  1   1  1 DFF      R       1 ---D  u1rs_u1rc_u0tff_q
+14   A  5  -   2  1 COM              1 A---  un1_direction10_0__n
+--------------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+PostFit_Equations
+~~~~~~~~~~~~~~~~~
+LED_0_.D = !duty_0_.Q & !duty_1_.Q & !duty_2_.Q & !duty_3_.Q
+       & brightness_2__0_.Q
+    # !duty_0_.Q & !duty_1_.Q & !duty_3_.Q & brightness_2__0_.Q
+       & brightness_2__2_.Q
+    # !duty_0_.Q & !duty_2_.Q & brightness_2__0_.Q & brightness_2__1_.Q
+    # !duty_1_.Q & !duty_2_.Q & brightness_2__1_.Q
+    # !duty_0_.Q & brightness_2__0_.Q & brightness_2__1_.Q
+       & brightness_2__2_.Q
+    # !duty_3_.Q & brightness_2__1_.Q
+    # !duty_2_.Q & !duty_3_.Q & brightness_2__2_.Q
+    # !duty_1_.Q & brightness_2__1_.Q & brightness_2__2_.Q
+    # !duty_2_.Q & brightness_2__1_.Q & brightness_2__2_.Q ; (9 pterms, 7 signals)
+LED_0_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+LED_1_.D = !duty_0_.Q & !duty_1_.Q & !duty_2_.Q & !duty_3_.Q
+       & brightness_3__0_.Q
+    # !duty_0_.Q & !duty_1_.Q & !duty_3_.Q & brightness_3__0_.Q
+       & brightness_3__2_.Q
+    # !duty_0_.Q & !duty_2_.Q & brightness_3__0_.Q & brightness_3__1_.Q
+    # !duty_1_.Q & !duty_2_.Q & brightness_3__1_.Q
+    # !duty_0_.Q & brightness_3__0_.Q & brightness_3__1_.Q
+       & brightness_3__2_.Q
+    # !duty_3_.Q & brightness_3__1_.Q
+    # !duty_2_.Q & !duty_3_.Q & brightness_3__2_.Q
+    # !duty_1_.Q & brightness_3__1_.Q & brightness_3__2_.Q
+    # !duty_2_.Q & brightness_3__1_.Q & brightness_3__2_.Q ; (9 pterms, 7 signals)
+LED_1_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+LED_2_.D = !duty_0_.Q & !duty_1_.Q & !duty_2_.Q & !duty_3_.Q
+       & brightness_4__0_.Q
+    # !duty_0_.Q & !duty_1_.Q & !duty_3_.Q & brightness_4__0_.Q
+       & brightness_4__2_.Q
+    # !duty_0_.Q & !duty_2_.Q & brightness_4__0_.Q & brightness_4__1_.Q
+    # !duty_1_.Q & !duty_2_.Q & brightness_4__1_.Q
+    # !duty_0_.Q & brightness_4__0_.Q & brightness_4__1_.Q
+       & brightness_4__2_.Q
+    # !duty_3_.Q & brightness_4__1_.Q
+    # !duty_2_.Q & !duty_3_.Q & brightness_4__2_.Q
+    # !duty_1_.Q & brightness_4__1_.Q & brightness_4__2_.Q
+    # !duty_2_.Q & brightness_4__1_.Q & brightness_4__2_.Q ; (9 pterms, 7 signals)
+LED_2_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+LED_3_.D = !duty_0_.Q & !duty_1_.Q & !duty_2_.Q & !duty_3_.Q
+       & brightness_5__0_.Q
+    # !duty_0_.Q & !duty_1_.Q & !duty_3_.Q & brightness_5__0_.Q
+       & brightness_5__2_.Q
+    # !duty_0_.Q & !duty_2_.Q & brightness_5__0_.Q & brightness_5__1_.Q
+    # !duty_1_.Q & !duty_2_.Q & brightness_5__1_.Q
+    # !duty_0_.Q & brightness_5__0_.Q & brightness_5__1_.Q
+       & brightness_5__2_.Q
+    # !duty_3_.Q & brightness_5__1_.Q
+    # !duty_2_.Q & !duty_3_.Q & brightness_5__2_.Q
+    # !duty_1_.Q & brightness_5__1_.Q & brightness_5__2_.Q
+    # !duty_2_.Q & brightness_5__1_.Q & brightness_5__2_.Q ; (9 pterms, 7 signals)
+LED_3_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+LED_4_.D = !duty_0_.Q & !duty_1_.Q & !duty_2_.Q & !duty_3_.Q
+       & brightness_6__0_.Q
+    # !duty_0_.Q & !duty_1_.Q & !duty_3_.Q & brightness_6__0_.Q
+       & brightness_6__2_.Q
+    # !duty_0_.Q & !duty_2_.Q & brightness_6__0_.Q & brightness_6__1_.Q
+    # !duty_1_.Q & !duty_2_.Q & brightness_6__1_.Q
+    # !duty_0_.Q & brightness_6__0_.Q & brightness_6__1_.Q
+       & brightness_6__2_.Q
+    # !duty_3_.Q & brightness_6__1_.Q
+    # !duty_2_.Q & !duty_3_.Q & brightness_6__2_.Q
+    # !duty_1_.Q & brightness_6__1_.Q & brightness_6__2_.Q
+    # !duty_2_.Q & brightness_6__1_.Q & brightness_6__2_.Q ; (9 pterms, 7 signals)
+LED_4_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+LED_5_.D = !duty_0_.Q & !duty_1_.Q & !duty_2_.Q & !duty_3_.Q
+       & brightness_7__0_.Q
+    # !duty_0_.Q & !duty_1_.Q & !duty_3_.Q & brightness_7__0_.Q
+       & brightness_7__2_.Q
+    # !duty_0_.Q & !duty_2_.Q & brightness_7__0_.Q & brightness_7__1_.Q
+    # !duty_1_.Q & !duty_2_.Q & brightness_7__1_.Q
+    # !duty_0_.Q & brightness_7__0_.Q & brightness_7__1_.Q
+       & brightness_7__2_.Q
+    # !duty_3_.Q & brightness_7__1_.Q
+    # !duty_2_.Q & !duty_3_.Q & brightness_7__2_.Q
+    # !duty_1_.Q & brightness_7__1_.Q & brightness_7__2_.Q
+    # !duty_2_.Q & brightness_7__1_.Q & brightness_7__2_.Q ; (9 pterms, 7 signals)
+LED_5_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+LED_6_.D = !duty_0_.Q & !duty_1_.Q & !duty_2_.Q & !duty_3_.Q
+       & brightness_8__0_.Q
+    # !duty_0_.Q & !duty_1_.Q & !duty_3_.Q & brightness_8__0_.Q
+       & brightness_8__2_.Q
+    # !duty_0_.Q & !duty_2_.Q & brightness_8__0_.Q & brightness_8__1_.Q
+    # !duty_1_.Q & !duty_2_.Q & brightness_8__1_.Q
+    # !duty_0_.Q & brightness_8__0_.Q & brightness_8__1_.Q
+       & brightness_8__2_.Q
+    # !duty_3_.Q & brightness_8__1_.Q
+    # !duty_2_.Q & !duty_3_.Q & brightness_8__2_.Q
+    # !duty_1_.Q & brightness_8__1_.Q & brightness_8__2_.Q
+    # !duty_2_.Q & brightness_8__1_.Q & brightness_8__2_.Q ; (9 pterms, 7 signals)
+LED_6_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+LED_7_.D = !duty_0_.Q & !duty_1_.Q & !duty_2_.Q & !duty_3_.Q
+       & brightness_9__0_.Q
+    # !duty_0_.Q & !duty_1_.Q & !duty_3_.Q & brightness_9__0_.Q
+       & brightness_9__2_.Q
+    # !duty_0_.Q & !duty_2_.Q & brightness_9__0_.Q & brightness_9__1_.Q
+    # !duty_1_.Q & !duty_2_.Q & brightness_9__1_.Q
+    # !duty_0_.Q & brightness_9__0_.Q & brightness_9__1_.Q
+       & brightness_9__2_.Q
+    # !duty_3_.Q & brightness_9__1_.Q
+    # !duty_2_.Q & !duty_3_.Q & brightness_9__2_.Q
+    # !duty_1_.Q & brightness_9__1_.Q & brightness_9__2_.Q
+    # !duty_2_.Q & brightness_9__1_.Q & brightness_9__2_.Q ; (9 pterms, 7 signals)
+LED_7_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+brightness_2__0_.D = center_0_.Q & !center_2_.Q & !center_3_.Q ; (1 pterm, 3 signals)
+brightness_2__0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_2__0_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_2__1_.D = center_0_.Q & !inst_direction.Q & !center_1_.Q
+       & !center_2_.Q & !center_3_.Q
+    # center_0_.Q & inst_direction.Q & center_1_.Q & !center_2_.Q
+       & !center_3_.Q ; (2 pterms, 5 signals)
+brightness_2__1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_2__1_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_2__2_.D = center_0_.Q & !inst_direction.Q & !center_1_.Q
+       & !center_2_.Q & !center_3_.Q
+    # !center_0_.Q & !inst_direction.Q & center_1_.Q & !center_2_.Q
+       & !center_3_.Q
+    # center_0_.Q & inst_direction.Q & center_1_.Q & !center_2_.Q
+       & !center_3_.Q ; (3 pterms, 5 signals)
+brightness_2__2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_2__2_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_3__0_.D = !center_0_.Q & !inst_direction.Q & center_1_.Q
+       & !center_2_.Q & !center_3_.Q
+    # !center_0_.Q & !center_1_.Q & center_2_.Q & !center_3_.Q ; (2 pterms, 5 signals)
+brightness_3__0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_3__0_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_3__1_.D = !center_0_.Q & !inst_direction.Q & center_1_.Q
+       & !center_2_.Q & !center_3_.Q
+    # !center_0_.Q & inst_direction.Q & !center_1_.Q & center_2_.Q
+       & !center_3_.Q ; (2 pterms, 5 signals)
+brightness_3__1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_3__1_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_3__2_.D = !center_0_.Q & inst_direction.Q & !center_1_.Q
+       & center_2_.Q & !center_3_.Q
+    # !inst_direction.Q & center_1_.Q & !center_2_.Q & !center_3_.Q
+    # center_0_.Q & center_1_.Q & !center_2_.Q & !center_3_.Q ; (3 pterms, 5 signals)
+brightness_3__2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_3__2_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_4__0_.D = center_0_.Q & center_1_.Q & !center_2_.Q & !center_3_.Q
+    # center_0_.Q & !center_1_.Q & center_2_.Q & !center_3_.Q ; (2 pterms, 4 signals)
+brightness_4__0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_4__0_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_4__1_.D = center_0_.Q & !inst_direction.Q & center_1_.Q
+       & !center_2_.Q & !center_3_.Q
+    # center_0_.Q & inst_direction.Q & !center_1_.Q & center_2_.Q
+       & !center_3_.Q ; (2 pterms, 5 signals)
+brightness_4__1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_4__1_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_4__2_.D = center_0_.Q & !inst_direction.Q & center_1_.Q
+       & !center_2_.Q & !center_3_.Q
+    # inst_direction.Q & !center_1_.Q & center_2_.Q & !center_3_.Q
+    # !center_0_.Q & !center_1_.Q & center_2_.Q & !center_3_.Q ; (3 pterms, 5 signals)
+brightness_4__2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_4__2_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_5__0_.D = !center_0_.Q & center_2_.Q & !center_3_.Q ; (1 pterm, 3 signals)
+brightness_5__0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_5__0_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_5__1_.D = !center_0_.Q & !inst_direction.Q & !center_1_.Q
+       & center_2_.Q & !center_3_.Q
+    # !center_0_.Q & inst_direction.Q & center_1_.Q & center_2_.Q
+       & !center_3_.Q ; (2 pterms, 5 signals)
+brightness_5__1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_5__1_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_5__2_.D = !center_0_.Q & inst_direction.Q & center_1_.Q
+       & center_2_.Q & !center_3_.Q
+    # !inst_direction.Q & !center_1_.Q & center_2_.Q & !center_3_.Q
+    # center_0_.Q & !center_1_.Q & center_2_.Q & !center_3_.Q ; (3 pterms, 5 signals)
+brightness_5__2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_5__2_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_6__0_.D = center_0_.Q & center_2_.Q & !center_3_.Q ; (1 pterm, 3 signals)
+brightness_6__0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_6__0_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_6__1_.D = center_0_.Q & !inst_direction.Q & !center_1_.Q
+       & center_2_.Q & !center_3_.Q
+    # center_0_.Q & inst_direction.Q & center_1_.Q & center_2_.Q
+       & !center_3_.Q ; (2 pterms, 5 signals)
+brightness_6__1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_6__1_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_6__2_.D = center_0_.Q & !inst_direction.Q & !center_1_.Q
+       & center_2_.Q & !center_3_.Q
+    # inst_direction.Q & center_1_.Q & center_2_.Q & !center_3_.Q
+    # !center_0_.Q & center_1_.Q & center_2_.Q & !center_3_.Q ; (3 pterms, 5 signals)
+brightness_6__2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_6__2_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_7__0_.D = !center_0_.Q & center_1_.Q & center_2_.Q & !center_3_.Q
+    # !center_0_.Q & !center_1_.Q & !center_2_.Q & center_3_.Q ; (2 pterms, 4 signals)
+brightness_7__0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_7__0_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_7__1_.D = !center_0_.Q & !inst_direction.Q & center_1_.Q
+       & center_2_.Q & !center_3_.Q
+    # !center_0_.Q & inst_direction.Q & !center_1_.Q & !center_2_.Q
+       & center_3_.Q ; (2 pterms, 5 signals)
+brightness_7__1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_7__1_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_7__2_.D = !center_0_.Q & inst_direction.Q & !center_1_.Q
+       & !center_2_.Q & center_3_.Q
+    # !inst_direction.Q & center_1_.Q & center_2_.Q & !center_3_.Q
+    # center_0_.Q & center_1_.Q & center_2_.Q & !center_3_.Q ; (3 pterms, 5 signals)
+brightness_7__2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_7__2_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_8__0_.D = center_0_.Q & inst_direction.Q & !center_1_.Q
+       & !center_2_.Q & center_3_.Q
+    # center_0_.Q & center_1_.Q & center_2_.Q & !center_3_.Q ; (2 pterms, 5 signals)
+brightness_8__0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_8__0_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_8__1_.D = center_0_.Q & !inst_direction.Q & center_1_.Q
+       & center_2_.Q & !center_3_.Q
+    # center_0_.Q & inst_direction.Q & !center_1_.Q & !center_2_.Q
+       & center_3_.Q ; (2 pterms, 5 signals)
+brightness_8__1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_8__1_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_8__2_.D = center_0_.Q & !inst_direction.Q & center_1_.Q
+       & center_2_.Q & !center_3_.Q
+    # inst_direction.Q & !center_1_.Q & !center_2_.Q & center_3_.Q
+    # !center_0_.Q & !center_1_.Q & !center_2_.Q & center_3_.Q ; (3 pterms, 5 signals)
+brightness_8__2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_8__2_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_9__0_.D = !center_0_.Q & !center_2_.Q & center_3_.Q ; (1 pterm, 3 signals)
+brightness_9__0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_9__0_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_9__1_.D = !center_0_.Q & !inst_direction.Q & !center_1_.Q
+       & !center_2_.Q & center_3_.Q
+    # !center_0_.Q & inst_direction.Q & center_1_.Q & !center_2_.Q
+       & center_3_.Q ; (2 pterms, 5 signals)
+brightness_9__1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_9__1_.CE = reset_n ; (1 pterm, 1 signal)
+
+brightness_9__2_.D = !center_0_.Q & inst_direction.Q & center_1_.Q
+       & !center_2_.Q & center_3_.Q
+    # !inst_direction.Q & !center_1_.Q & !center_2_.Q & center_3_.Q
+    # center_0_.Q & !center_1_.Q & !center_2_.Q & center_3_.Q ; (3 pterms, 5 signals)
+brightness_9__2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+brightness_9__2_.CE = reset_n ; (1 pterm, 1 signal)
+
+center_0_.D = !center_0_.Q ; (1 pterm, 1 signal)
+center_0_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+center_0_.AP = !reset_n ; (1 pterm, 1 signal)
+
+center_1_.D = center_0_.Q & !inst_direction.Q & !center_1_.Q
+    # !center_0_.Q & inst_direction.Q & !center_1_.Q
+    # !center_0_.Q & !inst_direction.Q & center_1_.Q
+    # center_0_.Q & inst_direction.Q & center_1_.Q ; (4 pterms, 3 signals)
+center_1_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+center_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+center_2_.D.X1 = !center_0_.Q & inst_direction.Q & !center_1_.Q
+    # center_0_.Q & !inst_direction.Q & center_1_.Q ; (2 pterms, 3 signals)
+center_2_.D.X2 = center_2_.Q ; (1 pterm, 1 signal)
+center_2_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+center_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+center_3_.T = !center_0_.Q & inst_direction.Q & !center_1_.Q & !center_2_.Q
+    # center_0_.Q & !inst_direction.Q & center_1_.Q & center_2_.Q ; (2 pterms, 4 signals)
+center_3_.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+center_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+duty_0_.D = !duty_0_.Q ; (1 pterm, 1 signal)
+duty_0_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+duty_1_.D = duty_0_.Q & !duty_1_.Q
+    # !duty_0_.Q & duty_1_.Q ; (2 pterms, 2 signals)
+duty_1_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+duty_2_.D = duty_0_.Q & duty_1_.Q & !duty_2_.Q
+    # !duty_1_.Q & duty_2_.Q
+    # !duty_0_.Q & duty_2_.Q ; (3 pterms, 3 signals)
+duty_2_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+duty_3_.D = duty_0_.Q & duty_1_.Q & duty_2_.Q & !duty_3_.Q
+    # !duty_2_.Q & duty_3_.Q
+    # !duty_1_.Q & duty_3_.Q
+    # !duty_0_.Q & duty_3_.Q ; (4 pterms, 4 signals)
+duty_3_.C = oneMHzClock ; (1 pterm, 1 signal)
+
+inst_direction.D = !center_1_.Q ; (1 pterm, 1 signal)
+inst_direction.C = u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+inst_direction.CE = !un1_direction10_0__n ; (1 pterm, 1 signal)
+inst_direction.AR = !reset_n ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_0__uitff_q.D = !u1rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_0__uitff_q.C = !u1rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_10__uitff_q.D = !u1rs_u1rc_genblk1_10__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_10__uitff_q.C = !u1rs_u1rc_genblk1_9__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_11__uitff_q.D = !u1rs_u1rc_genblk1_11__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_11__uitff_q.C = !u1rs_u1rc_genblk1_10__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_12__uitff_q.D = !u1rs_u1rc_genblk1_12__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_12__uitff_q.C = !u1rs_u1rc_genblk1_11__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_13__uitff_q.D = !u1rs_u1rc_genblk1_13__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_13__uitff_q.C = !u1rs_u1rc_genblk1_12__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_14__uitff_q.D = !u1rs_u1rc_genblk1_14__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_14__uitff_q.C = !u1rs_u1rc_genblk1_13__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_1__uitff_q.D = !u1rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_1__uitff_q.C = !u1rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_2__uitff_q.D = !u1rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_2__uitff_q.C = !u1rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_3__uitff_q.D = !u1rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_3__uitff_q.C = !u1rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_4__uitff_q.D = !u1rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_4__uitff_q.C = !u1rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_5__uitff_q.D = !u1rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_5__uitff_q.C = !u1rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_6__uitff_q.D = !u1rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_6__uitff_q.C = !u1rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_7__uitff_q.D = !u1rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_7__uitff_q.C = !u1rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_8__uitff_q.D = !u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_8__uitff_q.C = !u1rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_9__uitff_q.D = !u1rs_u1rc_genblk1_9__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_9__uitff_q.C = !u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_u0tff_q.D = !u1rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+un1_direction10_0__n = !( center_0_.Q & inst_direction.Q & center_1_.Q
+       & !center_2_.Q & !center_3_.Q
+    # !center_0_.Q & !inst_direction.Q & !center_1_.Q & !center_2_.Q
+       & center_3_.Q ) ; (2 pterms, 5 signals)
+
+
+
+

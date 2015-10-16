@@ -1,0 +1,4 @@
+. ALU_7_demo alu_7_demo.abl c:\users\tmcphillips\designs\projects\mach64\abel\alu\alu_7\alu_7_demo.abl
+scaler TenBitRippleCounter tenbitripplecounter.abl c:\users\tmcphillips\designs\projects\mach64\abel\alu\alu_7\tenbitripplecounter.abl
+alu ALU_7 alu_7.abl c:\users\tmcphillips\designs\projects\mach64\abel\alu\alu_7\alu_7.abl
+debouncer Debouncer debouncer.abl c:\users\tmcphillips\designs\projects\mach64\abel\alu\alu_7\debouncer.abl

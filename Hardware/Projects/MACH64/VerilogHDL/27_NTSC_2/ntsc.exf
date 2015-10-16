@@ -1,0 +1,309 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// ------------------------------------------------------------------------------------------
+      Port          1      video[2:0]                    video                  2          3            -1
+      Port          2      hState[1:0]                   hState                  1          2            -1
+      Port          3      vState[1:0]                   vState                  1          2            -1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      video_2_                    video[2]                       1            0            
+        Port      video_1_                    video[1]                       1            1            
+        Port      video_0_                    video[0]                       1            2            
+        Port      hState_1_                   hState[1]                       2            0            
+        Port      hState_0_                   hState[0]                       2            1            
+        Port      vState_1_                   vState[1]                       3            0            
+        Port      vState_0_                   vState[0]                       3            1            
+End
+Section Cross Reference File
+Design 'ntsc' created Tue Feb 21 17:01:15 2012
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst     vState_8_1_0__m8_r                        vState_8_1_0_.m8.r
+   Inst     vState_8_1_0__m8_m                        vState_8_1_0_.m8.m
+   Inst     vState_8_1_0__m8_n                        vState_8_1_0_.m8.n
+   Inst     vState_8_1_0__m8_p                        vState_8_1_0_.m8.p
+   Inst     vState_8_1_0__m5_r                        vState_8_1_0_.m5.r
+   Inst     vState_8_1_0__m5_m                        vState_8_1_0_.m5.m
+   Inst     vState_8_1_0__m5_n                        vState_8_1_0_.m5.n
+   Inst     vState_8_1_0__m5_p                        vState_8_1_0_.m5.p
+   Inst             scanY_6_1_                                scanY_6[1]
+   Inst             scanY_6_8_                                scanY_6[8]
+   Inst             scanX_i_3_                                scanX_i[3]
+   Inst               scanY_0_                                  scanY[0]
+   Inst             scanX_i_4_                                scanX_i[4]
+   Inst               scanY_1_                                  scanY[1]
+   Inst               scanY_2_                                  scanY[2]
+   Inst               scanY_3_                                  scanY[3]
+   Inst             scanY_6_2_                                scanY_6[2]
+   Inst               scanY_4_                                  scanY[4]
+   Inst             scanY_i_1_                                scanY_i[1]
+   Inst               scanY_5_                                  scanY[5]
+   Inst               scanY_6_                                  scanY[6]
+   Inst           scanY_1_i_4_                              scanY_1_i[4]
+   Inst               scanY_7_                                  scanY[7]
+   Inst           scanY_1_i_6_                              scanY_1_i[6]
+   Inst               scanY_8_                                  scanY[8]
+   Inst           scanY_1_i_5_                              scanY_1_i[5]
+   Inst               ballX_2_                                  ballX[2]
+   Inst           scanY_1_i_3_                              scanY_1_i[3]
+   Inst               ballX_3_                                  ballX[3]
+   Inst           scanY_1_i_1_                              scanY_1_i[1]
+   Inst               ballX_4_                                  ballX[4]
+   Inst           scanY_1_i_2_                              scanY_1_i[2]
+   Inst               ballX_5_                                  ballX[5]
+   Inst           scanY_1_i_8_                              scanY_1_i[8]
+   Inst               ballY_0_                                  ballY[0]
+   Inst           scanY_1_i_7_                              scanY_1_i[7]
+   Inst               ballY_1_                                  ballY[1]
+   Inst               ballY_2_                                  ballY[2]
+   Inst             scanX_4_0_                                scanX_4[0]
+   Inst               ballY_3_                                  ballY[3]
+   Inst             scanX_4_5_                                scanX_4[5]
+   Inst               ballY_4_                                  ballY[4]
+   Inst             scanX_4_6_                                scanX_4[6]
+   Inst               ballY_5_                                  ballY[5]
+   Inst             scanX_4_7_                                scanX_4[7]
+   Inst           scanX_2_i_5_                              scanX_2_i[5]
+   Inst           scanX_2_i_3_                              scanX_2_i[3]
+   Inst           scanX_2_i_1_                              scanX_2_i[1]
+   Inst           scanX_2_i_2_                              scanX_2_i[2]
+   Inst               scanX_0_                                  scanX[0]
+   Inst           scanX_2_i_4_                              scanX_2_i[4]
+   Inst               scanX_1_                                  scanX[1]
+   Inst           scanX_2_i_7_                              scanX_2_i[7]
+   Inst               scanX_2_                                  scanX[2]
+   Inst           scanX_2_i_6_                              scanX_2_i[6]
+   Inst               scanX_3_                                  scanX[3]
+   Inst               scanX_4_                                  scanX[4]
+   Inst             scanX_i_0_                                scanX_i[0]
+   Inst               scanX_5_                                  scanX[5]
+   Inst    vState_8_1_0__N_3_i                       vState_8_1_0_.N_3_i
+   Inst               scanX_6_                                  scanX[6]
+   Inst     vState_8_1_0__m6_r                        vState_8_1_0_.m6.r
+   Inst               scanX_7_                                  scanX[7]
+   Inst     vState_8_1_0__m6_m                        vState_8_1_0_.m6.m
+   Inst               ballX_0_                                  ballX[0]
+   Inst     vState_8_1_0__m6_n                        vState_8_1_0_.m6.n
+   Inst               ballX_1_                                  ballX[1]
+   Inst     vState_8_1_0__m6_p                        vState_8_1_0_.m6.p
+   Inst             scanX_i_2_                                scanX_i[2]
+   Inst               video_0_                                  video[0]
+   Inst               video_1_                                  video[1]
+   Inst               video_2_                                  video[2]
+   Inst              hState_0_                                 hState[0]
+   Inst              hState_1_                                 hState[1]
+   Inst              vState_0_                                 vState[0]
+   Inst              vState_1_                                 vState[1]
+   Inst     vState_8_1_0__m2_r                        vState_8_1_0_.m2.r
+   Inst     vState_8_1_0__m2_m                        vState_8_1_0_.m2.m
+   Inst     vState_8_1_0__m2_n                        vState_8_1_0_.m2.n
+   Inst     vState_8_1_0__m2_p                        vState_8_1_0_.m2.p
+   Inst     hState_6_1_0__m5_r                        hState_6_1_0_.m5.r
+   Inst     hState_6_1_0__m5_m                        hState_6_1_0_.m5.m
+   Inst     hState_6_1_0__m5_n                        hState_6_1_0_.m5.n
+   Inst     hState_6_1_0__m5_p                        hState_6_1_0_.m5.p
+   Inst     hState_6_1_0__m2_r                        hState_6_1_0_.m2.r
+   Inst     hState_6_1_0__m2_m                        hState_6_1_0_.m2.m
+   Inst     hState_6_1_0__m2_n                        hState_6_1_0_.m2.n
+   Inst     hState_6_1_0__m2_p                        hState_6_1_0_.m2.p
+   Inst            hState_i_0_                               hState_i[0]
+   Inst        video_7_0_o2_0_                           video_7_0_o2[0]
+   Inst     hState_6_1_0__m9_r                        hState_6_1_0_.m9.r
+   Inst     hState_6_1_0__m9_m                        hState_6_1_0_.m9.m
+   Inst     hState_6_1_0__m9_n                        hState_6_1_0_.m9.n
+   Inst     hState_6_1_0__m9_p                        hState_6_1_0_.m9.p
+   Inst     hState_6_1_0__m8_r                        hState_6_1_0_.m8.r
+   Inst     hState_6_1_0__m8_m                        hState_6_1_0_.m8.m
+   Inst     hState_6_1_0__m8_n                        hState_6_1_0_.m8.n
+   Inst     hState_6_1_0__m8_p                        hState_6_1_0_.m8.p
+   Inst    hState_6_1_0__N_3_i                       hState_6_1_0_.N_3_i
+   Inst     hState_6_1_0__m6_r                        hState_6_1_0_.m6.r
+   Inst     hState_6_1_0__m6_m                        hState_6_1_0_.m6.m
+   Inst     hState_6_1_0__m6_n                        hState_6_1_0_.m6.n
+   Inst     hState_6_1_0__m6_p                        hState_6_1_0_.m6.p
+   Inst        video_7_0_a2_0_                           video_7_0_a2[0]
+   Inst      video_7_0_a2_0_0_                         video_7_0_a2_0[0]
+   Inst             scanY_i_0_                                scanY_i[0]
+   Inst         video_7_0_1_0_                            video_7_0_1[0]
+   Inst           video_7_0_0_                              video_7_0[0]
+   Inst    video_7_0_a2_1_1_0_                       video_7_0_a2_1_1[0]
+   Inst      video_7_0_a2_1_0_                         video_7_0_a2_1[0]
+   Inst             ballX_i_4_                                ballX_i[4]
+   Inst          hState_c_i_1_                             hState_c_i[1]
+   Inst      video_7_0_o2_i_0_                         video_7_0_o2_i[0]
+   Inst         video_7_0_i_0_                            video_7_0_i[0]
+   Inst             ballX_i_2_                                ballX_i[2]
+   Inst             ballY_i_0_                                ballY_i[0]
+   Inst             ballY_i_1_                                ballY_i[1]
+   Inst             ballY_i_2_                                ballY_i[2]
+   Inst             ballY_i_4_                                ballY_i[4]
+   Inst             ballX_i_0_                                ballX_i[0]
+   Inst             ballX_i_1_                                ballX_i[1]
+   Inst            vState_i_1_                               vState_i[1]
+   Inst            vState_i_0_                               vState_i[0]
+   Inst     vState_8_1_0__m9_r                        vState_8_1_0_.m9.r
+   Inst     vState_8_1_0__m9_m                        vState_8_1_0_.m9.m
+   Inst     vState_8_1_0__m9_n                        vState_8_1_0_.m9.n
+   Inst     vState_8_1_0__m9_p                        vState_8_1_0_.m9.p
+   Net            bally_i_4__n                                ballY_i[4]
+   Net            ballx_i_0__n                                ballX_i[0]
+   Net              scanx_0__n                                  scanX[0]
+   Net            ballx_i_1__n                                ballX_i[1]
+   Net              scany_3__n                                  scanY[3]
+   Net              scany_4__n                                  scanY[4]
+   Net            ballx_i_2__n                                ballX_i[2]
+   Net              scany_5__n                                  scanY[5]
+   Net              scany_6__n                                  scanY[6]
+   Net              scany_7__n                                  scanY[7]
+   Net              scany_8__n                                  scanY[8]
+   Net              bally_0__n                                  ballY[0]
+   Net            bally_i_0__n                                ballY_i[0]
+   Net              bally_1__n                                  ballY[1]
+   Net              bally_2__n                                  ballY[2]
+   Net            bally_i_1__n                                ballY_i[1]
+   Net              bally_3__n                                  ballY[3]
+   Net              bally_4__n                                  ballY[4]
+   Net            bally_i_2__n                                ballY_i[2]
+   Net              bally_5__n                                  ballY[5]
+   Net            ballx_5_0__n                                ballX_5[0]
+   Net              ballx_0__n                                  ballX[0]
+   Net              ballx_1__n                                  ballX[1]
+   Net              ballx_2__n                                  ballX[2]
+   Net         hstate_c_i_1__n                             hState_c_i[1]
+   Net              ballx_3__n                                  ballX[3]
+   Net              ballx_4__n                                  ballX[4]
+   Net              ballx_5__n                                  ballX[5]
+   Net            bally_5_0__n                                ballY_5[0]
+   Net            scanx_2_1__n                                scanX_2[1]
+   Net          video_7_0_0__n                              video_7_0[0]
+   Net            scanx_2_2__n                                scanX_2[2]
+   Net            scanx_2_3__n                                scanX_2[3]
+   Net            scanx_2_4__n                                scanX_2[4]
+   Net              scanx_1__n                                  scanX[1]
+   Net              scanx_2__n                                  scanX[2]
+   Net              scanx_3__n                                  scanX[3]
+   Net              scanx_4__n                                  scanX[4]
+   Net              scanx_5__n                                  scanX[5]
+   Net              scanx_6__n                                  scanX[6]
+   Net              scanx_7__n                                  scanX[7]
+   Net            scany_1_2__n                                scanY_1[2]
+   Net            scany_1_3__n                                scanY_1[3]
+   Net            scany_1_4__n                                scanY_1[4]
+   Net            scany_1_5__n                                scanY_1[5]
+   Net            scany_1_6__n                                scanY_1[6]
+   Net            scany_1_7__n                                scanY_1[7]
+   Net            scany_1_8__n                                scanY_1[8]
+   Net              scany_0__n                                  scanY[0]
+   Net              scany_1__n                                  scanY[1]
+   Net              scany_2__n                                  scanY[2]
+   Net            ballx_i_4__n                                ballX_i[4]
+   Net            scanx_4_0__n                                scanX_4[0]
+   Net            scanx_4_5__n                                scanX_4[5]
+   Net            scanx_4_6__n                                scanX_4[6]
+   Net            scanx_4_7__n                                scanX_4[7]
+   Net            video_7_0__n                                video_7[0]
+   Net           hstate_6_0__n                               hState_6[0]
+   Net           hstate_6_1__n                               hState_6[1]
+   Net        video_7_0_1_0__n                            video_7_0_1[0]
+   Net          video_7_1_1__n                              video_7_1[1]
+   Net            video_7_1__n                                video_7[1]
+   Net          bally_5_1_0__n                              ballY_5_1[0]
+   Net          ballx_5_1_0__n                              ballX_5_1[0]
+   Net            scanx_2_5__n                                scanX_2[5]
+   Net     hstate_6_1_0__n_9_n                         hState_6_1_0_.N_9
+   Net     hstate_6_1_0__n_3_n                         hState_6_1_0_.N_3
+   Net     hstate_6_1_0__n_6_n                         hState_6_1_0_.N_6
+   Net    vstate_8_1_0__m9_un3_n                      vState_8_1_0_.m9.un3
+   Net           vstate_8_0__n                               vState_8[0]
+   Net    vstate_8_1_0__m9_un1_n                      vState_8_1_0_.m9.un1
+   Net    vstate_8_1_0__m9_un0_n                      vState_8_1_0_.m9.un0
+   Net    vstate_8_1_0__m8_un3_n                      vState_8_1_0_.m8.un3
+   Net    vstate_8_1_0__m8_un1_n                      vState_8_1_0_.m8.un1
+   Net     vstate_8_1_0__n_3_n                         vState_8_1_0_.N_3
+   Net    vstate_8_1_0__m8_un0_n                      vState_8_1_0_.m8.un0
+   Net    vstate_8_1_0__m5_un3_n                      vState_8_1_0_.m5.un3
+   Net    vstate_8_1_0__m5_un1_n                      vState_8_1_0_.m5.un1
+   Net     vstate_8_1_0__n_6_n                         vState_8_1_0_.N_6
+   Net    vstate_8_1_0__m5_un0_n                      vState_8_1_0_.m5.un0
+   Net    vstate_8_1_0__m6_un3_n                      vState_8_1_0_.m6.un3
+   Net    vstate_8_1_0__m6_un1_n                      vState_8_1_0_.m6.un1
+   Net            scanx_2_7__n                                scanX_2[7]
+   Net    vstate_8_1_0__m6_un0_n                      vState_8_1_0_.m6.un0
+   Net            scanx_2_6__n                                scanX_2[6]
+   Net    vstate_8_1_0__m2_un3_n                      vState_8_1_0_.m2.un3
+   Net            scany_6_2__n                                scanY_6[2]
+   Net    vstate_8_1_0__m2_un1_n                      vState_8_1_0_.m2.un1
+   Net            scany_1_1__n                                scanY_1[1]
+   Net    vstate_8_1_0__m2_un0_n                      vState_8_1_0_.m2.un0
+   Net    hstate_6_1_0__m5_un3_n                      hState_6_1_0_.m5.un3
+   Net    hstate_6_1_0__m5_un1_n                      hState_6_1_0_.m5.un1
+   Net    hstate_6_1_0__m5_un0_n                      hState_6_1_0_.m5.un0
+   Net           vstate_8_1__n                               vState_8[1]
+   Net    hstate_6_1_0__m2_un3_n                      hState_6_1_0_.m2.un3
+   Net     vstate_8_1_0__n_9_n                         vState_8_1_0_.N_9
+   Net    hstate_6_1_0__m2_un1_n                      hState_6_1_0_.m2.un1
+   Net            scany_6_1__n                                scanY_6[1]
+   Net    hstate_6_1_0__m2_un0_n                      hState_6_1_0_.m2.un0
+   Net            scany_6_8__n                                scanY_6[8]
+   Net    hstate_6_1_0__m9_un3_n                      hState_6_1_0_.m9.un3
+   Net    hstate_6_1_0__m9_un1_n                      hState_6_1_0_.m9.un1
+   Net    hstate_6_1_0__m9_un0_n                      hState_6_1_0_.m9.un0
+   Net    hstate_6_1_0__m8_un3_n                      hState_6_1_0_.m8.un3
+   Net           vstate_i_1__n                               vState_i[1]
+   Net    hstate_6_1_0__m8_un1_n                      hState_6_1_0_.m8.un1
+   Net           vstate_i_0__n                               vState_i[0]
+   Net    hstate_6_1_0__m8_un0_n                      hState_6_1_0_.m8.un0
+   Net          scany_1_i_7__n                              scanY_1_i[7]
+   Net    hstate_6_1_0__m6_un3_n                      hState_6_1_0_.m6.un3
+   Net          scany_1_i_8__n                              scanY_1_i[8]
+   Net    hstate_6_1_0__m6_un1_n                      hState_6_1_0_.m6.un1
+   Net          scany_1_i_2__n                              scanY_1_i[2]
+   Net    hstate_6_1_0__m6_un0_n                      hState_6_1_0_.m6.un0
+   Net          scany_1_i_3__n                              scanY_1_i[3]
+   Net          scany_1_i_1__n                              scanY_1_i[1]
+   Net          scany_1_i_6__n                              scanY_1_i[6]
+   Net          scany_1_i_5__n                              scanY_1_i[5]
+   Net          scany_1_i_4__n                              scanY_1_i[4]
+   Net            scany_i_1__n                                scanY_i[1]
+   Net          scanx_i_0_3__n                              scanX_i_0[3]
+   Net            scanx_i_4__n                                scanX_i[4]
+   Net            scanx_i_0__n                                scanX_i[0]
+   Net          scanx_2_i_7__n                              scanX_2_i[7]
+   Net          scanx_2_i_6__n                              scanX_2_i[6]
+   Net          scanx_2_i_2__n                              scanX_2_i[2]
+   Net          scanx_2_i_4__n                              scanX_2_i[4]
+   Net          scanx_2_i_1__n                              scanX_2_i[1]
+   Net          scanx_2_i_5__n                              scanX_2_i[5]
+   Net          scanx_2_i_3__n                              scanX_2_i[3]
+   Net          scanx_i_0_2__n                              scanX_i_0[2]
+   Net    vstate_8_1_0__n_3_i_n                       vState_8_1_0_.N_3_i
+   Net           hstate_i_0__n                               hState_i[0]
+   Net    hstate_6_1_0__n_3_i_n                       hState_6_1_0_.N_3_i
+   Net            scany_i_0__n                                scanY_i[0]
+   Net            video_c_0__n                                video_c[0]
+   Net              video_0__n                                  video[0]
+   Net            video_c_1__n                                video_c[1]
+   Net              video_1__n                                  video[1]
+   Net            video_c_2__n                                video_c[2]
+   Net           hstate_c_0__n                               hState_c[0]
+   Net             hstate_0__n                                 hState[0]
+   Net           hstate_c_1__n                               hState_c[1]
+   Net           vstate_c_0__n                               vState_c[0]
+   Net             vstate_0__n                                 vState[0]
+   Net           vstate_c_1__n                               vState_c[1]
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     ntscClock
+        Input     left_n
+        Input     right_n
+        Input     up_n
+        Input     down_n
+        Output     video_2_
+        Output     hState_1_
+        Output     vState_1_
+        Output     video_1_
+        Output     video_0_
+        Output     hState_0_
+        Output     vState_0_
+End

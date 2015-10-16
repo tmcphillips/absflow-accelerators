@@ -1,0 +1,364 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// -------------------------------------------------------------------------------------------------
+      Port          1      opcode[3:0]                   opcode                  3          4            -1
+      Port          2      a[3:0]                        a                  3          4            -1
+      Port          3      b[3:0]                        b                  3          4            -1
+      Port          4      c[3:0]                        c                  3          4            -1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      opcode_3_                   opcode[3]                       1            0            
+        Port      opcode_2_                   opcode[2]                       1            1            
+        Port      opcode_1_                   opcode[1]                       1            2            
+        Port      opcode_0_                   opcode[0]                       1            3            
+        Port      a_3_                        a[3]                       2            0            
+        Port      a_2_                        a[2]                       2            1            
+        Port      a_1_                        a[1]                       2            2            
+        Port      a_0_                        a[0]                       2            3            
+        Port      b_3_                        b[3]                       3            0            
+        Port      b_2_                        b[2]                       3            1            
+        Port      b_1_                        b[1]                       3            2            
+        Port      b_0_                        b[0]                       3            3            
+        Port      c_3_                        c[3]                       4            0            
+        Port      c_2_                        c[2]                       4            1            
+        Port      c_1_                        c[1]                       4            2            
+        Port      c_0_                        c[0]                       4            3            
+End
+Section Cross Reference File
+Design 'ALU' created Thu Jan 26 12:59:28 2012
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst              opcode_0_                                 opcode[0]
+   Inst              opcode_1_                                 opcode[1]
+   Inst              opcode_2_                                 opcode[2]
+   Inst              opcode_3_                                 opcode[3]
+   Inst                   a_0_                                      a[0]
+   Inst                   a_1_                                      a[1]
+   Inst                   a_2_                                      a[2]
+   Inst                   a_3_                                      a[3]
+   Inst                   b_0_                                      b[0]
+   Inst                   b_1_                                      b[1]
+   Inst                   b_2_                                      b[2]
+   Inst                   b_3_                                      b[3]
+   Inst                   c_0_                                      c[0]
+   Inst                   c_1_                                      c[1]
+   Inst                   c_2_                                      c[2]
+   Inst                   c_3_                                      c[3]
+   Inst               a_m_1_3_                                  a_m_1[3]
+   Inst               a_m_2_3_                                  a_m_2[3]
+   Inst                 a_m_3_                                    a_m[3]
+   Inst               a_m_1_0_                                  a_m_1[0]
+   Inst             a_m_2_0_0_                                a_m_2_0[0]
+   Inst                 a_m_0_                                    a_m[0]
+   Inst             c_2_0_1_1_                                c_2_0_1[1]
+   Inst               c_2_0_1_                                  c_2_0[1]
+   Inst         un4_c_1_m_1_4_                            un4_c_1_m_1[4]
+   Inst         un4_c_1_m_2_4_                            un4_c_1_m_2[4]
+   Inst         un4_c_1_m_3_4_                            un4_c_1_m_3[4]
+   Inst           un4_c_1_m_4_                              un4_c_1_m[4]
+   Inst               b_c_i_0_                                  b_c_i[0]
+   Inst               c_3_i_0_                                  c_3_i[0]
+   Inst               b_c_i_1_                                  b_c_i[1]
+   Inst               c_3_i_1_                                  c_3_i[1]
+   Inst               b_c_i_2_                                  b_c_i[2]
+   Inst               c_3_i_2_                                  c_3_i[2]
+   Inst               b_c_i_3_                                  b_c_i[3]
+   Inst               c_3_i_3_                                  c_3_i[3]
+   Inst         un4_c_1_m_i_4_                            un4_c_1_m_i[4]
+   Inst               a_m_i_3_                                  a_m_i[3]
+   Inst               a_m_i_0_                                  a_m_i[0]
+   Inst               c_0_0__r                                  c_0_0_.r
+   Inst               c_0_0__m                                  c_0_0_.m
+   Inst               c_0_0__n                                  c_0_0_.n
+   Inst               c_0_0__p                                  c_0_0_.p
+   Inst                 c_3_3_                                    c_3[3]
+   Inst                 c_3_2_                                    c_3[2]
+   Inst                 c_3_1_                                    c_3[1]
+   Inst                 c_3_0_                                    c_3[0]
+   Inst                 c_2_3_                                    c_2[3]
+   Inst                 c_2_2_                                    c_2[2]
+   Inst                 c_2_1_                                    c_2[1]
+   Inst                 c_2_0_                                    c_2[0]
+   Inst          un26_c_i_i_3_                             un26_c_i_i[3]
+   Inst             c_2_0_3__r                                c_2_0_3_.r
+   Inst             c_2_0_3__m                                c_2_0_3_.m
+   Inst             c_2_0_3__n                                c_2_0_3_.n
+   Inst             c_2_0_3__p                                c_2_0_3_.p
+   Inst          un26_c_i_i_2_                             un26_c_i_i[2]
+   Inst             c_2_0_2__r                                c_2_0_2_.r
+   Inst             c_2_0_2__m                                c_2_0_2_.m
+   Inst             c_2_0_2__n                                c_2_0_2_.n
+   Inst             c_2_0_2__p                                c_2_0_2_.p
+   Inst                 a_i_3_                                    a_i[3]
+   Inst               c_1_3__r                                  c_1_3_.r
+   Inst               c_1_3__m                                  c_1_3_.m
+   Inst               c_1_3__n                                  c_1_3_.n
+   Inst               c_1_3__p                                  c_1_3_.p
+   Inst                 a_i_2_                                    a_i[2]
+   Inst               c_1_2__r                                  c_1_2_.r
+   Inst               c_1_2__m                                  c_1_2_.m
+   Inst               c_1_2__n                                  c_1_2_.n
+   Inst               c_1_2__p                                  c_1_2_.p
+   Inst                 a_i_1_                                    a_i[1]
+   Inst               c_1_1__r                                  c_1_1_.r
+   Inst               c_1_1__m                                  c_1_1_.m
+   Inst               c_1_1__n                                  c_1_1_.n
+   Inst               c_1_1__p                                  c_1_1_.p
+   Inst                 a_i_0_                                    a_i[0]
+   Inst               c_1_0__r                                  c_1_0_.r
+   Inst               c_1_0__m                                  c_1_0_.m
+   Inst               c_1_0__n                                  c_1_0_.n
+   Inst               c_1_0__p                                  c_1_0_.p
+   Inst               c_0_3__r                                  c_0_3_.r
+   Inst               c_0_3__m                                  c_0_3_.m
+   Inst               c_0_3__n                                  c_0_3_.n
+   Inst               c_0_3__p                                  c_0_3_.p
+   Inst               c_0_2__r                                  c_0_2_.r
+   Inst               c_0_2__m                                  c_0_2_.m
+   Inst               c_0_2__n                                  c_0_2_.n
+   Inst               c_0_2__p                                  c_0_2_.p
+   Inst               c_0_1__r                                  c_0_1_.r
+   Inst               c_0_1__m                                  c_0_1_.m
+   Inst               c_0_1__n                                  c_0_1_.n
+   Inst               c_0_1__p                                  c_0_1_.p
+   Inst               c_3_0_0_                                  c_3_0[0]
+   Inst              cmux_3__r                                 cmux_3_.r
+   Inst              cmux_3__m                                 cmux_3_.m
+   Inst              cmux_3__n                                 cmux_3_.n
+   Inst              cmux_3__p                                 cmux_3_.p
+   Inst              cmux_2__r                                 cmux_2_.r
+   Inst              cmux_2__m                                 cmux_2_.m
+   Inst              cmux_2__n                                 cmux_2_.n
+   Inst              cmux_2__p                                 cmux_2_.p
+   Inst              cmux_1__r                                 cmux_1_.r
+   Inst              cmux_1__m                                 cmux_1_.m
+   Inst              cmux_1__n                                 cmux_1_.n
+   Inst              cmux_1__p                                 cmux_1_.p
+   Inst              cmux_0__r                                 cmux_0_.r
+   Inst              cmux_0__m                                 cmux_0_.m
+   Inst              cmux_0__n                                 cmux_0_.n
+   Inst              cmux_0__p                                 cmux_0_.p
+   Inst               c_5_3__r                                  c_5_3_.r
+   Inst               c_5_3__m                                  c_5_3_.m
+   Inst               c_5_3__n                                  c_5_3_.n
+   Inst               c_5_3__p                                  c_5_3_.p
+   Inst               c_5_2__r                                  c_5_2_.r
+   Inst               c_5_2__m                                  c_5_2_.m
+   Inst               c_5_2__n                                  c_5_2_.n
+   Inst               c_5_2__p                                  c_5_2_.p
+   Inst               c_5_1__r                                  c_5_1_.r
+   Inst               c_5_1__m                                  c_5_1_.m
+   Inst               c_5_1__n                                  c_5_1_.n
+   Inst               c_5_1__p                                  c_5_1_.p
+   Inst               c_5_0__r                                  c_5_0_.r
+   Inst               c_5_0__m                                  c_5_0_.m
+   Inst               c_5_0__n                                  c_5_0_.n
+   Inst               c_5_0__p                                  c_5_0_.p
+   Inst             c_4_0_3__r                                c_4_0_3_.r
+   Inst             c_4_0_3__m                                c_4_0_3_.m
+   Inst             c_4_0_3__n                                c_4_0_3_.n
+   Inst             c_4_0_3__p                                c_4_0_3_.p
+   Inst             c_4_0_2__r                                c_4_0_2_.r
+   Inst             c_4_0_2__m                                c_4_0_2_.m
+   Inst             c_4_0_2__n                                c_4_0_2_.n
+   Inst             c_4_0_2__p                                c_4_0_2_.p
+   Inst             c_4_0_1__r                                c_4_0_1_.r
+   Inst             c_4_0_1__m                                c_4_0_1_.m
+   Inst             c_4_0_1__n                                c_4_0_1_.n
+   Inst             c_4_0_1__p                                c_4_0_1_.p
+   Inst             c_4_0_0__r                                c_4_0_0_.r
+   Inst             c_4_0_0__m                                c_4_0_0_.m
+   Inst             c_4_0_0__n                                c_4_0_0_.n
+   Inst             c_4_0_0__p                                c_4_0_0_.p
+   Inst             c_3_0_2__r                                c_3_0_2_.r
+   Inst             c_3_0_2__m                                c_3_0_2_.m
+   Inst             c_3_0_2__n                                c_3_0_2_.n
+   Inst             c_3_0_2__p                                c_3_0_2_.p
+   Inst             c_3_0_1__r                                c_3_0_1_.r
+   Inst             c_3_0_1__m                                c_3_0_1_.m
+   Inst             c_3_0_1__n                                c_3_0_1_.n
+   Inst             c_3_0_1__p                                c_3_0_1_.p
+   Inst                 c_4_3_                                    c_4[3]
+   Inst                 c_4_2_                                    c_4[2]
+   Inst                 c_4_0_                                    c_4[0]
+   Inst                 c_4_1_                                    c_4[1]
+   Inst                 c_i_3_                                    c_i[3]
+   Inst                 c_i_2_                                    c_i[2]
+   Inst                 c_i_1_                                    c_i[1]
+   Inst                 c_i_0_                                    c_i[0]
+   Inst            opcode_i_1_                               opcode_i[1]
+   Inst               a_m_2_0_                                  a_m_2[0]
+   Inst            opcode_i_0_                               opcode_i[0]
+   Inst               c_3_0_3_                                  c_3_0[3]
+   Net                c_4_3__n                                    c_4[3]
+   Net           un26_c_i_3__n                               un26_c_i[3]
+   Net                c_4_2__n                                    c_4[2]
+   Net           un26_c_i_2__n                               un26_c_i[2]
+   Net                c_4_0__n                                    c_4[0]
+   Net                c_4_1__n                                    c_4[1]
+   Net                a_m_0__n                                    a_m[0]
+   Net                a_m_3__n                                    a_m[3]
+   Net          un4_c_1_m_4__n                              un4_c_1_m[4]
+   Net              a_m_2_3__n                                  a_m_2[3]
+   Net            un4_c_1_3__n                                un4_c_1[3]
+   Net            un4_c_1_2__n                                un4_c_1[2]
+   Net                c_2_3__n                                    c_2[3]
+   Net                c_3_3__n                                    c_3[3]
+   Net                c_2_2__n                                    c_2[2]
+   Net                c_3_2__n                                    c_3[2]
+   Net                c_2_1__n                                    c_2[1]
+   Net                c_3_1__n                                    c_3[1]
+   Net                c_2_0__n                                    c_2[0]
+   Net                c_3_0__n                                    c_3[0]
+   Net                a_i_0__n                                    a_i[0]
+   Net                a_i_1__n                                    a_i[1]
+   Net                a_i_2__n                                    a_i[2]
+   Net                a_i_3__n                                    a_i[3]
+   Net         un26_c_i_i_2__n                             un26_c_i_i[2]
+   Net         un26_c_i_i_3__n                             un26_c_i_i[3]
+   Net           opcode_i_0__n                               opcode_i[0]
+   Net           opcode_i_1__n                               opcode_i[1]
+   Net                c_i_1__n                                    c_i[1]
+   Net                c_i_0__n                                    c_i[0]
+   Net                c_i_3__n                                    c_i[3]
+   Net                c_i_2__n                                    c_i[2]
+   Net           opcode_c_0__n                               opcode_c[0]
+   Net             opcode_0__n                                 opcode[0]
+   Net           opcode_c_1__n                               opcode_c[1]
+   Net             opcode_1__n                                 opcode[1]
+   Net           opcode_c_2__n                               opcode_c[2]
+   Net             opcode_2__n                                 opcode[2]
+   Net           opcode_c_3__n                               opcode_c[3]
+   Net                a_c_0__n                                    a_c[0]
+   Net                  a_0__n                                      a[0]
+   Net                a_c_1__n                                    a_c[1]
+   Net                  a_1__n                                      a[1]
+   Net                a_c_2__n                                    a_c[2]
+   Net                  a_2__n                                      a[2]
+   Net                a_c_3__n                                    a_c[3]
+   Net                b_c_0__n                                    b_c[0]
+   Net                  b_0__n                                      b[0]
+   Net                b_c_1__n                                    b_c[1]
+   Net                  b_1__n                                      b[1]
+   Net                b_c_2__n                                    b_c[2]
+   Net                  b_2__n                                      b[2]
+   Net                b_c_3__n                                    b_c[3]
+   Net                c_c_0__n                                    c_c[0]
+   Net                  c_0__n                                      c[0]
+   Net                c_c_1__n                                    c_c[1]
+   Net                  c_1__n                                      c[1]
+   Net                c_c_2__n                                    c_c[2]
+   Net                  c_2__n                                      c[2]
+   Net                c_c_3__n                                    c_c[3]
+   Net              b_c_i_0__n                                  b_c_i[0]
+   Net              c_3_0_0__n                                  c_3_0[0]
+   Net              b_c_i_1__n                                  b_c_i[1]
+   Net              c_3_0_1__n                                  c_3_0[1]
+   Net              b_c_i_2__n                                  b_c_i[2]
+   Net              c_3_0_2__n                                  c_3_0[2]
+   Net              b_c_i_3__n                                  b_c_i[3]
+   Net              c_3_0_3__n                                  c_3_0[3]
+   Net        un4_c_1_m_i_4__n                            un4_c_1_m_i[4]
+   Net              a_m_i_3__n                                  a_m_i[3]
+   Net              a_m_i_0__n                                  a_m_i[0]
+   Net        un4_c_1_m_1_4__n                            un4_c_1_m_1[4]
+   Net        un4_c_1_m_2_4__n                            un4_c_1_m_2[4]
+   Net        un4_c_1_m_3_4__n                            un4_c_1_m_3[4]
+   Net              a_m_1_3__n                                  a_m_1[3]
+   Net            a_m_2_0_3__n                                a_m_2_0[3]
+   Net              a_m_1_0__n                                  a_m_1[0]
+   Net              a_m_2_0__n                                  a_m_2[0]
+   Net            c_0_0__un3_n                                c_0_0_.un3
+   Net            c_0_0__un1_n                                c_0_0_.un1
+   Net            c_0_0__un0_n                                c_0_0_.un0
+   Net          c_2_0_3__un3_n                              c_2_0_3_.un3
+   Net          c_2_0_3__un1_n                              c_2_0_3_.un1
+   Net          c_2_0_3__un0_n                              c_2_0_3_.un0
+   Net          c_2_0_2__un3_n                              c_2_0_2_.un3
+   Net          c_2_0_2__un1_n                              c_2_0_2_.un1
+   Net          c_2_0_2__un0_n                              c_2_0_2_.un0
+   Net            c_1_3__un3_n                                c_1_3_.un3
+   Net            c_1_3__un1_n                                c_1_3_.un1
+   Net            c_1_3__un0_n                                c_1_3_.un0
+   Net            c_1_2__un3_n                                c_1_2_.un3
+   Net            c_1_2__un1_n                                c_1_2_.un1
+   Net            c_1_2__un0_n                                c_1_2_.un0
+   Net            c_1_1__un3_n                                c_1_1_.un3
+   Net            c_1_1__un1_n                                c_1_1_.un1
+   Net            c_1_1__un0_n                                c_1_1_.un0
+   Net            c_1_0__un3_n                                c_1_0_.un3
+   Net            c_1_0__un1_n                                c_1_0_.un1
+   Net            c_1_0__un0_n                                c_1_0_.un0
+   Net            c_0_3__un3_n                                c_0_3_.un3
+   Net            c_0_3__un1_n                                c_0_3_.un1
+   Net            c_0_3__un0_n                                c_0_3_.un0
+   Net            c_0_2__un3_n                                c_0_2_.un3
+   Net            c_0_2__un1_n                                c_0_2_.un1
+   Net            c_0_2__un0_n                                c_0_2_.un0
+   Net            c_0_1__un3_n                                c_0_1_.un3
+   Net            c_0_1__un1_n                                c_0_1_.un1
+   Net            c_0_1__un0_n                                c_0_1_.un0
+   Net           cmux_3__un3_n                               cmux_3_.un3
+   Net           cmux_3__un1_n                               cmux_3_.un1
+   Net           cmux_3__un0_n                               cmux_3_.un0
+   Net           cmux_2__un3_n                               cmux_2_.un3
+   Net           cmux_2__un1_n                               cmux_2_.un1
+   Net           cmux_2__un0_n                               cmux_2_.un0
+   Net           cmux_1__un3_n                               cmux_1_.un3
+   Net           cmux_1__un1_n                               cmux_1_.un1
+   Net           cmux_1__un0_n                               cmux_1_.un0
+   Net           cmux_0__un3_n                               cmux_0_.un3
+   Net           cmux_0__un1_n                               cmux_0_.un1
+   Net           cmux_0__un0_n                               cmux_0_.un0
+   Net            c_5_3__un3_n                                c_5_3_.un3
+   Net            c_5_3__un1_n                                c_5_3_.un1
+   Net            c_5_3__un0_n                                c_5_3_.un0
+   Net            c_5_2__un3_n                                c_5_2_.un3
+   Net            c_5_2__un1_n                                c_5_2_.un1
+   Net            c_5_2__un0_n                                c_5_2_.un0
+   Net            c_5_1__un3_n                                c_5_1_.un3
+   Net            c_5_1__un1_n                                c_5_1_.un1
+   Net            c_5_1__un0_n                                c_5_1_.un0
+   Net            c_5_0__un3_n                                c_5_0_.un3
+   Net            c_5_0__un1_n                                c_5_0_.un1
+   Net            c_5_0__un0_n                                c_5_0_.un0
+   Net          c_4_0_3__un3_n                              c_4_0_3_.un3
+   Net          c_4_0_3__un1_n                              c_4_0_3_.un1
+   Net          c_4_0_3__un0_n                              c_4_0_3_.un0
+   Net          c_4_0_2__un3_n                              c_4_0_2_.un3
+   Net          c_4_0_2__un1_n                              c_4_0_2_.un1
+   Net          c_4_0_2__un0_n                              c_4_0_2_.un0
+   Net          c_4_0_1__un3_n                              c_4_0_1_.un3
+   Net          c_4_0_1__un1_n                              c_4_0_1_.un1
+   Net          c_4_0_1__un0_n                              c_4_0_1_.un0
+   Net          c_4_0_0__un3_n                              c_4_0_0_.un3
+   Net          c_4_0_0__un1_n                              c_4_0_0_.un1
+   Net          c_4_0_0__un0_n                              c_4_0_0_.un0
+   Net          c_3_0_2__un3_n                              c_3_0_2_.un3
+   Net          c_3_0_2__un1_n                              c_3_0_2_.un1
+   Net          c_3_0_2__un0_n                              c_3_0_2_.un0
+   Net          c_3_0_1__un3_n                              c_3_0_1_.un3
+   Net          c_3_0_1__un1_n                              c_3_0_1_.un1
+   Net          c_3_0_1__un0_n                              c_3_0_1_.un0
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     opcode_3_
+        Input     a_3_
+        Input     b_3_
+        Input     opcode_2_
+        Input     opcode_1_
+        Input     opcode_0_
+        Input     a_2_
+        Input     a_1_
+        Input     a_0_
+        Input     b_2_
+        Input     b_1_
+        Input     b_0_
+        Output     c_3_
+        Output     zf
+        Output     cf
+        Output     c_2_
+        Output     c_1_
+        Output     c_0_
+End

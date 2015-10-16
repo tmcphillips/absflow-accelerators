@@ -1,0 +1,5 @@
+MODULE StateMachineWithCorrectOutputs
+	SUBMODULE debouncer
+		INSTANCE debouncedStep
+	SUBMODULE tenbitscaler
+		INSTANCE clockScaler

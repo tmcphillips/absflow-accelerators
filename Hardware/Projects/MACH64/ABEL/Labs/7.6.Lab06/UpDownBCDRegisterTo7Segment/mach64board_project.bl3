@@ -1,0 +1,337 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:18:22 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE bcdcounterto7segment
+#$ PINS 10 upButton:18 downButton:43 oneMHzClock:19 a:20 b:21 c:22 d:23 e:24 f:26 g:27
+#$ NODES 18 debouncedUp>debounced'co,o'  debouncedDown>debounced'co,o'  bcdCounter>d0'co,o'  \
+#  bcdCounter>d1'co,o'  bcdCounter>d2'co,o'  bcdCounter>d3'co,o'  clockScaler/s9 clockScaler/s8 \
+#  clockScaler/s7 clockScaler/s6 clockScaler/s5 clockScaler/s4 clockScaler/s3 \
+#  clockScaler/s2 clockScaler/s1 clockScaler/s0 debouncedUp/lastSample \
+#  debouncedDown/lastSample
+.model bcdcounterto7segment
+.inputs oneMHzClock.BLIF upButton.BLIF downButton.BLIF \
+debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF bcdCounter>d0.BLIF \
+bcdCounter>d1.BLIF bcdCounter>d2.BLIF bcdCounter>d3.BLIF clockScaler/s9.BLIF \
+clockScaler/s8.BLIF clockScaler/s7.BLIF clockScaler/s6.BLIF \
+clockScaler/s5.BLIF clockScaler/s4.BLIF clockScaler/s3.BLIF \
+clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF \
+debouncedUp/lastSample.BLIF debouncedDown/lastSample.BLIF
+.outputs a b c e f g clockScaler/s9.C clockScaler/s8.C clockScaler/s7.C \
+clockScaler/s6.C clockScaler/s5.C clockScaler/s4.C clockScaler/s3.REG \
+clockScaler/s3.C clockScaler/s2.REG clockScaler/s2.C clockScaler/s1.REG \
+clockScaler/s1.C clockScaler/s0.REG clockScaler/s0.C debouncedUp>debounced.REG \
+debouncedUp>debounced.C debouncedUp/lastSample.REG debouncedUp/lastSample.C \
+debouncedDown>debounced.REG debouncedDown>debounced.C \
+debouncedDown/lastSample.REG debouncedDown/lastSample.C bcdCounter>d0.REG \
+bcdCounter>d0.C bcdCounter>d1.REG bcdCounter>d1.C bcdCounter>d2.C \
+bcdCounter>d3.C d.X1 d.X2 bcdCounter>d2.REG.X1 bcdCounter>d2.REG.X2 \
+bcdCounter>d3.REG.X1 bcdCounter>d3.REG.X2 clockScaler/s9.REG.X1 \
+clockScaler/s9.REG.X2 clockScaler/s8.REG.X1 clockScaler/s8.REG.X2 \
+clockScaler/s7.REG.X1 clockScaler/s7.REG.X2 clockScaler/s6.REG.X1 \
+clockScaler/s6.REG.X2 clockScaler/s5.REG.X1 clockScaler/s5.REG.X2 \
+clockScaler/s4.REG.X1 clockScaler/s4.REG.X2
+.names clockScaler/s3.BLIF clockScaler/s2.BLIF clockScaler/s1.BLIF \
+clockScaler/s0.BLIF clockScaler/s3.REG
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF \
+clockScaler/s2.REG
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names clockScaler/s1.BLIF clockScaler/s0.BLIF clockScaler/s1.REG
+10 1
+01 1
+00 0
+11 0
+.names clockScaler/s0.BLIF clockScaler/s0.REG
+0 1
+1 0
+.names upButton.BLIF debouncedUp/lastSample.BLIF debouncedUp>debounced.REG
+01 1
+1- 0
+-0 0
+.names downButton.BLIF debouncedDown/lastSample.BLIF \
+debouncedDown>debounced.REG
+01 1
+1- 0
+-0 0
+.names upButton.BLIF bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF bcdCounter>d0.REG
+-000- 1
+-0--0 1
+10--- 1
+0--11 0
+0-1-1 0
+-1--- 0
+.names upButton.BLIF bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF bcdCounter>d1.REG
+1001- 1
+010-0 1
+001-0 1
+100-1 1
+111-- 1
+10-00 0
+0---1 0
+011-- 0
+110-- 0
+000-- 0
+101-- 0
+.names bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF a
+0-00 1
+-001 1
+1-10 1
+-1-0 1
+1000 0
+001- 0
+--11 0
+-1-1 0
+.names bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF b
+11-0 1
+00-0 1
+-00- 1
+--00 1
+101- 0
+011- 0
+--11 0
+-1-1 0
+.names bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF c
+-00- 1
+--10 1
+1--0 1
+010- 0
+-1-1 0
+--11 0
+.names bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF e
+000- 1
+01-0 1
+-01- 0
+1--- 0
+-1-1 0
+.names bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF f
+000- 1
+0-10 1
+-001 1
+-010 1
+1-00 0
+-10- 0
+11-- 0
+--11 0
+.names bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF g
+01-0 1
+-001 1
+-100 1
+-010 1
+111- 0
+-000 0
+--11 0
+-1-1 0
+.names oneMHzClock.BLIF clockScaler/s9.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s8.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s7.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s6.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s5.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s4.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s3.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s2.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s1.C
+1 1
+0 0
+.names oneMHzClock.BLIF clockScaler/s0.C
+1 1
+0 0
+.names clockScaler/s9.BLIF debouncedUp>debounced.C
+1 1
+0 0
+.names upButton.BLIF debouncedUp/lastSample.REG
+0 1
+1 0
+.names clockScaler/s9.BLIF debouncedUp/lastSample.C
+1 1
+0 0
+.names clockScaler/s9.BLIF debouncedDown>debounced.C
+1 1
+0 0
+.names downButton.BLIF debouncedDown/lastSample.REG
+0 1
+1 0
+.names clockScaler/s9.BLIF debouncedDown/lastSample.C
+1 1
+0 0
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF bcdCounter>d0.C
+1- 1
+-1 1
+00 0
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF bcdCounter>d1.C
+1- 1
+-1 1
+00 0
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF bcdCounter>d2.C
+1- 1
+-1 1
+00 0
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF bcdCounter>d3.C
+1- 1
+-1 1
+00 0
+.names bcdCounter>d1.BLIF bcdCounter>d2.BLIF d.X1
+00 1
+1- 0
+-1 0
+.names bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF d.X2
+10-0 1
+01-0 1
+-100 1
+---1 0
+00-- 0
+111- 0
+.names upButton.BLIF bcdCounter>d2.BLIF bcdCounter>d3.BLIF \
+bcdCounter>d2.REG.X1
+010 1
+1-- 0
+-0- 0
+--1 0
+.names upButton.BLIF bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF bcdCounter>d2.REG.X2
+011-0 1
+10001 1
+11-1- 1
+1-11- 1
+00--- 0
+0-0-- 0
+0---1 0
+-001- 0
+11-0- 0
+1-10- 0
+1--00 0
+.names upButton.BLIF bcdCounter>d3.BLIF bcdCounter>d3.REG.X1
+11 1
+0- 0
+-0 0
+.names upButton.BLIF bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF \
+bcdCounter>d3.BLIF bcdCounter>d3.REG.X2
+-0001 1
+01110 1
+1000- 1
+11--- 0
+-01-- 0
+-10-- 0
+-0-1- 0
+-1-0- 0
+-1--1 0
+00--0 0
+.names clockScaler/s9.BLIF clockScaler/s9.REG.X1
+1 1
+0 0
+.names clockScaler/s9.BLIF clockScaler/s8.BLIF clockScaler/s7.BLIF \
+clockScaler/s6.BLIF clockScaler/s5.BLIF clockScaler/s4.BLIF \
+clockScaler/s3.BLIF clockScaler/s2.BLIF clockScaler/s1.BLIF \
+clockScaler/s0.BLIF clockScaler/s9.REG.X2
+-111111111 1
+-0-------- 0
+--0------- 0
+---0------ 0
+----0----- 0
+-----0---- 0
+------0--- 0
+-------0-- 0
+--------0- 0
+---------0 0
+.names clockScaler/s8.BLIF clockScaler/s8.REG.X1
+1 1
+0 0
+.names clockScaler/s8.BLIF clockScaler/s7.BLIF clockScaler/s6.BLIF \
+clockScaler/s5.BLIF clockScaler/s4.BLIF clockScaler/s3.BLIF \
+clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF \
+clockScaler/s8.REG.X2
+-11111111 1
+-0------- 0
+--0------ 0
+---0----- 0
+----0---- 0
+-----0--- 0
+------0-- 0
+-------0- 0
+--------0 0
+.names clockScaler/s7.BLIF clockScaler/s7.REG.X1
+1 1
+0 0
+.names clockScaler/s7.BLIF clockScaler/s6.BLIF clockScaler/s5.BLIF \
+clockScaler/s4.BLIF clockScaler/s3.BLIF clockScaler/s2.BLIF \
+clockScaler/s1.BLIF clockScaler/s0.BLIF clockScaler/s7.REG.X2
+-1111111 1
+-0------ 0
+--0----- 0
+---0---- 0
+----0--- 0
+-----0-- 0
+------0- 0
+-------0 0
+.names clockScaler/s6.BLIF clockScaler/s6.REG.X1
+1 1
+0 0
+.names clockScaler/s6.BLIF clockScaler/s5.BLIF clockScaler/s4.BLIF \
+clockScaler/s3.BLIF clockScaler/s2.BLIF clockScaler/s1.BLIF \
+clockScaler/s0.BLIF clockScaler/s6.REG.X2
+-111111 1
+-0----- 0
+--0---- 0
+---0--- 0
+----0-- 0
+-----0- 0
+------0 0
+.names clockScaler/s5.BLIF clockScaler/s5.REG.X1
+1 1
+0 0
+.names clockScaler/s5.BLIF clockScaler/s4.BLIF clockScaler/s3.BLIF \
+clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF \
+clockScaler/s5.REG.X2
+-11111 1
+-0---- 0
+--0--- 0
+---0-- 0
+----0- 0
+-----0 0
+.names clockScaler/s4.BLIF clockScaler/s4.REG.X1
+1 1
+0 0
+.names clockScaler/s4.BLIF clockScaler/s3.BLIF clockScaler/s2.BLIF \
+clockScaler/s1.BLIF clockScaler/s0.BLIF clockScaler/s4.REG.X2
+-1111 1
+-0--- 0
+--0-- 0
+---0- 0
+----0 0
+.end

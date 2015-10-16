@@ -1,0 +1,1 @@
+-nodal -src mach64_verilog_project.bl5 -type BLIF -presrc mach64_verilog_project.bl3 -crf mach64_verilog_project.crf -sif mach64_verilog_project.sif -devfile "C:/ispLEVER_Classic1_5/ispcpld/dat/lc4k/m4s_64_32.dev" -lci mach64_verilog_project.lct

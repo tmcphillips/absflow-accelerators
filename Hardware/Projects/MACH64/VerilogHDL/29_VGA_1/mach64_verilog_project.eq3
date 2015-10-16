@@ -1,0 +1,400 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+G_208.X1 = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q ; (1 pterm, 4 signals)
+G_208.X2 = pixel_4_.Q ; (1 pterm, 1 signal)
+
+G_212.X1 = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q ; (1 pterm, 6 signals)
+G_212.X2 = pixel_6_.Q ; (1 pterm, 1 signal)
+
+G_214.X1 = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q & pixel_6_.Q ; (1 pterm, 7 signals)
+G_214.X2 = pixel_7_.Q ; (1 pterm, 1 signal)
+
+N_26_i = !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q ; (1 pterm, 4 signals)
+
+N_32_i.X1 = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & !pixel_5_.Q & !pixel_8_.Q & !pixel_9_.Q
+    # pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & !pixel_6_.Q & !pixel_8_.Q & !pixel_9_.Q
+    # pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & !pixel_7_.Q & !pixel_8_.Q & !pixel_9_.Q
+    # pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q & pixel_6_.Q & pixel_7_.Q & pixel_8_.Q & pixel_9_.Q ; (4 pterms, 10 signals)
+N_32_i.X2 = !pixel_5_.Q & !pixel_8_.Q & !pixel_9_.Q ; (1 pterm, 3 signals)
+
+N_374 = line_0_.Q & line_1_.Q & line_2_.Q & line_3_.Q & line_4_.Q ; (1 pterm, 5 signals)
+
+N_37_7_0.X1 = hState_1_.Q & hState_0_.Q & pixel_7_.Q & pixel_8_.Q & pixel_9_.Q
+       & line_0_.Q & !line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # hState_1_.Q & hState_0_.Q & pixel_6_.Q & pixel_8_.Q & pixel_9_.Q
+       & line_0_.Q & !line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # hState_1_.Q & hState_0_.Q & pixel_5_.Q & pixel_8_.Q & pixel_9_.Q
+       & line_0_.Q & !line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # hState_1_.Q & hState_0_.Q & pixel_0_.Q & pixel_1_.Q & pixel_2_.Q
+       & pixel_3_.Q & pixel_4_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q
+       & !line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q
+       & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # hState_1_.Q & hState_0_.Q & pixel_0_.Q & pixel_1_.Q & pixel_2_.Q
+       & pixel_3_.Q & pixel_4_.Q & !pixel_5_.Q & !pixel_6_.Q & !pixel_7_.Q
+       & pixel_8_.Q & pixel_9_.Q & line_0_.Q & line_1_.Q & !line_2_.Q
+       & !line_3_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q & !line_7_.Q
+       & !line_8_.Q & line_9_.Q
+    # hState_1_.Q & hState_0_.Q & !pixel_8_.Q & !line_0_.Q & line_1_.Q
+       & !line_2_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q
+       & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # hState_1_.Q & hState_0_.Q & !pixel_9_.Q & !line_0_.Q & line_1_.Q
+       & !line_2_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q
+       & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # hState_1_.Q & hState_0_.Q & !pixel_5_.Q & !pixel_6_.Q & !pixel_7_.Q
+       & !line_0_.Q & line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q ; (8 pterms, 22 signals)
+N_37_7_0.X2 = hState_1_.Q & hState_0_.Q & pixel_0_.Q & pixel_1_.Q & pixel_2_.Q
+       & pixel_3_.Q & pixel_4_.Q & !pixel_5_.Q & !pixel_6_.Q & !pixel_7_.Q
+       & pixel_8_.Q & pixel_9_.Q & line_1_.Q & !line_2_.Q & !line_3_.Q
+       & !line_4_.Q & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q
+       & line_9_.Q ; (1 pterm, 21 signals)
+
+N_38_i.X1 = !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q
+    # !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_6_.Q
+    # !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_7_.Q
+    # !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & !pixel_8_.Q
+    # !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & !pixel_9_.Q
+    # vState_0_.Q & !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q
+       & pixel_4_.Q
+    # !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & !line_0_.Q & line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q ; (7 pterms, 21 signals)
+N_38_i.X2 = !pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q ; (1 pterm, 5 signals)
+
+N_91_i = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_8_.Q & pixel_9_.Q & line_0_.Q & !line_1_.Q & !line_2_.Q
+       & !line_3_.Q & !line_4_.Q & line_5_.Q & !line_6_.Q & !line_7_.Q
+       & !line_8_.Q & !line_9_.Q
+    # pixel_7_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q & !line_1_.Q
+       & !line_2_.Q & !line_3_.Q & !line_4_.Q & line_5_.Q & !line_6_.Q
+       & !line_7_.Q & !line_8_.Q & !line_9_.Q
+    # pixel_6_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q & !line_1_.Q
+       & !line_2_.Q & !line_3_.Q & !line_4_.Q & line_5_.Q & !line_6_.Q
+       & !line_7_.Q & !line_8_.Q & !line_9_.Q
+    # pixel_5_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q & !line_1_.Q
+       & !line_2_.Q & !line_3_.Q & !line_4_.Q & line_5_.Q & !line_6_.Q
+       & !line_7_.Q & !line_8_.Q & !line_9_.Q ; (4 pterms, 20 signals)
+
+blue_0_.D = hState_1_.Q & !hState_0_.Q ; (1 pterm, 2 signals)
+blue_0_.C = vgaClock ; (1 pterm, 1 signal)
+blue_0_.CE = vState_1_.Q & !vState_0_.Q ; (1 pterm, 2 signals)
+blue_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+blue_1_ = 0 ; (0 pterm, 0 signal)
+
+green_0_ = 0 ; (0 pterm, 0 signal)
+
+green_1_ = 0 ; (0 pterm, 0 signal)
+
+hState_0_.T.X1 = hState_1_.Q & vState_1_.Q & !hState_0_.Q & !vState_0_.Q
+       & pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q & pixel_6_.Q & pixel_7_.Q & !pixel_8_.Q & pixel_9_.Q
+       & !G_208 & N_26_i & !N_38_i
+    # hState_1_.Q & vState_1_.Q & !hState_0_.Q & !vState_0_.Q & !pixel_5_.Q
+       & !pixel_6_.Q & !pixel_7_.Q & pixel_8_.Q & pixel_9_.Q & !G_208 & N_26_i
+       & !N_38_i
+    # !hState_1_.Q & vState_1_.Q & hState_0_.Q & !vState_0_.Q & pixel_8_.Q
+       & pixel_9_.Q & !G_208 & !G_212 & G_214 & N_26_i & !N_32_i
+    # !hState_1_.Q & vState_1_.Q & !hState_0_.Q & !vState_0_.Q & pixel_6_.Q
+       & pixel_8_.Q & pixel_9_.Q & G_208 & !G_214 & N_26_i & !N_32_i
+    # !hState_1_.Q & vState_1_.Q & !hState_0_.Q & !vState_0_.Q & pixel_6_.Q
+       & G_208 & !G_214 & N_26_i & N_32_i
+    # !hState_1_.Q & vState_1_.Q & hState_0_.Q & !vState_0_.Q & !G_208
+       & !G_212 & G_214 & N_26_i & N_32_i
+    # !vState_1_.Q & hState_0_.Q & vState_0_.Q & N_91_i
+    # hState_1_.Q & vState_1_.Q & hState_0_.Q & N_38_i ; (8 pterms, 21 signals)
+hState_0_.T.X2 = !hState_1_.Q & vState_1_.Q & hState_0_.Q & !vState_0_.Q
+       & !pixel_5_.Q & !pixel_6_.Q & !pixel_7_.Q & pixel_8_.Q & pixel_9_.Q
+       & !G_208 & !G_212 & G_214 & N_26_i & !N_32_i ; (1 pterm, 14 signals)
+hState_0_.C = vgaClock ; (1 pterm, 1 signal)
+hState_0_.CE = !( vState_1_.Q & vState_0_.Q ) ; (1 pterm, 2 signals)
+hState_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+hState_1_.D = vState_1_.Q & hState_0_.Q & !vState_0_.Q & pixel_7_.Q
+       & pixel_8_.Q & pixel_9_.Q & !G_208 & !G_212 & G_214 & N_26_i
+    # vState_1_.Q & hState_0_.Q & !vState_0_.Q & pixel_6_.Q & pixel_8_.Q
+       & pixel_9_.Q & !G_208 & !G_212 & G_214 & N_26_i
+    # vState_1_.Q & hState_0_.Q & !vState_0_.Q & pixel_5_.Q & pixel_8_.Q
+       & pixel_9_.Q & !G_208 & !G_212 & G_214 & N_26_i
+    # vState_1_.Q & hState_0_.Q & !vState_0_.Q & !G_208 & !G_212 & G_214
+       & N_26_i & N_32_i
+    # hState_1_.Q & !vState_1_.Q & !N_91_i
+    # hState_1_.Q & vState_1_.Q & !hState_0_.Q
+    # hState_1_.Q & !vState_1_.Q & !vState_0_.Q
+    # hState_1_.Q & vState_1_.Q & !N_38_i ; (8 pterms, 16 signals)
+hState_1_.C = vgaClock ; (1 pterm, 1 signal)
+hState_1_.CE = !( vState_1_.Q & vState_0_.Q ) ; (1 pterm, 2 signals)
+hState_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+hsync.D = !( !hState_1_.Q & vState_1_.Q & !hState_0_.Q & !vState_0_.Q ) ; (1 pterm, 4 signals)
+hsync.C = vgaClock ; (1 pterm, 1 signal)
+hsync.AP = !reset_n ; (1 pterm, 1 signal)
+
+line11 = !line_3_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q & !line_7_.Q
+       & !line_8_.Q
+    # !line_2_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q & !line_7_.Q
+       & !line_8_.Q
+    # !line_9_.Q ; (3 pterms, 8 signals)
+
+line_0_.D = !line_0_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q
+       & !line_7_.Q & !line_8_.Q & !pixel14_i_0_i
+    # !line_0_.Q & !line_2_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q
+       & !line_7_.Q & !line_8_.Q & !pixel14_i_0_i
+    # line_0_.Q & pixel14_i_0_i
+    # !line_0_.Q & !line_9_.Q & !pixel14_i_0_i ; (4 pterms, 10 signals)
+line_0_.C = vgaClock ; (1 pterm, 1 signal)
+line_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_1_.D = line_0_.Q & !line_1_.Q & line11 & !pixel14_i_0_i
+    # !line_0_.Q & line_1_.Q & line11
+    # line_1_.Q & pixel14_i_0_i ; (3 pterms, 4 signals)
+line_1_.C = vgaClock ; (1 pterm, 1 signal)
+line_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_2_.D = line_0_.Q & line_1_.Q & !line_2_.Q & line11 & !pixel14_i_0_i
+    # !line_1_.Q & line_2_.Q & line11
+    # !line_0_.Q & line_2_.Q & line11
+    # line_2_.Q & pixel14_i_0_i ; (4 pterms, 5 signals)
+line_2_.C = vgaClock ; (1 pterm, 1 signal)
+line_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_3_.D.X1 = line_0_.Q & line_1_.Q & line_2_.Q & !line_9_.Q & !pixel14_i_0_i
+    # line_0_.Q & line_1_.Q & line_2_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q
+       & !line_6_.Q & !line_7_.Q & !line_8_.Q & !pixel14_i_0_i
+    # line_3_.Q & line_9_.Q & pixel14_i_0_i
+    # !line_2_.Q & line_3_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q
+       & !line_7_.Q & !line_8_.Q & line_9_.Q ; (4 pterms, 11 signals)
+line_3_.D.X2 = line_3_.Q & !line_9_.Q ; (1 pterm, 2 signals)
+line_3_.C = vgaClock ; (1 pterm, 1 signal)
+line_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_4_.T = line_0_.Q & line_1_.Q & line_2_.Q & line_3_.Q & !line_9_.Q
+       & !pixel14_i_0_i
+    # line_4_.Q & line_9_.Q & !pixel14_i_0_i ; (2 pterms, 7 signals)
+line_4_.C = vgaClock ; (1 pterm, 1 signal)
+line_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_4_9__un1_n = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q
+       & pixel_4_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q & line_1_.Q
+       & line_2_.Q & line_3_.Q & line_4_.Q & line_5_.Q & line_6_.Q & line_7_.Q
+       & line_8_.Q & !line_9_.Q
+    # pixel_7_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q & line_1_.Q & line_2_.Q
+       & line_3_.Q & line_4_.Q & line_5_.Q & line_6_.Q & line_7_.Q & line_8_.Q
+       & !line_9_.Q
+    # pixel_6_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q & line_1_.Q & line_2_.Q
+       & line_3_.Q & line_4_.Q & line_5_.Q & line_6_.Q & line_7_.Q & line_8_.Q
+       & !line_9_.Q
+    # pixel_5_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q & line_1_.Q & line_2_.Q
+       & line_3_.Q & line_4_.Q & line_5_.Q & line_6_.Q & line_7_.Q & line_8_.Q
+       & !line_9_.Q
+    # pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_8_.Q & pixel_9_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q
+       & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_8_.Q & pixel_9_.Q & !line_2_.Q & !line_4_.Q & !line_5_.Q
+       & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # pixel_7_.Q & pixel_8_.Q & pixel_9_.Q & !line_3_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # pixel_6_.Q & pixel_8_.Q & pixel_9_.Q & !line_3_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # pixel_5_.Q & pixel_8_.Q & pixel_9_.Q & !line_3_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # pixel_7_.Q & pixel_8_.Q & pixel_9_.Q & !line_2_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # pixel_6_.Q & pixel_8_.Q & pixel_9_.Q & !line_2_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q
+    # pixel_5_.Q & pixel_8_.Q & pixel_9_.Q & !line_2_.Q & !line_4_.Q
+       & !line_5_.Q & !line_6_.Q & !line_7_.Q & !line_8_.Q & line_9_.Q ; (12 pterms, 20 signals)
+
+line_5_.D = !line_3_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q & !line_7_.Q
+       & !line_8_.Q & N_374 & !pixel14_i_0_i
+    # !line_2_.Q & !line_4_.Q & !line_5_.Q & !line_6_.Q & !line_7_.Q
+       & !line_8_.Q & N_374 & !pixel14_i_0_i
+    # line_5_.Q & !line_9_.Q & !N_374
+    # !line_5_.Q & !line_9_.Q & N_374 & !pixel14_i_0_i
+    # line_5_.Q & pixel14_i_0_i ; (5 pterms, 10 signals)
+line_5_.C = vgaClock ; (1 pterm, 1 signal)
+line_5_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_6_.D = line_5_.Q & !line_6_.Q & !line_9_.Q & N_374 & !pixel14_i_0_i
+    # line_6_.Q & !line_9_.Q & !N_374
+    # !line_5_.Q & line_6_.Q & !line_9_.Q
+    # line_6_.Q & pixel14_i_0_i ; (4 pterms, 5 signals)
+line_6_.C = vgaClock ; (1 pterm, 1 signal)
+line_6_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_7_.T = line_0_.Q & line_1_.Q & line_2_.Q & line_3_.Q & line_4_.Q
+       & line_5_.Q & line_6_.Q & !line_9_.Q & !pixel14_i_0_i
+    # line_7_.Q & line_9_.Q & !pixel14_i_0_i ; (2 pterms, 10 signals)
+line_7_.C = vgaClock ; (1 pterm, 1 signal)
+line_7_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_8_.T = line_0_.Q & line_1_.Q & line_2_.Q & line_3_.Q & line_4_.Q
+       & line_5_.Q & line_6_.Q & line_7_.Q & !line_9_.Q & !pixel14_i_0_i
+    # line_8_.Q & line_9_.Q & !pixel14_i_0_i ; (2 pterms, 11 signals)
+line_8_.C = vgaClock ; (1 pterm, 1 signal)
+line_8_.AR = !reset_n ; (1 pterm, 1 signal)
+
+line_9_.D = line_4_9__un1_n
+    # line_9_.Q & pixel14_i_0_i ; (2 pterms, 3 signals)
+line_9_.C = vgaClock ; (1 pterm, 1 signal)
+line_9_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel14_i_0_i = !( pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q
+       & pixel_4_.Q & pixel_8_.Q & pixel_9_.Q
+    # pixel_7_.Q & pixel_8_.Q & pixel_9_.Q
+    # pixel_6_.Q & pixel_8_.Q & pixel_9_.Q
+    # pixel_5_.Q & pixel_8_.Q & pixel_9_.Q ) ; (4 pterms, 10 signals)
+
+pixel_0_.D = !pixel_0_.Q ; (1 pterm, 1 signal)
+pixel_0_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_1_.D = pixel_0_.Q & !pixel_1_.Q
+    # !pixel_0_.Q & pixel_1_.Q ; (2 pterms, 2 signals)
+pixel_1_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_2_.D = pixel_0_.Q & pixel_1_.Q & !pixel_2_.Q
+    # !pixel_1_.Q & pixel_2_.Q
+    # !pixel_0_.Q & pixel_2_.Q ; (3 pterms, 3 signals)
+pixel_2_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_3_.D = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & !pixel_3_.Q
+    # !pixel_2_.Q & pixel_3_.Q
+    # !pixel_1_.Q & pixel_3_.Q
+    # !pixel_0_.Q & pixel_3_.Q ; (4 pterms, 4 signals)
+pixel_3_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_4_.D.X1 = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q ; (1 pterm, 4 signals)
+pixel_4_.D.X2 = pixel_4_.Q ; (1 pterm, 1 signal)
+pixel_4_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_5_.T = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel14_i_0_i
+    # pixel_5_.Q & !pixel14_i_0_i ; (2 pterms, 7 signals)
+pixel_5_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_5_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_6_.T = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q ; (1 pterm, 6 signals)
+pixel_6_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_6_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_7_.T = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q & pixel_6_.Q ; (1 pterm, 7 signals)
+pixel_7_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_7_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_8_.T = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q & pixel_6_.Q & pixel_7_.Q & pixel14_i_0_i
+    # pixel_8_.Q & !pixel14_i_0_i ; (2 pterms, 10 signals)
+pixel_8_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_8_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pixel_9_.T = pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q & pixel_4_.Q
+       & pixel_5_.Q & pixel_6_.Q & pixel_7_.Q & pixel_8_.Q & pixel14_i_0_i
+    # pixel_9_.Q & !pixel14_i_0_i ; (2 pterms, 11 signals)
+pixel_9_.C = vgaClock ; (1 pterm, 1 signal)
+pixel_9_.AR = !reset_n ; (1 pterm, 1 signal)
+
+red_0_.D = hState_1_.Q & !hState_0_.Q ; (1 pterm, 2 signals)
+red_0_.C = vgaClock ; (1 pterm, 1 signal)
+red_0_.CE = vState_1_.Q & !vState_0_.Q ; (1 pterm, 2 signals)
+red_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+red_1_ = 0 ; (0 pterm, 0 signal)
+
+vState_0_.D = vState_1_.Q & pixel_0_.Q & pixel_1_.Q & pixel_2_.Q & pixel_3_.Q
+       & pixel_4_.Q & pixel_5_.Q & N_37_7_0 & pixel_6_.Q & pixel_7_.Q
+       & !pixel_8_.Q & pixel_9_.Q & G_208 & N_26_i
+    # vState_1_.Q & !pixel_5_.Q & N_37_7_0 & !pixel_6_.Q & !pixel_7_.Q
+       & pixel_8_.Q & pixel_9_.Q & G_208 & N_26_i
+    # vState_1_.Q & vState_0_.Q & line_0_.Q & line_1_.Q & line_2_.Q
+    # vState_1_.Q & vState_0_.Q & !line_1_.Q & !line_2_.Q
+    # vState_1_.Q & vState_0_.Q & !line_0_.Q & !line_2_.Q
+    # vState_1_.Q & vState_0_.Q & !line11
+    # vState_1_.Q & vState_0_.Q & !line_4_9__un1_n
+    # vState_1_.Q & vState_0_.Q & !line_3_.Q
+    # vState_1_.Q & vState_0_.Q & !pixel_9_.Q
+    # vState_1_.Q & vState_0_.Q & !pixel_8_.Q
+    # !vstate_1_ns_0_1_0__n
+    # vState_1_.Q & vState_0_.Q & pixel14_i_0_i ; (12 pterms, 23 signals)
+vState_0_.C = vgaClock ; (1 pterm, 1 signal)
+vState_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+vState_1_.D = !( vState_0_.Q & pixel_8_.Q & pixel_9_.Q & line_0_.Q & line_1_.Q
+       & !line_2_.Q & line_3_.Q & line_4_9__un1_n & line11 & !pixel14_i_0_i
+    # vState_0_.Q & pixel_8_.Q & pixel_9_.Q & !line_1_.Q & line_2_.Q
+       & line_3_.Q & line_4_9__un1_n & line11 & !pixel14_i_0_i
+    # vState_0_.Q & pixel_8_.Q & pixel_9_.Q & !line_0_.Q & line_2_.Q
+       & line_3_.Q & line_4_9__un1_n & line11 & !pixel14_i_0_i
+    # !vState_1_.Q & !vState_0_.Q
+    # !vState_1_.Q & !N_91_i ) ; (5 pterms, 12 signals)
+vState_1_.C = vgaClock ; (1 pterm, 1 signal)
+vState_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+vstate_1_ns_0_1_0__n = !( !vState_1_.Q & pixel_0_.Q & pixel_1_.Q & pixel_2_.Q
+       & pixel_3_.Q & pixel_4_.Q & pixel_8_.Q & pixel_9_.Q & !line_0_.Q
+       & !line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q
+       & !line_6_.Q & !line_7_.Q & !line_8_.Q & !line_9_.Q
+    # !vState_1_.Q & pixel_7_.Q & pixel_8_.Q & pixel_9_.Q & !line_0_.Q
+       & !line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q
+       & !line_6_.Q & !line_7_.Q & !line_8_.Q & !line_9_.Q
+    # !vState_1_.Q & pixel_6_.Q & pixel_8_.Q & pixel_9_.Q & !line_0_.Q
+       & !line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q
+       & !line_6_.Q & !line_7_.Q & !line_8_.Q & !line_9_.Q
+    # !vState_1_.Q & pixel_5_.Q & pixel_8_.Q & pixel_9_.Q & !line_0_.Q
+       & !line_1_.Q & !line_2_.Q & !line_3_.Q & !line_4_.Q & !line_5_.Q
+       & !line_6_.Q & !line_7_.Q & !line_8_.Q & !line_9_.Q
+    # !vState_1_.Q & vState_0_.Q & !pixel_4_.Q & !pixel_5_.Q & !pixel_6_.Q
+       & !pixel_7_.Q
+    # !vState_1_.Q & vState_0_.Q & !pixel_3_.Q & !pixel_5_.Q & !pixel_6_.Q
+       & !pixel_7_.Q
+    # !vState_1_.Q & vState_0_.Q & !pixel_2_.Q & !pixel_5_.Q & !pixel_6_.Q
+       & !pixel_7_.Q
+    # !vState_1_.Q & vState_0_.Q & !pixel_1_.Q & !pixel_5_.Q & !pixel_6_.Q
+       & !pixel_7_.Q
+    # !vState_1_.Q & vState_0_.Q & !pixel_0_.Q & !pixel_5_.Q & !pixel_6_.Q
+       & !pixel_7_.Q
+    # !vState_1_.Q & vState_0_.Q & line_9_.Q
+    # !vState_1_.Q & vState_0_.Q & line_8_.Q
+    # !vState_1_.Q & vState_0_.Q & line_7_.Q
+    # !vState_1_.Q & vState_0_.Q & line_6_.Q
+    # !vState_1_.Q & vState_0_.Q & line_4_.Q
+    # !vState_1_.Q & vState_0_.Q & line_3_.Q
+    # !vState_1_.Q & vState_0_.Q & line_2_.Q
+    # !vState_1_.Q & vState_0_.Q & line_1_.Q
+    # !vState_1_.Q & vState_0_.Q & !pixel_9_.Q
+    # !vState_1_.Q & vState_0_.Q & !pixel_8_.Q
+    # !vState_1_.Q & vState_0_.Q & !line_5_.Q
+    # !vState_1_.Q & vState_0_.Q & !line_0_.Q ) ; (21 pterms, 22 signals)
+
+vsync.D = !( !vState_1_.Q & !vState_0_.Q ) ; (1 pterm, 2 signals)
+vsync.C = vgaClock ; (1 pterm, 1 signal)
+vsync.AP = !reset_n ; (1 pterm, 1 signal)
+

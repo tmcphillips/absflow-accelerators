@@ -1,0 +1,56 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.1
+#Hostname: NEMESIS-X86
+
+#Implementation: 02_fourbitcounterwithdirection
+
+#Wed Jan 18 09:42:23 2012
+
+$ Start of Compile
+#Wed Jan 18 09:42:23 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\02_fourbitcounterwithdirection\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\02_fourbitcounterwithdirection\fourbitcounterwithdirection.v"
+Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+Selecting top level module FourBitCounterWithDirection
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\02_fourbitcounterwithdirection\fourbitcounterwithdirection.v":1:7:1:33|Synthesizing module FourBitCounterWithDirection
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jan 18 09:42:23 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\02_fourbitcounterwithdirection\synlog\fourbitcounterwithdirection_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFRH           4 uses
+OBUF            4 uses
+IBUF            3 uses
+INV             17 uses
+XOR2            6 uses
+AND2            10 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jan 18 09:42:23 2012
+
+###########################################################]

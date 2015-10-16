@@ -1,0 +1,352 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+G_72.X1 = !scanX_0_.Q & !scanX_6_.Q
+    # !scanX_1_.Q & !scanX_6_.Q
+    # !scanX_2_.Q & !scanX_6_.Q
+    # !scanX_3_.Q & !scanX_6_.Q
+    # !scanX_4_.Q & !scanX_6_.Q
+    # !scanX_5_.Q & !scanX_6_.Q
+    # scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q & scanX_4_.Q
+       & scanX_5_.Q & scanX_6_.Q ; (7 pterms, 7 signals)
+G_72.X2 = !ballX_4_.Q ; (1 pterm, 1 signal)
+
+G_73.X1 = !scanX_0_.Q & !scanX_7_.Q
+    # !scanX_1_.Q & !scanX_7_.Q
+    # !scanX_2_.Q & !scanX_7_.Q
+    # !scanX_3_.Q & !scanX_7_.Q
+    # !scanX_4_.Q & !scanX_7_.Q
+    # !scanX_5_.Q & !scanX_7_.Q
+    # !scanX_6_.Q & !scanX_7_.Q
+    # scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q & scanX_4_.Q
+       & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q ; (8 pterms, 8 signals)
+G_73.X2 = !ballX_5_.Q ; (1 pterm, 1 signal)
+
+ballX_0_.D = !ballX_0_.Q ; (1 pterm, 1 signal)
+ballX_0_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballX_0_.AP = !reset_n ; (1 pterm, 1 signal)
+
+ballX_1_.D = !ballX_0_.Q & !inst_ballDirectionX.Q & !ballX_1_.Q
+    # ballX_0_.Q & inst_ballDirectionX.Q & !ballX_1_.Q
+    # ballX_0_.Q & !inst_ballDirectionX.Q & ballX_1_.Q
+    # !ballX_0_.Q & inst_ballDirectionX.Q & ballX_1_.Q ; (4 pterms, 3 signals)
+ballX_1_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballX_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+ballX_2_.D.X1 = !ballX_0_.Q & !inst_ballDirectionX.Q & !ballX_1_.Q
+    # ballX_0_.Q & inst_ballDirectionX.Q & ballX_1_.Q ; (2 pterms, 3 signals)
+ballX_2_.D.X2 = ballX_2_.Q ; (1 pterm, 1 signal)
+ballX_2_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballX_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+ballX_3_.T = !ballX_0_.Q & !inst_ballDirectionX.Q & !ballX_1_.Q & !ballX_2_.Q
+    # ballX_0_.Q & inst_ballDirectionX.Q & ballX_1_.Q & ballX_2_.Q ; (2 pterms, 4 signals)
+ballX_3_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballX_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+ballX_4_.T = !ballX_0_.Q & !inst_ballDirectionX.Q & !ballX_1_.Q & !ballX_2_.Q
+       & !ballX_3_.Q
+    # ballX_0_.Q & inst_ballDirectionX.Q & ballX_1_.Q & ballX_2_.Q
+       & ballX_3_.Q ; (2 pterms, 5 signals)
+ballX_4_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballX_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+ballX_5_.T = !ballX_0_.Q & !inst_ballDirectionX.Q & !ballX_1_.Q & !ballX_2_.Q
+       & !ballX_3_.Q & !ballX_4_.Q
+    # ballX_0_.Q & inst_ballDirectionX.Q & ballX_1_.Q & ballX_2_.Q
+       & ballX_3_.Q & ballX_4_.Q ; (2 pterms, 6 signals)
+ballX_5_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballX_5_.AP = !reset_n ; (1 pterm, 1 signal)
+
+ballY_0_.D = !ballY_0_.Q ; (1 pterm, 1 signal)
+ballY_0_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballY_0_.CE = reset_n ; (1 pterm, 1 signal)
+
+ballY_1_.D = !inst_ballDirectionY.Q & !ballY_0_.Q & !ballY_1_.Q
+    # inst_ballDirectionY.Q & ballY_0_.Q & !ballY_1_.Q
+    # inst_ballDirectionY.Q & !ballY_0_.Q & ballY_1_.Q
+    # !inst_ballDirectionY.Q & ballY_0_.Q & ballY_1_.Q ; (4 pterms, 3 signals)
+ballY_1_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballY_1_.CE = reset_n ; (1 pterm, 1 signal)
+
+ballY_2_.D.X1 = !inst_ballDirectionY.Q & !ballY_0_.Q & !ballY_1_.Q
+    # inst_ballDirectionY.Q & ballY_0_.Q & ballY_1_.Q ; (2 pterms, 3 signals)
+ballY_2_.D.X2 = ballY_2_.Q ; (1 pterm, 1 signal)
+ballY_2_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballY_2_.CE = reset_n ; (1 pterm, 1 signal)
+
+ballY_3_.T = !inst_ballDirectionY.Q & !ballY_0_.Q & !ballY_1_.Q & !ballY_2_.Q
+    # inst_ballDirectionY.Q & ballY_0_.Q & ballY_1_.Q & ballY_2_.Q ; (2 pterms, 4 signals)
+ballY_3_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballY_3_.CE = reset_n ; (1 pterm, 1 signal)
+
+ballY_4_.T = !inst_ballDirectionY.Q & !ballY_0_.Q & !ballY_1_.Q & !ballY_2_.Q
+       & !ballY_3_.Q
+    # inst_ballDirectionY.Q & ballY_0_.Q & ballY_1_.Q & ballY_2_.Q
+       & ballY_3_.Q ; (2 pterms, 5 signals)
+ballY_4_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballY_4_.CE = reset_n ; (1 pterm, 1 signal)
+
+ballY_5_.T = !inst_ballDirectionY.Q & !ballY_0_.Q & !ballY_1_.Q & !ballY_2_.Q
+       & !ballY_3_.Q & !ballY_4_.Q
+    # inst_ballDirectionY.Q & ballY_0_.Q & ballY_1_.Q & ballY_2_.Q
+       & ballY_3_.Q & ballY_4_.Q ; (2 pterms, 6 signals)
+ballY_5_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+ballY_5_.CE = reset_n ; (1 pterm, 1 signal)
+
+hState_0_.T = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q
+    # !hState_1_.Q & hState_0_.Q & !scanX_0_.Q & scanX_1_.Q & scanX_2_.Q
+       & !scanX_3_.Q & scanX_4_.Q & !scanX_5_.Q & !scanX_6_.Q & !scanX_7_.Q
+    # !hState_1_.Q & !hState_0_.Q & scanX_0_.Q & !scanX_1_.Q & scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & !scanX_5_.Q & !scanX_6_.Q & !scanX_7_.Q
+    # hState_1_.Q & !hState_0_.Q & scanX_0_.Q & scanX_1_.Q & scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & !scanX_6_.Q & !scanX_7_.Q ; (4 pterms, 10 signals)
+hState_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+hState_1_.T = !hState_1_.Q & hState_0_.Q & !scanX_0_.Q & scanX_1_.Q
+       & scanX_2_.Q & !scanX_3_.Q & scanX_4_.Q & !scanX_5_.Q & !scanX_6_.Q
+       & !scanX_7_.Q
+    # hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q & !scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q ; (2 pterms, 10 signals)
+hState_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+inst_ballDirectionX.D = !ballX_5_.Q ; (1 pterm, 1 signal)
+inst_ballDirectionX.C = scanY_8_.Q ; (1 pterm, 1 signal)
+inst_ballDirectionX.CE = inst_ballDirectionX_0 ; (1 pterm, 1 signal)
+inst_ballDirectionX.AP = !reset_n ; (1 pterm, 1 signal)
+
+inst_ballDirectionX_0 = !ballX_0_.Q & !inst_ballDirectionX.Q & !ballX_1_.Q
+       & !ballX_2_.Q & ballX_3_.Q & ballX_4_.Q & ballX_5_.Q
+    # !ballX_0_.Q & !inst_ballDirectionX.Q & !ballX_1_.Q & ballX_2_.Q
+       & ballX_3_.Q & !ballX_4_.Q & !ballX_5_.Q
+    # !ballX_0_.Q & inst_ballDirectionX.Q & ballX_1_.Q & !ballX_2_.Q
+       & ballX_3_.Q & !ballX_4_.Q & !ballX_5_.Q
+    # !ballX_0_.Q & inst_ballDirectionX.Q & ballX_1_.Q & ballX_2_.Q
+       & !ballX_3_.Q & ballX_4_.Q & ballX_5_.Q ; (4 pterms, 7 signals)
+
+inst_ballDirectionY.D = !ballY_3_.Q ; (1 pterm, 1 signal)
+inst_ballDirectionY.C = scanY_8_.Q ; (1 pterm, 1 signal)
+inst_ballDirectionY.CE = inst_ballDirectionY_0 ; (1 pterm, 1 signal)
+inst_ballDirectionY.AP = !reset_n ; (1 pterm, 1 signal)
+
+inst_ballDirectionY_0 = !inst_ballDirectionY.Q & ballY_0_.Q & ballY_1_.Q
+       & ballY_2_.Q & ballY_3_.Q & ballY_4_.Q & !ballY_5_.Q
+    # inst_ballDirectionY.Q & ballY_0_.Q & !ballY_1_.Q & ballY_2_.Q
+       & ballY_3_.Q & ballY_4_.Q & !ballY_5_.Q
+    # !inst_ballDirectionY.Q & ballY_0_.Q & ballY_1_.Q & !ballY_2_.Q
+       & !ballY_3_.Q & !ballY_4_.Q & !ballY_5_.Q
+    # inst_ballDirectionY.Q & ballY_0_.Q & !ballY_1_.Q & !ballY_2_.Q
+       & !ballY_3_.Q & !ballY_4_.Q & !ballY_5_.Q ; (4 pterms, 7 signals)
+
+scanX_0_.D = !( hState_1_.Q & hState_0_.Q & !scanX_1_.Q & !scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q
+    # scanX_0_.Q ) ; (2 pterms, 10 signals)
+scanX_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_1_.D = scanX_0_.Q & !scanX_1_.Q
+    # !scanX_0_.Q & scanX_1_.Q ; (2 pterms, 2 signals)
+scanX_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_2_.D = scanX_0_.Q & scanX_1_.Q & !scanX_2_.Q
+    # !scanX_1_.Q & scanX_2_.Q
+    # !scanX_0_.Q & scanX_2_.Q ; (3 pterms, 3 signals)
+scanX_2_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_3_.D = scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & !scanX_3_.Q
+    # !scanX_2_.Q & scanX_3_.Q
+    # !scanX_1_.Q & scanX_3_.Q
+    # !scanX_0_.Q & scanX_3_.Q ; (4 pterms, 4 signals)
+scanX_3_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_4_.D.X1 = scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q ; (1 pterm, 4 signals)
+scanX_4_.D.X2 = scanX_4_.Q ; (1 pterm, 1 signal)
+scanX_4_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_5_.T = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q
+    # scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q & scanX_4_.Q ; (2 pterms, 10 signals)
+scanX_5_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_6_.T = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q
+    # scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q & scanX_4_.Q
+       & scanX_5_.Q ; (2 pterms, 10 signals)
+scanX_6_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_7_.T = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q
+    # scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q & scanX_4_.Q
+       & scanX_5_.Q & scanX_6_.Q ; (2 pterms, 10 signals)
+scanX_7_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanY_0_.D = !scanY_0_.Q ; (1 pterm, 1 signal)
+scanY_0_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_0_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_1_.D = !( vState_1_.Q & vState_0_.Q & !scanY_3_.Q & !scanY_4_.Q
+       & !scanY_5_.Q & !scanY_6_.Q & !scanY_7_.Q & scanY_8_.Q & scanY_0_.Q
+       & scanY_2_.Q
+    # !scanY_0_.Q & !scanY_1_.Q
+    # scanY_0_.Q & scanY_1_.Q ) ; (3 pterms, 11 signals)
+scanY_1_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_1_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_2_.D = !( vState_1_.Q & vState_0_.Q & !scanY_3_.Q & !scanY_4_.Q
+       & !scanY_5_.Q & !scanY_6_.Q & !scanY_7_.Q & scanY_8_.Q & scanY_0_.Q
+       & !scanY_1_.Q
+    # scanY_0_.Q & scanY_1_.Q & scanY_2_.Q
+    # !scanY_0_.Q & !scanY_2_.Q
+    # !scanY_1_.Q & !scanY_2_.Q ) ; (4 pterms, 11 signals)
+scanY_2_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_2_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_3_.D = !scanY_3_.Q & scanY_0_.Q & scanY_1_.Q & scanY_2_.Q
+    # scanY_3_.Q & !scanY_1_.Q
+    # scanY_3_.Q & !scanY_0_.Q
+    # scanY_3_.Q & !scanY_2_.Q ; (4 pterms, 4 signals)
+scanY_3_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_3_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_4_.D.X1 = scanY_4_.Q ; (1 pterm, 1 signal)
+scanY_4_.D.X2 = scanY_3_.Q & scanY_0_.Q & scanY_1_.Q & scanY_2_.Q ; (1 pterm, 4 signals)
+scanY_4_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_4_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_5_.T = scanY_3_.Q & scanY_4_.Q & scanY_0_.Q & scanY_1_.Q & scanY_2_.Q ; (1 pterm, 5 signals)
+scanY_5_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_5_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_6_.T = scanY_3_.Q & scanY_4_.Q & scanY_5_.Q & scanY_0_.Q & scanY_1_.Q
+       & scanY_2_.Q ; (1 pterm, 6 signals)
+scanY_6_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_6_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_7_.T = scanY_3_.Q & scanY_4_.Q & scanY_5_.Q & scanY_6_.Q & scanY_0_.Q
+       & scanY_1_.Q & scanY_2_.Q ; (1 pterm, 7 signals)
+scanY_7_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_7_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_8_.T = vState_1_.Q & vState_0_.Q & !scanY_3_.Q & !scanY_4_.Q
+       & !scanY_5_.Q & !scanY_6_.Q & !scanY_7_.Q & scanY_8_.Q & scanY_0_.Q
+       & !scanY_1_.Q & scanY_2_.Q
+    # scanY_3_.Q & scanY_4_.Q & scanY_5_.Q & scanY_6_.Q & scanY_7_.Q
+       & scanY_0_.Q & scanY_1_.Q & scanY_2_.Q ; (2 pterms, 11 signals)
+scanY_8_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_8_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+vState_0_.T = vState_1_.Q & vState_0_.Q & !scanY_3_.Q & !scanY_4_.Q
+       & !scanY_5_.Q & !scanY_6_.Q & !scanY_7_.Q & scanY_8_.Q & scanY_0_.Q
+       & !scanY_1_.Q & scanY_2_.Q
+    # !vState_1_.Q & !vState_0_.Q & !scanY_3_.Q & scanY_4_.Q & scanY_5_.Q
+       & scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q & scanY_1_.Q
+       & !scanY_2_.Q
+    # !vState_1_.Q & vState_0_.Q & scanY_3_.Q & scanY_4_.Q & scanY_5_.Q
+       & scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q & !scanY_1_.Q
+       & !scanY_2_.Q
+    # vState_1_.Q & !vState_0_.Q & scanY_3_.Q & scanY_4_.Q & scanY_5_.Q
+       & scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q & scanY_1_.Q
+       & scanY_2_.Q ; (4 pterms, 11 signals)
+vState_0_.C = ntscClock ; (1 pterm, 1 signal)
+vState_0_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+vState_1_.T = !vState_1_.Q & vState_0_.Q & scanY_3_.Q & scanY_4_.Q
+       & scanY_5_.Q & scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q
+       & !scanY_1_.Q & !scanY_2_.Q
+    # vState_1_.Q & vState_0_.Q & !scanY_3_.Q & !scanY_4_.Q & !scanY_5_.Q
+       & !scanY_6_.Q & !scanY_7_.Q & scanY_8_.Q & scanY_0_.Q & !scanY_1_.Q
+       & scanY_2_.Q ; (2 pterms, 11 signals)
+vState_1_.C = ntscClock ; (1 pterm, 1 signal)
+vState_1_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+video_0_.D = !hState_1_.Q & vState_1_.Q & hState_0_.Q & !vState_0_.Q
+    # hState_1_.Q & vState_0_.Q
+    # !hState_0_.Q & vState_0_.Q
+    # !vState_1_.Q & !hState_0_.Q ; (4 pterms, 4 signals)
+video_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+video_0_sqmuxa_3_4 = !scanY_3_.Q & !scanY_4_.Q & !ballY_0_.Q & !ballY_1_.Q
+    # scanY_3_.Q & !scanY_4_.Q & ballY_0_.Q & !ballY_1_.Q
+    # !scanY_3_.Q & scanY_4_.Q & !ballY_0_.Q & ballY_1_.Q
+    # scanY_3_.Q & scanY_4_.Q & ballY_0_.Q & ballY_1_.Q ; (4 pterms, 4 signals)
+
+video_0_sqmuxa_3_5 = !scanY_5_.Q & !scanY_6_.Q & !ballY_2_.Q & !ballY_3_.Q
+    # scanY_5_.Q & !scanY_6_.Q & ballY_2_.Q & !ballY_3_.Q
+    # !scanY_5_.Q & scanY_6_.Q & !ballY_2_.Q & ballY_3_.Q
+    # scanY_5_.Q & scanY_6_.Q & ballY_2_.Q & ballY_3_.Q ; (4 pterms, 4 signals)
+
+video_0_sqmuxa_3_6 = !scanY_7_.Q & !scanY_8_.Q & !ballY_4_.Q & !ballY_5_.Q
+    # scanY_7_.Q & !scanY_8_.Q & ballY_4_.Q & !ballY_5_.Q
+    # !scanY_7_.Q & scanY_8_.Q & !ballY_4_.Q & ballY_5_.Q
+    # scanY_7_.Q & scanY_8_.Q & ballY_4_.Q & ballY_5_.Q ; (4 pterms, 4 signals)
+
+video_1_.D = hState_1_.Q & !vState_1_.Q & hState_0_.Q & !vState_0_.Q ; (1 pterm, 4 signals)
+video_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+video_2_.D = !( !ballX_2_.Q & !ballX_3_.Q & scanX_4_.Q & !scanX_5_.Q
+    # !ballX_2_.Q & ballX_3_.Q & scanX_4_.Q & scanX_5_.Q
+    # !ballX_1_.Q & !ballX_2_.Q & scanX_3_.Q & !scanX_4_.Q
+    # !ballX_1_.Q & ballX_2_.Q & scanX_3_.Q & scanX_4_.Q
+    # !ballX_0_.Q & !ballX_1_.Q & scanX_2_.Q & !scanX_3_.Q
+    # !ballX_0_.Q & ballX_1_.Q & scanX_2_.Q & scanX_3_.Q
+    # ballX_2_.Q & ballX_3_.Q & !scanX_5_.Q
+    # ballX_2_.Q & !ballX_3_.Q & scanX_5_.Q
+    # ballX_1_.Q & ballX_2_.Q & !scanX_4_.Q
+    # ballX_0_.Q & ballX_1_.Q & !scanX_3_.Q
+    # ballX_1_.Q & !ballX_2_.Q & scanX_4_.Q
+    # scanX_0_.Q & !ballX_0_.Q & scanX_1_.Q & !scanX_2_.Q
+    # ballX_0_.Q & !ballX_1_.Q & scanX_3_.Q
+    # !scanX_0_.Q & !ballX_0_.Q & scanX_2_.Q
+    # scanX_0_.Q & ballX_0_.Q & scanX_1_.Q & scanX_2_.Q
+    # ballX_3_.Q & !scanX_4_.Q & !scanX_5_.Q
+    # !ballX_3_.Q & !scanX_4_.Q & scanX_5_.Q
+    # ballX_1_.Q & !scanX_2_.Q & !scanX_3_.Q
+    # ballX_2_.Q & !scanX_3_.Q & !scanX_4_.Q
+    # !ballX_2_.Q & !scanX_3_.Q & scanX_4_.Q
+    # !ballX_1_.Q & !scanX_2_.Q & scanX_3_.Q
+    # !ballX_0_.Q & !scanX_1_.Q & scanX_2_.Q
+    # ballX_0_.Q & !scanX_1_.Q & !scanX_2_.Q
+    # !scanX_0_.Q & ballX_0_.Q & !scanX_2_.Q
+    # vState_0_.Q
+    # !hState_1_.Q
+    # !hState_0_.Q
+    # !video_0_sqmuxa_3_6
+    # !video_0_sqmuxa_3_5
+    # !video_0_sqmuxa_3_4
+    # G_73
+    # G_72
+    # vState_1_.Q ) ; (33 pterms, 19 signals)
+video_2_.C = ntscClock ; (1 pterm, 1 signal)
+

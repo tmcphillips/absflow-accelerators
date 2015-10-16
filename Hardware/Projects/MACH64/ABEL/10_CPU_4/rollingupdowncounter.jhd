@@ -1,0 +1,7 @@
+MODULE RollingUpDownCounter
+	SUBMODULE millisecondclock
+		INSTANCE counterClock
+	SUBMODULE boundedupdowncounter
+		INSTANCE bcd
+	SUBMODULE hextosevensegment
+		INSTANCE led

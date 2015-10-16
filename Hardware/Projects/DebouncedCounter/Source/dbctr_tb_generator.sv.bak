@@ -1,0 +1,76 @@
+import dbctr_tb_transactions_pkg::*;
+import ovm_pkg::*;
+
+module dbctr_tb_generator(ref tlm_fifo #(dbctr_operation) op_fifo);
+  
+  dbctr_operation t;
+    
+  task run;
+
+    t = new(reset_op, 0, 5, 4);
+    op_fifo.put(t.clone);
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, i, 0);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(down_op, 0, i, 5);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(load_op, 0, i, 5);
+        t.arg = $random;
+        op_fifo.put(t.clone);
+      end
+    
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(reset_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+    
+    repeat(1000) begin
+      t.random();
+      op_fifo.put(t.clone);      
+    end
+    
+    #5000;
+		
+		ovm_top.die();
+				
+		$stop;
+    
+  endtask
+    
+endmodule

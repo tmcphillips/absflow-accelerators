@@ -1,0 +1,255 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+inst_state.D = !( !inst_state.Q & pc_0_.Q & !pc_1_.Q & !pc_2_.Q & !pc_3_.Q
+       & pc_4_.Q
+    # start_n & !inst_state.Q
+    # wack.Q & inst_state.Q ) ; (3 pterms, 8 signals)
+inst_state.C = clock ; (1 pterm, 1 signal)
+inst_state.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_0_.D = !( !pc_0_.Q & pc_1_.Q & pc_3_.Q
+    # !pc_1_.Q & !pc_3_.Q & !pc_4_.Q
+    # pc_0_.Q & pc_2_.Q
+    # !pc_0_.Q & !pc_2_.Q & !pc_4_.Q
+    # pc_0_.Q & pc_4_.Q ) ; (5 pterms, 5 signals)
+lcd_data_0_.OE = u0lcdw_outData_cl_7_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_0_.C = clock ; (1 pterm, 1 signal)
+lcd_data_0_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_1_.D = pc_0_.Q & !pc_1_.Q & !pc_2_.Q & !pc_4_.Q
+    # pc_1_.Q & !pc_2_.Q & pc_3_.Q
+    # !pc_1_.Q & pc_2_.Q & pc_3_.Q ; (3 pterms, 5 signals)
+lcd_data_1_.OE = u0lcdw_outData_cl_6_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_1_.C = clock ; (1 pterm, 1 signal)
+lcd_data_1_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_2_.D = !pc_1_.Q & !pc_2_.Q & !pc_4_.Q
+    # pc_1_.Q & pc_3_.Q
+    # pc_1_.Q & pc_2_.Q
+    # !pc_0_.Q & !pc_4_.Q ; (4 pterms, 5 signals)
+lcd_data_2_.OE = u0lcdw_outData_cl_5_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_2_.C = clock ; (1 pterm, 1 signal)
+lcd_data_2_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_3_.D = pc_0_.Q & pc_2_.Q & !pc_3_.Q
+    # !pc_1_.Q & !pc_2_.Q & pc_3_.Q
+    # !pc_0_.Q & !pc_2_.Q & !pc_4_.Q
+    # !pc_0_.Q & pc_3_.Q ; (4 pterms, 5 signals)
+lcd_data_3_.OE = u0lcdw_outData_cl_4_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_3_.C = clock ; (1 pterm, 1 signal)
+lcd_data_3_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_4_.D = !pc_0_.Q & !pc_1_.Q & !pc_2_.Q & !pc_3_.Q & !pc_4_.Q
+    # pc_0_.Q & pc_1_.Q & !pc_2_.Q & pc_3_.Q
+    # pc_0_.Q & !pc_1_.Q & pc_2_.Q & pc_3_.Q ; (3 pterms, 5 signals)
+lcd_data_4_.OE = u0lcdw_outData_cl_3_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_4_.C = clock ; (1 pterm, 1 signal)
+lcd_data_4_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_5_.D = !pc_0_.Q & !pc_1_.Q & !pc_2_.Q
+    # pc_1_.Q & pc_2_.Q
+    # !pc_1_.Q & pc_3_.Q
+    # !pc_0_.Q & pc_3_.Q ; (4 pterms, 4 signals)
+lcd_data_5_.OE = u0lcdw_outData_cl_2_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_5_.C = clock ; (1 pterm, 1 signal)
+lcd_data_5_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_5_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_6_.D = !( !pc_0_.Q & pc_1_.Q & !pc_2_.Q
+    # !pc_0_.Q & !pc_1_.Q & !pc_3_.Q
+    # !pc_2_.Q & !pc_3_.Q ) ; (3 pterms, 4 signals)
+lcd_data_6_.OE = u0lcdw_outData_cl_1_0_reg.Q ; (1 pterm, 1 signal)
+lcd_data_6_.C = clock ; (1 pterm, 1 signal)
+lcd_data_6_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_6_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_data_7_.D = !pc_0_.Q & !pc_1_.Q & pc_2_.Q & !pc_3_.Q
+    # !pc_0_.Q & pc_1_.Q & !pc_2_.Q & pc_3_.Q
+    # pc_0_.Q & pc_4_.Q ; (3 pterms, 5 signals)
+lcd_data_7_.OE = u0lcdw_outData_cl_0_.Q ; (1 pterm, 1 signal)
+lcd_data_7_.C = clock ; (1 pterm, 1 signal)
+lcd_data_7_.CE = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+lcd_data_7_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_e.D = !( !u0lcdw_state_2_.Q & !u0lcdw_state_7_.Q & !u0lcdw_state_6_.Q ) ; (1 pterm, 3 signals)
+lcd_e.C = clock ; (1 pterm, 1 signal)
+lcd_e.CE = !( !u0lcdw_state_0_.Q & !u0lcdw_state_2_.Q & !u0lcdw_state_3_.Q
+       & !u0lcdw_state_7_.Q & !u0lcdw_state_10_.Q ) ; (1 pterm, 5 signals)
+lcd_e.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_rs.D = !( !u0lcdw_state_1_.Q & !u0lcdw_state_3_.Q & !u0lcdw_state_7_.Q
+       & !u0lcdw_state_9_.Q & !u0lcdw_state_5_.Q & !u0lcdw_state_11_.Q
+    # !pc_0_.Q & !pc_1_.Q & !pc_3_.Q & !pc_4_.Q
+    # !pc_0_.Q & pc_1_.Q & !pc_2_.Q
+    # !pc_2_.Q & !pc_3_.Q & !pc_4_.Q ) ; (4 pterms, 11 signals)
+lcd_rs.C = clock ; (1 pterm, 1 signal)
+lcd_rs.CE = !( !u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q & !u0lcdw_state_6_.Q ) ; (1 pterm, 3 signals)
+lcd_rs.AR = !reset_n ; (1 pterm, 1 signal)
+
+lcd_rw.D = u0lcdw_state_6_.Q ; (1 pterm, 1 signal)
+lcd_rw.C = clock ; (1 pterm, 1 signal)
+lcd_rw.CE = !( !u0lcdw_state_0_.Q & !u0lcdw_state_6_.Q ) ; (1 pterm, 2 signals)
+lcd_rw.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_0_.D = wack.Q & inst_state.Q & !pc_0_.Q
+    # !inst_state.Q & pc_0_.Q
+    # !wack.Q & pc_0_.Q ; (3 pterms, 3 signals)
+pc_0_.C = clock ; (1 pterm, 1 signal)
+pc_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_1_.D = wack.Q & inst_state.Q & pc_0_.Q & !pc_1_.Q
+    # !pc_0_.Q & pc_1_.Q
+    # !inst_state.Q & pc_1_.Q
+    # !wack.Q & pc_1_.Q ; (4 pterms, 4 signals)
+pc_1_.C = clock ; (1 pterm, 1 signal)
+pc_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_2_.D.X1 = wack.Q & inst_state.Q & pc_0_.Q & pc_1_.Q ; (1 pterm, 4 signals)
+pc_2_.D.X2 = pc_2_.Q ; (1 pterm, 1 signal)
+pc_2_.C = clock ; (1 pterm, 1 signal)
+pc_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_3_.T = wack.Q & inst_state.Q & pc_0_.Q & pc_1_.Q & pc_2_.Q ; (1 pterm, 5 signals)
+pc_3_.C = clock ; (1 pterm, 1 signal)
+pc_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+pc_4_.T = wack.Q & inst_state.Q & pc_0_.Q & pc_1_.Q & pc_2_.Q & pc_3_.Q ; (1 pterm, 6 signals)
+pc_4_.C = clock ; (1 pterm, 1 signal)
+pc_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_busyFlag.D = lcd_data_7_.PIN ; (1 pterm, 1 signal)
+u0lcdw_busyFlag.C = clock ; (1 pterm, 1 signal)
+u0lcdw_busyFlag.CE = u0lcdw_state_9_.Q ; (1 pterm, 1 signal)
+u0lcdw_busyFlag.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_0_.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_0_.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_0_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_1_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_1_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_1_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_1_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_2_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_2_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_2_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_2_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_3_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_3_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_3_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_3_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_4_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_4_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_4_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_4_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_5_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_5_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_5_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_5_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_6_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_6_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_6_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_6_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_outData_cl_7_0_reg.D = u0lcdw_state_1_.Q & !u0lcdw_state_0_.Q
+       & !u0lcdw_state_4_.Q
+    # !u0lcdw_state_0_.Q & !u0lcdw_state_4_.Q & u0lcdw_outData_cl_7_0_reg.Q ; (2 pterms, 4 signals)
+u0lcdw_outData_cl_7_0_reg.C = clock ; (1 pterm, 1 signal)
+u0lcdw_outData_cl_7_0_reg.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_0_.D = !wreq.Q & !u0lcdw_state_1_.Q & !u0lcdw_state_4_.Q
+       & !u0lcdw_state_2_.Q & !u0lcdw_state_3_.Q & !u0lcdw_state_7_.Q
+       & !u0lcdw_state_10_.Q & !u0lcdw_state_9_.Q & !u0lcdw_state_5_.Q
+       & !u0lcdw_state_6_.Q & !u0lcdw_state_8_.Q & !u0lcdw_state_11_.Q
+    # !u0lcdw_state_3_.Q & !u0lcdw_state_7_.Q & !u0lcdw_state_9_.Q
+       & !u0lcdw_state_5_.Q & !u0lcdw_state_11_.Q & u0lcdw_state_12_.Q ; (2 pterms, 13 signals)
+u0lcdw_state_0_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_0_.AP = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_10_.D = u0lcdw_state_9_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_10_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_10_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_11_.D = u0lcdw_state_10_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_11_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_11_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_12_.D = !u0lcdw_busyFlag.Q & u0lcdw_state_11_.Q ; (1 pterm, 2 signals)
+u0lcdw_state_12_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_12_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_1_.D = wreq.Q & u0lcdw_state_0_.Q ; (1 pterm, 2 signals)
+u0lcdw_state_1_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_2_.D = u0lcdw_state_1_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_2_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_3_.D = u0lcdw_state_5_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_3_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_4_.D = u0lcdw_state_3_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_4_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_5_.D = u0lcdw_state_2_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_5_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_5_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_6_.D = u0lcdw_state_4_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_6_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_6_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_7_.D = u0lcdw_state_6_.Q
+    # u0lcdw_busyFlag.Q & u0lcdw_state_11_.Q ; (2 pterms, 3 signals)
+u0lcdw_state_7_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_7_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_8_.D = u0lcdw_state_7_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_8_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_8_.AR = !reset_n ; (1 pterm, 1 signal)
+
+u0lcdw_state_9_.D = u0lcdw_state_8_.Q ; (1 pterm, 1 signal)
+u0lcdw_state_9_.C = clock ; (1 pterm, 1 signal)
+u0lcdw_state_9_.AR = !reset_n ; (1 pterm, 1 signal)
+
+wack.D = u0lcdw_state_12_.Q ; (1 pterm, 1 signal)
+wack.C = clock ; (1 pterm, 1 signal)
+wack.CE = !( !u0lcdw_state_0_.Q & !u0lcdw_state_12_.Q ) ; (1 pterm, 2 signals)
+wack.AR = !reset_n ; (1 pterm, 1 signal)
+
+wreq.D = !inst_state.Q ; (1 pterm, 1 signal)
+wreq.C = clock ; (1 pterm, 1 signal)
+wreq.CE = !( wreq_0 ) ; (1 pterm, 1 signal)
+wreq.AR = !reset_n ; (1 pterm, 1 signal)
+
+wreq_0 = start_n & !inst_state.Q
+    # !inst_state.Q & pc_0_.Q & !pc_1_.Q & !pc_2_.Q & !pc_3_.Q & pc_4_.Q ; (2 pterms, 7 signals)
+

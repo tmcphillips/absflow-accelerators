@@ -1,0 +1,5 @@
+verilog design ..\src\fourbitcounterwithload.v
+verilog design ..\src\buttonpressdetector.v
+verilog design ..\src\ripplescaler.v
+verilog design ..\src\updowncounter.v
+verilog design ..\src\testbench.v

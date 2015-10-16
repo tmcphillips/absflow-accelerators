@@ -1,0 +1,7 @@
+82
+~M 3 "./../synthesis/fourbitcounterwithload.v" 36 FourBitCounterWithLoad
+~A 1 "./../synthesis/fourbitcounterwithload.v" 36 FourBitCounterWithLoad
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 3 "./../synthesis/fourbitcounterwithload.v" 892 glbl
+~A 1 "./../synthesis/fourbitcounterwithload.v" 892 glbl

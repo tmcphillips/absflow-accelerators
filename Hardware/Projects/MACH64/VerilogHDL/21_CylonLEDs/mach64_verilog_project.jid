@@ -1,0 +1,5 @@
+. CylonLEDs cylonleds.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v
+u1rs.u1rc.uitff TFlipFlop cylonleds.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v
+u1rs.u1rc.u0tff TFlipFlop cylonleds.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v
+u1rs.u1rc RippleCounter cylonleds.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v
+u1rs RippleScaler cylonleds.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\21_cylonleds\cylonleds.v

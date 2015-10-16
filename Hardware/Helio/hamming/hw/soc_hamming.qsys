@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element mm_to_st_adapter.avalon_mm_in
+   {
+      datum baseAddress
+      {
+         value = "65536";
+         type = "String";
+      }
+   }
+   element st_to_mm_adapter.avalon_mm_out
+   {
+      datum baseAddress
+      {
+         value = "65568";
+         type = "String";
+      }
+   }
+   element clock
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element hamming
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element jtag_mm_master
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element hamming.max
+   {
+      datum baseAddress
+      {
+         value = "65552";
+         type = "String";
+      }
+   }
+   element mm_to_st_adapter
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element st_to_mm_adapter
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6C6U23C8ES" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="soc_hamming_hps.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
+ <module kind="clock_source" version="13.1" enabled="1" name="clock">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="altera_jtag_avalon_master"
+   version="13.1"
+   enabled="1"
+   name="jtag_mm_master">
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6C6U23C8ES" />
+ </module>
+ <module kind="hamming" version="1.0" enabled="1" name="hamming">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID">$${FILENAME}_hamming</parameter>
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6C6U23C8ES" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+ </module>
+ <module
+   kind="st_to_mm_adapter"
+   version="1.0"
+   enabled="1"
+   name="st_to_mm_adapter">
+  <parameter name="WIDTH" value="8" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <module
+   kind="mm_to_st_adapter"
+   version="1.0"
+   enabled="1"
+   name="mm_to_st_adapter">
+  <parameter name="WIDTH" value="8" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="jtag_mm_master.clk_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="clock.clk_in_reset" />
+ <connection
+   kind="avalon"
+   version="13.1"
+   start="jtag_mm_master.master"
+   end="hamming.max">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010010" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="13.1" start="clock.clk" end="hamming.clk" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="hamming.reset" />
+ <connection
+   kind="avalon"
+   version="13.1"
+   start="jtag_mm_master.master"
+   end="st_to_mm_adapter.avalon_mm_out">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010020" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.1"
+   start="jtag_mm_master.master"
+   end="mm_to_st_adapter.avalon_mm_in">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="mm_to_st_adapter.avalon_st_out"
+   end="hamming.in" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="st_to_mm_adapter.clock" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="mm_to_st_adapter.clock" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="mm_to_st_adapter.reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="st_to_mm_adapter.reset" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="hamming.out"
+   end="st_to_mm_adapter.avalon_st_in" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="jtag_mm_master.clk" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="false" />
+</system>

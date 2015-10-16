@@ -1,0 +1,2 @@
+. LcdDemo lcddemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v
+u0lcdw LCDWriter lcddemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v

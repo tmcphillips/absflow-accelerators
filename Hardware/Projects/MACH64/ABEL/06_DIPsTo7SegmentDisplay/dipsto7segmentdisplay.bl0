@@ -1,0 +1,83 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:12:57 2012
+#$ MODULE dipsto7segmentdisplay
+#$ JEDECFILE dipsto7segmentdisplay
+#$ PINS 13 d0:17 d1:16 d2:15 d3:14 a:20 b:21 c:22 d:23 e:24 f:26 g:27 enableHex:31 enableDisplay:28
+#$ NODES 22 HexLEDSegmentLookup>d0'co'  HexLEDSegmentLookup>d1'co'  HexLEDSegmentLookup>d2'co'  HexLEDSegmentLookup>d3'co'  HexLEDSegmentLookup>a'co'  \
+#  HexLEDSegmentLookup>b'co'  HexLEDSegmentLookup>c'co'  HexLEDSegmentLookup>d'co'  HexLEDSegmentLookup>e'co'  HexLEDSegmentLookup>f'co'  HexLEDSegmentLookup>g'co'  \
+#  BCDLEDSegmentLookup>d0'co'  BCDLEDSegmentLookup>d1'co'  BCDLEDSegmentLookup>d2'co'  BCDLEDSegmentLookup>d3'co'  BCDLEDSegmentLookup>a'co'  \
+#  BCDLEDSegmentLookup>b'co'  BCDLEDSegmentLookup>c'co'  BCDLEDSegmentLookup>d'co'  BCDLEDSegmentLookup>e'co'  BCDLEDSegmentLookup>f'co'  BCDLEDSegmentLookup>g'co' 
+#$ INTERFACE hextosevensegment  11 d0'i'  d1'i'  d2'i'  d3'i'  a'o'  b'o'  c'o'  d'o'  e'o'  f'o'  g'o' 
+#$ INTERFACE bcdtosevensegment  11 d0'i'  d1'i'  d2'i'  d3'i'  a'o'  b'o'  c'o'  d'o'  e'o'  f'o'  g'o' 
+#$ INSTANCE HexLEDSegmentLookup hextosevensegment 11 HexLEDSegmentLookup>d0 HexLEDSegmentLookup>d1 HexLEDSegmentLookup>d2 HexLEDSegmentLookup>d3 \
+#  HexLEDSegmentLookup>a HexLEDSegmentLookup>b HexLEDSegmentLookup>c HexLEDSegmentLookup>d HexLEDSegmentLookup>e HexLEDSegmentLookup>f \
+#  HexLEDSegmentLookup>g
+#$ INSTANCE BCDLEDSegmentLookup bcdtosevensegment 11 BCDLEDSegmentLookup>d0 BCDLEDSegmentLookup>d1 BCDLEDSegmentLookup>d2 BCDLEDSegmentLookup>d3 \
+#  BCDLEDSegmentLookup>a BCDLEDSegmentLookup>b BCDLEDSegmentLookup>c BCDLEDSegmentLookup>d BCDLEDSegmentLookup>e BCDLEDSegmentLookup>f \
+#  BCDLEDSegmentLookup>g
+
+.model dipsto7segmentdisplay
+.inputs enableDisplay.BLIF d0.BLIF d1.BLIF d2.BLIF d3.BLIF HexLEDSegmentLookup>a.BLIF \
+enableHex.BLIF HexLEDSegmentLookup>b.BLIF HexLEDSegmentLookup>c.BLIF \
+HexLEDSegmentLookup>d.BLIF HexLEDSegmentLookup>e.BLIF \
+HexLEDSegmentLookup>f.BLIF HexLEDSegmentLookup>g.BLIF \
+BCDLEDSegmentLookup>a.BLIF BCDLEDSegmentLookup>b.BLIF \
+BCDLEDSegmentLookup>c.BLIF BCDLEDSegmentLookup>d.BLIF \
+BCDLEDSegmentLookup>e.BLIF BCDLEDSegmentLookup>f.BLIF \
+BCDLEDSegmentLookup>g.BLIF
+.outputs a b c d e f g HexLEDSegmentLookup>d0 HexLEDSegmentLookup>d1 \
+HexLEDSegmentLookup>d2 HexLEDSegmentLookup>d3 BCDLEDSegmentLookup>d0 \
+BCDLEDSegmentLookup>d1 BCDLEDSegmentLookup>d2 BCDLEDSegmentLookup>d3 a.OE b.OE \
+c.OE d.OE e.OE f.OE g.OE
+.names HexLEDSegmentLookup>a.BLIF enableHex.BLIF BCDLEDSegmentLookup>a.BLIF a
+10- 1
+-11 1
+.names enableHex.BLIF HexLEDSegmentLookup>b.BLIF BCDLEDSegmentLookup>b.BLIF b
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>c.BLIF BCDLEDSegmentLookup>c.BLIF c
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>d.BLIF BCDLEDSegmentLookup>d.BLIF d
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>e.BLIF BCDLEDSegmentLookup>e.BLIF e
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>f.BLIF BCDLEDSegmentLookup>f.BLIF f
+01- 1
+1-1 1
+.names enableHex.BLIF HexLEDSegmentLookup>g.BLIF BCDLEDSegmentLookup>g.BLIF g
+01- 1
+1-1 1
+.names d0.BLIF HexLEDSegmentLookup>d0
+0 1
+.names d1.BLIF HexLEDSegmentLookup>d1
+0 1
+.names d2.BLIF HexLEDSegmentLookup>d2
+0 1
+.names d3.BLIF HexLEDSegmentLookup>d3
+0 1
+.names d0.BLIF BCDLEDSegmentLookup>d0
+0 1
+.names d1.BLIF BCDLEDSegmentLookup>d1
+0 1
+.names d2.BLIF BCDLEDSegmentLookup>d2
+0 1
+.names d3.BLIF BCDLEDSegmentLookup>d3
+0 1
+.names enableDisplay.BLIF a.OE
+0 1
+.names enableDisplay.BLIF b.OE
+0 1
+.names enableDisplay.BLIF c.OE
+0 1
+.names enableDisplay.BLIF d.OE
+0 1
+.names enableDisplay.BLIF e.OE
+0 1
+.names enableDisplay.BLIF f.OE
+0 1
+.names enableDisplay.BLIF g.OE
+0 1
+.end

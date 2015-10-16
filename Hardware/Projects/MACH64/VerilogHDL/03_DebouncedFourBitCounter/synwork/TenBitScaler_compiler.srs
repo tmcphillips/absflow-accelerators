@@ -1,0 +1,54 @@
+%%% protect protected_file
+@E
+@ 
+#
+#
+#
+# Created by Synplify Verilog HDL Compiler version comp550rc, Build 030R from Synplicity, Inc.
+# Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+# Synthesis Netlist written on Wed Jan 18 09:57:57 2012
+#
+#
+#OPTIONS:"|-top|TenBitScaler|-I|c:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\03_debouncedfourbitcounter\\|-I|C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib|-v2001|-encrypt|-pro|-ll|2000|-compiler_compatible|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\bin\\c_ver.exe":1298500924
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib\\vlog\\hypermods.v":1298501016
+#CUR:"C:\\ispLEVER_Classic1_5\\ispcpld\\..\\cae_library\\synthesis\\verilog\\mach.v":1244664000
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\03_debouncedfourbitcounter\\mach64_verilog_project.h":1326860363
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\03_debouncedfourbitcounter\\debouncedfourbitcounter.v":1326908910
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\03_debouncedfourbitcounter\\debouncer.v":1326863401
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\03_debouncedfourbitcounter\\tenbitscaler.v":1326909437
+f "C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"; # file 0
+af .is_verilog 1;
+f "C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"; # file 1
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\mach64_verilog_project.h"; # file 2
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncedfourbitcounter.v"; # file 3
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncer.v"; # file 4
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\tenbitscaler.v"; # file 5
+af .is_verilog 1;
+@E
+@ 
+ftell;
+@E@MR@46::4(::R4UI	FsRMaCA1H0OCNDsCRPsFHDoN;
+PHR3#sPCHoDFR
+4;N3PRHP#_CDsHF4oR;P
+NRs3FHNohl"CRaACMHO01NsDC"
+;
+
+@FR@46:::.j4(:.R0FkOODF	OR#NsDCr;g9
+RNH3Ds0_HFsolMNCFR"kD0OF"O	;
+
+
+
+@HR@46:::dj4n:dROHMD	FOROHMD	FO;H
+NR03sDs_FHNoMl"CRHDMOF"O	;R
+b@:@644j:jj:4:R.cHRMPk_M4HDMOFRO	k_M4HDMOFRO	HDMOF;O	
+@bR@4j::44::0.RsRkC0CskRk0sCb;
+Rj@@:44::.4:RDVN#VCRNCD#RDVN#
+C;b@R@64:4::444.4:48RN8OR#NsDC_g4r:Rj9#DONC4s_rjg:9OR#NsDCrjg:9sR0k
+C;b@R@6j:4:44:jR:n8RVV#DONCgsr:Rj9#DONCgsr:Rj9#DONC4s_rjg:9MRk4M_HOODF	N;
+HsR30FD_sMHoNRlC"N#OD"Cs;;
+C

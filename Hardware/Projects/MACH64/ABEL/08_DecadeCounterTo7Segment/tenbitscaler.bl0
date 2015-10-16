@@ -1,0 +1,103 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:15:46 2012
+#$ MODULE tenbitscaler
+#$ JEDECFILE tenbitscaler
+#$ PINS 2 inclock outclock
+#$ NODES 10 s9 s8 s7 s6 s5 s4 s3 s2 s1 s0
+#$ INTERFACE tenbitscaler  2 inclock'i'  outclock'o' 
+
+.model tenbitscaler
+.inputs inclock.BLIF s9.BLIF s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF \
+s1.BLIF s0.BLIF
+.outputs outclock s9.C s8.C s7.C s6.C s5.C s4.C s3.C s2.C s1.C s0.C s9.REG \
+s8.REG s7.REG s6.REG s5.REG s4.REG s3.REG s2.REG s1.REG s0.REG
+.names s9.BLIF outclock
+1 1
+.names inclock.BLIF s9.C
+1 1
+.names inclock.BLIF s8.C
+1 1
+.names inclock.BLIF s7.C
+1 1
+.names inclock.BLIF s6.C
+1 1
+.names inclock.BLIF s5.C
+1 1
+.names inclock.BLIF s4.C
+1 1
+.names inclock.BLIF s3.C
+1 1
+.names inclock.BLIF s2.C
+1 1
+.names inclock.BLIF s1.C
+1 1
+.names inclock.BLIF s0.C
+1 1
+.names s9.BLIF s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF \
+s0.BLIF s9.REG
+10-------- 1
+1-0------- 1
+1--0------ 1
+1---0----- 1
+1----0---- 1
+1-----0--- 1
+1------0-- 1
+1-------0- 1
+1--------0 1
+0111111111 1
+.names s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF \
+s8.REG
+10------- 1
+1-0------ 1
+1--0----- 1
+1---0---- 1
+1----0--- 1
+1-----0-- 1
+1------0- 1
+1-------0 1
+011111111 1
+.names s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s7.REG
+10------ 1
+1-0----- 1
+1--0---- 1
+1---0--- 1
+1----0-- 1
+1-----0- 1
+1------0 1
+01111111 1
+.names s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s6.REG
+10----- 1
+1-0---- 1
+1--0--- 1
+1---0-- 1
+1----0- 1
+1-----0 1
+0111111 1
+.names s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s5.REG
+10---- 1
+1-0--- 1
+1--0-- 1
+1---0- 1
+1----0 1
+011111 1
+.names s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s4.REG
+10--- 1
+1-0-- 1
+1--0- 1
+1---0 1
+01111 1
+.names s3.BLIF s2.BLIF s1.BLIF s0.BLIF s3.REG
+10-- 1
+1-0- 1
+1--0 1
+0111 1
+.names s2.BLIF s1.BLIF s0.BLIF s2.REG
+10- 1
+1-0 1
+011 1
+.names s1.BLIF s0.BLIF s1.REG
+01 1
+10 1
+.names s0.BLIF s0.REG
+0 1
+.end

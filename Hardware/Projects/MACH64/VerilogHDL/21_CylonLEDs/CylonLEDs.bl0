@@ -1,0 +1,1207 @@
+#$ DATE Sat Feb 11 20:44:56 2012
+#$ TOOL EDIF2BLIF version IspLever 1.0 
+#$ MODULE cylonleds
+#$ PINS 10 LED_7_:28'ke'  oneMHzClock:43'ke'  reset_n:24'ke'  LED_6_:40'ke'  LED_5_:39'ke'  LED_4_:38'ke'  LED_3_:34'ke'  LED_2_:33'ke'  LED_1_:32'ke'  LED_0_:31'ke' 
+#$ NODES 421 LEDDFF_2reg u1rs_u1rc_genblk1_14__uitff_q center_0_ LEDDFF_3reg inst_direction LEDDFF_4reg duty_0_ duty_1_ LEDDFF_5reg duty_2_ \
+#  duty_3_ LEDDFF_6reg brightness_2__0_ brightness_2__1_ LEDDFF_7reg brightness_2__2_ un1_center_6_i brightness_3__0_ un1_center_15_i_0__n brightness_3__1_ \
+#  brightness_4__8_0_2__n brightness_3__2_ un1_center_17_i_0__n brightness_8__8_0_2__n brightness_4__0_ un1_center_2_i brightness_4__1_ un1_center_12_i_0__n brightness_4__2_ brightness_2__8_f1_0_2__n \
+#  N_99_i brightness_5__0_ brightness_3__8_0_0__n brightness_5__1_ un1_center_5_i brightness_5__2_ N_96_i brightness_8__8_0_0__n brightness_6__0_ un1_center_8_i \
+#  brightness_6__1_ un1_center_16_i_0__n brightness_6__2_ brightness_9__8_0 N_131_0 brightness_7__0_ un1_center_1_i brightness_7__1_ un1_center_10_i_0__n brightness_7__2_ \
+#  brightness_5__8_0_2__n un1_center_14_i_0__n brightness_8__0_ brightness_6__8_0_2__n brightness_8__1_ un1_center_13_i_0__n brightness_8__2_ brightness_7__8_0_2__n un1_center_11_i_0__n brightness_9__0_ \
+#  brightness_3__8_0_2__n brightness_9__1_ un1_center_3_i brightness_9__2_ brightness_2__8_0_0__n center_1_ brightness_4__8_0_0__n center_2_ brightness_5__8_0_0__n center_3_ \
+#  brightness_6__8_0_0__n center_4_1_ N_233_i N_244_i _l7_led54_0_n un1_direction10_0__n N_235_i u1rs_u1rc_u0tff_q N_242_i u1rs_u1rc_genblk1_0__uitff_q \
+#  N_243_0 u1rs_u1rc_genblk1_1__uitff_q N_237_i u1rs_u1rc_genblk1_2__uitff_q N_240_i u1rs_u1rc_genblk1_3__uitff_q N_241_0 u1rs_u1rc_genblk1_4__uitff_q brightness_9__i_1__n u1rs_u1rc_genblk1_5__uitff_q \
+#  N_238_0 u1rs_u1rc_genblk1_6__uitff_q brightness_9__i_2__n u1rs_u1rc_genblk1_7__uitff_q N_236_0 u1rs_u1rc_genblk1_8__uitff_q N_234_0 u1rs_u1rc_genblk1_9__uitff_q N_220_i u1rs_u1rc_genblk1_10__uitff_q \
+#  N_231_i u1rs_u1rc_genblk1_11__uitff_q _l6_led47_0_n u1rs_u1rc_genblk1_12__uitff_q N_222_i u1rs_u1rc_genblk1_13__uitff_q N_229_i duty_n1 N_230_0 duty_n2 \
+#  N_224_i duty_n3 N_227_i N_128 N_228_0 N_142 brightness_8__i_1__n N_143 N_225_0 N_144 \
+#  brightness_8__i_2__n N_145 N_223_0 N_146 N_221_0 N_147 N_207_i N_149 N_218_i N_150 \
+#  _l5_led40_0_n N_151 N_209_i N_152 N_216_i N_153 N_217_0 N_155 N_211_i N_156 \
+#  N_214_i N_157 N_215_0 N_158 brightness_7__i_1__n N_159 N_212_0 N_160 brightness_7__i_2__n N_162 \
+#  N_210_0 N_163 N_208_0 N_164 N_194_i N_165 N_205_i N_166 _l4_led33_0_n N_168 \
+#  N_196_i N_169 N_203_i N_170 N_204_0 N_171 N_198_i N_172 N_201_i N_173 \
+#  N_202_0 N_175 brightness_6__i_1__n N_176 N_199_0 N_177 brightness_6__i_2__n N_178 N_197_0 N_179 \
+#  N_195_0 N_181 N_181_i N_182 N_192_i N_183 _l3_led26_0_n N_184 N_183_i N_185 \
+#  N_190_i N_186 N_191_0 N_188 N_185_i N_189 N_188_i N_190 N_189_0 N_191 \
+#  brightness_5__i_1__n N_192 N_186_0 N_194 brightness_5__i_2__n N_195 N_184_0 N_196 N_182_0 N_197 \
+#  N_168_i N_198 N_179_i N_199 _l2_led19_0_n N_201 N_170_i N_202 N_177_i N_203 \
+#  N_178_0 N_204 N_172_i N_205 N_175_i N_207 N_176_0 N_208 brightness_4__i_1__n N_209 \
+#  N_173_0 N_210 brightness_4__i_2__n N_211 N_171_0 N_212 N_169_0 N_214 N_155_i N_215 \
+#  N_166_i N_216 _l1_led12_0_n N_217 N_157_i N_218 N_164_i N_220 N_165_0 N_221 \
+#  N_159_i N_222 N_162_i N_223 N_163_0 N_224 brightness_3__i_1__n N_225 N_160_0 N_227 \
+#  brightness_3__i_2__n N_228 N_158_0 N_229 N_156_0 N_230 N_142_i N_231 N_153_i N_233 \
+#  _l0_led5_0_n N_234 N_144_i N_235 N_151_i N_236 N_152_0 N_237 N_146_i N_238 \
+#  N_149_i N_240 N_150_0 N_241 brightness_2__i_1__n N_242 N_147_0 N_243 brightness_2__i_2__n N_244 \
+#  N_145_0 duty_c1 N_143_0 duty_c2 N_128_0 un1_center_11_0__n N_240_1 N_227_1 N_214_1 N_80 \
+#  N_201_1 un1_center_13_0__n N_188_1 N_175_1 N_162_1 un1_center_14_0__n N_149_1 un1_center_2_1 un1_center_3_1 un1_center_10_0__n \
+#  un1_center_5_1 un1_center_9_1 un1_center_4_1 un1_center un1_center_8_1 un1_center_6 center_4_1_1_ un1_center_2 N_128_0_1 un1_center_4 \
+#  un1_direction10_0__un3_n un1_center_1 un1_direction10_0__un1_n un1_center_5 un1_direction10_0__un0_n un1_center_7 center_4_2__un3_n un1_center_3 center_4_2__un1_n un1_center_6_1 \
+#  center_4_2__un0_n G_49 center_4_3__un3_n un1_center_2_0 center_4_3__un1_n un1_center_7_1 center_4_3__un0_n G_51 un1_center_12_0__un3_n un1_center_5_2 \
+#  un1_center_12_0__un1_n un1_center_7_2 un1_center_12_0__un0_n N_110 un1_center_15_0__un3_n un1_center_15_0__un1_n un1_center_17_0__n un1_center_15_0__un0_n un1_center_16_0__un3_n un1_center_16_0__un1_n \
+#  un1_center_12_0__n un1_center_16_0__un0_n un1_center_17_0__un3_n un1_center_15_0__n un1_center_17_0__un1_n un1_center_17_0__un0_n N_93 un1_center_10_0__un3_n un1_center_16_0__n un1_center_10_0__un1_n \
+#  un1_center_10_0__un0_n N_113 un1_center_11_0__un3_n N_131 un1_center_11_0__un1_n G_47 un1_center_11_0__un0_n G_71 un1_center_13_0__un3_n G_72 \
+#  un1_center_13_0__un1_n un1_center_9 un1_center_13_0__un0_n un1_center_8 un1_center_14_0__un3_n un1_direction_1 un1_center_14_0__un1_n N_96 un1_center_14_0__un0_n N_99 \
+#  brightness_2__8_f1_2__n un1_center_9_2 center_i_2__n un10_center_1_i_i_3__n un3_center_1_i_3__n un10_center_1_i_i_1__n un3_center_1_i_2__n center_i_0__n un1_direction_1_i direction_i \
+#  un1_center_4_i un1_center_9_i un10_center_1_i_i_2__n un1_center_7_i center_i_0_3__n un1_center_i duty_i_0__n duty_i_1__n duty_i_2__n duty_i_3__n \
+#  u1rs_counter_i_13__n u1rs_counter_i_12__n u1rs_counter_i_4__n u1rs_counter_i_3__n u1rs_counter_i_11__n u1rs_counter_i_10__n u1rs_counter_i_2__n u1rs_counter_i_1__n u1rs_counter_i_6__n u1rs_counter_i_5__n \
+#  u1rs_counter_i_7__n u1rs_counter_i_0__n u1rs_counter_i_9__n u1rs_counter_i_8__n u1rs_counter_i_14__n center_i_1__n reset_n_i oneMHzClock_c reset_n_c LEDDFF_0reg \
+#  LEDDFF_1reg 
+.model cylonleds
+.inputs oneMHzClock.BLIF reset_n.BLIF LEDDFF_2reg.BLIF u1rs_u1rc_genblk1_14__uitff_q.BLIF center_0_.BLIF LEDDFF_3reg.BLIF inst_direction.BLIF LEDDFF_4reg.BLIF duty_0_.BLIF \
+  duty_1_.BLIF LEDDFF_5reg.BLIF duty_2_.BLIF duty_3_.BLIF LEDDFF_6reg.BLIF brightness_2__0_.BLIF brightness_2__1_.BLIF LEDDFF_7reg.BLIF brightness_2__2_.BLIF \
+  un1_center_6_i.BLIF brightness_3__0_.BLIF un1_center_15_i_0__n.BLIF brightness_3__1_.BLIF brightness_4__8_0_2__n.BLIF brightness_3__2_.BLIF un1_center_17_i_0__n.BLIF brightness_8__8_0_2__n.BLIF brightness_4__0_.BLIF \
+  un1_center_2_i.BLIF brightness_4__1_.BLIF un1_center_12_i_0__n.BLIF brightness_4__2_.BLIF brightness_2__8_f1_0_2__n.BLIF N_99_i.BLIF brightness_5__0_.BLIF brightness_3__8_0_0__n.BLIF brightness_5__1_.BLIF \
+  un1_center_5_i.BLIF brightness_5__2_.BLIF N_96_i.BLIF brightness_8__8_0_0__n.BLIF brightness_6__0_.BLIF un1_center_8_i.BLIF brightness_6__1_.BLIF un1_center_16_i_0__n.BLIF brightness_6__2_.BLIF \
+  brightness_9__8_0.BLIF N_131_0.BLIF brightness_7__0_.BLIF un1_center_1_i.BLIF brightness_7__1_.BLIF un1_center_10_i_0__n.BLIF brightness_7__2_.BLIF brightness_5__8_0_2__n.BLIF un1_center_14_i_0__n.BLIF \
+  brightness_8__0_.BLIF brightness_6__8_0_2__n.BLIF brightness_8__1_.BLIF un1_center_13_i_0__n.BLIF brightness_8__2_.BLIF brightness_7__8_0_2__n.BLIF un1_center_11_i_0__n.BLIF brightness_9__0_.BLIF brightness_3__8_0_2__n.BLIF \
+  brightness_9__1_.BLIF un1_center_3_i.BLIF brightness_9__2_.BLIF brightness_2__8_0_0__n.BLIF center_1_.BLIF brightness_4__8_0_0__n.BLIF center_2_.BLIF brightness_5__8_0_0__n.BLIF center_3_.BLIF \
+  brightness_6__8_0_0__n.BLIF center_4_1_.BLIF N_233_i.BLIF N_244_i.BLIF _l7_led54_0_n.BLIF un1_direction10_0__n.BLIF N_235_i.BLIF u1rs_u1rc_u0tff_q.BLIF N_242_i.BLIF \
+  u1rs_u1rc_genblk1_0__uitff_q.BLIF N_243_0.BLIF u1rs_u1rc_genblk1_1__uitff_q.BLIF N_237_i.BLIF u1rs_u1rc_genblk1_2__uitff_q.BLIF N_240_i.BLIF u1rs_u1rc_genblk1_3__uitff_q.BLIF N_241_0.BLIF u1rs_u1rc_genblk1_4__uitff_q.BLIF \
+  brightness_9__i_1__n.BLIF u1rs_u1rc_genblk1_5__uitff_q.BLIF N_238_0.BLIF u1rs_u1rc_genblk1_6__uitff_q.BLIF brightness_9__i_2__n.BLIF u1rs_u1rc_genblk1_7__uitff_q.BLIF N_236_0.BLIF u1rs_u1rc_genblk1_8__uitff_q.BLIF N_234_0.BLIF \
+  u1rs_u1rc_genblk1_9__uitff_q.BLIF N_220_i.BLIF u1rs_u1rc_genblk1_10__uitff_q.BLIF N_231_i.BLIF u1rs_u1rc_genblk1_11__uitff_q.BLIF _l6_led47_0_n.BLIF u1rs_u1rc_genblk1_12__uitff_q.BLIF N_222_i.BLIF u1rs_u1rc_genblk1_13__uitff_q.BLIF \
+  N_229_i.BLIF duty_n1.BLIF N_230_0.BLIF duty_n2.BLIF N_224_i.BLIF duty_n3.BLIF N_227_i.BLIF N_128.BLIF N_228_0.BLIF \
+  N_142.BLIF brightness_8__i_1__n.BLIF N_143.BLIF N_225_0.BLIF N_144.BLIF brightness_8__i_2__n.BLIF N_145.BLIF N_223_0.BLIF N_146.BLIF \
+  N_221_0.BLIF N_147.BLIF N_207_i.BLIF N_149.BLIF N_218_i.BLIF N_150.BLIF _l5_led40_0_n.BLIF N_151.BLIF N_209_i.BLIF \
+  N_152.BLIF N_216_i.BLIF N_153.BLIF N_217_0.BLIF N_155.BLIF N_211_i.BLIF N_156.BLIF N_214_i.BLIF N_157.BLIF \
+  N_215_0.BLIF N_158.BLIF brightness_7__i_1__n.BLIF N_159.BLIF N_212_0.BLIF N_160.BLIF brightness_7__i_2__n.BLIF N_162.BLIF N_210_0.BLIF \
+  N_163.BLIF N_208_0.BLIF N_164.BLIF N_194_i.BLIF N_165.BLIF N_205_i.BLIF N_166.BLIF _l4_led33_0_n.BLIF N_168.BLIF \
+  N_196_i.BLIF N_169.BLIF N_203_i.BLIF N_170.BLIF N_204_0.BLIF N_171.BLIF N_198_i.BLIF N_172.BLIF N_201_i.BLIF \
+  N_173.BLIF N_202_0.BLIF N_175.BLIF brightness_6__i_1__n.BLIF N_176.BLIF N_199_0.BLIF N_177.BLIF brightness_6__i_2__n.BLIF N_178.BLIF \
+  N_197_0.BLIF N_179.BLIF N_195_0.BLIF N_181.BLIF N_181_i.BLIF N_182.BLIF N_192_i.BLIF N_183.BLIF _l3_led26_0_n.BLIF \
+  N_184.BLIF N_183_i.BLIF N_185.BLIF N_190_i.BLIF N_186.BLIF N_191_0.BLIF N_188.BLIF N_185_i.BLIF N_189.BLIF \
+  N_188_i.BLIF N_190.BLIF N_189_0.BLIF N_191.BLIF brightness_5__i_1__n.BLIF N_192.BLIF N_186_0.BLIF N_194.BLIF brightness_5__i_2__n.BLIF \
+  N_195.BLIF N_184_0.BLIF N_196.BLIF N_182_0.BLIF N_197.BLIF N_168_i.BLIF N_198.BLIF N_179_i.BLIF N_199.BLIF \
+  _l2_led19_0_n.BLIF N_201.BLIF N_170_i.BLIF N_202.BLIF N_177_i.BLIF N_203.BLIF N_178_0.BLIF N_204.BLIF N_172_i.BLIF \
+  N_205.BLIF N_175_i.BLIF N_207.BLIF N_176_0.BLIF N_208.BLIF brightness_4__i_1__n.BLIF N_209.BLIF N_173_0.BLIF N_210.BLIF \
+  brightness_4__i_2__n.BLIF N_211.BLIF N_171_0.BLIF N_212.BLIF N_169_0.BLIF N_214.BLIF N_155_i.BLIF N_215.BLIF N_166_i.BLIF \
+  N_216.BLIF _l1_led12_0_n.BLIF N_217.BLIF N_157_i.BLIF N_218.BLIF N_164_i.BLIF N_220.BLIF N_165_0.BLIF N_221.BLIF \
+  N_159_i.BLIF N_222.BLIF N_162_i.BLIF N_223.BLIF N_163_0.BLIF N_224.BLIF brightness_3__i_1__n.BLIF N_225.BLIF N_160_0.BLIF \
+  N_227.BLIF brightness_3__i_2__n.BLIF N_228.BLIF N_158_0.BLIF N_229.BLIF N_156_0.BLIF N_230.BLIF N_142_i.BLIF N_231.BLIF \
+  N_153_i.BLIF N_233.BLIF _l0_led5_0_n.BLIF N_234.BLIF N_144_i.BLIF N_235.BLIF N_151_i.BLIF N_236.BLIF N_152_0.BLIF \
+  N_237.BLIF N_146_i.BLIF N_238.BLIF N_149_i.BLIF N_240.BLIF N_150_0.BLIF N_241.BLIF brightness_2__i_1__n.BLIF N_242.BLIF \
+  N_147_0.BLIF N_243.BLIF brightness_2__i_2__n.BLIF N_244.BLIF N_145_0.BLIF duty_c1.BLIF N_143_0.BLIF duty_c2.BLIF N_128_0.BLIF \
+  un1_center_11_0__n.BLIF N_240_1.BLIF N_227_1.BLIF N_214_1.BLIF N_80.BLIF N_201_1.BLIF un1_center_13_0__n.BLIF N_188_1.BLIF N_175_1.BLIF \
+  N_162_1.BLIF un1_center_14_0__n.BLIF N_149_1.BLIF un1_center_2_1.BLIF un1_center_3_1.BLIF un1_center_10_0__n.BLIF un1_center_5_1.BLIF un1_center_9_1.BLIF un1_center_4_1.BLIF \
+  un1_center.BLIF un1_center_8_1.BLIF un1_center_6.BLIF center_4_1_1_.BLIF un1_center_2.BLIF N_128_0_1.BLIF un1_center_4.BLIF un1_direction10_0__un3_n.BLIF un1_center_1.BLIF \
+  un1_direction10_0__un1_n.BLIF un1_center_5.BLIF un1_direction10_0__un0_n.BLIF un1_center_7.BLIF center_4_2__un3_n.BLIF un1_center_3.BLIF center_4_2__un1_n.BLIF un1_center_6_1.BLIF center_4_2__un0_n.BLIF \
+  G_49.BLIF center_4_3__un3_n.BLIF un1_center_2_0.BLIF center_4_3__un1_n.BLIF un1_center_7_1.BLIF center_4_3__un0_n.BLIF G_51.BLIF un1_center_12_0__un3_n.BLIF un1_center_5_2.BLIF \
+  un1_center_12_0__un1_n.BLIF un1_center_7_2.BLIF un1_center_12_0__un0_n.BLIF N_110.BLIF un1_center_15_0__un3_n.BLIF un1_center_15_0__un1_n.BLIF un1_center_17_0__n.BLIF un1_center_15_0__un0_n.BLIF un1_center_16_0__un3_n.BLIF \
+  un1_center_16_0__un1_n.BLIF un1_center_12_0__n.BLIF un1_center_16_0__un0_n.BLIF un1_center_17_0__un3_n.BLIF un1_center_15_0__n.BLIF un1_center_17_0__un1_n.BLIF un1_center_17_0__un0_n.BLIF N_93.BLIF un1_center_10_0__un3_n.BLIF \
+  un1_center_16_0__n.BLIF un1_center_10_0__un1_n.BLIF un1_center_10_0__un0_n.BLIF N_113.BLIF un1_center_11_0__un3_n.BLIF N_131.BLIF un1_center_11_0__un1_n.BLIF G_47.BLIF un1_center_11_0__un0_n.BLIF \
+  G_71.BLIF un1_center_13_0__un3_n.BLIF G_72.BLIF un1_center_13_0__un1_n.BLIF un1_center_9.BLIF un1_center_13_0__un0_n.BLIF un1_center_8.BLIF un1_center_14_0__un3_n.BLIF un1_direction_1.BLIF \
+  un1_center_14_0__un1_n.BLIF N_96.BLIF un1_center_14_0__un0_n.BLIF N_99.BLIF brightness_2__8_f1_2__n.BLIF un1_center_9_2.BLIF center_i_2__n.BLIF un10_center_1_i_i_3__n.BLIF un3_center_1_i_3__n.BLIF \
+  un10_center_1_i_i_1__n.BLIF un3_center_1_i_2__n.BLIF center_i_0__n.BLIF un1_direction_1_i.BLIF direction_i.BLIF un1_center_4_i.BLIF un1_center_9_i.BLIF un10_center_1_i_i_2__n.BLIF un1_center_7_i.BLIF \
+  center_i_0_3__n.BLIF un1_center_i.BLIF duty_i_0__n.BLIF duty_i_1__n.BLIF duty_i_2__n.BLIF duty_i_3__n.BLIF u1rs_counter_i_13__n.BLIF u1rs_counter_i_12__n.BLIF u1rs_counter_i_4__n.BLIF \
+  u1rs_counter_i_3__n.BLIF u1rs_counter_i_11__n.BLIF u1rs_counter_i_10__n.BLIF u1rs_counter_i_2__n.BLIF u1rs_counter_i_1__n.BLIF u1rs_counter_i_6__n.BLIF u1rs_counter_i_5__n.BLIF u1rs_counter_i_7__n.BLIF u1rs_counter_i_0__n.BLIF \
+  u1rs_counter_i_9__n.BLIF u1rs_counter_i_8__n.BLIF u1rs_counter_i_14__n.BLIF center_i_1__n.BLIF reset_n_i.BLIF oneMHzClock_c.BLIF reset_n_c.BLIF LEDDFF_0reg.BLIF LEDDFF_1reg.BLIF  
+.outputs LED_7_ LED_6_ LED_5_ LED_4_ LED_3_ LED_2_ LED_1_ LED_0_ brightness_8__0_.D brightness_8__0_.CE brightness_8__0_.C \
+  brightness_8__1_.D brightness_8__1_.CE brightness_8__1_.C brightness_8__2_.D brightness_8__2_.CE brightness_8__2_.C brightness_3__0_.D brightness_3__0_.CE brightness_3__0_.C brightness_3__1_.D brightness_3__1_.CE \
+  brightness_3__1_.C brightness_3__2_.D brightness_3__2_.CE brightness_3__2_.C brightness_2__0_.D brightness_2__0_.CE brightness_2__0_.C brightness_2__1_.D brightness_2__1_.CE brightness_2__1_.C brightness_2__2_.D \
+  brightness_2__2_.CE brightness_2__2_.C brightness_7__0_.D brightness_7__0_.CE brightness_7__0_.C brightness_7__1_.D brightness_7__1_.CE brightness_7__1_.C brightness_7__2_.D brightness_7__2_.CE brightness_7__2_.C \
+  brightness_6__0_.D brightness_6__0_.CE brightness_6__0_.C brightness_6__1_.D brightness_6__1_.CE brightness_6__1_.C brightness_6__2_.D brightness_6__2_.CE brightness_6__2_.C brightness_5__0_.D brightness_5__0_.CE \
+  brightness_5__0_.C brightness_5__1_.D brightness_5__1_.CE brightness_5__1_.C brightness_5__2_.D brightness_5__2_.CE brightness_5__2_.C brightness_4__0_.D brightness_4__0_.CE brightness_4__0_.C brightness_4__1_.D \
+  brightness_4__1_.CE brightness_4__1_.C brightness_4__2_.D brightness_4__2_.CE brightness_4__2_.C brightness_9__0_.D brightness_9__0_.CE brightness_9__0_.C brightness_9__1_.D brightness_9__1_.CE brightness_9__1_.C \
+  brightness_9__2_.D brightness_9__2_.CE brightness_9__2_.C LEDDFF_0reg.D LEDDFF_0reg.C LEDDFF_1reg.D LEDDFF_1reg.C LEDDFF_2reg.D LEDDFF_2reg.C LEDDFF_3reg.D LEDDFF_3reg.C \
+  LEDDFF_4reg.D LEDDFF_4reg.C LEDDFF_5reg.D LEDDFF_5reg.C LEDDFF_6reg.D LEDDFF_6reg.C LEDDFF_7reg.D LEDDFF_7reg.C center_0_.D center_0_.C center_0_.AP \
+  center_1_.D center_1_.C center_1_.AR center_2_.D center_2_.C center_2_.AR center_3_.D center_3_.C center_3_.AR duty_0_.D duty_0_.C \
+  duty_1_.D duty_1_.C duty_2_.D duty_2_.C duty_3_.D duty_3_.C inst_direction.D inst_direction.CE inst_direction.C inst_direction.AR u1rs_u1rc_genblk1_11__uitff_q.D \
+  u1rs_u1rc_genblk1_11__uitff_q.C u1rs_u1rc_genblk1_8__uitff_q.D u1rs_u1rc_genblk1_8__uitff_q.C u1rs_u1rc_genblk1_4__uitff_q.D u1rs_u1rc_genblk1_4__uitff_q.C u1rs_u1rc_genblk1_13__uitff_q.D u1rs_u1rc_genblk1_13__uitff_q.C u1rs_u1rc_genblk1_2__uitff_q.D u1rs_u1rc_genblk1_2__uitff_q.C u1rs_u1rc_genblk1_14__uitff_q.D u1rs_u1rc_genblk1_14__uitff_q.C \
+  u1rs_u1rc_genblk1_7__uitff_q.D u1rs_u1rc_genblk1_7__uitff_q.C u1rs_u1rc_u0tff_q.D u1rs_u1rc_u0tff_q.C u1rs_u1rc_genblk1_9__uitff_q.D u1rs_u1rc_genblk1_9__uitff_q.C u1rs_u1rc_genblk1_0__uitff_q.D u1rs_u1rc_genblk1_0__uitff_q.C u1rs_u1rc_genblk1_6__uitff_q.D u1rs_u1rc_genblk1_6__uitff_q.C u1rs_u1rc_genblk1_5__uitff_q.D \
+  u1rs_u1rc_genblk1_5__uitff_q.C u1rs_u1rc_genblk1_1__uitff_q.D u1rs_u1rc_genblk1_1__uitff_q.C u1rs_u1rc_genblk1_10__uitff_q.D u1rs_u1rc_genblk1_10__uitff_q.C u1rs_u1rc_genblk1_3__uitff_q.D u1rs_u1rc_genblk1_3__uitff_q.C u1rs_u1rc_genblk1_12__uitff_q.D u1rs_u1rc_genblk1_12__uitff_q.C G_47.X1 G_47.X2 \
+  G_71.X1 G_71.X2 G_49.X1 G_49.X2 G_72.X1 G_72.X2 G_51.X1 G_51.X2 center_4_1_1_.X1 center_4_1_1_.X2 center_4_1_.X1 \
+  center_4_1_.X2 duty_n1.X1 duty_n1.X2 duty_n2.X1 duty_n2.X2 duty_n3.X1 duty_n3.X2 un1_center_6_i un1_center_15_i_0__n brightness_4__8_0_2__n un1_center_17_i_0__n \
+  brightness_8__8_0_2__n un1_center_2_i un1_center_12_i_0__n brightness_2__8_f1_0_2__n N_99_i brightness_3__8_0_0__n un1_center_5_i N_96_i brightness_8__8_0_0__n un1_center_8_i un1_center_16_i_0__n \
+  brightness_9__8_0 N_131_0 un1_center_1_i un1_center_10_i_0__n brightness_5__8_0_2__n un1_center_14_i_0__n brightness_6__8_0_2__n un1_center_13_i_0__n brightness_7__8_0_2__n un1_center_11_i_0__n brightness_3__8_0_2__n \
+  un1_center_3_i brightness_2__8_0_0__n brightness_4__8_0_0__n brightness_5__8_0_0__n brightness_6__8_0_0__n N_233_i N_244_i _l7_led54_0_n un1_direction10_0__n N_235_i N_242_i \
+  N_243_0 N_237_i N_240_i N_241_0 brightness_9__i_1__n N_238_0 brightness_9__i_2__n N_236_0 N_234_0 N_220_i N_231_i \
+  _l6_led47_0_n N_222_i N_229_i N_230_0 N_224_i N_227_i N_128 N_228_0 N_142 brightness_8__i_1__n N_143 \
+  N_225_0 N_144 brightness_8__i_2__n N_145 N_223_0 N_146 N_221_0 N_147 N_207_i N_149 N_218_i \
+  N_150 _l5_led40_0_n N_151 N_209_i N_152 N_216_i N_153 N_217_0 N_155 N_211_i N_156 \
+  N_214_i N_157 N_215_0 N_158 brightness_7__i_1__n N_159 N_212_0 N_160 brightness_7__i_2__n N_162 N_210_0 \
+  N_163 N_208_0 N_164 N_194_i N_165 N_205_i N_166 _l4_led33_0_n N_168 N_196_i N_169 \
+  N_203_i N_170 N_204_0 N_171 N_198_i N_172 N_201_i N_173 N_202_0 N_175 brightness_6__i_1__n \
+  N_176 N_199_0 N_177 brightness_6__i_2__n N_178 N_197_0 N_179 N_195_0 N_181 N_181_i N_182 \
+  N_192_i N_183 _l3_led26_0_n N_184 N_183_i N_185 N_190_i N_186 N_191_0 N_188 N_185_i \
+  N_189 N_188_i N_190 N_189_0 N_191 brightness_5__i_1__n N_192 N_186_0 N_194 brightness_5__i_2__n N_195 \
+  N_184_0 N_196 N_182_0 N_197 N_168_i N_198 N_179_i N_199 _l2_led19_0_n N_201 N_170_i \
+  N_202 N_177_i N_203 N_178_0 N_204 N_172_i N_205 N_175_i N_207 N_176_0 N_208 \
+  brightness_4__i_1__n N_209 N_173_0 N_210 brightness_4__i_2__n N_211 N_171_0 N_212 N_169_0 N_214 N_155_i \
+  N_215 N_166_i N_216 _l1_led12_0_n N_217 N_157_i N_218 N_164_i N_220 N_165_0 N_221 \
+  N_159_i N_222 N_162_i N_223 N_163_0 N_224 brightness_3__i_1__n N_225 N_160_0 N_227 brightness_3__i_2__n \
+  N_228 N_158_0 N_229 N_156_0 N_230 N_142_i N_231 N_153_i N_233 _l0_led5_0_n N_234 \
+  N_144_i N_235 N_151_i N_236 N_152_0 N_237 N_146_i N_238 N_149_i N_240 N_150_0 \
+  N_241 brightness_2__i_1__n N_242 N_147_0 N_243 brightness_2__i_2__n N_244 N_145_0 duty_c1 N_143_0 duty_c2 \
+  N_128_0 un1_center_11_0__n N_240_1 N_227_1 N_214_1 N_80 N_201_1 un1_center_13_0__n N_188_1 N_175_1 N_162_1 \
+  un1_center_14_0__n N_149_1 un1_center_2_1 un1_center_3_1 un1_center_10_0__n un1_center_5_1 un1_center_9_1 un1_center_4_1 un1_center un1_center_8_1 un1_center_6 \
+  un1_center_2 N_128_0_1 un1_center_4 un1_direction10_0__un3_n un1_center_1 un1_direction10_0__un1_n un1_center_5 un1_direction10_0__un0_n un1_center_7 center_4_2__un3_n un1_center_3 \
+  center_4_2__un1_n un1_center_6_1 center_4_2__un0_n center_4_3__un3_n un1_center_2_0 center_4_3__un1_n un1_center_7_1 center_4_3__un0_n un1_center_12_0__un3_n un1_center_5_2 un1_center_12_0__un1_n \
+  un1_center_7_2 un1_center_12_0__un0_n N_110 un1_center_15_0__un3_n un1_center_15_0__un1_n un1_center_17_0__n un1_center_15_0__un0_n un1_center_16_0__un3_n un1_center_16_0__un1_n un1_center_12_0__n un1_center_16_0__un0_n \
+  un1_center_17_0__un3_n un1_center_15_0__n un1_center_17_0__un1_n un1_center_17_0__un0_n N_93 un1_center_10_0__un3_n un1_center_16_0__n un1_center_10_0__un1_n un1_center_10_0__un0_n N_113 un1_center_11_0__un3_n \
+  N_131 un1_center_11_0__un1_n un1_center_11_0__un0_n un1_center_13_0__un3_n un1_center_13_0__un1_n un1_center_9 un1_center_13_0__un0_n un1_center_8 un1_center_14_0__un3_n un1_direction_1 un1_center_14_0__un1_n \
+  N_96 un1_center_14_0__un0_n N_99 brightness_2__8_f1_2__n un1_center_9_2 center_i_2__n un10_center_1_i_i_3__n un3_center_1_i_3__n un10_center_1_i_i_1__n un3_center_1_i_2__n center_i_0__n \
+  un1_direction_1_i direction_i un1_center_4_i un1_center_9_i un10_center_1_i_i_2__n un1_center_7_i center_i_0_3__n un1_center_i duty_i_0__n duty_i_1__n duty_i_2__n \
+  duty_i_3__n u1rs_counter_i_13__n u1rs_counter_i_12__n u1rs_counter_i_4__n u1rs_counter_i_3__n u1rs_counter_i_11__n u1rs_counter_i_10__n u1rs_counter_i_2__n u1rs_counter_i_1__n u1rs_counter_i_6__n u1rs_counter_i_5__n \
+  u1rs_counter_i_7__n u1rs_counter_i_0__n u1rs_counter_i_9__n u1rs_counter_i_8__n u1rs_counter_i_14__n center_i_1__n reset_n_i oneMHzClock_c reset_n_c
+.names  G_51.BLIF un3_center_1_i_3__n
+0 1
+.names  G_47.BLIF un10_center_1_i_i_1__n
+0 1
+.names  u1rs_counter_i_10__n.BLIF u1rs_u1rc_genblk1_10__uitff_q.C
+1 1
+.names  un3_center_1_i_3__n.BLIF un10_center_1_i_i_1__n.BLIF un1_center_7_2
+11 1
+.names  un1_center_12_0__n.BLIF brightness_2__1_.D
+1 1
+.names  G_72.BLIF un10_center_1_i_i_3__n
+0 1
+.names  center_2_.BLIF center_i_2__n
+0 1
+.names  reset_n_c.BLIF brightness_2__1_.CE
+1 1
+.names  u1rs_counter_i_4__n.BLIF u1rs_u1rc_genblk1_3__uitff_q.D
+1 1
+.names  center_i_2__n.BLIF G_47.BLIF un1_center_9_2
+11 1
+.names  un1_center_7.BLIF un1_center_7_i
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_2__1_.C
+1 1
+.names  u1rs_counter_i_3__n.BLIF u1rs_u1rc_genblk1_3__uitff_q.C
+1 1
+.names  inst_direction.BLIF un1_direction10_0__un3_n
+0 1
+.names  un1_center_7_i.BLIF inst_direction.BLIF un1_direction10_0__un1_n
+11 1
+.names  un1_center_4_i.BLIF un1_direction10_0__un3_n.BLIF un1_direction10_0__un0_n
+11 1
+.names  u1rs_counter_i_13__n.BLIF u1rs_u1rc_genblk1_12__uitff_q.D
+1 1
+.names  un1_direction10_0__un1_n.BLIF un1_direction10_0__un0_n.BLIF un1_direction10_0__n
+1- 1
+-1 1
+.names  reset_n_c.BLIF brightness_2__2_.CE
+1 1
+.names  un1_center_8_i.BLIF un1_center_16_i_0__n.BLIF brightness_9__8_0
+11 1
+.names  u1rs_counter_i_12__n.BLIF u1rs_u1rc_genblk1_12__uitff_q.C
+1 1
+.names  G_71.BLIF un10_center_1_i_i_2__n
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_2__2_.C
+1 1
+.names  inst_direction.BLIF center_4_2__un3_n
+0 1
+.names  un10_center_1_i_i_2__n.BLIF inst_direction.BLIF center_4_2__un1_n
+11 1
+.names  center_0_.BLIF G_47.X1
+1 1
+.names  G_49.BLIF center_4_2__un3_n.BLIF center_4_2__un0_n
+11 1
+.names  center_4_2__un1_n.BLIF center_4_2__un0_n.BLIF center_2_.D
+1- 1
+-1 1
+.names  reset_n_c.BLIF brightness_7__0_.CE
+1 1
+.names  center_1_.BLIF G_47.X2
+1 1
+.names  inst_direction.BLIF center_4_3__un3_n
+0 1
+.names  un10_center_1_i_i_3__n.BLIF inst_direction.BLIF center_4_3__un1_n
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_7__0_.C
+1 1
+.names  G_51.BLIF center_4_3__un3_n.BLIF center_4_3__un0_n
+11 1
+.names  N_131.BLIF G_71.X1
+1 1
+.names  center_4_3__un1_n.BLIF center_4_3__un0_n.BLIF center_3_.D
+1- 1
+-1 1
+.names  un1_center_4.BLIF un1_center_4_i
+0 1
+.names  un1_center_13_0__n.BLIF brightness_7__1_.D
+1 1
+.names  center_2_.BLIF G_71.X2
+1 1
+.names  un1_center_9.BLIF un1_center_9_i
+0 1
+.names  un1_center_4_i.BLIF un1_center_9_i.BLIF N_93
+11 1
+.names  reset_n_c.BLIF brightness_7__1_.CE
+1 1
+.names  inst_direction.BLIF un1_center_8.BLIF N_96
+11 1
+.names  N_110.BLIF G_49.X1
+1 1
+.names  N_96_i.BLIF un1_center_5_i.BLIF brightness_8__8_0_0__n
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_7__1_.C
+1 1
+.names  inst_direction.BLIF direction_i
+0 1
+.names  center_2_.BLIF G_49.X2
+1 1
+.names  direction_i.BLIF un1_center_2.BLIF N_99
+11 1
+.names  N_99_i.BLIF un1_center_6_i.BLIF brightness_3__8_0_0__n
+11 1
+.names  un1_center_2_i.BLIF un1_center_12_i_0__n.BLIF brightness_2__8_f1_0_2__n
+11 1
+.names  reset_n_c.BLIF brightness_7__2_.CE
+1 1
+.names  N_128.BLIF G_72.X1
+1 1
+.names  un1_center_6_1.BLIF un1_center_7_2.BLIF un1_center_6
+11 1
+.names  un1_center_7_1.BLIF un1_center_7_2.BLIF un1_center_7
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_7__2_.C
+1 1
+.names  center_3_.BLIF G_72.X2
+1 1
+.names  center_0_.BLIF center_1_.BLIF N_110
+11 1
+.names  N_110.BLIF center_2_.BLIF N_113
+11 1
+.names  center_i_0__n.BLIF center_i_1__n.BLIF N_131_0
+11 1
+.names  N_113.BLIF G_51.X1
+1 1
+.names  reset_n_c.BLIF brightness_6__0_.CE
+1 1
+.names  center_3_.BLIF G_51.X2
+1 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_6__0_.C
+1 1
+.names  center_0_.BLIF center_4_1_1_.X1
+1 1
+.names  inst_direction.BLIF un1_center_12_0__un3_n
+0 1
+.names  un1_center_14_0__n.BLIF brightness_6__1_.D
+1 1
+.names  un1_center_7.BLIF inst_direction.BLIF un1_center_12_0__un1_n
+11 1
+.names  center_1_.BLIF center_4_1_1_.X2
+1 1
+.names  un1_center_3.BLIF un1_center_12_0__un3_n.BLIF un1_center_12_0__un0_n
+11 1
+.names  reset_n_c.BLIF brightness_6__1_.CE
+1 1
+.names  un1_center_12_0__un1_n.BLIF un1_center_12_0__un0_n.BLIF un1_center_12_0__n
+1- 1
+-1 1
+.names  inst_direction.BLIF un1_center_15_0__un3_n
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_6__1_.C
+1 1
+.names  center_4_1_1_.BLIF center_4_1_.X1
+1 1
+.names  un1_center_1.BLIF inst_direction.BLIF un1_center_15_0__un1_n
+11 1
+.names  un1_center_7.BLIF un1_center_15_0__un3_n.BLIF un1_center_15_0__un0_n
+11 1
+.names  inst_direction.BLIF center_4_1_.X2
+1 1
+.names  un1_center_15_0__un1_n.BLIF un1_center_15_0__un0_n.BLIF un1_center_15_0__n
+1- 1
+-1 1
+.names  inst_direction.BLIF un1_center_16_0__un3_n
+0 1
+.names  reset_n_c.BLIF brightness_6__2_.CE
+1 1
+.names  un1_center_9.BLIF inst_direction.BLIF un1_center_16_0__un1_n
+11 1
+.names  duty_0_.BLIF duty_n1.X1
+1 1
+.names  un1_center_4.BLIF un1_center_16_0__un3_n.BLIF un1_center_16_0__un0_n
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_6__2_.C
+1 1
+.names  un1_center_16_0__un1_n.BLIF un1_center_16_0__un0_n.BLIF un1_center_16_0__n
+1- 1
+-1 1
+.names  duty_1_.BLIF duty_n1.X2
+1 1
+.names  inst_direction.BLIF un1_center_17_0__un3_n
+0 1
+.names  un1_center_8.BLIF inst_direction.BLIF un1_center_17_0__un1_n
+11 1
+.names  un1_center_5.BLIF un1_center_17_0__un3_n.BLIF un1_center_17_0__un0_n
+11 1
+.names  reset_n_c.BLIF brightness_5__0_.CE
+1 1
+.names  duty_2_.BLIF duty_n2.X1
+1 1
+.names  un1_center_17_0__un1_n.BLIF un1_center_17_0__un0_n.BLIF un1_center_17_0__n
+1- 1
+-1 1
+.names  inst_direction.BLIF un1_center_2_0.BLIF un1_direction_1
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_5__0_.C
+1 1
+.names  duty_c1.BLIF duty_n2.X2
+1 1
+.names  un1_center.BLIF un1_center_i
+0 1
+.names  un1_center_4_i.BLIF un1_center_i.BLIF N_80
+11 1
+.names  un1_center_1_i.BLIF un1_center_5_i.BLIF brightness_6__8_0_0__n
+11 1
+.names  un1_center_10_0__n.BLIF brightness_5__1_.D
+1 1
+.names  duty_3_.BLIF duty_n3.X1
+1 1
+.names  un1_center_6_i.BLIF un1_center_i.BLIF brightness_5__8_0_0__n
+11 1
+.names  un1_center_1_i.BLIF un1_center_7_i.BLIF brightness_4__8_0_0__n
+11 1
+.names  reset_n_c.BLIF brightness_5__1_.CE
+1 1
+.names  duty_c2.BLIF duty_n3.X2
+1 1
+.names  oneMHzClock.BLIF oneMHzClock_c
+1 1
+.names  un1_center_3_i.BLIF un1_center_7_i.BLIF brightness_2__8_0_0__n
+11 1
+.names  reset_n.BLIF reset_n_c
+1 1
+.names  un1_center_7_i.BLIF un1_center_11_i_0__n.BLIF brightness_3__8_0_2__n
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_5__1_.C
+1 1
+.names  LEDDFF_0reg.BLIF LED_0_
+1 1
+.names  un1_center_5_i.BLIF un1_center_13_i_0__n.BLIF brightness_7__8_0_2__n
+11 1
+.names  center_4_1_.BLIF center_1_.D
+1 1
+.names  LEDDFF_1reg.BLIF LED_1_
+1 1
+.names  un1_center_14_i_0__n.BLIF un1_center_i.BLIF brightness_6__8_0_2__n
+11 1
+.names  duty_n1.BLIF duty_1_.D
+1 1
+.names  LEDDFF_2reg.BLIF LED_2_
+1 1
+.names  un1_center_1_i.BLIF un1_center_10_i_0__n.BLIF brightness_5__8_0_2__n
+11 1
+.names  duty_n2.BLIF duty_2_.D
+1 1
+.names  LEDDFF_3reg.BLIF LED_3_
+1 1
+.names  center_2_.BLIF center_i_0__n.BLIF un1_center_6_1
+11 1
+.names  reset_n_c.BLIF brightness_5__2_.CE
+1 1
+.names  duty_n3.BLIF duty_3_.D
+1 1
+.names  LEDDFF_4reg.BLIF LED_4_
+1 1
+.names  un1_center_2_0.BLIF un1_center_6_1.BLIF un1_center
+11 1
+.names  LEDDFF_5reg.BLIF LED_5_
+1 1
+.names  center_0_.BLIF G_49.BLIF un1_center_7_1
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_5__2_.C
+1 1
+.names  LEDDFF_6reg.BLIF LED_6_
+1 1
+.names  un1_center_2_0.BLIF un1_center_7_1.BLIF un1_center_1
+11 1
+.names  LEDDFF_7reg.BLIF LED_7_
+1 1
+.names  center_3_.BLIF center_i_0_3__n
+0 1
+.names  un1_center_8_1.BLIF un10_center_1_i_i_3__n.BLIF un1_center_8
+11 1
+.names  N_237_i.BLIF N_240_i.BLIF N_241_0
+11 1
+.names  N_236.BLIF N_241.BLIF N_242
+11 1
+.names  reset_n_c.BLIF brightness_4__0_.CE
+1 1
+.names  N_235_i.BLIF N_242_i.BLIF N_243_0
+11 1
+.names  center_i_0__n.BLIF center_i_1__n.BLIF N_128_0_1
+11 1
+.names  N_234.BLIF N_243.BLIF N_244
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_4__0_.C
+1 1
+.names  N_128_0_1.BLIF center_i_2__n.BLIF N_128_0
+11 1
+.names  N_233_i.BLIF N_244_i.BLIF _l7_led54_0_n
+11 1
+.names  N_160.BLIF brightness_3__0_.BLIF N_162_1
+11 1
+.names  duty_0_.BLIF duty_1_.BLIF duty_c1
+11 1
+.names  N_162_1.BLIF duty_i_0__n.BLIF N_162
+11 1
+.names  duty_2_.BLIF duty_c1.BLIF duty_c2
+11 1
+.names  un1_center_15_0__n.BLIF brightness_4__1_.D
+1 1
+.names  N_147.BLIF brightness_2__0_.BLIF N_149_1
+11 1
+.names  duty_0_.BLIF duty_i_0__n
+0 1
+.names  N_149_1.BLIF duty_i_0__n.BLIF N_149
+11 1
+.names  reset_n_c.BLIF brightness_4__1_.CE
+1 1
+.names  un1_center_2_0.BLIF center_i_0__n.BLIF un1_center_2_1
+11 1
+.names  un1_center_2_1.BLIF center_i_2__n.BLIF un1_center_2
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_4__1_.C
+1 1
+.names  un1_center_2_0.BLIF center_0_.BLIF un1_center_3_1
+11 1
+.names  inst_direction.BLIF un1_center_10_0__un3_n
+0 1
+.names  un1_center_3_1.BLIF center_i_2__n.BLIF un1_center_3
+11 1
+.names  un1_center.BLIF inst_direction.BLIF un1_center_10_0__un1_n
+11 1
+.names  center_0_.BLIF center_i_0_3__n.BLIF un1_center_5_1
+11 1
+.names  un1_center_6.BLIF un1_center_10_0__un3_n.BLIF un1_center_10_0__un0_n
+11 1
+.names  un1_center_5_1.BLIF un1_center_5_2.BLIF un1_center_5
+11 1
+.names  un1_center_10_0__un1_n.BLIF un1_center_10_0__un0_n.BLIF un1_center_10_0__n
+1- 1
+-1 1
+.names  reset_n_c.BLIF brightness_4__2_.CE
+1 1
+.names  center_i_0__n.BLIF un1_center_9_2.BLIF un1_center_9_1
+11 1
+.names  inst_direction.BLIF un1_center_11_0__un3_n
+0 1
+.names  un1_center_9_1.BLIF un10_center_1_i_i_3__n.BLIF un1_center_9
+11 1
+.names  un1_center_6.BLIF inst_direction.BLIF un1_center_11_0__un1_n
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_4__2_.C
+1 1
+.names  center_3_.BLIF center_i_0__n.BLIF un1_center_4_1
+11 1
+.names  un1_center_2.BLIF un1_center_11_0__un3_n.BLIF un1_center_11_0__un0_n
+11 1
+.names  un1_center_4_1.BLIF un1_center_5_2.BLIF un1_center_4
+11 1
+.names  un1_center_11_0__un1_n.BLIF un1_center_11_0__un0_n.BLIF un1_center_11_0__n
+1- 1
+-1 1
+.names  center_0_.BLIF un1_center_9_2.BLIF un1_center_8_1
+11 1
+.names  inst_direction.BLIF un1_center_13_0__un3_n
+0 1
+.names  N_145_0.BLIF N_145
+0 1
+.names  un1_center_4.BLIF inst_direction.BLIF un1_center_13_0__un1_n
+11 1
+.names  reset_n_c.BLIF brightness_9__0_.CE
+1 1
+.names  N_143_0.BLIF N_143
+0 1
+.names  un1_center.BLIF un1_center_13_0__un3_n.BLIF un1_center_13_0__un0_n
+11 1
+.names  N_128_0.BLIF N_128
+0 1
+.names  un1_center_13_0__un1_n.BLIF un1_center_13_0__un0_n.BLIF un1_center_13_0__n
+1- 1
+-1 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_9__0_.C
+1 1
+.names  N_238.BLIF brightness_9__0_.BLIF N_240_1
+11 1
+.names  inst_direction.BLIF un1_center_14_0__un3_n
+0 1
+.names  N_240_1.BLIF duty_i_0__n.BLIF N_240
+11 1
+.names  un1_center_5.BLIF inst_direction.BLIF un1_center_14_0__un1_n
+11 1
+.names  N_225.BLIF brightness_8__0_.BLIF N_227_1
+11 1
+.names  un1_center_1.BLIF un1_center_14_0__un3_n.BLIF un1_center_14_0__un0_n
+11 1
+.names  un1_center_16_0__n.BLIF brightness_9__1_.D
+1 1
+.names  N_227_1.BLIF duty_i_0__n.BLIF N_227
+11 1
+.names  un1_center_14_0__un1_n.BLIF un1_center_14_0__un0_n.BLIF un1_center_14_0__n
+1- 1
+-1 1
+.names  N_212.BLIF brightness_7__0_.BLIF N_214_1
+11 1
+.names  brightness_8__i_1__n.BLIF duty_1_.BLIF N_225_0
+11 1
+.names  reset_n_c.BLIF brightness_9__1_.CE
+1 1
+.names  N_214_1.BLIF duty_i_0__n.BLIF N_214
+11 1
+.names  N_224_i.BLIF N_227_i.BLIF N_228_0
+11 1
+.names  N_199.BLIF brightness_6__0_.BLIF N_201_1
+11 1
+.names  N_223.BLIF N_228.BLIF N_229
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_9__1_.C
+1 1
+.names  N_201_1.BLIF duty_i_0__n.BLIF N_201
+11 1
+.names  N_222_i.BLIF N_229_i.BLIF N_230_0
+11 1
+.names  N_186.BLIF brightness_5__0_.BLIF N_188_1
+11 1
+.names  N_221.BLIF N_230.BLIF N_231
+11 1
+.names  N_188_1.BLIF duty_i_0__n.BLIF N_188
+11 1
+.names  N_220_i.BLIF N_231_i.BLIF _l6_led47_0_n
+11 1
+.names  N_173.BLIF brightness_4__0_.BLIF N_175_1
+11 1
+.names  brightness_9__1_.BLIF duty_i_3__n.BLIF N_233
+11 1
+.names  reset_n_c.BLIF brightness_9__2_.CE
+1 1
+.names  N_175_1.BLIF duty_i_0__n.BLIF N_175
+11 1
+.names  duty_3_.BLIF duty_i_3__n
+0 1
+.names  brightness_3__2_.BLIF brightness_3__i_2__n
+0 1
+.names  brightness_9__i_1__n.BLIF duty_3_.BLIF N_234_0
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_9__2_.C
+1 1
+.names  N_158_0.BLIF N_158
+0 1
+.names  brightness_9__2_.BLIF duty_i_2__n.BLIF N_235
+11 1
+.names  N_156_0.BLIF N_156
+0 1
+.names  duty_2_.BLIF duty_i_2__n
+0 1
+.names  N_142.BLIF N_142_i
+0 1
+.names  brightness_9__i_2__n.BLIF duty_2_.BLIF N_236_0
+11 1
+.names  N_153.BLIF N_153_i
+0 1
+.names  brightness_9__1_.BLIF duty_i_1__n.BLIF N_237
+11 1
+.names  oneMHzClock_c.BLIF LEDDFF_0reg.C
+1 1
+.names  _l0_led5_0_n.BLIF LEDDFF_0reg.D
+0 1
+.names  duty_1_.BLIF duty_i_1__n
+0 1
+.names  N_144.BLIF N_144_i
+0 1
+.names  brightness_9__i_1__n.BLIF duty_1_.BLIF N_238_0
+11 1
+.names  N_151.BLIF N_151_i
+0 1
+.names  brightness_7__i_1__n.BLIF duty_3_.BLIF N_208_0
+11 1
+.names  N_152_0.BLIF N_152
+0 1
+.names  brightness_7__2_.BLIF duty_i_2__n.BLIF N_209
+11 1
+.names  oneMHzClock_c.BLIF LEDDFF_1reg.C
+1 1
+.names  N_146.BLIF N_146_i
+0 1
+.names  brightness_7__i_2__n.BLIF duty_2_.BLIF N_210_0
+11 1
+.names  N_149.BLIF N_149_i
+0 1
+.names  brightness_7__1_.BLIF duty_i_1__n.BLIF N_211
+11 1
+.names  N_150_0.BLIF N_150
+0 1
+.names  brightness_7__i_1__n.BLIF duty_1_.BLIF N_212_0
+11 1
+.names  brightness_2__1_.BLIF brightness_2__i_1__n
+0 1
+.names  N_211_i.BLIF N_214_i.BLIF N_215_0
+11 1
+.names  oneMHzClock_c.BLIF LEDDFF_2reg.C
+1 1
+.names  N_147_0.BLIF N_147
+0 1
+.names  N_210.BLIF N_215.BLIF N_216
+11 1
+.names  brightness_2__2_.BLIF brightness_2__i_2__n
+0 1
+.names  N_209_i.BLIF N_216_i.BLIF N_217_0
+11 1
+.names  N_173_0.BLIF N_173
+0 1
+.names  N_208.BLIF N_217.BLIF N_218
+11 1
+.names  brightness_4__2_.BLIF brightness_4__i_2__n
+0 1
+.names  N_207_i.BLIF N_218_i.BLIF _l5_led40_0_n
+11 1
+.names  oneMHzClock_c.BLIF LEDDFF_3reg.C
+1 1
+.names  N_171_0.BLIF N_171
+0 1
+.names  brightness_8__1_.BLIF duty_i_3__n.BLIF N_220
+11 1
+.names  N_169_0.BLIF N_169
+0 1
+.names  brightness_8__i_1__n.BLIF duty_3_.BLIF N_221_0
+11 1
+.names  N_155.BLIF N_155_i
+0 1
+.names  brightness_8__2_.BLIF duty_i_2__n.BLIF N_222
+11 1
+.names  N_166.BLIF N_166_i
+0 1
+.names  brightness_8__i_2__n.BLIF duty_2_.BLIF N_223_0
+11 1
+.names  oneMHzClock_c.BLIF LEDDFF_4reg.C
+1 1
+.names  _l1_led12_0_n.BLIF LEDDFF_1reg.D
+0 1
+.names  brightness_8__1_.BLIF duty_i_1__n.BLIF N_224
+11 1
+.names  N_157.BLIF N_157_i
+0 1
+.names  N_183_i.BLIF N_190_i.BLIF N_191_0
+11 1
+.names  N_164.BLIF N_164_i
+0 1
+.names  N_182.BLIF N_191.BLIF N_192
+11 1
+.names  N_165_0.BLIF N_165
+0 1
+.names  N_181_i.BLIF N_192_i.BLIF _l3_led26_0_n
+11 1
+.names  oneMHzClock_c.BLIF LEDDFF_5reg.C
+1 1
+.names  N_159.BLIF N_159_i
+0 1
+.names  brightness_6__1_.BLIF duty_i_3__n.BLIF N_194
+11 1
+.names  N_162.BLIF N_162_i
+0 1
+.names  brightness_6__i_1__n.BLIF duty_3_.BLIF N_195_0
+11 1
+.names  N_163_0.BLIF N_163
+0 1
+.names  brightness_6__2_.BLIF duty_i_2__n.BLIF N_196
+11 1
+.names  brightness_3__1_.BLIF brightness_3__i_1__n
+0 1
+.names  brightness_6__i_2__n.BLIF duty_2_.BLIF N_197_0
+11 1
+.names  oneMHzClock_c.BLIF LEDDFF_6reg.C
+1 1
+.names  N_160_0.BLIF N_160
+0 1
+.names  brightness_6__1_.BLIF duty_i_1__n.BLIF N_198
+11 1
+.names  brightness_5__1_.BLIF brightness_5__i_1__n
+0 1
+.names  brightness_6__i_1__n.BLIF duty_1_.BLIF N_199_0
+11 1
+.names  N_186_0.BLIF N_186
+0 1
+.names  N_198_i.BLIF N_201_i.BLIF N_202_0
+11 1
+.names  brightness_5__2_.BLIF brightness_5__i_2__n
+0 1
+.names  N_197.BLIF N_202.BLIF N_203
+11 1
+.names  oneMHzClock_c.BLIF LEDDFF_7reg.C
+1 1
+.names  N_184_0.BLIF N_184
+0 1
+.names  N_196_i.BLIF N_203_i.BLIF N_204_0
+11 1
+.names  N_182_0.BLIF N_182
+0 1
+.names  N_195.BLIF N_204.BLIF N_205
+11 1
+.names  N_168.BLIF N_168_i
+0 1
+.names  N_194_i.BLIF N_205_i.BLIF _l4_led33_0_n
+11 1
+.names  center_i_0__n.BLIF center_0_.D
+1 1
+.names  N_179.BLIF N_179_i
+0 1
+.names  brightness_7__1_.BLIF duty_i_3__n.BLIF N_207
+11 1
+.names  _l2_led19_0_n.BLIF LEDDFF_2reg.D
+0 1
+.names  brightness_4__1_.BLIF duty_i_1__n.BLIF N_172
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF center_0_.C
+1 1
+.names  N_170.BLIF N_170_i
+0 1
+.names  brightness_4__i_1__n.BLIF duty_1_.BLIF N_173_0
+11 1
+.names  N_177.BLIF N_177_i
+0 1
+.names  N_172_i.BLIF N_175_i.BLIF N_176_0
+11 1
+.names  reset_n_i.BLIF center_0_.AP
+1 1
+.names  N_178_0.BLIF N_178
+0 1
+.names  N_171.BLIF N_176.BLIF N_177
+11 1
+.names  N_172.BLIF N_172_i
+0 1
+.names  N_170_i.BLIF N_177_i.BLIF N_178_0
+11 1
+.names  N_175.BLIF N_175_i
+0 1
+.names  N_169.BLIF N_178.BLIF N_179
+11 1
+.names  N_176_0.BLIF N_176
+0 1
+.names  N_168_i.BLIF N_179_i.BLIF _l2_led19_0_n
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF center_1_.C
+1 1
+.names  brightness_4__1_.BLIF brightness_4__i_1__n
+0 1
+.names  brightness_5__1_.BLIF duty_i_3__n.BLIF N_181
+11 1
+.names  N_202_0.BLIF N_202
+0 1
+.names  brightness_5__i_1__n.BLIF duty_3_.BLIF N_182_0
+11 1
+.names  reset_n_i.BLIF center_1_.AR
+1 1
+.names  brightness_6__1_.BLIF brightness_6__i_1__n
+0 1
+.names  brightness_5__2_.BLIF duty_i_2__n.BLIF N_183
+11 1
+.names  N_199_0.BLIF N_199
+0 1
+.names  brightness_5__i_2__n.BLIF duty_2_.BLIF N_184_0
+11 1
+.names  brightness_6__2_.BLIF brightness_6__i_2__n
+0 1
+.names  brightness_5__1_.BLIF duty_i_1__n.BLIF N_185
+11 1
+.names  N_197_0.BLIF N_197
+0 1
+.names  brightness_5__i_1__n.BLIF duty_1_.BLIF N_186_0
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF center_2_.C
+1 1
+.names  N_195_0.BLIF N_195
+0 1
+.names  N_185_i.BLIF N_188_i.BLIF N_189_0
+11 1
+.names  N_181.BLIF N_181_i
+0 1
+.names  N_184.BLIF N_189.BLIF N_190
+11 1
+.names  reset_n_i.BLIF center_2_.AR
+1 1
+.names  N_192.BLIF N_192_i
+0 1
+.names  brightness_3__1_.BLIF duty_i_3__n.BLIF N_155
+11 1
+.names  _l3_led26_0_n.BLIF LEDDFF_3reg.D
+0 1
+.names  brightness_3__i_1__n.BLIF duty_3_.BLIF N_156_0
+11 1
+.names  N_183.BLIF N_183_i
+0 1
+.names  brightness_3__2_.BLIF duty_i_2__n.BLIF N_157
+11 1
+.names  N_190.BLIF N_190_i
+0 1
+.names  brightness_3__i_2__n.BLIF duty_2_.BLIF N_158_0
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF center_3_.C
+1 1
+.names  N_191_0.BLIF N_191
+0 1
+.names  brightness_3__1_.BLIF duty_i_1__n.BLIF N_159
+11 1
+.names  N_185.BLIF N_185_i
+0 1
+.names  brightness_3__i_1__n.BLIF duty_1_.BLIF N_160_0
+11 1
+.names  reset_n_i.BLIF center_3_.AR
+1 1
+.names  N_188.BLIF N_188_i
+0 1
+.names  N_159_i.BLIF N_162_i.BLIF N_163_0
+11 1
+.names  N_189_0.BLIF N_189
+0 1
+.names  N_158.BLIF N_163.BLIF N_164
+11 1
+.names  N_214.BLIF N_214_i
+0 1
+.names  N_157_i.BLIF N_164_i.BLIF N_165_0
+11 1
+.names  duty_i_0__n.BLIF duty_0_.D
+1 1
+.names  N_215_0.BLIF N_215
+0 1
+.names  N_156.BLIF N_165.BLIF N_166
+11 1
+.names  brightness_7__1_.BLIF brightness_7__i_1__n
+0 1
+.names  N_155_i.BLIF N_166_i.BLIF _l1_led12_0_n
+11 1
+.names  oneMHzClock_c.BLIF duty_0_.C
+1 1
+.names  N_212_0.BLIF N_212
+0 1
+.names  brightness_4__1_.BLIF duty_i_3__n.BLIF N_168
+11 1
+.names  brightness_7__2_.BLIF brightness_7__i_2__n
+0 1
+.names  brightness_4__i_1__n.BLIF duty_3_.BLIF N_169_0
+11 1
+.names  N_210_0.BLIF N_210
+0 1
+.names  brightness_4__2_.BLIF duty_i_2__n.BLIF N_170
+11 1
+.names  N_208_0.BLIF N_208
+0 1
+.names  brightness_4__i_2__n.BLIF duty_2_.BLIF N_171_0
+11 1
+.names  oneMHzClock_c.BLIF duty_1_.C
+1 1
+.names  N_194.BLIF N_194_i
+0 1
+.names  u1rs_u1rc_genblk1_12__uitff_q.BLIF u1rs_counter_i_13__n
+0 1
+.names  N_205.BLIF N_205_i
+0 1
+.names  u1rs_u1rc_genblk1_11__uitff_q.BLIF u1rs_counter_i_12__n
+0 1
+.names  _l4_led33_0_n.BLIF LEDDFF_4reg.D
+0 1
+.names  brightness_2__1_.BLIF duty_i_3__n.BLIF N_142
+11 1
+.names  N_196.BLIF N_196_i
+0 1
+.names  brightness_2__i_1__n.BLIF duty_3_.BLIF N_143_0
+11 1
+.names  oneMHzClock_c.BLIF duty_2_.C
+1 1
+.names  N_203.BLIF N_203_i
+0 1
+.names  brightness_2__2_.BLIF duty_i_2__n.BLIF N_144
+11 1
+.names  N_204_0.BLIF N_204
+0 1
+.names  brightness_2__i_2__n.BLIF duty_2_.BLIF N_145_0
+11 1
+.names  N_198.BLIF N_198_i
+0 1
+.names  brightness_2__1_.BLIF duty_i_1__n.BLIF N_146
+11 1
+.names  N_201.BLIF N_201_i
+0 1
+.names  brightness_2__i_1__n.BLIF duty_1_.BLIF N_147_0
+11 1
+.names  oneMHzClock_c.BLIF duty_3_.C
+1 1
+.names  N_224.BLIF N_224_i
+0 1
+.names  N_146_i.BLIF N_149_i.BLIF N_150_0
+11 1
+.names  N_227.BLIF N_227_i
+0 1
+.names  N_145.BLIF N_150.BLIF N_151
+11 1
+.names  N_228_0.BLIF N_228
+0 1
+.names  N_144_i.BLIF N_151_i.BLIF N_152_0
+11 1
+.names  center_i_1__n.BLIF inst_direction.D
+1 1
+.names  brightness_8__1_.BLIF brightness_8__i_1__n
+0 1
+.names  N_143.BLIF N_152.BLIF N_153
+11 1
+.names  N_225_0.BLIF N_225
+0 1
+.names  N_142_i.BLIF N_153_i.BLIF _l0_led5_0_n
+11 1
+.names  brightness_8__2_.BLIF brightness_8__i_2__n
+0 1
+.names  u1rs_u1rc_u0tff_q.BLIF u1rs_counter_i_0__n
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF inst_direction.C
+1 1
+.names  N_223_0.BLIF N_223
+0 1
+.names  u1rs_u1rc_genblk1_6__uitff_q.BLIF u1rs_counter_i_7__n
+0 1
+.names  N_221_0.BLIF N_221
+0 1
+.names  u1rs_u1rc_genblk1_5__uitff_q.BLIF u1rs_counter_i_6__n
+0 1
+.names  reset_n_i.BLIF inst_direction.AR
+1 1
+.names  N_207.BLIF N_207_i
+0 1
+.names  u1rs_u1rc_genblk1_4__uitff_q.BLIF u1rs_counter_i_5__n
+0 1
+.names  N_218.BLIF N_218_i
+0 1
+.names  u1rs_u1rc_genblk1_1__uitff_q.BLIF u1rs_counter_i_2__n
+0 1
+.names  _l5_led40_0_n.BLIF LEDDFF_5reg.D
+0 1
+.names  u1rs_u1rc_genblk1_0__uitff_q.BLIF u1rs_counter_i_1__n
+0 1
+.names  u1rs_counter_i_12__n.BLIF u1rs_u1rc_genblk1_11__uitff_q.D
+1 1
+.names  N_209.BLIF N_209_i
+0 1
+.names  u1rs_u1rc_genblk1_10__uitff_q.BLIF u1rs_counter_i_11__n
+0 1
+.names  N_216.BLIF N_216_i
+0 1
+.names  u1rs_u1rc_genblk1_9__uitff_q.BLIF u1rs_counter_i_10__n
+0 1
+.names  u1rs_counter_i_11__n.BLIF u1rs_u1rc_genblk1_11__uitff_q.C
+1 1
+.names  N_217_0.BLIF N_217
+0 1
+.names  u1rs_u1rc_genblk1_3__uitff_q.BLIF u1rs_counter_i_4__n
+0 1
+.names  N_211.BLIF N_211_i
+0 1
+.names  u1rs_u1rc_genblk1_2__uitff_q.BLIF u1rs_counter_i_3__n
+0 1
+.names  N_243_0.BLIF N_243
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF u1rs_u1rc_genblk1_14__uitff_q.D
+0 1
+.names  u1rs_counter_i_9__n.BLIF u1rs_u1rc_genblk1_8__uitff_q.D
+1 1
+.names  N_237.BLIF N_237_i
+0 1
+.names  u1rs_u1rc_genblk1_13__uitff_q.BLIF u1rs_counter_i_14__n
+0 1
+.names  N_240.BLIF N_240_i
+0 1
+.names  u1rs_u1rc_genblk1_7__uitff_q.BLIF u1rs_counter_i_8__n
+0 1
+.names  u1rs_counter_i_8__n.BLIF u1rs_u1rc_genblk1_8__uitff_q.C
+1 1
+.names  N_241_0.BLIF N_241
+0 1
+.names  oneMHzClock_c.BLIF u1rs_u1rc_u0tff_q.C
+0 1
+.names  brightness_9__1_.BLIF brightness_9__i_1__n
+0 1
+.names  u1rs_u1rc_genblk1_8__uitff_q.BLIF u1rs_counter_i_9__n
+0 1
+.names  N_238_0.BLIF N_238
+0 1
+.names  center_1_.BLIF center_i_1__n
+0 1
+.names  u1rs_counter_i_5__n.BLIF u1rs_u1rc_genblk1_4__uitff_q.D
+1 1
+.names  brightness_9__2_.BLIF brightness_9__i_2__n
+0 1
+.names  un1_direction10_0__n.BLIF inst_direction.CE
+0 1
+.names  N_236_0.BLIF N_236
+0 1
+.names  reset_n_c.BLIF reset_n_i
+0 1
+.names  u1rs_counter_i_4__n.BLIF u1rs_u1rc_genblk1_4__uitff_q.C
+1 1
+.names  N_234_0.BLIF N_234
+0 1
+.names  N_93.BLIF brightness_9__0_.D
+0 1
+.names  N_220.BLIF N_220_i
+0 1
+.names  N_80.BLIF brightness_7__0_.D
+0 1
+.names  N_231.BLIF N_231_i
+0 1
+.names  u1rs_counter_i_14__n.BLIF u1rs_u1rc_genblk1_13__uitff_q.D
+1 1
+.names  _l6_led47_0_n.BLIF LEDDFF_6reg.D
+0 1
+.names  N_222.BLIF N_222_i
+0 1
+.names  u1rs_counter_i_13__n.BLIF u1rs_u1rc_genblk1_13__uitff_q.C
+1 1
+.names  N_229.BLIF N_229_i
+0 1
+.names  N_230_0.BLIF N_230
+0 1
+.names  brightness_6__8_0_2__n.BLIF brightness_6__2_.D
+0 1
+.names  u1rs_counter_i_3__n.BLIF u1rs_u1rc_genblk1_2__uitff_q.D
+1 1
+.names  un1_center_13_0__n.BLIF un1_center_13_i_0__n
+0 1
+.names  brightness_7__8_0_2__n.BLIF brightness_7__2_.D
+0 1
+.names  u1rs_counter_i_2__n.BLIF u1rs_u1rc_genblk1_2__uitff_q.C
+1 1
+.names  un1_center_11_0__n.BLIF un1_center_11_i_0__n
+0 1
+.names  reset_n_c.BLIF brightness_8__0_.CE
+1 1
+.names  brightness_3__8_0_2__n.BLIF brightness_3__2_.D
+0 1
+.names  un1_center_3.BLIF un1_center_3_i
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_8__0_.C
+1 1
+.names  brightness_2__8_0_0__n.BLIF brightness_2__0_.D
+0 1
+.names  u1rs_counter_i_14__n.BLIF u1rs_u1rc_genblk1_14__uitff_q.C
+1 1
+.names  brightness_4__8_0_0__n.BLIF brightness_4__0_.D
+0 1
+.names  brightness_5__8_0_0__n.BLIF brightness_5__0_.D
+0 1
+.names  un1_center_17_0__n.BLIF brightness_8__1_.D
+1 1
+.names  brightness_6__8_0_0__n.BLIF brightness_6__0_.D
+0 1
+.names  u1rs_counter_i_8__n.BLIF u1rs_u1rc_genblk1_7__uitff_q.D
+1 1
+.names  N_233.BLIF N_233_i
+0 1
+.names  reset_n_c.BLIF brightness_8__1_.CE
+1 1
+.names  N_244.BLIF N_244_i
+0 1
+.names  u1rs_counter_i_7__n.BLIF u1rs_u1rc_genblk1_7__uitff_q.C
+1 1
+.names  _l7_led54_0_n.BLIF LEDDFF_7reg.D
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_8__1_.C
+1 1
+.names  N_235.BLIF N_235_i
+0 1
+.names  N_242.BLIF N_242_i
+0 1
+.names  u1rs_counter_i_0__n.BLIF u1rs_u1rc_u0tff_q.D
+1 1
+.names  un1_center_12_0__n.BLIF un1_center_12_i_0__n
+0 1
+.names  brightness_2__8_f1_0_2__n.BLIF brightness_2__8_f1_2__n
+0 1
+.names  reset_n_c.BLIF brightness_8__2_.CE
+1 1
+.names  N_99.BLIF N_99_i
+0 1
+.names  brightness_3__8_0_0__n.BLIF brightness_3__0_.D
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_8__2_.C
+1 1
+.names  u1rs_counter_i_10__n.BLIF u1rs_u1rc_genblk1_9__uitff_q.D
+1 1
+.names  un1_center_5.BLIF un1_center_5_i
+0 1
+.names  N_96.BLIF N_96_i
+0 1
+.names  u1rs_counter_i_9__n.BLIF u1rs_u1rc_genblk1_9__uitff_q.C
+1 1
+.names  brightness_8__8_0_0__n.BLIF brightness_8__0_.D
+0 1
+.names  un1_center_8.BLIF un1_center_8_i
+0 1
+.names  reset_n_c.BLIF brightness_3__0_.CE
+1 1
+.names  un1_center_16_0__n.BLIF un1_center_16_i_0__n
+0 1
+.names  u1rs_counter_i_1__n.BLIF u1rs_u1rc_genblk1_0__uitff_q.D
+1 1
+.names  brightness_9__8_0.BLIF brightness_9__2_.D
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_3__0_.C
+1 1
+.names  N_131_0.BLIF N_131
+0 1
+.names  u1rs_counter_i_0__n.BLIF u1rs_u1rc_genblk1_0__uitff_q.C
+1 1
+.names  un1_center_1.BLIF un1_center_1_i
+0 1
+.names  un1_center_10_0__n.BLIF un1_center_10_i_0__n
+0 1
+.names  un1_center_11_0__n.BLIF brightness_3__1_.D
+1 1
+.names  brightness_5__8_0_2__n.BLIF brightness_5__2_.D
+0 1
+.names  u1rs_counter_i_7__n.BLIF u1rs_u1rc_genblk1_6__uitff_q.D
+1 1
+.names  un1_center_14_0__n.BLIF un1_center_14_i_0__n
+0 1
+.names  reset_n_c.BLIF brightness_3__1_.CE
+1 1
+.names  un1_center_6.BLIF un1_center_6_i
+0 1
+.names  u1rs_counter_i_6__n.BLIF u1rs_u1rc_genblk1_6__uitff_q.C
+1 1
+.names  un1_center_15_0__n.BLIF un1_center_15_i_0__n
+0 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_3__1_.C
+1 1
+.names  brightness_4__8_0_2__n.BLIF brightness_4__2_.D
+0 1
+.names  un1_center_17_0__n.BLIF un1_center_17_i_0__n
+0 1
+.names  u1rs_counter_i_6__n.BLIF u1rs_u1rc_genblk1_5__uitff_q.D
+1 1
+.names  brightness_8__8_0_2__n.BLIF brightness_8__2_.D
+0 1
+.names  un1_center_2.BLIF un1_center_2_i
+0 1
+.names  reset_n_c.BLIF brightness_3__2_.CE
+1 1
+.names  u1rs_counter_i_5__n.BLIF u1rs_u1rc_genblk1_5__uitff_q.C
+1 1
+.names  un1_direction_1.BLIF un1_direction_1_i
+0 1
+.names  brightness_2__8_f1_2__n.BLIF un1_direction_1_i.BLIF brightness_2__2_.D
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_3__2_.C
+1 1
+.names  un1_center_4_i.BLIF un1_center_17_i_0__n.BLIF brightness_8__8_0_2__n
+11 1
+.names  u1rs_counter_i_2__n.BLIF u1rs_u1rc_genblk1_1__uitff_q.D
+1 1
+.names  un1_center_6_i.BLIF un1_center_15_i_0__n.BLIF brightness_4__8_0_2__n
+11 1
+.names  un3_center_1_i_3__n.BLIF G_47.BLIF un1_center_2_0
+11 1
+.names  u1rs_counter_i_1__n.BLIF u1rs_u1rc_genblk1_1__uitff_q.C
+1 1
+.names  center_0_.BLIF center_i_0__n
+0 1
+.names  reset_n_c.BLIF brightness_2__0_.CE
+1 1
+.names  G_49.BLIF un3_center_1_i_2__n
+0 1
+.names  un3_center_1_i_2__n.BLIF un10_center_1_i_i_1__n.BLIF un1_center_5_2
+11 1
+.names  u1rs_u1rc_genblk1_14__uitff_q.BLIF brightness_2__0_.C
+1 1
+.names  u1rs_counter_i_11__n.BLIF u1rs_u1rc_genblk1_10__uitff_q.D
+1 1
+.end

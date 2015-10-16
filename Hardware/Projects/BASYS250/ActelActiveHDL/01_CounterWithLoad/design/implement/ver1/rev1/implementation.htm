@@ -1,0 +1,686 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>Implement&nbsp;Log</TITLE>
+<STYLE>
+.Err	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.Warn	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.Info	{color:'#000000';cursor:hand;text-decoration:underline;}
+.ErrH	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.WarnH	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.InfoH	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Err1	{color:'#FF0000';}
+.Warn1	{color:'#0000FF';}
+.Info1	{color:'#000000';}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" BACKGROUND="C:\PROGRA~1\Aldec\ACTIVE~1.2SE\Flows\Res\default.bmp">
+<FONT FACE="Verdana" SIZE=2>
+
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>Implement&nbsp;Log</H2>
+Created on 5:34:50 PM 2/29/2012
+<HR NOSHADE COLOR="#008080">
+<SPAN class=Info1>InputFile&nbsp;=&nbsp;C:/Users/tmcphillips/Designs/Projects/BASYS250/VerilogHDL/01_CounterWithLoad/design/implement/xie0.ini<BR></SPAN>
+<SPAN class=Info1>Executing&nbsp;C:\Xilinx\10.1\ISE\bin\nt\ngdbuild.exe&nbsp;-p&nbsp;3S250ETQ144-5&nbsp;&nbsp;&nbsp;-sd&nbsp;&quot;C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design\synthesis&quot;&nbsp;-sd&nbsp;&quot;C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design\compile&quot;&nbsp;-sd&nbsp;&quot;C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design\src&quot;&nbsp;-sd&nbsp;&quot;C:\Program&nbsp;Files\Aldec\Active-HDL&nbsp;7.2SE\vlib\SPARTAN3E\compile&quot;&nbsp;-uc&nbsp;&quot;FourBitCounterWithLoad.ucf&quot;&nbsp;&quot;FourBitCounterWithLoad.ngc&quot;&nbsp;&quot;FourBitCounterWithLoad.ngd&quot;<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;10.1.03&nbsp;-&nbsp;ngdbuild&nbsp;K.39&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2008&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Command&nbsp;Line:&nbsp;C:\Xilinx\10.1\ISE\bin\nt\unwrapped\ngdbuild.exe&nbsp;-p&nbsp;3S250ETQ144-5<BR></SPAN>
+<SPAN class=Info1>-sd<BR></SPAN>
+<SPAN class=Info1>C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\des<BR></SPAN>
+<SPAN class=Info1>ign\synthesis&nbsp;-sd<BR></SPAN>
+<SPAN class=Info1>C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\des<BR></SPAN>
+<SPAN class=Info1>ign\compile&nbsp;-sd<BR></SPAN>
+<SPAN class=Info1>C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\des<BR></SPAN>
+<SPAN class=Info1>ign\src&nbsp;-sd&nbsp;C:\Program&nbsp;Files\Aldec\Active-HDL&nbsp;7.2SE\vlib\SPARTAN3E\compile&nbsp;-uc<BR></SPAN>
+<SPAN class=Info1>FourBitCounterWithLoad.ucf&nbsp;FourBitCounterWithLoad.ngc&nbsp;FourBitCounterWithLoad.ngd<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Reading&nbsp;NGO&nbsp;file<BR></SPAN>
+<SPAN class=Info1>&quot;C:/Users/tmcphillips/Designs/Projects/BASYS250/VerilogHDL/01_CounterWithLoad/de<BR></SPAN>
+<SPAN class=Info1>sign/implement/ver1/rev1/FourBitCounterWithLoad.ngc&quot;&nbsp;...<BR></SPAN>
+<SPAN class=Info1>Gathering&nbsp;constraint&nbsp;information&nbsp;from&nbsp;source&nbsp;properties...<BR></SPAN>
+<SPAN class=Info1>Done.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Applying&nbsp;constraints&nbsp;in&nbsp;&quot;FourBitCounterWithLoad.ucf&quot;&nbsp;to&nbsp;the&nbsp;design...<BR></SPAN>
+<SPAN class=Info1>Resolving&nbsp;constraint&nbsp;associations...<BR></SPAN>
+<SPAN class=Info1>Checking&nbsp;Constraint&nbsp;Associations...<BR></SPAN>
+<SPAN class=Info1>Done...<BR></SPAN>
+<SPAN class=Info1>Checking&nbsp;Partitions&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Checking&nbsp;expanded&nbsp;design&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Partition&nbsp;Implementation&nbsp;Status<BR></SPAN>
+<SPAN class=Info1>-------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;No&nbsp;Partitions&nbsp;were&nbsp;found&nbsp;in&nbsp;this&nbsp;design.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>-------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>NGDBUILD&nbsp;Design&nbsp;Results&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Number&nbsp;of&nbsp;errors:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Number&nbsp;of&nbsp;warnings:&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Writing&nbsp;NGD&nbsp;file&nbsp;&quot;FourBitCounterWithLoad.ngd&quot;&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Writing&nbsp;NGDBUILD&nbsp;log&nbsp;file&nbsp;&quot;FourBitCounterWithLoad.bld&quot;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>NGDBUILD&nbsp;done.<BR></SPAN>
+<SPAN class=Info1>Executing&nbsp;C:\Xilinx\10.1\ISE\bin\nt\map.exe&nbsp;&nbsp;-p&nbsp;3S250ETQ144-5&nbsp;-o&nbsp;&quot;map.ncd&quot;&nbsp;&nbsp;-pr&nbsp;b&nbsp;&nbsp;-k&nbsp;&nbsp;4&nbsp;&nbsp;-cm&nbsp;area&nbsp;&nbsp;-c&nbsp;100&nbsp;&quot;FourBitCounterWithLoad.ngd&quot;&nbsp;&quot;FourBitCounterWithLoad.pcf&quot;<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;10.1.03&nbsp;-&nbsp;Map&nbsp;K.39&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2008&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1>Using&nbsp;target&nbsp;part&nbsp;&quot;3s250etq144-5&quot;.<BR></SPAN>
+<SPAN class=Info1>Mapping&nbsp;design&nbsp;into&nbsp;LUTs...<BR></SPAN>
+<SPAN class=Info1>Writing&nbsp;file&nbsp;map.ngm...<BR></SPAN>
+<SPAN class=Info1>Running&nbsp;directed&nbsp;packing...<BR></SPAN>
+<SPAN class=Info1>Running&nbsp;delay-based&nbsp;LUT&nbsp;packing...<BR></SPAN>
+<SPAN class=Info1>Running&nbsp;related&nbsp;packing...<BR></SPAN>
+<SPAN class=Info1>Writing&nbsp;design&nbsp;file&nbsp;&quot;map.ncd&quot;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Design&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;errors:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;warnings:&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>Logic&nbsp;Utilization:<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Number&nbsp;of&nbsp;Slice&nbsp;Flip&nbsp;Flops:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;4,896&nbsp;&nbsp;&nbsp;&nbsp;1%<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Number&nbsp;of&nbsp;4&nbsp;input&nbsp;LUTs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;4,896&nbsp;&nbsp;&nbsp;&nbsp;1%<BR></SPAN>
+<SPAN class=Info1>Logic&nbsp;Distribution:<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Number&nbsp;of&nbsp;occupied&nbsp;Slices:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;2,448&nbsp;&nbsp;&nbsp;&nbsp;1%<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;Slices&nbsp;containing&nbsp;only&nbsp;related&nbsp;logic:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;100%<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;Slices&nbsp;containing&nbsp;unrelated&nbsp;logic:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;&nbsp;&nbsp;0%<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*See&nbsp;NOTES&nbsp;below&nbsp;for&nbsp;an&nbsp;explanation&nbsp;of&nbsp;the&nbsp;effects&nbsp;of&nbsp;unrelated&nbsp;logic.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Total&nbsp;Number&nbsp;of&nbsp;4&nbsp;input&nbsp;LUTs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;4,896&nbsp;&nbsp;&nbsp;&nbsp;1%<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Number&nbsp;of&nbsp;bonded&nbsp;IOBs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;108&nbsp;&nbsp;&nbsp;12%<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Number&nbsp;of&nbsp;BUFGMUXs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24&nbsp;&nbsp;&nbsp;&nbsp;4%<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Peak&nbsp;Memory&nbsp;Usage:&nbsp;&nbsp;180&nbsp;MB<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;MAP&nbsp;completion:&nbsp;&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;MAP&nbsp;completion:&nbsp;&nbsp;&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>NOTES:<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Related&nbsp;logic&nbsp;is&nbsp;defined&nbsp;as&nbsp;being&nbsp;logic&nbsp;that&nbsp;shares&nbsp;connectivity&nbsp;-&nbsp;e.g.&nbsp;two<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;LUTs&nbsp;are&nbsp;&quot;related&quot;&nbsp;if&nbsp;they&nbsp;share&nbsp;common&nbsp;inputs.&nbsp;&nbsp;When&nbsp;assembling&nbsp;slices,<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Map&nbsp;gives&nbsp;priority&nbsp;to&nbsp;combine&nbsp;logic&nbsp;that&nbsp;is&nbsp;related.&nbsp;&nbsp;Doing&nbsp;so&nbsp;results&nbsp;in<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;the&nbsp;best&nbsp;timing&nbsp;performance.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Unrelated&nbsp;logic&nbsp;shares&nbsp;no&nbsp;connectivity.&nbsp;&nbsp;Map&nbsp;will&nbsp;only&nbsp;begin&nbsp;packing<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;unrelated&nbsp;logic&nbsp;into&nbsp;a&nbsp;slice&nbsp;once&nbsp;99%&nbsp;of&nbsp;the&nbsp;slices&nbsp;are&nbsp;occupied&nbsp;through<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;related&nbsp;logic&nbsp;packing.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Note&nbsp;that&nbsp;once&nbsp;logic&nbsp;distribution&nbsp;reaches&nbsp;the&nbsp;99%&nbsp;level&nbsp;through&nbsp;related<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;logic&nbsp;packing,&nbsp;this&nbsp;does&nbsp;not&nbsp;mean&nbsp;the&nbsp;device&nbsp;is&nbsp;completely&nbsp;utilized.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Unrelated&nbsp;logic&nbsp;packing&nbsp;will&nbsp;then&nbsp;begin,&nbsp;continuing&nbsp;until&nbsp;all&nbsp;usable&nbsp;LUTs<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;and&nbsp;FFs&nbsp;are&nbsp;occupied.&nbsp;&nbsp;Depending&nbsp;on&nbsp;your&nbsp;timing&nbsp;budget,&nbsp;increased&nbsp;levels&nbsp;of<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;unrelated&nbsp;logic&nbsp;packing&nbsp;may&nbsp;adversely&nbsp;affect&nbsp;the&nbsp;overall&nbsp;timing&nbsp;performance<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;of&nbsp;your&nbsp;design.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Mapping&nbsp;completed.<BR></SPAN>
+<SPAN class=Info1>See&nbsp;MAP&nbsp;report&nbsp;file&nbsp;&quot;map.mrp&quot;&nbsp;for&nbsp;details.<BR></SPAN>
+<SPAN class=Info1>Executing&nbsp;C:\Xilinx\10.1\ISE\bin\nt\trce.exe&nbsp;&nbsp;-e&nbsp;3&nbsp;&nbsp;-s&nbsp;&nbsp;5&nbsp;&quot;map.ncd&quot;&nbsp;&quot;FourBitCounterWithLoad.pcf&quot;&nbsp;-o&nbsp;&quot;FourBitCounterWithLoad_postmap.twr&quot;<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;10.1.03&nbsp;-&nbsp;Trace&nbsp;&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2008&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Loading&nbsp;device&nbsp;for&nbsp;application&nbsp;Rf_Device&nbsp;from&nbsp;file&nbsp;'3s250e.nph'&nbsp;in&nbsp;environment<BR></SPAN>
+<SPAN class=Info1>C:\Xilinx\10.1\ISE.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&quot;FourBitCounterWithLoad&quot;&nbsp;is&nbsp;an&nbsp;NCD,&nbsp;version&nbsp;3.2,&nbsp;device&nbsp;xc3s250e,&nbsp;package<BR></SPAN>
+<SPAN class=Info1>tq144,&nbsp;speed&nbsp;-5<BR></SPAN>
+<SPAN class=Info1>INFO:Timing:2698&nbsp;-&nbsp;No&nbsp;timing&nbsp;constraints&nbsp;found,&nbsp;doing&nbsp;default&nbsp;enumeration.<BR></SPAN>
+<SPAN class=Info1>--------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;10.1.03&nbsp;Trace&nbsp;&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2008&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe&nbsp;-e&nbsp;3&nbsp;-s&nbsp;5&nbsp;map.ncd<BR></SPAN>
+<SPAN class=Info1>FourBitCounterWithLoad.pcf&nbsp;-o&nbsp;FourBitCounterWithLoad_postmap.twr<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Design&nbsp;file:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.ncd<BR></SPAN>
+<SPAN class=Info1>Physical&nbsp;constraint&nbsp;file:&nbsp;FourBitCounterWithLoad.pcf<BR></SPAN>
+<SPAN class=Info1>Device,speed:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xc3s250e,-5&nbsp;(PRODUCTION&nbsp;1.27&nbsp;2008-01-09)<BR></SPAN>
+<SPAN class=Info1>Report&nbsp;level:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error&nbsp;report<BR></SPAN>
+<SPAN class=Info1>--------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>INFO:Timing:2752&nbsp;-&nbsp;To&nbsp;get&nbsp;complete&nbsp;path&nbsp;coverage,&nbsp;use&nbsp;the&nbsp;unconstrained&nbsp;paths<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;option.&nbsp;All&nbsp;paths&nbsp;that&nbsp;are&nbsp;not&nbsp;constrained&nbsp;will&nbsp;be&nbsp;reported&nbsp;in&nbsp;the<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;unconstrained&nbsp;paths&nbsp;section(s)&nbsp;of&nbsp;the&nbsp;report.<BR></SPAN>
+<SPAN class=Info1>INFO:Timing:3284&nbsp;-&nbsp;This&nbsp;timing&nbsp;report&nbsp;was&nbsp;generated&nbsp;using&nbsp;estimated&nbsp;delay<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;information.&nbsp;&nbsp;For&nbsp;accurate&nbsp;numbers,&nbsp;please&nbsp;refer&nbsp;to&nbsp;the&nbsp;post&nbsp;Place&nbsp;and&nbsp;Route<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;timing&nbsp;report.<BR></SPAN>
+<SPAN class=Info1>INFO:Timing:3339&nbsp;-&nbsp;The&nbsp;clock-to-out&nbsp;numbers&nbsp;in&nbsp;this&nbsp;timing&nbsp;report&nbsp;are&nbsp;based&nbsp;on&nbsp;a<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;50&nbsp;Ohm&nbsp;transmission&nbsp;line&nbsp;loading&nbsp;model.&nbsp;&nbsp;For&nbsp;the&nbsp;details&nbsp;of&nbsp;this&nbsp;model,&nbsp;and<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;for&nbsp;more&nbsp;information&nbsp;on&nbsp;accounting&nbsp;for&nbsp;different&nbsp;loading&nbsp;conditions,&nbsp;please<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;see&nbsp;the&nbsp;device&nbsp;datasheet.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Analysis&nbsp;completed&nbsp;Wed&nbsp;Feb&nbsp;29&nbsp;17:34:30&nbsp;2012<BR></SPAN>
+<SPAN class=Info1>--------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Generating&nbsp;Report&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;warnings:&nbsp;0<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;info&nbsp;messages:&nbsp;4<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;time:&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1>Executing&nbsp;C:\Xilinx\10.1\ISE\bin\nt\par.exe&nbsp;-w&nbsp;&nbsp;-ol&nbsp;std&nbsp;&nbsp;-t&nbsp;&nbsp;1&nbsp;map.ncd&nbsp;&quot;FourBitCounterWithLoad.ncd&quot;&nbsp;&quot;FourBitCounterWithLoad.pcf&quot;<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;10.1.03&nbsp;-&nbsp;par&nbsp;K.39&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2008&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Constraints&nbsp;file:&nbsp;FourBitCounterWithLoad.pcf.<BR></SPAN>
+<SPAN class=Info1>Loading&nbsp;device&nbsp;for&nbsp;application&nbsp;Rf_Device&nbsp;from&nbsp;file&nbsp;'3s250e.nph'&nbsp;in&nbsp;environment&nbsp;C:\Xilinx\10.1\ISE.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&quot;FourBitCounterWithLoad&quot;&nbsp;is&nbsp;an&nbsp;NCD,&nbsp;version&nbsp;3.2,&nbsp;device&nbsp;xc3s250e,&nbsp;package&nbsp;tq144,&nbsp;speed&nbsp;-5<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Initializing&nbsp;temperature&nbsp;to&nbsp;85.000&nbsp;Celsius.&nbsp;(default&nbsp;-&nbsp;Range:&nbsp;-40.000&nbsp;to&nbsp;100.000&nbsp;Celsius)<BR></SPAN>
+<SPAN class=Info1>Initializing&nbsp;voltage&nbsp;to&nbsp;1.140&nbsp;Volts.&nbsp;(default&nbsp;-&nbsp;Range:&nbsp;1.140&nbsp;to&nbsp;1.320&nbsp;Volts)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>INFO:Par:282&nbsp;-&nbsp;No&nbsp;user&nbsp;timing&nbsp;constraints&nbsp;were&nbsp;detected&nbsp;or&nbsp;you&nbsp;have&nbsp;set&nbsp;the&nbsp;option&nbsp;to&nbsp;ignore&nbsp;timing&nbsp;constraints&nbsp;(&quot;par<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;-x&quot;).&nbsp;Place&nbsp;and&nbsp;Route&nbsp;will&nbsp;run&nbsp;in&nbsp;&quot;Performance&nbsp;Evaluation&nbsp;Mode&quot;&nbsp;to&nbsp;automatically&nbsp;improve&nbsp;the&nbsp;performance&nbsp;of&nbsp;all<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;internal&nbsp;clocks&nbsp;in&nbsp;this&nbsp;design.&nbsp;The&nbsp;PAR&nbsp;timing&nbsp;summary&nbsp;will&nbsp;list&nbsp;the&nbsp;performance&nbsp;achieved&nbsp;for&nbsp;each&nbsp;clock.&nbsp;Note:&nbsp;For<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;the&nbsp;fastest&nbsp;runtime,&nbsp;set&nbsp;the&nbsp;effort&nbsp;level&nbsp;to&nbsp;&quot;std&quot;.&nbsp;&nbsp;For&nbsp;best&nbsp;performance,&nbsp;set&nbsp;the&nbsp;effort&nbsp;level&nbsp;to&nbsp;&quot;high&quot;.&nbsp;For&nbsp;a<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;balance&nbsp;between&nbsp;the&nbsp;fastest&nbsp;runtime&nbsp;and&nbsp;best&nbsp;performance,&nbsp;set&nbsp;the&nbsp;effort&nbsp;level&nbsp;to&nbsp;&quot;med&quot;.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Device&nbsp;speed&nbsp;data&nbsp;version:&nbsp;&nbsp;&quot;PRODUCTION&nbsp;1.27&nbsp;2008-01-09&quot;.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Design&nbsp;Summary&nbsp;Report:<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;External&nbsp;IOBs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13&nbsp;out&nbsp;of&nbsp;108&nbsp;&nbsp;&nbsp;&nbsp;12%<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;External&nbsp;Input&nbsp;IOBs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;External&nbsp;Input&nbsp;IBUFs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;LOCed&nbsp;External&nbsp;Input&nbsp;IBUFs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9&nbsp;out&nbsp;of&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;External&nbsp;Output&nbsp;IOBs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;External&nbsp;Output&nbsp;IOBs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;LOCed&nbsp;External&nbsp;Output&nbsp;IOBs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;out&nbsp;of&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100%<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;External&nbsp;Bidir&nbsp;IOBs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;BUFGMUXs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;out&nbsp;of&nbsp;24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4%<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;Slices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;out&nbsp;of&nbsp;2448&nbsp;&nbsp;&nbsp;&nbsp;1%<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;SLICEMs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;out&nbsp;of&nbsp;1224&nbsp;&nbsp;&nbsp;&nbsp;0%<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Overall&nbsp;effort&nbsp;level&nbsp;(-ol):&nbsp;&nbsp;&nbsp;Standard&nbsp;<BR></SPAN>
+<SPAN class=Info1>Placer&nbsp;effort&nbsp;level&nbsp;(-pl):&nbsp;&nbsp;&nbsp;&nbsp;High&nbsp;<BR></SPAN>
+<SPAN class=Info1>Placer&nbsp;cost&nbsp;table&nbsp;entry&nbsp;(-t):&nbsp;1<BR></SPAN>
+<SPAN class=Info1>Router&nbsp;effort&nbsp;level&nbsp;(-rl):&nbsp;&nbsp;&nbsp;&nbsp;Standard&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Starting&nbsp;Placer<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;1.1<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;1.1&nbsp;(Checksum:310d)&nbsp;REAL&nbsp;time:&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;2.7<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;2.7&nbsp;(Checksum:310d)&nbsp;REAL&nbsp;time:&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;3.31<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;3.31&nbsp;(Checksum:310d)&nbsp;REAL&nbsp;time:&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;4.2<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>......<BR></SPAN>
+<SPAN class=Info1>......<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;4.2&nbsp;(Checksum:3a0b)&nbsp;REAL&nbsp;time:&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;5.30<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;5.30&nbsp;(Checksum:3a0b)&nbsp;REAL&nbsp;time:&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;6.8<BR></SPAN>
+<SPAN class=Info1>.<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;6.8&nbsp;(Checksum:de1c)&nbsp;REAL&nbsp;time:&nbsp;3&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;7.5<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;7.5&nbsp;(Checksum:de1c)&nbsp;REAL&nbsp;time:&nbsp;3&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;8.18<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;8.18&nbsp;(Checksum:d9ad)&nbsp;REAL&nbsp;time:&nbsp;4&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;9.5<BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;9.5&nbsp;(Checksum:d9ad)&nbsp;REAL&nbsp;time:&nbsp;4&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>REAL&nbsp;time&nbsp;consumed&nbsp;by&nbsp;placer:&nbsp;4&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1>CPU&nbsp;&nbsp;time&nbsp;consumed&nbsp;by&nbsp;placer:&nbsp;4&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1>Writing&nbsp;design&nbsp;to&nbsp;file&nbsp;FourBitCounterWithLoad.ncd<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;Placer&nbsp;completion:&nbsp;4&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;Placer&nbsp;completion:&nbsp;4&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Starting&nbsp;Router<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;1:&nbsp;153&nbsp;unrouted;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;5&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;2:&nbsp;146&nbsp;unrouted;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;5&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;3:&nbsp;29&nbsp;unrouted;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;5&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;4:&nbsp;29&nbsp;unrouted;&nbsp;(3103)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;5&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;5:&nbsp;31&nbsp;unrouted;&nbsp;(16)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;5&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;6:&nbsp;0&nbsp;unrouted;&nbsp;(1091)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;5&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;7:&nbsp;0&nbsp;unrouted;&nbsp;(1091)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;5&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;8:&nbsp;0&nbsp;unrouted;&nbsp;(1091)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;5&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;9:&nbsp;0&nbsp;unrouted;&nbsp;(1039)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;6&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;10:&nbsp;0&nbsp;unrouted;&nbsp;(1039)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;6&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;11:&nbsp;0&nbsp;unrouted;&nbsp;(1039)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;6&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Phase&nbsp;12:&nbsp;0&nbsp;unrouted;&nbsp;(1039)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REAL&nbsp;time:&nbsp;6&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q&nbsp;is&nbsp;being&nbsp;routed&nbsp;on&nbsp;general&nbsp;routing&nbsp;resources.&nbsp;If&nbsp;you<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;are&nbsp;trying&nbsp;to&nbsp;use&nbsp;local&nbsp;clocking&nbsp;techniques,&nbsp;evaluate&nbsp;the&nbsp;placement&nbsp;of&nbsp;the&nbsp;clock's&nbsp;source&nbsp;and&nbsp;loads&nbsp;to&nbsp;ensure&nbsp;it<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;meets&nbsp;the&nbsp;guidelines&nbsp;for&nbsp;local&nbsp;clocking.&nbsp;Otherwise,&nbsp;consider&nbsp;placing&nbsp;this&nbsp;clock&nbsp;on&nbsp;a&nbsp;dedicated&nbsp;clock&nbsp;routing<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;resource.&nbsp;For&nbsp;more&nbsp;information&nbsp;on&nbsp;clock&nbsp;routing&nbsp;resources,&nbsp;see&nbsp;the&nbsp;target&nbsp;architecture's&nbsp;user&nbsp;guide.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/u0tff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Warn1>Route&nbsp;-&nbsp;CLK&nbsp;Net:u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q&nbsp;may&nbsp;have&nbsp;excessive&nbsp;skew&nbsp;because&nbsp;1&nbsp;CLK&nbsp;pins&nbsp;and&nbsp;1<BR></SPAN>
+<SPAN class=Warn1>&nbsp;&nbsp;&nbsp;NON_CLK&nbsp;pins&nbsp;failed&nbsp;to&nbsp;route&nbsp;using&nbsp;a&nbsp;CLK&nbsp;template.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;Router&nbsp;completion:&nbsp;6&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;Router&nbsp;completion:&nbsp;6&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Partition&nbsp;Implementation&nbsp;Status<BR></SPAN>
+<SPAN class=Info1>-------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;No&nbsp;Partitions&nbsp;were&nbsp;found&nbsp;in&nbsp;this&nbsp;design.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>-------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Generating&nbsp;&quot;PAR&quot;&nbsp;statistics.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>**************************<BR></SPAN>
+<SPAN class=Info1>Generating&nbsp;Clock&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>**************************<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clock&nbsp;Net&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Resource&nbsp;&nbsp;&nbsp;|Locked|Fanout|Net&nbsp;Skew(ns)|Max&nbsp;Delay(ns)|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;systemClock_BUFGP&nbsp;|&nbsp;&nbsp;BUFGMUX_X1Y0|&nbsp;No&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;0.084&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[18].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;12&nbsp;|&nbsp;&nbsp;0.728&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.487&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[10].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.118&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[9].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.190&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[11].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.034&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[12].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.288&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;u1rs/u1rc/u0tff/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;0.633&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[13].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.054&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[0].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.054&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[14].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.255&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[1].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.038&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[15].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.291&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[2].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.291&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[16].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.222&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[3].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;0.638&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[17].uitf&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[4].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[5].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.151&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[6].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.327&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[7].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.108&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1>|u1rs/u1rc/sizeMinusO&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|neFlipFlops[8].uitff&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/q&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;|&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;1.108&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR></SPAN>
+<SPAN class=Info1>+---------------------+--------------+------+------+------------+-------------+<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>*&nbsp;Net&nbsp;Skew&nbsp;is&nbsp;the&nbsp;difference&nbsp;between&nbsp;the&nbsp;minimum&nbsp;and&nbsp;maximum&nbsp;routing<BR></SPAN>
+<SPAN class=Info1>only&nbsp;delays&nbsp;for&nbsp;the&nbsp;net.&nbsp;Note&nbsp;this&nbsp;is&nbsp;different&nbsp;from&nbsp;Clock&nbsp;Skew&nbsp;which<BR></SPAN>
+<SPAN class=Info1>is&nbsp;reported&nbsp;in&nbsp;TRCE&nbsp;timing&nbsp;report.&nbsp;Clock&nbsp;Skew&nbsp;is&nbsp;the&nbsp;difference&nbsp;between<BR></SPAN>
+<SPAN class=Info1>the&nbsp;minimum&nbsp;and&nbsp;maximum&nbsp;path&nbsp;delays&nbsp;which&nbsp;includes&nbsp;logic&nbsp;delays.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;Score:&nbsp;0<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>INFO:Timing:2761&nbsp;-&nbsp;N/A&nbsp;entries&nbsp;in&nbsp;the&nbsp;Constraints&nbsp;list&nbsp;may&nbsp;indicate&nbsp;that&nbsp;the&nbsp;constraint&nbsp;does&nbsp;not&nbsp;cover&nbsp;any&nbsp;paths&nbsp;or&nbsp;that&nbsp;it&nbsp;has&nbsp;no<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;requested&nbsp;value.<BR></SPAN>
+<SPAN class=Info1>Asterisk&nbsp;(*)&nbsp;preceding&nbsp;a&nbsp;constraint&nbsp;indicates&nbsp;it&nbsp;was&nbsp;not&nbsp;met.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;This&nbsp;may&nbsp;be&nbsp;due&nbsp;to&nbsp;a&nbsp;setup&nbsp;or&nbsp;hold&nbsp;violation.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Constraint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;Check&nbsp;&nbsp;|&nbsp;Worst&nbsp;Case&nbsp;|&nbsp;&nbsp;Best&nbsp;Case&nbsp;|&nbsp;Timing&nbsp;|&nbsp;&nbsp;&nbsp;Timing&nbsp;&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Slack&nbsp;&nbsp;&nbsp;|&nbsp;Achievable&nbsp;|&nbsp;Errors&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Score&nbsp;&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;sys&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.358ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;temClock_BUFGP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.952ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.152ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[18].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.351ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.548ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[10].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.104ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.752ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[9].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.267ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.358ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[11].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.952ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.283ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[12].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.892ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.283ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/u0tff/q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.892ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.496ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[13].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.063ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.496ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[0].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.063ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.358ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[14].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.952ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.353ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[1].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.949ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.496ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[15].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.063ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.540ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[2].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.098ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.358ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[16].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.952ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.498ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[3].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.064ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.373ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[17].uitff/q&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.965ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.532ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[4].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.091ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.283ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[5].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.892ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.368ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[6].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.961ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.368ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[7].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.961ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Autotimespec&nbsp;constraint&nbsp;for&nbsp;clock&nbsp;net&nbsp;u1r&nbsp;|&nbsp;SETUP&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.283ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N/A|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;s/u1rc/sizeMinusOneFlipFlops[8].uitff/q&nbsp;&nbsp;&nbsp;|&nbsp;HOLD&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.892ns|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1>------------------------------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>All&nbsp;constraints&nbsp;were&nbsp;met.<BR></SPAN>
+<SPAN class=Info1>INFO:Timing:2761&nbsp;-&nbsp;N/A&nbsp;entries&nbsp;in&nbsp;the&nbsp;Constraints&nbsp;list&nbsp;may&nbsp;indicate&nbsp;that&nbsp;the&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;constraint&nbsp;does&nbsp;not&nbsp;cover&nbsp;any&nbsp;paths&nbsp;or&nbsp;that&nbsp;it&nbsp;has&nbsp;no&nbsp;requested&nbsp;value.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Generating&nbsp;Pad&nbsp;Report.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>All&nbsp;signals&nbsp;are&nbsp;completely&nbsp;routed.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;PAR&nbsp;completion:&nbsp;7&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;PAR&nbsp;completion:&nbsp;7&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Peak&nbsp;Memory&nbsp;Usage:&nbsp;&nbsp;157&nbsp;MB<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Placement:&nbsp;Completed&nbsp;-&nbsp;No&nbsp;errors&nbsp;found.<BR></SPAN>
+<SPAN class=Info1>Routing:&nbsp;Completed&nbsp;-&nbsp;No&nbsp;errors&nbsp;found.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;error&nbsp;messages:&nbsp;0<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;warning&nbsp;messages:&nbsp;20<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;info&nbsp;messages:&nbsp;2<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Writing&nbsp;design&nbsp;to&nbsp;file&nbsp;FourBitCounterWithLoad.ncd<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>PAR&nbsp;done!<BR></SPAN>
+<SPAN class=Info1>Executing&nbsp;C:\Xilinx\10.1\ISE\bin\nt\trce.exe&nbsp;&nbsp;-e&nbsp;3&nbsp;&nbsp;-s&nbsp;&nbsp;5&nbsp;&quot;FourBitCounterWithLoad.ncd&quot;&nbsp;&quot;FourBitCounterWithLoad.pcf&quot;&nbsp;-o&nbsp;&quot;FourBitCounterWithLoad_postpar.twr&quot;<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;10.1.03&nbsp;-&nbsp;Trace&nbsp;&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2008&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Loading&nbsp;device&nbsp;for&nbsp;application&nbsp;Rf_Device&nbsp;from&nbsp;file&nbsp;'3s250e.nph'&nbsp;in&nbsp;environment<BR></SPAN>
+<SPAN class=Info1>C:\Xilinx\10.1\ISE.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&quot;FourBitCounterWithLoad&quot;&nbsp;is&nbsp;an&nbsp;NCD,&nbsp;version&nbsp;3.2,&nbsp;device&nbsp;xc3s250e,&nbsp;package<BR></SPAN>
+<SPAN class=Info1>tq144,&nbsp;speed&nbsp;-5<BR></SPAN>
+<SPAN class=Info1>INFO:Timing:2698&nbsp;-&nbsp;No&nbsp;timing&nbsp;constraints&nbsp;found,&nbsp;doing&nbsp;default&nbsp;enumeration.<BR></SPAN>
+<SPAN class=Info1>--------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;10.1.03&nbsp;Trace&nbsp;&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2008&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe&nbsp;-e&nbsp;3&nbsp;-s&nbsp;5<BR></SPAN>
+<SPAN class=Info1>FourBitCounterWithLoad.ncd&nbsp;FourBitCounterWithLoad.pcf&nbsp;-o<BR></SPAN>
+<SPAN class=Info1>FourBitCounterWithLoad_postpar.twr<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Design&nbsp;file:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FourBitCounterWithLoad.ncd<BR></SPAN>
+<SPAN class=Info1>Physical&nbsp;constraint&nbsp;file:&nbsp;FourBitCounterWithLoad.pcf<BR></SPAN>
+<SPAN class=Info1>Device,speed:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xc3s250e,-5&nbsp;(PRODUCTION&nbsp;1.27&nbsp;2008-01-09)<BR></SPAN>
+<SPAN class=Info1>Report&nbsp;level:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error&nbsp;report<BR></SPAN>
+<SPAN class=Info1>--------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>INFO:Timing:2752&nbsp;-&nbsp;To&nbsp;get&nbsp;complete&nbsp;path&nbsp;coverage,&nbsp;use&nbsp;the&nbsp;unconstrained&nbsp;paths<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;option.&nbsp;All&nbsp;paths&nbsp;that&nbsp;are&nbsp;not&nbsp;constrained&nbsp;will&nbsp;be&nbsp;reported&nbsp;in&nbsp;the<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;unconstrained&nbsp;paths&nbsp;section(s)&nbsp;of&nbsp;the&nbsp;report.<BR></SPAN>
+<SPAN class=Info1>INFO:Timing:3339&nbsp;-&nbsp;The&nbsp;clock-to-out&nbsp;numbers&nbsp;in&nbsp;this&nbsp;timing&nbsp;report&nbsp;are&nbsp;based&nbsp;on&nbsp;a<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;50&nbsp;Ohm&nbsp;transmission&nbsp;line&nbsp;loading&nbsp;model.&nbsp;&nbsp;For&nbsp;the&nbsp;details&nbsp;of&nbsp;this&nbsp;model,&nbsp;and<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;for&nbsp;more&nbsp;information&nbsp;on&nbsp;accounting&nbsp;for&nbsp;different&nbsp;loading&nbsp;conditions,&nbsp;please<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;see&nbsp;the&nbsp;device&nbsp;datasheet.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Analysis&nbsp;completed&nbsp;Wed&nbsp;Feb&nbsp;29&nbsp;17:34:43&nbsp;2012<BR></SPAN>
+<SPAN class=Info1>--------------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Generating&nbsp;Report&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;warnings:&nbsp;0<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;info&nbsp;messages:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;time:&nbsp;1&nbsp;secs&nbsp;<BR></SPAN>
+<SPAN class=Info1>Executing&nbsp;C:\Xilinx\10.1\ISE\bin\nt\netgen.exe&nbsp;-w&nbsp;-sim&nbsp;-ofmt&nbsp;verilog&nbsp;-pcf&nbsp;&quot;FourBitCounterWithLoad.pcf&quot;&nbsp;&nbsp;-s&nbsp;&nbsp;5&nbsp;&nbsp;-sdf_anno&nbsp;true&nbsp;&nbsp;-sdf_path&nbsp;&nbsp;C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\design\implement&nbsp;&nbsp;-insert_glbl&nbsp;true&nbsp;&quot;FourBitCounterWithLoad.ncd&quot;&nbsp;&quot;time_sim.v&quot;<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;10.1.03&nbsp;-&nbsp;netgen&nbsp;K.39&nbsp;(nt)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2008&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Command&nbsp;Line:&nbsp;netgen&nbsp;-w&nbsp;-sim&nbsp;-ofmt&nbsp;verilog&nbsp;-pcf&nbsp;FourBitCounterWithLoad.pcf&nbsp;-s&nbsp;5<BR></SPAN>
+<SPAN class=Info1>-sdf_anno&nbsp;true&nbsp;-sdf_path<BR></SPAN>
+<SPAN class=Info1>C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_CounterWithLoad\des<BR></SPAN>
+<SPAN class=Info1>ign\implement&nbsp;-insert_glbl&nbsp;true&nbsp;FourBitCounterWithLoad.ncd&nbsp;time_sim.v&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Read&nbsp;and&nbsp;Annotate&nbsp;design&nbsp;'FourBitCounterWithLoad.ncd'&nbsp;...<BR></SPAN>
+<SPAN class=Info1>Flattening&nbsp;design&nbsp;...<BR></SPAN>
+<SPAN class=Info1>Processing&nbsp;design&nbsp;...&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Preping&nbsp;design's&nbsp;networks&nbsp;...<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Preping&nbsp;design's&nbsp;macros&nbsp;...<BR></SPAN>
+<SPAN class=Info1>Writing&nbsp;Verilog&nbsp;SDF&nbsp;file<BR></SPAN>
+<SPAN class=Info1>'c:\users\tmcphillips\designs\projects\basys250\veriloghdl\01_counterwithload\de<BR></SPAN>
+<SPAN class=Info1>sign\implement\time_sim.sdf'&nbsp;...<BR></SPAN>
+<SPAN class=Info1>Writing&nbsp;Verilog&nbsp;netlist&nbsp;file&nbsp;'time_sim.v'&nbsp;...<BR></SPAN>
+<SPAN class=Info1>INFO:NetListWriters:633&nbsp;-&nbsp;The&nbsp;generated&nbsp;Verilog&nbsp;netlist&nbsp;contains&nbsp;Xilinx&nbsp;SIMPRIM<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;simulation&nbsp;primitives&nbsp;and&nbsp;has&nbsp;to&nbsp;be&nbsp;used&nbsp;with&nbsp;SIMPRIM&nbsp;simulation&nbsp;library&nbsp;for<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;correct&nbsp;compilation&nbsp;and&nbsp;simulation.&nbsp;<BR></SPAN>
+<SPAN class=Info1>INFO:NetListWriters&nbsp;-&nbsp;Setup&nbsp;Simulation&nbsp;-&nbsp;To&nbsp;perform&nbsp;a&nbsp;setup&nbsp;simulation,&nbsp;specify<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;values&nbsp;in&nbsp;the&nbsp;Maximum&nbsp;(MAX)&nbsp;field&nbsp;with&nbsp;the&nbsp;following&nbsp;command&nbsp;line&nbsp;modifier:&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;-SDFMAX<BR></SPAN>
+<SPAN class=Info1>INFO:NetListWriters&nbsp;-&nbsp;Hold&nbsp;Simulation&nbsp;-&nbsp;To&nbsp;perform&nbsp;the&nbsp;most&nbsp;accurate&nbsp;hold<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;simulation,&nbsp;specify&nbsp;values&nbsp;in&nbsp;the&nbsp;Minimum&nbsp;(MIN)&nbsp;field&nbsp;with&nbsp;the&nbsp;following<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;command&nbsp;line&nbsp;modifier:&nbsp;&nbsp;-SDFMIN<BR></SPAN>
+<SPAN class=Info1>INFO:NetListWriters:665&nbsp;-&nbsp;For&nbsp;more&nbsp;information&nbsp;on&nbsp;how&nbsp;to&nbsp;pass&nbsp;the&nbsp;SDF&nbsp;switches<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;to&nbsp;the&nbsp;simulator,&nbsp;see&nbsp;your&nbsp;Simulator&nbsp;tool&nbsp;documentation.<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;warnings:&nbsp;0<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;info&nbsp;messages:&nbsp;4<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;memory&nbsp;usage&nbsp;is&nbsp;138528&nbsp;kilobytes<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Created&nbsp;netgen&nbsp;log&nbsp;file&nbsp;'time_sim.nlf'.<BR></SPAN>
+<SPAN class=Info1>Executing&nbsp;C:\Xilinx\10.1\ISE\bin\nt\bitgen.exe&nbsp;-intstyle&nbsp;ise&nbsp;-f&nbsp;&quot;FourBitCounterWithLoad.ut&quot;&nbsp;&quot;FourBitCounterWithLoad.ncd&quot;&nbsp;&quot;FourBitCounterWithLoad&quot;&nbsp;&quot;FourBitCounterWithLoad.pcf&quot;<BR></SPAN>
+<SPAN class=Info1>Implementation&nbsp;ver1-&gt;rev1:&nbsp;0&nbsp;error(s),&nbsp;20&nbsp;warning(s)<BR></SPAN>
+<SPAN class=Warn1>Implementation&nbsp;ended&nbsp;with&nbsp;warning(s).<BR></SPAN>
+<SPAN class=Warn1><BR></SPAN>
+
+</FONT>
+</BODY>
+
+</HTML>
+		

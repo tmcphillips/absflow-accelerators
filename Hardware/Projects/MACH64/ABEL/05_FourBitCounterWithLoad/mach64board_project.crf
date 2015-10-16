@@ -1,0 +1,28 @@
+// Signal Name Cross Reference File
+// ispLEVER Classic 1.4.01.04.23.l1
+
+// Design 'mach64board_project' created Mon Jan 16 15:09:37 2012
+
+
+// LEGEND:  '>'  Functional Block Port Separator
+//          '/'  Hierarchy Path Separator
+//          '@'  Automatically Generated Node
+
+
+// Hierarchical Name                    Short Name
+debouncedUp>debounced                	X0_debounced
+debouncedDown>debounced              	B0_debounced
+debouncedLoad>debounced              	L0_debounced
+oneKHzClock/s9                       	S0_s9
+oneKHzClock/s8                       	S0_s8
+oneKHzClock/s7                       	S0_s7
+oneKHzClock/s6                       	S0_s6
+oneKHzClock/s5                       	S0_s5
+oneKHzClock/s4                       	S0_s4
+oneKHzClock/s3                       	S0_s3
+oneKHzClock/s2                       	S0_s2
+oneKHzClock/s1                       	S0_s1
+oneKHzClock/s0                       	S0_s0
+debouncedUp/lastSample               	X1_lastSample
+debouncedDown/lastSample             	B1_lastSample
+debouncedLoad/lastSample             	L1_lastSample

@@ -1,0 +1,25 @@
+MODULE LogicGateExplorations
+
+DECLARATIONS
+
+	!pb0 pin 20;
+	!pb1 pin 21;
+
+	led_and	pin 26 istype 'com';
+	led_or	pin 27 istype 'com';
+	led_xor	pin 28 istype 'com';
+
+EQUATIONS
+	
+	led_and = pb1 & pb0;
+	led_or  = pb1 # pb0;
+	led_xor	= pb1 $ pb0;
+
+	Test_Vectors ( [pb0, pb1] -> [led_and, led_or, led_xor] )
+		[0, 0] -> [0, 0, 0];
+		[0, 1] -> [0, 1, 0];
+		[1, 0] -> [0, 1, 1];
+		[1, 1] -> [1, 1, 0];
+
+END 
+

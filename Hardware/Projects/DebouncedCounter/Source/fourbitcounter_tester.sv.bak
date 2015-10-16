@@ -1,0 +1,58 @@
+
+import fourbitcounter_pkg::*;
+import ovm_pkg::*;
+
+module tester;
+  
+  tlm_fifo #(fourbitcounter_operation) fifo;
+  
+  producer generator(fifo);
+  consumer printer(fifo);
+    
+  initial begin
+    fifo = new("fifo");
+    fork
+      generator.run();
+      printer.run();
+    join_none
+  end
+  
+endmodule
+
+
+module producer(ref tlm_fifo #(fourbitcounter_operation) fifo);
+  
+  fourbitcounter_operation op;
+  
+  task run;
+    
+    op = new();
+    fifo.put(op.clone);
+    
+    op = new(up_op, 0, 0);
+    fifo.put(op.clone);
+    
+    op = new(down_op, 0, 5);
+    fifo.put(op.clone);
+
+    op = new(load_op, 12, 4);
+    fifo.put(op.clone);
+    
+  endtask
+  
+endmodule
+
+module consumer(ref tlm_fifo #(fourbitcounter_operation) fifo);
+  
+  fourbitcounter_operation op;
+  
+  task run;
+    forever begin
+        #10;
+        fifo.get(op);
+        $display(op.convert2string());
+    end
+      
+  endtask
+  
+endmodule

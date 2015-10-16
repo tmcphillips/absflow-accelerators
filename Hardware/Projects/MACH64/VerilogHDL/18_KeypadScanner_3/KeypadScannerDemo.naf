@@ -1,0 +1,15 @@
+oneMHzClock  i
+keypadRows[3]  i
+keypadRows[2]  i
+keypadRows[1]  i
+keypadRows[0]  i
+keypadColumns[2]  o
+keypadColumns[1]  o
+keypadColumns[0]  o
+segments[6]  o
+segments[5]  o
+segments[4]  o
+segments[3]  o
+segments[2]  o
+segments[1]  o
+segments[0]  o

@@ -1,0 +1,18 @@
+#$ TOOL   ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE   Sat Nov 26 11:05:15 2011
+#$ JEDECFILE   lab01fourpushbuttons
+#$ MODULE   Lab01FourPushButtons
+#$ TITLE   Four push button LED program
+#$ PINS 8 pb0 pb1 pb2 pb3 led0 led1 led2 led3
+.type f
+.i 4
+.o 4
+.ilb pb0 pb1 pb2 pb3
+.ob led0 led1 led2 led3
+.phase 1111
+.p 4
+0--- 1000
+-0-- 0100
+--0- 0010
+---0 0001
+.end

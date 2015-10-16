@@ -1,0 +1,166 @@
+import dbctr_testbench_classes_pkg::*;
+import ovm_pkg::*;
+
+module dbctr_tb_top;
+
+  tlm_fifo #(dbctr_operation)  gen2drv_fifo;
+  tlm_fifo #(dbctr_operation)  drv2pred_fifo;
+  tlm_fifo #(dbctr_result)  pred2comp_fifo;
+  tlm_fifo #(dbctr_result)  resp2prn_fifo;
+  tlm_fifo #(dbctr_result)  resp2comp_fifo;
+
+  wire clock;
+  wire up;
+  wire down;
+  wire load;
+  wire reset;
+  wire [3:0] loadValue;
+  wire [3:0] counterValue;
+  wire ack;
+  
+  dbctr_tb_generator generator(
+    .op_fifo(gen2drv_fifo)
+  );
+  
+   dbctr_tb_driver driver(
+    .gen2drv_operation_fifo(gen2drv_fifo),
+    .drv2prd_operation_fifo(drv2pred_fifo),
+    .ack(ack),
+    .clock(clock),
+ 	  .up(up),
+	  .down(down),
+	  .load(load),
+	  .reset(reset),
+	  .value(loadValue)
+	);
+	
+	 dbctr_tb_predictor predictor (
+    .operation_fifo(drv2pred_fifo),
+    .predicted_result_fifo(pred2comp_fifo)
+  );
+	
+ 	fourbitcounterwithload dut (
+		.upButton(up),
+		.downButton(down),
+		.loadButton(load),
+		.resetButton(reset),
+		.switches(loadValue),
+		.clock(clock),
+		.counter(counterValue),
+		.ack(ack)
+	);
+	
+	 dbctr_tb_responder responder (
+    .result_fifo(resp2prn_fifo),
+    .res2comp_fifo(resp2comp_fifo),
+    .clock(clock),
+	  .reset(reset),
+	  .ack(ack),
+	  .counter(counterValue)
+	);
+	
+	 dbctr_tb_comparator comparator (
+    .actual_result_fifo(resp2comp_fifo),
+    .predicted_result_fifo(pred2comp_fifo)
+  );
+
+   dbctr_tb_printer printer (
+    .res2prn_result_fifo(resp2prn_fifo)
+  );
+
+  initial begin
+    
+    ovm_top.set_report_verbosity_level(400);
+    ovm_top.set_report_max_quit_count(10);
+    
+    gen2drv_fifo = new("gen2drv_fifo");
+    drv2pred_fifo = new("drv2pred_fifo");
+    pred2comp_fifo = new("pred2comp_fifo");
+    resp2prn_fifo = new("resp2prn_fifo");
+    resp2comp_fifo = new("resp2comp_fifo");
+    
+    fork
+      generator.run();
+      predictor.run();
+      comparator.run();
+      printer.run();
+    join_none
+    
+  end
+
+endmodule
+
+
+module dbctr_tb_generator(ref tlm_fifo #(dbctr_operation) op_fifo);
+  
+  dbctr_operation t;
+    
+  task run;
+
+    t = new(reset_op, 0, 5, 4);
+    op_fifo.put(t.clone);
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, i, 0);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(down_op, 0, i, 5);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(load_op, 0, i, 5);
+        t.arg = $random;
+        op_fifo.put(t.clone);
+      end
+    
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+
+    for (int i = 6; i >= 0; i--)
+      repeat (32) begin
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(reset_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(up_op, 0, 4, i);
+        op_fifo.put(t.clone);
+        t = new(down_op, 0, 4, i);
+        op_fifo.put(t.clone);
+      end
+    
+    repeat(1000) begin
+      t.random();
+      op_fifo.put(t.clone);      
+    end
+    
+    #5000;
+		
+		ovm_top.die();
+				
+		$stop;
+    
+  endtask
+    
+endmodule

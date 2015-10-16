@@ -1,0 +1,40 @@
+#$ TOOL  ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE  Sun Nov 27 16:31:56 2011
+#$ JEDECFILE  fourbitcounter
+#$ MODULE  FourBitCounter
+#$ TITLE  Four bit counter with manual clock and reset
+#$ PINS 6 clock:18 reset:20 q3:14 q2:15 q1:16 q0:17
+.model fourbitcounter 
+.inputs clock.BLIF reset.BLIF q3.Q q2.Q q1.Q q0.Q
+.outputs q3.D q3.C q3.AR q2.D q2.C q2.AR q1.D q1.C q1.AR q0.D q0.C q0.AR
+.names q3.Q q2.Q q1.Q q0.Q q3.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+.names clock.BLIF q3.C
+0 1
+.names reset.BLIF q3.AR
+0 1
+.names q2.Q q1.Q q0.Q q2.D
+011 1
+10- 1
+1-0 1
+.names clock.BLIF q2.C
+0 1
+.names reset.BLIF q2.AR
+0 1
+.names q1.Q q0.Q q1.D
+10 1
+01 1
+.names clock.BLIF q1.C
+0 1
+.names reset.BLIF q1.AR
+0 1
+.names q0.Q q0.D
+0 1
+.names clock.BLIF q0.C
+0 1
+.names reset.BLIF q0.AR
+0 1
+.end

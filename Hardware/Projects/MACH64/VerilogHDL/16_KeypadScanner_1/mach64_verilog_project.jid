@@ -1,0 +1,7 @@
+. KeypadScannerDemo keypadscannerdemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\16_keypadscanner_1\keypadscannerdemo.v
+u0rs.u1rc.uitff TFlipFlop keypadscannerdemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\16_keypadscanner_1\keypadscannerdemo.v
+u0rs.u1rc.u0tff TFlipFlop keypadscannerdemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\16_keypadscanner_1\keypadscannerdemo.v
+u1ks KeypadScanner keypadscannerdemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\16_keypadscanner_1\keypadscannerdemo.v
+u0rs.u1rc RippleCounter keypadscannerdemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\16_keypadscanner_1\keypadscannerdemo.v
+u0rs RippleScaler keypadscannerdemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\16_keypadscanner_1\keypadscannerdemo.v
+u2bdtss BcdDigitToSevenSegment keypadscannerdemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\16_keypadscanner_1\keypadscannerdemo.v

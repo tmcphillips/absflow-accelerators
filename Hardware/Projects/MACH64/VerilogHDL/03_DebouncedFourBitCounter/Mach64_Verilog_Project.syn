@@ -1,0 +1,13 @@
+JDF B
+// Created by Version 1.5 
+PROJECT Mach64_Verilog_Project
+DESIGN mach64_verilog_project Normal
+DEVKIT LC4064V-75T48I
+ENTRY Pure Verilog HDL
+MODULE debouncedfourbitcounter.v
+MODSTYLE DebouncedFourBitCounter Normal
+MODSTYLE SynchronousClockScaler Normal
+MODSTYLE Debouncer Normal
+SYNTHESIS_TOOL Synplify
+SIMULATOR_TOOL ActiveHDL
+TOPMODULE DebouncedFourBitCounter

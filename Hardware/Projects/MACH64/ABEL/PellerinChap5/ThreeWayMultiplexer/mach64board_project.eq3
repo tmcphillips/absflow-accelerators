@@ -1,0 +1,25 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+y0 = !( b0 & !s0 & s1
+    # c0 & s0 & !s1
+    # a0 & s0 & s1 ) ; (3 pterms, 5 signals)
+
+y1 = !( b1 & !s0 & s1
+    # c1 & s0 & !s1
+    # a1 & s0 & s1 ) ; (3 pterms, 5 signals)
+
+y2 = !( b2 & !s0 & s1
+    # c2 & s0 & !s1
+    # a2 & s0 & s1 ) ; (3 pterms, 5 signals)
+
+y3 = !( b3 & !s0 & s1
+    # c3 & s0 & !s1
+    # a3 & s0 & s1 ) ; (3 pterms, 5 signals)
+

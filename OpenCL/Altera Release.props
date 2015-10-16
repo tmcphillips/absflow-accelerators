@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalLibraryDirectories>$(ALTERAOCLSDKROOT)\host\windows64\lib;$(AOCL_BOARD_PACKAGE_ROOT)\windows64\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>alterahalmmd.lib;altera_apb_14_0_mmd.lib;alteracl.lib; acl_emulator_kernel_rt.lib;pkg_editor.lib;libelf.lib;acl_hostxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ALTERAOCLSDKROOT)\host\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>xcopy /c /f /y /r *.aocx $(SolutionDir)\x64\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

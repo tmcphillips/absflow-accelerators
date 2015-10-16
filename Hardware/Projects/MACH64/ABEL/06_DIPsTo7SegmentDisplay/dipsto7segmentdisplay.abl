@@ -1,0 +1,34 @@
+MODULE DIPsTo7SegmentDisplay
+
+DECLARATIONS
+
+	HexToSevenSegment INTERFACE ([d3..d0] -> [a,b,c,d,e,f,g]);
+	BCDToSevenSegment INTERFACE ([d3..d0] -> [a,b,c,d,e,f,g]);
+
+	!d0..!d3 pin 17..14;
+	hexInput = [d0..d3];
+
+	a,b,c,d,e,f,g pin 20..24, 26, 27;
+	sevenSegments = [a,b,c,d,e,f,g];
+
+	HexLEDSegmentLookup FUNCTIONAL_BLOCK HexToSevenSegment;
+	BCDLEDSegmentLookup FUNCTIONAL_BLOCK BCDToSevenSegment;
+	
+	!enableHex pin 31;
+
+	!enableDisplay pin 28;
+
+EQUATIONS
+
+	sevenSegments.oe = enableDisplay;
+
+	HexLEDSegmentLookup.[d0..d3] = hexInput;
+	BCDLEDSegmentLookup.[d0..d3] = hexInput;
+
+	when (enableHex) then
+		sevenSegments = HexLEDSegmentLookup.[a,b,c,d,e,f,g];	
+	else 
+		sevenSegments = BCDLEDSegmentLookup.[a,b,c,d,e,f,g];	
+
+END 
+

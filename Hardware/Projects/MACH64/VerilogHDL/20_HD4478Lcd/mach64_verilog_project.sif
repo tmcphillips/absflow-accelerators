@@ -1,0 +1,1754 @@
+// Node Statistic Information File
+// Tool:  ispLEVER Classic 1.5.00.05.39.l1
+// Design 'lcddemo' created   Thu Feb 09 08:16:45 2012
+
+// Fmax Logic Level: 2.
+
+// Path: pc_4_.Q
+//    -> wreq_0
+//    -> wreq.CE
+
+// Signal Name: lcd_data_5_.D
+// Type: Tri
+BEGIN lcd_data_5_.D
+Fanin Number		4
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+END
+
+// Signal Name: lcd_data_5_.C
+// Type: Tri
+BEGIN lcd_data_5_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_data_5_.CE
+// Type: Tri
+BEGIN lcd_data_5_.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: lcd_data_5_.AR
+// Type: Tri
+BEGIN lcd_data_5_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_5_.OE
+// Type: Tri
+BEGIN lcd_data_5_.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_outData_cl_2_0_reg.Q	2
+END
+
+// Signal Name: lcd_data_4_.D
+// Type: Tri
+BEGIN lcd_data_4_.D
+Fanin Number		4
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+END
+
+// Signal Name: lcd_data_4_.C
+// Type: Tri
+BEGIN lcd_data_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_data_4_.CE
+// Type: Tri
+BEGIN lcd_data_4_.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: lcd_data_4_.AR
+// Type: Tri
+BEGIN lcd_data_4_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_4_.OE
+// Type: Tri
+BEGIN lcd_data_4_.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_outData_cl_3_0_reg.Q	2
+END
+
+// Signal Name: lcd_data_7_.D
+// Type: Bidi
+BEGIN lcd_data_7_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	pc_4_.Q             	1
+END
+
+// Signal Name: lcd_data_7_.C
+// Type: Bidi
+BEGIN lcd_data_7_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_data_7_.CE
+// Type: Bidi
+BEGIN lcd_data_7_.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: lcd_data_7_.AR
+// Type: Bidi
+BEGIN lcd_data_7_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_7_.OE
+// Type: Bidi
+BEGIN lcd_data_7_.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_outData_cl_0_.Q	2
+END
+
+// Signal Name: lcd_data_3_.D
+// Type: Tri
+BEGIN lcd_data_3_.D
+Fanin Number		4
+Pterm Number		5
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+END
+
+// Signal Name: lcd_data_3_.C
+// Type: Tri
+BEGIN lcd_data_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_data_3_.CE
+// Type: Tri
+BEGIN lcd_data_3_.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: lcd_data_3_.AR
+// Type: Tri
+BEGIN lcd_data_3_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_3_.OE
+// Type: Tri
+BEGIN lcd_data_3_.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_outData_cl_4_0_reg.Q	2
+END
+
+// Signal Name: lcd_data_2_.D
+// Type: Tri
+BEGIN lcd_data_2_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+END
+
+// Signal Name: lcd_data_2_.C
+// Type: Tri
+BEGIN lcd_data_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_data_2_.CE
+// Type: Tri
+BEGIN lcd_data_2_.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: lcd_data_2_.AR
+// Type: Tri
+BEGIN lcd_data_2_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_2_.OE
+// Type: Tri
+BEGIN lcd_data_2_.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_outData_cl_5_0_reg.Q	2
+END
+
+// Signal Name: lcd_data_1_.D
+// Type: Tri
+BEGIN lcd_data_1_.D
+Fanin Number		4
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+END
+
+// Signal Name: lcd_data_1_.C
+// Type: Tri
+BEGIN lcd_data_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_data_1_.CE
+// Type: Tri
+BEGIN lcd_data_1_.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: lcd_data_1_.AR
+// Type: Tri
+BEGIN lcd_data_1_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_1_.OE
+// Type: Tri
+BEGIN lcd_data_1_.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_outData_cl_6_0_reg.Q	2
+END
+
+// Signal Name: lcd_e.D
+// Type: Output_reg
+BEGIN lcd_e.D
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_2_.Q   	1
+Fanin Node      	u0lcdw_state_7_.Q   	2
+Fanin Node      	u0lcdw_state_6_.Q   	1
+END
+
+// Signal Name: lcd_e.C
+// Type: Output_reg
+BEGIN lcd_e.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_e.CE-
+// Type: Output_reg
+BEGIN lcd_e.CE
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_2_.Q   	1
+Fanin Node      	u0lcdw_state_3_.Q   	1
+Fanin Node      	u0lcdw_state_7_.Q   	2
+Fanin Node      	u0lcdw_state_10_.Q  	1
+END
+
+// Signal Name: lcd_e.AR
+// Type: Output_reg
+BEGIN lcd_e.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_0_.D
+// Type: Tri
+BEGIN lcd_data_0_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+END
+
+// Signal Name: lcd_data_0_.C
+// Type: Tri
+BEGIN lcd_data_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_data_0_.CE
+// Type: Tri
+BEGIN lcd_data_0_.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: lcd_data_0_.AR
+// Type: Tri
+BEGIN lcd_data_0_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_0_.OE
+// Type: Tri
+BEGIN lcd_data_0_.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_outData_cl_7_0_reg.Q	2
+END
+
+// Signal Name: lcd_rw.D
+// Type: Output_reg
+BEGIN lcd_rw.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_6_.Q   	1
+END
+
+// Signal Name: lcd_rw.C
+// Type: Output_reg
+BEGIN lcd_rw.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_rw.CE-
+// Type: Output_reg
+BEGIN lcd_rw.CE
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_6_.Q   	1
+END
+
+// Signal Name: lcd_rw.AR
+// Type: Output_reg
+BEGIN lcd_rw.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_rs.D
+// Type: Output_reg
+BEGIN lcd_rs.D
+Fanin Number		9
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_3_.Q   	1
+Fanin Node      	u0lcdw_state_7_.Q   	2
+Fanin Node      	u0lcdw_state_9_.Q   	1
+Fanin Node      	u0lcdw_state_5_.Q   	1
+Fanin Node      	u0lcdw_state_11_.Q  	1
+Fanin Node      	u0lcdw_state_13_.Q  	1
+END
+
+// Signal Name: lcd_rs.C
+// Type: Output_reg
+BEGIN lcd_rs.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_rs.CE-
+// Type: Output_reg
+BEGIN lcd_rs.CE
+Fanin Number		3
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_6_.Q   	1
+END
+
+// Signal Name: lcd_rs.AR
+// Type: Output_reg
+BEGIN lcd_rs.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: wack.D
+// Type: Output_reg
+BEGIN wack.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_12_.Q  	1
+END
+
+// Signal Name: wack.C
+// Type: Output_reg
+BEGIN wack.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: wack.CE-
+// Type: Output_reg
+BEGIN wack.CE
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_12_.Q  	1
+END
+
+// Signal Name: wack.AR
+// Type: Output_reg
+BEGIN wack.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: wreq.D
+// Type: Output_reg
+BEGIN wreq.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	inst_state.Q        	2
+END
+
+// Signal Name: wreq.C
+// Type: Output_reg
+BEGIN wreq.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: wreq.CE
+// Type: Output_reg
+BEGIN wreq.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		2
+Fanin Node      	wreq_0.BLIF         	2
+END
+
+// Signal Name: wreq.AR
+// Type: Output_reg
+BEGIN wreq.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_6_.D
+// Type: Tri
+BEGIN lcd_data_6_.D
+Fanin Number		4
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+END
+
+// Signal Name: lcd_data_6_.C
+// Type: Tri
+BEGIN lcd_data_6_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: lcd_data_6_.CE
+// Type: Tri
+BEGIN lcd_data_6_.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: lcd_data_6_.AR
+// Type: Tri
+BEGIN lcd_data_6_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: lcd_data_6_.OE
+// Type: Tri
+BEGIN lcd_data_6_.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Node      	u0lcdw_outData_cl_1_0_reg.Q	2
+END
+
+// Signal Name: pc_4_.T
+// Type: Node_reg
+BEGIN pc_4_.T
+Fanin Number		6
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	inst_state.Q        	2
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Node      	pc_3_.Q             	1
+Fanin Output    	wack.Q              	1
+END
+
+// Signal Name: pc_4_.C
+// Type: Node_reg
+BEGIN pc_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: pc_4_.AR
+// Type: Node_reg
+BEGIN pc_4_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: inst_state.D
+// Type: Node_reg
+BEGIN inst_state.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Input     	start_n.BLIF        	0
+Fanin Node      	pc_4_.Q             	1
+Fanin Node      	inst_state.Q        	2
+Fanin Output    	wack.Q              	1
+END
+
+// Signal Name: inst_state.C
+// Type: Node_reg
+BEGIN inst_state.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: inst_state.AR
+// Type: Node_reg
+BEGIN inst_state.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: pc_0_.D
+// Type: Node_reg
+BEGIN pc_0_.D
+Fanin Number		3
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	inst_state.Q        	2
+Fanin Node      	pc_0_.Q             	3
+Fanin Output    	wack.Q              	1
+END
+
+// Signal Name: pc_0_.C
+// Type: Node_reg
+BEGIN pc_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: pc_0_.AR
+// Type: Node_reg
+BEGIN pc_0_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: pc_1_.D
+// Type: Node_reg
+BEGIN pc_1_.D
+Fanin Number		4
+Pterm Number		4
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	inst_state.Q        	2
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Output    	wack.Q              	1
+END
+
+// Signal Name: pc_1_.C
+// Type: Node_reg
+BEGIN pc_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: pc_1_.AR
+// Type: Node_reg
+BEGIN pc_1_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: pc_2_.D.X1
+// Type: Node_reg
+BEGIN pc_2_.D.X1
+Fanin Number		4
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	inst_state.Q        	2
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Output    	wack.Q              	1
+END
+
+// Signal Name: pc_2_.D.X2
+// Type: Node_reg
+BEGIN pc_2_.D.X2
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	pc_2_.Q             	1
+END
+
+// Signal Name: pc_2_.C
+// Type: Node_reg
+BEGIN pc_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: pc_2_.AR
+// Type: Node_reg
+BEGIN pc_2_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: pc_3_.T
+// Type: Node_reg
+BEGIN pc_3_.T
+Fanin Number		5
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	inst_state.Q        	2
+Fanin Node      	pc_0_.Q             	3
+Fanin Node      	pc_1_.Q             	4
+Fanin Node      	pc_2_.Q             	1
+Fanin Output    	wack.Q              	1
+END
+
+// Signal Name: pc_3_.C
+// Type: Node_reg
+BEGIN pc_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: pc_3_.AR
+// Type: Node_reg
+BEGIN pc_3_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_1_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_1_.D
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Output    	wreq.Q              	1
+END
+
+// Signal Name: u0lcdw_state_1_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_1_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_1_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_1_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_0_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_0_.D
+Fanin Number		3
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_12_.Q  	1
+Fanin Output    	wreq.Q              	1
+END
+
+// Signal Name: u0lcdw_state_0_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_0_.AP
+// Type: Node_reg
+BEGIN u0lcdw_state_0_.AP
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_4_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_4_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_3_.Q   	1
+END
+
+// Signal Name: u0lcdw_state_4_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_4_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_4_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_4_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_outData_cl_7_0_reg.D
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_7_0_reg.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_4_.Q   	1
+Fanin Node      	u0lcdw_outData_cl_7_0_reg.Q	2
+END
+
+// Signal Name: u0lcdw_outData_cl_7_0_reg.C
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_7_0_reg.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_outData_cl_7_0_reg.AR
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_7_0_reg.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_outData_cl_6_0_reg.D
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_6_0_reg.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_4_.Q   	1
+Fanin Node      	u0lcdw_outData_cl_6_0_reg.Q	2
+END
+
+// Signal Name: u0lcdw_outData_cl_6_0_reg.C
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_6_0_reg.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_outData_cl_6_0_reg.AR
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_6_0_reg.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_outData_cl_5_0_reg.D
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_5_0_reg.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_4_.Q   	1
+Fanin Node      	u0lcdw_outData_cl_5_0_reg.Q	2
+END
+
+// Signal Name: u0lcdw_outData_cl_5_0_reg.C
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_5_0_reg.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_outData_cl_5_0_reg.AR
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_5_0_reg.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_outData_cl_4_0_reg.D
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_4_0_reg.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_4_.Q   	1
+Fanin Node      	u0lcdw_outData_cl_4_0_reg.Q	2
+END
+
+// Signal Name: u0lcdw_outData_cl_4_0_reg.C
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_4_0_reg.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_outData_cl_4_0_reg.AR
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_4_0_reg.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_outData_cl_3_0_reg.D
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_3_0_reg.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_4_.Q   	1
+Fanin Node      	u0lcdw_outData_cl_3_0_reg.Q	2
+END
+
+// Signal Name: u0lcdw_outData_cl_3_0_reg.C
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_3_0_reg.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_outData_cl_3_0_reg.AR
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_3_0_reg.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_outData_cl_2_0_reg.D
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_2_0_reg.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_4_.Q   	1
+Fanin Node      	u0lcdw_outData_cl_2_0_reg.Q	2
+END
+
+// Signal Name: u0lcdw_outData_cl_2_0_reg.C
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_2_0_reg.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_outData_cl_2_0_reg.AR
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_2_0_reg.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_outData_cl_1_0_reg.D
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_1_0_reg.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_4_.Q   	1
+Fanin Node      	u0lcdw_outData_cl_1_0_reg.Q	2
+END
+
+// Signal Name: u0lcdw_outData_cl_1_0_reg.C
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_1_0_reg.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_outData_cl_1_0_reg.AR
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_1_0_reg.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_outData_cl_0_.D
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_0_.D
+Fanin Number		4
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+Fanin Node      	u0lcdw_state_0_.Q   	2
+Fanin Node      	u0lcdw_state_4_.Q   	1
+Fanin Node      	u0lcdw_outData_cl_0_.Q	2
+END
+
+// Signal Name: u0lcdw_outData_cl_0_.C
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_0_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_outData_cl_0_.AR
+// Type: Node_reg
+BEGIN u0lcdw_outData_cl_0_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_2_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_2_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_1_.Q   	1
+END
+
+// Signal Name: u0lcdw_state_2_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_2_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_2_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_2_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_3_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_3_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_5_.Q   	1
+END
+
+// Signal Name: u0lcdw_state_3_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_3_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_3_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_3_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_7_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_7_.D
+Fanin Number		3
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_busyFlag.Q   	1
+Fanin Node      	u0lcdw_state_6_.Q   	1
+Fanin Node      	u0lcdw_state_11_.Q  	1
+END
+
+// Signal Name: u0lcdw_state_7_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_7_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_7_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_7_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_10_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_10_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_9_.Q   	1
+END
+
+// Signal Name: u0lcdw_state_10_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_10_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_10_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_10_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_busyFlag.D
+// Type: Node_reg
+BEGIN u0lcdw_busyFlag.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Output    	lcd_data_7_.PIN     	1
+END
+
+// Signal Name: u0lcdw_busyFlag.C
+// Type: Node_reg
+BEGIN u0lcdw_busyFlag.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_busyFlag.CE
+// Type: Node_reg
+BEGIN u0lcdw_busyFlag.CE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_9_.Q   	1
+END
+
+// Signal Name: u0lcdw_busyFlag.AR
+// Type: Node_reg
+BEGIN u0lcdw_busyFlag.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_9_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_9_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_8_.Q   	1
+END
+
+// Signal Name: u0lcdw_state_9_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_9_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_9_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_9_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_5_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_5_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_2_.Q   	1
+END
+
+// Signal Name: u0lcdw_state_5_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_5_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_5_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_5_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_6_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_6_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_13_.Q  	1
+END
+
+// Signal Name: u0lcdw_state_6_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_6_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_6_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_6_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_8_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_8_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_7_.Q   	2
+END
+
+// Signal Name: u0lcdw_state_8_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_8_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_8_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_8_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_11_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_11_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_10_.Q  	1
+END
+
+// Signal Name: u0lcdw_state_11_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_11_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_11_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_11_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_12_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_12_.D
+Fanin Number		2
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_busyFlag.Q   	1
+Fanin Node      	u0lcdw_state_11_.Q  	1
+END
+
+// Signal Name: u0lcdw_state_12_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_12_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_12_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_12_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: u0lcdw_state_13_.D
+// Type: Node_reg
+BEGIN u0lcdw_state_13_.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		1
+Fanin Node      	u0lcdw_state_4_.Q   	1
+END
+
+// Signal Name: u0lcdw_state_13_.C
+// Type: Node_reg
+BEGIN u0lcdw_state_13_.C
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	clock.BLIF          	0
+END
+
+// Signal Name: u0lcdw_state_13_.AR
+// Type: Node_reg
+BEGIN u0lcdw_state_13_.AR
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	reset_n.BLIF        	0
+END
+
+// Signal Name: wreq_0
+// Type: Node
+BEGIN wreq_0
+Fanin Number		3
+Pterm Number		2
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	start_n.BLIF        	0
+Fanin Node      	pc_4_.Q             	1
+Fanin Node      	inst_state.Q        	2
+END
+
+// Design 'lcddemo' used clock signal list:
+CLOCK	clock
+

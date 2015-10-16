@@ -1,0 +1,42 @@
+#$ TOOL  ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE  Wed Jan 25 17:15:07 2012
+#$ MODULE  DIPsTo7SegmentDisplay
+#$ PINS 11 dipSwitches_n_3_:14 a:20 b:21 c:22 d:23 e:24 f:26 g:27
+ dipSwitches_n_2_:15 dipSwitches_n_1_:16 dipSwitches_n_0_:17
+.model dipsto7segmentdisplay 
+.inputs dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF \
+ dipSwitches_n_0_.BLIF
+.outputs a- b- c- d- e- f- g-
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF a-
+0100 1
+1011 1
+0010 1
+1110 1
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF b-
+1010 1
+0-00 1
+-001 1
+00-1 1
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF c-
+1101 1
+000- 1
+00-1 1
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF d-
+0101 1
+1110 1
+1011 1
+-000 1
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF e-
+101- 1
+-110 1
+1--0 1
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF f-
+0010 1
+110- 1
+1-00 1
+11-0 1
+.names dipSwitches_n_3_.BLIF dipSwitches_n_2_.BLIF dipSwitches_n_1_.BLIF dipSwitches_n_0_.BLIF g-
+1000 1
+0011 1
+111- 1
+.end

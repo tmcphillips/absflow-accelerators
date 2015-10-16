@@ -1,0 +1,196 @@
+%%% protect protected_file
+@E
+@ 
+#
+#
+#
+# Created by Synplify Verilog HDL Compiler version comp550rc, Build 030R from Synplicity, Inc.
+# Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+# Synthesis Netlist written on Thu Jan 19 16:11:05 2012
+#
+#
+#OPTIONS:"|-top|FourBitRippleCounter|-I|c:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\|-I|C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib|-v2001|-encrypt|-pro|-ll|2000|-compiler_compatible|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\bin\\c_ver.exe":1298500924
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib\\vlog\\hypermods.v":1298501016
+#CUR:"C:\\ispLEVER_Classic1_5\\ispcpld\\..\\cae_library\\synthesis\\verilog\\mach.v":1244664000
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\mach64_verilog_project.h":1326950180
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\fourbitripplecounter.v":1327018252
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\debouncer.v":1327015968
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\synchronousscaler.v":1327018034
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\ripplescaler.v":1327018055
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\ripplecounter.v":1327018060
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\tflipflop.v":1327018048
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\04_fourbitripplecounter\\ripplecounter.v":1327018060
+f "C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"; # file 0
+af .is_verilog 1;
+f "C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"; # file 1
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\mach64_verilog_project.h"; # file 2
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\fourbitripplecounter.v"; # file 3
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\debouncer.v"; # file 4
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\synchronousscaler.v"; # file 5
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\ripplescaler.v"; # file 6
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\ripplecounter.v"; # file 7
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\tflipflop.v"; # file 8
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\ripplecounter.v"; # file 9
+af .is_verilog 1;
+@E
+@ 
+ftell;
+@E@MR@c6::c(::R.dI	FsRM1$OFEsM#Fk1DONCns_#CRPsFHDoN;
+PHR3#sPCHoDFR
+4;N3PRHP#_CDsHF4oR;P
+NRs3FHNohl"CR1O$MEMsFF1k#OCNDs
+";N3PRDoNMuNNsl"#RA1Qa"N;
+PQRAan1R;P
+NR$3#M0_N0sVFl#N0HRxC"aAQ1.=dR
+";N3PR#_$MNV00FNsl0AR"Q=a17;R"
+@HR@66:::4d6g:4ROHMD	FOROHMD	FO;H
+NR03sDs_FHNoMl"CRHDMOF"O	;
+
+
+
+@FR@n6:::4dnj:.R0FkOODF	FROkCM0s9r6;H
+NR03sDs_FHNoMl"CRFOk0D	FO"b;
+R6@@::4j44j:jc:.RPHMR4kM_OHMD	FOR4kM_OHMD	FOROHMD	FO;R
+b@:@j4::44R:.0CskRk0sCsR0k
+C;b@R@j::44::4.NRVDR#CV#NDCNRVD;#C
+@bR@46:4.:4::44.NdR8O8RF0kMC4s_rj6:9FROkCM0sr_469:jRkOFMs0Crj6:9sR0k
+C;b@R@6j:4:44:jR:n8RVVOMFk0rCs69:jRkOFMs0Crj6:9FROkCM0sr_469:jR4kM_OHMD	FO;H
+NR03sDs_FHNoMl"CROMFk0"Cs;-
+y--------------------------------- 
+@
+ftell;
+@E@MR@cc::c(::R46I	FsRL7CFOkMCPsRCDsHF
+o;N3PRHC#PsFHDo;R4
+RNP3_H#PHCsDRFo4N;
+PFR3shHoNRlC"L7CFOkMC;s"
+@FR@6c:::4d6(:.RL8CFOkMCH81oDMNRL8CFOkMCH81oDMN;H
+NR03sDs_FHNoMl"CR8FCLkCMO8o1HM"ND;
+
+
+
+@HR@nc:::4dn4:.RIsN1MHoNsDRNHI1oDMN;H
+NR03sDs_FHNoMl"CRs1NIHNoMD
+";
+@HR@(c:::4d(6:.Rl#NbMDHoFBDO#	RNDlbHBMoD	FO;H
+NR03sDs_FHNoMl"CR#bNlDoHMBODF	
+";b@R@j::44::4.sR0k0CRsRkC0Csk;R
+b@:@j4::44R:.V#NDCNRVDR#CV#NDCb;
+Rc@@::4.4.:4:8nRVDVRN1#0NDlbCNRD#N01lCbDRIsN1MHoN#DRNDlbHBMoD	FO;H
+NR03sDs_FHNoMl"CRD0N#1bNlD;C"
+@bR@4c:6.:.::46cNcRMR8P8FCLkCMO8o1HM_ND.CR8LMFkO1C8HNoMDR_.s1NIHNoMDNRD#N01lCbD;R
+b@:@c44.:::4.nVR8VCR8LMFkO1C8HNoMDCR8LMFkO1C8HNoMDCR8LMFkO1C8HNoMDR_.#bNlDoHMBODF	N;
+HsR30FD_sMHoNRlC"L8CFOkMCH81oDMN"y;
+---------------------------------@-
+ 
+
+
+
+ftell;
+@E@MR@cU::c(::R46I	FsRDawHDbwFPbRCDsHF
+o;N3PRHC#PsFHDo;R4
+RNP3_H#PHCsDRFo4N;
+PFR3shHoNRlC"DawHDbwF;b"
+@HR@6U:::4.6c:4R	ODR	OD;H
+NR03sDs_FHNoMl"CRO"D	;
+
+
+
+@HR@nU:::4.n.:4R00R;H
+NR03sDs_FHNoMl"CR0
+";
+@FR@(U:::4.(.:4RJJR;H
+NR03sDs_FHNoMl"CRJ
+";b@R@Uj:4::4j4.j:jMRHPMRk4D_O	MRk4D_O	DRO	b;
+RU@@::4444c:46:4RPHMR.J_R.J_R
+J;b@R@j::44::4.sR0k0CRsRkC0Csk;R
+b@:@j4::44R:.V#NDCNRVDR#CV#NDCb;
+RU@@::4j4j:4:8nRVRVCJRRJJR_.k_M4ORD	0N;
+HsR30FD_sMHoNRlC";J"
+-y---------------------------------
+
+@ 
+ftell;
+@E@MR@n(::n(::R4gI	FsRb)HbBDCF0kMCcs_#CRPsFHDoN;
+PHR3#sPCHoDFR
+4;N3PRHP#_CDsHF4oR;P
+NRs3FHNohl"CR)bHbDFCBkCM0s
+";N3PRDoNMuNNsl"#R1 QZ"N;
+PQR1Zc R;P
+NR$3#M0_N0sVFl#N0HRxC"Z1Q .=dR
+";N3PR#_$MNV00FNsl01R"Q=Z 7;R"
+@HR@((:::4.(d:4RRkbk
+b;N3HRs_0DFosHMCNlRb"k"
+;
+
+@FR@U(:::.cUU:.RDPNkdCr:Rj9PkNDCr_4dP9,NCDk_.4r9N,PD_kC49r4,DPNk4C_r;j9
+RNH3Ds0_HFsolMNCPR"NCDk"s;
+R(@@::44444:46:4RsIF	wRaDwHbDRFbPHCsDRFokVj0VO
+SDk	=b0
+S=MoCL4D	\\rj90\3s
+kCSPJ=NCDk_j4r9s;
+R(@@::.4d4:.:R44I	FsRDawHDbwFPbRCDsHFooRCDML	r4\j\\93_QQjO
+SDP	=NCDk_j4r90
+S=MoCL4D	\\rj90\3s
+kCSPJ=NCDk_44r9N;
+HsR30FD_sMHoNRlC"_QQj
+";s@R@(4:.:.d:44:4RsIF	wRaDwHbDRFbPHCsDRFooLCMD\	4r94\\Q3Q_Sj
+O=D	PkNDCr_44S9
+0C=oM	LD4j\r\39\0Csk
+=SJPkNDCr_4.
+9;N3HRs_0DFosHMCNlRQ"Q_;j"
+@sR@.(:4::d.44:4FRIsa	RwbDHwbDFRsPCHoDFRMoCL4D	\\r.9Q\3Q
+_jS	OD=DPNk4C_r
+.9So0=CDML	r4\j\\93k0sCJ
+S=DPNk4C_r;d9
+RNH3Ds0_HFsolMNCQR"Q"_j;R
+b@:@j4::44R:.0CskRMoCL4D	\\rj90\3sRkCoLCMD\	4r9j\\s30k
+C;b@R@j::44::4.NRVDR#CV#NDCNRVD;#C
+-y---------------------------------
+
+@ 
+ftell;
+@E@MR@nd::n(::R.nI	FsRkwFs0AH)bHbDFCBkCM0sCRPsFHDoN;
+PHR3#sPCHoDFR
+4;N3PRHP#_CDsHF4oR;P
+NRs3FHNohl"CRwsFkA)H0HDbbCkBFMs0C"
+;
+
+@HR@(d:::4.(4:.RC#0b0Ak0RFM#b0CA0k0F
+M;N3HRs_0DFosHMCNlR0"#CkbA0M0F"N;
+HFRDOuR"4;U"
+@HR@Ud:::4.U.:.RCFMvB]xD	FORCFMvB]xD	FO;H
+NR03sDs_FHNoMl"CRFvMC]DxBF"O	;H
+NRODFR4"ug
+";
+@FR@gd:::4gg6:.RkOFMs0Crjd:9FROkCM0s:rdj
+9;N3HRs_0DFosHMCNlRF"OkCM0s
+";NDHRF"ORu,4cu,46u,4nu"4(;R
+s@:@d4d6:46:4:RdcI	FsRM1$OFEsM#Fk1DONCns_#CRPsFHDo4RksS#
+HDMOF=O	FvMC]DxBF
+O	S0FkOODF	M=FCxi]BODF	N;
+HQRAan1R;H
+NR$3#M0_N0sVFl#N0HRxC"aAQ1.=d"N;
+H#R3$NM_0F0Vs0lNRQ"Aa71="s;
+Rd@@::.j4.4:jd:4RsIF	CR7LMFkORCsPHCsDRFok
+48SL8CFOkMCH81oDMN=L8CFOkMC081CSb
+s1NIHNoMD0=#CkbA0M0F
+NS#lHbDMDoBF=O	FiMC]DxBF;O	
+@sR@.d:n(:.::.ndIjRFRs	)bHbDFCBkCM0s#_cRsPCHoDFRsk4Ok
+SbC=8LMFkO1C80
+CbSDPNkdCr:=j9OMFk0rCsd9:j;H
+NRZ1Q ;Rc
+RNH3M#$_0N0VlFsNH0#x"CR1 QZ="d.;H
+NR$3#M0_N0sVFlRN0"Z1Q "=7;R
+b@:@j4::44R:.0CskRk0sCsR0k
+C;b@R@j::44::4.NRVDR#CV#NDCNRVD;#C
+
+C;

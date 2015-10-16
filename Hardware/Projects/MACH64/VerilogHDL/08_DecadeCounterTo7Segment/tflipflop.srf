@@ -1,0 +1,59 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 07_bcdregisterto7segment
+
+#Wed Jan 25 18:30:52 2012
+
+$ Start of Compile
+#Wed Jan 25 18:30:52 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\decadecountertosevensegment.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\decadecountertosevensegment.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\ripplescaler.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\ripplescaler.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\ripplecounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\ripplecounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\tflipflop.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\decadecountertosevensegment.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\buttonpressdetector.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\decadecountertosevensegment.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\updowncounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\decadecountertosevensegment.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\hexdigittosevensegment.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\decadecountertosevensegment.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\jkflipflop.v"
+Verilog syntax check successful!
+Selecting top level module TFlipFlop
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jan 25 18:30:52 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\synlog\tflipflop_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             1 use
+IBUF            2 uses
+OBUF            1 use
+INV             1 use
+XOR2            1 use
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jan 25 18:30:53 2012
+
+###########################################################]

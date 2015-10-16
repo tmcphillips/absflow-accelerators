@@ -1,0 +1,16 @@
+MODULE mach64_kit_push_01
+
+TITLE 'Single push button LED program'
+
+
+DECLARATIONS
+
+	pb3 pin 20;
+	led pin 21 istype 'com';
+
+EQUATIONS
+
+	led = !pb3;
+
+END
+

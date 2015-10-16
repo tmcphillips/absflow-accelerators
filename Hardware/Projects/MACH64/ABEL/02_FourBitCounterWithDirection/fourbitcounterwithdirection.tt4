@@ -1,0 +1,25 @@
+#$ TOOL   ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE   Sun Nov 27 16:30:00 2011
+#$ JEDECFILE   fourbitcounter
+#$ MODULE   FourBitCounter
+#$ TITLE   Four bit counter with manual clock and reset
+#$ PINS 7 clock reset direction q3 q2 q1 q0
+.type f
+.i 6
+.o 13
+.ilb clock reset q2.Q q1.Q q0.Q direction
+.ob q3.T q3.C q3.AR q2.D.X1 q2.D.X2 q2.C q2.AR q1.D q1.C q1.AR q0.D q0.C q0.AR
+.phase 1111111111111
+.p 11
+--0000 1000000000000
+--1111 1000000000000
+0----- 0100010010010
+-0---- 0010001001001
+---000 0001000100000
+---111 0001000000000
+--1--- 0000100000000
+---110 0000000100000
+---101 0000000100000
+---011 0000000100000
+----0- 0000000000100
+.end

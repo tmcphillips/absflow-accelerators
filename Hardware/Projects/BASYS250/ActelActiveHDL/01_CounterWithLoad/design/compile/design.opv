@@ -1,0 +1,1 @@
+-work design -lc C:/Users/tmcphillips/Designs/Projects/BASYS250/VerilogHDL/01_CounterWithLoad/library.cfg -fl C:/Users/tmcphillips/Designs/Projects/BASYS250/VerilogHDL/01_CounterWithLoad/design/projlib.cfg -o C:/Users/tmcphillips/Designs/Projects/BASYS250/VerilogHDL/01_CounterWithLoad/design/compile -l "design" -v2k   -dbg

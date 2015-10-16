@@ -1,0 +1,76 @@
+%%% protect protected_file
+@E
+@ 
+#
+#
+#
+# Created by Synplify Verilog HDL Compiler version comp550rc, Build 030R from Synplicity, Inc.
+# Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+# Synthesis Netlist written on Wed Jan 25 18:29:15 2012
+#
+#
+#OPTIONS:"|-top|JKFlipFlop|-I|c:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\|-I|C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib|-v2001|-encrypt|-pro|-ll|2000|-compiler_compatible|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\bin\\c_ver.exe":1298500924
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib\\vlog\\hypermods.v":1298501016
+#CUR:"C:\\ispLEVER_Classic1_5\\ispcpld\\..\\cae_library\\synthesis\\verilog\\mach.v":1244664000
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\mach64_verilog_project.h":1327540866
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\decadecountertosevensegment.v":1327544899
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\ripplescaler.v":1327018055
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\ripplecounter.v":1327261824
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\tflipflop.v":1327018048
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\buttonpressdetector.v":1327346088
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\updowncounter.v":1327346034
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\hexdigittosevensegment.v":1327377013
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\07_bcdregisterto7segment\\jkflipflop.v":1327544942
+f "C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"; # file 0
+af .is_verilog 1;
+f "C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"; # file 1
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\mach64_verilog_project.h"; # file 2
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\decadecountertosevensegment.v"; # file 3
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\ripplescaler.v"; # file 4
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\ripplecounter.v"; # file 5
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\tflipflop.v"; # file 6
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\buttonpressdetector.v"; # file 7
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\updowncounter.v"; # file 8
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\hexdigittosevensegment.v"; # file 9
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\07_bcdregisterto7segment\jkflipflop.v"; # file 10
+af .is_verilog 1;
+@E
+@ 
+ftell;
+@E@MR@:4j6::(6n:4RsIF	iRKwbDHwbDFRsPCHoDF;P
+NR#3HPHCsDRFo4N;
+PHR3#C_PsFHDo;R4
+RNP3HFsolhNCKR"iHwDbFwDb
+";
+@HR@:4jn.:4:4n:.RR[[N;
+HsR30FD_sMHoNRlC";["
+@HR@:4j(.:4:4(:.RR		N;
+HsR30FD_sMHoNRlC";	"
+@HR@:4jU.:4:4U:nDROFRO	OODF	N;
+HsR30FD_sMHoNRlC"FODO;	"
+@FR@:4jg.:4:4g:.RRJJN;
+HsR30FD_sMHoNRlC";J"
+@FR@:4j44j:dj:4:R4cMMJRJN;
+HsR30FD_sMHoNRlC""MJ;R
+b@j@4::4d44c:d6:4RPHMRRMJMJJR;R
+b@:@j4::44R:.0CskRk0sCsR0k
+C;b@R@j::44::4.NRVDR#CV#NDCNRVD;#C
+@bR@:4j4g(:::4(4HdRMkPRM	4_rj4:9MRk4r_	49:jR	[,;R
+b@j@4::4gdg:4:N(RMR8PJJ6R6RR[k_M4	9rj;R
+b@j@4::.4d4:.:N(RMR8PJJnRnRR	k_M4	9r4;R
+b@j@4::4(.(:4:D6RN#0sRJJRRRMJ[nRJR;J6
+RNH3Ds0_HFsolMNCJR""C;
+;
+
+
+

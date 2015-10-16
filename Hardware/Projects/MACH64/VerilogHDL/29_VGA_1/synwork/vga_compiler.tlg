@@ -1,0 +1,31 @@
+Selecting top level module vga
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":1:7:1:9|Synthesizing module vga
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Pruning Register newLine 
+
+@W: CL190 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Optimizing register bit video[1] to a constant 0
+@W: CL190 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Optimizing register bit video[2] to a constant 0
+@W: CL190 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Optimizing register bit video[3] to a constant 0
+@W: CL190 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Optimizing register bit video[5] to a constant 0
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Pruning Register bit 5 of video[5:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Pruning Register bit 3 of video[5:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Pruning Register bit 2 of video[5:0] 
+
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Pruning Register bit 1 of video[5:0] 
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Trying to extract state machine for register vState
+Extracted state machine for register vState
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Trying to extract state machine for register hState
+Extracted state machine for register hState
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11

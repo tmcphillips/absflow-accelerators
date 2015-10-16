@@ -1,0 +1,19 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Sat Nov 26 10:53:58 2011
+#$ TITLE Four push button LED program
+#$ MODULE mach64_kit_push_02
+#$ JEDECFILE mach64_kit_push_02
+#$ PINS 8 pb0:21 pb1:22 pb2:23 pb3:24 led0:31 led1:32 led2:33 led3:34
+
+.model mach64_kit_push_02
+.inputs pb0.BLIF pb1.BLIF pb2.BLIF pb3.BLIF
+.outputs led0 led1 led2 led3
+.names pb0.BLIF led0
+0 1
+.names pb1.BLIF led1
+0 1
+.names pb2.BLIF led2
+0 1
+.names pb3.BLIF led3
+0 1
+.end

@@ -1,0 +1,417 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:18:22 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE bcdcounterto7segment
+#$ PINS 10 upButton:18 downButton:43 oneMHzClock:19 a:20 b:21 c:22 d:23 e:24 f:26 g:27
+#$ NODES 41 clockScaler>inclock'co'  clockScaler>outclock'co,o'  \
+#  debouncedUp>rawSignal'co'  debouncedUp>samplingClock'co'  debouncedUp>debounced'co,o'  \
+#  debouncedDown>rawSignal'co'  debouncedDown>samplingClock'co'  \
+#  debouncedDown>debounced'co,o'  bcdCounter>direction'co'  bcdCounter>m0'co'  bcdCounter>m1'co'  \
+#  bcdCounter>m2'co'  bcdCounter>m3'co'  bcdCounter>step'co'  bcdCounter>d0'co,o'  \
+#  bcdCounter>d1'co,o'  bcdCounter>d2'co,o'  bcdCounter>d3'co,o'  digitToSegment>d0'co'  \
+#  digitToSegment>d1'co'  digitToSegment>d2'co'  digitToSegment>d3'co'  digitToSegment>a'co,o'  \
+#  digitToSegment>b'co,o'  digitToSegment>c'co,o'  digitToSegment>d'co,o'  digitToSegment>e'co,o'  \
+#  digitToSegment>f'co,o'  digitToSegment>g'co,o'  clockScaler/s9 clockScaler/s8 \
+#  clockScaler/s7 clockScaler/s6 clockScaler/s5 clockScaler/s4 clockScaler/s3 \
+#  clockScaler/s2 clockScaler/s1 clockScaler/s0 debouncedUp/lastSample \
+#  debouncedDown/lastSample
+.model bcdcounterto7segment
+.inputs oneMHzClock.BLIF clockScaler>outclock.BLIF upButton.BLIF \
+downButton.BLIF debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+bcdCounter>d0.BLIF bcdCounter>d1.BLIF bcdCounter>d2.BLIF bcdCounter>d3.BLIF \
+digitToSegment>a.BLIF digitToSegment>b.BLIF digitToSegment>c.BLIF \
+digitToSegment>d.BLIF digitToSegment>e.BLIF digitToSegment>f.BLIF \
+digitToSegment>g.BLIF clockScaler>inclock.BLIF clockScaler/s9.BLIF \
+clockScaler/s8.BLIF clockScaler/s7.BLIF clockScaler/s6.BLIF \
+clockScaler/s5.BLIF clockScaler/s4.BLIF clockScaler/s3.BLIF \
+clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF \
+debouncedUp>rawSignal.BLIF debouncedUp>samplingClock.BLIF \
+debouncedUp/lastSample.BLIF debouncedDown>rawSignal.BLIF \
+debouncedDown>samplingClock.BLIF debouncedDown/lastSample.BLIF \
+bcdCounter>direction.BLIF bcdCounter>m0.BLIF bcdCounter>m1.BLIF \
+bcdCounter>m2.BLIF bcdCounter>m3.BLIF bcdCounter>step.BLIF \
+digitToSegment>d0.BLIF digitToSegment>d1.BLIF digitToSegment>d2.BLIF \
+digitToSegment>d3.BLIF
+.outputs clockScaler>inclock debouncedUp>rawSignal debouncedUp>samplingClock \
+debouncedDown>rawSignal debouncedDown>samplingClock bcdCounter>direction \
+bcdCounter>m0 bcdCounter>m1 bcdCounter>m2 bcdCounter>m3 bcdCounter>step \
+digitToSegment>d0 digitToSegment>d1 digitToSegment>d2 digitToSegment>d3 a b c \
+d e f g clockScaler>outclock clockScaler/s9.REG clockScaler/s9.C \
+clockScaler/s8.REG clockScaler/s8.C clockScaler/s7.REG clockScaler/s7.C \
+clockScaler/s6.REG clockScaler/s6.C clockScaler/s5.REG clockScaler/s5.C \
+clockScaler/s4.REG clockScaler/s4.C clockScaler/s3.REG clockScaler/s3.C \
+clockScaler/s2.REG clockScaler/s2.C clockScaler/s1.REG clockScaler/s1.C \
+clockScaler/s0.REG clockScaler/s0.C debouncedUp>debounced.REG \
+debouncedUp>debounced.C debouncedUp/lastSample.REG debouncedUp/lastSample.C \
+debouncedDown>debounced.REG debouncedDown>debounced.C \
+debouncedDown/lastSample.REG debouncedDown/lastSample.C bcdCounter>d0.REG \
+bcdCounter>d0.C bcdCounter>d1.REG bcdCounter>d1.C bcdCounter>d2.REG \
+bcdCounter>d2.C bcdCounter>d3.REG bcdCounter>d3.C digitToSegment>a \
+digitToSegment>b digitToSegment>c digitToSegment>d digitToSegment>e \
+digitToSegment>f digitToSegment>g
+\
+
+.subckt tenbitscaler inclock.BLIF=clockScaler>inclock.BLIF s9.BLIF=clockScaler/s9.BLIF \
+ s8.BLIF=clockScaler/s8.BLIF s7.BLIF=clockScaler/s7.BLIF s6.BLIF=clockScaler/s6.BLIF \
+ s5.BLIF=clockScaler/s5.BLIF s4.BLIF=clockScaler/s4.BLIF s3.BLIF=clockScaler/s3.BLIF \
+ s2.BLIF=clockScaler/s2.BLIF s1.BLIF=clockScaler/s1.BLIF s0.BLIF=clockScaler/s0.BLIF \
+ outclock=clockScaler>outclock s9.REG=clockScaler/s9.REG s9.C=clockScaler/s9.C s8.REG=clockScaler/s8.REG \
+ s8.C=clockScaler/s8.C s7.REG=clockScaler/s7.REG s7.C=clockScaler/s7.C s6.REG=clockScaler/s6.REG \
+ s6.C=clockScaler/s6.C s5.REG=clockScaler/s5.REG s5.C=clockScaler/s5.C s4.REG=clockScaler/s4.REG \
+ s4.C=clockScaler/s4.C s3.REG=clockScaler/s3.REG s3.C=clockScaler/s3.C s2.REG=clockScaler/s2.REG \
+ s2.C=clockScaler/s2.C s1.REG=clockScaler/s1.REG s1.C=clockScaler/s1.C s0.REG=clockScaler/s0.REG \
+ s0.C=clockScaler/s0.C
+\
+
+.subckt debouncer rawSignal.BLIF=debouncedUp>rawSignal.BLIF samplingClock.BLIF=debouncedUp>samplingClock.BLIF \
+ lastSample.BLIF=debouncedUp/lastSample.BLIF debounced.REG=debouncedUp>debounced.REG \
+ debounced.C=debouncedUp>debounced.C lastSample.REG=debouncedUp/lastSample.REG lastSample.C=debouncedUp/lastSample.C \
+
+\
+
+.subckt debouncer rawSignal.BLIF=debouncedDown>rawSignal.BLIF samplingClock.BLIF=debouncedDown>samplingClock.BLIF \
+ lastSample.BLIF=debouncedDown/lastSample.BLIF debounced.REG=debouncedDown>debounced.REG \
+ debounced.C=debouncedDown>debounced.C lastSample.REG=debouncedDown/lastSample.REG \
+ lastSample.C=debouncedDown/lastSample.C
+\
+
+.subckt bcdupdowncounter direction.BLIF=bcdCounter>direction.BLIF m0.BLIF=bcdCounter>m0.BLIF \
+ m1.BLIF=bcdCounter>m1.BLIF m2.BLIF=bcdCounter>m2.BLIF m3.BLIF=bcdCounter>m3.BLIF \
+ step.BLIF=bcdCounter>step.BLIF d0.BLIF=bcdCounter>d0.BLIF d1.BLIF=bcdCounter>d1.BLIF \
+ d2.BLIF=bcdCounter>d2.BLIF d3.BLIF=bcdCounter>d3.BLIF d0.REG=bcdCounter>d0.REG d0.C=bcdCounter>d0.C \
+ d1.REG=bcdCounter>d1.REG d1.C=bcdCounter>d1.C d2.REG=bcdCounter>d2.REG d2.C=bcdCounter>d2.C \
+ d3.REG=bcdCounter>d3.REG d3.C=bcdCounter>d3.C
+\
+
+.subckt bcdtosevensegment d0.BLIF=digitToSegment>d0.BLIF d1.BLIF=digitToSegment>d1.BLIF \
+ d2.BLIF=digitToSegment>d2.BLIF d3.BLIF=digitToSegment>d3.BLIF a=digitToSegment>a \
+ b=digitToSegment>b c=digitToSegment>c d=digitToSegment>d e=digitToSegment>e f=digitToSegment>f \
+ g=digitToSegment>g
+.names upButton.BLIF debouncedUp>rawSignal
+0 1
+.names downButton.BLIF debouncedDown>rawSignal
+0 1
+.names upButton.BLIF bcdCounter>direction
+0 1
+.names bcdCounter>m0
+ 1
+.names bcdCounter>m1
+.names bcdCounter>m2
+.names bcdCounter>m3
+ 1
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF bcdCounter>step
+1- 1
+-1 1
+.names oneMHzClock.BLIF clockScaler>inclock
+1 1
+0 0
+.names clockScaler>outclock.BLIF debouncedUp>samplingClock
+1 1
+0 0
+.names clockScaler>outclock.BLIF debouncedDown>samplingClock
+1 1
+0 0
+.names bcdCounter>d0.BLIF digitToSegment>d0
+1 1
+0 0
+.names bcdCounter>d1.BLIF digitToSegment>d1
+1 1
+0 0
+.names bcdCounter>d2.BLIF digitToSegment>d2
+1 1
+0 0
+.names bcdCounter>d3.BLIF digitToSegment>d3
+1 1
+0 0
+.names digitToSegment>a.BLIF a
+1 1
+0 0
+.names digitToSegment>b.BLIF b
+1 1
+0 0
+.names digitToSegment>c.BLIF c
+1 1
+0 0
+.names digitToSegment>d.BLIF d
+1 1
+0 0
+.names digitToSegment>e.BLIF e
+1 1
+0 0
+.names digitToSegment>f.BLIF f
+1 1
+0 0
+.names digitToSegment>g.BLIF g
+1 1
+0 0
+.end
+.model tenbitscaler
+.inputs inclock.BLIF s9.BLIF s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF \
+s2.BLIF s1.BLIF s0.BLIF
+.outputs outclock s9.C s8.C s7.C s6.C s5.C s4.C s3.C s2.C s1.C s0.C s9.REG \
+s8.REG s7.REG s6.REG s5.REG s4.REG s3.REG s2.REG s1.REG s0.REG
+.names s9.BLIF s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF \
+s0.BLIF s9.REG
+10-------- 1
+1-0------- 1
+1--0------ 1
+1---0----- 1
+1----0---- 1
+1-----0--- 1
+1------0-- 1
+1-------0- 1
+1--------0 1
+0111111111 1
+.names s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF \
+s8.REG
+10------- 1
+1-0------ 1
+1--0----- 1
+1---0---- 1
+1----0--- 1
+1-----0-- 1
+1------0- 1
+1-------0 1
+011111111 1
+.names s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s7.REG
+10------ 1
+1-0----- 1
+1--0---- 1
+1---0--- 1
+1----0-- 1
+1-----0- 1
+1------0 1
+01111111 1
+.names s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s6.REG
+10----- 1
+1-0---- 1
+1--0--- 1
+1---0-- 1
+1----0- 1
+1-----0 1
+0111111 1
+.names s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s5.REG
+10---- 1
+1-0--- 1
+1--0-- 1
+1---0- 1
+1----0 1
+011111 1
+.names s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s4.REG
+10--- 1
+1-0-- 1
+1--0- 1
+1---0 1
+01111 1
+.names s3.BLIF s2.BLIF s1.BLIF s0.BLIF s3.REG
+10-- 1
+1-0- 1
+1--0 1
+0111 1
+.names s2.BLIF s1.BLIF s0.BLIF s2.REG
+10- 1
+1-0 1
+011 1
+.names s1.BLIF s0.BLIF s1.REG
+01 1
+10 1
+.names s0.BLIF s0.REG
+0 1
+.names s9.BLIF outclock
+1 1
+0 0
+.names inclock.BLIF s9.C
+1 1
+0 0
+.names inclock.BLIF s8.C
+1 1
+0 0
+.names inclock.BLIF s7.C
+1 1
+0 0
+.names inclock.BLIF s6.C
+1 1
+0 0
+.names inclock.BLIF s5.C
+1 1
+0 0
+.names inclock.BLIF s4.C
+1 1
+0 0
+.names inclock.BLIF s3.C
+1 1
+0 0
+.names inclock.BLIF s2.C
+1 1
+0 0
+.names inclock.BLIF s1.C
+1 1
+0 0
+.names inclock.BLIF s0.C
+1 1
+0 0
+.end
+.model debouncer
+.inputs samplingClock.BLIF rawSignal.BLIF lastSample.BLIF
+.outputs lastSample.C lastSample.REG debounced.C debounced.REG
+.names rawSignal.BLIF lastSample.BLIF debounced.REG
+11 1
+.names samplingClock.BLIF lastSample.C
+1 1
+0 0
+.names rawSignal.BLIF lastSample.REG
+1 1
+0 0
+.names samplingClock.BLIF debounced.C
+1 1
+0 0
+.end
+.model bcdupdowncounter
+.inputs step.BLIF d3.BLIF d2.BLIF d1.BLIF d0.BLIF m3.BLIF m2.BLIF m1.BLIF \
+m0.BLIF direction.BLIF
+.outputs d3.C d2.C d1.C d0.C d3.REG d2.REG d1.REG d0.REG
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF m3.BLIF m2.BLIF m1.BLIF m0.BLIF \
+direction.BLIF d3.REG
+11------0 1
+1-1-----0 1
+1--1----0 1
+10--11--1 1
+01111---1 1
+100-1-1-1 1
+00001---0 1
+110-111-1 1
+10001--11 1
+110011-11 1
+10101-111 1
+111011111 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF m3.BLIF m2.BLIF m1.BLIF m0.BLIF \
+direction.BLIF d2.REG
+-11-----0 1
+-1-1----0 1
+010-1---1 1
+01-01---1 1
+1000----0 1
+00111---1 1
+0011-1--1 1
+010--11-1 1
+0000-1--0 1
+101111--1 1
+110-111-1 1
+0100-1-11 1
+110011-11 1
+0110-1111 1
+111011111 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF m3.BLIF m2.BLIF m1.BLIF m0.BLIF \
+direction.BLIF d1.REG
+--11----0 1
+1-00----0 1
+-100----0 1
+0-011---1 1
+0-101---1 1
+0001-1--1 1
+0010-1--1 1
+0001--1-1 1
+0000--1-0 1
+100111--1 1
+101011--1 1
+10011-1-1 1
+0101-11-1 1
+0010--111 1
+1101111-1 1
+10101-111 1
+0110-1111 1
+111011111 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF m3.BLIF m2.BLIF m1.BLIF m0.BLIF \
+direction.BLIF d0.REG
+1--0----0 1
+-1-0----0 1
+--10----0 1
+0--01---1 1
+00-0-1--1 1
+10-011--1 1
+0000--1-1 1
+0000---11 1
+0000---10 1
+10001-1-1 1
+0100-11-1 1
+10001--11 1
+0100-1-11 1
+0010--111 1
+1100111-1 1
+110011-11 1
+10101-111 1
+0110-1111 1
+111011111 1
+.names step.BLIF d3.C
+1 1
+0 0
+.names step.BLIF d2.C
+1 1
+0 0
+.names step.BLIF d1.C
+1 1
+0 0
+.names step.BLIF d0.C
+1 1
+0 0
+.end
+.model bcdtosevensegment
+.inputs d0.BLIF d1.BLIF d2.BLIF d3.BLIF
+.outputs a b c d e f g
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF a
+0111 1
+0011 1
+0101 1
+1001 1
+0110 1
+0010 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF b
+0111 1
+0011 1
+1001 1
+0001 1
+0010 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF c
+0111 1
+0011 1
+0101 1
+1001 1
+0001 1
+0110 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF d
+0011 1
+0101 1
+1001 1
+0110 1
+0010 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF e
+0110 1
+0010 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF f
+0101 1
+1001 1
+0110 1
+0100 1
+1000 1
+0000 1
+.names d3.BLIF d2.BLIF d1.BLIF d0.BLIF g
+0011 1
+0101 1
+1001 1
+0110 1
+0010 1
+0100 1
+1000 1
+.end

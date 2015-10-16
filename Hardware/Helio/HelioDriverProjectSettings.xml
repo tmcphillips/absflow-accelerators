@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="C++ Source File">
+
+</language>
+<language name="C Source File">
+<includepath>/home/tmcphillips/yocto/build/tmp/work/socfpga_cyclone5-poky-linux-gnueabi/linux-altera-3.7-r1/linux-altera-3.7/arch/arm/include</includepath>
+<includepath>/home/tmcphillips/yocto/build/tmp/work/socfpga_cyclone5-poky-linux-gnueabi/linux-altera-3.7-r1/linux-altera-3.7/include/</includepath>
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+</cdtprojectproperties>

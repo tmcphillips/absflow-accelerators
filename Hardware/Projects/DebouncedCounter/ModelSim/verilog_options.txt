@@ -1,0 +1,10 @@
++incdir+C:/Users/tmcphillips/Designs/Projects/01_FourBitCounterWithLoad/Source
++incdir+C:/Users/tmcphillips/Designs/Libraries/std_ovl
++incdir+C:/Users/tmcphillips/Designs/Libraries/ovm-2.1.2/src
+-y C:/Users/tmcphillips/Designs/Libraries/std_ovl
+-y C:/Users/tmcphillips/Designs/Libraries/ovm-2.1.2/src
++libext+.v
++libext+.sv
++define+OVL_VERILOG
++define+OVL_ASSERT_ON
++define+ASSERTIONS_ON

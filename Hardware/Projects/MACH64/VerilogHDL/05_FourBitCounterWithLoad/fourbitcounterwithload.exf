@@ -1,0 +1,322 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// -------------------------------------------------------------------------------------------------
+      Port          1      dipSwitches_n[3:0]               dipSwitches_n                  3          4            -1
+      Port          2      counter[3:0]                  counter                  3          4            -1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      dipSwitches_n_3_               dipSwitches_n[3]                       1            0            
+        Port      dipSwitches_n_2_               dipSwitches_n[2]                       1            1            
+        Port      dipSwitches_n_1_               dipSwitches_n[1]                       1            2            
+        Port      dipSwitches_n_0_               dipSwitches_n[0]                       1            3            
+        Port      counter_3_                  counter[3]                       2            0            
+        Port      counter_2_                  counter[2]                       2            1            
+        Port      counter_1_                  counter[1]                       2            2            
+        Port      counter_0_                  counter[0]                       2            3            
+End
+Section Cross Reference File
+Design 'FourBitCounterWithLoad' created Mon Jan 23 11:19:57 2012
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst         u2bpd_state_0_                            u2bpd.state[0]
+   Inst         u2bpd_state_1_                            u2bpd.state[1]
+   Inst         u2bpd_state_2_                            u2bpd.state[2]
+   Inst         u3bpd_state_0_                            u3bpd.state[0]
+   Inst         u3bpd_state_1_                            u3bpd.state[1]
+   Inst         u3bpd_state_2_                            u3bpd.state[2]
+   Inst         u4udc_state_0_                            u4udc.state[0]
+   Inst         u4udc_state_1_                            u4udc.state[1]
+   Inst     u4udc_counter_1_0_                        u4udc.counter_1[0]
+   Inst     u4udc_counter_1_1_                        u4udc.counter_1[1]
+   Inst     u4udc_counter_1_2_                        u4udc.counter_1[2]
+   Inst     u4udc_counter_1_3_                        u4udc.counter_1[3]
+   Inst   u1rs_u1rc_genblk1_8__uitff_q              u1rs.u1rc.genblk1[8].uitff.q
+   Inst   u1rs_u1rc_genblk1_3__uitff_q              u1rs.u1rc.genblk1[3].uitff.q
+   Inst      u1rs_u1rc_u0tff_q                         u1rs.u1rc.u0tff.q
+   Inst   u1rs_u1rc_genblk1_1__uitff_q              u1rs.u1rc.genblk1[1].uitff.q
+   Inst   u1rs_u1rc_genblk1_2__uitff_q              u1rs.u1rc.genblk1[2].uitff.q
+   Inst   u1rs_u1rc_genblk1_5__uitff_q              u1rs.u1rc.genblk1[5].uitff.q
+   Inst   u1rs_u1rc_genblk1_4__uitff_q              u1rs.u1rc.genblk1[4].uitff.q
+   Inst   u1rs_u1rc_genblk1_0__uitff_q              u1rs.u1rc.genblk1[0].uitff.q
+   Inst   u1rs_u1rc_genblk1_6__uitff_q              u1rs.u1rc.genblk1[6].uitff.q
+   Inst   u1rs_u1rc_genblk1_7__uitff_q              u1rs.u1rc.genblk1[7].uitff.q
+   Inst       dipSwitches_n_0_                          dipSwitches_n[0]
+   Inst       dipSwitches_n_1_                          dipSwitches_n[1]
+   Inst       dipSwitches_n_2_                          dipSwitches_n[2]
+   Inst       dipSwitches_n_3_                          dipSwitches_n[3]
+   Inst             counter_0_                                counter[0]
+   Inst             counter_1_                                counter[1]
+   Inst             counter_2_                                counter[2]
+   Inst             counter_3_                                counter[3]
+   Inst   u2bpd_state_8_i_0_2_                      u2bpd.state_8_i_0[2]
+   Inst   u2bpd_state_8_0_i_1_0_                    u2bpd.state_8_0_i_1[0]
+   Inst   u2bpd_state_8_0_i_0_                      u2bpd.state_8_0_i[0]
+   Inst           u4udc_G_46_1                              u4udc.G_46_1
+   Inst             u4udc_G_46                                u4udc.G_46
+   Inst           u4udc_G_49_1                              u4udc.G_49_1
+   Inst             u4udc_G_49                                u4udc.G_49
+   Inst           u4udc_G_50_1                              u4udc.G_50_1
+   Inst             u4udc_G_50                                u4udc.G_50
+   Inst           u4udc_G_43_1                              u4udc.G_43_1
+   Inst             u4udc_G_43                                u4udc.G_43
+   Inst           u4udc_G_41_1                              u4udc.G_41_1
+   Inst             u4udc_G_41                                u4udc.G_41
+   Inst   u3bpd_state_8_i_0_1_2_                    u3bpd.state_8_i_0_1[2]
+   Inst   u3bpd_state_8_i_0_2_                      u3bpd.state_8_i_0[2]
+   Inst   u3bpd_state_8_0_i_1_0_                    u3bpd.state_8_0_i_1[0]
+   Inst   u3bpd_state_8_0_i_0_                      u3bpd.state_8_0_i[0]
+   Inst   u2bpd_state_8_i_0_1_2_                    u2bpd.state_8_i_0_1[2]
+   Inst            u4udc_N_9_i                               u4udc.N_9_i
+   Inst   u4udc_un1_state_1_sqmuxa_i_0_i_0_         u4udc.un1_state_1_sqmuxa_i_0_i[0]
+   Inst           u4udc_N_51_i                              u4udc.N_51_i
+   Inst           u4udc_N_53_i                              u4udc.N_53_i
+   Inst           u4udc_G_43_i                              u4udc.G_43_i
+   Inst           u3bpd_N_26_i                              u3bpd.N_26_i
+   Inst           u3bpd_N_27_i                              u3bpd.N_27_i
+   Inst           u3bpd_N_23_i                              u3bpd.N_23_i
+   Inst           u3bpd_N_25_i                              u3bpd.N_25_i
+   Inst           u2bpd_N_26_i                              u2bpd.N_26_i
+   Inst           u2bpd_N_27_i                              u2bpd.N_27_i
+   Inst           u2bpd_N_23_i                              u2bpd.N_23_i
+   Inst           u2bpd_N_25_i                              u2bpd.N_25_i
+   Inst   u4udc_state_ns_0_a2_0_a3_1_1_             u4udc.state_ns_0_a2_0_a3_1[1]
+   Inst   u4udc_state_ns_0_a2_0_a3_1_               u4udc.state_ns_0_a2_0_a3[1]
+   Inst           u2bpd_N_19_i                              u2bpd.N_19_i
+   Inst           u2bpd_N_21_i                              u2bpd.N_21_i
+   Inst     u2bpd_N_9_i_0_o4_i                        u2bpd.N_9_i_0_o4_i
+   Inst           u3bpd_N_19_i                              u3bpd.N_19_i
+   Inst           u3bpd_N_21_i                              u3bpd.N_21_i
+   Inst     u3bpd_N_9_i_0_o4_i                        u3bpd.N_9_i_0_o4_i
+   Inst    u4udc_state_ns_i_1_                       u4udc.state_ns_i[1]
+   Inst   u4udc_counter_c_i_1_                      u4udc.counter_c_i[1]
+   Inst           u4udc_G_38_i                              u4udc.G_38_i
+   Inst   u4udc_counter_c_i_2_                      u4udc.counter_c_i[2]
+   Inst           u4udc_G_40_i                              u4udc.G_40_i
+   Inst           u4udc_N_54_i                              u4udc.N_54_i
+   Inst           u4udc_N_57_i                              u4udc.N_57_i
+   Inst           u4udc_G_48_i                              u4udc.G_48_i
+   Inst       u2bpd_state_i_1_                          u2bpd.state_i[1]
+   Inst   u2bpd_state_8_i_0_a4_0_1_                 u2bpd.state_8_i_0_a4_0[1]
+   Inst   u2bpd_state_8_i_0_a4_1_                   u2bpd.state_8_i_0_a4[1]
+   Inst       u3bpd_state_i_2_                          u3bpd.state_i[2]
+   Inst   u3bpd_state_8_0_i_a4_0_                   u3bpd.state_8_0_i_a4[0]
+   Inst       u3bpd_state_i_0_                          u3bpd.state_i[0]
+   Inst       u3bpd_state_i_1_                          u3bpd.state_i[1]
+   Inst   u3bpd_state_8_i_0_a4_0_1_                 u3bpd.state_8_i_0_a4_0[1]
+   Inst   u3bpd_state_8_i_0_a4_1_                   u3bpd.state_8_i_0_a4[1]
+   Inst       u2bpd_N_9_i_0_o4                          u2bpd.N_9_i_0_o4
+   Inst   u2bpd_state_8_i_0_1_                      u2bpd.state_8_i_0[1]
+   Inst   u2bpd_state_8_i_0_a4_0_2_                 u2bpd.state_8_i_0_a4_0[2]
+   Inst   u2bpd_state_8_i_0_a4_2_                   u2bpd.state_8_i_0_a4[2]
+   Inst          u4udc_upAck_i                             u4udc.upAck_i
+   Inst   u2bpd_state_8_0_i_a4_0_0_                 u2bpd.state_8_0_i_a4_0[0]
+   Inst       u2bpd_state_i_2_                          u2bpd.state_i[2]
+   Inst   u2bpd_state_8_0_i_a4_0_                   u2bpd.state_8_0_i_a4[0]
+   Inst       u2bpd_state_i_0_                          u2bpd.state_i[0]
+   Inst     u4udc_un1_data_1_i                        u4udc.un1_data_1_i
+   Inst       u4udc_un1_load_6                          u4udc.un1_load_6
+   Inst       u4udc_un1_data_i                          u4udc.un1_data_i
+   Inst       u4udc_un1_load_5                          u4udc.un1_load_5
+   Inst       u4udc_un1_load_4                          u4udc.un1_load_4
+   Inst       u4udc_un1_load_3                          u4udc.un1_load_3
+   Inst       u4udc_un1_load_2                          u4udc.un1_load_2
+   Inst           u4udc_N_33_i                              u4udc.N_33_i
+   Inst       u4udc_un1_load_1                          u4udc.un1_load_1
+   Inst       u3bpd_N_9_i_0_o4                          u3bpd.N_9_i_0_o4
+   Inst   u3bpd_state_8_i_0_1_                      u3bpd.state_8_i_0[1]
+   Inst   u3bpd_state_8_i_0_a4_0_2_                 u3bpd.state_8_i_0_a4_0[2]
+   Inst   u3bpd_state_8_i_0_a4_2_                   u3bpd.state_8_i_0_a4[2]
+   Inst        u4udc_downAck_i                           u4udc.downAck_i
+   Inst   u3bpd_state_8_0_i_a4_0_0_                 u3bpd.state_8_0_i_a4_0[0]
+   Inst   u4udc_dipSwitches_n_i_3_                  u4udc.dipSwitches_n_i[3]
+   Inst       u4udc_un1_data_3                          u4udc.un1_data_3
+   Inst   u4udc_un1_state_1_sqmuxa_i_0_o3_0_        u4udc.un1_state_1_sqmuxa_i_0_o3[0]
+   Inst             u4udc_G_44                                u4udc.G_44
+   Inst             u4udc_G_48                                u4udc.G_48
+   Inst             u4udc_G_47                                u4udc.G_47
+   Inst             u4udc_G_40                                u4udc.G_40
+   Inst             u4udc_G_39                                u4udc.G_39
+   Inst             u4udc_G_38                                u4udc.G_38
+   Inst             u4udc_G_37                                u4udc.G_37
+   Inst             u4udc_G_35                                u4udc.G_35
+   Inst     u4udc_un1_data_3_i                        u4udc.un1_data_3_i
+   Inst       u4udc_un1_load_8                          u4udc.un1_load_8
+   Inst     u4udc_un1_data_2_i                        u4udc.un1_data_2_i
+   Inst       u4udc_un1_load_7                          u4udc.un1_load_7
+   Inst   u1rs_u1rc_genblk1_5__uitff_counter_i_6_   u1rs.u1rc.genblk1[5].uitff.counter_i[6]
+   Inst   u1rs_u1rc_genblk1_7__uitff_counter_i_8_   u1rs.u1rc.genblk1[7].uitff.counter_i[8]
+   Inst   u1rs_u1rc_genblk1_6__uitff_counter_i_7_   u1rs.u1rc.genblk1[6].uitff.counter_i[7]
+   Inst   u4udc_un1_state_1_sqmuxa_i_0_0_           u4udc.un1_state_1_sqmuxa_i_0[0]
+   Inst   u4udc_un1_state_1_sqmuxa_i_0_a3_0_        u4udc.un1_state_1_sqmuxa_i_0_a3[0]
+   Inst   u4udc_state_ns_0_a2_0_a3_0_               u4udc.state_ns_0_a2_0_a3[0]
+   Inst    u4udc_un1_load_i_a2                       u4udc.un1_load_i_a2
+   Inst   u4udc_dipSwitches_n_i_0_                  u4udc.dipSwitches_n_i[0]
+   Inst         u4udc_un1_data                            u4udc.un1_data
+   Inst   u4udc_dipSwitches_n_i_1_                  u4udc.dipSwitches_n_i[1]
+   Inst       u4udc_un1_data_1                          u4udc.un1_data_1
+   Inst   u4udc_dipSwitches_n_i_2_                  u4udc.dipSwitches_n_i[2]
+   Inst       u4udc_un1_data_2                          u4udc.un1_data_2
+   Inst   u1rs_u1rc_u0tff_oneMHzClock_i             u1rs.u1rc.u0tff.oneMHzClock_i
+   Inst   u1rs_u1rc_genblk1_2__uitff_counter_i_3_   u1rs.u1rc.genblk1[2].uitff.counter_i[3]
+   Inst   u1rs_u1rc_genblk1_1__uitff_counter_i_2_   u1rs.u1rc.genblk1[1].uitff.counter_i[2]
+   Inst   u1rs_u1rc_genblk1_4__uitff_counter_i_5_   u1rs.u1rc.genblk1[4].uitff.counter_i[5]
+   Inst   u1rs_u1rc_genblk1_3__uitff_counter_i_4_   u1rs.u1rc.genblk1[3].uitff.counter_i[4]
+   Inst   u1rs_u1rc_genblk1_0__uitff_counter_i_1_   u1rs.u1rc.genblk1[0].uitff.counter_i[1]
+   Inst   u1rs_u1rc_u0tff_counter_i_0_              u1rs.u1rc.u0tff.counter_i[0]
+   Inst           u4udc_N_72_i                              u4udc.N_72_i
+   Inst   u1rs_u1rc_genblk1_8__uitff_oneKHzClock_i  u1rs.u1rc.genblk1[8].uitff.oneKHzClock_i
+   Net       u1rs_counter_0__n                           u1rs.counter[0]
+   Net       u1rs_counter_1__n                           u1rs.counter[1]
+   Net       u1rs_counter_2__n                           u1rs.counter[2]
+   Net       u1rs_counter_3__n                           u1rs.counter[3]
+   Net       u1rs_counter_4__n                           u1rs.counter[4]
+   Net       u1rs_counter_5__n                           u1rs.counter[5]
+   Net       u1rs_counter_6__n                           u1rs.counter[6]
+   Net       u1rs_counter_7__n                           u1rs.counter[7]
+   Net       u1rs_counter_8__n                           u1rs.counter[8]
+   Net      u4udc_un1_load_1_n                          u4udc.un1_load_1
+   Net      u4udc_un1_load_2_n                          u4udc.un1_load_2
+   Net      u4udc_un1_load_3_n                          u4udc.un1_load_3
+   Net      u4udc_un1_load_4_n                          u4udc.un1_load_4
+   Net      u4udc_un1_load_5_n                          u4udc.un1_load_5
+   Net      u4udc_un1_load_6_n                          u4udc.un1_load_6
+   Net      u4udc_un1_load_7_n                          u4udc.un1_load_7
+   Net      u4udc_un1_load_8_n                          u4udc.un1_load_8
+   Net    u4udc_un1_counter_1__n                      u4udc.un1_counter[1]
+   Net    u4udc_un1_counter_2__n                      u4udc.un1_counter[2]
+   Net    u4udc_un1_counter_3__n                      u4udc.un1_counter[3]
+   Net            u4udc_n_33_n                                u4udc.N_33
+   Net     u4udc_state_ns_1__n                         u4udc.state_ns[1]
+   Net            u4udc_n_47_n                                u4udc.N_47
+   Net            u4udc_n_50_n                                u4udc.N_50
+   Net            u4udc_n_51_n                                u4udc.N_51
+   Net            u4udc_n_52_n                                u4udc.N_52
+   Net            u4udc_n_53_n                                u4udc.N_53
+   Net            u4udc_n_54_n                                u4udc.N_54
+   Net            u4udc_n_55_n                                u4udc.N_55
+   Net            u4udc_n_58_n                                u4udc.N_58
+   Net            u4udc_n_72_n                                u4udc.N_72
+   Net        u3bpd_state_0__n                            u3bpd.state[0]
+   Net        u3bpd_state_1__n                            u3bpd.state[1]
+   Net        u3bpd_state_2__n                            u3bpd.state[2]
+   Net            u3bpd_n_19_n                                u3bpd.N_19
+   Net            u3bpd_n_23_n                                u3bpd.N_23
+   Net            u3bpd_n_25_n                                u3bpd.N_25
+   Net            u3bpd_n_26_n                                u3bpd.N_26
+   Net            u3bpd_n_27_n                                u3bpd.N_27
+   Net        u2bpd_state_0__n                            u2bpd.state[0]
+   Net        u2bpd_state_1__n                            u2bpd.state[1]
+   Net        u2bpd_state_2__n                            u2bpd.state[2]
+   Net            u2bpd_n_19_n                                u2bpd.N_19
+   Net            u2bpd_n_23_n                                u2bpd.N_23
+   Net            u2bpd_n_25_n                                u2bpd.N_25
+   Net            u2bpd_n_26_n                                u2bpd.N_26
+   Net            u2bpd_n_27_n                                u2bpd.N_27
+   Net            u4udc_n_30_n                                u4udc.N_30
+   Net             u4udc_n_9_n                                 u4udc.N_9
+   Net     u4udc_state_ns_0__n                         u4udc.state_ns[0]
+   Net        u4udc_un1_data_n                            u4udc.un1_data
+   Net      u4udc_un1_data_1_n                          u4udc.un1_data_1
+   Net      u4udc_un1_data_2_n                          u4udc.un1_data_2
+   Net      u4udc_un1_data_3_n                          u4udc.un1_data_3
+   Net            u4udc_n_57_n                                u4udc.N_57
+   Net            u3bpd_n_21_n                                u3bpd.N_21
+   Net            u2bpd_n_21_n                                u2bpd.N_21
+   Net      u2bpd_state_i_0__n                          u2bpd.state_i[0]
+   Net      u2bpd_state_i_1__n                          u2bpd.state_i[1]
+   Net      u2bpd_state_i_2__n                          u2bpd.state_i[2]
+   Net      u3bpd_state_i_0__n                          u3bpd.state_i[0]
+   Net      u3bpd_state_i_1__n                          u3bpd.state_i[1]
+   Net      u3bpd_state_i_2__n                          u3bpd.state_i[2]
+   Net          u4udc_n_33_i_n                              u4udc.N_33_i
+   Net      u4udc_un1_data_i_n                          u4udc.un1_data_i
+   Net    u4udc_un1_data_1_i_n                        u4udc.un1_data_1_i
+   Net    u4udc_un1_data_2_i_n                        u4udc.un1_data_2_i
+   Net    u4udc_un1_data_3_i_n                        u4udc.un1_data_3_i
+   Net    dipswitches_n_i_3__n                        dipSwitches_n_i[3]
+   Net    dipswitches_n_i_2__n                        dipSwitches_n_i[2]
+   Net    dipswitches_n_i_1__n                        dipSwitches_n_i[1]
+   Net    dipswitches_n_i_0__n                        dipSwitches_n_i[0]
+   Net     u1rs_counter_i_8__n                         u1rs.counter_i[8]
+   Net     u1rs_counter_i_7__n                         u1rs.counter_i[7]
+   Net     u1rs_counter_i_6__n                         u1rs.counter_i[6]
+   Net     u1rs_counter_i_1__n                         u1rs.counter_i[1]
+   Net     u1rs_counter_i_0__n                         u1rs.counter_i[0]
+   Net     u1rs_counter_i_5__n                         u1rs.counter_i[5]
+   Net     u1rs_counter_i_4__n                         u1rs.counter_i[4]
+   Net     u1rs_counter_i_3__n                         u1rs.counter_i[3]
+   Net     u1rs_counter_i_2__n                         u1rs.counter_i[2]
+   Net          u4udc_n_72_i_n                              u4udc.N_72_i
+   Net    dipswitches_n_c_0__n                        dipSwitches_n_c[0]
+   Net      dipswitches_n_0__n                          dipSwitches_n[0]
+   Net    dipswitches_n_c_1__n                        dipSwitches_n_c[1]
+   Net      dipswitches_n_1__n                          dipSwitches_n[1]
+   Net    dipswitches_n_c_2__n                        dipSwitches_n_c[2]
+   Net      dipswitches_n_2__n                          dipSwitches_n[2]
+   Net    dipswitches_n_c_3__n                        dipSwitches_n_c[3]
+   Net          counter_c_0__n                              counter_c[0]
+   Net            counter_0__n                                counter[0]
+   Net          counter_c_1__n                              counter_c[1]
+   Net            counter_1__n                                counter[1]
+   Net          counter_c_2__n                              counter_c[2]
+   Net            counter_2__n                                counter[2]
+   Net          counter_c_3__n                              counter_c[3]
+   Net          u2bpd_n_19_i_n                              u2bpd.N_19_i
+   Net          u2bpd_n_21_i_n                              u2bpd.N_21_i
+   Net           u2bpd_n_6_i_n                               u2bpd.N_6_i
+   Net          u3bpd_n_19_i_n                              u3bpd.N_19_i
+   Net          u3bpd_n_21_i_n                              u3bpd.N_21_i
+   Net           u3bpd_n_6_i_n                               u3bpd.N_6_i
+   Net    u4udc_state_ns_i_1__n                       u4udc.state_ns_i[1]
+   Net        counter_c_i_1__n                            counter_c_i[1]
+   Net          u4udc_n_50_0_n                              u4udc.N_50_0
+   Net        counter_c_i_2__n                            counter_c_i[2]
+   Net          u4udc_n_52_0_n                              u4udc.N_52_0
+   Net          u4udc_n_54_i_n                              u4udc.N_54_i
+   Net          u4udc_n_57_i_n                              u4udc.N_57_i
+   Net          u4udc_n_58_0_n                              u4udc.N_58_0
+   Net           u4udc_n_6_i_n                               u4udc.N_6_i
+   Net           u4udc_n_9_i_n                               u4udc.N_9_i
+   Net          u4udc_n_30_i_n                              u4udc.N_30_i
+   Net          u4udc_n_51_i_n                              u4udc.N_51_i
+   Net          u4udc_n_53_i_n                              u4udc.N_53_i
+   Net          u4udc_n_55_0_n                              u4udc.N_55_0
+   Net          u3bpd_n_26_i_n                              u3bpd.N_26_i
+   Net          u3bpd_n_27_i_n                              u3bpd.N_27_i
+   Net           u3bpd_n_8_i_n                               u3bpd.N_8_i
+   Net          u3bpd_n_23_i_n                              u3bpd.N_23_i
+   Net          u3bpd_n_25_i_n                              u3bpd.N_25_i
+   Net           u3bpd_n_7_0_n                               u3bpd.N_7_0
+   Net          u2bpd_n_26_i_n                              u2bpd.N_26_i
+   Net          u2bpd_n_27_i_n                              u2bpd.N_27_i
+   Net           u2bpd_n_8_i_n                               u2bpd.N_8_i
+   Net          u2bpd_n_23_i_n                              u2bpd.N_23_i
+   Net          u2bpd_n_25_i_n                              u2bpd.N_25_i
+   Net           u2bpd_n_7_0_n                               u2bpd.N_7_0
+   Net    u4udc_state_ns_1_1__n                       u4udc.state_ns_1[1]
+   Net    u4udc_un1_counter_1_1__n                    u4udc.un1_counter_1[1]
+   Net    u4udc_un1_counter_1_2__n                    u4udc.un1_counter_1[2]
+   Net    u4udc_un1_counter_1_3__n                    u4udc.un1_counter_1[3]
+   Net        u4udc_n_55_0_1_n                            u4udc.N_55_0_1
+   Net          u4udc_n_53_1_n                              u4udc.N_53_1
+   Net         u3bpd_n_8_i_1_n                             u3bpd.N_8_i_1
+   Net         u3bpd_n_7_0_1_n                             u3bpd.N_7_0_1
+   Net         u2bpd_n_8_i_1_n                             u2bpd.N_8_i_1
+   Net         u2bpd_n_7_0_1_n                             u2bpd.N_7_0_1
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     dipSwitches_n_3_
+        Input     upButton_n
+        Input     downButton_n
+        Input     loadButton_n
+        Input     resetButton_n
+        Input     oneMHzClock
+        Input     dipSwitches_n_2_
+        Input     dipSwitches_n_1_
+        Input     dipSwitches_n_0_
+        Output     counter_3_
+        Output     counter_2_
+        Output     counter_1_
+        Output     counter_0_
+End

@@ -1,0 +1,90 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 17_keypadscanner_2
+
+#Wed Feb 01 12:35:02 2012
+
+$ Start of Compile
+#Wed Feb 01 12:35:02 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscannerdemo.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscannerdemo.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\ripplescaler.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\ripplescaler.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\ripplecounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\ripplecounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\tflipflop.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscannerdemo.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\bcddigittosevensegment.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscannerdemo.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscanner.v"
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscanner.v changed - recompiling
+Selecting top level module KeypadScannerDemo
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001010
+   Generated name = RippleCounter_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001010
+   Generated name = RippleScaler_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscanner.v":4:7:4:19|Synthesizing module KeypadScanner
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\bcddigittosevensegment.v":4:7:4:28|Synthesizing module BcdDigitToSevenSegment
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscannerdemo.v":5:7:5:23|Synthesizing module KeypadScannerDemo
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\keypadscanner.v":13:1:13:6|Trying to extract state machine for register rowDrivers_reg
+Extracted state machine for register rowDrivers_reg
+State machine has 4 reachable states with original encodings of:
+   0001
+   0010
+   0100
+   1000
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Feb 01 12:35:02 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\synlog\keypadscannerdemo_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+@N: MO106 :"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\17_keypadscanner_2\bcddigittosevensegment.v":11:2:11:5|Found ROM, 'u2bdtss.segments_1[6:0]', 10 words by 7 bits 
+Encoding state machine work.KeypadScanner(verilog)-rowDrivers_reg_1[3:0]
+original code -> new code
+   0001 -> 00
+   0010 -> 01
+   0100 -> 10
+   1000 -> 11
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             20 uses
+DFFC            8 uses
+OBUF            11 uses
+IBUF            4 uses
+AND2            64 uses
+INV             54 uses
+XOR2            4 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Feb 01 12:35:04 2012
+
+###########################################################]

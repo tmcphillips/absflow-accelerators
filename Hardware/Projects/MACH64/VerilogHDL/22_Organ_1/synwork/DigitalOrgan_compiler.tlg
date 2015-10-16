@@ -1,0 +1,25 @@
+Selecting top level module DigitalOrgan
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001100
+   Generated name = RippleCounter_12s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001100
+   Generated name = RippleScaler_12s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000000001
+   Generated name = RippleCounter_1s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000000001
+   Generated name = RippleScaler_1s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\digitalorgan.v":3:7:3:18|Synthesizing module DigitalOrgan
+

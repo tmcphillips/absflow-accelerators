@@ -1,0 +1,3 @@
+MODULE AddressableLatchDemo
+	SUBMODULE addressablelatch
+		INSTANCE latch

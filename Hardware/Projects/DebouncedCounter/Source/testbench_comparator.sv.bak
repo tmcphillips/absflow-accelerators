@@ -1,0 +1,36 @@
+import ovm_pkg::*;
+import fourbitcounter_result_pkg::*;
+
+module testbench_comparator (
+  ref tlm_fifo #(fourbitcounter_result) actual_result_fifo,
+  ref tlm_fifo #(fourbitcounter_result) predicted_result_fifo
+);
+	
+	fourbitcounter_result actual_result;
+  fourbitcounter_result predicted_result;
+  string m;
+  string message;
+		
+	task run;
+	  
+	  $sformat(m, "%m");
+	  
+	  forever begin
+	   
+	    actual_result_fifo.get(actual_result);
+	    predicted_result_fifo.get(predicted_result);
+	   
+	     $sformat(message, "Predicted: %s   Actual: %s",
+	       predicted_result.convert2string, actual_result.convert2string);
+	   
+      if (actual_result.comp(predicted_result))
+        ovm_top.ovm_report_info(m, message, 300);
+      else 
+        ovm_top.ovm_report_error(m, message, 200);
+	   
+	   end  
+	 
+	endtask
+	 
+endmodule
+

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element clock_bridge
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element controller
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element filter
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element insert_input
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element merge_x2_x3
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element merge_x2_x3_x5
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element multiply_by_2
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element multiply_by_2_ingress_fifo
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element multiply_by_3
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element multiply_by_3_ingress_fifo
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element multiply_by_5
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element multiply_by_5_ingress_fifo
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element output_splitter
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element reset_bridge
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6C6U23C8ES" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="hamming.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="out"
+   internal="output_splitter.out3"
+   type="avalon_streaming"
+   dir="start" />
+ <interface name="max" internal="filter.cutoff" type="avalon" dir="end" />
+ <interface name="clk" internal="clock_bridge.in_clk" type="clock" dir="end" />
+ <interface name="rst" internal="reset_bridge.in_reset" type="reset" dir="end" />
+ <interface name="done" internal="filter.cutoff_exceeded" />
+ <interface
+   name="controller_csr"
+   internal="controller.csr"
+   type="avalon"
+   dir="end" />
+ <interface
+   name="x5_fifo_csr"
+   internal="multiply_by_5_ingress_fifo.csr"
+   type="avalon"
+   dir="end" />
+ <interface
+   name="x3_fifo_csr"
+   internal="multiply_by_3_ingress_fifo.csr"
+   type="avalon"
+   dir="end" />
+ <interface
+   name="x2_fifo_csr"
+   internal="multiply_by_2_ingress_fifo.csr"
+   type="avalon"
+   dir="end" />
+ <interface
+   name="merge_x2_x3_csr"
+   internal="merge_x2_x3.csr"
+   type="avalon"
+   dir="end" />
+ <interface
+   name="merge_x2_x3_x5_csr"
+   internal="merge_x2_x3_x5.csr"
+   type="avalon"
+   dir="end" />
+ <module
+   kind="multiply_by_constant_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="multiply_by_2">
+  <parameter name="IN_WIDTH" value="32" />
+  <parameter name="OUT_WIDTH" value="35" />
+  <parameter name="MULTIPLIER" value="2" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="multiply_by_constant_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="multiply_by_3">
+  <parameter name="IN_WIDTH" value="32" />
+  <parameter name="OUT_WIDTH" value="35" />
+  <parameter name="MULTIPLIER" value="3" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="multiply_by_constant_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="multiply_by_5">
+  <parameter name="IN_WIDTH" value="32" />
+  <parameter name="OUT_WIDTH" value="35" />
+  <parameter name="MULTIPLIER" value="5" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="ordered_merge_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="merge_x2_x3">
+  <parameter name="DATA_WIDTH" value="35" />
+  <parameter name="CSR_WIDTH" value="32" />
+  <parameter name="SEND_ENDOFPACKET" value="1" />
+  <parameter name="END_PACKET_VALUE" value="0" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="ordered_merge_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="merge_x2_x3_x5">
+  <parameter name="DATA_WIDTH" value="35" />
+  <parameter name="CSR_WIDTH" value="32" />
+  <parameter name="SEND_ENDOFPACKET" value="1" />
+  <parameter name="END_PACKET_VALUE" value="0" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="lowpass_filter_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="filter">
+  <parameter name="IN_WIDTH" value="35" />
+  <parameter name="OUT_WIDTH" value="32" />
+  <parameter name="DEFAULT_CUTOFF" value="-1" />
+  <parameter name="FORWARD_DELIMITERS" value="0" />
+  <parameter name="EOP_ON_EXCEED" value="1" />
+  <parameter name="NEW_EOP_VALUE" value="0" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="altera_avalon_sc_fifo"
+   version="13.1"
+   enabled="1"
+   name="multiply_by_2_ingress_fifo">
+  <parameter name="SYMBOLS_PER_BEAT" value="4" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="256" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="1" />
+  <parameter name="USE_FILL_LEVEL" value="1" />
+  <parameter name="EMPTY_LATENCY" value="3" />
+  <parameter name="USE_MEMORY_BLOCKS" value="1" />
+  <parameter name="USE_STORE_FORWARD" value="0" />
+  <parameter name="USE_ALMOST_FULL_IF" value="0" />
+  <parameter name="USE_ALMOST_EMPTY_IF" value="0" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="altera_avalon_sc_fifo"
+   version="13.1"
+   enabled="1"
+   name="multiply_by_3_ingress_fifo">
+  <parameter name="SYMBOLS_PER_BEAT" value="4" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="256" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="1" />
+  <parameter name="USE_FILL_LEVEL" value="1" />
+  <parameter name="EMPTY_LATENCY" value="3" />
+  <parameter name="USE_MEMORY_BLOCKS" value="1" />
+  <parameter name="USE_STORE_FORWARD" value="0" />
+  <parameter name="USE_ALMOST_FULL_IF" value="0" />
+  <parameter name="USE_ALMOST_EMPTY_IF" value="0" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="altera_avalon_sc_fifo"
+   version="13.1"
+   enabled="1"
+   name="multiply_by_5_ingress_fifo">
+  <parameter name="SYMBOLS_PER_BEAT" value="4" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="512" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="1" />
+  <parameter name="USE_FILL_LEVEL" value="1" />
+  <parameter name="EMPTY_LATENCY" value="3" />
+  <parameter name="USE_MEMORY_BLOCKS" value="1" />
+  <parameter name="USE_STORE_FORWARD" value="0" />
+  <parameter name="USE_ALMOST_FULL_IF" value="0" />
+  <parameter name="USE_ALMOST_EMPTY_IF" value="0" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="altera_avalon_st_splitter"
+   version="13.1"
+   enabled="1"
+   name="output_splitter">
+  <parameter name="NUMBER_OF_OUTPUTS" value="4" />
+  <parameter name="QUALIFY_VALID_OUT" value="1" />
+  <parameter name="USE_READY" value="1" />
+  <parameter name="USE_VALID" value="1" />
+  <parameter name="USE_PACKETS" value="1" />
+  <parameter name="USE_CHANNEL" value="0" />
+  <parameter name="USE_ERROR" value="0" />
+  <parameter name="USE_DATA" value="1" />
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="CHANNEL_WIDTH" value="1" />
+  <parameter name="ERROR_WIDTH" value="1" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="MAX_CHANNELS" value="1" />
+  <parameter name="READY_LATENCY" value="0" />
+  <parameter name="ERROR_DESCRIPTOR" value="" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="altera_clock_bridge"
+   version="13.1"
+   enabled="1"
+   name="clock_bridge">
+  <parameter name="DERIVED_CLOCK_RATE" value="0" />
+  <parameter name="EXPLICIT_CLOCK_RATE" value="0" />
+  <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
+ </module>
+ <module
+   kind="altera_reset_bridge"
+   version="13.1"
+   enabled="1"
+   name="reset_bridge">
+  <parameter name="ACTIVE_LOW_RESET" value="0" />
+  <parameter name="SYNCHRONOUS_EDGES" value="deassert" />
+  <parameter name="NUM_RESET_OUTPUTS" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+ </module>
+ <module
+   kind="priority_merge_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="insert_input">
+  <parameter name="WIDTH" value="32" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <module kind="hamming_controller" version="1.0" enabled="1" name="controller">
+  <parameter name="WIDTH" value="32" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+ </module>
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="output_splitter.out0"
+   end="multiply_by_2_ingress_fifo.in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="output_splitter.out1"
+   end="multiply_by_3_ingress_fifo.in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="merge_x2_x3.merge_out"
+   end="merge_x2_x3_x5.a_in" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="output_splitter.clk" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="filter.clock" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="merge_x2_x3_x5.clock" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="merge_x2_x3.clock" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="multiply_by_5.clock" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="multiply_by_5_ingress_fifo.clk" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="multiply_by_3.clock" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="multiply_by_3_ingress_fifo.clk" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="multiply_by_2_ingress_fifo.clk" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="multiply_by_2.clock" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="reset_bridge.clk" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="output_splitter.reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="filter.reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="merge_x2_x3_x5.reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="merge_x2_x3.reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="multiply_by_5.reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="multiply_by_5_ingress_fifo.clk_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="multiply_by_3.reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="multiply_by_3_ingress_fifo.clk_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="multiply_by_2.reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="multiply_by_2_ingress_fifo.clk_reset" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="insert_input.clock" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="insert_input.reset" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="insert_input.out"
+   end="output_splitter.in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="merge_x2_x3_x5.merge_out"
+   end="filter.in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="filter.out"
+   end="insert_input.in_b" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="multiply_by_2.out"
+   end="merge_x2_x3.a_in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="multiply_by_3_ingress_fifo.out"
+   end="multiply_by_3.in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="multiply_by_3.out"
+   end="merge_x2_x3.b_in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="multiply_by_5_ingress_fifo.out"
+   end="multiply_by_5.in" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock_bridge.out_clk"
+   end="controller.clock" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="reset_bridge.out_reset"
+   end="controller.reset" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="controller.out"
+   end="insert_input.in_a" />
+ <connection
+   kind="conduit"
+   version="13.1"
+   start="controller.busy"
+   end="filter.busy">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="output_splitter.out2"
+   end="multiply_by_5_ingress_fifo.in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="multiply_by_5.out"
+   end="merge_x2_x3_x5.b_in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="multiply_by_2_ingress_fifo.out"
+   end="multiply_by_2.in" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="false" />
+</system>

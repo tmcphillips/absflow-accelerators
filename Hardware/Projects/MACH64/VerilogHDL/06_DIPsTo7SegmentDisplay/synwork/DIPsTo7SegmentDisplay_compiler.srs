@@ -1,0 +1,137 @@
+%%% protect protected_file
+@E
+@ 
+#
+#
+#
+# Created by Synplify Verilog HDL Compiler version comp550rc, Build 030R from Synplicity, Inc.
+# Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+# Synthesis Netlist written on Wed Jan 25 17:15:00 2012
+#
+#
+#OPTIONS:"|-top|DIPsTo7SegmentDisplay|-I|c:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\06_dipsto7segmentdisplay\\|-I|C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib|-v2001|-encrypt|-pro|-ll|2000|-compiler_compatible|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\bin\\c_ver.exe":1298500924
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib\\vlog\\hypermods.v":1298501016
+#CUR:"C:\\ispLEVER_Classic1_5\\ispcpld\\..\\cae_library\\synthesis\\verilog\\mach.v":1244664000
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\06_dipsto7segmentdisplay\\mach64_verilog_project.h":1327357020
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\06_dipsto7segmentdisplay\\dipsto7segmentdisplay.v":1327540483
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\06_dipsto7segmentdisplay\\bcddigittosevensegment.v":1327376966
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\06_dipsto7segmentdisplay\\hexdigittosevensegment.v":1327377013
+f "C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"; # file 0
+af .is_verilog 1;
+f "C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"; # file 1
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\mach64_verilog_project.h"; # file 2
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\dipsto7segmentdisplay.v"; # file 3
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\bcddigittosevensegment.v"; # file 4
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\06_dipsto7segmentdisplay\hexdigittosevensegment.v"; # file 5
+af .is_verilog 1;
+@E
+@ 
+ftell;
+@E@MR@c6::c(::R.UI	FsRG]C7HHo01aFCMPC1lCoCRM0PHCsD;Fo
+RNP3PH#CDsHF4oR;P
+NR#3H_sPCHoDFR
+4;N3PRFosHhCNlRC"]Go7HHF0a1CCPMo1Cl0CM"
+;
+
+@HR@66:::4U6.:.Ro8HHd0r:Rj98HHo0:rdj
+9;N3HRs_0DFosHMCNlRH"8o"H0;
+
+
+
+@FR@n6:::4Un6:.Ro#Cl0CM#:rnj#9RCColM_0#4:rnj
+9;N3HRs_0DFosHMCNlRC"#oMlC0;#"
+@bR@4j::44::0.RsRkC0CskRk0sCb;
+Rj@@:44::.4:RDVN#VCRNCD#RDVN#
+C;b@R@64:4:4.:4R:6sRFl#lCoC#M0_n4r:Rj9#lCoC#M0_n4r:Rj98HHo0:rdj
+9;N3HRs0FlNCLDRj"jj4jR44444
+j;j4jjR4j4jjjj;j
+j44jR44j4j
+4;j4j4R44444jj;4
+jjjjR4j4j4
+4;j44jR44j44j4;4
+j44jRj4444
+4;j444R444jjjj;j
+4j4jR44444
+4;44jjR44444j4;j
+444jR444j4
+4;44j4R4jj4444;4
+4j4jRj4j44
+j;444jR4j4444j;4
+444jRj4j44
+4;4444Rj4jj444;;
+"
+-y---------------------------------
+
+@ 
+ftell;
+@E@MR@cd::c(::R.(I	FsRu7Q#(aF1lCoC7M0HD#bNP$RCDsHF
+o;N3PRHC#PsFHDo;R4
+RNP3_H#PHCsDRFo4N;
+PFR3shHoNRlC"u7Q#(aF1lCoC7M0HD#bN;$"
+RNP3MDNosuNNRl#"q hA_p ]" X;P
+NRq hA_p ]R X4N;
+P#R3$NM_0F0Vs0lN#CHxRh" q Ap_X] =Rd."N;
+P#R3$NM_0F0Vs0lNRh" q Ap_X] ="7R;
+
+
+
+@HR@6d:::4g64:dRb8H10IHO#EC_dMr:Rj981HbIOH0E_C#M:rdj
+9;N3HRs_0DFosHMCNlRH"8bH1I0COE#"_M;H
+NRODFR4"uc4,u64,un4,u(
+";
+@FR@nd:::4nnn:4RNNR;H
+NR03sDs_FHNoMl"CRN
+";NDHRF"ORu".j;
+
+
+
+@FR@(d:::4n(n:4RLLR;H
+NR03sDs_FHNoMl"CRL
+";NDHRF"ORu".4;
+
+
+
+@FR@Ud:::4nUn:4ROOR;H
+NR03sDs_FHNoMl"CRO
+";NDHRF"ORu"..;
+
+
+
+@FR@gd:::4ngn:4R88R;H
+NR03sDs_FHNoMl"CR8
+";NDHRF"ORu".d;
+
+
+
+@FR@4d:jn:4::4j4CnRR
+C;N3HRs_0DFosHMCNlR""C;H
+NRODFR."uc
+";
+@FR@4d:4n:4::444VnRR
+V;N3HRs_0DFosHMCNlR""V;H
+NRODFR."un
+";
+@FR@4d:.n:4::4.4onRR
+o;N3HRs_0DFosHMCNlR""o;H
+NRODFR."u(
+";s@R@d(:4::.n4d(:.FRIs]	RCHG7oaH0FP1CCCM1oMlC0CRPsFHDoCRoM	LD4k\340E8#S#
+8HHo0:rdjo9=CDML	34\k_M481HbIOH0E_C#M:rdjS9
+#lCoC#M0rjn:9C=oM	LD4k\3Mk4_40E8#n#r:;j9
+RNH3Ds0_HFsolMNCkR"40E8#;#"
+[bRFRHMNRRNoLCMD\	434kM_Ek48#0#r;n9
+[bRFRHMLRRLoLCMD\	434kM_Ek48#0#r;69
+[bRFRHMORROoLCMD\	434kM_Ek48#0#r;c9
+[bRFRHM8RR8oLCMD\	434kM_Ek48#0#r;d9
+[bRFRHMCRRCoLCMD\	434kM_Ek48#0#r;.9
+[bRFRHMVRRVoLCMD\	434kM_Ek48#0#r;49
+[bRFRHMoRRooLCMD\	434kM_Ek48#0#r;j9
+@bR@4d:(n:d::4(cHgRMoPRCDML	34\k_M481HbIOH0E_C#M:rdjo9RCDML	34\k_M481HbIOH0E_C#M:rdjR9
+R8RRHIb1HE0OCM#_rjd:9b;
+Rj@@:44::.4:Rk0sCsR0k0CRs;kC
+@bR@4j::44::V.RNCD#RDVN#VCRNCD#;;
+C

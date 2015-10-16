@@ -1,0 +1,5 @@
+MODULE DIPsTo7SegmentDisplay DEFIN dipsto7segmentdisplay.v
+MODULE HexDigitToSevenSegment DEFIN hexdigittosevensegment.v
+MODULE BcdDigitToSevenSegment DEFIN bcddigittosevensegment.v
+DEPEND INCLUDED_FILE hexdigittosevensegment.v
+DEPEND INCLUDED_FILE bcddigittosevensegment.v

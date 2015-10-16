@@ -1,0 +1,232 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.4.01.04.23.l1 Equations File            -|
+|- Copyright(C), 1992-2001, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+B0_d0.D = !( up & !down & !B0_d1.Q & !B0_d2.Q & !B0_d3.Q
+    # down & !B0_d0.Q & B0_d2.Q & B0_d3.Q
+    # down & !B0_d0.Q & B0_d1.Q & B0_d3.Q
+    # !up & down & B0_d0.Q & !B0_d3.Q
+    # up & !down & B0_d0.Q
+    # !up & !down & !B0_d0.Q
+    # up & down & !B0_d0.Q ) ; (7 pterms, 6 signals)
+B0_d0.C = S0_millisecondClock ; (1 pterm, 1 signal)
+B0_d0.AR = !reset ; (1 pterm, 1 signal)
+
+B0_d1.T = !up & down & B0_d0.Q & !B0_d3.Q
+    # up & !down & !B0_d0.Q & B0_d1.Q
+    # up & !down & !B0_d0.Q & B0_d2.Q
+    # up & !down & !B0_d0.Q & B0_d3.Q ; (4 pterms, 6 signals)
+B0_d1.C = S0_millisecondClock ; (1 pterm, 1 signal)
+B0_d1.AR = !reset ; (1 pterm, 1 signal)
+
+B0_d2.T = !up & down & B0_d0.Q & B0_d1.Q & !B0_d3.Q
+    # up & !down & !B0_d0.Q & !B0_d1.Q & B0_d2.Q
+    # up & !down & !B0_d0.Q & !B0_d1.Q & B0_d3.Q ; (3 pterms, 6 signals)
+B0_d2.C = S0_millisecondClock ; (1 pterm, 1 signal)
+B0_d2.AR = !reset ; (1 pterm, 1 signal)
+
+B0_d3.T = up & !down & !B0_d0.Q & !B0_d1.Q & !B0_d2.Q & B0_d3.Q
+    # !up & down & B0_d0.Q & B0_d1.Q & B0_d2.Q & !B0_d3.Q ; (2 pterms, 6 signals)
+B0_d3.C = S0_millisecondClock ; (1 pterm, 1 signal)
+B0_d3.AR = !reset ; (1 pterm, 1 signal)
+
+S0_millisecondClock = !S1_s19.Q & !S1_s18.Q & !S1_s17.Q & !S1_s16.Q
+       & !S1_s15.Q & !S1_s14.Q & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+       & !S1_s9.Q & !S1_s8.Q & !S1_s7.Q & !S1_s6.Q & !S1_s5.Q & !S1_s4.Q
+       & !S1_s3.Q & !S1_s2.Q & !S1_s1.Q & !S1_s0.Q ; (1 pterm, 20 signals)
+
+S1_s0.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s0.Q ) ; (2 pterms, 11 signals)
+S1_s0.C = clock ; (1 pterm, 1 signal)
+
+S1_s1.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # !S1_s1.Q & !S1_s0.Q
+    # S1_s1.Q & S1_s0.Q ) ; (3 pterms, 12 signals)
+S1_s1.C = clock ; (1 pterm, 1 signal)
+
+S1_s10.T.X1 = S1_s9.Q & S1_s8.Q & S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q
+       & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q ; (1 pterm, 10 signals)
+S1_s10.T.X2 = S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q & S1_s9.Q & S1_s8.Q
+       & S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q
+       & S1_s0.Q ; (1 pterm, 20 signals)
+S1_s10.C = clock ; (1 pterm, 1 signal)
+
+S1_s11.T = S1_s10.Q & S1_s9.Q & S1_s8.Q & S1_s7.Q & S1_s6.Q & S1_s5.Q
+       & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q ; (1 pterm, 11 signals)
+S1_s11.C = clock ; (1 pterm, 1 signal)
+
+S1_s12.T = S1_s11.Q & S1_s10.Q & S1_s9.Q & S1_s8.Q & S1_s7.Q & S1_s6.Q
+       & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q ; (1 pterm, 12 signals)
+S1_s12.C = clock ; (1 pterm, 1 signal)
+
+S1_s13.T = S1_s12.Q & S1_s11.Q & S1_s10.Q & S1_s9.Q & S1_s8.Q & S1_s7.Q
+       & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q ; (1 pterm, 13 signals)
+S1_s13.C = clock ; (1 pterm, 1 signal)
+
+S1_s14.T = S1_s13.Q & S1_s12.Q & S1_s11.Q & S1_s10.Q & S1_s9.Q & S1_s8.Q
+       & S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q
+       & S1_s0.Q
+    # S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q ; (2 pterms, 20 signals)
+S1_s14.C = clock ; (1 pterm, 1 signal)
+
+S1_s15.T = S1_s14.Q & S1_s13.Q & S1_s12.Q & S1_s11.Q & S1_s10.Q & S1_s9.Q
+       & S1_s8.Q & S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q
+       & S1_s1.Q & S1_s0.Q ; (1 pterm, 15 signals)
+S1_s15.C = clock ; (1 pterm, 1 signal)
+
+S1_s16.T = S1_s15.Q & S1_s14.Q & S1_s13.Q & S1_s12.Q & S1_s11.Q & S1_s10.Q
+       & S1_s9.Q & S1_s8.Q & S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q
+       & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q ; (2 pterms, 20 signals)
+S1_s16.C = clock ; (1 pterm, 1 signal)
+
+S1_s17.T = S1_s16.Q & S1_s15.Q & S1_s14.Q & S1_s13.Q & S1_s12.Q & S1_s11.Q
+       & S1_s10.Q & S1_s9.Q & S1_s8.Q & S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q
+       & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q ; (2 pterms, 20 signals)
+S1_s17.C = clock ; (1 pterm, 1 signal)
+
+S1_s18.T = S1_s17.Q & S1_s16.Q & S1_s15.Q & S1_s14.Q & S1_s13.Q & S1_s12.Q
+       & S1_s11.Q & S1_s10.Q & S1_s9.Q & S1_s8.Q & S1_s7.Q & S1_s6.Q & S1_s5.Q
+       & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q ; (2 pterms, 20 signals)
+S1_s18.C = clock ; (1 pterm, 1 signal)
+
+S1_s19.T = S1_s18.Q & S1_s17.Q & S1_s16.Q & S1_s15.Q & S1_s14.Q & S1_s13.Q
+       & S1_s12.Q & S1_s11.Q & S1_s10.Q & S1_s9.Q & S1_s8.Q & S1_s7.Q
+       & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q ; (2 pterms, 20 signals)
+S1_s19.C = clock ; (1 pterm, 1 signal)
+
+S1_s2.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # !S1_s2.Q & !S1_s1.Q
+    # !S1_s2.Q & !S1_s0.Q ) ; (4 pterms, 13 signals)
+S1_s2.C = clock ; (1 pterm, 1 signal)
+
+S1_s3.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # !S1_s3.Q & !S1_s1.Q
+    # !S1_s3.Q & !S1_s2.Q
+    # !S1_s3.Q & !S1_s0.Q ) ; (5 pterms, 14 signals)
+S1_s3.C = clock ; (1 pterm, 1 signal)
+
+S1_s4.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # !S1_s4.Q & !S1_s1.Q
+    # !S1_s4.Q & !S1_s2.Q
+    # !S1_s4.Q & !S1_s3.Q
+    # !S1_s4.Q & !S1_s0.Q ) ; (6 pterms, 15 signals)
+S1_s4.C = clock ; (1 pterm, 1 signal)
+
+S1_s5.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # !S1_s5.Q & !S1_s1.Q
+    # !S1_s5.Q & !S1_s2.Q
+    # !S1_s5.Q & !S1_s3.Q
+    # !S1_s5.Q & !S1_s4.Q
+    # !S1_s5.Q & !S1_s0.Q ) ; (7 pterms, 16 signals)
+S1_s5.C = clock ; (1 pterm, 1 signal)
+
+S1_s6.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # !S1_s6.Q & !S1_s1.Q
+    # !S1_s6.Q & !S1_s2.Q
+    # !S1_s6.Q & !S1_s3.Q
+    # !S1_s6.Q & !S1_s4.Q
+    # !S1_s6.Q & !S1_s5.Q
+    # !S1_s6.Q & !S1_s0.Q ) ; (8 pterms, 17 signals)
+S1_s6.C = clock ; (1 pterm, 1 signal)
+
+S1_s7.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q & S1_s1.Q
+       & S1_s0.Q
+    # !S1_s7.Q & !S1_s1.Q
+    # !S1_s7.Q & !S1_s2.Q
+    # !S1_s7.Q & !S1_s3.Q
+    # !S1_s7.Q & !S1_s4.Q
+    # !S1_s7.Q & !S1_s5.Q
+    # !S1_s7.Q & !S1_s6.Q
+    # !S1_s7.Q & !S1_s0.Q ) ; (9 pterms, 18 signals)
+S1_s7.C = clock ; (1 pterm, 1 signal)
+
+S1_s8.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s8.Q & S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q & S1_s2.Q
+       & S1_s1.Q & S1_s0.Q
+    # !S1_s8.Q & !S1_s1.Q
+    # !S1_s8.Q & !S1_s2.Q
+    # !S1_s8.Q & !S1_s3.Q
+    # !S1_s8.Q & !S1_s4.Q
+    # !S1_s8.Q & !S1_s5.Q
+    # !S1_s8.Q & !S1_s6.Q
+    # !S1_s8.Q & !S1_s7.Q
+    # !S1_s8.Q & !S1_s0.Q ) ; (10 pterms, 19 signals)
+S1_s8.C = clock ; (1 pterm, 1 signal)
+
+S1_s9.D = !( S1_s19.Q & S1_s18.Q & S1_s17.Q & S1_s16.Q & !S1_s15.Q & S1_s14.Q
+       & !S1_s13.Q & !S1_s12.Q & !S1_s11.Q & !S1_s10.Q
+    # S1_s9.Q & S1_s8.Q & S1_s7.Q & S1_s6.Q & S1_s5.Q & S1_s4.Q & S1_s3.Q
+       & S1_s2.Q & S1_s1.Q & S1_s0.Q
+    # !S1_s9.Q & !S1_s1.Q
+    # !S1_s9.Q & !S1_s2.Q
+    # !S1_s9.Q & !S1_s3.Q
+    # !S1_s9.Q & !S1_s4.Q
+    # !S1_s9.Q & !S1_s5.Q
+    # !S1_s9.Q & !S1_s6.Q
+    # !S1_s9.Q & !S1_s7.Q
+    # !S1_s9.Q & !S1_s8.Q
+    # !S1_s9.Q & !S1_s0.Q ) ; (11 pterms, 20 signals)
+S1_s9.C = clock ; (1 pterm, 1 signal)
+
+a = !( !B0_d0.Q & !B0_d1.Q & B0_d2.Q & !B0_d3.Q
+    # B0_d0.Q & B0_d1.Q & !B0_d2.Q & B0_d3.Q
+    # B0_d0.Q & !B0_d1.Q & !B0_d2.Q & !B0_d3.Q
+    # B0_d0.Q & !B0_d1.Q & B0_d2.Q & B0_d3.Q ) ; (4 pterms, 4 signals)
+
+b = !( B0_d0.Q & !B0_d1.Q & B0_d2.Q & !B0_d3.Q
+    # B0_d0.Q & B0_d1.Q & B0_d3.Q
+    # !B0_d0.Q & B0_d1.Q & B0_d2.Q
+    # !B0_d0.Q & B0_d2.Q & B0_d3.Q ) ; (4 pterms, 4 signals)
+
+c = !( !B0_d0.Q & B0_d1.Q & !B0_d2.Q & !B0_d3.Q
+    # B0_d1.Q & B0_d2.Q & B0_d3.Q
+    # !B0_d0.Q & B0_d2.Q & B0_d3.Q ) ; (3 pterms, 4 signals)
+
+d = !( !B0_d0.Q & B0_d1.Q & !B0_d2.Q & B0_d3.Q
+    # !B0_d0.Q & !B0_d1.Q & B0_d2.Q & !B0_d3.Q
+    # B0_d0.Q & !B0_d1.Q & !B0_d2.Q & !B0_d3.Q
+    # B0_d0.Q & B0_d1.Q & B0_d2.Q ) ; (4 pterms, 4 signals)
+
+e = !( !B0_d1.Q & B0_d2.Q & !B0_d3.Q
+    # B0_d0.Q & !B0_d1.Q & !B0_d2.Q
+    # B0_d0.Q & !B0_d3.Q ) ; (3 pterms, 4 signals)
+
+f = !( B0_d0.Q & !B0_d1.Q & B0_d2.Q & B0_d3.Q
+    # B0_d1.Q & !B0_d2.Q & !B0_d3.Q
+    # B0_d0.Q & B0_d1.Q & !B0_d3.Q
+    # B0_d0.Q & !B0_d2.Q & !B0_d3.Q ) ; (4 pterms, 4 signals)
+
+g = !( !B0_d0.Q & !B0_d1.Q & B0_d2.Q & B0_d3.Q
+    # B0_d0.Q & B0_d1.Q & B0_d2.Q & !B0_d3.Q
+    # !B0_d1.Q & !B0_d2.Q & !B0_d3.Q ) ; (3 pterms, 4 signals)
+

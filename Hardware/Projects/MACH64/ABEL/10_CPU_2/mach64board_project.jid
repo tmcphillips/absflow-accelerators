@@ -1,0 +1,4 @@
+. ALU_4_demo alu_4_demo.abl "c:\users\tmcphillips\hobbies\mach64 projects\alu\alu_4\alu_4_demo.abl"
+scaler TenBitRippleCounter tenbitripplecounter.abl "c:\users\tmcphillips\hobbies\mach64 projects\alu\alu_4\tenbitripplecounter.abl"
+alu ALU_4 alu_4.abl "c:\users\tmcphillips\hobbies\mach64 projects\alu\alu_4\alu_4.abl"
+debouncer Debouncer debouncer.abl "c:\users\tmcphillips\hobbies\mach64 projects\alu\alu_4\debouncer.abl"

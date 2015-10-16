@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE		ispXCF	SYSTEM	"IspXCF.dtd" >
+<ispXCF version="16.4.1">
+	<Comment></Comment>
+	<Chain>
+		<Comm>JTAG</Comm>
+		<Device>
+			<Pos>1</Pos>
+			<Ref>MACH64 Board</Ref>
+			<Vendor>Lattice</Vendor>
+			<Family>ispMACH4000</Family>
+			<Name>LC4064V-32IO</Name>
+			<IDCode>0x01809043</IDCode>
+			<Package>48-pin TQFP</Package>
+			<PON>LC4064V-XXT48</PON>
+			<Bypass>
+				<InstrLen>8</InstrLen>
+				<InstrVal>11111111</InstrVal>
+				<BScanLen>1</BScanLen>
+				<BScanVal>0</BScanVal>
+			</Bypass>
+			<File>C:\Users\tmcphillips\Hobbies\MACH64 Projects\7.6.Lab06\UpDownBCDRegisterTo7Segment\mach64board_project.jed</File>
+			<FileTime>12/01/11 22:40:32</FileTime>
+			<JedecChecksum>0xD36E</JedecChecksum>
+			<Operation>Erase,Program,Verify</Operation>
+			<Option>
+				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<IOState>HighZ</IOState>
+				<PreloadLength>68</PreloadLength>
+				<IOVectorData>0x00000000000000000</IOVectorData>
+				<OverideUES value="TRUE"/>
+				<TCKFrequency>1.000000 MHz</TCKFrequency>
+				<SVFProcessor>SVF Processor</SVFProcessor>
+				<Usercode>0xFFFFFFFF</Usercode>
+				<AccessMode>JTAG</AccessMode>
+			</Option>
+		</Device>
+	</Chain>
+	<ProjectOptions>
+		<Program>SEQUENTIAL</Program>
+		<Process>ENTIRED CHAIN</Process>
+		<OperationOverride>No Override</OperationOverride>
+		<StartTAP>TLR</StartTAP>
+		<EndTAP>TLR</EndTAP>
+		<DeGlitch value="TRUE"/>
+		<VerifyUsercode value="TRUE"/>
+		<PinSetting>
+			TMS	LOW;
+			TCK	LOW;
+			TDI	LOW;
+			TDO	LOW;
+			CableEN	HIGH;
+		</PinSetting>
+	</ProjectOptions>
+</ispXCF>

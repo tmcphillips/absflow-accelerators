@@ -1,0 +1,25 @@
+#$ TOOL   ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE   Mon Jan 16 16:17:17 2012
+#$ JEDECFILE   threewaymultiplexerdemo
+#$ MODULE   ThreeWayMultiplexerDemo
+#$ PINS 18 a0 a1 a2 a3 b0 b1 b2 b3 c0 c1 c2 c3 s0 s1 y0 y1 y2 y3
+.type f
+.i 14
+.o 4
+.ilb a3 a2 a1 a0 b3 b2 b1 b0 c3 c2 c1 c0 s1 s0
+.ob y0- y1- y2- y3-
+.phase 1111
+.p 12
+-------1----10 1000
+-----------101 1000
+---1--------11 1000
+------1-----10 0100
+----------1-01 0100
+--1---------11 0100
+-----1------10 0010
+---------1--01 0010
+-1----------11 0010
+----1-------10 0001
+--------1---01 0001
+1-----------11 0001
+.end

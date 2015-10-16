@@ -1,0 +1,135 @@
+#$ TOOL  ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE  Mon Jan 16 15:09:37 2012
+#$ JEDECFILE  fourbitcounterwithload
+#$ MODULE  FourBitCounterWithLoad
+#$ TITLE  Four bit counter with load
+#$ PINS 14 oneMHzClock:19 upButton:18 downButton:23 loadButton:22 reset:20
+ stepDirectionUp:21 d0:31 d1:32 d2:33 d3:34 q0:14 q1:15 q2:16 q3:17
+#$ NODES 16 X0_debounced B0_debounced L0_debounced S0_s9 S0_s8 S0_s7 S0_s6
+ S0_s5 S0_s4 S0_s3 S0_s2 S0_s1 S0_s0 X1_lastSample B1_lastSample L1_lastSample
+.model fourbitcounterwithload 
+.inputs oneMHzClock.BLIF upButton.BLIF downButton.BLIF loadButton.BLIF \
+ X0_debounced.Q B0_debounced.Q L0_debounced.Q reset.BLIF d3.BLIF d2.BLIF d1.BLIF \
+ d0.BLIF q3.Q q2.Q q1.Q q0.Q stepDirectionUp.BLIF S0_s9.Q S0_s8.Q S0_s7.Q S0_s6.Q \
+ S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q X1_lastSample.Q B1_lastSample.Q \
+ L1_lastSample.Q
+.outputs q0.D q0.C- q0.AR q1.D.X1 q1.D.X2 q1.C- q1.AR q2.T q2.C- q2.AR q3.T \
+ q3.C- q3.AR X0_debounced.D X0_debounced.C B0_debounced.D B0_debounced.C \
+ L0_debounced.D L0_debounced.C S0_s9.T S0_s9.C S0_s8.T S0_s8.C S0_s7.T S0_s7.C \
+ S0_s6.T S0_s6.C S0_s5.T S0_s5.C S0_s4.D.X1 S0_s4.D.X2 S0_s4.C S0_s3.D S0_s3.C \
+ S0_s2.D S0_s2.C S0_s1.D S0_s1.C S0_s0.D S0_s0.C X1_lastSample.D X1_lastSample.C \
+ B1_lastSample.D B1_lastSample.C L1_lastSample.D L1_lastSample.C
+.names loadButton.BLIF d0.BLIF q0.Q q0.D
+00- 1
+1-0 1
+.names X0_debounced.Q B0_debounced.Q L0_debounced.Q q0.C-
+000 1
+.names reset.BLIF q0.AR
+0 1
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d1.BLIF q1.Q q0.Q stepDirectionUp.BLIF q1.D.X1
+--00--- 1
+1-1--10 1
+-11--11 1
+-01--01 1
+0-1--00 1
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d1.BLIF q1.Q q0.Q stepDirectionUp.BLIF q1.D.X2
+--1-0-- 1
+.names X0_debounced.Q B0_debounced.Q L0_debounced.Q q1.C-
+000 1
+.names reset.BLIF q1.AR
+0 1
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d2.BLIF q2.Q q1.Q q0.Q stepDirectionUp.BLIF q2.T
+1-1--000 1
+0-1--110 1
+-11--001 1
+-01--111 1
+--000--- 1
+--011--- 1
+.names X0_debounced.Q B0_debounced.Q L0_debounced.Q q2.C-
+000 1
+.names reset.BLIF q2.AR
+0 1
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d3.BLIF q3.Q q2.Q q1.Q q0.Q stepDirectionUp.BLIF q3.T
+1-1--0000 1
+0-1--1110 1
+-11--0001 1
+-01--1111 1
+--000---- 1
+--011---- 1
+.names X0_debounced.Q B0_debounced.Q L0_debounced.Q q3.C-
+000 1
+.names reset.BLIF q3.AR
+0 1
+.names upButton.BLIF X1_lastSample.Q X0_debounced.D
+01 1
+.names S0_s9.Q X0_debounced.C
+1 1
+.names downButton.BLIF B1_lastSample.Q B0_debounced.D
+01 1
+.names S0_s9.Q B0_debounced.C
+1 1
+.names loadButton.BLIF L1_lastSample.Q L0_debounced.D
+01 1
+.names S0_s9.Q L0_debounced.C
+1 1
+.names S0_s8.Q S0_s7.Q S0_s6.Q S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s9.T
+111111111 1
+.names oneMHzClock.BLIF S0_s9.C
+1 1
+.names S0_s7.Q S0_s6.Q S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s8.T
+11111111 1
+.names oneMHzClock.BLIF S0_s8.C
+1 1
+.names S0_s6.Q S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s7.T
+1111111 1
+.names oneMHzClock.BLIF S0_s7.C
+1 1
+.names S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s6.T
+111111 1
+.names oneMHzClock.BLIF S0_s6.C
+1 1
+.names S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s5.T
+11111 1
+.names oneMHzClock.BLIF S0_s5.C
+1 1
+.names S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s4.D.X1
+1---- 1
+.names S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s4.D.X2
+-1111 1
+.names oneMHzClock.BLIF S0_s4.C
+1 1
+.names S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s3.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+.names oneMHzClock.BLIF S0_s3.C
+1 1
+.names S0_s2.Q S0_s1.Q S0_s0.Q S0_s2.D
+011 1
+10- 1
+1-0 1
+.names oneMHzClock.BLIF S0_s2.C
+1 1
+.names S0_s1.Q S0_s0.Q S0_s1.D
+10 1
+01 1
+.names oneMHzClock.BLIF S0_s1.C
+1 1
+.names S0_s0.Q S0_s0.D
+0 1
+.names oneMHzClock.BLIF S0_s0.C
+1 1
+.names upButton.BLIF X1_lastSample.D
+0 1
+.names S0_s9.Q X1_lastSample.C
+1 1
+.names downButton.BLIF B1_lastSample.D
+0 1
+.names S0_s9.Q B1_lastSample.C
+1 1
+.names loadButton.BLIF L1_lastSample.D
+0 1
+.names S0_s9.Q L1_lastSample.C
+1 1
+.end

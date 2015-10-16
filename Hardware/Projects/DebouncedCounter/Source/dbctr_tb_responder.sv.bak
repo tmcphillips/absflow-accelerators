@@ -1,0 +1,38 @@
+import ovm_pkg::*;
+import dbctr_tb_transactions_pkg::*;
+
+module dbctr_tb_responder (
+  ref tlm_fifo #(dbctr_result) result_fifo,
+  ref tlm_fifo #(dbctr_result) res2comp_fifo,
+  input bit         ack,
+  input bit         clock,
+	input bit 		      reset,
+	input logic [3:0] counter      );
+	
+	dbctr_result result;
+	
+	string module_name;
+	string message;
+	
+	// store name of module for use in report messages
+	initial $sformat(module_name, "%m");
+	
+	always @(posedge clock) begin : handle_results
+  	   
+    if (ack) begin : respond
+        
+	    result = new(counter);
+	      
+	    $sformat(message, "Actual: %s", result.convert2string);
+	    ovm_top.ovm_report_info(module_name, message, 300);
+	      
+	    assert(result_fifo.try_put(result.clone));
+      assert(res2comp_fifo.try_put(result.clone));
+        
+      @(negedge ack);
+        
+	  end
+	    
+	end
+
+endmodule

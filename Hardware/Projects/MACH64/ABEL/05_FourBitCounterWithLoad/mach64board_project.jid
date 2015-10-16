@@ -1,0 +1,5 @@
+. FourBitCounterWithLoad fourbitcounterwithload.abl c:\users\tmcphillips\designs\projects\mach64\abel\7.3.lab03\fourbitcounterwithload\fourbitcounterwithload.abl
+oneKHzClock TenBitScaler tenbitscaler.abl c:\users\tmcphillips\designs\projects\mach64\abel\7.3.lab03\fourbitcounterwithload\tenbitscaler.abl
+debouncedLoad Debouncer debouncer.abl c:\users\tmcphillips\designs\projects\mach64\abel\7.3.lab03\fourbitcounterwithload\debouncer.abl
+debouncedUp Debouncer debouncer.abl c:\users\tmcphillips\designs\projects\mach64\abel\7.3.lab03\fourbitcounterwithload\debouncer.abl
+debouncedDown Debouncer debouncer.abl c:\users\tmcphillips\designs\projects\mach64\abel\7.3.lab03\fourbitcounterwithload\debouncer.abl

@@ -1,0 +1,9 @@
+MODULE FourBitCounterWithLoad
+	SUBMODULE tenbitscaler
+		INSTANCE oneKHzClock
+	SUBMODULE debouncer
+		INSTANCE debouncedUp
+	SUBMODULE debouncer
+		INSTANCE debouncedDown
+	SUBMODULE debouncer
+		INSTANCE debouncedLoad

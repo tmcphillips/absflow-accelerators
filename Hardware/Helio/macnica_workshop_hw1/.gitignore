@@ -1,0 +1,17 @@
+db
+incremental_db
+qout
+qsystem
+timing
+*.rpt
+*.summary
+*.cmp
+*.html
+*.sopcinfo
+*.csv
+.qsys_edit
+output_files
+hps_isw_handoff
+hc_output
+c5_pin_model_dump.txt
+*.qws

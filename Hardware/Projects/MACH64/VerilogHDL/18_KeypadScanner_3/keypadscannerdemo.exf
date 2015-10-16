@@ -1,0 +1,375 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// -------------------------------------------------------------------------------------------------
+      Port          1      keypadRows[3:0]               keypadRows                  3          4            -1
+      Port          2      keypadColumns[2:0]               keypadColumns                  2          3            -1
+      Port          3      segments[6:0]                 segments                  6          7            -1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      keypadRows_3_               keypadRows[3]                       1            0            
+        Port      keypadRows_2_               keypadRows[2]                       1            1            
+        Port      keypadRows_1_               keypadRows[1]                       1            2            
+        Port      keypadRows_0_               keypadRows[0]                       1            3            
+        Port      keypadColumns_2_               keypadColumns[2]                       2            0            
+        Port      keypadColumns_1_               keypadColumns[1]                       2            1            
+        Port      keypadColumns_0_               keypadColumns[0]                       2            2            
+        Port      segments_6_                 segments[6]                       3            0            
+        Port      segments_5_                 segments[5]                       3            1            
+        Port      segments_4_                 segments[4]                       3            2            
+        Port      segments_3_                 segments[3]                       3            3            
+        Port      segments_2_                 segments[2]                       3            4            
+        Port      segments_1_                 segments[1]                       3            5            
+        Port      segments_0_                 segments[0]                       3            6            
+End
+Section Cross Reference File
+Design 'KeypadScannerDemo' created Thu Feb 02 14:00:36 2012
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst   u1ks_activeColumn_reg_1_0_                u1ks.activeColumn_reg_1[0]
+   Inst   u1ks_activeColumn_reg_1_1_                u1ks.activeColumn_reg_1[1]
+   Inst   u1ks_activeKey_reg_0_                     u1ks.activeKey_reg[0]
+   Inst   u1ks_activeKey_reg_1_                     u1ks.activeKey_reg[1]
+   Inst   u1ks_activeKey_reg_2_                     u1ks.activeKey_reg[2]
+   Inst   u1ks_activeKey_reg_3_                     u1ks.activeKey_reg[3]
+   Inst   u2slpf_valueHistory_reg_1__1_             u2slpf.valueHistory_reg_1_[1]
+   Inst   u2slpf_valueHistory_reg_1__2_             u2slpf.valueHistory_reg_1_[2]
+   Inst   u2slpf_valueHistory_reg_1__3_             u2slpf.valueHistory_reg_1_[3]
+   Inst    u2slpf_state_reg_0_                       u2slpf.state_reg[0]
+   Inst    u2slpf_state_reg_1_                       u2slpf.state_reg[1]
+   Inst   u2slpf_stableValue_reg_0_                 u2slpf.stableValue_reg[0]
+   Inst   u2slpf_stableValue_reg_1_                 u2slpf.stableValue_reg[1]
+   Inst   u2slpf_stableValue_reg_2_                 u2slpf.stableValue_reg[2]
+   Inst   u2slpf_stableValue_reg_3_                 u2slpf.stableValue_reg[3]
+   Inst   u2slpf_valueHistory_reg_3__0_             u2slpf.valueHistory_reg_3_[0]
+   Inst   u2slpf_valueHistory_reg_3__1_             u2slpf.valueHistory_reg_3_[1]
+   Inst   u2slpf_valueHistory_reg_3__2_             u2slpf.valueHistory_reg_3_[2]
+   Inst   u2slpf_valueHistory_reg_3__3_             u2slpf.valueHistory_reg_3_[3]
+   Inst   u2slpf_valueHistory_reg_2__0_             u2slpf.valueHistory_reg_2_[0]
+   Inst   u2slpf_valueHistory_reg_2__1_             u2slpf.valueHistory_reg_2_[1]
+   Inst   u2slpf_valueHistory_reg_2__2_             u2slpf.valueHistory_reg_2_[2]
+   Inst   u2slpf_valueHistory_reg_2__3_             u2slpf.valueHistory_reg_2_[3]
+   Inst   u2slpf_valueHistory_reg_1__0_             u2slpf.valueHistory_reg_1_[0]
+   Inst   u0rs_u1rc_genblk1_5__uitff_q              u0rs.u1rc.genblk1[5].uitff.q
+   Inst   u0rs_u1rc_genblk1_7__uitff_q              u0rs.u1rc.genblk1[7].uitff.q
+   Inst      u0rs_u1rc_u0tff_q                         u0rs.u1rc.u0tff.q
+   Inst   u0rs_u1rc_genblk1_1__uitff_q              u0rs.u1rc.genblk1[1].uitff.q
+   Inst   u0rs_u1rc_genblk1_0__uitff_q              u0rs.u1rc.genblk1[0].uitff.q
+   Inst   u0rs_u1rc_genblk1_2__uitff_q              u0rs.u1rc.genblk1[2].uitff.q
+   Inst   u0rs_u1rc_genblk1_6__uitff_q              u0rs.u1rc.genblk1[6].uitff.q
+   Inst   u0rs_u1rc_genblk1_8__uitff_q              u0rs.u1rc.genblk1[8].uitff.q
+   Inst   u0rs_u1rc_genblk1_4__uitff_q              u0rs.u1rc.genblk1[4].uitff.q
+   Inst   u0rs_u1rc_genblk1_3__uitff_q              u0rs.u1rc.genblk1[3].uitff.q
+   Inst          keypadRows_0_                             keypadRows[0]
+   Inst          keypadRows_1_                             keypadRows[1]
+   Inst          keypadRows_2_                             keypadRows[2]
+   Inst          keypadRows_3_                             keypadRows[3]
+   Inst       keypadColumns_0_                          keypadColumns[0]
+   Inst       keypadColumns_1_                          keypadColumns[1]
+   Inst       keypadColumns_2_                          keypadColumns[2]
+   Inst            segments_0_                               segments[0]
+   Inst            segments_1_                               segments[1]
+   Inst            segments_2_                               segments[2]
+   Inst            segments_3_                               segments[3]
+   Inst            segments_4_                               segments[4]
+   Inst            segments_5_                               segments[5]
+   Inst            segments_6_                               segments[6]
+   Inst          u2slpf_G_32_2                             u2slpf.G_32_2
+   Inst            u2slpf_G_32                               u2slpf.G_32
+   Inst          u2slpf_G_27_1                             u2slpf.G_27_1
+   Inst          u2slpf_G_27_2                             u2slpf.G_27_2
+   Inst            u2slpf_G_27                               u2slpf.G_27
+   Inst   u1ks_activeKey_reg_5_i_0_1_1_             u1ks.activeKey_reg_5_i_0_1[1]
+   Inst   u1ks_activeKey_reg_5_i_0_2_1_             u1ks.activeKey_reg_5_i_0_2[1]
+   Inst   u1ks_activeKey_reg_5_i_0_1_               u1ks.activeKey_reg_5_i_0[1]
+   Inst   u1ks_activeKey_reg_5_i_0_1_0_             u1ks.activeKey_reg_5_i_0_1[0]
+   Inst   u1ks_activeKey_reg_5_i_0_0_               u1ks.activeKey_reg_5_i_0[0]
+   Inst   u2slpf_un1_rawValue_2_3_                  u2slpf.un1_rawValue_2[3]
+   Inst   u2slpf_un1_rawValue_3_                    u2slpf.un1_rawValue[3]
+   Inst   u3bdtss_segments_1_i_1_1_                 u3bdtss.segments_1_i_1[1]
+   Inst   u3bdtss_segments_1_i_1_                   u3bdtss.segments_1_i[1]
+   Inst   u3bdtss_segments_1_i_1_2_                 u3bdtss.segments_1_i_1[2]
+   Inst   u3bdtss_segments_1_i_2_                   u3bdtss.segments_1_i[2]
+   Inst   u3bdtss_segments_1_i_1_5_                 u3bdtss.segments_1_i_1[5]
+   Inst   u3bdtss_segments_1_i_5_                   u3bdtss.segments_1_i[5]
+   Inst   u3bdtss_segments_1_i_a3_1_1_1_            u3bdtss.segments_1_i_a3_1_1[1]
+   Inst   u3bdtss_segments_1_i_a3_1_1_              u3bdtss.segments_1_i_a3_1[1]
+   Inst   u3bdtss_segments_1_i_a3_0_1_4_            u3bdtss.segments_1_i_a3_0_1[4]
+   Inst   u3bdtss_segments_1_i_a3_0_4_              u3bdtss.segments_1_i_a3_0[4]
+   Inst   u3bdtss_segments_1_i_a2_1_0_              u3bdtss.segments_1_i_a2_1[0]
+   Inst   u3bdtss_segments_1_i_a2_0_                u3bdtss.segments_1_i_a2[0]
+   Inst          u2slpf_G_32_1                             u2slpf.G_32_1
+   Inst   u1ks_activeKey_reg_5_i_a2_i_i_2_          u1ks.activeKey_reg_5_i_a2_i_i[2]
+   Inst   u1ks_un1_activeKey_reg9_0_a3_1            u1ks.un1_activeKey_reg9_0_a3_1
+   Inst   u1ks_un1_activeKey_reg9_0_a3              u1ks.un1_activeKey_reg9_0_a3
+   Inst   u1ks_un1_activeKey_reg9_0_a3_0_1          u1ks.un1_activeKey_reg9_0_a3_0_1
+   Inst   u1ks_un1_activeKey_reg9_0_a3_0            u1ks.un1_activeKey_reg9_0_a3_0
+   Inst   u2slpf_un1_rawValue_1_0_                  u2slpf.un1_rawValue_1[0]
+   Inst   u2slpf_un1_rawValue_2_0_                  u2slpf.un1_rawValue_2[0]
+   Inst   u2slpf_un1_rawValue_0_                    u2slpf.un1_rawValue[0]
+   Inst   u2slpf_un1_rawValue_1_1_                  u2slpf.un1_rawValue_1[1]
+   Inst   u2slpf_un1_rawValue_2_1_                  u2slpf.un1_rawValue_2[1]
+   Inst   u2slpf_un1_rawValue_1_                    u2slpf.un1_rawValue[1]
+   Inst   u2slpf_un1_rawValue_1_2_                  u2slpf.un1_rawValue_1[2]
+   Inst   u2slpf_un1_rawValue_2_2_                  u2slpf.un1_rawValue_2[2]
+   Inst   u2slpf_un1_rawValue_2_                    u2slpf.un1_rawValue[2]
+   Inst   u2slpf_un1_rawValue_1_3_                  u2slpf.un1_rawValue_1[3]
+   Inst         u3bdtss_N_45_i                            u3bdtss.N_45_i
+   Inst   u3bdtss_segments_1_i_o2_i_4_              u3bdtss.segments_1_i_o2_i[4]
+   Inst         u3bdtss_N_41_i                            u3bdtss.N_41_i
+   Inst         u3bdtss_N_48_i                            u3bdtss.N_48_i
+   Inst          u2slpf_N_58_i                             u2slpf.N_58_i
+   Inst          u2slpf_N_59_i                             u2slpf.N_59_i
+   Inst            u1ks_N_21_i                               u1ks.N_21_i
+   Inst            u1ks_N_22_i                               u1ks.N_22_i
+   Inst   u1ks_un1_activeKey_reg9_0_i               u1ks.un1_activeKey_reg9_0_i
+   Inst            u1ks_N_19_i                               u1ks.N_19_i
+   Inst            u1ks_N_20_i                               u1ks.N_20_i
+   Inst            u1ks_N_54_i                               u1ks.N_54_i
+   Inst            u1ks_N_17_i                               u1ks.N_17_i
+   Inst            u1ks_N_18_i                               u1ks.N_18_i
+   Inst            u1ks_N_15_i                               u1ks.N_15_i
+   Inst         u3bdtss_N_43_i                            u3bdtss.N_43_i
+   Inst         u3bdtss_N_40_i                            u3bdtss.N_40_i
+   Inst         u3bdtss_N_42_i                            u3bdtss.N_42_i
+   Inst         u3bdtss_N_39_i                            u3bdtss.N_39_i
+   Inst         u3bdtss_N_47_i                            u3bdtss.N_47_i
+   Inst         u3bdtss_N_38_i                            u3bdtss.N_38_i
+   Inst         u3bdtss_N_36_i                            u3bdtss.N_36_i
+   Inst         u3bdtss_N_37_i                            u3bdtss.N_37_i
+   Inst   u3bdtss_segments_1_i_o2_i_1_              u3bdtss.segments_1_i_o2_i[1]
+   Inst         u3bdtss_N_46_i                            u3bdtss.N_46_i
+   Inst         u3bdtss_N_44_i                            u3bdtss.N_44_i
+   Inst   u3bdtss_segments_1_i_o2_1_                u3bdtss.segments_1_i_o2[1]
+   Inst   u2slpf_keyPress_i_3_                      u2slpf.keyPress_i[3]
+   Inst   u2slpf_keyPress_i_0_                      u2slpf.keyPress_i[0]
+   Inst   u2slpf_keyPress_i_2_                      u2slpf.keyPress_i[2]
+   Inst   u3bdtss_segments_1_i_a3_4_                u3bdtss.segments_1_i_a3[4]
+   Inst   u3bdtss_segments_1_i_a3_5_                u3bdtss.segments_1_i_a3[5]
+   Inst   u3bdtss_segments_1_i_a3_0_5_              u3bdtss.segments_1_i_a3_0[5]
+   Inst   u3bdtss_segments_1_i_a2_3_                u3bdtss.segments_1_i_a2[3]
+   Inst   u3bdtss_segments_1_i_a2_0_3_              u3bdtss.segments_1_i_a2_0[3]
+   Inst   u2slpf_keyPress_i_1_                      u2slpf.keyPress_i[1]
+   Inst   u3bdtss_segments_1_i_a2_2_                u3bdtss.segments_1_i_a2[2]
+   Inst   u3bdtss_segments_1_i_a2_0_0_              u3bdtss.segments_1_i_a2_0[0]
+   Inst   u3bdtss_segments_1_i_0_                   u3bdtss.segments_1_i[0]
+   Inst   u3bdtss_segments_1_i_3_                   u3bdtss.segments_1_i[3]
+   Inst   u3bdtss_segments_1_i_4_                   u3bdtss.segments_1_i[4]
+   Inst   u3bdtss_segments_1_i_6_                   u3bdtss.segments_1_i[6]
+   Inst   u3bdtss_segments_1_i_o2_4_                u3bdtss.segments_1_i_o2[4]
+   Inst   u3bdtss_segments_1_i_o3_3_                u3bdtss.segments_1_i_o3[3]
+   Inst   u3bdtss_segments_1_i_o3_0_                u3bdtss.segments_1_i_o3[0]
+   Inst   u0rs_u1rc_genblk1_6__uitff_counter_i_7_   u0rs.u1rc.genblk1[6].uitff.counter_i[7]
+   Inst   u0rs_u1rc_genblk1_5__uitff_counter_i_6_   u0rs.u1rc.genblk1[5].uitff.counter_i[6]
+   Inst   u0rs_u1rc_genblk1_8__uitff_oneKHzClock_i  u0rs.u1rc.genblk1[8].uitff.oneKHzClock_i
+   Inst   u0rs_u1rc_genblk1_7__uitff_counter_i_8_   u0rs.u1rc.genblk1[7].uitff.counter_i[8]
+   Inst   u0rs_u1rc_genblk1_4__uitff_counter_i_5_   u0rs.u1rc.genblk1[4].uitff.counter_i[5]
+   Inst   u0rs_u1rc_genblk1_3__uitff_counter_i_4_   u0rs.u1rc.genblk1[3].uitff.counter_i[4]
+   Inst   u0rs_u1rc_genblk1_2__uitff_counter_i_3_   u0rs.u1rc.genblk1[2].uitff.counter_i[3]
+   Inst   u3bdtss_segments_1_i_a3_1_                u3bdtss.segments_1_i_a3[1]
+   Inst   u3bdtss_segments_1_i_a3_0_1_              u3bdtss.segments_1_i_a3_0[1]
+   Inst   u3bdtss_segments_1_i_a3_2_                u3bdtss.segments_1_i_a3[2]
+   Inst   u2slpf_state_reg_5_i_a3_0_                u2slpf.state_reg_5_i_a3[0]
+   Inst   u2slpf_stableValue_reg3_i                 u2slpf.stableValue_reg3_i
+   Inst   u2slpf_state_reg_5_i_a3_0_0_              u2slpf.state_reg_5_i_a3_0[0]
+   Inst   u2slpf_state_reg_5_i_0_                   u2slpf.state_reg_5_i[0]
+   Inst   u2slpf_state_reg_i_0_                     u2slpf.state_reg_i[0]
+   Inst   u2slpf_state_reg_5_i_1_                   u2slpf.state_reg_5_i[1]
+   Inst   u0rs_u1rc_u0tff_oneMHzClock_i             u0rs.u1rc.u0tff.oneMHzClock_i
+   Inst   u0rs_u1rc_genblk1_0__uitff_counter_i_1_   u0rs.u1rc.genblk1[0].uitff.counter_i[1]
+   Inst   u0rs_u1rc_u0tff_counter_i_0_              u0rs.u1rc.u0tff.counter_i[0]
+   Inst   u0rs_u1rc_genblk1_1__uitff_counter_i_2_   u0rs.u1rc.genblk1[1].uitff.counter_i[2]
+   Inst          u2slpf_N_63_i                             u2slpf.N_63_i
+   Inst          u2slpf_N_65_i                             u2slpf.N_65_i
+   Inst          u2slpf_N_66_i                             u2slpf.N_66_i
+   Inst          u2slpf_N_67_i                             u2slpf.N_67_i
+   Inst          u2slpf_N_68_i                             u2slpf.N_68_i
+   Inst            u2slpf_G_28                               u2slpf.G_28
+   Inst            u2slpf_G_23                               u2slpf.G_23
+   Inst            u2slpf_G_29                               u2slpf.G_29
+   Inst            u2slpf_G_24                               u2slpf.G_24
+   Inst            u2slpf_G_30                               u2slpf.G_30
+   Inst            u2slpf_G_25                               u2slpf.G_25
+   Inst            u2slpf_G_31                               u2slpf.G_31
+   Inst            u2slpf_G_26                               u2slpf.G_26
+   Inst   u2slpf_stableValue_reg_0_sqmuxa           u2slpf.stableValue_reg_0_sqmuxa
+   Inst   u2slpf_un1_rawValue_1_i                   u2slpf.un1_rawValue_1_i
+   Inst          u2slpf_N_60_i                             u2slpf.N_60_i
+   Inst          u2slpf_N_61_i                             u2slpf.N_61_i
+   Inst          u2slpf_N_62_i                             u2slpf.N_62_i
+   Inst   u1ks_activeKey_reg_5_i_0_a3_0_1_          u1ks.activeKey_reg_5_i_0_a3_0[1]
+   Inst   u1ks_keypadRows_i_1_                      u1ks.keypadRows_i[1]
+   Inst   u1ks_keypadRows_i_3_                      u1ks.keypadRows_i[3]
+   Inst   u1ks_keypadRows_i_0_                      u1ks.keypadRows_i[0]
+   Inst   u1ks_keypadRows_i_2_                      u1ks.keypadRows_i[2]
+   Inst   u1ks_activeKey_reg_5_i_a2_i_2_            u1ks.activeKey_reg_5_i_a2_i[2]
+   Inst   u1ks_un1_activeKey_reg9_0                 u1ks.un1_activeKey_reg9_0
+   Inst   u1ks_un1_activeKey_reg9_0_x2              u1ks.un1_activeKey_reg9_0_x2
+   Inst   u1ks_un1_activeKey_reg9_0_x2_0            u1ks.un1_activeKey_reg9_0_x2_0
+   Inst   u1ks_activeColumn_reg_1_ns_0_a2_0_a3_0_   u1ks.activeColumn_reg_1_ns_0_a2_0_a3[0]
+   Inst   u1ks_activeKey_reg_5_i_a2_i_a3_2_         u1ks.activeKey_reg_5_i_a2_i_a3[2]
+   Inst   u1ks_keypadColumns_i_2_                   u1ks.keypadColumns_i[2]
+   Inst   u1ks_activeKey_reg_5_i_a2_1_0_a3_1_       u1ks.activeKey_reg_5_i_a2_1_0_a3[1]
+   Inst   u1ks_keypadColumns_i_1_                   u1ks.keypadColumns_i[1]
+   Inst   u1ks_activeKey_reg_5_i_0_a3_0_            u1ks.activeKey_reg_5_i_0_a3[0]
+   Inst   u1ks_activeKey_reg_5_i_0_a3_0_0_          u1ks.activeKey_reg_5_i_0_a3_0[0]
+   Inst   u1ks_activeKey_reg_5_i_0_a3_1_            u1ks.activeKey_reg_5_i_0_a3[1]
+   Net          activekey_0__n                              activeKey[0]
+   Net          activekey_1__n                              activeKey[1]
+   Net          activekey_2__n                              activeKey[2]
+   Net          activekey_3__n                              activeKey[3]
+   Net           keypress_0__n                               keyPress[0]
+   Net           keypress_1__n                               keyPress[1]
+   Net           keypress_2__n                               keyPress[2]
+   Net           keypress_3__n                               keyPress[3]
+   Net       u0rs_counter_0__n                           u0rs.counter[0]
+   Net       u0rs_counter_1__n                           u0rs.counter[1]
+   Net       u0rs_counter_2__n                           u0rs.counter[2]
+   Net       u0rs_counter_3__n                           u0rs.counter[3]
+   Net       u0rs_counter_4__n                           u0rs.counter[4]
+   Net       u0rs_counter_5__n                           u0rs.counter[5]
+   Net       u0rs_counter_6__n                           u0rs.counter[6]
+   Net       u0rs_counter_7__n                           u0rs.counter[7]
+   Net       u0rs_counter_8__n                           u0rs.counter[8]
+   Net    u2slpf_state_reg_0__n                       u2slpf.state_reg[0]
+   Net    u2slpf_state_reg_1__n                       u2slpf.state_reg[1]
+   Net    u2slpf_valuehistory_reg_1__0__n             u2slpf.valueHistory_reg_1_[0]
+   Net    u2slpf_valuehistory_reg_1__1__n             u2slpf.valueHistory_reg_1_[1]
+   Net    u2slpf_valuehistory_reg_1__2__n             u2slpf.valueHistory_reg_1_[2]
+   Net    u2slpf_valuehistory_reg_1__3__n             u2slpf.valueHistory_reg_1_[3]
+   Net    u2slpf_valuehistory_reg_2__0__n             u2slpf.valueHistory_reg_2_[0]
+   Net    u2slpf_valuehistory_reg_2__1__n             u2slpf.valueHistory_reg_2_[1]
+   Net    u2slpf_valuehistory_reg_2__2__n             u2slpf.valueHistory_reg_2_[2]
+   Net    u2slpf_valuehistory_reg_2__3__n             u2slpf.valueHistory_reg_2_[3]
+   Net    u2slpf_un1_rawvalue_0__n                    u2slpf.un1_rawValue[0]
+   Net    u2slpf_un1_rawvalue_1__n                    u2slpf.un1_rawValue[1]
+   Net    u2slpf_un1_rawvalue_2__n                    u2slpf.un1_rawValue[2]
+   Net    u2slpf_un1_rawvalue_3__n                    u2slpf.un1_rawValue[3]
+   Net    u2slpf_valuehistory_reg_3__0__n             u2slpf.valueHistory_reg_3_[0]
+   Net    u2slpf_valuehistory_reg_3__1__n             u2slpf.valueHistory_reg_3_[1]
+   Net    u2slpf_valuehistory_reg_3__2__n             u2slpf.valueHistory_reg_3_[2]
+   Net    u2slpf_valuehistory_reg_3__3__n             u2slpf.valueHistory_reg_3_[3]
+   Net    u2slpf_un1_rawvalue_1_n                     u2slpf.un1_rawValue_1
+   Net    u2slpf_stablevalue_reg3_n                   u2slpf.stableValue_reg3
+   Net    u2slpf_stablevalue_reg_0_sqmuxa_n           u2slpf.stableValue_reg_0_sqmuxa
+   Net           u2slpf_n_60_n                               u2slpf.N_60
+   Net           u2slpf_n_61_n                               u2slpf.N_61
+   Net           u2slpf_n_62_n                               u2slpf.N_62
+   Net           u2slpf_n_63_n                               u2slpf.N_63
+   Net           u2slpf_n_65_n                               u2slpf.N_65
+   Net           u2slpf_n_66_n                               u2slpf.N_66
+   Net           u2slpf_n_67_n                               u2slpf.N_67
+   Net           u2slpf_n_68_n                               u2slpf.N_68
+   Net           u2slpf_n_58_n                               u2slpf.N_58
+   Net           u2slpf_n_59_n                               u2slpf.N_59
+   Net    u1ks_un1_activekey_reg9_n                   u1ks.un1_activeKey_reg9
+   Net             u1ks_n_54_n                                 u1ks.N_54
+   Net              u1ks_n_5_n                                  u1ks.N_5
+   Net             u1ks_n_15_n                                 u1ks.N_15
+   Net             u1ks_n_17_n                                 u1ks.N_17
+   Net             u1ks_n_18_n                                 u1ks.N_18
+   Net             u1ks_n_19_n                                 u1ks.N_19
+   Net             u1ks_n_20_n                                 u1ks.N_20
+   Net             u1ks_n_21_n                                 u1ks.N_21
+   Net             u1ks_n_22_n                                 u1ks.N_22
+   Net           u1ks_n_10_i_n                               u1ks.N_10_i
+   Net           u1ks_n_11_i_n                               u1ks.N_11_i
+   Net         keypress_i_2__n                             keyPress_i[2]
+   Net         keypress_i_0__n                             keyPress_i[0]
+   Net         keypress_i_3__n                             keyPress_i[3]
+   Net         keypress_i_1__n                             keyPress_i[1]
+   Net     u0rs_counter_i_4__n                         u0rs.counter_i[4]
+   Net     u0rs_counter_i_3__n                         u0rs.counter_i[3]
+   Net     u0rs_counter_i_5__n                         u0rs.counter_i[5]
+   Net     u0rs_counter_i_8__n                         u0rs.counter_i[8]
+   Net     u0rs_counter_i_7__n                         u0rs.counter_i[7]
+   Net     u0rs_counter_i_6__n                         u0rs.counter_i[6]
+   Net     u0rs_counter_i_2__n                         u0rs.counter_i[2]
+   Net     u0rs_counter_i_1__n                         u0rs.counter_i[1]
+   Net     u0rs_counter_i_0__n                         u0rs.counter_i[0]
+   Net    u2slpf_state_reg_i_0__n                     u2slpf.state_reg_i[0]
+   Net    u2slpf_stablevalue_reg3_i_n                 u2slpf.stableValue_reg3_i
+   Net    u2slpf_un1_rawvalue_1_i_n                   u2slpf.un1_rawValue_1_i
+   Net         u2slpf_n_65_i_n                             u2slpf.N_65_i
+   Net         u2slpf_n_66_i_n                             u2slpf.N_66_i
+   Net         u2slpf_n_67_i_n                             u2slpf.N_67_i
+   Net         u2slpf_n_68_i_n                             u2slpf.N_68_i
+   Net         u2slpf_n_60_i_n                             u2slpf.N_60_i
+   Net         u2slpf_n_61_i_n                             u2slpf.N_61_i
+   Net         u2slpf_n_62_i_n                             u2slpf.N_62_i
+   Net         u2slpf_n_63_i_n                             u2slpf.N_63_i
+   Net       keypadrows_i_0__n                           keypadRows_i[0]
+   Net       keypadrows_i_2__n                           keypadRows_i[2]
+   Net       keypadrows_i_1__n                           keypadRows_i[1]
+   Net       keypadrows_i_3__n                           keypadRows_i[3]
+   Net    keypadcolumns_i_1__n                        keypadColumns_i[1]
+   Net    keypadcolumns_i_2__n                        keypadColumns_i[2]
+   Net       keypadrows_c_0__n                           keypadRows_c[0]
+   Net         keypadrows_0__n                             keypadRows[0]
+   Net       keypadrows_c_1__n                           keypadRows_c[1]
+   Net         keypadrows_1__n                             keypadRows[1]
+   Net       keypadrows_c_2__n                           keypadRows_c[2]
+   Net         keypadrows_2__n                             keypadRows[2]
+   Net       keypadrows_c_3__n                           keypadRows_c[3]
+   Net    keypadcolumns_c_0__n                        keypadColumns_c[0]
+   Net      keypadcolumns_0__n                          keypadColumns[0]
+   Net    keypadcolumns_c_1__n                        keypadColumns_c[1]
+   Net      keypadcolumns_1__n                          keypadColumns[1]
+   Net    keypadcolumns_c_2__n                        keypadColumns_c[2]
+   Net           segments_0__n                               segments[0]
+   Net           segments_1__n                               segments[1]
+   Net           segments_2__n                               segments[2]
+   Net           segments_3__n                               segments[3]
+   Net           segments_4__n                               segments[4]
+   Net           segments_5__n                               segments[5]
+   Net         u2slpf_n_58_i_n                             u2slpf.N_58_i
+   Net         u2slpf_n_57_i_n                             u2slpf.N_57_i
+   Net         u2slpf_n_59_i_n                             u2slpf.N_59_i
+   Net         u2slpf_n_55_i_n                             u2slpf.N_55_i
+   Net           u1ks_n_21_i_n                               u1ks.N_21_i
+   Net           u1ks_n_22_i_n                               u1ks.N_22_i
+   Net    u1ks_un1_activekey_reg9_0_n                 u1ks.un1_activeKey_reg9_0
+   Net           u1ks_n_19_i_n                               u1ks.N_19_i
+   Net           u1ks_n_20_i_n                               u1ks.N_20_i
+   Net           u1ks_n_54_i_n                               u1ks.N_54_i
+   Net           u1ks_n_42_i_n                               u1ks.N_42_i
+   Net           u1ks_n_17_i_n                               u1ks.N_17_i
+   Net           u1ks_n_18_i_n                               u1ks.N_18_i
+   Net           u1ks_n_40_i_n                               u1ks.N_40_i
+   Net           u1ks_n_15_i_n                               u1ks.N_15_i
+   Net            u1ks_n_5_0_n                                u1ks.N_5_0
+   Net           u1ks_n_21_1_n                               u1ks.N_21_1
+   Net           u1ks_n_22_1_n                               u1ks.N_22_1
+   Net    u2slpf_un1_rawvalue_1_0__n                  u2slpf.un1_rawValue_1[0]
+   Net    u2slpf_un1_rawvalue_2_0__n                  u2slpf.un1_rawValue_2[0]
+   Net    u2slpf_un1_rawvalue_1_1__n                  u2slpf.un1_rawValue_1[1]
+   Net    u2slpf_un1_rawvalue_2_1__n                  u2slpf.un1_rawValue_2[1]
+   Net    u2slpf_un1_rawvalue_1_2__n                  u2slpf.un1_rawValue_1[2]
+   Net    u2slpf_un1_rawvalue_2_2__n                  u2slpf.un1_rawValue_2[2]
+   Net    u2slpf_un1_rawvalue_1_3__n                  u2slpf.un1_rawValue_1[3]
+   Net    u2slpf_un1_rawvalue_2_3__n                  u2slpf.un1_rawValue_2[3]
+   Net    u2slpf_stablevalue_reg3_1_n                 u2slpf.stableValue_reg3_1
+   Net    u2slpf_stablevalue_reg3_2_n                 u2slpf.stableValue_reg3_2
+   Net    u2slpf_un1_rawvalue_1_1_n                   u2slpf.un1_rawValue_1_1
+   Net    u2slpf_un1_rawvalue_1_2_n                   u2slpf.un1_rawValue_1_2
+   Net         u1ks_n_42_i_1_n                             u1ks.N_42_i_1
+   Net         u1ks_n_42_i_2_n                             u1ks.N_42_i_2
+   Net         u1ks_n_40_i_1_n                             u1ks.N_40_i_1
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     keypadRows_3_
+        Input     oneMHzClock
+        Input     keypadRows_2_
+        Input     keypadRows_1_
+        Input     keypadRows_0_
+        Output     keypadColumns_2_
+        Output     segments_6_
+        Output     keypadColumns_1_
+        Output     keypadColumns_0_
+        Output     segments_5_
+        Output     segments_4_
+        Output     segments_3_
+        Output     segments_2_
+        Output     segments_1_
+        Output     segments_0_
+End

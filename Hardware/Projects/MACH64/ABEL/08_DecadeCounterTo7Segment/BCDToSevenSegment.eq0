@@ -1,0 +1,84 @@
+ispLEVER Classic 1.4.01.04.23.l1 Linked Equations File
+Copyright(C), 1992-2011, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design bcdtosevensegment created Mon Jan 16 15:15:47 2012
+
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   8          4        1    Pin   a 
+   8          4        1    Pin   b 
+   9          4        1    Pin   c 
+   7          4        1    Pin   d 
+   4          4        1    Pin   e 
+   6          4        1    Pin   f 
+   7          4        1    Pin   g 
+=========
+  49                 P-Term Total: 49
+                       Total Pins: 11
+                      Total Nodes: 0
+            Average P-Term/Output: 7
+
+
+Equations:
+
+a = (!d3 & d2 & d1 & d0
+     # !d3 & !d2 & d1 & d0
+     # !d3 & d2 & !d1 & d0
+     # d3 & !d2 & !d1 & d0
+     # !d3 & d2 & d1 & !d0
+     # !d3 & !d2 & d1 & !d0
+     # d3 & !d2 & !d1 & !d0
+     # !d3 & !d2 & !d1 & !d0);
+
+b = (!d3 & d2 & d1 & d0
+     # !d3 & !d2 & d1 & d0
+     # d3 & !d2 & !d1 & d0
+     # !d3 & !d2 & !d1 & d0
+     # !d3 & !d2 & d1 & !d0
+     # !d3 & d2 & !d1 & !d0
+     # d3 & !d2 & !d1 & !d0
+     # !d3 & !d2 & !d1 & !d0);
+
+c = (!d3 & d2 & d1 & d0
+     # !d3 & !d2 & d1 & d0
+     # !d3 & d2 & !d1 & d0
+     # d3 & !d2 & !d1 & d0
+     # !d3 & !d2 & !d1 & d0
+     # !d3 & d2 & d1 & !d0
+     # !d3 & d2 & !d1 & !d0
+     # d3 & !d2 & !d1 & !d0
+     # !d3 & !d2 & !d1 & !d0);
+
+d = (!d3 & !d2 & d1 & d0
+     # !d3 & d2 & !d1 & d0
+     # d3 & !d2 & !d1 & d0
+     # !d3 & d2 & d1 & !d0
+     # !d3 & !d2 & d1 & !d0
+     # d3 & !d2 & !d1 & !d0
+     # !d3 & !d2 & !d1 & !d0);
+
+e = (!d3 & d2 & d1 & !d0
+     # !d3 & !d2 & d1 & !d0
+     # d3 & !d2 & !d1 & !d0
+     # !d3 & !d2 & !d1 & !d0);
+
+f = (!d3 & d2 & !d1 & d0
+     # d3 & !d2 & !d1 & d0
+     # !d3 & d2 & d1 & !d0
+     # !d3 & d2 & !d1 & !d0
+     # d3 & !d2 & !d1 & !d0
+     # !d3 & !d2 & !d1 & !d0);
+
+g = (!d3 & !d2 & d1 & d0
+     # !d3 & d2 & !d1 & d0
+     # d3 & !d2 & !d1 & d0
+     # !d3 & d2 & d1 & !d0
+     # !d3 & !d2 & d1 & !d0
+     # !d3 & d2 & !d1 & !d0
+     # d3 & !d2 & !d1 & !d0);
+
+
+Reverse-Polarity Equations:
+

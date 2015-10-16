@@ -1,0 +1,305 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+II_0_busyFlag.D = data_7_.PIN ; (1 pterm, 1 signal)
+II_0_busyFlag.C = clock ; (1 pterm, 1 signal)
+II_0_busyFlag.CE = reset_n & II_0_state_9_.Q ; (1 pterm, 2 signals)
+
+II_0_outData_cl_0_.D = !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_state_1_.Q
+    # !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_outData_cl_0_.Q ; (2 pterms, 4 signals)
+II_0_outData_cl_0_.C = clock ; (1 pterm, 1 signal)
+II_0_outData_cl_0_.CE = reset_n ; (1 pterm, 1 signal)
+
+II_0_outData_cl_1_0_reg.D = !II_0_state_0_.Q & !II_0_state_4_.Q
+       & II_0_state_1_.Q
+    # !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_outData_cl_1_0_reg.Q ; (2 pterms, 4 signals)
+II_0_outData_cl_1_0_reg.C = clock ; (1 pterm, 1 signal)
+II_0_outData_cl_1_0_reg.CE = reset_n ; (1 pterm, 1 signal)
+
+II_0_outData_cl_2_0_reg.D = !II_0_state_0_.Q & !II_0_state_4_.Q
+       & II_0_state_1_.Q
+    # !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_outData_cl_2_0_reg.Q ; (2 pterms, 4 signals)
+II_0_outData_cl_2_0_reg.C = clock ; (1 pterm, 1 signal)
+II_0_outData_cl_2_0_reg.CE = reset_n ; (1 pterm, 1 signal)
+
+II_0_outData_cl_3_0_reg.D = !II_0_state_0_.Q & !II_0_state_4_.Q
+       & II_0_state_1_.Q
+    # !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_outData_cl_3_0_reg.Q ; (2 pterms, 4 signals)
+II_0_outData_cl_3_0_reg.C = clock ; (1 pterm, 1 signal)
+II_0_outData_cl_3_0_reg.CE = reset_n ; (1 pterm, 1 signal)
+
+II_0_outData_cl_4_0_reg.D = !II_0_state_0_.Q & !II_0_state_4_.Q
+       & II_0_state_1_.Q
+    # !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_outData_cl_4_0_reg.Q ; (2 pterms, 4 signals)
+II_0_outData_cl_4_0_reg.C = clock ; (1 pterm, 1 signal)
+II_0_outData_cl_4_0_reg.CE = reset_n ; (1 pterm, 1 signal)
+
+II_0_outData_cl_5_0_reg.D = !II_0_state_0_.Q & !II_0_state_4_.Q
+       & II_0_state_1_.Q
+    # !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_outData_cl_5_0_reg.Q ; (2 pterms, 4 signals)
+II_0_outData_cl_5_0_reg.C = clock ; (1 pterm, 1 signal)
+II_0_outData_cl_5_0_reg.CE = reset_n ; (1 pterm, 1 signal)
+
+II_0_outData_cl_6_0_reg.D = !II_0_state_0_.Q & !II_0_state_4_.Q
+       & II_0_state_1_.Q
+    # !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_outData_cl_6_0_reg.Q ; (2 pterms, 4 signals)
+II_0_outData_cl_6_0_reg.C = clock ; (1 pterm, 1 signal)
+II_0_outData_cl_6_0_reg.CE = reset_n ; (1 pterm, 1 signal)
+
+II_0_outData_cl_7_0_reg.D = !II_0_state_0_.Q & !II_0_state_4_.Q
+       & II_0_state_1_.Q
+    # !II_0_state_0_.Q & !II_0_state_4_.Q & II_0_outData_cl_7_0_reg.Q ; (2 pterms, 4 signals)
+II_0_outData_cl_7_0_reg.C = clock ; (1 pterm, 1 signal)
+II_0_outData_cl_7_0_reg.CE = reset_n ; (1 pterm, 1 signal)
+
+II_0_state_0_.D = !wreq.Q & II_0_state_0_.Q
+    # II_0_state_12_.Q ; (2 pterms, 3 signals)
+II_0_state_0_.C = clock ; (1 pterm, 1 signal)
+II_0_state_0_.AP = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_10_.D = II_0_state_9_.Q ; (1 pterm, 1 signal)
+II_0_state_10_.C = clock ; (1 pterm, 1 signal)
+II_0_state_10_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_11_.D = II_0_state_10_.Q ; (1 pterm, 1 signal)
+II_0_state_11_.C = clock ; (1 pterm, 1 signal)
+II_0_state_11_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_12_.D = !II_0_busyFlag.Q & II_0_state_11_.Q ; (1 pterm, 2 signals)
+II_0_state_12_.C = clock ; (1 pterm, 1 signal)
+II_0_state_12_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_13_.D = II_0_state_4_.Q ; (1 pterm, 1 signal)
+II_0_state_13_.C = clock ; (1 pterm, 1 signal)
+II_0_state_13_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_1_.D = wreq.Q & II_0_state_0_.Q ; (1 pterm, 2 signals)
+II_0_state_1_.C = clock ; (1 pterm, 1 signal)
+II_0_state_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_2_.D = II_0_state_1_.Q ; (1 pterm, 1 signal)
+II_0_state_2_.C = clock ; (1 pterm, 1 signal)
+II_0_state_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_3_.D = II_0_state_5_.Q ; (1 pterm, 1 signal)
+II_0_state_3_.C = clock ; (1 pterm, 1 signal)
+II_0_state_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_4_.D = II_0_state_3_.Q ; (1 pterm, 1 signal)
+II_0_state_4_.C = clock ; (1 pterm, 1 signal)
+II_0_state_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_5_.D = II_0_state_2_.Q ; (1 pterm, 1 signal)
+II_0_state_5_.C = clock ; (1 pterm, 1 signal)
+II_0_state_5_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_6_.D = II_0_state_13_.Q ; (1 pterm, 1 signal)
+II_0_state_6_.C = clock ; (1 pterm, 1 signal)
+II_0_state_6_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_7_.D = II_0_state_6_.Q
+    # II_0_busyFlag.Q & II_0_state_11_.Q ; (2 pterms, 3 signals)
+II_0_state_7_.C = clock ; (1 pterm, 1 signal)
+II_0_state_7_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_8_.D = II_0_state_7_.Q ; (1 pterm, 1 signal)
+II_0_state_8_.C = clock ; (1 pterm, 1 signal)
+II_0_state_8_.AR = !reset_n ; (1 pterm, 1 signal)
+
+II_0_state_9_.D = II_0_state_8_.Q ; (1 pterm, 1 signal)
+II_0_state_9_.C = clock ; (1 pterm, 1 signal)
+II_0_state_9_.AR = !reset_n ; (1 pterm, 1 signal)
+
+data_0_.D = data_0_.Q & !II_0_state_1_.Q
+    # writeValue_0_.Q & II_0_state_1_.Q ; (2 pterms, 3 signals)
+data_0_.OE = II_0_outData_cl_7_0_reg.Q ; (1 pterm, 1 signal)
+data_0_.C = clock ; (1 pterm, 1 signal)
+data_0_.CE = reset_n ; (1 pterm, 1 signal)
+
+data_1_.D = writeValue_1_.Q & II_0_state_1_.Q
+    # data_1_.Q & !II_0_state_1_.Q ; (2 pterms, 3 signals)
+data_1_.OE = II_0_outData_cl_6_0_reg.Q ; (1 pterm, 1 signal)
+data_1_.C = clock ; (1 pterm, 1 signal)
+data_1_.CE = reset_n ; (1 pterm, 1 signal)
+
+data_2_.D = writeValue_2_.Q & II_0_state_1_.Q
+    # data_2_.Q & !II_0_state_1_.Q ; (2 pterms, 3 signals)
+data_2_.OE = II_0_outData_cl_5_0_reg.Q ; (1 pterm, 1 signal)
+data_2_.C = clock ; (1 pterm, 1 signal)
+data_2_.CE = reset_n ; (1 pterm, 1 signal)
+
+data_3_.D = writeValue_3_.Q & II_0_state_1_.Q
+    # data_3_.Q & !II_0_state_1_.Q ; (2 pterms, 3 signals)
+data_3_.OE = II_0_outData_cl_4_0_reg.Q ; (1 pterm, 1 signal)
+data_3_.C = clock ; (1 pterm, 1 signal)
+data_3_.CE = reset_n ; (1 pterm, 1 signal)
+
+data_4_ = data_5_.Q ; (1 pterm, 1 signal)
+data_4_.OE = II_0_outData_cl_3_0_reg.Q ; (1 pterm, 1 signal)
+
+data_5_.D = writeValue_4_.Q & II_0_state_1_.Q
+    # data_5_.Q & !II_0_state_1_.Q ; (2 pterms, 3 signals)
+data_5_.OE = II_0_outData_cl_2_0_reg.Q ; (1 pterm, 1 signal)
+data_5_.C = clock ; (1 pterm, 1 signal)
+data_5_.CE = reset_n ; (1 pterm, 1 signal)
+
+data_6_.D = writeValue_6_.Q & II_0_state_1_.Q
+    # data_6_.Q & !II_0_state_1_.Q ; (2 pterms, 3 signals)
+data_6_.OE = II_0_outData_cl_1_0_reg.Q ; (1 pterm, 1 signal)
+data_6_.C = clock ; (1 pterm, 1 signal)
+data_6_.CE = reset_n ; (1 pterm, 1 signal)
+
+data_7_.D = data_7_.Q & !II_0_state_1_.Q ; (1 pterm, 2 signals)
+data_7_.OE = II_0_outData_cl_0_.Q ; (1 pterm, 1 signal)
+data_7_.C = clock ; (1 pterm, 1 signal)
+data_7_.CE = reset_n ; (1 pterm, 1 signal)
+
+e.D = !II_0_state_0_.Q & !II_0_state_3_.Q & II_0_state_7_.Q
+       & !II_0_state_10_.Q
+    # !II_0_state_0_.Q & II_0_state_2_.Q & !II_0_state_3_.Q
+       & !II_0_state_10_.Q
+    # e.Q & !II_0_state_0_.Q & !II_0_state_3_.Q & !II_0_state_10_.Q ; (3 pterms, 6 signals)
+e.C = clock ; (1 pterm, 1 signal)
+e.CE = reset_n ; (1 pterm, 1 signal)
+
+inst_register.D = !( !state_14_.Q & !state_8_.Q & !state_9_.Q & !state_10_.Q
+       & !state_11_.Q & !state_12_.Q & !state_13_.Q ) ; (1 pterm, 7 signals)
+inst_register.C = clock ; (1 pterm, 1 signal)
+inst_register.CE = !( inst_register_0 ) ; (1 pterm, 1 signal)
+inst_register.AR = !reset_n ; (1 pterm, 1 signal)
+
+inst_register_0 = start_n & !state_2_.Q & !state_4_.Q & !state_6_.Q
+       & !state_8_.Q & !state_10_.Q & !state_12_.Q
+    # !state_0_.Q & !state_2_.Q & !state_4_.Q & !state_6_.Q & !state_8_.Q
+       & !state_10_.Q & !state_12_.Q ; (2 pterms, 8 signals)
+
+rs.D = rs.Q & !II_0_state_0_.Q & !II_0_state_1_.Q & !II_0_state_6_.Q
+    # inst_register.Q & II_0_state_1_.Q ; (2 pterms, 5 signals)
+rs.C = clock ; (1 pterm, 1 signal)
+rs.CE = reset_n ; (1 pterm, 1 signal)
+
+rw.D = !II_0_state_0_.Q & II_0_state_6_.Q
+    # rw.Q & !II_0_state_0_.Q ; (2 pterms, 3 signals)
+rw.C = clock ; (1 pterm, 1 signal)
+rw.CE = reset_n ; (1 pterm, 1 signal)
+
+state_0_.D = start_n & !state_1_.Q & !state_2_.Q & !state_3_.Q & !state_4_.Q
+       & !state_5_.Q & !state_6_.Q & !state_7_.Q & !state_8_.Q & !state_9_.Q
+       & !state_10_.Q & !state_11_.Q & !state_12_.Q & !state_13_.Q ; (1 pterm, 14 signals)
+state_0_.C = clock ; (1 pterm, 1 signal)
+state_0_.AP = !reset_n ; (1 pterm, 1 signal)
+
+state_10_.D = wack.Q & state_9_.Q ; (1 pterm, 2 signals)
+state_10_.C = clock ; (1 pterm, 1 signal)
+state_10_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_11_.D = !wack.Q & state_11_.Q
+    # state_10_.Q ; (2 pterms, 3 signals)
+state_11_.C = clock ; (1 pterm, 1 signal)
+state_11_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_12_.D = wack.Q & state_11_.Q ; (1 pterm, 2 signals)
+state_12_.C = clock ; (1 pterm, 1 signal)
+state_12_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_13_.D = !wack.Q & state_13_.Q
+    # state_12_.Q ; (2 pterms, 3 signals)
+state_13_.C = clock ; (1 pterm, 1 signal)
+state_13_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_14_.D = !start_n & state_14_.Q
+    # wack.Q & state_13_.Q ; (2 pterms, 4 signals)
+state_14_.C = clock ; (1 pterm, 1 signal)
+state_14_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_1_.D = !start_n & state_0_.Q
+    # !wack.Q & state_1_.Q ; (2 pterms, 4 signals)
+state_1_.C = clock ; (1 pterm, 1 signal)
+state_1_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_2_.D = wack.Q & state_1_.Q ; (1 pterm, 2 signals)
+state_2_.C = clock ; (1 pterm, 1 signal)
+state_2_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_3_.D = !wack.Q & state_3_.Q
+    # state_2_.Q ; (2 pterms, 3 signals)
+state_3_.C = clock ; (1 pterm, 1 signal)
+state_3_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_4_.D = wack.Q & state_3_.Q ; (1 pterm, 2 signals)
+state_4_.C = clock ; (1 pterm, 1 signal)
+state_4_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_5_.D = !wack.Q & state_5_.Q
+    # state_4_.Q ; (2 pterms, 3 signals)
+state_5_.C = clock ; (1 pterm, 1 signal)
+state_5_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_6_.D = wack.Q & state_5_.Q ; (1 pterm, 2 signals)
+state_6_.C = clock ; (1 pterm, 1 signal)
+state_6_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_7_.D = !wack.Q & state_7_.Q
+    # state_6_.Q ; (2 pterms, 3 signals)
+state_7_.C = clock ; (1 pterm, 1 signal)
+state_7_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_8_.D = wack.Q & state_7_.Q ; (1 pterm, 2 signals)
+state_8_.C = clock ; (1 pterm, 1 signal)
+state_8_.AR = !reset_n ; (1 pterm, 1 signal)
+
+state_9_.D = !wack.Q & state_9_.Q
+    # state_8_.Q ; (2 pterms, 3 signals)
+state_9_.C = clock ; (1 pterm, 1 signal)
+state_9_.AR = !reset_n ; (1 pterm, 1 signal)
+
+un1_state40_i = !( !state_0_.Q & !state_2_.Q & !state_4_.Q & !state_6_.Q
+       & !state_8_.Q & !state_10_.Q & !state_12_.Q
+    # start_n & state_0_.Q
+    # !reset_n ) ; (3 pterms, 9 signals)
+
+wack.D = !II_0_state_0_.Q & II_0_state_12_.Q
+    # wack.Q & !II_0_state_0_.Q ; (2 pterms, 3 signals)
+wack.C = clock ; (1 pterm, 1 signal)
+wack.CE = reset_n ; (1 pterm, 1 signal)
+
+wreq.D = !( !state_0_.Q & !state_2_.Q & !state_4_.Q & !state_6_.Q
+       & !state_8_.Q & !state_10_.Q & !state_12_.Q ) ; (1 pterm, 7 signals)
+wreq.C = clock ; (1 pterm, 1 signal)
+wreq.CE = wreq_0 ; (1 pterm, 1 signal)
+wreq.AR = !reset_n ; (1 pterm, 1 signal)
+
+wreq_0 = !state_14_.Q & !state_0_.Q
+    # !start_n & !state_14_.Q ; (2 pterms, 3 signals)
+
+writeValue_0_.D = !( !state_4_.Q & !state_6_.Q & !state_10_.Q ) ; (1 pterm, 3 signals)
+writeValue_0_.C = clock ; (1 pterm, 1 signal)
+writeValue_0_.CE = un1_state40_i ; (1 pterm, 1 signal)
+
+writeValue_1_.D = state_4_.Q ; (1 pterm, 1 signal)
+writeValue_1_.C = clock ; (1 pterm, 1 signal)
+writeValue_1_.CE = un1_state40_i ; (1 pterm, 1 signal)
+
+writeValue_2_.D = !( !state_2_.Q & !state_4_.Q & !state_10_.Q & !state_12_.Q ) ; (1 pterm, 4 signals)
+writeValue_2_.C = clock ; (1 pterm, 1 signal)
+writeValue_2_.CE = un1_state40_i ; (1 pterm, 1 signal)
+
+writeValue_3_.D = !state_2_.Q & !state_6_.Q & !state_10_.Q ; (1 pterm, 3 signals)
+writeValue_3_.C = clock ; (1 pterm, 1 signal)
+writeValue_3_.CE = un1_state40_i ; (1 pterm, 1 signal)
+
+writeValue_4_.D = state_0_.Q ; (1 pterm, 1 signal)
+writeValue_4_.C = clock ; (1 pterm, 1 signal)
+writeValue_4_.CE = un1_state40_i ; (1 pterm, 1 signal)
+
+writeValue_6_.D = !( !state_14_.Q & !state_8_.Q & !state_9_.Q & !state_10_.Q
+       & !state_11_.Q & !state_12_.Q & !state_13_.Q ) ; (1 pterm, 7 signals)
+writeValue_6_.C = clock ; (1 pterm, 1 signal)
+writeValue_6_.CE = un1_state40_i ; (1 pterm, 1 signal)
+

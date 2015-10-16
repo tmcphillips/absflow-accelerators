@@ -1,0 +1,105 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// -------------------------------------------------------------------------------------------------
+      Port          1      button_n[1:4]                 button_n                  1          4            1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      button_n_1_                 button_n[1]                       1            0            
+        Port      button_n_2_                 button_n[2]                       1            1            
+        Port      button_n_3_                 button_n[3]                       1            2            
+        Port      button_n_4_                 button_n[4]                       1            3            
+End
+Section Cross Reference File
+Design 'DigitalOrgan' created Tue Feb 14 16:49:22 2012
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst      u3rs_u1rc_u0tff_q                         u3rs.u1rc.u0tff.q
+   Inst   u0rs_u1rc_genblk1_3__uitff_q              u0rs.u1rc.genblk1[3].uitff.q
+   Inst   u0rs_u1rc_genblk1_5__uitff_q              u0rs.u1rc.genblk1[5].uitff.q
+   Inst   u0rs_u1rc_genblk1_6__uitff_q              u0rs.u1rc.genblk1[6].uitff.q
+   Inst   u0rs_u1rc_genblk1_2__uitff_q              u0rs.u1rc.genblk1[2].uitff.q
+   Inst      u1rs_u1rc_u0tff_q                         u1rs.u1rc.u0tff.q
+   Inst      u2rs_u1rc_u0tff_q                         u2rs.u1rc.u0tff.q
+   Inst      u0rs_u1rc_u0tff_q                         u0rs.u1rc.u0tff.q
+   Inst   u0rs_u1rc_genblk1_0__uitff_q              u0rs.u1rc.genblk1[0].uitff.q
+   Inst   u0rs_u1rc_genblk1_10__uitff_q             u0rs.u1rc.genblk1[10].uitff.q
+   Inst   u0rs_u1rc_genblk1_8__uitff_q              u0rs.u1rc.genblk1[8].uitff.q
+   Inst   u0rs_u1rc_genblk1_4__uitff_q              u0rs.u1rc.genblk1[4].uitff.q
+   Inst   u0rs_u1rc_genblk1_1__uitff_q              u0rs.u1rc.genblk1[1].uitff.q
+   Inst   u0rs_u1rc_genblk1_9__uitff_q              u0rs.u1rc.genblk1[9].uitff.q
+   Inst   u0rs_u1rc_genblk1_7__uitff_q              u0rs.u1rc.genblk1[7].uitff.q
+   Inst            button_n_4_                               button_n[4]
+   Inst            button_n_3_                               button_n[3]
+   Inst            button_n_2_                               button_n[2]
+   Inst            button_n_1_                               button_n[1]
+   Inst   u0rs_u1rc_genblk1_1__uitff_counter_i_2_   u0rs.u1rc.genblk1[1].uitff.counter_i[2]
+   Inst   u0rs_u1rc_genblk1_0__uitff_counter_i_1_   u0rs.u1rc.genblk1[0].uitff.counter_i[1]
+   Inst   u0rs_u1rc_genblk1_9__uitff_counter_i_10_  u0rs.u1rc.genblk1[9].uitff.counter_i[10]
+   Inst   u0rs_u1rc_genblk1_8__uitff_counter_i_9_   u0rs.u1rc.genblk1[8].uitff.counter_i[9]
+   Inst   u0rs_u1rc_genblk1_7__uitff_counter_i_8_   u0rs.u1rc.genblk1[7].uitff.counter_i[8]
+   Inst   u0rs_u1rc_genblk1_6__uitff_counter_i_7_   u0rs.u1rc.genblk1[6].uitff.counter_i[7]
+   Inst   u2rs_u1rc_u0tff_noteSource_i_3_           u2rs.u1rc.u0tff.noteSource_i[3]
+   Inst   u1rs_u1rc_u0tff_noteSource_i_2_           u1rs.u1rc.u0tff.noteSource_i[2]
+   Inst   u0rs_u1rc_u0tff_oneMHzClock_i             u0rs.u1rc.u0tff.oneMHzClock_i
+   Inst   u0rs_u1rc_u0tff_counter_i_0_              u0rs.u1rc.u0tff.counter_i[0]
+   Inst   u0rs_u1rc_genblk1_10__uitff_noteSource_i_1_  u0rs.u1rc.genblk1[10].uitff.noteSource_i[1]
+   Inst   u0rs_u1rc_genblk1_4__uitff_counter_i_5_   u0rs.u1rc.genblk1[4].uitff.counter_i[5]
+   Inst   u0rs_u1rc_genblk1_3__uitff_counter_i_4_   u0rs.u1rc.genblk1[3].uitff.counter_i[4]
+   Inst          button_n_i_1_                             button_n_i[1]
+   Inst          button_n_i_2_                             button_n_i[2]
+   Inst          button_n_i_3_                             button_n_i[3]
+   Inst          button_n_i_4_                             button_n_i[4]
+   Inst   u3rs_u1rc_u0tff_noteSource_i_4_           u3rs.u1rc.u0tff.noteSource_i[4]
+   Inst   u0rs_u1rc_genblk1_5__uitff_counter_i_6_   u0rs.u1rc.genblk1[5].uitff.counter_i[6]
+   Inst   u0rs_u1rc_genblk1_2__uitff_counter_i_3_   u0rs.u1rc.genblk1[2].uitff.counter_i[3]
+   Net         notesource_1__n                             noteSource[1]
+   Net         notesource_2__n                             noteSource[2]
+   Net         notesource_3__n                             noteSource[3]
+   Net         notesource_4__n                             noteSource[4]
+   Net       u0rs_counter_0__n                           u0rs.counter[0]
+   Net       u0rs_counter_1__n                           u0rs.counter[1]
+   Net       u0rs_counter_2__n                           u0rs.counter[2]
+   Net       u0rs_counter_3__n                           u0rs.counter[3]
+   Net       u0rs_counter_4__n                           u0rs.counter[4]
+   Net       u0rs_counter_5__n                           u0rs.counter[5]
+   Net       u0rs_counter_6__n                           u0rs.counter[6]
+   Net       u0rs_counter_7__n                           u0rs.counter[7]
+   Net       u0rs_counter_8__n                           u0rs.counter[8]
+   Net       u0rs_counter_9__n                           u0rs.counter[9]
+   Net      u0rs_counter_10__n                          u0rs.counter[10]
+   Net     u0rs_counter_i_8__n                         u0rs.counter_i[8]
+   Net     u0rs_counter_i_7__n                         u0rs.counter_i[7]
+   Net    u0rs_counter_i_10__n                        u0rs.counter_i[10]
+   Net     u0rs_counter_i_9__n                         u0rs.counter_i[9]
+   Net     u0rs_counter_i_2__n                         u0rs.counter_i[2]
+   Net     u0rs_counter_i_1__n                         u0rs.counter_i[1]
+   Net     u0rs_counter_i_5__n                         u0rs.counter_i[5]
+   Net     u0rs_counter_i_4__n                         u0rs.counter_i[4]
+   Net       notesource_i_1__n                           noteSource_i[1]
+   Net     u0rs_counter_i_0__n                         u0rs.counter_i[0]
+   Net       notesource_i_3__n                           noteSource_i[3]
+   Net       notesource_i_2__n                           noteSource_i[2]
+   Net     u0rs_counter_i_3__n                         u0rs.counter_i[3]
+   Net     u0rs_counter_i_6__n                         u0rs.counter_i[6]
+   Net       notesource_i_4__n                           noteSource_i[4]
+   Net         button_n_i_4__n                             button_n_i[4]
+   Net         button_n_i_3__n                             button_n_i[3]
+   Net         button_n_i_2__n                             button_n_i[2]
+   Net         button_n_i_1__n                             button_n_i[1]
+   Net         button_n_c_4__n                             button_n_c[4]
+   Net           button_n_4__n                               button_n[4]
+   Net         button_n_c_3__n                             button_n_c[3]
+   Net           button_n_3__n                               button_n[3]
+   Net         button_n_c_2__n                             button_n_c[2]
+   Net           button_n_2__n                               button_n[2]
+   Net         button_n_c_1__n                             button_n_c[1]
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     button_n_1_
+        Input     oneMHzClock
+        Input     button_n_2_
+        Input     button_n_3_
+        Input     button_n_4_
+        Output     rca
+End

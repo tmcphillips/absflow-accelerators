@@ -1,0 +1,160 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Fri Feb 24 17:13:51 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION vgaClock:*_*_43
+DATA LOCATION reset_n:B_*_16
+DATA LOCATION red_1_:D_6_34
+DATA LOCATION green_1_:D_2_32
+DATA LOCATION blue_1_:C_3_28
+DATA LOCATION red_0_:D_4_33
+DATA LOCATION green_0_:D_0_31
+DATA LOCATION hState_1_:C_6_23
+DATA LOCATION vState_1_:C_2_21
+DATA LOCATION hsync:C_12_26
+DATA LOCATION vsync:C_8_24
+DATA LOCATION blue_0_:C_0_27
+DATA LOCATION hState_0_:C_4_22
+DATA LOCATION vState_0_:C_1_20
+DATA LOCATION pixel_0_:B_2
+DATA LOCATION pixel_1_:C_5
+DATA LOCATION pixel_2_:D_8
+DATA LOCATION pixel_3_:A_5
+DATA LOCATION pixel_4_:B_7
+DATA LOCATION pixel_5_:C_7
+DATA LOCATION N_37_7_0:D_3
+DATA LOCATION pixel_6_:A_2
+DATA LOCATION pixel_7_:A_3
+DATA LOCATION pixel_8_:C_9
+DATA LOCATION pixel_9_:D_12
+DATA LOCATION line_0_:A_6
+DATA LOCATION line_1_:B_6
+DATA LOCATION line_2_:B_4
+DATA LOCATION line_3_:D_5
+DATA LOCATION line_4_:A_9
+DATA LOCATION line_5_:B_3
+DATA LOCATION line_6_:B_5
+DATA LOCATION line_7_:A_10
+DATA LOCATION vstate_1_ns_0_1_0__n:A_4
+DATA LOCATION line_8_:B_9
+DATA LOCATION line_9_:B_10
+DATA LOCATION G_208:D_10
+DATA LOCATION G_212:A_8
+DATA LOCATION G_214:B_8
+DATA LOCATION line_4_9__un1_n:D_1
+DATA LOCATION line11:D_9
+DATA LOCATION N_374:A_12
+DATA LOCATION N_26_i:B_12
+DATA LOCATION N_32_i:B_0
+DATA LOCATION pixel14_i_0_i:D_7
+DATA LOCATION N_91_i:A_7
+DATA LOCATION N_38_i:B_1
+
+// Signals direction
+DATA IO_DIR vgaClock:IN
+DATA IO_DIR reset_n:IN
+DATA IO_DIR red_1_:OUT
+DATA IO_DIR green_1_:OUT
+DATA IO_DIR blue_1_:OUT
+DATA IO_DIR red_0_:OUT
+DATA IO_DIR green_0_:OUT
+DATA IO_DIR hState_1_:OUT
+DATA IO_DIR vState_1_:OUT
+DATA IO_DIR hsync:OUT
+DATA IO_DIR vsync:OUT
+DATA IO_DIR blue_0_:OUT
+DATA IO_DIR hState_0_:OUT
+DATA IO_DIR vState_0_:OUT
+
+// Pterm Expanders
+DATA tEXP vstate_1_ns_0_1_0__n:1
+
+// Global Clocks
+DATA GLB_CLOCK vgaClock:0
+
+// Signals using Shared Clock or CE
+DATA tBCLK red_0_.CE
+DATA tBCLK hState_1_.CE
+DATA tBCLK hState_0_.CE
+
+// Signals using Shared Init Pterm
+DATA tBSR red_0_.AR
+DATA tBSR hState_1_.AR
+DATA tBSR vState_1_.AR
+DATA tBSR hsync.PR
+DATA tBSR vsync.PR
+DATA tBSR blue_0_.AR
+DATA tBSR hState_0_.AR
+DATA tBSR vState_0_.AR
+DATA tBSR pixel_0_.AR
+DATA tBSR pixel_1_.AR
+DATA tBSR pixel_2_.AR
+DATA tBSR pixel_3_.AR
+DATA tBSR pixel_4_.AR
+DATA tBSR pixel_5_.AR
+DATA tBSR pixel_6_.AR
+DATA tBSR pixel_7_.AR
+DATA tBSR pixel_8_.AR
+DATA tBSR pixel_9_.AR
+DATA tBSR line_0_.AR
+DATA tBSR line_1_.AR
+DATA tBSR line_2_.AR
+DATA tBSR line_3_.AR
+DATA tBSR line_4_.AR
+DATA tBSR line_5_.AR
+DATA tBSR line_6_.AR
+DATA tBSR line_7_.AR
+DATA tBSR line_8_.AR
+DATA tBSR line_9_.AR
+
+// Block Load Adders
+DATA tBLA pixel14_i_0_i:3
+DATA tBLA line_3_:3
+DATA tBLA line_2_:3
+DATA tBLA line_1_:3
+DATA tBLA line_0_:3
+DATA tBLA pixel_9_:3
+DATA tBLA pixel_8_:3
+DATA tBLA pixel_7_:3
+DATA tBLA pixel_6_:3
+DATA tBLA pixel_5_:3
+DATA tBLA pixel_4_:3
+DATA tBLA pixel_3_:3
+DATA tBLA pixel_2_:3
+DATA tBLA pixel_1_:3
+DATA tBLA pixel_0_:3
+DATA tBLA vState_0_:3
+DATA tBLA reset_n:3
+DATA tBLA line_9_:2
+DATA tBLA line_8_:2
+DATA tBLA line_7_:2
+DATA tBLA line_6_:2
+DATA tBLA line_5_:2
+DATA tBLA line_4_:2
+DATA tBLA vState_1_:2
+DATA tBLA line11:1
+DATA tBLA line_4_9__un1_n:1
+DATA tBLA hState_0_:1
+DATA tBLA hState_1_:1
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM red_1_
+DATA tOSM green_1_
+DATA tOSM blue_1_
+DATA tOSM red_0_
+DATA tOSM green_0_
+DATA tOSM hState_1_
+DATA tOSM vState_1_
+DATA tOSM hsync
+DATA tOSM vsync
+DATA tOSM blue_0_
+DATA tOSM hState_0_
+DATA tOSM vState_0_

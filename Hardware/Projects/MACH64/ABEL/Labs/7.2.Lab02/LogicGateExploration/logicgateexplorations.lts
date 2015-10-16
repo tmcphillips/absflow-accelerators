@@ -1,0 +1,16 @@
+// TOOL ispLEVER Classic 1.4.01.04.23.l1
+// MODULE logicgateexplorations
+NETWORK Lab01LogicGateExploration
+MODULE logicgateexplorations
+XRESET_SIGNAL !XRESET 0@0ns 1@0ns
+XRESET_SIGNAL XRESET 0@0ns 1@0ns
+VECTOR XTEST_OE PATTERN 1#0ns
+ftrace(logicgateexplorations.tra, "%12t: %b%b->%b%b%b",$time,pb0,pb1,led_and,led_or,led_xor);
+SET INTERNAL_ONLY_ALL_SET$$ [pb0,pb1,led_and,led_or,led_xor]
+BREAK IF INTERNAL_ONLY_ALL_SET$$ ->? DO PRINT
+VECTOR pb0 INIT X PATTERN 1*(1#0,0#2,0#2)
+VECTOR pb1 INIT X PATTERN 1*(1#0,0#1,1#1,0#1,0#1)
+EXPECT led_and INIT X PATTERN 1*(0#0,0#1,0#1,1#1);
+EXPECT led_or INIT X PATTERN 1*(0#0,1#1,1#1,1#1);
+EXPECT led_xor INIT X PATTERN 1*(0#0,0#1,1#1,0#1);
+RUN

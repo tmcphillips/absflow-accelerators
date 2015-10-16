@@ -1,0 +1,10 @@
+BLIFLINK  Top-Down Design Linker
+ispLEVER Classic 1.04 Copyright 1992-2011 Lattice Semiconductor. All Rights Reserved.
+Logical Error 3512: Signal 'q0' in module 'octallatch' has an OE.  An output wire is required for that signal.
+Logical Error 3512: Signal 'q1' in module 'octallatch' has an OE.  An output wire is required for that signal.
+Logical Error 3512: Signal 'q2' in module 'octallatch' has an OE.  An output wire is required for that signal.
+Logical Error 3512: Signal 'q3' in module 'octallatch' has an OE.  An output wire is required for that signal.
+Logical Error 3512: Signal 'q4' in module 'octallatch' has an OE.  An output wire is required for that signal.
+Logical Error 3512: Signal 'q5' in module 'octallatch' has an OE.  An output wire is required for that signal.
+Logical Error 3512: Signal 'q6' in module 'octallatch' has an OE.  An output wire is required for that signal.
+Logical Error 3512: Signal 'q7' in module 'octallatch' has an OE.  An output wire is required for that signal.

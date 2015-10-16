@@ -1,0 +1,23 @@
+MODULE FourBitRippleCounter DEFIN fourbitripplecounter.v
+	SUBMODULE RippleCounter
+		INSTANCE u1rc
+	SUBMODULE Debouncer
+		INSTANCE u1d
+	SUBMODULE SynchronousScaler
+		INSTANCE u1rs
+MODULE RippleScaler DEFIN ripplescaler.v
+	SUBMODULE RippleCounter
+		INSTANCE u1rc
+MODULE RippleCounter DEFIN ripplecounter.v
+	SUBMODULE TFlipFlop
+		INSTANCE u0tff
+MODULE TFlipFlop DEFIN tflipflop.v
+MODULE SynchronousScaler DEFIN synchronousscaler.v
+MODULE Debouncer DEFIN debouncer.v
+DEPEND INCLUDED_FILE tflipflop.v
+DEPEND INCLUDED_FILE ripplecounter.v
+DEPEND INCLUDED_FILE tflipflop.v
+DEPEND INCLUDED_FILE ripplecounter.v
+DEPEND INCLUDED_FILE ripplescaler.v
+DEPEND INCLUDED_FILE synchronousscaler.v
+DEPEND INCLUDED_FILE debouncer.v

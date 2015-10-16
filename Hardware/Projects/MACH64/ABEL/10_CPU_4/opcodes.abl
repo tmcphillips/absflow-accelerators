@@ -1,0 +1,27 @@
+
+	// non-jump operations (!op4 & !op3)
+	OP_NOP  = ^b00000;
+	OP_LDA 	= ^b00001;
+	OP_LDB	= ^b00010;
+
+	// jump operations (!op4 && op3)
+	OP_JMP  = ^b01000;
+	OP_JZ   = ^b01001;
+	OP_JNZ  = ^b01010;
+	OP_JC   = ^b01011;
+	OP_JNC  = ^b01100;
+
+	// ALU operations leaving results in A (op4, !op3)
+	OP_AND  = ^b10000;
+	OP_OR   = ^b10001;
+	OP_XOR  = ^b10010;
+	OP_NOT  = ^b10011;
+	OP_INCA = ^b10100;
+	OP_DECA	= ^b10101;
+	OP_SHL  = ^b10110;
+	OP_SHR  = ^b10111;
+
+	// ALU operations leaving results in B (op4, op3)
+	OP_INCB = ^b11100;
+	OP_DECB	= ^b11101;
+

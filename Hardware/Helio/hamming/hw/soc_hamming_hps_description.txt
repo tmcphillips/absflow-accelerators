@@ -1,0 +1,2 @@
+Created on:Sunday, February 16, 2014
+Based on:soc_hamming

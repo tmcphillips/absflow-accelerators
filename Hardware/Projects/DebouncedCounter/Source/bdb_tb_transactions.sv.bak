@@ -1,0 +1,90 @@
+package bdb_tb_transactions_pkg;
+  
+typedef enum {press_op, reset_op} operation_t;
+
+class bdb_operation;
+  
+  operation_t op;
+  logic [3:0] hold;
+  logic [3:0] waits;
+  integer seed = 42;
+  
+  function new (
+    operation_t iop     = press_op,
+    logic [3:0] ihold   = 1,
+    logic [3:0] iwaits  = 1
+    );
+    
+    assert(ihold > 0);
+    assert(iwaits >= 0)
+    
+    op    = iop;
+    hold  = ihold;
+    waits  = iwaits;
+  
+  endfunction
+  
+  function bdb_operation clone();
+    bdb_operation c;
+    c = new(op, hold, waits);
+    return c;  
+  endfunction
+ 
+  function bit comp(bdb_operation t);
+    return ((t.op == op) && (t.hold == hold) && (t.waits == waits));
+  endfunction;
+
+  function string convert2string;
+    string str;
+    $sformat(str, "{ op: %7s   hold: %3d   waits: %3d }",
+              op, hold, waits);
+    return str; 
+  endfunction;
+  
+  function operation_t random_operation();
+    operation_t operation;
+    operation = operation_t'($dist_uniform(seed,0,1));
+    return operation;
+  endfunction
+  
+  task random();
+    op = random_operation;
+    hold = $dist_uniform(seed,1,15);
+    waits = $dist_uniform(seed,0,15);
+  endtask;    
+
+  task random_short();
+    op = random_operation;
+    hold = $dist_uniform(seed,1,6);
+    waits = $dist_uniform(seed,0,6);
+  endtask;    
+
+
+endclass
+
+
+
+class bdb_result;
+  
+  function new();
+  endfunction;
+ 
+  function bdb_result clone();
+    bdb_result c;
+    c = new();
+    return c;
+  endfunction;
+  
+  function bit comp (bdb_result r);
+    return 1;
+  endfunction;  
+  
+  function string convert2string;
+    string str;
+    $sformat(str, "{ button pressed }");
+    return str;
+  endfunction;
+  
+endclass
+
+endpackage

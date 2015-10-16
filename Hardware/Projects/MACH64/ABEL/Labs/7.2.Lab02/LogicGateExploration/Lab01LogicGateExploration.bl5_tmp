@@ -1,0 +1,16 @@
+#$ TOOL   ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE   Sun Nov 27 11:15:53 2011
+#$ JEDECFILE   logicgateexplorations
+#$ MODULE   LogicGateExplorations
+#$ PINS 5 pb0 pb1 led_and led_or led_xor
+.model logicgateexplorations
+.inputs pb1.BLIF pb0.BLIF
+.outputs led_and led_or- led_xor
+.names pb1.BLIF pb0.BLIF led_and
+00 1
+.names pb1.BLIF pb0.BLIF led_or-
+11 1
+.names pb1.BLIF pb0.BLIF led_xor
+10 1
+01 1
+.end

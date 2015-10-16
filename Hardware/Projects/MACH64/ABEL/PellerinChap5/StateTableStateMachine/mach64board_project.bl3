@@ -1,0 +1,201 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:15:21 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE statetablestatemachine
+#$ PINS 7 clock:18 step:20 oe:21 hold:22 reset:23 q1:31 q0:32
+#$ NODES 12 debouncedStep>debounced'co,o'  debouncedStep/lastSample clockScaler/s9 \
+#  clockScaler/s8 clockScaler/s7 clockScaler/s6 clockScaler/s5 clockScaler/s4 \
+#  clockScaler/s3 clockScaler/s2 clockScaler/s1 clockScaler/s0
+.model statetablestatemachine
+.inputs clock.BLIF step.BLIF debouncedStep>debounced.BLIF oe.BLIF q1.FB q0.FB \
+reset.BLIF hold.BLIF debouncedStep/lastSample.BLIF clockScaler/s9.BLIF \
+clockScaler/s8.BLIF clockScaler/s7.BLIF clockScaler/s6.BLIF \
+clockScaler/s5.BLIF clockScaler/s4.BLIF clockScaler/s3.BLIF \
+clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF
+.outputs q1.C q0.C q1.OE q0.OE q0.REG q1.REG debouncedStep>debounced.REG \
+debouncedStep>debounced.C debouncedStep/lastSample.REG \
+debouncedStep/lastSample.C clockScaler/s9.C clockScaler/s8.C clockScaler/s7.C \
+clockScaler/s6.C clockScaler/s5.C clockScaler/s4.C clockScaler/s3.REG \
+clockScaler/s3.C clockScaler/s2.REG clockScaler/s2.C clockScaler/s1.REG \
+clockScaler/s1.C clockScaler/s0.REG clockScaler/s0.C clockScaler/s9.REG.X1 \
+clockScaler/s9.REG.X2 clockScaler/s8.REG.X1 clockScaler/s8.REG.X2 \
+clockScaler/s7.REG.X1 clockScaler/s7.REG.X2 clockScaler/s6.REG.X1 \
+clockScaler/s6.REG.X2 clockScaler/s5.REG.X1 clockScaler/s5.REG.X2 \
+clockScaler/s4.REG.X1 clockScaler/s4.REG.X2
+.names oe.BLIF q1.OE
+0 1
+1 0
+.names oe.BLIF q0.OE
+0 1
+1 0
+.names q1.FB q0.FB reset.BLIF hold.BLIF q0.REG
+0-10 1
+-011 1
+1--0 0
+-1-1 0
+--0- 0
+.names q1.FB q0.FB reset.BLIF hold.BLIF q1.REG
+0111 1
+101- 1
+0--0 0
+00-- 0
+11-- 0
+--0- 0
+.names step.BLIF debouncedStep/lastSample.BLIF debouncedStep>debounced.REG
+01 1
+1- 0
+-0 0
+.names clockScaler/s3.BLIF clockScaler/s2.BLIF clockScaler/s1.BLIF \
+clockScaler/s0.BLIF clockScaler/s3.REG
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF \
+clockScaler/s2.REG
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names clockScaler/s1.BLIF clockScaler/s0.BLIF clockScaler/s1.REG
+10 1
+01 1
+00 0
+11 0
+.names clockScaler/s0.BLIF clockScaler/s0.REG
+0 1
+1 0
+.names debouncedStep>debounced.BLIF q1.C
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q0.C
+1 1
+0 0
+.names clockScaler/s9.BLIF debouncedStep>debounced.C
+1 1
+0 0
+.names step.BLIF debouncedStep/lastSample.REG
+0 1
+1 0
+.names clockScaler/s9.BLIF debouncedStep/lastSample.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s9.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s8.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s7.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s6.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s5.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s4.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s3.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s2.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s1.C
+1 1
+0 0
+.names clock.BLIF clockScaler/s0.C
+1 1
+0 0
+.names clockScaler/s9.BLIF clockScaler/s9.REG.X1
+1 1
+0 0
+.names clockScaler/s9.BLIF clockScaler/s8.BLIF clockScaler/s7.BLIF \
+clockScaler/s6.BLIF clockScaler/s5.BLIF clockScaler/s4.BLIF \
+clockScaler/s3.BLIF clockScaler/s2.BLIF clockScaler/s1.BLIF \
+clockScaler/s0.BLIF clockScaler/s9.REG.X2
+-111111111 1
+-0-------- 0
+--0------- 0
+---0------ 0
+----0----- 0
+-----0---- 0
+------0--- 0
+-------0-- 0
+--------0- 0
+---------0 0
+.names clockScaler/s8.BLIF clockScaler/s8.REG.X1
+1 1
+0 0
+.names clockScaler/s8.BLIF clockScaler/s7.BLIF clockScaler/s6.BLIF \
+clockScaler/s5.BLIF clockScaler/s4.BLIF clockScaler/s3.BLIF \
+clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF \
+clockScaler/s8.REG.X2
+-11111111 1
+-0------- 0
+--0------ 0
+---0----- 0
+----0---- 0
+-----0--- 0
+------0-- 0
+-------0- 0
+--------0 0
+.names clockScaler/s7.BLIF clockScaler/s7.REG.X1
+1 1
+0 0
+.names clockScaler/s7.BLIF clockScaler/s6.BLIF clockScaler/s5.BLIF \
+clockScaler/s4.BLIF clockScaler/s3.BLIF clockScaler/s2.BLIF \
+clockScaler/s1.BLIF clockScaler/s0.BLIF clockScaler/s7.REG.X2
+-1111111 1
+-0------ 0
+--0----- 0
+---0---- 0
+----0--- 0
+-----0-- 0
+------0- 0
+-------0 0
+.names clockScaler/s6.BLIF clockScaler/s6.REG.X1
+1 1
+0 0
+.names clockScaler/s6.BLIF clockScaler/s5.BLIF clockScaler/s4.BLIF \
+clockScaler/s3.BLIF clockScaler/s2.BLIF clockScaler/s1.BLIF \
+clockScaler/s0.BLIF clockScaler/s6.REG.X2
+-111111 1
+-0----- 0
+--0---- 0
+---0--- 0
+----0-- 0
+-----0- 0
+------0 0
+.names clockScaler/s5.BLIF clockScaler/s5.REG.X1
+1 1
+0 0
+.names clockScaler/s5.BLIF clockScaler/s4.BLIF clockScaler/s3.BLIF \
+clockScaler/s2.BLIF clockScaler/s1.BLIF clockScaler/s0.BLIF \
+clockScaler/s5.REG.X2
+-11111 1
+-0---- 0
+--0--- 0
+---0-- 0
+----0- 0
+-----0 0
+.names clockScaler/s4.BLIF clockScaler/s4.REG.X1
+1 1
+0 0
+.names clockScaler/s4.BLIF clockScaler/s3.BLIF clockScaler/s2.BLIF \
+clockScaler/s1.BLIF clockScaler/s0.BLIF clockScaler/s4.REG.X2
+-1111 1
+-0--- 0
+--0-- 0
+---0- 0
+----0 0
+.end

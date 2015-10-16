@@ -1,0 +1,101 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:21:36 2012
+#$ MODULE rollingupdowncounter
+#$ JEDECFILE rollingupdowncounter
+#$ PINS 11 clock:18 up:14 down:15 reset:31 a:20 b:21 c:22 d:23 e:24 f:26 g:27
+#$ NODES 35 counterClock>oneMHzClock'co'  counterClock>period0'co'  \
+#  counterClock>period1'co'  counterClock>period2'co'  counterClock>period3'co'  \
+#  counterClock>period4'co'  counterClock>period5'co'  counterClock>period6'co'  \
+#  counterClock>period7'co'  counterClock>period8'co'  counterClock>period9'co'  \
+#  counterClock>millisecondClock'co'  bcd>clock'co'  bcd>down'co'  bcd>m0'co'  bcd>m1'co'  bcd>m2'co'  \
+#  bcd>m3'co'  bcd>reset'co'  bcd>up'co'  bcd>d0'co'  bcd>d1'co'  bcd>d2'co'  bcd>d3'co'  led>d0'co'  led>d1'co'  \
+#  led>d2'co'  led>d3'co'  led>a'co'  led>b'co'  led>c'co'  led>d'co'  led>e'co'  led>f'co'  led>g'co' 
+#$ INTERFACE millisecondclock  12 oneMHzClock'i'  period0'0,i'  period1'0,i'  period2'0,i'  period3'0,i'  period4'1,i'  \
+#  period5'0,i'  period6'1,i'  period7'1,i'  period8'1,i'  period9'1,i'  millisecondClock'o' 
+#$ INTERFACE boundedupdowncounter  12 clock'i'  down'i'  m0'1,i'  m1'0,i'  m2'0,i'  m3'1,i'  reset'i'  up'i'  d0'o'  d1'o'  d2'o'  d3'o' 
+#$ INTERFACE hextosevensegment  11 d0'i'  d1'i'  d2'i'  d3'i'  a'o'  b'o'  c'o'  d'o'  e'o'  f'o'  g'o' 
+#$ INSTANCE counterClock millisecondclock 12 counterClock>oneMHzClock \
+#  counterClock>period0 counterClock>period1 counterClock>period2 \
+#  counterClock>period3 counterClock>period4 counterClock>period5 \
+#  counterClock>period6 counterClock>period7 counterClock>period8 \
+#  counterClock>period9 counterClock>millisecondClock
+#$ INSTANCE bcd boundedupdowncounter 12 bcd>clock bcd>down bcd>m0 bcd>m1 bcd>m2 bcd>m3 \
+#  bcd>reset bcd>up bcd>d0 bcd>d1 bcd>d2 bcd>d3
+#$ INSTANCE led hextosevensegment 11 led>d0 led>d1 led>d2 led>d3 led>a led>b led>c led>d \
+#  led>e led>f led>g
+.model rollingupdowncounter
+.inputs clock.BLIF counterClock>millisecondClock.BLIF up.BLIF down.BLIF \
+reset.BLIF bcd>d3.BLIF bcd>d2.BLIF bcd>d1.BLIF bcd>d0.BLIF led>a.BLIF \
+led>b.BLIF led>c.BLIF led>d.BLIF led>e.BLIF led>f.BLIF led>g.BLIF
+.outputs counterClock>oneMHzClock counterClock>period0 counterClock>period1 \
+counterClock>period2 counterClock>period3 counterClock>period4 \
+counterClock>period5 counterClock>period6 counterClock>period7 \
+counterClock>period8 counterClock>period9 bcd>clock bcd>down bcd>m0 bcd>m1 \
+bcd>m2 bcd>m3 bcd>reset bcd>up led>d0 led>d1 led>d2 led>d3 a b c d e f g
+.names counterClock>period0
+.names counterClock>period1
+.names counterClock>period2
+.names counterClock>period3
+.names counterClock>period4
+ 1
+.names counterClock>period5
+.names counterClock>period6
+ 1
+.names counterClock>period7
+ 1
+.names counterClock>period8
+ 1
+.names counterClock>period9
+ 1
+.names down.BLIF bcd>down
+0 1
+.names bcd>m0
+ 1
+.names bcd>m1
+.names bcd>m2
+.names bcd>m3
+ 1
+.names reset.BLIF bcd>reset
+0 1
+.names up.BLIF bcd>up
+0 1
+.names clock.BLIF counterClock>oneMHzClock
+1 1
+0 0
+.names counterClock>millisecondClock.BLIF bcd>clock
+1 1
+0 0
+.names bcd>d0.BLIF led>d0
+1 1
+0 0
+.names bcd>d1.BLIF led>d1
+1 1
+0 0
+.names bcd>d2.BLIF led>d2
+1 1
+0 0
+.names bcd>d3.BLIF led>d3
+1 1
+0 0
+.names led>a.BLIF a
+1 1
+0 0
+.names led>b.BLIF b
+1 1
+0 0
+.names led>c.BLIF c
+1 1
+0 0
+.names led>d.BLIF d
+1 1
+0 0
+.names led>e.BLIF e
+1 1
+0 0
+.names led>f.BLIF f
+1 1
+0 0
+.names led>g.BLIF g
+1 1
+0 0
+.end

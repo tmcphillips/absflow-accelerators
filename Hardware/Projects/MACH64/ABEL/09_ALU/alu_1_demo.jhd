@@ -1,0 +1,3 @@
+MODULE ALU_1_demo
+	SUBMODULE alu_1
+		INSTANCE alu

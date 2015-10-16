@@ -1,0 +1,322 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+N_5_i = !octaveSelect_n_1_ & octaveSelect_n_0_ & u0rc_u0tff_q.Q
+    # !octaveSelect_n_1_ & oneMHzClock & !octaveSelect_n_0_
+    # octaveSelect_n_1_ & u0rc_genblk1_0__uitff_q.Q ; (3 pterms, 5 signals)
+
+lfsr_0_.D = lfsr_1_.Q ; (1 pterm, 1 signal)
+lfsr_0_.C = u1cs_outclock.Q ; (1 pterm, 1 signal)
+lfsr_0_.AR = !reset_n ; (1 pterm, 1 signal)
+
+lfsr_1_.D = lfsr_2_.Q ; (1 pterm, 1 signal)
+lfsr_1_.C = u1cs_outclock.Q ; (1 pterm, 1 signal)
+lfsr_1_.AP = !reset_n ; (1 pterm, 1 signal)
+
+lfsr_2_.D = lfsr_3_.Q ; (1 pterm, 1 signal)
+lfsr_2_.C = u1cs_outclock.Q ; (1 pterm, 1 signal)
+lfsr_2_.AP = !reset_n ; (1 pterm, 1 signal)
+
+lfsr_3_.D = lfsr_0_.Q & !lfsr_4_.Q
+    # !lfsr_0_.Q & lfsr_4_.Q ; (2 pterms, 2 signals)
+lfsr_3_.C = u1cs_outclock.Q ; (1 pterm, 1 signal)
+lfsr_3_.AP = !reset_n ; (1 pterm, 1 signal)
+
+lfsr_4_.D = lfsr_0_.Q & !lfsr_5_.Q
+    # !lfsr_0_.Q & lfsr_5_.Q ; (2 pterms, 2 signals)
+lfsr_4_.C = u1cs_outclock.Q ; (1 pterm, 1 signal)
+lfsr_4_.AP = !reset_n ; (1 pterm, 1 signal)
+
+lfsr_5_.D = lfsr_6_.Q ; (1 pterm, 1 signal)
+lfsr_5_.C = u1cs_outclock.Q ; (1 pterm, 1 signal)
+lfsr_5_.AP = !reset_n ; (1 pterm, 1 signal)
+
+lfsr_6_.D = lfsr_7_.Q ; (1 pterm, 1 signal)
+lfsr_6_.C = u1cs_outclock.Q ; (1 pterm, 1 signal)
+lfsr_6_.AP = !reset_n ; (1 pterm, 1 signal)
+
+lfsr_7_.D = lfsr_0_.Q ; (1 pterm, 1 signal)
+lfsr_7_.C = u1cs_outclock.Q ; (1 pterm, 1 signal)
+lfsr_7_.AP = !reset_n ; (1 pterm, 1 signal)
+
+noteOutC = !button_n_1_ & noiseOn_n & u1cs_outclock.Q
+    # !button_n_1_ & u1cs_outclock.Q & lfsr_0_.Q ; (2 pterms, 4 signals)
+
+noteOutD = noiseOn_n & !button_n_2_ & u2cs_outclock.Q
+    # !button_n_2_ & u2cs_outclock.Q & lfsr_0_.Q ; (2 pterms, 4 signals)
+
+noteOutE = noiseOn_n & !button_n_3_ & u3cs_outclock.Q
+    # !button_n_3_ & u3cs_outclock.Q & lfsr_0_.Q ; (2 pterms, 4 signals)
+
+noteOutF = noiseOn_n & !button_n_4_ & u4cs_outclock.Q
+    # !button_n_4_ & u4cs_outclock.Q & lfsr_0_.Q ; (2 pterms, 4 signals)
+
+u0rc_genblk1_0__uitff_q.D = !u0rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u0rc_genblk1_0__uitff_q.C = !u0rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u0rc_u0tff_q.D = !u0rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u0rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u1cs_count12_7_n = u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q
+       & !u1cs_count_3_.Q & u1cs_count_4_.Q & !u1cs_count_5_.Q
+       & u1cs_count_6_.Q & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & !u1cs_count_5_.Q & u1cs_count_6_.Q
+       & u1cs_count_7_.Q & u1cs_count_8_.Q ; (2 pterms, 9 signals)
+
+u1cs_count_0_.D = !( !u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & !u1cs_count_5_.Q & u1cs_count_6_.Q
+       & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # u1cs_count_0_.Q ) ; (2 pterms, 9 signals)
+u1cs_count_0_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_count_1_.D = u1cs_count_0_.Q & !u1cs_count_1_.Q
+    # !u1cs_count_0_.Q & u1cs_count_1_.Q ; (2 pterms, 2 signals)
+u1cs_count_1_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_count_2_.D = !( !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & !u1cs_count_5_.Q & u1cs_count_6_.Q
+       & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q
+    # !u1cs_count_1_.Q & !u1cs_count_2_.Q
+    # !u1cs_count_0_.Q & !u1cs_count_2_.Q ) ; (4 pterms, 9 signals)
+u1cs_count_2_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_count_3_.D.X1 = u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q
+    # !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & !u1cs_count_5_.Q & u1cs_count_6_.Q
+       & u1cs_count_7_.Q & u1cs_count_8_.Q ; (2 pterms, 9 signals)
+u1cs_count_3_.D.X2 = u1cs_count_3_.Q ; (1 pterm, 1 signal)
+u1cs_count_3_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_count_4_.D.X1 = !u1cs_count_0_.Q & u1cs_count_4_.Q & u1cs_count12_7_n
+    # u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q ; (2 pterms, 6 signals)
+u1cs_count_4_.D.X2 = u1cs_count_4_.Q ; (1 pterm, 1 signal)
+u1cs_count_4_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_count_5_.D = u1cs_count_5_.Q & !u1cs_n_17_n
+    # !u1cs_count_5_.Q & u1cs_n_17_n ; (2 pterms, 2 signals)
+u1cs_count_5_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_count_6_.D = !( u1cs_count_5_.Q & u1cs_count_6_.Q & u1cs_n_17_n
+    # !u1cs_count_6_.Q & !u1cs_n_17_n
+    # !u1cs_count_5_.Q & !u1cs_count_6_.Q
+    # !u1cs_count_0_.Q & u1cs_count12_7_n ) ; (4 pterms, 5 signals)
+u1cs_count_6_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_count_7_.D = !( u1cs_count_5_.Q & u1cs_count_6_.Q & u1cs_count_7_.Q
+       & u1cs_n_17_n
+    # !u1cs_count_7_.Q & !u1cs_n_17_n
+    # !u1cs_count_6_.Q & !u1cs_count_7_.Q
+    # !u1cs_count_5_.Q & !u1cs_count_7_.Q
+    # !u1cs_count_0_.Q & u1cs_count12_7_n ) ; (5 pterms, 6 signals)
+u1cs_count_7_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_count_8_.T = u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q
+       & u1cs_count_3_.Q & u1cs_count_4_.Q & u1cs_count_5_.Q & u1cs_count_6_.Q
+       & u1cs_count_7_.Q
+    # !u1cs_count_0_.Q & u1cs_count_8_.Q & u1cs_count12_7_n ; (2 pterms, 10 signals)
+u1cs_count_8_.C = N_5_i ; (1 pterm, 1 signal)
+
+u1cs_n_17_n = u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q
+       & u1cs_count_3_.Q & u1cs_count_4_.Q ; (1 pterm, 5 signals)
+
+u1cs_outclock.D = !u1cs_outclock.Q & !u1cs_count_0_.Q & u1cs_count12_7_n
+    # u1cs_outclock.Q & u1cs_count_0_.Q
+    # u1cs_outclock.Q & !u1cs_count12_7_n ; (3 pterms, 3 signals)
+u1cs_outclock.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count26_n = !u2cs_count_0_.Q & !u2cs_count_1_.Q & !u2cs_count_2_.Q
+       & u2cs_count_3_.Q & !u2cs_count_4_.Q & u2cs_count_5_.Q
+       & !u2cs_count_6_.Q & u2cs_count_7_.Q & u2cs_count_8_.Q ; (1 pterm, 9 signals)
+
+u2cs_count_0_.D = !( !u2cs_count_1_.Q & !u2cs_count_2_.Q & u2cs_count_3_.Q
+       & !u2cs_count_4_.Q & u2cs_count_5_.Q & !u2cs_count_6_.Q
+       & u2cs_count_7_.Q & u2cs_count_8_.Q
+    # u2cs_count_0_.Q ) ; (2 pterms, 9 signals)
+u2cs_count_0_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count_1_.D = u2cs_count_0_.Q & !u2cs_count_1_.Q
+    # !u2cs_count_0_.Q & u2cs_count_1_.Q ; (2 pterms, 2 signals)
+u2cs_count_1_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count_2_.D = u2cs_count_0_.Q & u2cs_count_1_.Q & !u2cs_count_2_.Q
+    # !u2cs_count_1_.Q & u2cs_count_2_.Q
+    # !u2cs_count_0_.Q & u2cs_count_2_.Q ; (3 pterms, 3 signals)
+u2cs_count_2_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count_3_.D.X1 = u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q
+    # !u2cs_count_0_.Q & !u2cs_count_1_.Q & !u2cs_count_2_.Q & u2cs_count_3_.Q
+       & !u2cs_count_4_.Q & u2cs_count_5_.Q & !u2cs_count_6_.Q
+       & u2cs_count_7_.Q & u2cs_count_8_.Q ; (2 pterms, 9 signals)
+u2cs_count_3_.D.X2 = u2cs_count_3_.Q ; (1 pterm, 1 signal)
+u2cs_count_3_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count_4_.D.X1 = u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q
+       & u2cs_count_3_.Q ; (1 pterm, 4 signals)
+u2cs_count_4_.D.X2 = u2cs_count_4_.Q ; (1 pterm, 1 signal)
+u2cs_count_4_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count_5_.D = u2cs_count_5_.Q & !u2cs_n_17_n & !u2cs_count26_n
+    # !u2cs_count_5_.Q & u2cs_n_17_n & !u2cs_count26_n ; (2 pterms, 3 signals)
+u2cs_count_5_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count_6_.D = u2cs_count_5_.Q & !u2cs_count_6_.Q & u2cs_n_17_n
+    # !u2cs_count_5_.Q & u2cs_count_6_.Q
+    # u2cs_count_6_.Q & !u2cs_n_17_n ; (3 pterms, 3 signals)
+u2cs_count_6_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count_7_.D = u2cs_count_5_.Q & u2cs_count_6_.Q & !u2cs_count_7_.Q
+       & u2cs_n_17_n & !u2cs_count26_n
+    # u2cs_count_7_.Q & !u2cs_n_17_n & !u2cs_count26_n
+    # !u2cs_count_6_.Q & u2cs_count_7_.Q & !u2cs_count26_n
+    # !u2cs_count_5_.Q & u2cs_count_7_.Q & !u2cs_count26_n ; (4 pterms, 5 signals)
+u2cs_count_7_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_count_8_.D.X1 = u2cs_count_8_.Q & !u2cs_count26_n ; (1 pterm, 2 signals)
+u2cs_count_8_.D.X2 = u2cs_count_5_.Q & u2cs_count_6_.Q & u2cs_count_7_.Q
+       & u2cs_n_17_n & !u2cs_count26_n ; (1 pterm, 5 signals)
+u2cs_count_8_.C = N_5_i ; (1 pterm, 1 signal)
+
+u2cs_n_17_n = u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q
+       & u2cs_count_3_.Q & u2cs_count_4_.Q ; (1 pterm, 5 signals)
+
+u2cs_outclock.D = u2cs_outclock.Q & !u2cs_count26_n
+    # !u2cs_outclock.Q & u2cs_count26_n ; (2 pterms, 2 signals)
+u2cs_outclock.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count40_n = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q ; (1 pterm, 9 signals)
+
+u3cs_count_0_.D = !( u3cs_count_1_.Q & !u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q
+    # u3cs_count_0_.Q ) ; (2 pterms, 9 signals)
+u3cs_count_0_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count_1_.D = !( !u3cs_count_0_.Q & !u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q
+    # !u3cs_count_0_.Q & !u3cs_count_1_.Q ) ; (3 pterms, 9 signals)
+u3cs_count_1_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count_2_.D = u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+    # !u3cs_count_1_.Q & u3cs_count_2_.Q
+    # !u3cs_count_0_.Q & u3cs_count_2_.Q ; (3 pterms, 3 signals)
+u3cs_count_2_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count_3_.D = u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q
+       & !u3cs_count_3_.Q & !u3cs_count40_n
+    # !u3cs_count_2_.Q & u3cs_count_3_.Q & !u3cs_count40_n
+    # !u3cs_count_1_.Q & u3cs_count_3_.Q & !u3cs_count40_n
+    # !u3cs_count_0_.Q & u3cs_count_3_.Q & !u3cs_count40_n ; (4 pterms, 5 signals)
+u3cs_count_3_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count_4_.D.X1 = u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q
+       & u3cs_count_3_.Q & !u3cs_count40_n ; (1 pterm, 5 signals)
+u3cs_count_4_.D.X2 = u3cs_count_4_.Q & !u3cs_count40_n ; (1 pterm, 2 signals)
+u3cs_count_4_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count_5_.D = u3cs_count_3_.Q & u3cs_count_4_.Q & !u3cs_count_5_.Q
+       & u3cs_n_11_n & !u3cs_count40_n
+    # u3cs_count_5_.Q & !u3cs_n_11_n & !u3cs_count40_n
+    # !u3cs_count_4_.Q & u3cs_count_5_.Q & !u3cs_count40_n
+    # !u3cs_count_3_.Q & u3cs_count_5_.Q & !u3cs_count40_n ; (4 pterms, 5 signals)
+u3cs_count_5_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count_6_.D.X1 = u3cs_count_6_.Q & !u3cs_count40_n ; (1 pterm, 2 signals)
+u3cs_count_6_.D.X2 = u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q
+       & u3cs_n_11_n & !u3cs_count40_n ; (1 pterm, 5 signals)
+u3cs_count_6_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count_7_.D = u3cs_count_7_.Q & !u3cs_n_23_n
+    # !u3cs_count_7_.Q & u3cs_n_23_n ; (2 pterms, 2 signals)
+u3cs_count_7_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_count_8_.D = u3cs_count_7_.Q & !u3cs_count_8_.Q & u3cs_n_23_n
+       & !u3cs_count40_n
+    # u3cs_count_8_.Q & !u3cs_n_23_n & !u3cs_count40_n
+    # !u3cs_count_7_.Q & u3cs_count_8_.Q & !u3cs_count40_n ; (3 pterms, 4 signals)
+u3cs_count_8_.C = N_5_i ; (1 pterm, 1 signal)
+
+u3cs_n_11_n = u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q ; (1 pterm, 3 signals)
+
+u3cs_n_23_n = u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q ; (1 pterm, 7 signals)
+
+u3cs_outclock.D = u3cs_outclock.Q & !u3cs_count40_n
+    # !u3cs_outclock.Q & u3cs_count40_n ; (2 pterms, 2 signals)
+u3cs_outclock.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_0_.D = !( !u4cs_count_1_.Q & u4cs_count_2_.Q & !u4cs_count_3_.Q
+       & !u4cs_count_4_.Q & u4cs_count_5_.Q & u4cs_count_6_.Q
+       & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # u4cs_count_0_.Q ) ; (2 pterms, 9 signals)
+u4cs_count_0_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_1_.D = u4cs_count_0_.Q & !u4cs_count_1_.Q
+    # !u4cs_count_0_.Q & u4cs_count_1_.Q ; (2 pterms, 2 signals)
+u4cs_count_1_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_2_.D = !( !u4cs_count_0_.Q & !u4cs_count_1_.Q & !u4cs_count_3_.Q
+       & !u4cs_count_4_.Q & u4cs_count_5_.Q & u4cs_count_6_.Q
+       & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+    # !u4cs_count_1_.Q & !u4cs_count_2_.Q
+    # !u4cs_count_0_.Q & !u4cs_count_2_.Q ) ; (4 pterms, 9 signals)
+u4cs_count_2_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_3_.D = u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q
+    # !u4cs_count_2_.Q & u4cs_count_3_.Q
+    # !u4cs_count_1_.Q & u4cs_count_3_.Q
+    # !u4cs_count_0_.Q & u4cs_count_3_.Q ; (4 pterms, 4 signals)
+u4cs_count_3_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_4_.D.X1 = u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+       & u4cs_count_3_.Q ; (1 pterm, 4 signals)
+u4cs_count_4_.D.X2 = u4cs_count_4_.Q ; (1 pterm, 1 signal)
+u4cs_count_4_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_5_.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & !u4cs_count_4_.Q & u4cs_count_5_.Q
+       & u4cs_count_6_.Q & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q & u4cs_count_3_.Q
+       & u4cs_count_4_.Q ; (2 pterms, 9 signals)
+u4cs_count_5_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_6_.D = !( !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & !u4cs_count_4_.Q & u4cs_count_5_.Q
+       & u4cs_count_6_.Q & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # !u4cs_count_6_.Q & !u4cs_n_20_n
+    # u4cs_count_6_.Q & u4cs_n_20_n ) ; (3 pterms, 10 signals)
+u4cs_count_6_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_7_.D = u4cs_count_6_.Q & !u4cs_count_7_.Q & u4cs_n_20_n
+    # !u4cs_count_6_.Q & u4cs_count_7_.Q
+    # u4cs_count_7_.Q & !u4cs_n_20_n ; (3 pterms, 3 signals)
+u4cs_count_7_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_count_8_.D.X1 = u4cs_count_6_.Q & u4cs_count_7_.Q & u4cs_n_20_n
+    # !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q & !u4cs_count_3_.Q
+       & !u4cs_count_4_.Q & u4cs_count_5_.Q & u4cs_count_6_.Q
+       & !u4cs_count_7_.Q & u4cs_count_8_.Q ; (2 pterms, 10 signals)
+u4cs_count_8_.D.X2 = u4cs_count_8_.Q ; (1 pterm, 1 signal)
+u4cs_count_8_.C = N_5_i ; (1 pterm, 1 signal)
+
+u4cs_n_20_n = u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+       & u4cs_count_3_.Q & u4cs_count_4_.Q & u4cs_count_5_.Q ; (1 pterm, 6 signals)
+
+u4cs_outclock.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & !u4cs_count_4_.Q & u4cs_count_5_.Q
+       & u4cs_count_6_.Q & !u4cs_count_7_.Q & u4cs_count_8_.Q ; (1 pterm, 9 signals)
+u4cs_outclock.C = N_5_i ; (1 pterm, 1 signal)
+

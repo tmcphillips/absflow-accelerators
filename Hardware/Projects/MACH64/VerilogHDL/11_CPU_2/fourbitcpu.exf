@@ -1,0 +1,293 @@
+Section Type   Array Num   Name                     Real Name          Base     Number     Increment
+// ------------------------------------------------------------------------------------------
+      Port          1      a_reg[3:0]                    a_reg                  3          4            -1
+      Port          2      b_reg[3:0]                    b_reg                  3          4            -1
+      Port          3      pc[2:0]                       pc                  2          3            -1
+End
+Section Member   Rename                   Array-Notation          Array Number     Index
+// -------------------------------------------------------------------------------------
+        Port      a_reg_3_                    a_reg[3]                       1            0            
+        Port      a_reg_2_                    a_reg[2]                       1            1            
+        Port      a_reg_1_                    a_reg[1]                       1            2            
+        Port      a_reg_0_                    a_reg[0]                       1            3            
+        Port      b_reg_3_                    b_reg[3]                       2            0            
+        Port      b_reg_2_                    b_reg[2]                       2            1            
+        Port      b_reg_1_                    b_reg[1]                       2            2            
+        Port      b_reg_0_                    b_reg[0]                       2            3            
+        Port      pc_2_                       pc[2]                       3            0            
+        Port      pc_1_                       pc[1]                       3            1            
+        Port      pc_0_                       pc[0]                       3            2            
+End
+Section Cross Reference File
+Design 'FourBitCPU' created Sun Jan 29 14:46:56 2012
+   Type              New Name                               Original Name
+// ----------------------------------------------------------------------
+   Inst         u1pbd_state_0_                            u1pbd.state[0]
+   Inst         u1pbd_state_1_                            u1pbd.state[1]
+   Inst         u1pbd_state_2_                            u1pbd.state[2]
+   Inst             pcDFFRH_1_                                pcDFFRH[1]
+   Inst             pcDFFRH_2_                                pcDFFRH[2]
+   Inst             pcDFFRH_0_                                pcDFFRH[0]
+   Inst   u0rs_u1rc_genblk1_5__uitff_q              u0rs.u1rc.genblk1[5].uitff.q
+   Inst   u0rs_u1rc_genblk1_7__uitff_q              u0rs.u1rc.genblk1[7].uitff.q
+   Inst      u0rs_u1rc_u0tff_q                         u0rs.u1rc.u0tff.q
+   Inst   u0rs_u1rc_genblk1_1__uitff_q              u0rs.u1rc.genblk1[1].uitff.q
+   Inst   u0rs_u1rc_genblk1_0__uitff_q              u0rs.u1rc.genblk1[0].uitff.q
+   Inst   u0rs_u1rc_genblk1_2__uitff_q              u0rs.u1rc.genblk1[2].uitff.q
+   Inst   u0rs_u1rc_genblk1_6__uitff_q              u0rs.u1rc.genblk1[6].uitff.q
+   Inst   u0rs_u1rc_genblk1_8__uitff_q              u0rs.u1rc.genblk1[8].uitff.q
+   Inst   u0rs_u1rc_genblk1_4__uitff_q              u0rs.u1rc.genblk1[4].uitff.q
+   Inst   u0rs_u1rc_genblk1_3__uitff_q              u0rs.u1rc.genblk1[3].uitff.q
+   Inst               a_reg_0_                                  a_reg[0]
+   Inst               a_reg_1_                                  a_reg[1]
+   Inst               a_reg_2_                                  a_reg[2]
+   Inst               a_reg_3_                                  a_reg[3]
+   Inst               b_reg_0_                                  b_reg[0]
+   Inst               b_reg_1_                                  b_reg[1]
+   Inst               b_reg_2_                                  b_reg[2]
+   Inst               b_reg_3_                                  b_reg[3]
+   Inst                  pc_0_                                     pc[0]
+   Inst                  pc_1_                                     pc[1]
+   Inst                  pc_2_                                     pc[2]
+   Inst   u2alu_un4_c_1_m_2_4_                      u2alu.un4_c_1_m_2[4]
+   Inst     u2alu_un4_c_1_m_4_                        u2alu.un4_c_1_m[4]
+   Inst       u2alu_a_m_3_1_3_                          u2alu.a_m_3_1[3]
+   Inst         u2alu_a_m_3_3_                            u2alu.a_m_3[3]
+   Inst             u2alu_zf_1                                u2alu.zf_1
+   Inst             u2alu_zf_2                                u2alu.zf_2
+   Inst               u2alu_zf                                  u2alu.zf
+   Inst         u2alu_c_1_1_1_                            u2alu.c_1_1[1]
+   Inst           u2alu_c_1_1_                              u2alu.c_1[1]
+   Inst   u1pbd_state_8_i_0_1_2_                    u1pbd.state_8_i_0_1[2]
+   Inst   u1pbd_state_8_i_0_2_                      u1pbd.state_8_i_0[2]
+   Inst         u2alu_c_3_i_2_                            u2alu.c_3_i[2]
+   Inst         b_reg_1_0_i_2_                            b_reg_1_0_i[2]
+   Inst           a_reg_4_i_1_                              a_reg_4_i[1]
+   Inst     un1_OP_LD_A_0_i_2_                        un1_OP_LD_A_0_i[2]
+   Inst   u2alu_un4_c_1_m_i_4_                      u2alu.un4_c_1_m_i[4]
+   Inst       u2alu_a_m_3_i_3_                          u2alu.a_m_3_i[3]
+   Inst          u2alu_cf_iv_i                             u2alu.cf_iv_i
+   Inst   u1pbd_state_8_i_0_o3_i_1_                 u1pbd.state_8_i_0_o3_i[1]
+   Inst            u1pbd_N_9_i                               u1pbd.N_9_i
+   Inst           u1pbd_N_25_i                              u1pbd.N_25_i
+   Inst           u1pbd_N_13_i                              u1pbd.N_13_i
+   Inst           u1pbd_N_23_i                              u1pbd.N_23_i
+   Inst           u1pbd_N_11_i                              u1pbd.N_11_i
+   Inst   u2alu_un4_c_1_m_1_4_                      u2alu.un4_c_1_m_1[4]
+   Inst        u2alu_c_sn_m4_i                           u2alu.c_sn_m4_i
+   Inst           a_reg_c_i_2_                              a_reg_c_i[2]
+   Inst           b_reg_1_i_2_                              b_reg_1_i[2]
+   Inst             a_reg_i_0_                                a_reg_i[0]
+   Inst           u2alu_c_0__r                              u2alu.c_0_.r
+   Inst           u2alu_c_0__m                              u2alu.c_0_.m
+   Inst           u2alu_c_0__n                              u2alu.c_0_.n
+   Inst           u2alu_c_0__p                              u2alu.c_0_.p
+   Inst       u2alu_c_4_0_2__r                          u2alu.c_4_0_2_.r
+   Inst       u2alu_c_4_0_2__m                          u2alu.c_4_0_2_.m
+   Inst       u2alu_c_4_0_2__n                          u2alu.c_4_0_2_.n
+   Inst       u2alu_c_4_0_2__p                          u2alu.c_4_0_2_.p
+   Inst       u2alu_c_4_0_1__r                          u2alu.c_4_0_1_.r
+   Inst       u2alu_c_4_0_1__m                          u2alu.c_4_0_1_.m
+   Inst       u2alu_c_4_0_1__n                          u2alu.c_4_0_1_.n
+   Inst       u2alu_c_4_0_1__p                          u2alu.c_4_0_1_.p
+   Inst           u2alu_c_3_2_                              u2alu.c_3[2]
+   Inst              u2alu_G_5                                 u2alu.G_5
+   Inst              u2alu_G_6                                 u2alu.G_6
+   Inst              u2alu_G_4                                 u2alu.G_4
+   Inst         u2alu_c_4_0_0_                            u2alu.c_4_0[0]
+   Inst          u2alu_c_sn_m4                             u2alu.c_sn_m4
+   Inst                pc_i_1_                                   pc_i[1]
+   Inst                pc_i_2_                                   pc_i[2]
+   Inst             a_reg_4_1_                                a_reg_4[1]
+   Inst           b_reg_1_0_2_                              b_reg_1_0[2]
+   Inst       u2alu_alu_c_i_3_                          u2alu.alu_c_i[3]
+   Inst       u2alu_alu_c_i_2_                          u2alu.alu_c_i[2]
+   Inst       u2alu_alu_c_i_0_                          u2alu.alu_c_i[0]
+   Inst       u2alu_alu_c_i_1_                          u2alu.alu_c_i[1]
+   Inst           u2alu_c_2__r                              u2alu.c_2_.r
+   Inst           u2alu_c_2__m                              u2alu.c_2_.m
+   Inst           u2alu_c_2__n                              u2alu.c_2_.n
+   Inst           u2alu_c_2__p                              u2alu.c_2_.p
+   Inst           u2alu_c_1__r                              u2alu.c_1_.r
+   Inst           u2alu_c_1__m                              u2alu.c_1_.m
+   Inst           u2alu_c_1__n                              u2alu.c_1_.n
+   Inst           u2alu_c_1__p                              u2alu.c_1_.p
+   Inst   u0rs_u1rc_genblk1_3__uitff_counter_i_4_   u0rs.u1rc.genblk1[3].uitff.counter_i[4]
+   Inst   u0rs_u1rc_genblk1_2__uitff_counter_i_3_   u0rs.u1rc.genblk1[2].uitff.counter_i[3]
+   Inst              u2alu_G_7                                 u2alu.G_7
+   Inst       u2alu_c_4_0_3__r                          u2alu.c_4_0_3_.r
+   Inst       u2alu_c_4_0_3__m                          u2alu.c_4_0_3_.m
+   Inst       u2alu_c_4_0_3__n                          u2alu.c_4_0_3_.n
+   Inst       u2alu_c_4_0_3__p                          u2alu.c_4_0_3_.p
+   Inst           u2alu_c_3__r                              u2alu.c_3_.r
+   Inst           u2alu_c_3__m                              u2alu.c_3_.m
+   Inst           u2alu_c_3__n                              u2alu.c_3_.n
+   Inst           u2alu_c_3__p                              u2alu.c_3_.p
+   Inst            u2alu_cf_iv                               u2alu.cf_iv
+   Inst        a_reg_3_0_a2_1_                           a_reg_3_0_a2[1]
+   Inst                pc_i_0_                                   pc_i[0]
+   Inst    un1_OP_LD_A_0_a2_0_                       un1_OP_LD_A_0_a2[0]
+   Inst    un1_OP_LD_A_0_a2_1_                       un1_OP_LD_A_0_a2[1]
+   Inst       un1_OP_LD_A_0_2_                          un1_OP_LD_A_0[2]
+   Inst   u0rs_u1rc_u0tff_oneMHzClock_i             u0rs.u1rc.u0tff.oneMHzClock_i
+   Inst   u0rs_u1rc_genblk1_0__uitff_counter_i_1_   u0rs.u1rc.genblk1[0].uitff.counter_i[1]
+   Inst   u0rs_u1rc_u0tff_counter_i_0_              u0rs.u1rc.u0tff.counter_i[0]
+   Inst   u0rs_u1rc_genblk1_1__uitff_counter_i_2_   u0rs.u1rc.genblk1[1].uitff.counter_i[2]
+   Inst   u0rs_u1rc_genblk1_6__uitff_counter_i_7_   u0rs.u1rc.genblk1[6].uitff.counter_i[7]
+   Inst   u0rs_u1rc_genblk1_5__uitff_counter_i_6_   u0rs.u1rc.genblk1[5].uitff.counter_i[6]
+   Inst   u0rs_u1rc_genblk1_8__uitff_oneKHzClock_i  u0rs.u1rc.genblk1[8].uitff.oneKHzClock_i
+   Inst   u0rs_u1rc_genblk1_7__uitff_counter_i_8_   u0rs.u1rc.genblk1[7].uitff.counter_i[8]
+   Inst   u0rs_u1rc_genblk1_4__uitff_counter_i_5_   u0rs.u1rc.genblk1[4].uitff.counter_i[5]
+   Inst         un2_a_reg_i_1_                            un2_a_reg_i[1]
+   Inst           a_reg_3_i_1_                              a_reg_3_i[1]
+   Inst   u1pbd_state_8_i_0_a3_1_                   u1pbd.state_8_i_0_a3[1]
+   Inst   u1pbd_state_8_i_0_a3_0_1_                 u1pbd.state_8_i_0_a3_0[1]
+   Inst   u1pbd_state_8_i_0_a3_2_                   u1pbd.state_8_i_0_a3[2]
+   Inst       u1pbd_state_i_0_                          u1pbd.state_i[0]
+   Inst   u1pbd_state_8_i_0_a3_0_2_                 u1pbd.state_8_i_0_a3_0[2]
+   Inst   u1pbd_state_8_i_o4_i_a3_0_                u1pbd.state_8_i_o4_i_a3[0]
+   Inst   u1pbd_state_8_i_0_1_                      u1pbd.state_8_i_0[1]
+   Inst       u1pbd_state_i_1_                          u1pbd.state_i[1]
+   Inst   u1pbd_state_8_i_o4_i_0_                   u1pbd.state_8_i_o4_i[0]
+   Inst       u1pbd_state_i_2_                          u1pbd.state_i[2]
+   Inst   u1pbd_state_8_i_0_o3_1_                   u1pbd.state_8_i_0_o3[1]
+   Net                 gnd_n_n                                       GND
+   Net            b_reg_1_2__n                                b_reg_1[2]
+   Net          un2_a_reg_1__n                              un2_a_reg[1]
+   Net       u0rs_counter_0__n                           u0rs.counter[0]
+   Net       u0rs_counter_1__n                           u0rs.counter[1]
+   Net       u0rs_counter_2__n                           u0rs.counter[2]
+   Net       u0rs_counter_3__n                           u0rs.counter[3]
+   Net       u0rs_counter_4__n                           u0rs.counter[4]
+   Net       u0rs_counter_5__n                           u0rs.counter[5]
+   Net       u0rs_counter_6__n                           u0rs.counter[6]
+   Net       u0rs_counter_7__n                           u0rs.counter[7]
+   Net       u0rs_counter_8__n                           u0rs.counter[8]
+   Net            a_reg_3_1__n                                a_reg_3[1]
+   Net            u2alu_n_15_n                                u2alu.N_15
+   Net        u1pbd_state_0__n                            u1pbd.state[0]
+   Net        u1pbd_state_1__n                            u1pbd.state[1]
+   Net        u1pbd_state_2__n                            u1pbd.state[2]
+   Net             u1pbd_n_8_n                                 u1pbd.N_8
+   Net             u1pbd_n_9_n                                 u1pbd.N_9
+   Net            u1pbd_n_11_n                                u1pbd.N_11
+   Net            u1pbd_n_13_n                                u1pbd.N_13
+   Net            u1pbd_n_23_n                                u1pbd.N_23
+   Net            u1pbd_n_25_n                                u1pbd.N_25
+   Net            u2alu_n_50_n                                u2alu.N_50
+   Net            u2alu_n_17_n                                u2alu.N_17
+   Net            u2alu_n_30_n                                u2alu.N_30
+   Net              alu_c_3__n                                  alu_c[3]
+   Net            u2alu_n_36_n                                u2alu.N_36
+   Net    u2alu_un4_c_1_m_4__n                        u2alu.un4_c_1_m[4]
+   Net        u2alu_a_m_3_3__n                            u2alu.a_m_3[3]
+   Net            a_reg_4_1__n                                a_reg_4[1]
+   Net              alu_c_1__n                                  alu_c[1]
+   Net              alu_c_0__n                                  alu_c[0]
+   Net              alu_c_2__n                                  alu_c[2]
+   Net            u2alu_n_29_n                                u2alu.N_29
+   Net            u2alu_n_28_n                                u2alu.N_28
+   Net            u2alu_n_27_n                                u2alu.N_27
+   Net            u2alu_n_16_n                                u2alu.N_16
+   Net          u2alu_c_3_2__n                              u2alu.c_3[2]
+   Net            u2alu_n_47_n                                u2alu.N_47
+   Net            a_reg_i_0__n                                a_reg_i[0]
+   Net            alu_c_i_0__n                                alu_c_i[0]
+   Net            alu_c_i_1__n                                alu_c_i[1]
+   Net            alu_c_i_3__n                                alu_c_i[3]
+   Net            alu_c_i_2__n                                alu_c_i[2]
+   Net               pc_i_2__n                                   pc_i[2]
+   Net               pc_i_1__n                                   pc_i[1]
+   Net               pc_i_0__n                                   pc_i[0]
+   Net     u0rs_counter_i_4__n                         u0rs.counter_i[4]
+   Net     u0rs_counter_i_3__n                         u0rs.counter_i[3]
+   Net     u0rs_counter_i_5__n                         u0rs.counter_i[5]
+   Net     u0rs_counter_i_8__n                         u0rs.counter_i[8]
+   Net     u0rs_counter_i_7__n                         u0rs.counter_i[7]
+   Net     u0rs_counter_i_6__n                         u0rs.counter_i[6]
+   Net     u0rs_counter_i_2__n                         u0rs.counter_i[2]
+   Net     u0rs_counter_i_1__n                         u0rs.counter_i[1]
+   Net     u0rs_counter_i_0__n                         u0rs.counter_i[0]
+   Net          a_reg_3_i_1__n                              a_reg_3_i[1]
+   Net        un2_a_reg_i_1__n                            un2_a_reg_i[1]
+   Net      u1pbd_state_i_2__n                          u1pbd.state_i[2]
+   Net      u1pbd_state_i_1__n                          u1pbd.state_i[1]
+   Net      u1pbd_state_i_0__n                          u1pbd.state_i[0]
+   Net            a_reg_c_0__n                                a_reg_c[0]
+   Net              a_reg_0__n                                  a_reg[0]
+   Net            a_reg_c_1__n                                a_reg_c[1]
+   Net              a_reg_1__n                                  a_reg[1]
+   Net            a_reg_c_2__n                                a_reg_c[2]
+   Net              a_reg_2__n                                  a_reg[2]
+   Net            a_reg_c_3__n                                a_reg_c[3]
+   Net              b_reg_0__n                                  b_reg[0]
+   Net              b_reg_1__n                                  b_reg[1]
+   Net              b_reg_2__n                                  b_reg[2]
+   Net               pc_c_0__n                                   pc_c[0]
+   Net                 pc_0__n                                     pc[0]
+   Net               pc_c_1__n                                   pc_c[1]
+   Net                 pc_1__n                                     pc[1]
+   Net               pc_c_2__n                                   pc_c[2]
+   Net          u2alu_n_36_0_n                              u2alu.N_36_0
+   Net          a_reg_c_i_2__n                              a_reg_c_i[2]
+   Net          b_reg_1_i_2__n                              b_reg_1_i[2]
+   Net        u2alu_c_3_0_2__n                            u2alu.c_3_0[2]
+   Net          a_reg_4_0_1__n                              a_reg_4_0[1]
+   Net    u2alu_un4_c_1_m_i_4__n                      u2alu.un4_c_1_m_i[4]
+   Net      u2alu_a_m_3_i_3__n                          u2alu.a_m_3_i[3]
+   Net           u1pbd_n_8_i_n                               u1pbd.N_8_i
+   Net           u1pbd_n_9_i_n                               u1pbd.N_9_i
+   Net          u1pbd_n_25_i_n                              u1pbd.N_25_i
+   Net           u1pbd_n_7_0_n                               u1pbd.N_7_0
+   Net          u1pbd_n_13_i_n                              u1pbd.N_13_i
+   Net          u1pbd_n_23_i_n                              u1pbd.N_23_i
+   Net          u1pbd_n_12_i_n                              u1pbd.N_12_i
+   Net          u1pbd_n_11_i_n                              u1pbd.N_11_i
+   Net          u1pbd_n_10_i_n                              u1pbd.N_10_i
+   Net    u2alu_un4_c_1_m_1_4__n                      u2alu.un4_c_1_m_1[4]
+   Net    u2alu_un4_c_1_m_2_4__n                      u2alu.un4_c_1_m_2[4]
+   Net      u2alu_a_m_3_1_3__n                          u2alu.a_m_3_1[3]
+   Net        un2_a_reg_1_1__n                            un2_a_reg_1[1]
+   Net          u2alu_n_15_1_n                              u2alu.N_15_1
+   Net        u1pbd_n_12_i_1_n                            u1pbd.N_12_i_1
+   Net        u2alu_c_0__un3_n                            u2alu.c_0_.un3
+   Net        u2alu_c_0__un1_n                            u2alu.c_0_.un1
+   Net        u2alu_c_0__un0_n                            u2alu.c_0_.un0
+   Net    u2alu_c_4_0_2__un3_n                        u2alu.c_4_0_2_.un3
+   Net    u2alu_c_4_0_2__un1_n                        u2alu.c_4_0_2_.un1
+   Net    u2alu_c_4_0_2__un0_n                        u2alu.c_4_0_2_.un0
+   Net    u2alu_c_4_0_1__un3_n                        u2alu.c_4_0_1_.un3
+   Net    u2alu_c_4_0_1__un1_n                        u2alu.c_4_0_1_.un1
+   Net    u2alu_c_4_0_1__un0_n                        u2alu.c_4_0_1_.un0
+   Net        u2alu_c_2__un3_n                            u2alu.c_2_.un3
+   Net        u2alu_c_2__un1_n                            u2alu.c_2_.un1
+   Net        u2alu_c_2__un0_n                            u2alu.c_2_.un0
+   Net        u2alu_c_1__un3_n                            u2alu.c_1_.un3
+   Net        u2alu_c_1__un1_n                            u2alu.c_1_.un1
+   Net        u2alu_c_1__un0_n                            u2alu.c_1_.un0
+   Net    u2alu_c_4_0_3__un3_n                        u2alu.c_4_0_3_.un3
+   Net    u2alu_c_4_0_3__un1_n                        u2alu.c_4_0_3_.un1
+   Net    u2alu_c_4_0_3__un0_n                        u2alu.c_4_0_3_.un0
+   Net        u2alu_c_3__un3_n                            u2alu.c_3_.un3
+   Net        u2alu_c_3__un1_n                            u2alu.c_3_.un1
+   Net        u2alu_c_3__un0_n                            u2alu.c_3_.un0
+End
+Section Type      Name
+// ----------------------------------------------------------------------
+        Input     step
+        Input     reset_n
+        Input     oneMHzClock
+        Output     a_reg_3_
+        Output     b_reg_3_
+        Output     pc_2_
+        Output     zf
+        Output     cf
+        Output     a_reg_2_
+        Output     a_reg_1_
+        Output     a_reg_0_
+        Output     b_reg_2_
+        Output     b_reg_1_
+        Output     b_reg_0_
+        Output     pc_1_
+        Output     pc_0_
+End

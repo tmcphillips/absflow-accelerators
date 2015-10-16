@@ -1,0 +1,2 @@
+. ALU_Demo aludemo.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\aludemo.v
+u0alu ALU alu.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\alu.v

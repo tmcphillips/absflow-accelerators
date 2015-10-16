@@ -1,0 +1,25 @@
+MODULE FourBitCPU DEFIN fourbitcpu.v
+	SUBMODULE FourBitALU
+		INSTANCE u2alu
+	SUBMODULE ButtonPressDetector
+		INSTANCE u1pbd
+	SUBMODULE RippleScaler
+		INSTANCE u0rs
+MODULE ButtonPressDetector DEFIN buttonpressdetector.v
+MODULE RippleScaler DEFIN ripplescaler.v
+	SUBMODULE RippleCounter
+		INSTANCE u1rc
+MODULE RippleCounter DEFIN ripplecounter.v
+	SUBMODULE TFlipFlop
+		INSTANCE uitff
+	SUBMODULE TFlipFlop
+		INSTANCE u0tff
+MODULE TFlipFlop DEFIN tflipflop.v
+MODULE FourBitALU DEFIN fourbitalu.v
+DEPEND INCLUDED_FILE cpu_opcodes.v
+DEPEND INCLUDED_FILE buttonpressdetector.v
+DEPEND INCLUDED_FILE tflipflop.v
+DEPEND INCLUDED_FILE ripplecounter.v
+DEPEND INCLUDED_FILE ripplescaler.v
+DEPEND INCLUDED_FILE cpu_opcodes.v
+DEPEND INCLUDED_FILE fourbitalu.v

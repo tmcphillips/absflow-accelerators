@@ -1,0 +1,64 @@
+%%% protect protected_file
+@E
+@ 
+#
+#
+#
+# Created by Synplify Verilog HDL Compiler version comp550rc, Build 030R from Synplicity, Inc.
+# Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+# Synthesis Netlist written on Tue Jan 17 20:11:28 2012
+#
+#
+#OPTIONS:"|-top|FourBitCounterWithDirection|-I|c:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\02_fourbitcounterwithdirection\\|-I|C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib|-v2001|-encrypt|-pro|-ll|2000|-compiler_compatible|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\bin\\c_ver.exe":1298500924
+#CUR:"C:\\ISPLEVER_CLASSIC1_5\\synpbase\\lib\\vlog\\hypermods.v":1298501016
+#CUR:"C:\\ispLEVER_Classic1_5\\ispcpld\\..\\cae_library\\synthesis\\verilog\\mach.v":1244664000
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\02_fourbitcounterwithdirection\\mach64_verilog_project.h":1326859247
+#CUR:"C:\\users\\tmcphillips\\designs\\projects\\mach64\\veriloghdl\\7.3lab03\\02_fourbitcounterwithdirection\\fourbitcounterwithdirection.v":1326859858
+f "C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"; # file 0
+af .is_verilog 1;
+f "C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"; # file 1
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\02_fourbitcounterwithdirection\mach64_verilog_project.h"; # file 2
+af .is_verilog 1;
+f "C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\02_fourbitcounterwithdirection\fourbitcounterwithdirection.v"; # file 3
+af .is_verilog 1;
+@E
+@ 
+ftell;
+@E@MR@4d::4(::RddI	FsRkwFs0AHBMFk0WCsH70EHOsC0MHFRsPCHoDF;P
+NR#3HPHCsDRFo4N;
+PHR3#C_PsFHDo;R4
+RNP3HFsolhNCwR"FAksHF0BkCM0s0WHEs7HCHO0F;M"
+@FR@(d:::4U(c:.RkOFMs0Crjd:9FROkCM0s:rdj
+9;N3HRs_0DFosHMCNlRF"OkCM0s
+";NDHRF"ORu,4cu,46u,4nu"4(;
+
+
+
+@HR@4d:::cc4U:cRFODOO	RD	FO;H
+NR03sDs_FHNoMl"CROODF	
+";NDHRF"ORu"4U;
+
+
+
+@HR@4d:::6446:6R#sCCs0RC0#C;H
+NR03sDs_FHNoMl"CRsCC#0
+";NDHRF"ORu".j;
+
+
+
+@HR@4d:::6U4n:nRs8HCHO0F8MRHOsC0MHF;H
+NR03sDs_FHNoMl"CR8CHsOF0HM
+";NDHRF"ORu".4;R
+b@:@d4U:6:n4:nMRHPMRk4H_8s0COHRFMk_M48CHsOF0HMHR8s0COH;FM
+@bR@gd:::4jg.:.RPHMR4kM_FODOk	RMO4_D	FORFODO
+	;b@R@dj:4:4(:j.:4RPHMRkOFMs0C.OjRF0kMCjs.R#sCC
+0;b@R@j::44::4.sR0k0CRsRkC0Csk;R
+b@:@j4::44R:.V#NDCNRVDR#CV#NDCb;
+Rd@@::4j.j:4:NdR8O8RF0kMCcs_rjd:9FROkCM0sr_cd9:jRkOFMs0Crjd:9MRk4H_8s0COH,FMk_M48CHsOF0HMM,k4H_8s0COH,FM0Csk;R
+b@:@dg::4gR:n8sVVRkOFMs0Crjd:9FROkCM0s:rdjO9RF0kMCcs_rjd:9MRk4D_OFRO	OMFk0.CsjN;
+HsR30FD_sMHoNRlC"kOFMs0C"N;
+HFRDOuR"4uc,4u6,4un,4;("
+
+C;

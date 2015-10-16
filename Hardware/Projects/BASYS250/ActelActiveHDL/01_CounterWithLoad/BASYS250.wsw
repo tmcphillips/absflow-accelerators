@@ -1,0 +1,15 @@
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\design\src\fourbitcounterwithload.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\design\src\updowncounter.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\design\src\buttonpressdetector.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\design\src\tflipflop.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\design\src\testbench.v|]
+TemplateId=2
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\design\src\ripplecounter.v|]
+TemplateId=2
+ActiveDocument=1
+[OPENDOC|Aldec.WaveForm.7|.\design\src\testbench.awf|]
+TemplateId=0

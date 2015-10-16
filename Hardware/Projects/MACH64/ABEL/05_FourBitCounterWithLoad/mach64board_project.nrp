@@ -1,0 +1,19 @@
+ispLEVER Classic 1.4.01.04.23.l1 SDFGEN
+Copyright(C),1992-2011, Lattice Semiconductor Corporation. All Rights Reserved.
+Output Files:
+  Netlist File: mach64board_project.vho
+  Delay   File: mach64board_project.sdf
+
+Parsing C:/ispLEVER_Classic1_4/ispcpld/dat/sdf.mdl
+Input file: c:/users/tmcphillips/hobbies/mach64 projects/7.3.lab03/fourbitcounterwithload\mach64board_project.tt4
+Reading library information ...
+Mapping to combinational gates 
+Mapping to netlist view.
+Note 18862: NODE name q1.D.X1 being renamed to GATE_q1_D_X1.
+Note 18862: NODE name q1.D.X2 being renamed to GATE_q1_D_X2.
+Note 18862: NODE name S0_s4.D.X2 being renamed to GATE_S0_s4_D_X2.
+Utilization Estimate
+    Combinational Macros:        104
+    Flip-Flop and Latch Macros:   20
+    I/O Pads:                     14
+Elapsed time: 2 seconds

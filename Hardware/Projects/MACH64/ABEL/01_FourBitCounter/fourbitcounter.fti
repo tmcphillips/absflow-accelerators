@@ -1,0 +1,41 @@
+#PLAFILE     fourbitcounter.bl5
+#DATE        Tue Jan 17 19:29:25 2012
+
+#DESIGN      fourbitcounter
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION clock:*_*_18
+DATA LOCATION reset:C_*_20
+DATA LOCATION q3:B_8_14
+DATA LOCATION q2:B_1_15
+DATA LOCATION q1:B_3_16
+DATA LOCATION q0:B_14_17
+
+// Signals direction
+DATA IO_DIR clock:IN
+DATA IO_DIR reset:IN
+DATA IO_DIR q3:OUT
+DATA IO_DIR q2:OUT
+DATA IO_DIR q1:OUT
+DATA IO_DIR q0:OUT
+
+// Global Clocks
+DATA GLB_CLOCK clock:1
+
+// Signals using Shared Init Pterm
+DATA tBSR q3.AR
+DATA tBSR q2.AR
+DATA tBSR q1.AR
+DATA tBSR q0.AR
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM q3
+DATA tOSM q2
+DATA tOSM q1
+DATA tOSM q0

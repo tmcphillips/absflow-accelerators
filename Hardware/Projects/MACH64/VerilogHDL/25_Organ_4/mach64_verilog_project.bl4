@@ -1,0 +1,706 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Fri Feb 17 11:33:48 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 5 toneOut_1_:31'ke'  oneMHzClock:43'ke'  toneOut_2_:32'ke'  toneOut_3_:33'ke'  \
+#  toneOut_4_:34'ke' 
+#$ NODES 57 u0rs_u1rc_genblk1_2__uitff_q u3cs_outclock u4cs_outclock \
+#  u5cs_outclock u6cs_outclock u1rs_u1rc_genblk1_10__uitff_q u2rc_u0tff_q \
+#  u2rc_genblk1_0__uitff_q u2rc_genblk1_1__uitff_q songLineIndex_0_ songLineIndex_1_ \
+#  songLineIndex_2_ songLineIndex_3_ songLineIndex_4_ inst_breakAfterNote \
+#  currentNote_4_ currentNote_3_ currentNote_2_ currentNote_1_ u1rs_u1rc_u0tff_q \
+#  u1rs_u1rc_genblk1_0__uitff_q u1rs_u1rc_genblk1_1__uitff_q \
+#  u1rs_u1rc_genblk1_2__uitff_q u1rs_u1rc_genblk1_3__uitff_q \
+#  u1rs_u1rc_genblk1_4__uitff_q u1rs_u1rc_genblk1_5__uitff_q \
+#  u1rs_u1rc_genblk1_6__uitff_q u1rs_u1rc_genblk1_7__uitff_q \
+#  u1rs_u1rc_genblk1_8__uitff_q u1rs_u1rc_genblk1_9__uitff_q u0rs_u1rc_u0tff_q \
+#  u0rs_u1rc_genblk1_0__uitff_q u0rs_u1rc_genblk1_1__uitff_q u6cs_count_0_ \
+#  u6cs_count_1_ u6cs_count_2_ u6cs_count_3_ u6cs_count_4_ u6cs_count_5_ u5cs_count_0_ \
+#  u5cs_count_1_ u5cs_count_2_ u5cs_count_3_ u5cs_count_4_ u5cs_count_5_ u4cs_count_0_ \
+#  u4cs_count_1_ u4cs_count_2_ u4cs_count_3_ u4cs_count_4_ u4cs_count_5_ u3cs_count_0_ \
+#  u3cs_count_1_ u3cs_count_2_ u3cs_count_3_ u3cs_count_4_ u3cs_count_5_
+.model digitalorgan
+.inputs oneMHzClock.BLIF u0rs_u1rc_genblk1_2__uitff_q.Q u3cs_outclock.Q \
+u4cs_outclock.Q u5cs_outclock.Q u6cs_outclock.Q \
+u1rs_u1rc_genblk1_10__uitff_q.Q u2rc_u0tff_q.Q u2rc_genblk1_0__uitff_q.Q \
+u2rc_genblk1_1__uitff_q.Q songLineIndex_0_.Q songLineIndex_1_.Q \
+songLineIndex_2_.Q songLineIndex_3_.Q songLineIndex_4_.Q inst_breakAfterNote.Q \
+currentNote_4_.Q currentNote_3_.Q currentNote_2_.Q currentNote_1_.Q \
+u1rs_u1rc_u0tff_q.Q u1rs_u1rc_genblk1_0__uitff_q.Q \
+u1rs_u1rc_genblk1_1__uitff_q.Q u1rs_u1rc_genblk1_2__uitff_q.Q \
+u1rs_u1rc_genblk1_3__uitff_q.Q u1rs_u1rc_genblk1_4__uitff_q.Q \
+u1rs_u1rc_genblk1_5__uitff_q.Q u1rs_u1rc_genblk1_6__uitff_q.Q \
+u1rs_u1rc_genblk1_7__uitff_q.Q u1rs_u1rc_genblk1_8__uitff_q.Q \
+u1rs_u1rc_genblk1_9__uitff_q.Q u0rs_u1rc_u0tff_q.Q \
+u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.Q u6cs_count_0_.Q \
+u6cs_count_1_.Q u6cs_count_2_.Q u6cs_count_3_.Q u6cs_count_4_.Q \
+u6cs_count_5_.Q u5cs_count_0_.Q u5cs_count_1_.Q u5cs_count_2_.Q \
+u5cs_count_3_.Q u5cs_count_4_.Q u5cs_count_5_.Q u4cs_count_0_.Q \
+u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q u4cs_count_4_.Q \
+u4cs_count_5_.Q u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q \
+u3cs_count_3_.Q u3cs_count_4_.Q u3cs_count_5_.Q
+.outputs toneOut_1_ toneOut_2_ toneOut_3_ toneOut_4_ u3cs_count_1_.C \
+u3cs_count_2_.C u3cs_count_3_.C u3cs_count_4_.C u3cs_count_5_.C \
+u3cs_outclock.C u3cs_count_0_.C u4cs_count_1_.C u4cs_count_2_.C \
+u4cs_count_3_.C u4cs_count_4_.C u4cs_count_5_.C u4cs_outclock.C \
+u4cs_count_0_.C u5cs_count_1_.C u5cs_count_2_.C u5cs_count_3_.C \
+u5cs_count_4_.C u5cs_count_5_.C u5cs_outclock.C u5cs_count_0_.C \
+u6cs_count_1_.C u6cs_count_2_.C u6cs_count_3_.C u6cs_count_4_.C \
+u6cs_count_5_.C u6cs_outclock.C u6cs_count_0_.C songLineIndex_2_.C \
+songLineIndex_3_.C songLineIndex_4_.C inst_breakAfterNote.C currentNote_4_.C \
+currentNote_3_.C currentNote_2_.C currentNote_1_.C songLineIndex_0_.C \
+songLineIndex_1_.C u1rs_u1rc_genblk1_6__uitff_q.C \
+u1rs_u1rc_genblk1_2__uitff_q.C u2rc_u0tff_q.C u2rc_genblk1_0__uitff_q.C \
+u2rc_genblk1_1__uitff_q.C u1rs_u1rc_genblk1_0__uitff_q.C \
+u1rs_u1rc_genblk1_10__uitff_q.C u1rs_u1rc_genblk1_8__uitff_q.C \
+u1rs_u1rc_genblk1_4__uitff_q.C u1rs_u1rc_genblk1_1__uitff_q.C \
+u1rs_u1rc_genblk1_9__uitff_q.C u1rs_u1rc_genblk1_7__uitff_q.C \
+u1rs_u1rc_genblk1_3__uitff_q.C u1rs_u1rc_genblk1_5__uitff_q.C \
+u0rs_u1rc_u0tff_q.C u0rs_u1rc_genblk1_0__uitff_q.C \
+u0rs_u1rc_genblk1_1__uitff_q.C u0rs_u1rc_genblk1_2__uitff_q.C \
+u1rs_u1rc_u0tff_q.C u0rs_u1rc_genblk1_2__uitff_q.D u3cs_outclock.T \
+u4cs_outclock.T u5cs_outclock.T u6cs_outclock.T \
+u1rs_u1rc_genblk1_10__uitff_q.D u2rc_u0tff_q.D u2rc_genblk1_0__uitff_q.D \
+u2rc_genblk1_1__uitff_q.D songLineIndex_0_.D songLineIndex_1_.D \
+songLineIndex_2_.D songLineIndex_3_.D songLineIndex_4_.D inst_breakAfterNote.D \
+currentNote_4_.D currentNote_3_.D currentNote_2_.D currentNote_1_.D \
+u1rs_u1rc_u0tff_q.D u1rs_u1rc_genblk1_0__uitff_q.D \
+u1rs_u1rc_genblk1_1__uitff_q.D u1rs_u1rc_genblk1_2__uitff_q.D \
+u1rs_u1rc_genblk1_3__uitff_q.D u1rs_u1rc_genblk1_4__uitff_q.D \
+u1rs_u1rc_genblk1_5__uitff_q.D u1rs_u1rc_genblk1_6__uitff_q.D \
+u1rs_u1rc_genblk1_7__uitff_q.D u1rs_u1rc_genblk1_8__uitff_q.D \
+u1rs_u1rc_genblk1_9__uitff_q.D u0rs_u1rc_u0tff_q.D \
+u0rs_u1rc_genblk1_0__uitff_q.D u0rs_u1rc_genblk1_1__uitff_q.D u6cs_count_0_.D \
+u6cs_count_1_.D u6cs_count_2_.D u6cs_count_3_.D u6cs_count_4_.D \
+u6cs_count_5_.T u5cs_count_0_.D u5cs_count_1_.D u5cs_count_2_.D \
+u5cs_count_3_.D u5cs_count_4_.D u5cs_count_5_.T u4cs_count_0_.D \
+u4cs_count_1_.D u4cs_count_2_.D u4cs_count_3_.D u4cs_count_4_.T \
+u4cs_count_5_.T u3cs_count_0_.D u3cs_count_1_.D u3cs_count_2_.D \
+u3cs_count_3_.D u3cs_count_4_.T u3cs_count_5_.T
+.names u3cs_outclock.Q u2rc_u0tff_q.Q u2rc_genblk1_0__uitff_q.Q \
+u2rc_genblk1_1__uitff_q.Q inst_breakAfterNote.Q currentNote_1_.Q toneOut_1_
+1---01 1
+1--0-1 1
+1-0--1 1
+10---1 1
+-1111- 0
+0----- 0
+-----0 0
+.names u4cs_outclock.Q u2rc_u0tff_q.Q u2rc_genblk1_0__uitff_q.Q \
+u2rc_genblk1_1__uitff_q.Q inst_breakAfterNote.Q currentNote_2_.Q toneOut_2_
+1---01 1
+1--0-1 1
+1-0--1 1
+10---1 1
+-1111- 0
+0----- 0
+-----0 0
+.names u5cs_outclock.Q u2rc_u0tff_q.Q u2rc_genblk1_0__uitff_q.Q \
+u2rc_genblk1_1__uitff_q.Q inst_breakAfterNote.Q currentNote_3_.Q toneOut_3_
+1---01 1
+1--0-1 1
+1-0--1 1
+10---1 1
+-1111- 0
+0----- 0
+-----0 0
+.names u6cs_outclock.Q u2rc_u0tff_q.Q u2rc_genblk1_0__uitff_q.Q \
+u2rc_genblk1_1__uitff_q.Q inst_breakAfterNote.Q currentNote_4_.Q toneOut_4_
+1---01 1
+1--0-1 1
+1-0--1 1
+10---1 1
+-1111- 0
+0----- 0
+-----0 0
+.names u2rc_genblk1_1__uitff_q.Q songLineIndex_2_.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q songLineIndex_3_.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q songLineIndex_4_.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q inst_breakAfterNote.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q currentNote_4_.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q currentNote_3_.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q currentNote_2_.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q currentNote_1_.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q songLineIndex_0_.C
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q songLineIndex_1_.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_5__uitff_q.Q u1rs_u1rc_genblk1_6__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_1__uitff_q.Q u1rs_u1rc_genblk1_2__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_10__uitff_q.Q u2rc_u0tff_q.C
+0 1
+1 0
+.names u2rc_u0tff_q.Q u2rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u2rc_genblk1_0__uitff_q.Q u2rc_genblk1_1__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_u0tff_q.Q u1rs_u1rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_9__uitff_q.Q u1rs_u1rc_genblk1_10__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_7__uitff_q.Q u1rs_u1rc_genblk1_8__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_3__uitff_q.Q u1rs_u1rc_genblk1_4__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_0__uitff_q.Q u1rs_u1rc_genblk1_1__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_8__uitff_q.Q u1rs_u1rc_genblk1_9__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_6__uitff_q.Q u1rs_u1rc_genblk1_7__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_2__uitff_q.Q u1rs_u1rc_genblk1_3__uitff_q.C
+0 1
+1 0
+.names u1rs_u1rc_genblk1_4__uitff_q.Q u1rs_u1rc_genblk1_5__uitff_q.C
+0 1
+1 0
+.names oneMHzClock.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u1rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u3cs_count_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u3cs_count_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u3cs_count_3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u3cs_count_4_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u3cs_count_5_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u3cs_outclock.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u3cs_count_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u4cs_count_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u4cs_count_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u4cs_count_3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u4cs_count_4_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u4cs_count_5_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u4cs_outclock.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u4cs_count_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u5cs_count_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u5cs_count_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u5cs_count_3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u5cs_count_4_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u5cs_count_5_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u5cs_outclock.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u5cs_count_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u6cs_count_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u6cs_count_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u6cs_count_3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u6cs_count_4_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u6cs_count_5_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u6cs_outclock.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u6cs_count_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.D
+0 1
+1 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_outclock.T
+010111 1
+----0- 0
+---0-- 0
+--1--- 0
+-0---- 0
+1----- 0
+-----0 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_outclock.T
+001011 1
+----0- 0
+---1-- 0
+--0--- 0
+-1---- 0
+1----- 0
+-----0 0
+.names u5cs_count_0_.Q u5cs_count_1_.Q u5cs_count_2_.Q u5cs_count_3_.Q \
+u5cs_count_4_.Q u5cs_count_5_.Q u5cs_outclock.T
+011101 1
+----1- 0
+---0-- 0
+--0--- 0
+-0---- 0
+1----- 0
+-----0 0
+.names u6cs_count_0_.Q u6cs_count_1_.Q u6cs_count_2_.Q u6cs_count_3_.Q \
+u6cs_count_4_.Q u6cs_count_5_.Q u6cs_outclock.T
+011001 1
+----1- 0
+---1-- 0
+--0--- 0
+-0---- 0
+1----- 0
+-----0 0
+.names u1rs_u1rc_genblk1_10__uitff_q.Q u1rs_u1rc_genblk1_10__uitff_q.D
+0 1
+1 0
+.names u2rc_u0tff_q.Q u2rc_u0tff_q.D
+0 1
+1 0
+.names u2rc_genblk1_0__uitff_q.Q u2rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u2rc_genblk1_1__uitff_q.Q u2rc_genblk1_1__uitff_q.D
+0 1
+1 0
+.names songLineIndex_0_.Q songLineIndex_0_.D
+0 1
+1 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_1_.D
+10 1
+01 1
+00 0
+11 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_2_.Q \
+songLineIndex_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_2_.Q \
+songLineIndex_3_.Q songLineIndex_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_2_.Q \
+songLineIndex_3_.Q songLineIndex_4_.Q songLineIndex_4_.D
+11110 1
+---01 1
+--0-1 1
+-0--1 1
+0---1 1
+11111 0
+---00 0
+--0-0 0
+-0--0 0
+0---0 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_2_.Q \
+songLineIndex_3_.Q songLineIndex_4_.Q inst_breakAfterNote.D
+--00- 1
+11--- 1
+-0--0 1
+---01 1
+--0-1 1
+0-111 0
+-0111 0
+01-10 0
+011-0 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_2_.Q \
+songLineIndex_3_.Q songLineIndex_4_.Q currentNote_4_.D
+-1110 1
+1-110 1
+00--- 0
+---0- 0
+--0-- 0
+----1 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_2_.Q \
+songLineIndex_3_.Q songLineIndex_4_.Q currentNote_3_.D
+01011 1
+001-0 1
+00-0- 1
+--10- 1
+--010 0
+-0-11 0
+-111- 0
+-100- 0
+1-0-- 0
+1--1- 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_2_.Q \
+songLineIndex_3_.Q songLineIndex_4_.Q currentNote_2_.D
+-001- 1
+--010 1
+1-0-- 1
+0--0- 0
+01--1 0
+--1-- 0
+.names songLineIndex_0_.Q songLineIndex_1_.Q songLineIndex_2_.Q \
+songLineIndex_3_.Q songLineIndex_4_.Q currentNote_1_.D
+0100- 1
+--111 1
+---10 0
+1--0- 0
+-0-0- 0
+--01- 0
+--10- 0
+.names u1rs_u1rc_u0tff_q.Q u1rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_0__uitff_q.Q u1rs_u1rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_1__uitff_q.Q u1rs_u1rc_genblk1_1__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_2__uitff_q.Q u1rs_u1rc_genblk1_2__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_3__uitff_q.Q u1rs_u1rc_genblk1_3__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_4__uitff_q.Q u1rs_u1rc_genblk1_4__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_5__uitff_q.Q u1rs_u1rc_genblk1_5__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_6__uitff_q.Q u1rs_u1rc_genblk1_6__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_7__uitff_q.Q u1rs_u1rc_genblk1_7__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_8__uitff_q.Q u1rs_u1rc_genblk1_8__uitff_q.D
+0 1
+1 0
+.names u1rs_u1rc_genblk1_9__uitff_q.Q u1rs_u1rc_genblk1_9__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.D
+0 1
+1 0
+.names u6cs_count_0_.Q u6cs_count_1_.Q u6cs_count_2_.Q u6cs_count_3_.Q \
+u6cs_count_4_.Q u6cs_count_5_.Q u6cs_count_0_.D
+0---1- 1
+0--1-- 1
+0-0--- 1
+00---- 1
+0----0 1
+-11001 0
+1----- 0
+.names u6cs_count_0_.Q u6cs_count_1_.Q u6cs_count_2_.Q u6cs_count_3_.Q \
+u6cs_count_4_.Q u6cs_count_5_.Q u6cs_count_1_.D
+10---- 1
+01--1- 1
+01-1-- 1
+010--- 1
+01---0 1
+-11001 0
+00---- 0
+11---- 0
+.names u6cs_count_0_.Q u6cs_count_1_.Q u6cs_count_2_.Q u6cs_count_3_.Q \
+u6cs_count_4_.Q u6cs_count_5_.Q u6cs_count_2_.D
+110--- 1
+0-1-1- 1
+0-11-- 1
+-01--- 1
+0-1--0 1
+-11001 0
+111--- 0
+-00--- 0
+0-0--- 0
+.names u6cs_count_0_.Q u6cs_count_1_.Q u6cs_count_2_.Q u6cs_count_3_.Q \
+u6cs_count_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names u6cs_count_0_.Q u6cs_count_1_.Q u6cs_count_2_.Q u6cs_count_3_.Q \
+u6cs_count_4_.Q u6cs_count_4_.D
+11110 1
+---01 1
+--0-1 1
+-0--1 1
+0---1 1
+11111 0
+---00 0
+--0-0 0
+-0--0 0
+0---0 0
+.names u6cs_count_0_.Q u6cs_count_1_.Q u6cs_count_2_.Q u6cs_count_3_.Q \
+u6cs_count_4_.Q u6cs_count_5_.Q u6cs_count_5_.T
+011001 1
+11111- 1
+1--0-- 0
+---10- 0
+0---1- 0
+---0-0 0
+--0--- 0
+-0---- 0
+.names u5cs_count_0_.Q u5cs_count_1_.Q u5cs_count_2_.Q u5cs_count_3_.Q \
+u5cs_count_4_.Q u5cs_count_5_.Q u5cs_count_0_.D
+0---1- 1
+0--0-- 1
+0-0--- 1
+00---- 1
+0----0 1
+-11101 0
+1----- 0
+.names u5cs_count_0_.Q u5cs_count_1_.Q u5cs_count_2_.Q u5cs_count_3_.Q \
+u5cs_count_4_.Q u5cs_count_5_.Q u5cs_count_1_.D
+10---- 1
+01--1- 1
+01-0-- 1
+010--- 1
+01---0 1
+-11101 0
+00---- 0
+11---- 0
+.names u5cs_count_0_.Q u5cs_count_1_.Q u5cs_count_2_.Q u5cs_count_3_.Q \
+u5cs_count_4_.Q u5cs_count_5_.Q u5cs_count_2_.D
+110--- 1
+0-1-1- 1
+0-10-- 1
+-01--- 1
+0-1--0 1
+-11101 0
+111--- 0
+-00--- 0
+0-0--- 0
+.names u5cs_count_0_.Q u5cs_count_1_.Q u5cs_count_2_.Q u5cs_count_3_.Q \
+u5cs_count_4_.Q u5cs_count_5_.Q u5cs_count_3_.D
+1110-- 1
+0--11- 1
+--01-- 1
+-0-1-- 1
+0--1-0 1
+011-01 0
+1111-- 0
+--00-- 0
+-0-0-- 0
+0--0-- 0
+.names u5cs_count_0_.Q u5cs_count_1_.Q u5cs_count_2_.Q u5cs_count_3_.Q \
+u5cs_count_4_.Q u5cs_count_4_.D
+11110 1
+---01 1
+--0-1 1
+-0--1 1
+0---1 1
+11111 0
+---00 0
+--0-0 0
+-0--0 0
+0---0 0
+.names u5cs_count_0_.Q u5cs_count_1_.Q u5cs_count_2_.Q u5cs_count_3_.Q \
+u5cs_count_4_.Q u5cs_count_5_.Q u5cs_count_5_.T
+011101 1
+11111- 1
+----00 0
+1---0- 0
+0---1- 0
+---0-- 0
+--0--- 0
+-0---- 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_0_.D
+0---0- 1
+0--1-- 1
+0-0--- 1
+01---- 1
+0----0 1
+-01011 0
+1----- 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_1_.D
+10 1
+01 1
+00 0
+11 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_2_.D
+0-11-- 1
+0-1-0- 1
+0-1--0 1
+110--- 1
+101--- 1
+011--- 1
+00-011 0
+111--- 0
+-00--- 0
+0-0--- 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_4_.T
+001011 1
+1111-- 1
+01---- 0
+0---0- 0
+1--0-- 0
+-0-1-- 0
+0----0 0
+--0--- 0
+.names u4cs_count_0_.Q u4cs_count_1_.Q u4cs_count_2_.Q u4cs_count_3_.Q \
+u4cs_count_4_.Q u4cs_count_5_.Q u4cs_count_5_.T
+001011 1
+11111- 1
+01---- 0
+1--0-- 0
+-0-1-- 0
+0----0 0
+----0- 0
+--0--- 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_0_.D
+0---0- 1
+0--0-- 1
+0-1--- 1
+00---- 1
+0----0 1
+-10111 0
+1----- 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_1_.D
+10---- 1
+01--0- 1
+01-0-- 1
+011--- 1
+01---0 1
+-10111 0
+00---- 0
+11---- 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_3_.D
+--010- 1
+--01-0 1
+1110-- 1
+1-01-- 1
+0-11-- 1
+-0-1-- 1
+1111-- 0
+010-11 0
+-0-0-- 0
+--00-- 0
+0--0-- 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_4_.T
+010111 1
+1111-- 1
+--0-0- 0
+--0--0 0
+0-1--- 0
+1-0--- 0
+---0-- 0
+-0---- 0
+.names u3cs_count_0_.Q u3cs_count_1_.Q u3cs_count_2_.Q u3cs_count_3_.Q \
+u3cs_count_4_.Q u3cs_count_5_.Q u3cs_count_5_.T
+010111 1
+11111- 1
+--0--0 0
+1-0--- 0
+0-1--- 0
+----0- 0
+---0-- 0
+-0---- 0
+.end

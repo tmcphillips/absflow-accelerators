@@ -1,0 +1,5 @@
+MODULE TruthTableStateMachine
+	SUBMODULE debouncer
+		INSTANCE debouncedStep
+	SUBMODULE tenbitscaler
+		INSTANCE clockScaler

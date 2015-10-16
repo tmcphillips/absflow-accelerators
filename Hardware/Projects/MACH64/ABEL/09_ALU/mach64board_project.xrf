@@ -1,0 +1,17 @@
+Signal Name Cross Reference File
+
+ispLEVER Classic 1.4.01.04.23.l1
+
+Design 'mach64board_project' created Sat Dec 10 21:50:33 2011
+
+
+ LEGEND:  '>'  Functional Block Port Separator
+          '/'  Hierarchy Path Separator
+          '@'  Automatically Generated Node
+
+
+Short Name                              Hierarchical Name
+----------                              -----------------
+G0_C1                                	alu>C1
+G0_C2                                	alu>C2
+G0_C3                                	alu>C3

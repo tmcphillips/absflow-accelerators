@@ -1,0 +1,5 @@
+Selecting top level module FourBitALU
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\fourbitalu.v":4:7:4:16|Synthesizing module FourBitALU
+
+@W: CL247 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_4\fourbitalu.v":5:18:5:23|Input port bit 4 of opcode[4:0] is unused
+

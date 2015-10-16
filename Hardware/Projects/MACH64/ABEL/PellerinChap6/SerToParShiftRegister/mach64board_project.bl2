@@ -1,0 +1,136 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:28:23 2012
+#$ MODULE mach64board_project
+#$ JEDECFILE sertoparshiftregisterdemo
+#$ PINS 12 data:7 rotate:8 clk:26 clr:20 q0:31 q1:32 q2:33 q3:34 q4:38 q5:39 q6:40 q7:45
+#$ NODES 11 shift>Clk'co'  shift>Clr'co'  shift>D'co'  shift>Q0+'co,o'  shift>Q1+'co,o'  \
+#  shift>Q2+'co,o'  shift>Q3+'co,o'  shift>Q4+'co,o'  shift>Q5+'co,o'  shift>Q6+'co,o'  shift>Q7+'co,o' 
+.model sertoparshiftregisterdemo
+.inputs data.BLIF rotate.BLIF q7.BLIF clk.BLIF clr.BLIF shift>Q7.BLIF \
+shift>Q6.BLIF shift>Q5.BLIF shift>Q4.BLIF shift>Q3.BLIF shift>Q2.BLIF \
+shift>Q1.BLIF shift>Q0.BLIF shift>Clk.BLIF shift>Clr.BLIF shift>D.BLIF
+.outputs shift>Clk shift>Clr shift>D q0 q1 q2 q3 q4 q5 q6 q7 shift>Q0.REG \
+shift>Q0.AR shift>Q0.C shift>Q1.REG shift>Q1.AR shift>Q1.C shift>Q2.REG \
+shift>Q2.AR shift>Q2.C shift>Q3.REG shift>Q3.AR shift>Q3.C shift>Q4.REG \
+shift>Q4.AR shift>Q4.C shift>Q5.REG shift>Q5.AR shift>Q5.C shift>Q6.REG \
+shift>Q6.AR shift>Q6.C shift>Q7.REG shift>Q7.AR shift>Q7.C
+\
+
+.subckt sertoparshiftregister Clk.BLIF=shift>Clk.BLIF Clr.BLIF=shift>Clr.BLIF D.BLIF=shift>D.BLIF \
+ Q0.BLIF=shift>Q0.BLIF Q1.BLIF=shift>Q1.BLIF Q2.BLIF=shift>Q2.BLIF Q3.BLIF=shift>Q3.BLIF \
+ Q4.BLIF=shift>Q4.BLIF Q5.BLIF=shift>Q5.BLIF Q6.BLIF=shift>Q6.BLIF Q0.REG=shift>Q0.REG \
+ Q0.AR=shift>Q0.AR Q0.C=shift>Q0.C Q1.REG=shift>Q1.REG Q1.AR=shift>Q1.AR Q1.C=shift>Q1.C \
+ Q2.REG=shift>Q2.REG Q2.AR=shift>Q2.AR Q2.C=shift>Q2.C Q3.REG=shift>Q3.REG Q3.AR=shift>Q3.AR \
+ Q3.C=shift>Q3.C Q4.REG=shift>Q4.REG Q4.AR=shift>Q4.AR Q4.C=shift>Q4.C Q5.REG=shift>Q5.REG \
+ Q5.AR=shift>Q5.AR Q5.C=shift>Q5.C Q6.REG=shift>Q6.REG Q6.AR=shift>Q6.AR Q6.C=shift>Q6.C \
+ Q7.REG=shift>Q7.REG Q7.AR=shift>Q7.AR Q7.C=shift>Q7.C
+.names clk.BLIF shift>Clk
+0 1
+.names clr.BLIF shift>Clr
+0 1
+.names data.BLIF rotate.BLIF q7.BLIF shift>D
+0-- 1
+-01 1
+.names shift>Q0.BLIF q0
+1 1
+0 0
+.names shift>Q1.BLIF q1
+1 1
+0 0
+.names shift>Q2.BLIF q2
+1 1
+0 0
+.names shift>Q3.BLIF q3
+1 1
+0 0
+.names shift>Q4.BLIF q4
+1 1
+0 0
+.names shift>Q5.BLIF q5
+1 1
+0 0
+.names shift>Q6.BLIF q6
+1 1
+0 0
+.names shift>Q7.BLIF q7
+1 1
+0 0
+.end
+.model sertoparshiftregister
+.inputs D.BLIF Q6.BLIF Q5.BLIF Q4.BLIF Q3.BLIF Q2.BLIF Q1.BLIF Q0.BLIF \
+Clk.BLIF Clr.BLIF
+.outputs Q0.REG Q7.REG Q6.REG Q5.REG Q4.REG Q3.REG Q2.REG Q1.REG Q0.C Q1.C \
+Q2.C Q3.C Q4.C Q5.C Q6.C Q7.C Q0.AR Q1.AR Q2.AR Q3.AR Q4.AR Q5.AR Q6.AR Q7.AR
+.names D.BLIF Q0.REG
+1 1
+0 0
+.names Q6.BLIF Q7.REG
+1 1
+0 0
+.names Q5.BLIF Q6.REG
+1 1
+0 0
+.names Q4.BLIF Q5.REG
+1 1
+0 0
+.names Q3.BLIF Q4.REG
+1 1
+0 0
+.names Q2.BLIF Q3.REG
+1 1
+0 0
+.names Q1.BLIF Q2.REG
+1 1
+0 0
+.names Q0.BLIF Q1.REG
+1 1
+0 0
+.names Clk.BLIF Q0.C
+1 1
+0 0
+.names Clk.BLIF Q1.C
+1 1
+0 0
+.names Clk.BLIF Q2.C
+1 1
+0 0
+.names Clk.BLIF Q3.C
+1 1
+0 0
+.names Clk.BLIF Q4.C
+1 1
+0 0
+.names Clk.BLIF Q5.C
+1 1
+0 0
+.names Clk.BLIF Q6.C
+1 1
+0 0
+.names Clk.BLIF Q7.C
+1 1
+0 0
+.names Clr.BLIF Q0.AR
+1 1
+0 0
+.names Clr.BLIF Q1.AR
+1 1
+0 0
+.names Clr.BLIF Q2.AR
+1 1
+0 0
+.names Clr.BLIF Q3.AR
+1 1
+0 0
+.names Clr.BLIF Q4.AR
+1 1
+0 0
+.names Clr.BLIF Q5.AR
+1 1
+0 0
+.names Clr.BLIF Q6.AR
+1 1
+0 0
+.names Clr.BLIF Q7.AR
+1 1
+0 0
+.end

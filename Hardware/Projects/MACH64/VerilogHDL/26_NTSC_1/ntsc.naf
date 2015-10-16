@@ -1,0 +1,13 @@
+ntscClock  i
+left_n  i
+right_n  i
+up_n  i
+down_n  i
+video[3]  o
+video[2]  o
+video[1]  o
+video[0]  o
+state[3]  o
+state[2]  o
+state[1]  o
+state[0]  o

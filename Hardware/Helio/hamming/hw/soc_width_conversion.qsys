@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element adapter_16_to_8
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element adapter_8_to_16
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element clock
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element ingress_fifo
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element jtag_st_interface
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element ingress_fifo.out
+   {
+      datum color
+      {
+         value = "-16750849";
+         type = "int";
+      }
+   }
+   element jtag_st_interface.src
+   {
+      datum color
+      {
+         value = "-16724788";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6C6U23C8ES" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="hamming.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
+ <module
+   kind="altera_jtag_dc_streaming"
+   version="13.1"
+   enabled="1"
+   name="jtag_st_interface">
+  <parameter name="PURPOSE" value="0" />
+  <parameter name="UPSTREAM_FIFO_SIZE" value="0" />
+  <parameter name="DOWNSTREAM_FIFO_SIZE" value="0" />
+  <parameter name="MGMT_CHANNEL_WIDTH" value="-1" />
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="USE_DOWNSTREAM_READY" value="0" />
+  <parameter name="COMPONENT_CLOCK" value="50000000" />
+  <parameter name="FABRIC" value="2.0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="altera_avalon_sc_fifo"
+   version="13.1"
+   enabled="1"
+   name="ingress_fifo">
+  <parameter name="SYMBOLS_PER_BEAT" value="1" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="16" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="0" />
+  <parameter name="USE_FILL_LEVEL" value="0" />
+  <parameter name="EMPTY_LATENCY" value="3" />
+  <parameter name="USE_MEMORY_BLOCKS" value="1" />
+  <parameter name="USE_STORE_FORWARD" value="0" />
+  <parameter name="USE_ALMOST_FULL_IF" value="0" />
+  <parameter name="USE_ALMOST_EMPTY_IF" value="0" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module kind="clock_source" version="13.1" enabled="1" name="clock">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="adapter_8_to_16_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="adapter_8_to_16">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <module
+   kind="adapter_16_to_8_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="adapter_16_to_8">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_st_interface.resetrequest"
+   end="clock.clk_in_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_st_interface.resetrequest"
+   end="ingress_fifo.clk_reset" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="jtag_st_interface.clock" />
+ <connection kind="clock" version="13.1" start="clock.clk" end="ingress_fifo.clk" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_st_interface.resetrequest"
+   end="jtag_st_interface.clock_reset" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="adapter_8_to_16.clock" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_st_interface.resetrequest"
+   end="adapter_8_to_16.reset" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="jtag_st_interface.src"
+   end="ingress_fifo.in" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="ingress_fifo.out"
+   end="adapter_8_to_16.avalon_streaming_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="adapter_16_to_8.avalon_streaming_source"
+   end="jtag_st_interface.sink" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="adapter_16_to_8.clock" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_st_interface.resetrequest"
+   end="adapter_16_to_8.reset" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="adapter_8_to_16.avalon_streaming_source"
+   end="adapter_16_to_8.avalon_streaming_sink" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="false" />
+</system>

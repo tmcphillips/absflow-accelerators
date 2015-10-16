@@ -1,0 +1,62 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 28_ntscpong_1
+
+#Wed Feb 22 10:15:04 2012
+
+$ Start of Compile
+#Wed Feb 22 10:15:04 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v"
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v changed - recompiling
+Selecting top level module ntscPong
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v":17:7:17:14|Synthesizing module ntscPong
+
+@A:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v":183:1:183:6|Feedback mux created for signal ballY[5:0]. Did you forget the set/reset assignment for this signal? Specifying a reset value will improve timing and area
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v":60:1:60:6|Trying to extract state machine for register vState
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\ntcs_pong.v":60:1:60:6|Trying to extract state machine for register hState
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Feb 22 10:15:04 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\28_ntscpong_1\synlog\ntscpong_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFC            17 uses
+DFF             13 uses
+DFFSH           2 uses
+DFFRH           4 uses
+DFFCSH          2 uses
+IBUF            2 uses
+OBUF            7 uses
+AND2            175 uses
+XOR2            53 uses
+INV             124 uses
+OR2             10 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Feb 22 10:15:05 2012
+
+###########################################################]

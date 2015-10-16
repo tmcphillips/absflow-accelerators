@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element clock
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element ingress_fifo_a.csr
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "0";
+         type = "String";
+      }
+   }
+   element egress_fifo.csr
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "32";
+         type = "String";
+      }
+   }
+   element ingress_fifo_b.csr
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "16";
+         type = "String";
+      }
+   }
+   element egress_fifo
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element ingress_fifo_a
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element ingress_fifo_b
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element jtag_mm_master
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element jtag_st_interface_a
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element jtag_st_interface_b
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element ingress_fifo_a.out
+   {
+      datum color
+      {
+         value = "-16750849";
+         type = "int";
+      }
+   }
+   element priority_merge
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element jtag_st_interface_a.src
+   {
+      datum color
+      {
+         value = "-16724788";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6C6U23C8ES" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="soc_hamming_hps.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
+ <module
+   kind="altera_jtag_dc_streaming"
+   version="13.1"
+   enabled="1"
+   name="jtag_st_interface_a">
+  <parameter name="PURPOSE" value="0" />
+  <parameter name="UPSTREAM_FIFO_SIZE" value="0" />
+  <parameter name="DOWNSTREAM_FIFO_SIZE" value="0" />
+  <parameter name="MGMT_CHANNEL_WIDTH" value="-1" />
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="USE_DOWNSTREAM_READY" value="0" />
+  <parameter name="COMPONENT_CLOCK" value="50000000" />
+  <parameter name="FABRIC" value="2.0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="altera_avalon_sc_fifo"
+   version="13.1"
+   enabled="1"
+   name="ingress_fifo_a">
+  <parameter name="SYMBOLS_PER_BEAT" value="1" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="16" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="1" />
+  <parameter name="USE_FILL_LEVEL" value="1" />
+  <parameter name="EMPTY_LATENCY" value="3" />
+  <parameter name="USE_MEMORY_BLOCKS" value="1" />
+  <parameter name="USE_STORE_FORWARD" value="0" />
+  <parameter name="USE_ALMOST_FULL_IF" value="0" />
+  <parameter name="USE_ALMOST_EMPTY_IF" value="0" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module kind="clock_source" version="13.1" enabled="1" name="clock">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="altera_avalon_sc_fifo"
+   version="13.1"
+   enabled="1"
+   name="ingress_fifo_b">
+  <parameter name="SYMBOLS_PER_BEAT" value="1" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="16" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="1" />
+  <parameter name="USE_FILL_LEVEL" value="1" />
+  <parameter name="EMPTY_LATENCY" value="3" />
+  <parameter name="USE_MEMORY_BLOCKS" value="1" />
+  <parameter name="USE_STORE_FORWARD" value="0" />
+  <parameter name="USE_ALMOST_FULL_IF" value="0" />
+  <parameter name="USE_ALMOST_EMPTY_IF" value="0" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="altera_jtag_dc_streaming"
+   version="13.1"
+   enabled="1"
+   name="jtag_st_interface_b">
+  <parameter name="PURPOSE" value="0" />
+  <parameter name="UPSTREAM_FIFO_SIZE" value="0" />
+  <parameter name="DOWNSTREAM_FIFO_SIZE" value="0" />
+  <parameter name="MGMT_CHANNEL_WIDTH" value="-1" />
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="USE_DOWNSTREAM_READY" value="0" />
+  <parameter name="COMPONENT_CLOCK" value="50000000" />
+  <parameter name="FABRIC" value="2.0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="altera_jtag_avalon_master"
+   version="13.1"
+   enabled="1"
+   name="jtag_mm_master">
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE" value="5CSXFC6C6U23C8ES" />
+ </module>
+ <module
+   kind="altera_avalon_sc_fifo"
+   version="13.1"
+   enabled="1"
+   name="egress_fifo">
+  <parameter name="SYMBOLS_PER_BEAT" value="1" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="16" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="1" />
+  <parameter name="USE_FILL_LEVEL" value="1" />
+  <parameter name="EMPTY_LATENCY" value="3" />
+  <parameter name="USE_MEMORY_BLOCKS" value="1" />
+  <parameter name="USE_STORE_FORWARD" value="0" />
+  <parameter name="USE_ALMOST_FULL_IF" value="0" />
+  <parameter name="USE_ALMOST_EMPTY_IF" value="0" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+ </module>
+ <module
+   kind="priority_merge_avalon_st"
+   version="1.0"
+   enabled="1"
+   name="priority_merge">
+  <parameter name="WIDTH" value="8" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="jtag_st_interface_a.clock" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="ingress_fifo_a.clk" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="jtag_st_interface_a.src"
+   end="ingress_fifo_a.in" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="ingress_fifo_b.clk" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="jtag_st_interface_b.clock" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="jtag_st_interface_b.src"
+   end="ingress_fifo_b.in" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="jtag_mm_master.clk" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="jtag_mm_master.clk_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="ingress_fifo_b.clk_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="ingress_fifo_a.clk_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="jtag_st_interface_b.clock_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="jtag_st_interface_a.clock_reset" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="clock.clk_in_reset" />
+ <connection kind="clock" version="13.1" start="clock.clk" end="egress_fifo.clk" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="egress_fifo.clk_reset" />
+ <connection
+   kind="avalon"
+   version="13.1"
+   start="jtag_mm_master.master"
+   end="egress_fifo.csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0020" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.1"
+   start="jtag_mm_master.master"
+   end="ingress_fifo_b.csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0010" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.1"
+   start="jtag_mm_master.master"
+   end="ingress_fifo_a.csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="egress_fifo.out"
+   end="jtag_st_interface_a.sink" />
+ <connection
+   kind="reset"
+   version="13.1"
+   start="jtag_mm_master.master_reset"
+   end="priority_merge.reset" />
+ <connection
+   kind="clock"
+   version="13.1"
+   start="clock.clk"
+   end="priority_merge.clock" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="ingress_fifo_b.out"
+   end="priority_merge.in_b" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="ingress_fifo_a.out"
+   end="priority_merge.in_a" />
+ <connection
+   kind="avalon_streaming"
+   version="13.1"
+   start="priority_merge.out"
+   end="egress_fifo.in" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="false" />
+</system>

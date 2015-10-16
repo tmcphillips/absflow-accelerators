@@ -1,0 +1,222 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Jan 18 09:43:55 2012
+#$ TITLE Four bit counter with debounced step
+#$ MODULE fourbitcounterwithdirection
+#$ JEDECFILE debouncedfourbitcounter
+#$ PINS 8 oneMHzClock:19 stepButton:18 reset:20 stepDirectionUp:21 q0:14 q1:15 \
+#  q2:16 q3:17
+#$ NODES 16 debouncedStep>rawSignal'co'  debouncedStep>samplingClock'co'  \
+#  debouncedStep>debounced'co,o'  oneKHzClock>inclock'co'  oneKHzClock>outclock'co,o'  \
+#  debouncedStep/lastSample oneKHzClock/s9 oneKHzClock/s8 oneKHzClock/s7 \
+#  oneKHzClock/s6 oneKHzClock/s5 oneKHzClock/s4 oneKHzClock/s3 oneKHzClock/s2 \
+#  oneKHzClock/s1 oneKHzClock/s0
+.model debouncedfourbitcounter
+.inputs oneMHzClock.BLIF oneKHzClock>outclock.BLIF stepButton.BLIF \
+debouncedStep>debounced.BLIF reset.BLIF q3.BLIF q2.BLIF q1.BLIF q0.BLIF \
+stepDirectionUp.BLIF debouncedStep>rawSignal.BLIF \
+debouncedStep>samplingClock.BLIF debouncedStep/lastSample.BLIF \
+oneKHzClock>inclock.BLIF oneKHzClock/s9.BLIF oneKHzClock/s8.BLIF \
+oneKHzClock/s7.BLIF oneKHzClock/s6.BLIF oneKHzClock/s5.BLIF \
+oneKHzClock/s4.BLIF oneKHzClock/s3.BLIF oneKHzClock/s2.BLIF \
+oneKHzClock/s1.BLIF oneKHzClock/s0.BLIF
+.outputs debouncedStep>rawSignal debouncedStep>samplingClock \
+oneKHzClock>inclock q3.C q2.C q1.C q0.C q3.AR q2.AR q1.AR q0.AR q3.REG q2.REG \
+q1.REG q0.REG debouncedStep>debounced.REG debouncedStep>debounced.C \
+debouncedStep/lastSample.REG debouncedStep/lastSample.C oneKHzClock>outclock \
+oneKHzClock/s9.REG oneKHzClock/s9.C oneKHzClock/s8.REG oneKHzClock/s8.C \
+oneKHzClock/s7.REG oneKHzClock/s7.C oneKHzClock/s6.REG oneKHzClock/s6.C \
+oneKHzClock/s5.REG oneKHzClock/s5.C oneKHzClock/s4.REG oneKHzClock/s4.C \
+oneKHzClock/s3.REG oneKHzClock/s3.C oneKHzClock/s2.REG oneKHzClock/s2.C \
+oneKHzClock/s1.REG oneKHzClock/s1.C oneKHzClock/s0.REG oneKHzClock/s0.C
+\
+
+.subckt debouncer rawSignal.BLIF=debouncedStep>rawSignal.BLIF samplingClock.BLIF=debouncedStep>samplingClock.BLIF \
+ lastSample.BLIF=debouncedStep/lastSample.BLIF debounced.REG=debouncedStep>debounced.REG \
+ debounced.C=debouncedStep>debounced.C lastSample.REG=debouncedStep/lastSample.REG \
+ lastSample.C=debouncedStep/lastSample.C
+\
+
+.subckt tenbitscaler inclock.BLIF=oneKHzClock>inclock.BLIF s9.BLIF=oneKHzClock/s9.BLIF \
+ s8.BLIF=oneKHzClock/s8.BLIF s7.BLIF=oneKHzClock/s7.BLIF s6.BLIF=oneKHzClock/s6.BLIF \
+ s5.BLIF=oneKHzClock/s5.BLIF s4.BLIF=oneKHzClock/s4.BLIF s3.BLIF=oneKHzClock/s3.BLIF \
+ s2.BLIF=oneKHzClock/s2.BLIF s1.BLIF=oneKHzClock/s1.BLIF s0.BLIF=oneKHzClock/s0.BLIF \
+ outclock=oneKHzClock>outclock s9.REG=oneKHzClock/s9.REG s9.C=oneKHzClock/s9.C s8.REG=oneKHzClock/s8.REG \
+ s8.C=oneKHzClock/s8.C s7.REG=oneKHzClock/s7.REG s7.C=oneKHzClock/s7.C s6.REG=oneKHzClock/s6.REG \
+ s6.C=oneKHzClock/s6.C s5.REG=oneKHzClock/s5.REG s5.C=oneKHzClock/s5.C s4.REG=oneKHzClock/s4.REG \
+ s4.C=oneKHzClock/s4.C s3.REG=oneKHzClock/s3.REG s3.C=oneKHzClock/s3.C s2.REG=oneKHzClock/s2.REG \
+ s2.C=oneKHzClock/s2.C s1.REG=oneKHzClock/s1.REG s1.C=oneKHzClock/s1.C s0.REG=oneKHzClock/s0.REG \
+ s0.C=oneKHzClock/s0.C
+.names stepButton.BLIF debouncedStep>rawSignal
+0 1
+.names reset.BLIF q3.AR
+0 1
+.names reset.BLIF q2.AR
+0 1
+.names reset.BLIF q1.AR
+0 1
+.names reset.BLIF q0.AR
+0 1
+.names q3.BLIF q2.BLIF q1.BLIF q0.BLIF stepDirectionUp.BLIF q3.REG
+11--1 1
+1-1-1 1
+1--11 1
+10--0 1
+1-0-0 1
+1--00 1
+00001 1
+01110 1
+.names q2.BLIF q1.BLIF q0.BLIF stepDirectionUp.BLIF q2.REG
+11-1 1
+1-11 1
+10-0 1
+1-00 1
+0001 1
+0110 1
+.names q1.BLIF q0.BLIF stepDirectionUp.BLIF q1.REG
+111 1
+001 1
+010 1
+100 1
+.names q0.BLIF stepDirectionUp.BLIF q0.REG
+01 1
+00 1
+.names oneKHzClock>outclock.BLIF debouncedStep>samplingClock
+1 1
+0 0
+.names oneMHzClock.BLIF oneKHzClock>inclock
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q3.C
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q2.C
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q1.C
+1 1
+0 0
+.names debouncedStep>debounced.BLIF q0.C
+1 1
+0 0
+.end
+.model debouncer
+.inputs samplingClock.BLIF rawSignal.BLIF lastSample.BLIF
+.outputs lastSample.C lastSample.REG debounced.C debounced.REG
+.names rawSignal.BLIF lastSample.BLIF debounced.REG
+11 1
+.names samplingClock.BLIF lastSample.C
+1 1
+0 0
+.names rawSignal.BLIF lastSample.REG
+1 1
+0 0
+.names samplingClock.BLIF debounced.C
+1 1
+0 0
+.end
+.model tenbitscaler
+.inputs inclock.BLIF s9.BLIF s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF \
+s2.BLIF s1.BLIF s0.BLIF
+.outputs outclock s9.C s8.C s7.C s6.C s5.C s4.C s3.C s2.C s1.C s0.C s9.REG \
+s8.REG s7.REG s6.REG s5.REG s4.REG s3.REG s2.REG s1.REG s0.REG
+.names s9.BLIF s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF \
+s0.BLIF s9.REG
+10-------- 1
+1-0------- 1
+1--0------ 1
+1---0----- 1
+1----0---- 1
+1-----0--- 1
+1------0-- 1
+1-------0- 1
+1--------0 1
+0111111111 1
+.names s8.BLIF s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF \
+s8.REG
+10------- 1
+1-0------ 1
+1--0----- 1
+1---0---- 1
+1----0--- 1
+1-----0-- 1
+1------0- 1
+1-------0 1
+011111111 1
+.names s7.BLIF s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s7.REG
+10------ 1
+1-0----- 1
+1--0---- 1
+1---0--- 1
+1----0-- 1
+1-----0- 1
+1------0 1
+01111111 1
+.names s6.BLIF s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s6.REG
+10----- 1
+1-0---- 1
+1--0--- 1
+1---0-- 1
+1----0- 1
+1-----0 1
+0111111 1
+.names s5.BLIF s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s5.REG
+10---- 1
+1-0--- 1
+1--0-- 1
+1---0- 1
+1----0 1
+011111 1
+.names s4.BLIF s3.BLIF s2.BLIF s1.BLIF s0.BLIF s4.REG
+10--- 1
+1-0-- 1
+1--0- 1
+1---0 1
+01111 1
+.names s3.BLIF s2.BLIF s1.BLIF s0.BLIF s3.REG
+10-- 1
+1-0- 1
+1--0 1
+0111 1
+.names s2.BLIF s1.BLIF s0.BLIF s2.REG
+10- 1
+1-0 1
+011 1
+.names s1.BLIF s0.BLIF s1.REG
+01 1
+10 1
+.names s0.BLIF s0.REG
+0 1
+.names s9.BLIF outclock
+1 1
+0 0
+.names inclock.BLIF s9.C
+1 1
+0 0
+.names inclock.BLIF s8.C
+1 1
+0 0
+.names inclock.BLIF s7.C
+1 1
+0 0
+.names inclock.BLIF s6.C
+1 1
+0 0
+.names inclock.BLIF s5.C
+1 1
+0 0
+.names inclock.BLIF s4.C
+1 1
+0 0
+.names inclock.BLIF s3.C
+1 1
+0 0
+.names inclock.BLIF s2.C
+1 1
+0 0
+.names inclock.BLIF s1.C
+1 1
+0 0
+.names inclock.BLIF s0.C
+1 1
+0 0
+.end

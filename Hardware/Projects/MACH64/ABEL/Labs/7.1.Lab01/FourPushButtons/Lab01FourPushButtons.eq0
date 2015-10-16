@@ -1,0 +1,34 @@
+ispLEVER Classic 1.4.01.04.23.l1 Linked Equations File
+Copyright(C), 1992-2011, Lattice Semiconductor Corp.
+All Rights Reserved.
+
+Design lab01fourpushbuttons created Sat Nov 26 11:04:57 2011
+
+Title: Four push button LED program
+
+ P-Terms   Fan-in  Fan-out  Type  Name (attributes)
+---------  ------  -------  ----  -----------------
+   1          1        1    Pin   led0 
+   1          1        1    Pin   led1 
+   1          1        1    Pin   led2 
+   1          1        1    Pin   led3 
+=========
+   4                 P-Term Total: 4
+                       Total Pins: 8
+                      Total Nodes: 0
+            Average P-Term/Output: 1
+
+
+Equations:
+
+led0 = (!pb0);
+
+led1 = (!pb1);
+
+led2 = (!pb2);
+
+led3 = (!pb3);
+
+
+Reverse-Polarity Equations:
+

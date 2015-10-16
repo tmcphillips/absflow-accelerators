@@ -1,0 +1,66 @@
+MODULE DecimalCounter
+
+// Repeatedly counts from 0 to 9 and displays the running digit
+// on a seven segment LED display.
+//
+// Mach64 	     7-Segment
+// 20/C0	->	A
+// 21/C2	->	B
+// 22/C4	->	C
+// 23/C6	->	D
+// 24/C8	->	E
+// 26/C10	->	F
+// 27/C12	->	G
+//
+// Mach64	       
+// 18/CLK1_IN	-> 	OSC
+
+DECLARATIONS
+
+	// 4-bit  register for holding decimal digit
+	d3..d0 NODE ISTYPE 'reg';
+	digit = [d3..d0];
+
+	// 20-bit register for scaling external 1 MHz clock signal to ~1 Hz
+	s19..s0 NODE ISTYPE 'reg';	
+	scaler 	= [s19..s0];
+
+	// output pins for driving 7-segment LED display
+	a,b,c,d,e,f,g PIN 20..24, 26,27 ISTYPE 'com';
+	leds 	= [a,b,c,d,e,f,g];
+
+	// external clock input
+	clock PIN 18;
+	
+EQUATIONS
+
+	// clock the scaler using input clock signal (1MHz)
+	scaler.clk = clock;						
+
+	// clock the decimal counter using MSB of scaler (1Hz)	
+	digit.clk = s19;
+
+	// increment scalar on each external clock pulse
+	scaler := scaler + 1;
+
+	// increment decimal digit modulo 10 on each scaled clock pulse
+	WHEN (digit == 9) THEN {
+		digit := 0;
+	} ELSE {
+		digit := digit + 1;
+	}
+
+	// map digit values to output led signals
+	truth_table (digit -> [a, b, c, d, e, f, g])
+		    0   -> [1, 1, 1, 1, 1, 1, 0];
+		    1   -> [0, 1, 1, 0, 0, 0, 0];
+		    2   -> [1, 1, 0, 1, 1, 0, 1];
+		    3   -> [1, 1, 1, 1, 0, 0, 1];
+		    4   -> [0, 1, 1, 0, 0, 1, 1];
+		    5   -> [1, 0, 1, 1, 0, 1, 1];
+		    6   -> [0, 0, 1, 1, 1, 1, 1];
+		    7   -> [1, 1, 1, 0, 0, 0, 0];
+		    8   -> [1, 1, 1, 1, 1, 1, 1];
+		    9   -> [1, 1, 1, 0, 0, 1, 1];
+END
+

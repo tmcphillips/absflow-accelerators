@@ -1,0 +1,21 @@
+#PLAFILE     lab01singlepushbutton.bl5
+#DATE        Sat Nov 26 10:26:36 2011
+
+#DESIGN      lab01singlepushbutton
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION pb3:C_*_20
+DATA LOCATION led:C_7_21
+
+// Signals direction
+DATA IO_DIR pb3:IN
+DATA IO_DIR led:OUT
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM led

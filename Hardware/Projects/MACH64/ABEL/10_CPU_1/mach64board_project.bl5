@@ -1,0 +1,207 @@
+#$ TOOL  ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE  Mon Jan 16 16:04:38 2012
+#$ JEDECFILE  alu_2_demo
+#$ MODULE  ALU_2_demo
+#$ PINS 20 clock:18 runButton:31 op0:7 op1:8 op2:9 op3:10 d0:24 d1:26 d2:27
+ d3:28 a0:45 a1:46 a2:47 a3:48 b0:2 b1:3 b2:4 b3:40 zf:38 cf:39
+#$ NODES 12 L0_debounced P0_s9 P0_s8 P0_s7 P0_s6 P0_s5 P0_s4 P0_s3 P0_s2 P0_s1
+ P0_s0 L1_lastSample
+.model alu_2_demo 
+.inputs clock.BLIF runButton.BLIF L0_debounced.Q op3.BLIF op2.BLIF op1.BLIF \
+ op0.BLIF a3.Q a2.Q a1.Q a0.Q b3.Q b2.Q b1.Q b0.Q d3.BLIF d2.BLIF d1.BLIF d0.BLIF \
+ zf.Q cf.Q P0_s9.Q P0_s8.Q P0_s7.Q P0_s6.Q P0_s5.Q P0_s4.Q P0_s3.Q P0_s2.Q \
+ P0_s1.Q P0_s0.Q L1_lastSample.Q
+.outputs a0.D a0.C a1.D.X1 a1.D.X2 a1.C a2.D a2.C a3.D a3.C b0.D b0.C b1.D b1.C \
+ b2.D b2.C b3.D b3.C zf.D- zf.C cf.D cf.C L0_debounced.D L0_debounced.C P0_s9.T \
+ P0_s9.C P0_s8.T P0_s8.C P0_s7.T P0_s7.C P0_s6.T P0_s6.C P0_s5.T P0_s5.C \
+ P0_s4.D.X1 P0_s4.D.X2 P0_s4.C P0_s3.D P0_s3.C P0_s2.D P0_s2.C P0_s1.D P0_s1.C \
+ P0_s0.D P0_s0.C L1_lastSample.D L1_lastSample.C
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a1.Q a0.Q b0.Q d0.BLIF a0.D
+0110--1- 1
+-101-10- 1
+1101-1-- 1
+00001--- 1
+011--11- 1
+1110---0 1
+010--01- 1
+0110-1-- 1
+001--0-- 1
+0100-0-- 1
+.names L0_debounced.Q a0.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a2.Q a1.Q a0.Q b1.Q d1.BLIF a1.D.X1
+0-10-11-- 1
+0110-1--- 1
+00001---- 1
+00-1-01-- 1
+0001--1-- 1
+0101---1- 1
+0100-0--- 1
+01-0-0-1- 1
+01-1-1-1- 1
+1110----0 1
+0010-00-- 1
+0011-10-- 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a2.Q a1.Q a0.Q b1.Q d1.BLIF a1.D.X2
+-101-1--- 1
+.names L0_debounced.Q a1.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a3.Q a2.Q a1.Q a0.Q b2.Q d2.BLIF a2.D
+0110----1- 1
+0011-1-0-- 1
+001--101-- 1
+0-10-11--- 1
+0010-000-- 1
+00-1-011-- 1
+010--0--1- 1
+-101-1--0- 1
+1101-1---- 1
+00001----- 1
+0001--1--- 1
+0100-0---- 1
+1110-----0 1
+011--1--1- 1
+0110-1---- 1
+.names L0_debounced.Q a2.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a3.Q a2.Q a1.Q a0.Q b3.Q d3.BLIF a3.D
+01-00---1- 1
+00111--0-- 1
+001-1-01-- 1
+001-101--- 1
+0-1011---- 1
+00100000-- 1
+00-10111-- 1
+-1011---0- 1
+11011----- 1
+010-0---1- 1
+0001-1---- 1
+01000----- 1
+1110-----0 1
+011-1---1- 1
+01101----- 1
+.names L0_debounced.Q a3.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF b0.Q d0.BLIF b0.D
+1101-0 1
+-1101- 1
+0---1- 1
+.names L0_debounced.Q b0.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF b1.Q d1.BLIF b1.D
+1101-0 1
+-1101- 1
+0---1- 1
+.names L0_debounced.Q b1.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF b2.Q d2.BLIF b2.D
+1101-0 1
+-1101- 1
+0---1- 1
+.names L0_debounced.Q b2.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF b3.Q d3.BLIF b3.D
+1101-0 1
+-1101- 1
+0---1- 1
+.names L0_debounced.Q b3.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a3.Q a2.Q a1.Q a0.Q b3.Q b2.Q b1.Q b0.Q zf.Q zf.D-
+01-0-0--1---- 1
+01-0-0----1-- 1
+01-0-0---1--- 1
+0110-------1- 1
+01011---0---- 1
+0--0--10----- 1
+0-01-1---0--- 1
+0-01--1---0-- 1
+01-00--1----- 1
+0-01---1---0- 1
+-100--0------ 1
+011-1---1---- 1
+011--1---1--- 1
+-0-1--01----- 1
+-00--1------- 1
+011----1---1- 1
+011---1---1-- 1
+-0---01------ 1
+-0--01------- 1
+0--010------- 1
+0-10-1------- 1
+010----0---1- 1
+010---0---1-- 1
+010--0---1--- 1
+010-0---1---- 1
+-01----0----- 1
+1-11--------- 1
+1-00--------- 1
+10----------- 1
+1-----------0 1
+.names L0_debounced.Q zf.C
+1 1
+.names op3.BLIF op2.BLIF op1.BLIF op0.BLIF a3.Q a2.Q a1.Q a0.Q cf.Q cf.D
+00100000- 1
+00-11111- 1
+1110----1 1
+1101----1 1
+0000---1- 1
+00011---- 1
+.names L0_debounced.Q cf.C
+1 1
+.names runButton.BLIF L1_lastSample.Q L0_debounced.D
+01 1
+.names P0_s9.Q L0_debounced.C
+1 1
+.names P0_s8.Q P0_s7.Q P0_s6.Q P0_s5.Q P0_s4.Q P0_s3.Q P0_s2.Q P0_s1.Q P0_s0.Q P0_s9.T
+111111111 1
+.names clock.BLIF P0_s9.C
+1 1
+.names P0_s7.Q P0_s6.Q P0_s5.Q P0_s4.Q P0_s3.Q P0_s2.Q P0_s1.Q P0_s0.Q P0_s8.T
+11111111 1
+.names clock.BLIF P0_s8.C
+1 1
+.names P0_s6.Q P0_s5.Q P0_s4.Q P0_s3.Q P0_s2.Q P0_s1.Q P0_s0.Q P0_s7.T
+1111111 1
+.names clock.BLIF P0_s7.C
+1 1
+.names P0_s5.Q P0_s4.Q P0_s3.Q P0_s2.Q P0_s1.Q P0_s0.Q P0_s6.T
+111111 1
+.names clock.BLIF P0_s6.C
+1 1
+.names P0_s4.Q P0_s3.Q P0_s2.Q P0_s1.Q P0_s0.Q P0_s5.T
+11111 1
+.names clock.BLIF P0_s5.C
+1 1
+.names P0_s4.Q P0_s3.Q P0_s2.Q P0_s1.Q P0_s0.Q P0_s4.D.X1
+1---- 1
+.names P0_s4.Q P0_s3.Q P0_s2.Q P0_s1.Q P0_s0.Q P0_s4.D.X2
+-1111 1
+.names clock.BLIF P0_s4.C
+1 1
+.names P0_s3.Q P0_s2.Q P0_s1.Q P0_s0.Q P0_s3.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+.names clock.BLIF P0_s3.C
+1 1
+.names P0_s2.Q P0_s1.Q P0_s0.Q P0_s2.D
+011 1
+10- 1
+1-0 1
+.names clock.BLIF P0_s2.C
+1 1
+.names P0_s1.Q P0_s0.Q P0_s1.D
+10 1
+01 1
+.names clock.BLIF P0_s1.C
+1 1
+.names P0_s0.Q P0_s0.D
+0 1
+.names clock.BLIF P0_s0.C
+1 1
+.names runButton.BLIF L1_lastSample.D
+0 1
+.names P0_s9.Q L1_lastSample.C
+1 1
+.end

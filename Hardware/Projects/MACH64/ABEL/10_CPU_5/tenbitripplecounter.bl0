@@ -1,0 +1,56 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 19:24:10 2012
+#$ MODULE tenbitripplecounter
+#$ JEDECFILE tenbitripplecounter
+#$ PINS 2 inclock outclock
+#$ NODES 10 s9 s8 s7 s6 s5 s4 s3 s2 s1 s0
+#$ INTERFACE tenbitripplecounter  2 inclock'i'  outclock'o' 
+
+.model tenbitripplecounter
+.inputs inclock.BLIF s0.BLIF s1.BLIF s2.BLIF s3.BLIF s4.BLIF s5.BLIF s6.BLIF s7.BLIF \
+s8.BLIF s9.BLIF
+.outputs outclock s0.T s1.T s2.T s3.T s4.T s5.T s6.T s7.T s8.T s9.T s0.C s1.C \
+s2.C s3.C s4.C s5.C s6.C s7.C s8.C s9.C
+.names s9.BLIF outclock
+1 1
+.names s0.T
+ 1
+.names s1.T
+ 1
+.names s2.T
+ 1
+.names s3.T
+ 1
+.names s4.T
+ 1
+.names s5.T
+ 1
+.names s6.T
+ 1
+.names s7.T
+ 1
+.names s8.T
+ 1
+.names s9.T
+ 1
+.names inclock.BLIF s0.C
+1 1
+.names s0.BLIF s1.C
+1 1
+.names s1.BLIF s2.C
+1 1
+.names s2.BLIF s3.C
+1 1
+.names s3.BLIF s4.C
+1 1
+.names s4.BLIF s5.C
+1 1
+.names s5.BLIF s6.C
+1 1
+.names s6.BLIF s7.C
+1 1
+.names s7.BLIF s8.C
+1 1
+.names s8.BLIF s9.C
+1 1
+.end

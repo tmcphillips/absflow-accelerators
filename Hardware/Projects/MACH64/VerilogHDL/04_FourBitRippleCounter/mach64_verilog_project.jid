@@ -1,0 +1,5 @@
+. FourBitRippleCounter fourbitripplecounter.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\fourbitripplecounter.v
+u1d Debouncer fourbitripplecounter.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\fourbitripplecounter.v
+u1rc.u0tff TFlipFlop fourbitripplecounter.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\fourbitripplecounter.v
+u1rc RippleCounter fourbitripplecounter.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\fourbitripplecounter.v
+u1rs SynchronousScaler fourbitripplecounter.v c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\fourbitripplecounter.v

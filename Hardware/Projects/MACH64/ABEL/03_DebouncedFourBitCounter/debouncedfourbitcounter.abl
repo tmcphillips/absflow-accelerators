@@ -1,0 +1,83 @@
+module DebouncedFourBitCounter
+
+title 'Four bit counter with debounced step'
+
+
+//   	Wiring diagram
+//
+//   	Outputs for driving LEDs
+//
+//  	B8  (14)  ->  L0
+//   	B10 (15)  ->  L1
+//   	B12 (16)  ->  L2
+//   	B14 (17)  ->  L3
+//
+//   	Inputs from pushbuttons
+//
+//   	CLK1_IN (18) <- J17 (PB0)
+//	C0      (20) <- J17 (PB3)
+//
+//	Input from DIP switch
+//
+//	C2 (21) <- DS15
+//
+//	Input from on-board 1 MHz oscillator
+//
+//	CLK2_IN (19) <- OSC
+//
+
+
+declarations
+
+	// use the Debouncer module to debounce the step button
+	Debouncer interface (rawSignal, samplingClock -> debounced);
+	debouncedStep functional_block Debouncer;
+
+	// use the TenBitScaler module to scale down the clock input to the debouncer
+	TenBitScaler interface (inclock -> outclock);
+	oneKHzClock functional_block TenBitScaler;
+
+	// use the on-board 1 MHz clock
+	oneMHzClock pin 19;
+
+	// use PB0 as the counter step button
+	!stepButton pin 18;
+
+	// use PB3 as the reset signal
+	!reset pin 20;
+
+	// use DS15 as the step direction control signal 
+	// (HIGH -> increment on each step, LOW -> decrement on each step)
+	!stepDirectionUp pin 21;
+
+	// use four registered bits as the step counter
+	// and expose them as pins to drive the four LEDs
+	q0..q3 pin 14..17 istype 'reg';
+	counter = [q3..q0];
+
+
+equations
+
+	// use the onboard 1 MHz clock as input to the clock scaler
+	oneKHzClock.inclock = oneMHzClock;
+
+
+	// debounce the step button using the 1 KHz 
+	debouncedStep.samplingClock = oneKHzClock.outclock;
+	debouncedStep.rawSignal = stepButton;
+
+	// step the counter using the debounced step signal
+	counter.clk = debouncedStep.debounced;
+
+	// reset the counter using the un-debounced reset signal
+	counter.ar = reset;
+
+	// on each step increment or decrement the counter depending
+	// on the direction input
+	when (stepDirectionUp) then
+		counter := counter + 1;
+	else 
+		counter := counter - 1;
+
+end 
+

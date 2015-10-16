@@ -1,0 +1,184 @@
+module ALU_7_demo
+
+declarations
+
+	@include 'opcodes.abl'
+
+	ALU_7 interface ([Op5..Op0], [A3..A0], [B3..B0] -> [R3..R0], ZF, CF);
+	alu functional_block ALU_7;
+
+	TenBitRippleCounter interface (inclock -> outclock);
+	scaler functional_block TenBitRippleCounter;
+
+	Debouncer interface (rawSignal, samplingClock -> debounced);
+	debouncer functional_block Debouncer;
+
+	clock	   pin 43;			// ! MHz system clock
+	!runButton pin 31;
+	!reset	   pin 32;
+
+	run	   node;
+	inc_pc 	   node;
+
+	op5..op0 	node;			// opcode input
+	arg3..arg0   	node;	
+	pc2..pc0   	pin 22..20 istype 'reg';
+
+
+	a0..a3     pin 45..48 istype 'reg';	// register A
+	b0..b3     pin 2..4, 7 istype 'reg';	// register B
+
+	zf	   pin 38 istype 'reg';
+	cf	   pin 39 istype 'reg';
+
+	pc 	= [pc2..pc0];
+	op 	= [op5..op0];
+	arg	= [arg3..arg0];
+	flags   = [zf, cf];
+	a	= [a3..a0];
+	b	= [b3..b0];
+
+
+equations
+
+	pc.ar = reset;
+	a.ar = reset;
+	b.ar = reset;
+	flags.ar = reset;
+
+	scaler.inclock = clock;
+
+	debouncer.samplingClock = scaler.outclock;
+	debouncer.rawSignal = runButton;
+	
+	run = debouncer.debounced;
+
+
+	a.clk 	  = run;
+	b.clk     = run;
+	flags.clk = run;
+	pc.clk 	  = run;
+	
+	alu.[Op5..Op0] = op;
+	alu.[A3..A0]   = a;
+	alu.[B3..B0]   = b;
+
+	when (op == OP_NOP) then {
+
+		a  := a;
+		b  := b;
+		zf := zf;
+		cf := cf;
+	}
+
+	when (op5 & !op4) then {
+
+		a  := alu.[R3..R0];
+		b  := [b3..b0];
+		zf := alu.ZF;
+		cf := alu.CF;
+	}
+
+	when (op5 & op4) then {
+
+		a  := [a3..a0];
+		b  := alu.[R3..R0];
+		zf := alu.ZF;
+		cf := alu.CF;
+	}
+	
+	when (op == OP_LDA) then {
+
+		a  := arg;
+		b  := b;
+		zf := zf;
+		cf := cf;
+	}
+
+	when (op == OP_LDB) then {
+		
+		a  := a;
+		b  := arg;
+		zf := zf;
+		cf := cf;
+	}
+
+	when (op == OP_JMP) then {
+		
+		a  := a;
+		b  := b;
+		zf := zf;
+		cf := cf
+		pc := [arg2..arg0];
+	}
+
+    	when (op == OP_JZ) then {
+
+		a  := a;
+		b  := b;
+		zf := zf;
+		cf := cf;
+	
+		when (zf) then {
+			pc := [arg2..arg0];
+		} else {
+			inc_pc = 1;
+		}
+	}		
+
+    	when (op == OP_JNZ) then {
+
+		a  := a;
+		b  := b;
+		zf := zf;
+		cf := cf;
+	
+		when (!zf) then {
+			pc := [arg2..arg0];
+		} else {
+			inc_pc = 1;
+		}
+	}		
+
+    	when (op == OP_JC) then {
+
+		a  := a;
+		b  := b;
+		zf := zf;
+		cf := cf;
+	
+		when (cf) then {
+			pc := [arg2..arg0];
+		} else {
+			inc_pc = 1;
+		}
+	}		
+
+  	when (op == OP_JNC) then {
+
+		a  := a;
+		b  := b;
+		zf := zf;
+		cf := cf;
+	
+		when (!cf) then {
+			pc := [arg2..arg0];
+		} else {
+			inc_pc = 1;
+		}
+	}
+
+	// increment PC if ALU instruction or register instruction
+	when (op5 # !op4) then {
+		inc_pc = 1;
+	}
+
+	when (inc_pc) then {
+		pc := pc + 1;
+	}
+
+	@include 'program_add.abl'
+
+
+end
+

@@ -1,0 +1,370 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+G_212.X1 = y_5_.Q & y_6_.Q & y_7_.Q & N_188 ; (1 pterm, 4 signals)
+G_212.X2 = y_8_.Q ; (1 pterm, 1 signal)
+
+G_88_1 = x_0_.Q & x_1_.Q & x_2_.Q & !x_3_.Q
+    # !x_2_.Q & x_3_.Q
+    # !x_1_.Q & x_3_.Q
+    # !x_0_.Q & x_3_.Q ; (4 pterms, 4 signals)
+
+G_89_1 = x_4_.Q & !N_160
+    # !x_4_.Q & N_160 ; (2 pterms, 2 signals)
+
+N_123_0.X1 = up_n & ypos_0_.Q & ypos_1_.Q & ypos_2_.Q
+    # up_n & down_n
+    # down_n & !ypos_0_.Q & !ypos_1_.Q & !ypos_2_.Q ; (3 pterms, 5 signals)
+N_123_0.X2 = up_n & !down_n ; (1 pterm, 2 signals)
+
+N_160 = x_0_.Q & x_1_.Q & x_2_.Q & x_3_.Q ; (1 pterm, 4 signals)
+
+N_188 = y_0_.Q & y_1_.Q & y_2_.Q & y_3_.Q & y_4_.Q ; (1 pterm, 5 signals)
+
+N_250 = !( xpos_1_.Q & !G_88_1
+    # !xpos_1_.Q & G_88_1
+    # ypos_3_.Q & !y_4_5__n
+    # !ypos_3_.Q & y_4_5__n
+    # ypos_2_.Q & !y_4_4__n
+    # !ypos_2_.Q & y_4_4__n
+    # ypos_1_.Q & !y_4_3__n
+    # !ypos_1_.Q & y_4_3__n
+    # xpos_4_.Q & !x_3_6__n
+    # !xpos_4_.Q & x_3_6__n
+    # xpos_3_.Q & !x_3_5__n
+    # !xpos_3_.Q & x_3_5__n
+    # xpos_2_.Q & !G_89_1
+    # !xpos_2_.Q & G_89_1
+    # !N_250_1 ) ; (15 pterms, 15 signals)
+
+N_250_1 = !( x_0_.Q & !xpos_0_.Q & x_1_.Q & !x_2_.Q
+    # x_0_.Q & xpos_0_.Q & x_1_.Q & x_2_.Q
+    # xpos_0_.Q & !x_1_.Q & !x_2_.Q
+    # !x_0_.Q & xpos_0_.Q & !x_2_.Q
+    # !xpos_0_.Q & !x_1_.Q & x_2_.Q
+    # !x_0_.Q & !xpos_0_.Q & x_2_.Q
+    # ypos_4_.Q & !y_4_6__n
+    # !ypos_4_.Q & y_4_6__n ) ; (8 pterms, 6 signals)
+
+N_28_8_i = !y_0_.Q & !y_1_.Q & !y_2_.Q & !y_3_.Q & !y_5_.Q & !y_6_.Q & !y_7_.Q
+       & !y_4_4__n & state23_6 & !x12 & G_212 & !N_188
+    # y_0_.Q & y_1_.Q & y_2_.Q & y_3_.Q & !y_5_.Q & !y_6_.Q & !y_7_.Q
+       & !y_4_4__n & state23_6 & x12 & G_212 & !N_188
+    # !y_0_.Q & !y_1_.Q & !y_2_.Q & !y_3_.Q & y_5_.Q & y_6_.Q & y_7_.Q
+       & !y_4_4__n & state23_6 & !x12 & G_212 & N_188
+    # y_0_.Q & y_1_.Q & y_2_.Q & y_3_.Q & y_5_.Q & y_6_.Q & y_7_.Q & !y_4_4__n
+       & state23_6 & x12 & G_212 & N_188 ; (4 pterms, 12 signals)
+
+N_86_0.X1 = left_n & xpos_0_.Q & xpos_1_.Q & xpos_2_.Q
+    # left_n & right_n
+    # right_n & !xpos_0_.Q & !xpos_1_.Q & !xpos_2_.Q ; (3 pterms, 5 signals)
+N_86_0.X2 = left_n & !right_n ; (1 pterm, 2 signals)
+
+state13 = !x_0_.Q & x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & x_5_.Q & x_6_.Q
+       & x_7_.Q & x_3_5__n & !x_3_6__n & N_160
+    # !x_0_.Q & x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & !x_6_.Q & !x_7_.Q
+       & x_3_5__n & !x_3_6__n & N_160
+    # !x_0_.Q & x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & !x_5_.Q & !x_7_.Q
+       & x_3_5__n & !x_3_6__n & N_160
+    # !x_0_.Q & x_1_.Q & x_2_.Q & !x_3_.Q & !x_4_.Q & !x_7_.Q & x_3_5__n
+       & !x_3_6__n & !N_160
+    # !x_0_.Q & x_1_.Q & x_2_.Q & !x_3_.Q & !x_4_.Q & x_3_5__n & !x_3_6__n
+       & !N_160 & x12
+    # !x_0_.Q & x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & x_3_5__n & !x_3_6__n
+       & N_160 & x12 ; (6 pterms, 12 signals)
+
+state23_6 = x_0_.Q & x_4_.Q & x_5_.Q & x_6_.Q & x_7_.Q & N_160
+    # x_0_.Q & x_7_.Q & x12 ; (2 pterms, 7 signals)
+
+state3 = !x_0_.Q & !x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & x_5_.Q & x_6_.Q
+       & x_7_.Q & !x_3_6__n & N_160
+    # !x_0_.Q & !x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & x_5_.Q & !x_6_.Q
+       & !x_7_.Q & !x_3_6__n & N_160
+    # !x_0_.Q & !x_1_.Q & x_2_.Q & !x_3_.Q & !x_4_.Q & !x_5_.Q & !x_7_.Q
+       & !x_3_6__n & !N_160
+    # !x_0_.Q & !x_1_.Q & x_2_.Q & !x_3_.Q & !x_4_.Q & !x_5_.Q & !x_3_6__n
+       & !N_160 & x12
+    # !x_0_.Q & !x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & x_5_.Q & !x_3_6__n
+       & N_160 & x12 ; (5 pterms, 11 signals)
+
+state40 = !y_0_.Q & y_1_.Q & !y_2_.Q & y_3_.Q & !y_8_.Q & y_4_4__n & y_4_5__n
+       & y_4_6__n & y_4_7__n & !x12
+    # y_0_.Q & !y_1_.Q & !y_2_.Q & y_3_.Q & !y_8_.Q & y_4_4__n & y_4_5__n
+       & y_4_6__n & y_4_7__n & x12 ; (2 pterms, 10 signals)
+
+state8.X1 = x_0_.Q & !x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & !x_3_5__n
+       & !x_3_6__n & x12
+    # x_0_.Q & !x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & !x_7_.Q & !x_3_5__n
+       & !x_3_6__n ; (2 pterms, 9 signals)
+state8.X2 = x_0_.Q & !x_1_.Q & x_2_.Q & !x_3_.Q & x_4_.Q & x_5_.Q & x_6_.Q
+       & !x_3_5__n & !x_3_6__n & N_160 & !x12 ; (1 pterm, 11 signals)
+
+state80 = !y_0_.Q & !y_1_.Q & !y_2_.Q & !y_3_.Q & !y_5_.Q & !y_6_.Q & !y_7_.Q
+       & !y_8_.Q & !y_4_4__n & !x12 & !N_188
+    # !y_0_.Q & !y_1_.Q & !y_2_.Q & !y_3_.Q & y_5_.Q & y_6_.Q & y_7_.Q
+       & !y_8_.Q & !y_4_4__n & !x12 & N_188
+    # y_0_.Q & y_1_.Q & y_2_.Q & y_3_.Q & !y_5_.Q & !y_6_.Q & !y_7_.Q
+       & !y_4_4__n & x12 & !G_212 & !N_188
+    # y_0_.Q & !y_1_.Q & y_2_.Q & !y_3_.Q & !y_4_.Q & !y_5_.Q & !y_6_.Q
+       & !y_7_.Q & !y_4_4__n & x12 & G_212 & !N_188
+    # y_0_.Q & y_1_.Q & y_2_.Q & y_3_.Q & y_5_.Q & y_6_.Q & y_7_.Q & !y_4_4__n
+       & x12 & !G_212 & N_188
+    # y_0_.Q & !y_1_.Q & y_2_.Q & !y_3_.Q & !y_4_.Q & y_5_.Q & y_6_.Q & y_7_.Q
+       & !y_4_4__n & x12 & G_212 & N_188 ; (6 pterms, 13 signals)
+
+state_0_.D = !( state_3_.Q & state_2_.Q & state_0_.Q & state8
+    # !state_3_.Q & state_2_.Q & !state_0_.Q & !state3
+    # !state_2_.Q & !state_1_.Q & !state_0_.Q & !state23_6
+    # !state_2_.Q & !state_1_.Q & !state_0_.Q & !state40
+    # !state_3_.Q & state_2_.Q & !state_1_.Q & !y_0_.Q & !y_1_.Q & y_2_.Q
+       & y_4_.Q & !y_4_3__n & y_4_5__n & y_4_6__n & y_4_7__n & state23_6
+       & !x12 & !G_212
+    # !state_3_.Q & state_2_.Q & !state_1_.Q & y_0_.Q & y_1_.Q & !y_2_.Q
+       & y_4_.Q & !y_4_3__n & y_4_5__n & y_4_6__n & y_4_7__n & state23_6 & x12
+       & !G_212
+    # !state_2_.Q & !state_1_.Q & state_0_.Q & state3
+    # state_3_.Q & state_1_.Q & state_0_.Q & N_28_8_i
+    # !state_2_.Q & state_1_.Q & !state_0_.Q & !state8
+    # state_3_.Q & state_2_.Q & state_1_.Q & !state80
+    # state_2_.Q & state_1_.Q & state_0_.Q & state8
+    # state_3_.Q & state_2_.Q & state_1_.Q & !state23_6
+    # state_2_.Q & !state_1_.Q & !state_0_.Q & !state3 ) ; (13 pterms, 20 signals)
+state_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+state_1_.D = !state_3_.Q & state_2_.Q & !state_1_.Q & !y_0_.Q & !y_1_.Q
+       & y_2_.Q & y_4_.Q & !y_4_3__n & y_4_5__n & y_4_6__n & y_4_7__n
+       & state23_6 & !x12 & !G_212
+    # !state_3_.Q & state_2_.Q & !state_1_.Q & y_0_.Q & y_1_.Q & !y_2_.Q
+       & y_4_.Q & !y_4_3__n & y_4_5__n & y_4_6__n & y_4_7__n & state23_6 & x12
+       & !G_212
+    # state_2_.Q & state_1_.Q & state_0_.Q & !state8
+    # state_3_.Q & state_2_.Q & state_0_.Q & state8
+    # !state_2_.Q & !state_0_.Q & state23_6 & !state40
+    # !state_2_.Q & !state_1_.Q & state_0_.Q & state3
+    # !state_3_.Q & !state_2_.Q & state_1_.Q & !state13
+    # state_3_.Q & state_1_.Q & !state23_6
+    # !state_2_.Q & state_1_.Q & !state_0_.Q
+    # !state_3_.Q & !state_0_.Q ; (10 pterms, 19 signals)
+state_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+state_2_.D = state_3_.Q & state_2_.Q & !state_0_.Q & !state80
+    # state_2_.Q & state_1_.Q & state_0_.Q & N_28_8_i & !state8
+    # !state_1_.Q & !state_0_.Q & !y_0_.Q & !y_1_.Q & y_2_.Q & y_4_.Q
+       & !y_4_3__n & y_4_5__n & y_4_6__n & y_4_7__n & state23_6 & !x12
+       & !state40 & state13 & !G_212
+    # !state_1_.Q & !state_0_.Q & y_0_.Q & y_1_.Q & !y_2_.Q & y_4_.Q
+       & !y_4_3__n & y_4_5__n & y_4_6__n & y_4_7__n & state23_6 & x12
+       & !state40 & state13 & !G_212
+    # state_2_.Q & !state_1_.Q & !y_0_.Q & !y_1_.Q & y_2_.Q & y_4_.Q
+       & !y_4_3__n & y_4_5__n & y_4_6__n & y_4_7__n & !x12 & !G_212
+    # state_2_.Q & !state_1_.Q & y_0_.Q & y_1_.Q & !y_2_.Q & y_4_.Q
+       & !y_4_3__n & y_4_5__n & y_4_6__n & y_4_7__n & x12 & !G_212
+    # !state_3_.Q & !state_2_.Q & state_1_.Q & state_0_.Q & state13
+    # state_3_.Q & !state_1_.Q & !state_0_.Q & state23_6 & !state40
+    # state_3_.Q & !state_2_.Q & state_1_.Q & state_0_.Q & N_28_8_i
+    # !state_3_.Q & state_2_.Q & state_1_.Q & !state8
+    # state_2_.Q & !state_0_.Q & !state23_6
+    # !state_3_.Q & state_2_.Q & state_1_.Q & !state_0_.Q
+    # state_2_.Q & !state_1_.Q & !state23_6
+    # state_3_.Q & state_2_.Q & !state_1_.Q ; (14 pterms, 20 signals)
+state_2_.C = ntscClock ; (1 pterm, 1 signal)
+
+state_3_.T = state_3_.Q & !state_2_.Q & !state_1_.Q & !state_0_.Q & state23_6
+       & !state40
+    # !state_3_.Q & state_2_.Q & state_1_.Q & state_0_.Q & state8
+    # state_3_.Q & state_2_.Q & state_1_.Q & state_0_.Q & !state8
+    # state_3_.Q & state_2_.Q & state_1_.Q & !state_0_.Q & state23_6 & state80 ; (4 pterms, 8 signals)
+state_3_.C = ntscClock ; (1 pterm, 1 signal)
+
+video_0_ = 0 ; (0 pterm, 0 signal)
+
+video_1_.D = !( state_2_.Q & state_1_.Q & state_0_.Q
+    # !state_3_.Q & !state_2_.Q & !state_0_.Q
+    # state_3_.Q & state_0_.Q ) ; (3 pterms, 4 signals)
+video_1_.C = ntscClock ; (1 pterm, 1 signal)
+video_1_.CE = !( !state_3_.Q & state_2_.Q & !state_1_.Q & state23_6 ) ; (1 pterm, 4 signals)
+
+video_2_.D = !state_3_.Q & state_2_.Q & !state_1_.Q & !N_250 ; (1 pterm, 4 signals)
+video_2_.C = ntscClock ; (1 pterm, 1 signal)
+video_2_.CE = !( !state_3_.Q & state_2_.Q & !state_1_.Q & state23_6 ) ; (1 pterm, 4 signals)
+
+video_3_.D = !state_3_.Q & state_2_.Q & !state_1_.Q & N_250 ; (1 pterm, 4 signals)
+video_3_.C = ntscClock ; (1 pterm, 1 signal)
+video_3_.CE = !( !state_3_.Q & state_2_.Q & !state_1_.Q & state23_6 ) ; (1 pterm, 4 signals)
+
+x12 = x_0_.Q & x_1_.Q & x_2_.Q & x_3_.Q & x_4_.Q & !x_5_.Q & x_6_.Q & x_7_.Q
+       & N_160
+    # x_0_.Q & x_1_.Q & x_2_.Q & x_3_.Q & !x_4_.Q & x_6_.Q & x_7_.Q & !N_160 ; (2 pterms, 9 signals)
+
+x_0_.D = !x_0_.Q ; (1 pterm, 1 signal)
+x_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+x_1_.D = x_0_.Q & !x_1_.Q
+    # !x_0_.Q & x_1_.Q ; (2 pterms, 2 signals)
+x_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+x_2_.D = x_0_.Q & x_1_.Q & !x_2_.Q
+    # !x_1_.Q & x_2_.Q
+    # !x_0_.Q & x_2_.Q ; (3 pterms, 3 signals)
+x_2_.C = ntscClock ; (1 pterm, 1 signal)
+
+x_3_.D = x_0_.Q & x_1_.Q & x_2_.Q & !x_3_.Q
+    # !x_2_.Q & x_3_.Q
+    # !x_1_.Q & x_3_.Q
+    # !x_0_.Q & x_3_.Q ; (4 pterms, 4 signals)
+x_3_.C = ntscClock ; (1 pterm, 1 signal)
+
+x_3_5__n = x_4_.Q & !x_5_.Q & N_160 & !x12
+    # x_5_.Q & !N_160 & !x12
+    # !x_4_.Q & x_5_.Q & !x12 ; (3 pterms, 4 signals)
+
+x_3_6__n = x_4_.Q & x_5_.Q & !x_6_.Q & N_160 & !x12
+    # x_6_.Q & !N_160 & !x12
+    # !x_5_.Q & x_6_.Q & !x12
+    # !x_4_.Q & x_6_.Q & !x12 ; (4 pterms, 5 signals)
+
+x_4_.D = x_4_.Q & !N_160
+    # !x_4_.Q & N_160 ; (2 pterms, 2 signals)
+x_4_.C = ntscClock ; (1 pterm, 1 signal)
+
+x_5_.D = x_4_.Q & !x_5_.Q & N_160 & !x12
+    # x_5_.Q & !N_160 & !x12
+    # !x_4_.Q & x_5_.Q & !x12 ; (3 pterms, 4 signals)
+x_5_.C = ntscClock ; (1 pterm, 1 signal)
+
+x_6_.D = x_4_.Q & x_5_.Q & !x_6_.Q & N_160 & !x12
+    # x_6_.Q & !N_160 & !x12
+    # !x_5_.Q & x_6_.Q & !x12
+    # !x_4_.Q & x_6_.Q & !x12 ; (4 pterms, 5 signals)
+x_6_.C = ntscClock ; (1 pterm, 1 signal)
+
+x_7_.D.X1 = x_7_.Q & !x12 ; (1 pterm, 2 signals)
+x_7_.D.X2 = x_4_.Q & x_5_.Q & x_6_.Q & N_160 & !x12 ; (1 pterm, 5 signals)
+x_7_.C = ntscClock ; (1 pterm, 1 signal)
+
+xpos_0_.D = left_n & !right_n & !xpos_0_.Q
+    # !left_n & right_n & !xpos_0_.Q
+    # !left_n & !right_n & xpos_0_.Q
+    # left_n & right_n & xpos_0_.Q ; (4 pterms, 3 signals)
+xpos_0_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+xpos_1_.D.X1 = !left_n & right_n & !xpos_0_.Q
+    # left_n & !right_n & xpos_0_.Q ; (2 pterms, 3 signals)
+xpos_1_.D.X2 = xpos_1_.Q ; (1 pterm, 1 signal)
+xpos_1_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+xpos_2_.T = !left_n & right_n & !xpos_0_.Q & !xpos_1_.Q
+    # left_n & !right_n & xpos_0_.Q & xpos_1_.Q ; (2 pterms, 4 signals)
+xpos_2_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+xpos_3_.D = left_n & !xpos_3_.Q & !N_86_0
+    # !left_n & xpos_3_.Q & !N_86_0
+    # !left_n & !xpos_3_.Q & N_86_0
+    # left_n & xpos_3_.Q & N_86_0 ; (4 pterms, 3 signals)
+xpos_3_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+xpos_4_.D.X1 = !left_n & !xpos_3_.Q & N_86_0
+    # left_n & xpos_3_.Q & !N_86_0 ; (2 pterms, 3 signals)
+xpos_4_.D.X2 = xpos_4_.Q ; (1 pterm, 1 signal)
+xpos_4_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+y_0_.D = y_0_.Q & !x12
+    # !y_0_.Q & x12 ; (2 pterms, 2 signals)
+y_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+y_1_.D.X1 = y_1_.Q
+    # y_0_.Q & !y_1_.Q & y_2_.Q & !y_3_.Q & !y_4_.Q & y_5_.Q & y_6_.Q & y_7_.Q
+       & x12 & G_212 & N_188
+    # y_0_.Q & !y_1_.Q & y_2_.Q & !y_3_.Q & !y_4_.Q & !y_5_.Q & !y_6_.Q
+       & !y_7_.Q & x12 & G_212 & !N_188 ; (3 pterms, 11 signals)
+y_1_.D.X2 = y_0_.Q & x12 ; (1 pterm, 2 signals)
+y_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+y_2_.T = y_0_.Q & y_2_.Q & !y_3_.Q & !y_4_.Q & !y_5_.Q & !y_6_.Q & !y_7_.Q
+       & x12 & G_212 & !N_188
+    # y_0_.Q & y_2_.Q & !y_3_.Q & !y_4_.Q & y_5_.Q & y_6_.Q & y_7_.Q & x12
+       & G_212 & N_188
+    # y_0_.Q & y_1_.Q & x12 ; (3 pterms, 11 signals)
+y_2_.C = ntscClock ; (1 pterm, 1 signal)
+
+y_3_.D.X1 = y_0_.Q & y_1_.Q & y_2_.Q & x12 ; (1 pterm, 4 signals)
+y_3_.D.X2 = y_3_.Q ; (1 pterm, 1 signal)
+y_3_.C = ntscClock ; (1 pterm, 1 signal)
+
+y_4_.D.X1 = y_0_.Q & y_1_.Q & y_2_.Q & y_3_.Q & x12 ; (1 pterm, 5 signals)
+y_4_.D.X2 = y_4_.Q ; (1 pterm, 1 signal)
+y_4_.C = ntscClock ; (1 pterm, 1 signal)
+
+y_4_3__n.X1 = y_0_.Q & y_1_.Q & y_2_.Q & x12 ; (1 pterm, 4 signals)
+y_4_3__n.X2 = y_3_.Q ; (1 pterm, 1 signal)
+
+y_4_4__n.X1 = y_0_.Q & y_1_.Q & y_2_.Q & y_3_.Q & x12 ; (1 pterm, 5 signals)
+y_4_4__n.X2 = y_4_.Q ; (1 pterm, 1 signal)
+
+y_4_5__n = !y_5_.Q & x12 & N_188
+    # y_5_.Q & !N_188
+    # y_5_.Q & !x12 ; (3 pterms, 3 signals)
+
+y_4_6__n = y_5_.Q & !y_6_.Q & x12 & N_188
+    # !y_5_.Q & y_6_.Q
+    # y_6_.Q & !N_188
+    # y_6_.Q & !x12 ; (4 pterms, 4 signals)
+
+y_4_7__n.X1 = y_5_.Q & y_6_.Q & x12 & N_188 ; (1 pterm, 4 signals)
+y_4_7__n.X2 = y_7_.Q ; (1 pterm, 1 signal)
+
+y_5_.D = !y_5_.Q & x12 & N_188
+    # y_5_.Q & !N_188
+    # y_5_.Q & !x12 ; (3 pterms, 3 signals)
+y_5_.C = ntscClock ; (1 pterm, 1 signal)
+
+y_6_.D = y_5_.Q & !y_6_.Q & x12 & N_188
+    # !y_5_.Q & y_6_.Q
+    # y_6_.Q & !N_188
+    # y_6_.Q & !x12 ; (4 pterms, 4 signals)
+y_6_.C = ntscClock ; (1 pterm, 1 signal)
+
+y_7_.D.X1 = y_5_.Q & y_6_.Q & x12 & N_188 ; (1 pterm, 4 signals)
+y_7_.D.X2 = y_7_.Q ; (1 pterm, 1 signal)
+y_7_.C = ntscClock ; (1 pterm, 1 signal)
+
+y_8_.D = !( y_0_.Q & !y_1_.Q & y_2_.Q & !y_3_.Q & !y_4_.Q & !y_5_.Q & !y_6_.Q
+       & !y_7_.Q & x12 & !N_188
+    # y_0_.Q & !y_1_.Q & y_2_.Q & !y_3_.Q & !y_4_.Q & y_5_.Q & y_6_.Q & y_7_.Q
+       & x12 & N_188
+    # !y_8_.Q & !x12
+    # x12 & !G_212 ) ; (4 pterms, 12 signals)
+y_8_.C = ntscClock ; (1 pterm, 1 signal)
+
+ypos_0_.D = up_n & !down_n & !ypos_0_.Q
+    # !up_n & down_n & !ypos_0_.Q
+    # !up_n & !down_n & ypos_0_.Q
+    # up_n & down_n & ypos_0_.Q ; (4 pterms, 3 signals)
+ypos_0_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+ypos_1_.D.X1 = !up_n & down_n & !ypos_0_.Q
+    # up_n & !down_n & ypos_0_.Q ; (2 pterms, 3 signals)
+ypos_1_.D.X2 = ypos_1_.Q ; (1 pterm, 1 signal)
+ypos_1_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+ypos_2_.T = !up_n & down_n & !ypos_0_.Q & !ypos_1_.Q
+    # up_n & !down_n & ypos_0_.Q & ypos_1_.Q ; (2 pterms, 4 signals)
+ypos_2_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+ypos_3_.D = up_n & !ypos_3_.Q & !N_123_0
+    # !up_n & ypos_3_.Q & !N_123_0
+    # !up_n & !ypos_3_.Q & N_123_0
+    # up_n & ypos_3_.Q & N_123_0 ; (4 pterms, 3 signals)
+ypos_3_.C = y_8_.Q ; (1 pterm, 1 signal)
+
+ypos_4_.D.X1 = !up_n & !ypos_3_.Q & N_123_0
+    # up_n & ypos_3_.Q & !N_123_0 ; (2 pterms, 3 signals)
+ypos_4_.D.X2 = ypos_4_.Q ; (1 pterm, 1 signal)
+ypos_4_.C = y_8_.Q ; (1 pterm, 1 signal)
+

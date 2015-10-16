@@ -1,0 +1,12 @@
+scanClock  i
+activeRow[3]  i
+activeRow[2]  i
+activeRow[1]  i
+activeRow[0]  i
+activeColumn_reg[2]  o
+activeColumn_reg[1]  o
+activeColumn_reg[0]  o
+activeKey_reg[3]  o
+activeKey_reg[2]  o
+activeKey_reg[1]  o
+activeKey_reg[0]  o

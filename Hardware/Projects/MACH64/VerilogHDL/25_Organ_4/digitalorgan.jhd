@@ -1,0 +1,31 @@
+MODULE DigitalOrgan DEFIN digitalorgan.v
+	SUBMODULE RippleCounter
+		INSTANCE u2rc
+	SUBMODULE RippleScaler
+		INSTANCE u1rs
+	SUBMODULE ClockSynthesizer
+		INSTANCE u6cs
+	SUBMODULE ClockSynthesizer
+		INSTANCE u5cs
+	SUBMODULE ClockSynthesizer
+		INSTANCE u4cs
+	SUBMODULE ClockSynthesizer
+		INSTANCE u3cs
+	SUBMODULE RippleScaler
+		INSTANCE u0rs
+MODULE ClockSynthesizer DEFIN clocksynthesizer.v
+MODULE RippleScaler DEFIN ripplescaler.v
+	SUBMODULE RippleCounter
+		INSTANCE u1rc
+MODULE RippleCounter DEFIN ripplecounter.v
+	SUBMODULE TFlipFlop
+		INSTANCE uitff
+	SUBMODULE TFlipFlop
+		INSTANCE u0tff
+MODULE TFlipFlop DEFIN tflipflop.v
+DEPEND INCLUDED_FILE clocksynthesizer.v
+DEPEND INCLUDED_FILE tflipflop.v
+DEPEND INCLUDED_FILE ripplecounter.v
+DEPEND INCLUDED_FILE ripplescaler.v
+DEPEND INCLUDED_FILE tflipflop.v
+DEPEND INCLUDED_FILE ripplecounter.v

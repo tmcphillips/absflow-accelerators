@@ -1,0 +1,120 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:09:37 2012
+#$ TITLE Four bit counter with load
+#$ MODULE fourbitcounterwithload
+#$ JEDECFILE fourbitcounterwithload
+#$ PINS 14 oneMHzClock:19 upButton:18 downButton:23 loadButton:22 reset:20 stepDirectionUp:21 d0:31 d1:32 d2:33 d3:34 q0:14 q1:15 q2:16 q3:17
+#$ NODES 11 oneKHzClock>inclock'co'  oneKHzClock>outclock'co'  debouncedUp>rawSignal'co'  debouncedUp>samplingClock'co'  debouncedUp>debounced'co'  \
+#  debouncedDown>rawSignal'co'  debouncedDown>samplingClock'co'  debouncedDown>debounced'co'  debouncedLoad>rawSignal'co'  debouncedLoad>samplingClock'co'  \
+#  debouncedLoad>debounced'co' 
+#$ INTERFACE tenbitscaler  2 inclock'i'  outclock'o' 
+#$ INTERFACE debouncer  3 rawSignal'i'  samplingClock'i'  debounced'o' 
+#$ INSTANCE oneKHzClock tenbitscaler 2 oneKHzClock>inclock oneKHzClock>outclock
+#$ INSTANCE debouncedUp debouncer 3 debouncedUp>rawSignal debouncedUp>samplingClock debouncedUp>debounced
+#$ INSTANCE debouncedDown debouncer 3 debouncedDown>rawSignal debouncedDown>samplingClock debouncedDown>debounced
+#$ INSTANCE debouncedLoad debouncer 3 debouncedLoad>rawSignal debouncedLoad>samplingClock debouncedLoad>debounced
+
+.model fourbitcounterwithload
+.inputs oneMHzClock.BLIF oneKHzClock>outclock.BLIF upButton.BLIF downButton.BLIF \
+loadButton.BLIF debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF reset.BLIF d3.BLIF d2.BLIF d1.BLIF d0.BLIF \
+q3.BLIF q2.BLIF q1.BLIF q0.BLIF stepDirectionUp.BLIF
+.outputs oneKHzClock>inclock debouncedUp>rawSignal debouncedUp>samplingClock \
+debouncedDown>rawSignal debouncedDown>samplingClock debouncedLoad>rawSignal \
+debouncedLoad>samplingClock q3.C q2.C q1.C q0.C q3.AR q2.AR q1.AR q0.AR q3.REG \
+q2.REG q1.REG q0.REG
+.names oneMHzClock.BLIF oneKHzClock>inclock
+1 1
+.names upButton.BLIF debouncedUp>rawSignal
+0 1
+.names oneKHzClock>outclock.BLIF debouncedUp>samplingClock
+1 1
+.names downButton.BLIF debouncedDown>rawSignal
+0 1
+.names oneKHzClock>outclock.BLIF debouncedDown>samplingClock
+1 1
+.names loadButton.BLIF debouncedLoad>rawSignal
+0 1
+.names oneKHzClock>outclock.BLIF debouncedLoad>samplingClock
+1 1
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF q3.C
+1-- 1
+-1- 1
+--1 1
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF q2.C
+1-- 1
+-1- 1
+--1 1
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF q1.C
+1-- 1
+-1- 1
+--1 1
+.names debouncedUp>debounced.BLIF debouncedDown>debounced.BLIF \
+debouncedLoad>debounced.BLIF q0.C
+1-- 1
+-1- 1
+--1 1
+.names reset.BLIF q3.AR
+0 1
+.names reset.BLIF q2.AR
+0 1
+.names reset.BLIF q1.AR
+0 1
+.names reset.BLIF q0.AR
+0 1
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d3.BLIF q3.BLIF q2.BLIF \
+q1.BLIF q0.BLIF stepDirectionUp.BLIF q3.REG
+--00----- 1
+-11-11--1 1
+-01-10--1 1
+-11-1-1-1 1
+-01-1-0-1 1
+-11-1--11 1
+-01-1--01 1
+1-1-11--0 1
+0-1-10--0 1
+1-1-1-1-0 1
+0-1-1-0-0 1
+1-1-1--10 1
+0-1-1--00 1
+-01-01111 1
+-11-00001 1
+0-1-01110 1
+1-1-00000 1
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d2.BLIF q2.BLIF q1.BLIF \
+q0.BLIF stepDirectionUp.BLIF q2.REG
+--00---- 1
+-11-11-1 1
+-01-10-1 1
+-11-1-11 1
+-01-1-01 1
+1-1-11-0 1
+0-1-10-0 1
+1-1-1-10 1
+0-1-1-00 1
+-01-0111 1
+-11-0001 1
+0-1-0110 1
+1-1-0000 1
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d1.BLIF q1.BLIF q0.BLIF \
+stepDirectionUp.BLIF q1.REG
+--00--- 1
+-11-111 1
+-01-011 1
+-01-101 1
+-11-001 1
+1-1-110 1
+0-1-010 1
+0-1-100 1
+1-1-000 1
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d0.BLIF q0.BLIF \
+stepDirectionUp.BLIF q0.REG
+--00-- 1
+-11-01 1
+-01-01 1
+1-1-00 1
+0-1-00 1
+.end

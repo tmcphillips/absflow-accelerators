@@ -1,0 +1,274 @@
+// Node Statistic Information File
+// Tool:  ispLEVER Classic 1.4.01.04.23.l1
+// Design 'octallatchdemo' created   Mon Jan 16 16:25:46 2012
+
+// Fmax Logic Level: 0.
+
+// Path: 
+
+// Signal Name: q0.D
+// Type: Tri
+BEGIN q0.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d0.BLIF             	0
+END
+
+// Signal Name: q0.LH
+// Type: Tri
+BEGIN q0.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	le.BLIF             	0
+END
+
+// Signal Name: q0.OE
+// Type: Tri
+BEGIN q0.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	oe.BLIF             	0
+END
+
+// Signal Name: q1.D
+// Type: Tri
+BEGIN q1.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d1.BLIF             	0
+END
+
+// Signal Name: q1.LH
+// Type: Tri
+BEGIN q1.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	le.BLIF             	0
+END
+
+// Signal Name: q1.OE
+// Type: Tri
+BEGIN q1.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	oe.BLIF             	0
+END
+
+// Signal Name: q2.D
+// Type: Tri
+BEGIN q2.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d2.BLIF             	0
+END
+
+// Signal Name: q2.LH
+// Type: Tri
+BEGIN q2.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	le.BLIF             	0
+END
+
+// Signal Name: q2.OE
+// Type: Tri
+BEGIN q2.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	oe.BLIF             	0
+END
+
+// Signal Name: q3.D
+// Type: Tri
+BEGIN q3.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d3.BLIF             	0
+END
+
+// Signal Name: q3.LH
+// Type: Tri
+BEGIN q3.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	le.BLIF             	0
+END
+
+// Signal Name: q3.OE
+// Type: Tri
+BEGIN q3.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	oe.BLIF             	0
+END
+
+// Signal Name: q4.D
+// Type: Tri
+BEGIN q4.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d4.BLIF             	0
+END
+
+// Signal Name: q4.LH
+// Type: Tri
+BEGIN q4.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	le.BLIF             	0
+END
+
+// Signal Name: q4.OE
+// Type: Tri
+BEGIN q4.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	oe.BLIF             	0
+END
+
+// Signal Name: q5.D
+// Type: Tri
+BEGIN q5.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d5.BLIF             	0
+END
+
+// Signal Name: q5.LH
+// Type: Tri
+BEGIN q5.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	le.BLIF             	0
+END
+
+// Signal Name: q5.OE
+// Type: Tri
+BEGIN q5.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	oe.BLIF             	0
+END
+
+// Signal Name: q6.D
+// Type: Tri
+BEGIN q6.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d6.BLIF             	0
+END
+
+// Signal Name: q6.LH
+// Type: Tri
+BEGIN q6.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	le.BLIF             	0
+END
+
+// Signal Name: q6.OE
+// Type: Tri
+BEGIN q6.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	oe.BLIF             	0
+END
+
+// Signal Name: q7.D
+// Type: Tri
+BEGIN q7.D
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	d7.BLIF             	0
+END
+
+// Signal Name: q7.LH
+// Type: Tri
+BEGIN q7.LH
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	le.BLIF             	0
+END
+
+// Signal Name: q7.OE
+// Type: Tri
+BEGIN q7.OE
+Fanin Number		1
+Pterm Number		1
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	oe.BLIF             	0
+END
+
+// Design 'octallatchdemo' used clock signal list:
+

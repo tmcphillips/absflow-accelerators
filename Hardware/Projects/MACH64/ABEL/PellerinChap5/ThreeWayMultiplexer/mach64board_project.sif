@@ -1,0 +1,70 @@
+// Node Statistic Information File
+// Tool:  ispLEVER Classic 1.4.01.04.23.l1
+// Design 'threewaymultiplexerdemo' created   Mon Jan 16 16:17:09 2012
+
+// Fmax Logic Level: 0.
+
+// Path: 
+
+// Signal Name: y0
+// Type: Output
+BEGIN y0
+Fanin Number		5
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	a0.BLIF             	0
+Fanin Input     	b0.BLIF             	0
+Fanin Input     	c0.BLIF             	0
+Fanin Input     	s1.BLIF             	0
+Fanin Input     	s0.BLIF             	0
+END
+
+// Signal Name: y1
+// Type: Output
+BEGIN y1
+Fanin Number		5
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	a1.BLIF             	0
+Fanin Input     	b1.BLIF             	0
+Fanin Input     	c1.BLIF             	0
+Fanin Input     	s1.BLIF             	0
+Fanin Input     	s0.BLIF             	0
+END
+
+// Signal Name: y2
+// Type: Output
+BEGIN y2
+Fanin Number		5
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	a2.BLIF             	0
+Fanin Input     	b2.BLIF             	0
+Fanin Input     	c2.BLIF             	0
+Fanin Input     	s1.BLIF             	0
+Fanin Input     	s0.BLIF             	0
+END
+
+// Signal Name: y3
+// Type: Output
+BEGIN y3
+Fanin Number		5
+Pterm Number		3
+Fanin per Macrocell	N/A
+Cluster PT		N/A
+Logic Levels		N/A
+Fanin Input     	a3.BLIF             	0
+Fanin Input     	b3.BLIF             	0
+Fanin Input     	c3.BLIF             	0
+Fanin Input     	s1.BLIF             	0
+Fanin Input     	s0.BLIF             	0
+END
+
+// Design 'threewaymultiplexerdemo' used clock signal list:
+

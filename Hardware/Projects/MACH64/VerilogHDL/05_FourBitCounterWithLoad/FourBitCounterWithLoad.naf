@@ -1,0 +1,13 @@
+upButton_n  i
+downButton_n  i
+loadButton_n  i
+resetButton_n  i
+dipSwitches_n[3]  i
+dipSwitches_n[2]  i
+dipSwitches_n[1]  i
+dipSwitches_n[0]  i
+oneMHzClock  i
+counter[3]  o
+counter[2]  o
+counter[1]  o
+counter[0]  o

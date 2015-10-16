@@ -1,0 +1,739 @@
+|--------------------------------------------------------------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Fitter Report File        -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+
+
+The Basic/Detailed Report Format can be selected in the dialog box
+Tools->Fitter Report File Format...
+
+Project_Summary
+~~~~~~~~~~~~~~~
+Project Name         :  mach64_verilog_project
+Project Path         :  C:\Users\tmcphillips\Designs\Projects\MACH64\VerilogHDL\27_NTSC_2
+Project Fitted on    :  Tue Feb 21 17:01:24 2012
+
+Device               :  M4064_32
+Package              :  48
+GLB Input Mux Size   :  10
+Available Blocks     :  4
+Speed                :  -7.5
+Part Number          :  LC4064V-75T48I
+Source Format        :  Pure_Verilog_HDL
+
+
+// Project 'mach64_verilog_project' Fit Successfully! //
+
+
+Compilation_Times
+~~~~~~~~~~~~~~~~~
+Prefit Time                     0 secs
+Load Design Time                0.06 secs
+Partition Time                  0.09 secs
+Place Time                      0.00 secs
+Route Time                      0.00 secs
+Total Fit Time                  00:00:01
+
+
+Design_Summary
+~~~~~~~~~~~~~~
+Total Input Pins                5
+Total Logic Functions           49
+  Total Output Pins             7
+  Total Bidir I/O Pins          0
+  Total Buried Nodes            42
+Total Flip-Flops                36
+  Total D Flip-Flops            28
+  Total T Flip-Flops            8
+  Total Latches                 0
+Total Product Terms             216
+
+Total Reserved Pins             0
+Total Locked Pins               12
+Total Locked Nodes              0
+
+Total Unique Output Enables     0
+Total Unique Clocks             2
+Total Unique Clock Enables      1
+Total Unique Resets             0
+Total Unique Presets            0
+
+Fmax Logic Levels               3
+
+
+Device_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~~~~
+                                 Device
+                                 Total    Used   Not Used   Utilization
+-----------------------------------------------------------------------
+Dedicated Pins
+  Clock/Input Pins                  4        1      3    -->    25
+  I/O / Enable Pins                 2        0      2    -->     0
+I/O Pins                           30       11     19    -->    36
+Logic Functions                    64       49     15    -->    76
+  Input Registers                  32        0     32    -->     0
+
+GLB Inputs                        144       95     49    -->    65
+Logical Product Terms             320      171    149    -->    53
+Occupied GLBs                       4        4      0    -->   100
+Macrocells                         64       49     15    -->    76
+
+Control Product Terms:
+  GLB Clock/Clock Enables           4        4      0    -->   100
+  GLB Reset/Presets                 4        0      4    -->     0
+  Macrocell Clocks                 64        0     64    -->     0
+  Macrocell Clock Enables          64        2     62    -->     3
+  Macrocell Enables                64        0     64    -->     0
+  Macrocell Resets                 64        0     64    -->     0
+  Macrocell Presets                64        0     64    -->     0
+
+Global Routing Pool               100       50     50    -->    50
+  GRP from IFB                     ..        4     ..    -->    ..
+    (from input signals)           ..        4     ..    -->    ..
+    (from output signals)          ..        0     ..    -->    ..
+    (from bidir signals)           ..        0     ..    -->    ..
+  GRP from MFB                     ..       46     ..    -->    ..
+----------------------------------------------------------------------
+
+<Note> 1 : The available PT is the product term that has not been used.
+<Note> 2 : IFB is I/O feedback.
+<Note> 3 : MFB is macrocell feedback.
+
+
+
+GLB_Resource_Summary
+~~~~~~~~~~~~~~~~~~~~
+                                                                                     # of PT
+               ---  Fanin  ---    I/O    Input  Macrocells       Macrocells   Logic  clusters
+             Unique Shared Total  Pins    Regs Used Inaccessible  available    PTs   used
+-------------------------------------------------------------------------------------------
+Maximum
+  GLB                      36      *(1)     8   --     --             16       80       16
+-------------------------------------------------------------------------------------------
+  GLB    A      3    18    21      0/8      0   13      0              3       39       13
+  GLB    B      7    12    19      4/8      0    9      0              7       40       12
+  GLB    C      1    24    25      4/8      0   14      0              2       43       14
+  GLB    D     11    19    30      3/8      0   13      0              3       49       13
+-------------------------------------------------------------------------------------------
+TOTALS:        22    73    95     11/32     0   49      0             15      171       52
+
+<Note> 1 : For ispMACH 4000 devices, the number of IOs depends on the GLB.
+<Note> 2 : Four rightmost columns above reflect last status of the placement process.
+
+
+
+GLB_Control_Summary
+~~~~~~~~~~~~~~~~~~~
+           Shared Shared | Mcell  Mcell  Mcell  Mcell  Mcell 
+           Clk/CE Rst/Pr | Clock  CE     Enable Reset  Preset
+------------------------------------------------------------------------------
+Maximum
+  GLB        1      1        16     16     16     16     16  
+==============================================================================
+  GLB    A   1      0         0      2      0      0      0
+  GLB    B   1      0         0      0      0      0      0
+  GLB    C   1      0         0      0      0      0      0
+  GLB    D   1      0         0      0      0      0      0
+------------------------------------------------------------------------------
+
+<Note> 1 : For ispMACH 4000 devices, the number of output enables depends on the GLB.
+
+
+
+Optimizer_and_Fitter_Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pin Assignment :                       Yes
+Group Assignment :                     No
+Pin Reservation :                      No
+
+@Ignore_Project_Constraints :
+  Pin Assignments :                    No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+  Group Assignments :                  No
+  Macrocell Assignment :               No
+      Keep Block Assignment            --
+      Keep Segment Assignment          --
+
+@Backannotate_Project_Constraints
+  Pin Assignments :                    No
+  Pin And Block Assignments :          No
+  Pin, Macrocell and Block :           No
+
+@Timing_Constraints :                  No
+
+@Global_Project_Optimization :
+  Balanced Partitioning :              Yes
+  Spread Placement :                   Yes
+
+  Note :
+    Pack Design :
+       Balanced Partitioning = No
+       Spread Placement      = No
+    Spread Design :
+       Balanced Partitioning = Yes
+       Spread Placement      = Yes
+
+
+@Logic_Synthesis :
+  Logic Reduction :                    Yes
+  Node Collapsing :                    FMAX
+  Fmax_Logic_Level :                   1
+  D/T Synthesis :                      Yes
+  XOR Synthesis :                      Yes
+  Max. P-Term for Collapsing :         16
+  Max. P-Term for Splitting :          80
+  Max Symbols :                        24
+
+@Utilization_options
+  Max. % of Macrocells used :          100
+@Usercode                               (HEX)
+@IO_Types                              Default = LVCMOS18 (2)
+@Output_Slew_Rate                      Default = FAST (2)
+@Power                                 Default = HIGH (2)
+@Pull                                  Default = PULLUP_UP (2)
+@Fast_Bypass                           Default = None (2)
+@ORP_Bypass                            Default = None
+@Input_Registers                       Default = None (2)
+@Register_Powerup                      Default = None
+
+Device Options:
+<Note> 1 : Reserved unused I/Os can be independently driven to Low or High, and does not
+           follow the drive level set for the Global Configure Unused I/O Option.
+<Note> 2 : For user-specified constraints on individual signals, refer to the Output,
+           Bidir and Buried Signal Lists.
+
+
+
+Pinout_Listing
+~~~~~~~~~~~~~~
+      | Pin   | Bank |GLB |Assigned|                 | Signal|
+Pin No| Type  |Number|Pad |Pin     |     I/O Type    | Type  | Signal name
+---------------------------------------------------------------------------------
+1     | TDI   |   -  |    |        |                 |       |
+2     |  I_O  |   0  |A10 |        |                 |       |
+3     |  I_O  |   0  |A12 |        |                 |       |
+4     |  I_O  |   0  |A14 |        |                 |       |
+5     |GNDIO0 |   -  |    |        |                 |       |
+6     |VCCIO0 |   -  |    |        |                 |       |
+7     |  I_O  |   0  |B0  |        |                 |       |
+8     |  I_O  |   0  |B2  |        |                 |       |
+9     |  I_O  |   0  |B4  |        |                 |       |
+10    |  I_O  |   0  |B6  |        |                 |       |
+11    | TCK   |   -  |    |        |                 |       |
+12    | VCC   |   -  |    |        |                 |       |
+13    | GND   |   -  |    |        |                 |       |
+14    |  I_O  |   0  |B8  |    *   |LVCMOS18         | Input |left_n
+15    |  I_O  |   0  |B10 |    *   |LVCMOS18         | Input |right_n
+16    |  I_O  |   0  |B12 |    *   |LVCMOS18         | Input |up_n
+17    |  I_O  |   0  |B14 |    *   |LVCMOS18         | Input |down_n
+18    |INCLK1 |   0  |    |        |                 |       |
+19    |INCLK2 |   1  |    |        |                 |       |
+20    |  I_O  |   1  |C0  |    *   |LVCMOS18         | Output|vState_0_
+21    |  I_O  |   1  |C2  |    *   |LVCMOS18         | Output|vState_1_
+22    |  I_O  |   1  |C4  |    *   |LVCMOS18         | Output|hState_0_
+23    |  I_O  |   1  |C6  |    *   |LVCMOS18         | Output|hState_1_
+24    |  I_O  |   1  |C8  |        |                 |       |
+25    | TMS   |   -  |    |        |                 |       |
+26    |  I_O  |   1  |C10 |        |                 |       |
+27    |  I_O  |   1  |C12 |        |                 |       |
+28    |  I_O  |   1  |C14 |        |                 |       |
+29    |GNDIO1 |   -  |    |        |                 |       |
+30    |VCCIO1 |   -  |    |        |                 |       |
+31    |  I_O  |   1  |D0  |        |                 |       |
+32    |  I_O  |   1  |D2  |    *   |LVCMOS18         | Output|video_0_
+33    |  I_O  |   1  |D4  |    *   |LVCMOS18         | Output|video_1_
+34    |  I_O  |   1  |D6  |    *   |LVCMOS18         | Output|video_2_
+35    | TDO   |   -  |    |        |                 |       |
+36    | VCC   |   -  |    |        |                 |       |
+37    | GND   |   -  |    |        |                 |       |
+38    |  I_O  |   1  |D8  |        |                 |       |
+39    |  I_O  |   1  |D10 |        |                 |       |
+40    |  I_O  |   1  |D12 |        |                 |       |
+41    | I_O/OE|   1  |D14 |        |                 |       |
+42    |INCLK3 |   1  |    |        |                 |       |
+43    |INCLK0 |   0  |    |    *   |LVCMOS18         | Input |ntscClock
+44    | I_O/OE|   0  |A0  |        |                 |       |
+45    |  I_O  |   0  |A2  |        |                 |       |
+46    |  I_O  |   0  |A4  |        |                 |       |
+47    |  I_O  |   0  |A6  |        |                 |       |
+48    |  I_O  |   0  |A8  |        |                 |       |
+---------------------------------------------------------------------------------
+
+<Note> GLB Pad : This notation refers to the GLB I/O pad number in the device.
+<Note> Assigned Pin : user or dedicated input assignment (E.g. Clock pins).
+<Note> Pin Type : 
+          ClkIn : Dedicated input or clock pin 
+           CLK  : Dedicated clock pin
+           I_O  : Input/Output pin
+           INP  : Dedicated input pin
+           JTAG : JTAG Control and test pin
+           NC   : No connected
+
+
+
+Input_Signal_List
+~~~~~~~~~~~~~~~~~
+                Input
+         Pin    Fanout
+ Pin GLB Type           Pullup Signal
+----------------------------------------
+  17   B  I/O   1 ---D      Up down_n
+  14   B  I/O   2 AB--      Up left_n
+  43  -- INCLK    ----      Up ntscClock
+  15   B  I/O   1 -B--      Up right_n
+  16   B  I/O   2 -B-D      Up up_n
+----------------------------------------
+
+
+
+Output_Signal_List
+~~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Output
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+----------------------------------------------------------------------
+  22   C 12  2   8  2 TFF      R         3 A-CD  Fast     Up hState_0_
+  23   C 10  1   2  1 TFF      R         3 A-CD  Fast     Up hState_1_
+  20   C 23  2   6  2 TFF      R *       2 --CD  Fast     Up vState_0_
+  21   C 22  2   3  1 DFF      R *       2 --CD  Fast     Up vState_1_
+  32   D  4  1   4  1 DFF      R           ----  Fast     Up video_0_
+  33   D  4  1   1  1 DFF      R           ----  Fast     Up video_1_
+  34   D 13  3  15  3 DFF      R           ----  Fast     Up video_2_
+----------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Bidir_Signal_List
+~~~~~~~~~~~~~~~~~
+          I         C      P R P       O Bidir
+          N         L Mc   R E U C O F B Fanout
+ Pin GLB  P LL PTs  S Type E S P E E P P         Slew Pullup Signal
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+Buried_Signal_List
+~~~~~~~~~~~~~~~~~~
+        I         C      P R P       Node
+        N         L Mc   R E U C I F Fanout
+Mc GLB  P LL PTs  S Type E S P E R P         Signal
+---------------------------------------------------------------
+ 1   A  9  -   9  2 COM              1 ---D  G_20
+ 0   D  5  -   4  1 COM              1 -B--  N_108_0
+ 2   A  2  -   1  1 COM              1 -B--  N_146
+11   A  3  -   1  1 COM              1 -B--  N_149
+10   D  4  -   1  1 COM              2 -BC-  N_152
+13   A  5  -   1  1 COM              3 -BCD  N_155
+12   C  6  -   1  1 COM              2 A-C-  N_183
+ 0   B  5  -   4  1 COM              1 A---  N_64_0
+ 2   B  4  1   4  1 DFF      R       1 -B--  ballX_0_
+ 4   B  5  1   3  1 DFF      R       1 -B--  ballX_1_
+ 7   B  5  1   2  1 TFF      R       1 -B--  ballX_2_
+ 3   A  4  2   4  1 DFF      R       2 AB--  ballX_3_
+ 6   A  5  2   3  1 DFF      R       2 A--D  ballX_4_
+ 9   A  5  2   2  1 TFF      R       1 A---  ballX_5_
+ 1   D  4  1   4  1 DFF      R       1 ---D  ballY_0_
+ 8   D  5  1   3  2 DFF      R       1 ---D  ballY_1_
+11   D  5  1   2  1 TFF      R       1 ---D  ballY_2_
+ 1   B  4  2   4  1 DFF      R       2 -B-D  ballY_3_
+ 3   B  5  2   3  1 DFF      R       2 AB--  ballY_4_
+ 5   B  5  2   2  1 TFF      R       1 A---  ballY_5_
+ 8   A 10  1   2  1 DFF      R       3 A-CD  scanX_0_
+10   A  2  1   2  1 DFF      R       3 A-CD  scanX_1_
+ 7   A  3  1   3  1 DFF      R       4 ABCD  scanX_2_
+ 9   B  2  2   2  1 DFF      R       4 ABCD  scanX_3_
+11   C  2  2   2  1 DFF      R       4 ABCD  scanX_4_
+ 7   D 11  2   3  1 DFF      R       4 ABCD  scanX_5_
+ 3   D 11  2   4  1 DFF      R       3 A-CD  scanX_6_
+ 9   D 11  2   3  2 DFF      R       3 A-CD  scanX_7_
+13   C  9  -   1  1 COM              1 --C-  scanY11
+ 5   C 11  1   1  1 DFF      R *     1 --C-  scanY_0_
+ 9   C 15  2   3  1 DFF      R *     1 --C-  scanY_1_
+ 8   C 16  2   4  1 DFF      R *     1 --C-  scanY_2_
+ 7   C 14  1   4  1 DFF      R *     2 --CD  scanY_3_
+10   C 15  1   2  1 DFF      R *     2 --CD  scanY_4_
+ 3   C 15  1   1  1 TFF      R *     2 --CD  scanY_5_
+ 5   A 12  2   3  1 DFF      R *     3 A-CD  scanY_6_
+ 0   A 13  2   4  1 DFF      R *     2 A-C-  scanY_7_
+ 0   C 17  2   5  1 DFF      R *     4 ABCD  scanY_8_
+ 5   D  4  -   4  1 COM              1 ---D  video_0_sqmuxa_3_4
+ 4   A  4  -   4  1 COM              1 ---D  video_0_sqmuxa_3_6
+12   B 12  -  16  4 COM              1 ---D  video_0_sqmuxa_3_7
+13   D  4  -   1  1 COM              1 ---D  video_7_1__n
+---------------------------------------------------------------
+
+<Note> CLS = Number of clusters used
+       INP = Number of input signals
+       PTs = Number of product terms
+        LL = Number of logic levels
+       PRE = Has preset equation
+       RES = Has reset equation
+       PUP = Power-Up initial state: R=Reset, S=Set
+        CE = Has clock enable equation
+        OE = Has output enable equation
+        IR = Input register
+        FP = Fast path used
+       OBP = ORP bypass used
+
+
+
+PostFit_Equations
+~~~~~~~~~~~~~~~~~
+G_20.X1 = !scanX_0_.Q & !scanX_7_.Q
+    # !scanX_1_.Q & !scanX_7_.Q
+    # !scanX_2_.Q & !scanX_7_.Q
+    # !scanX_3_.Q & !scanX_7_.Q
+    # !scanX_4_.Q & !scanX_7_.Q
+    # !scanX_5_.Q & !scanX_7_.Q
+    # !scanX_6_.Q & !scanX_7_.Q
+    # scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q & scanX_4_.Q
+       & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q ; (8 pterms, 8 signals)
+G_20.X2 = !ballX_5_.Q ; (1 pterm, 1 signal)
+
+N_108_0.X1 = up_n & ballY_0_.Q & ballY_1_.Q & ballY_2_.Q
+    # up_n & down_n
+    # down_n & !ballY_0_.Q & !ballY_1_.Q & !ballY_2_.Q ; (3 pterms, 5 signals)
+N_108_0.X2 = up_n & !down_n ; (1 pterm, 2 signals)
+
+N_146 = scanX_0_.Q & scanX_1_.Q ; (1 pterm, 2 signals)
+
+N_149 = scanX_0_.Q & scanX_1_.Q & scanX_2_.Q ; (1 pterm, 3 signals)
+
+N_152 = scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q ; (1 pterm, 4 signals)
+
+N_155 = scanX_0_.Q & scanX_1_.Q & scanX_2_.Q & scanX_3_.Q & scanX_4_.Q ; (1 pterm, 5 signals)
+
+N_183 = scanY_3_.Q & scanY_4_.Q & scanY_5_.Q & scanY_0_.Q & scanY_1_.Q
+       & scanY_2_.Q ; (1 pterm, 6 signals)
+
+N_64_0.X1 = left_n & ballX_0_.Q & ballX_1_.Q & ballX_2_.Q
+    # left_n & right_n
+    # right_n & !ballX_0_.Q & !ballX_1_.Q & !ballX_2_.Q ; (3 pterms, 5 signals)
+N_64_0.X2 = left_n & !right_n ; (1 pterm, 2 signals)
+
+ballX_0_.D = left_n & !right_n & !ballX_0_.Q
+    # !left_n & right_n & !ballX_0_.Q
+    # !left_n & !right_n & ballX_0_.Q
+    # left_n & right_n & ballX_0_.Q ; (4 pterms, 3 signals)
+ballX_0_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballX_1_.D.X1 = !left_n & right_n & !ballX_0_.Q
+    # left_n & !right_n & ballX_0_.Q ; (2 pterms, 3 signals)
+ballX_1_.D.X2 = ballX_1_.Q ; (1 pterm, 1 signal)
+ballX_1_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballX_2_.T = !left_n & right_n & !ballX_0_.Q & !ballX_1_.Q
+    # left_n & !right_n & ballX_0_.Q & ballX_1_.Q ; (2 pterms, 4 signals)
+ballX_2_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballX_3_.D = left_n & !ballX_3_.Q & !N_64_0
+    # !left_n & ballX_3_.Q & !N_64_0
+    # !left_n & !ballX_3_.Q & N_64_0
+    # left_n & ballX_3_.Q & N_64_0 ; (4 pterms, 3 signals)
+ballX_3_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballX_4_.D.X1 = !left_n & !ballX_3_.Q & N_64_0
+    # left_n & ballX_3_.Q & !N_64_0 ; (2 pterms, 3 signals)
+ballX_4_.D.X2 = ballX_4_.Q ; (1 pterm, 1 signal)
+ballX_4_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballX_5_.T = left_n & ballX_3_.Q & ballX_4_.Q & !N_64_0
+    # !left_n & !ballX_3_.Q & !ballX_4_.Q & N_64_0 ; (2 pterms, 4 signals)
+ballX_5_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballY_0_.D = up_n & !down_n & !ballY_0_.Q
+    # !up_n & down_n & !ballY_0_.Q
+    # !up_n & !down_n & ballY_0_.Q
+    # up_n & down_n & ballY_0_.Q ; (4 pterms, 3 signals)
+ballY_0_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballY_1_.D.X1 = !up_n & down_n & !ballY_0_.Q
+    # up_n & !down_n & ballY_0_.Q ; (2 pterms, 3 signals)
+ballY_1_.D.X2 = ballY_1_.Q ; (1 pterm, 1 signal)
+ballY_1_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballY_2_.T = !up_n & down_n & !ballY_0_.Q & !ballY_1_.Q
+    # up_n & !down_n & ballY_0_.Q & ballY_1_.Q ; (2 pterms, 4 signals)
+ballY_2_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballY_3_.D = up_n & !ballY_3_.Q & !N_108_0
+    # !up_n & ballY_3_.Q & !N_108_0
+    # !up_n & !ballY_3_.Q & N_108_0
+    # up_n & ballY_3_.Q & N_108_0 ; (4 pterms, 3 signals)
+ballY_3_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballY_4_.D.X1 = !up_n & !ballY_3_.Q & N_108_0
+    # up_n & ballY_3_.Q & !N_108_0 ; (2 pterms, 3 signals)
+ballY_4_.D.X2 = ballY_4_.Q ; (1 pterm, 1 signal)
+ballY_4_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+ballY_5_.T = up_n & ballY_3_.Q & ballY_4_.Q & !N_108_0
+    # !up_n & !ballY_3_.Q & !ballY_4_.Q & N_108_0 ; (2 pterms, 4 signals)
+ballY_5_.C = scanY_8_.Q ; (1 pterm, 1 signal)
+
+hState_0_.T = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q
+    # !hState_1_.Q & !hState_0_.Q & scanX_0_.Q & !scanX_1_.Q & scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q
+       & !N_152 & N_155
+    # !hState_1_.Q & !hState_0_.Q & scanX_0_.Q & !scanX_1_.Q & scanX_2_.Q
+       & !scanX_3_.Q & scanX_4_.Q & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q
+       & N_152 & N_155
+    # !hState_1_.Q & hState_0_.Q & !scanX_0_.Q & scanX_1_.Q & scanX_2_.Q
+       & !scanX_3_.Q & scanX_4_.Q & !scanX_5_.Q & !scanX_6_.Q & !scanX_7_.Q
+    # !hState_1_.Q & !hState_0_.Q & scanX_0_.Q & !scanX_1_.Q & scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & !scanX_5_.Q & !scanX_6_.Q & !scanX_7_.Q
+       & !N_152 & !N_155
+    # !hState_1_.Q & !hState_0_.Q & scanX_0_.Q & !scanX_1_.Q & scanX_2_.Q
+       & !scanX_3_.Q & scanX_4_.Q & !scanX_5_.Q & !scanX_6_.Q & !scanX_7_.Q
+       & N_152 & !N_155
+    # hState_1_.Q & !hState_0_.Q & scanX_0_.Q & scanX_1_.Q & scanX_2_.Q
+       & !scanX_4_.Q & scanX_5_.Q & !scanX_6_.Q & !scanX_7_.Q & !N_152
+       & !N_155
+    # hState_1_.Q & !hState_0_.Q & scanX_0_.Q & scanX_1_.Q & scanX_2_.Q
+       & scanX_4_.Q & scanX_5_.Q & !scanX_6_.Q & !scanX_7_.Q & N_152 & !N_155 ; (8 pterms, 12 signals)
+hState_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+hState_1_.T = !hState_1_.Q & hState_0_.Q & !scanX_0_.Q & scanX_1_.Q
+       & scanX_2_.Q & !scanX_3_.Q & scanX_4_.Q & !scanX_5_.Q & !scanX_6_.Q
+       & !scanX_7_.Q
+    # hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q & !scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q ; (2 pterms, 10 signals)
+hState_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_0_.D = !( hState_1_.Q & hState_0_.Q & !scanX_1_.Q & !scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q
+    # scanX_0_.Q ) ; (2 pterms, 10 signals)
+scanX_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_1_.D = scanX_0_.Q & !scanX_1_.Q
+    # !scanX_0_.Q & scanX_1_.Q ; (2 pterms, 2 signals)
+scanX_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_2_.D = scanX_0_.Q & scanX_1_.Q & !scanX_2_.Q
+    # !scanX_1_.Q & scanX_2_.Q
+    # !scanX_0_.Q & scanX_2_.Q ; (3 pterms, 3 signals)
+scanX_2_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_3_.D = scanX_3_.Q & !N_149
+    # !scanX_3_.Q & N_149 ; (2 pterms, 2 signals)
+scanX_3_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_4_.D = scanX_4_.Q & !N_152
+    # !scanX_4_.Q & N_152 ; (2 pterms, 2 signals)
+scanX_4_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_5_.D = !( hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_6_.Q & scanX_7_.Q
+       & !N_155
+    # scanX_5_.Q & N_155
+    # !scanX_5_.Q & !N_155 ) ; (3 pterms, 11 signals)
+scanX_5_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_6_.D = !( hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q
+    # scanX_5_.Q & scanX_6_.Q & N_155
+    # !scanX_6_.Q & !N_155
+    # !scanX_5_.Q & !scanX_6_.Q ) ; (4 pterms, 11 signals)
+scanX_6_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanX_7_.D.X1 = scanX_5_.Q & scanX_6_.Q & N_155
+    # hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q & !scanX_2_.Q
+       & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q & scanX_7_.Q
+       & !N_155 ; (2 pterms, 11 signals)
+scanX_7_.D.X2 = scanX_7_.Q ; (1 pterm, 1 signal)
+scanX_7_.C = ntscClock ; (1 pterm, 1 signal)
+
+scanY11 = !scanY_3_.Q & !scanY_4_.Q & !scanY_5_.Q & !scanY_6_.Q & !scanY_7_.Q
+       & scanY_8_.Q & scanY_0_.Q & !scanY_1_.Q & scanY_2_.Q ; (1 pterm, 9 signals)
+
+scanY_0_.D = !scanY_0_.Q ; (1 pterm, 1 signal)
+scanY_0_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_0_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_1_.D = !( vState_1_.Q & vState_0_.Q & scanY11
+    # !scanY_0_.Q & !scanY_1_.Q
+    # scanY_0_.Q & scanY_1_.Q ) ; (3 pterms, 5 signals)
+scanY_1_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_1_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_2_.D = !( scanY_0_.Q & scanY_1_.Q & scanY_2_.Q
+    # vState_1_.Q & vState_0_.Q & scanY11
+    # !scanY_1_.Q & !scanY_2_.Q
+    # !scanY_0_.Q & !scanY_2_.Q ) ; (4 pterms, 6 signals)
+scanY_2_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_2_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_3_.D = !scanY_3_.Q & scanY_0_.Q & scanY_1_.Q & scanY_2_.Q
+    # scanY_3_.Q & !scanY_1_.Q
+    # scanY_3_.Q & !scanY_0_.Q
+    # scanY_3_.Q & !scanY_2_.Q ; (4 pterms, 4 signals)
+scanY_3_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_3_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_4_.D.X1 = scanY_4_.Q ; (1 pterm, 1 signal)
+scanY_4_.D.X2 = scanY_3_.Q & scanY_0_.Q & scanY_1_.Q & scanY_2_.Q ; (1 pterm, 4 signals)
+scanY_4_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_4_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_5_.T = scanY_3_.Q & scanY_4_.Q & scanY_0_.Q & scanY_1_.Q & scanY_2_.Q ; (1 pterm, 5 signals)
+scanY_5_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_5_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_6_.D = scanY_6_.Q & !N_183
+    # !scanY_6_.Q & N_183 ; (2 pterms, 2 signals)
+scanY_6_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_6_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_7_.D = scanY_6_.Q & !scanY_7_.Q & N_183
+    # !scanY_6_.Q & scanY_7_.Q
+    # scanY_7_.Q & !N_183 ; (3 pterms, 3 signals)
+scanY_7_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_7_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+scanY_8_.D = !( scanY_6_.Q & scanY_7_.Q & scanY_8_.Q & N_183
+    # vState_1_.Q & vState_0_.Q & scanY11
+    # !scanY_8_.Q & !N_183
+    # !scanY_7_.Q & !scanY_8_.Q
+    # !scanY_6_.Q & !scanY_8_.Q ) ; (5 pterms, 7 signals)
+scanY_8_.C = ntscClock ; (1 pterm, 1 signal)
+scanY_8_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+vState_0_.T = vState_1_.Q & !vState_0_.Q & scanY_3_.Q & scanY_4_.Q
+       & scanY_5_.Q & !scanY_6_.Q & !scanY_7_.Q & scanY_8_.Q & scanY_0_.Q
+       & scanY_1_.Q & scanY_2_.Q & !N_183
+    # !vState_1_.Q & !vState_0_.Q & !scanY_3_.Q & scanY_4_.Q & scanY_5_.Q
+       & !scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q & scanY_1_.Q
+       & !scanY_2_.Q & N_183
+    # !vState_1_.Q & !vState_0_.Q & !scanY_3_.Q & scanY_4_.Q & scanY_5_.Q
+       & scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q & scanY_1_.Q
+       & !scanY_2_.Q & !N_183
+    # !vState_1_.Q & vState_0_.Q & scanY_3_.Q & scanY_4_.Q & scanY_5_.Q
+       & scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q & !scanY_1_.Q
+       & !scanY_2_.Q
+    # vState_1_.Q & !vState_0_.Q & scanY_3_.Q & scanY_4_.Q & scanY_5_.Q
+       & scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q & scanY_1_.Q
+       & scanY_2_.Q & N_183
+    # vState_1_.Q & vState_0_.Q & scanY11 ; (6 pterms, 13 signals)
+vState_0_.C = ntscClock ; (1 pterm, 1 signal)
+vState_0_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+vState_1_.D = !vState_1_.Q & vState_0_.Q & scanY_3_.Q & scanY_4_.Q
+       & scanY_5_.Q & scanY_6_.Q & scanY_7_.Q & !scanY_8_.Q & scanY_0_.Q
+       & !scanY_1_.Q & !scanY_2_.Q
+    # vState_1_.Q & !vState_0_.Q
+    # vState_1_.Q & !scanY11 ; (3 pterms, 12 signals)
+vState_1_.C = ntscClock ; (1 pterm, 1 signal)
+vState_1_.CE = hState_1_.Q & hState_0_.Q & !scanX_0_.Q & !scanX_1_.Q
+       & !scanX_2_.Q & !scanX_3_.Q & !scanX_4_.Q & scanX_5_.Q & scanX_6_.Q
+       & scanX_7_.Q ; (1 pterm, 10 signals)
+
+video_0_.D = !hState_1_.Q & vState_1_.Q & hState_0_.Q & !vState_0_.Q
+    # hState_1_.Q & vState_0_.Q
+    # !hState_0_.Q & vState_0_.Q
+    # !vState_1_.Q & !hState_0_.Q ; (4 pterms, 4 signals)
+video_0_.C = ntscClock ; (1 pterm, 1 signal)
+
+video_0_sqmuxa_3_4 = !scanY_3_.Q & !scanY_4_.Q & !ballY_0_.Q & !ballY_1_.Q
+    # scanY_3_.Q & !scanY_4_.Q & ballY_0_.Q & !ballY_1_.Q
+    # !scanY_3_.Q & scanY_4_.Q & !ballY_0_.Q & ballY_1_.Q
+    # scanY_3_.Q & scanY_4_.Q & ballY_0_.Q & ballY_1_.Q ; (4 pterms, 4 signals)
+
+video_0_sqmuxa_3_6 = !scanY_7_.Q & !scanY_8_.Q & !ballY_4_.Q & !ballY_5_.Q
+    # scanY_7_.Q & !scanY_8_.Q & ballY_4_.Q & !ballY_5_.Q
+    # !scanY_7_.Q & scanY_8_.Q & !ballY_4_.Q & ballY_5_.Q
+    # scanY_7_.Q & scanY_8_.Q & ballY_4_.Q & ballY_5_.Q ; (4 pterms, 4 signals)
+
+video_0_sqmuxa_3_7 = !( ballX_2_.Q & !scanX_4_.Q & !N_152
+    # !ballX_2_.Q & scanX_4_.Q & !N_152
+    # !ballX_2_.Q & !scanX_4_.Q & N_152
+    # ballX_2_.Q & scanX_4_.Q & N_152
+    # ballX_1_.Q & !scanX_3_.Q & !N_149
+    # !ballX_1_.Q & scanX_3_.Q & !N_149
+    # !ballX_1_.Q & !scanX_3_.Q & N_149
+    # ballX_1_.Q & scanX_3_.Q & N_149
+    # ballX_0_.Q & !scanX_2_.Q & !N_146
+    # !ballX_0_.Q & scanX_2_.Q & !N_146
+    # !ballX_0_.Q & !scanX_2_.Q & N_146
+    # ballX_0_.Q & scanX_2_.Q & N_146
+    # ballX_3_.Q & !scanX_5_.Q & !N_155
+    # !ballX_3_.Q & scanX_5_.Q & !N_155
+    # !ballX_3_.Q & !scanX_5_.Q & N_155
+    # ballX_3_.Q & scanX_5_.Q & N_155 ) ; (16 pterms, 12 signals)
+
+video_1_.D = hState_1_.Q & !vState_1_.Q & hState_0_.Q & !vState_0_.Q ; (1 pterm, 4 signals)
+video_1_.C = ntscClock ; (1 pterm, 1 signal)
+
+video_2_.D = !( !ballX_4_.Q & scanX_5_.Q & !scanX_6_.Q & N_155
+    # ballX_4_.Q & scanX_5_.Q & scanX_6_.Q & N_155
+    # ballX_4_.Q & !scanX_6_.Q & !N_155
+    # !ballX_4_.Q & scanX_6_.Q & !N_155
+    # ballX_4_.Q & !scanX_5_.Q & !scanX_6_.Q
+    # !ballX_4_.Q & !scanX_5_.Q & scanX_6_.Q
+    # scanY_6_.Q & !ballY_3_.Q
+    # !scanY_6_.Q & ballY_3_.Q
+    # scanY_5_.Q & !ballY_2_.Q
+    # !scanY_5_.Q & ballY_2_.Q
+    # !video_0_sqmuxa_3_7
+    # !video_0_sqmuxa_3_6
+    # !video_0_sqmuxa_3_4
+    # G_20
+    # !video_7_1__n ) ; (15 pterms, 13 signals)
+video_2_.C = ntscClock ; (1 pterm, 1 signal)
+
+video_7_1__n = hState_1_.Q & !vState_1_.Q & hState_0_.Q & !vState_0_.Q ; (1 pterm, 4 signals)
+
+
+
+

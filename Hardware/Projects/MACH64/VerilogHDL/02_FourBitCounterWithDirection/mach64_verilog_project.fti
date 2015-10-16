@@ -1,0 +1,43 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Wed Jan 18 09:42:31 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION clock:*_*_18
+DATA LOCATION reset:C_*_20
+DATA LOCATION direction:C_*_21
+DATA LOCATION counter_3_:B_8_14
+DATA LOCATION counter_2_:B_11_15
+DATA LOCATION counter_1_:B_1_16
+DATA LOCATION counter_0_:B_3_17
+
+// Signals direction
+DATA IO_DIR clock:IN
+DATA IO_DIR reset:IN
+DATA IO_DIR direction:IN
+DATA IO_DIR counter_3_:OUT
+DATA IO_DIR counter_2_:OUT
+DATA IO_DIR counter_1_:OUT
+DATA IO_DIR counter_0_:OUT
+
+// Global Clocks
+DATA GLB_CLOCK clock:1
+
+// Signals using Shared Init Pterm
+DATA tBSR counter_3_.AR
+DATA tBSR counter_2_.AR
+DATA tBSR counter_1_.AR
+DATA tBSR counter_0_.AR
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM counter_3_
+DATA tOSM counter_2_
+DATA tOSM counter_1_
+DATA tOSM counter_0_

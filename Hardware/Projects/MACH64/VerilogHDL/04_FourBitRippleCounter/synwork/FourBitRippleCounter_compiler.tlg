@@ -1,0 +1,17 @@
+Selecting top level module FourBitRippleCounter
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\synchronousscaler.v":4:7:4:23|Synthesizing module SynchronousScaler
+
+	BITS=32'b00000000000000000000000000000110
+   Generated name = SynchronousScaler_6s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\debouncer.v":4:7:4:15|Synthesizing module Debouncer
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000000100
+   Generated name = RippleCounter_4s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\04_fourbitripplecounter\fourbitripplecounter.v":6:7:6:26|Synthesizing module FourBitRippleCounter
+

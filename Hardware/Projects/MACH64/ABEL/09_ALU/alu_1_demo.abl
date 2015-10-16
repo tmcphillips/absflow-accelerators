@@ -1,0 +1,34 @@
+module ALU_1_demo
+
+declarations
+
+	ALU_1 interface ([Op3..Op0], [A3..A0], [B3..B0] -> [C3..C0], ZF, CF);
+	alu functional_block ALU_1;
+
+	!op0..!op3 pin 7..10;		// opcode
+	!a0..!a3   pin 24,26..28;	// operand 1
+	!b0..!b3   pin 20..23;		// operand 2
+
+	c0..c3     pin 31..34; 		// result
+
+	ad0..ad3   pin 45..48;
+	bd0..bd3   pin 2..4, 40;
+
+	zf	   pin 38;
+	cf	   pin 39;
+
+equations
+	
+	[ad3..ad0] = [a3..a0];
+	[bd3..bd0] = [b3..b0];
+
+	alu.[Op3..Op0] = [op3..op0];
+	alu.[A3..A0] = [a3..a0];
+	alu.[B3..B0] = [b3..b0];
+
+	[c3..c0] = alu.[C3..C0];
+	zf	 = alu.ZF;
+	cf	 = alu.CF;
+
+end
+

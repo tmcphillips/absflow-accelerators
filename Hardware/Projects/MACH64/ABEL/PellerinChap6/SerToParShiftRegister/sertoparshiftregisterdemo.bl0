@@ -1,0 +1,38 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:28:23 2012
+#$ MODULE sertoparshiftregisterdemo
+#$ JEDECFILE sertoparshiftregisterdemo
+#$ PINS 12 data:7 rotate:8 clk:26 clr:20 q0:31 q1:32 q2:33 q3:34 q4:38 q5:39 q6:40 q7:45
+#$ NODES 11 shift>Clk'co'  shift>Clr'co'  shift>D'co'  shift>Q0'co'  shift>Q1'co'  shift>Q2'co'  shift>Q3'co'  shift>Q4'co'  shift>Q5'co'  shift>Q6'co'  shift>Q7'co' 
+#$ INTERFACE sertoparshiftregister  11 Clk'i'  Clr'i'  D'i'  Q0'o'  Q1'o'  Q2'o'  Q3'o'  Q4'o'  Q5'o'  Q6'o'  Q7'o' 
+#$ INSTANCE shift sertoparshiftregister 11 shift>Clk shift>Clr shift>D shift>Q0 shift>Q1 shift>Q2 shift>Q3 shift>Q4 shift>Q5 shift>Q6 shift>Q7
+
+.model sertoparshiftregisterdemo
+.inputs data.BLIF rotate.BLIF q7.BLIF clk.BLIF clr.BLIF shift>Q7.BLIF shift>Q6.BLIF \
+shift>Q5.BLIF shift>Q4.BLIF shift>Q3.BLIF shift>Q2.BLIF shift>Q1.BLIF \
+shift>Q0.BLIF
+.outputs shift>Clk shift>Clr shift>D q0 q1 q2 q3 q4 q5 q6 q7
+.names clk.BLIF shift>Clk
+0 1
+.names clr.BLIF shift>Clr
+0 1
+.names data.BLIF rotate.BLIF q7.BLIF shift>D
+0-- 1
+-01 1
+.names shift>Q0.BLIF q0
+1 1
+.names shift>Q1.BLIF q1
+1 1
+.names shift>Q2.BLIF q2
+1 1
+.names shift>Q3.BLIF q3
+1 1
+.names shift>Q4.BLIF q4
+1 1
+.names shift>Q5.BLIF q5
+1 1
+.names shift>Q6.BLIF q6
+1 1
+.names shift>Q7.BLIF q7
+1 1
+.end

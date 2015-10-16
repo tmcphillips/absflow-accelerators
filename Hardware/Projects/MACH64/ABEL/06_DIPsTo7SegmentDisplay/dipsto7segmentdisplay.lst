@@ -1,0 +1,33 @@
+0002 |
+0003 |DECLARATIONS
+0004 |
+0005 |	HexToSevenSegment INTERFACE ([d3..d0] -> [a,b,c,d,e,f,g]);
+0006 |	BCDToSevenSegment INTERFACE ([d3..d0] -> [a,b,c,d,e,f,g]);
+0007 |
+0008 |	!d0..!d3 pin 17..14;
+0009 |	hexInput = [d0..d3];
+0010 |
+0011 |	a,b,c,d,e,f,g pin 20..24, 26, 27;
+0012 |	sevenSegments = [a,b,c,d,e,f,g];
+0013 |
+0014 |	HexLEDSegmentLookup FUNCTIONAL_BLOCK HexToSevenSegment;
+0015 |	BCDLEDSegmentLookup FUNCTIONAL_BLOCK BCDToSevenSegment;
+0016 |	
+0017 |	!enableHex pin 31;
+0018 |
+0019 |	!enableDisplay pin 28;
+0020 |
+0021 |EQUATIONS
+0022 |
+0023 |	sevenSegments.oe = enableDisplay;
+0024 |
+0025 |	HexLEDSegmentLookup.[d0..d3] = hexInput;
+0026 |	BCDLEDSegmentLookup.[d0..d3] = hexInput;
+0027 |
+0028 |	when (enableHex) then
+0029 |		sevenSegments = HexLEDSegmentLookup.[a,b,c,d,e,f,g];	
+0030 |	else 
+0031 |		sevenSegments = BCDLEDSegmentLookup.[a,b,c,d,e,f,g];	
+0032 |
+0033 |END 
+0034 |

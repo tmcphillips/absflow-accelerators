@@ -1,0 +1,95 @@
+MODULE ModalButtonCounter
+
+// Displays in binary on 4 LEDs a 4 bit counter that is
+// reset by pressing button 1, preset by pushing button 2,
+// and incremented or decremented by pressing button 3,
+// depending on whether DIP switch 0 is off (decrement) or 
+// on (increment).  Two 3-bit registers are used to debounce
+// the buttons. 
+
+DECLARATIONS
+
+	// counter mode switch input
+	!mode pin 31;
+
+	// register loader switches
+	!sw15..!sw8 pin 4..2,48..44;
+	loader = [sw15..sw8];	
+
+	// four raw button inputs
+	!pb0, !pb1, !pb2, !pb3 pin 20..23;
+	buttons = [pb0..pb3];
+
+	// latest buttons status (updated every 1 ms)
+	lat0..lat3 node ISTYPE 'reg';
+	latest = [lat0..lat3];
+
+	// previous buttons status (last value of latest)
+	prev0..prev3 node ISTYPE 'reg';
+	previous = [prev0..prev3];
+
+	// debounced buttons status (each bit true if latest button
+	// status is the same as the previous status)
+	load, reset, preset, inc node ISTYPE 'reg';
+	debounced = [load, reset, preset, inc];
+
+	// external clock (1 MHz) 
+	clock PIN 43;
+
+	// 11-bit clock scaler (MSB toggles at 500 Hz)
+	s10..s0 NODE ISTYPE 'reg';
+	scaler = [s10..s0];
+
+	// 8-bit counter
+	c7..c0 PIN 17..14, 10..7 ISTYPE 'reg'; 
+	counter = [c7..c0];
+
+EQUATIONS
+
+	// increment 11-bit scaler using external (1 Mhz) clock
+	scaler.clk = clock;
+	scaler := scaler + 1;
+
+	// read button status into latest using scaler MSB (500 Hz) as clock
+	latest.clk = s10;
+	latest := buttons;
+
+	// copy latest button status into previous status 
+	// using scaler MSB (500 Hz) as clock
+	previous.clk = s10;
+	previous := latest;
+
+	// compute debounced button status as the conjuntion of the
+	// the latest and previous states of the buttons using the
+	// scaler MSB (500 Hz) as clock
+	debounced.clk = s10;
+	debounced := buttons & latest;
+	
+	// wire counter's clock, reset, and preset signals to 
+	// three of the debounced buttons
+	counter.clk = inc;
+	counter.aclr = reset;
+	counter.pr = preset;
+
+	// use the fourth debounced buttons to control the direction
+	// of counting, up when button up, down when button down
+	WHEN (load == 1) THEN {
+
+		counter := loader;
+
+	} ELSE {
+
+		WHEN (mode == 1) THEN {
+			counter := counter + 1;
+		} ELSE {
+			counter := counter - 1;
+		}
+	}
+
+END
+
+	
+
+
+
+ 

@@ -1,0 +1,34 @@
+module RollingUpDownCounter
+
+declarations
+
+	clock 	pin 18; 
+	!up 	pin 14;
+	!down	pin 15;
+	!reset 	pin 31;
+
+	MillisecondClock interface (oneMHzClock, [period9..period0]=976 -> millisecondClock)
+	counterClock functional_block MillisecondClock;
+
+	BoundedUpDownCounter interface (up, down, clock, reset, [m3..m0]=9 -> [d3..d0]);
+	bcd functional_block BoundedUpDownCounter;
+
+	HexToSevenSegment interface ([d3..d0] -> [a,b,c,d,e,f,g]);
+	led functional_block HexToSevenSegment;
+
+	a,b,c,d,e,f,g pin 20..24,26,27;
+
+equations
+
+	counterClock.oneMHzClock = clock;
+	bcd.clock = counterClock.millisecondClock;
+
+	bcd.up = up;
+	bcd.down = down;
+	bcd.reset = reset;
+
+	led.[d3..d0] = bcd.[d3..d0];
+	[a,b,c,d,e,f,g] = led.[a,b,c,d,e,f,g];
+
+end
+

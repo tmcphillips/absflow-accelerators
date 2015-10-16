@@ -1,0 +1,23 @@
+-g Binary:No
+-g IEEE1532:No
+-g DebugBitstream:No
+-g CRC:Enable
+-g Security:None
+-g StartupClk:JtagClk
+-g DonePipe:No
+-g DONE_cycle:4
+-g GTS_cycle:5
+-g GWE_cycle:6
+-g LCK_cycle:NoWait
+-g DriveDone:No
+-g ConfigRate:1
+-g ProgPin:Pullup
+-g DonePin:Pullup
+-g TckPin:Pullup
+-g TdiPin:Pullup
+-g TdoPin:Pullup
+-g TmsPin:Pullup
+-g UnusedPin:Pulldown
+-g UserID:0xFFFFFFFF
+-g DCMShutDown:Disable
+-w

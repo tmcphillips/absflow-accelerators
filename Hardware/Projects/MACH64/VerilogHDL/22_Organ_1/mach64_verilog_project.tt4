@@ -1,0 +1,58 @@
+#$ TOOL   ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE   Tue Feb 14 16:49:25 2012
+#$ MODULE   DigitalOrgan
+#$ PINS 6 button_n_1_ oneMHzClock rca button_n_2_ button_n_3_ button_n_4_
+#$ NODES 15 u0rs_u1rc_genblk1_10__uitff_q u1rs_u1rc_u0tff_q u2rs_u1rc_u0tff_q
+ u3rs_u1rc_u0tff_q u0rs_u1rc_u0tff_q u0rs_u1rc_genblk1_0__uitff_q
+ u0rs_u1rc_genblk1_1__uitff_q u0rs_u1rc_genblk1_2__uitff_q
+ u0rs_u1rc_genblk1_3__uitff_q u0rs_u1rc_genblk1_4__uitff_q
+ u0rs_u1rc_genblk1_5__uitff_q u0rs_u1rc_genblk1_6__uitff_q
+ u0rs_u1rc_genblk1_7__uitff_q u0rs_u1rc_genblk1_8__uitff_q
+ u0rs_u1rc_genblk1_9__uitff_q
+.type f
+.i 20
+.o 31
+.ilb button_n_1_ oneMHzClock button_n_2_ button_n_3_ button_n_4_
+ u0rs_u1rc_genblk1_10__uitff_q.Q u1rs_u1rc_u0tff_q.Q u2rs_u1rc_u0tff_q.Q
+ u3rs_u1rc_u0tff_q.Q u0rs_u1rc_u0tff_q.Q u0rs_u1rc_genblk1_0__uitff_q.Q
+ u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.Q
+ u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.Q
+ u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.Q
+ u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.Q
+ u0rs_u1rc_genblk1_9__uitff_q.Q
+.ob rca u0rs_u1rc_genblk1_10__uitff_q.D u0rs_u1rc_genblk1_10__uitff_q.C
+ u1rs_u1rc_u0tff_q.D u1rs_u1rc_u0tff_q.C u2rs_u1rc_u0tff_q.D u2rs_u1rc_u0tff_q.C
+ u3rs_u1rc_u0tff_q.D u3rs_u1rc_u0tff_q.C u0rs_u1rc_u0tff_q.D u0rs_u1rc_u0tff_q.C
+ u0rs_u1rc_genblk1_0__uitff_q.D u0rs_u1rc_genblk1_0__uitff_q.C
+ u0rs_u1rc_genblk1_1__uitff_q.D u0rs_u1rc_genblk1_1__uitff_q.C
+ u0rs_u1rc_genblk1_2__uitff_q.D u0rs_u1rc_genblk1_2__uitff_q.C
+ u0rs_u1rc_genblk1_3__uitff_q.D u0rs_u1rc_genblk1_3__uitff_q.C
+ u0rs_u1rc_genblk1_4__uitff_q.D u0rs_u1rc_genblk1_4__uitff_q.C
+ u0rs_u1rc_genblk1_5__uitff_q.D u0rs_u1rc_genblk1_5__uitff_q.C
+ u0rs_u1rc_genblk1_6__uitff_q.D u0rs_u1rc_genblk1_6__uitff_q.C
+ u0rs_u1rc_genblk1_7__uitff_q.D u0rs_u1rc_genblk1_7__uitff_q.C
+ u0rs_u1rc_genblk1_8__uitff_q.D u0rs_u1rc_genblk1_8__uitff_q.C
+ u0rs_u1rc_genblk1_9__uitff_q.D u0rs_u1rc_genblk1_9__uitff_q.C
+.phase 1111111111111111111111111111111
+.p 20
+---0---1------------ 1000000000000000000000000000000
+--0---1------------- 1000000000000000000000000000000
+0----1-------------- 1000000000000000000000000000000
+----0---1----------- 1000000000000000000000000000000
+-----0-------------- 0100100000000000000000000000000
+-------------------0 0010000000000000000000000000010
+------0------------- 0001001000000000000000000000000
+-------0------------ 0000010010000000000000000000000
+--------0----------- 0000000100000000000000000000000
+---------0---------- 0000000001001000000000000000000
+-0------------------ 0000000000100000000000000000000
+----------0--------- 0000000000010010000000000000000
+-----------0-------- 0000000000000100100000000000000
+------------0------- 0000000000000001001000000000000
+-------------0------ 0000000000000000010010000000000
+--------------0----- 0000000000000000000100100000000
+---------------0---- 0000000000000000000001001000000
+----------------0--- 0000000000000000000000010010000
+-----------------0-- 0000000000000000000000000100100
+------------------0- 0000000000000000000000000001001
+.end

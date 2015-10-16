@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="BitmapSection.cpp" />
+    <ClCompile Include="ComboBox.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="MandelbrotDisplay.cpp" />
+    <ClCompile Include="StatusBar.cpp" />
+    <ClCompile Include="ToolBar.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="MandelbrotController.cpp" />
+    <ClCompile Include="MandelbrotKernel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="BitmapSection.h" />
+    <ClInclude Include="ComboBox.h" />
+    <ClInclude Include="HRTimer.h" />
+    <ClInclude Include="MainWindow.h" />
+    <ClInclude Include="MandelbrotDisplay.h" />
+    <ClInclude Include="StatusBar.h" />
+    <ClInclude Include="ToolBar.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="MandelbrotController.h" />
+    <ClInclude Include="MandelbrotKernel.h" />
+    <ClInclude Include="MandelbrotKernelConfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MandelbrotSet.cl" />
+  </ItemGroup>
+</Project>

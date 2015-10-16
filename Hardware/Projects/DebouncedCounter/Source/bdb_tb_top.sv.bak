@@ -1,0 +1,79 @@
+import bdb_tb_transactions_pkg::*;
+import ovm_pkg::*;
+
+module bdb_tb_top;
+
+  tlm_fifo #(bdb_operation)  gen2drv_fifo;
+  tlm_fifo #(bdb_operation)  drv2pred_fifo;
+  tlm_fifo #(bdb_result)  pred2comp_fifo;
+  tlm_fifo #(bdb_result)  resp2prn_fifo;
+  tlm_fifo #(bdb_result)  resp2comp_fifo;
+
+  wire reset;
+  wire clock;
+  wire button;
+  wire pressed;
+  wire ack;
+  
+  bdb_tb_generator generator(
+    .op_fifo(gen2drv_fifo)
+  );
+  
+   bdb_tb_driver driver(
+    .op_fifo(gen2drv_fifo),
+    .op2prd_fifo(drv2pred_fifo),
+    .clock(clock),
+ 	  .button(button),
+	  .reset(reset)
+	);
+	
+	 bdb_tb_predictor predictor (
+    .operation_fifo(drv2pred_fifo),
+    .predicted_result_fifo(pred2comp_fifo)
+  );
+	
+ 	buttonpressdetector bpd (
+	  .buttonDown(button),
+	  .clock(clock),
+	  .reset(reset),
+	  .pressPulse(pressed)
+	);
+	
+	bdb_tb_responder responder (
+    .result_fifo(resp2prn_fifo),
+    .res2comp_fifo(resp2comp_fifo),
+    .clock(clock),
+	  .reset(reset),
+	  .pressPulse(pressed)
+	);
+	
+	 bdb_tb_comparator comparator (
+    .actual_result_fifo(resp2comp_fifo),
+    .predicted_result_fifo(pred2comp_fifo)
+  );
+
+   bdb_tb_printer printer (
+    .result_fifo(resp2prn_fifo)
+  );
+
+  initial begin
+    
+    ovm_top.set_report_verbosity_level(300);
+    ovm_top.set_report_max_quit_count(10);
+    
+    gen2drv_fifo = new("gen2drv_fifo");
+    drv2pred_fifo = new("drv2pred_fifo");
+    pred2comp_fifo = new("pred2comp_fifo");
+    resp2prn_fifo = new("resp2prn_fifo");
+    resp2comp_fifo = new("resp2comp_fifo");
+    
+    fork
+      generator.run();
+      predictor.run();
+      comparator.run();
+      printer.run();
+    join_none
+    
+  end
+
+endmodule

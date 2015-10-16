@@ -1,0 +1,177 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Jan 18 22:09:41 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 8 counter_3_:14'ke'  stepButton:18'ke'  oneMHzClock:19'ke'  reset:20'ke'  \
+#  direction:21'ke'  counter_2_:15'ke'  counter_1_:16'ke'  counter_0_:17'ke' 
+#$ NODES 12 u1cs_counter_5_ u1d_debouncedSignal u1d_lastSample u1cs_counter_0_ \
+#  u1cs_counter_1_ u1cs_counter_2_ u1cs_counter_3_ u1cs_counter_4_ counterDFFRH_0reg \
+#  counterDFFRH_1reg counterDFFRH_2reg counterDFFRH_3reg
+.model debouncedfourbitcounter
+.inputs stepButton.BLIF oneMHzClock.BLIF reset.BLIF direction.BLIF \
+u1cs_counter_5_.BLIF u1d_debouncedSignal.BLIF u1d_lastSample.BLIF \
+u1cs_counter_0_.BLIF u1cs_counter_1_.BLIF u1cs_counter_2_.BLIF \
+u1cs_counter_3_.BLIF u1cs_counter_4_.BLIF counterDFFRH_0reg.BLIF \
+counterDFFRH_1reg.BLIF counterDFFRH_2reg.BLIF counterDFFRH_3reg.BLIF
+.outputs counter_3_ counter_2_ counter_1_ counter_0_ u1cs_counter_4_.C \
+u1cs_counter_5_.C counterDFFRH_0reg.D counterDFFRH_0reg.C counterDFFRH_0reg.AR \
+counterDFFRH_1reg.D counterDFFRH_1reg.C counterDFFRH_1reg.AR \
+counterDFFRH_2reg.C counterDFFRH_2reg.AR counterDFFRH_3reg.C \
+counterDFFRH_3reg.AR u1d_lastSample.D u1d_lastSample.C u1d_debouncedSignal.D \
+u1d_debouncedSignal.C u1cs_counter_0_.D u1cs_counter_0_.C u1cs_counter_1_.D \
+u1cs_counter_1_.C u1cs_counter_2_.D u1cs_counter_2_.C u1cs_counter_3_.D \
+u1cs_counter_3_.C u1cs_counter_5_.D.X1 u1cs_counter_5_.D.X2 \
+u1cs_counter_4_.D.X1 u1cs_counter_4_.D.X2 counterDFFRH_2reg.D.X1 \
+counterDFFRH_2reg.D.X2 counterDFFRH_3reg.D.X1 counterDFFRH_3reg.D.X2
+.names counterDFFRH_0reg.BLIF counterDFFRH_0reg.D
+0 1
+1 0
+.names direction.BLIF counterDFFRH_0reg.BLIF counterDFFRH_1reg.BLIF \
+counterDFFRH_1reg.D
+000 1
+110 1
+101 1
+011 1
+100 0
+010 0
+001 0
+111 0
+.names stepButton.BLIF u1d_lastSample.BLIF u1d_debouncedSignal.D
+11 1
+0- 0
+-0 0
+.names u1cs_counter_0_.BLIF u1cs_counter_0_.D
+0 1
+1 0
+.names counterDFFRH_3reg.BLIF counter_3_
+1 1
+0 0
+.names counterDFFRH_2reg.BLIF counter_2_
+1 1
+0 0
+.names counterDFFRH_1reg.BLIF counter_1_
+1 1
+0 0
+.names counterDFFRH_0reg.BLIF counter_0_
+1 1
+0 0
+.names oneMHzClock.BLIF u1cs_counter_4_.C
+0 1
+1 0
+.names oneMHzClock.BLIF u1cs_counter_5_.C
+0 1
+1 0
+.names u1d_debouncedSignal.BLIF counterDFFRH_0reg.C
+0 1
+1 0
+.names reset.BLIF counterDFFRH_0reg.AR
+0 1
+1 0
+.names u1d_debouncedSignal.BLIF counterDFFRH_1reg.C
+0 1
+1 0
+.names reset.BLIF counterDFFRH_1reg.AR
+0 1
+1 0
+.names u1d_debouncedSignal.BLIF counterDFFRH_2reg.C
+0 1
+1 0
+.names reset.BLIF counterDFFRH_2reg.AR
+0 1
+1 0
+.names u1d_debouncedSignal.BLIF counterDFFRH_3reg.C
+0 1
+1 0
+.names reset.BLIF counterDFFRH_3reg.AR
+0 1
+1 0
+.names stepButton.BLIF u1d_lastSample.D
+1 1
+0 0
+.names u1cs_counter_5_.BLIF u1d_lastSample.C
+1 1
+0 0
+.names u1cs_counter_5_.BLIF u1d_debouncedSignal.C
+1 1
+0 0
+.names oneMHzClock.BLIF u1cs_counter_0_.C
+0 1
+1 0
+.names u1cs_counter_0_.BLIF u1cs_counter_1_.BLIF u1cs_counter_1_.D
+10 1
+01 1
+00 0
+11 0
+.names oneMHzClock.BLIF u1cs_counter_1_.C
+0 1
+1 0
+.names u1cs_counter_0_.BLIF u1cs_counter_1_.BLIF u1cs_counter_2_.BLIF \
+u1cs_counter_2_.D
+110 1
+-01 1
+0-1 1
+111 0
+-00 0
+0-0 0
+.names oneMHzClock.BLIF u1cs_counter_2_.C
+0 1
+1 0
+.names u1cs_counter_0_.BLIF u1cs_counter_1_.BLIF u1cs_counter_2_.BLIF \
+u1cs_counter_3_.BLIF u1cs_counter_3_.D
+1110 1
+--01 1
+-0-1 1
+0--1 1
+1111 0
+--00 0
+-0-0 0
+0--0 0
+.names oneMHzClock.BLIF u1cs_counter_3_.C
+0 1
+1 0
+.names u1cs_counter_5_.BLIF u1cs_counter_5_.D.X1
+1 1
+0 0
+.names u1cs_counter_5_.BLIF u1cs_counter_0_.BLIF u1cs_counter_1_.BLIF \
+u1cs_counter_2_.BLIF u1cs_counter_3_.BLIF u1cs_counter_4_.BLIF \
+u1cs_counter_5_.D.X2
+-11111 1
+-0---- 0
+--0--- 0
+---0-- 0
+----0- 0
+-----0 0
+.names u1cs_counter_4_.BLIF u1cs_counter_4_.D.X1
+1 1
+0 0
+.names u1cs_counter_0_.BLIF u1cs_counter_1_.BLIF u1cs_counter_2_.BLIF \
+u1cs_counter_3_.BLIF u1cs_counter_4_.BLIF u1cs_counter_4_.D.X2
+1111- 1
+0---- 0
+-0--- 0
+--0-- 0
+---0- 0
+.names counterDFFRH_2reg.BLIF counterDFFRH_2reg.D.X1
+1 1
+0 0
+.names direction.BLIF counterDFFRH_0reg.BLIF counterDFFRH_1reg.BLIF \
+counterDFFRH_2reg.BLIF counterDFFRH_2reg.D.X2
+000- 1
+111- 1
+01-- 0
+10-- 0
+0-1- 0
+1-0- 0
+.names counterDFFRH_3reg.BLIF counterDFFRH_3reg.D.X1
+1 1
+0 0
+.names direction.BLIF counterDFFRH_0reg.BLIF counterDFFRH_1reg.BLIF \
+counterDFFRH_2reg.BLIF counterDFFRH_3reg.BLIF counterDFFRH_3reg.D.X2
+0000- 1
+1111- 1
+01--- 0
+10--- 0
+0-1-- 0
+1-0-- 0
+0--1- 0
+1--0- 0
+.end

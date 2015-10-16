@@ -1,0 +1,974 @@
+Release 13.4 - xst O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: FourBitCounterWithLoad.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FourBitCounterWithLoad.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FourBitCounterWithLoad"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-tq144
+
+---- Source Options
+Top Module Name                    : FourBitCounterWithLoad
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "fourbitcounterwithload.v" in library work
+Compiling verilog include file "ripplescaler.v"
+Compiling verilog include file "ripplecounter.v"
+Compiling verilog include file "tflipflop.v"
+Module <TFlipFlop> compiled
+Module <RippleCounter> compiled
+Compiling verilog include file "buttonpressdetector.v"
+Module <RippleScaler> compiled
+Compiling verilog include file "updowncounter.v"
+Compiling verilog include file "macros.v"
+Module <ButtonPressDetector> compiled
+Module <UpDownCounter> compiled
+Module <UpDownCounter_Firewall> compiled
+Module <FourBitCounterWithLoad> compiled
+No errors in compilation
+Analysis of file <"FourBitCounterWithLoad.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <FourBitCounterWithLoad> in library <work> with parameters.
+	CLOCK_SCALER_BITS = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <RippleScaler> in library <work> with parameters.
+	BITS = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <ButtonPressDetector> in library <work> with parameters.
+	BTN_PRESSED = "101"
+	BTN_UP = "001"
+	DEBOUNCE_1 = "010"
+	DEBOUNCE_2 = "011"
+	DEBOUNCE_3 = "100"
+	WAIT_UP = "000"
+
+Analyzing hierarchy for module <UpDownCounter> in library <work> with parameters.
+	DOWN_ACK = "10"
+	IDLE = "00"
+	SIZE = "00000000000000000000000000000100"
+	UP_ACK = "01"
+
+Analyzing hierarchy for module <RippleCounter> in library <work> with parameters.
+	SIZE = "00000000000000000000000000010100"
+
+Analyzing hierarchy for module <TFlipFlop> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <FourBitCounterWithLoad>.
+	CLOCK_SCALER_BITS = 32'sb00000000000000000000000000010100
+Module <FourBitCounterWithLoad> is correct for synthesis.
+ 
+Analyzing module <RippleScaler> in library <work>.
+	BITS = 32'sb00000000000000000000000000010100
+Module <RippleScaler> is correct for synthesis.
+ 
+Analyzing module <RippleCounter> in library <work>.
+	SIZE = 32'sb00000000000000000000000000010100
+Module <RippleCounter> is correct for synthesis.
+ 
+Analyzing module <TFlipFlop> in library <work>.
+Module <TFlipFlop> is correct for synthesis.
+ 
+Analyzing module <ButtonPressDetector> in library <work>.
+	BTN_PRESSED = 3'b101
+	BTN_UP = 3'b001
+	DEBOUNCE_1 = 3'b010
+	DEBOUNCE_2 = 3'b011
+	DEBOUNCE_3 = 3'b100
+	WAIT_UP = 3'b000
+Module <ButtonPressDetector> is correct for synthesis.
+ 
+Analyzing module <UpDownCounter> in library <work>.
+	DOWN_ACK = 2'b10
+	IDLE = 2'b00
+	SIZE = 32'sb00000000000000000000000000000100
+	UP_ACK = 2'b01
+Module <UpDownCounter> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ButtonPressDetector>.
+    Related source file is "buttonpressdetector.v".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <ButtonPressDetector> synthesized.
+
+
+Synthesizing Unit <UpDownCounter>.
+    Related source file is "updowncounter.v".
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Clock enable       | load                      (negative)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit updown counter for signal <counter>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+Unit <UpDownCounter> synthesized.
+
+
+Synthesizing Unit <TFlipFlop>.
+    Related source file is "tflipflop.v".
+WARNING:Xst:647 - Input <t> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <TFlipFlop> synthesized.
+
+
+Synthesizing Unit <RippleCounter>.
+    Related source file is "ripplecounter.v".
+Unit <RippleCounter> synthesized.
+
+
+Synthesizing Unit <RippleScaler>.
+    Related source file is "ripplescaler.v".
+WARNING:Xst:646 - Signal <counter<18:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <RippleScaler> synthesized.
+
+
+Synthesizing Unit <FourBitCounterWithLoad>.
+    Related source file is "fourbitcounterwithload.v".
+Unit <FourBitCounterWithLoad> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 4-bit updown counter                                  : 1
+# Registers                                            : 20
+ 1-bit register                                        : 20
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <u4udc/state/FSM> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <u2bpd/state/FSM> on signal <state[1:3]> with sequential encoding.
+Optimizing FSM <u3bpd/state/FSM> on signal <state[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 010
+ 010   | 001
+ 011   | 011
+ 100   | 100
+ 101   | 101
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Counters                                             : 1
+ 4-bit updown counter                                  : 1
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <FourBitCounterWithLoad> ...
+
+Optimizing unit <RippleCounter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FourBitCounterWithLoad, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : FourBitCounterWithLoad.ngr
+Top Level Output File Name         : FourBitCounterWithLoad
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 50
+#      INV                         : 21
+#      LUT2                        : 2
+#      LUT3                        : 6
+#      LUT3_L                      : 2
+#      LUT4                        : 10
+#      LUT4_L                      : 5
+#      MUXF5                       : 4
+# FlipFlops/Latches                : 32
+#      FDC                         : 6
+#      FDC_1                       : 20
+#      FDCE                        : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 8
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250etq144-5 
+
+ Number of Slices:                       24  out of   2448     0%  
+ Number of Slice Flip Flops:             32  out of   4896     0%  
+ Number of 4 input LUTs:                 46  out of   4896     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    108    12%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------+--------------------------------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)                            | Load  |
+-------------------------------------------+--------------------------------------------------+-------+
+u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q| NONE(u4udc/state_FSM_FFd2)                       | 12    |
+systemClock                                | BUFGP                                            | 1     |
+u1rs/u1rc/u0tff/q                          | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q) | 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q | NONE(u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q)| 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q| NONE(u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q)| 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q| NONE(u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q)| 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q| NONE(u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q)| 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q| NONE(u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q)| 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q| NONE(u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q)| 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q| NONE(u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q)| 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q| NONE(u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q)| 1     |
+u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q| NONE(u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q)| 1     |
+-------------------------------------------+--------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+resetButton                        | IBUF                   | 32    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.983ns (Maximum Frequency: 251.086MHz)
+   Minimum input arrival time before clock: 3.421ns
+   Maximum output required time after clock: 4.221ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q'
+  Clock period: 3.983ns (frequency: 251.086MHz)
+  Total number of paths / destination ports: 81 / 16
+-------------------------------------------------------------------------
+Delay:               3.983ns (Levels of Logic = 3)
+  Source:            u2bpd/state_FSM_FFd1 (FF)
+  Destination:       u4udc/counter_3 (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q rising
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q rising
+
+  Data Path: u2bpd/state_FSM_FFd1 to u4udc/counter_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.514   0.902  u2bpd/state_FSM_FFd1 (u2bpd/state_FSM_FFd1)
+     LUT2:I0->O            1   0.612   0.360  u4udc/Mcount_counter_xor<3>1111 (N3)
+     LUT4_L:I3->LO         1   0.612   0.103  u4udc/Mcount_counter_xor<3>1_SW0 (N21)
+     LUT4:I3->O            1   0.612   0.000  u4udc/Mcount_counter_xor<3>1 (u4udc/Mcount_counter4)
+     FDCE:D                    0.268          u4udc/counter_3
+    ----------------------------------------
+    Total                      3.983ns (2.618ns logic, 1.365ns route)
+                                       (65.7% logic, 34.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'systemClock'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/u0tff/q (FF)
+  Destination:       u1rs/u1rc/u0tff/q (FF)
+  Source Clock:      systemClock falling
+  Destination Clock: systemClock falling
+
+  Data Path: u1rs/u1rc/u0tff/q to u1rs/u1rc/u0tff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/u0tff/q (u1rs/u1rc/u0tff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/u0tff/nq1_INV_0 (u1rs/u1rc/u0tff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/u0tff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/u0tff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/u0tff/q falling
+  Destination Clock: u1rs/u1rc/u0tff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[0].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[1].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[2].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[3].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[4].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[5].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[6].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[7].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[8].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[9].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[10].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[11].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[12].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[13].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[14].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[15].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q'
+  Clock period: 2.131ns (frequency: 469.274MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.131ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[16].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            2   0.514   0.380  u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q
+    ----------------------------------------
+    Total                      2.131ns (1.394ns logic, 0.737ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q'
+  Clock period: 2.587ns (frequency: 386.615MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.587ns (Levels of Logic = 1)
+  Source:            u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q (FF)
+  Destination:       u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q (FF)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q falling
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[17].uitff/q falling
+
+  Data Path: u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q to u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           13   0.514   0.836  u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q (u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q)
+     INV:I->O              1   0.612   0.357  u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/nq1_INV_0 (u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/nq)
+     FDC_1:D                   0.268          u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q
+    ----------------------------------------
+    Total                      2.587ns (1.394ns logic, 1.193ns route)
+                                       (53.9% logic, 46.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q'
+  Total number of paths / destination ports: 26 / 16
+-------------------------------------------------------------------------
+Offset:              3.421ns (Levels of Logic = 2)
+  Source:            loadButton (PAD)
+  Destination:       u4udc/counter_0 (FF)
+  Destination Clock: u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q rising
+
+  Data Path: loadButton to u4udc/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.106   0.721  loadButton_IBUF (loadButton_IBUF)
+     LUT4:I0->O            4   0.612   0.499  u4udc/counter_not0001 (u4udc/counter_not0001)
+     FDCE:CE                   0.483          u4udc/counter_0
+    ----------------------------------------
+    Total                      3.421ns (2.201ns logic, 1.220ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.221ns (Levels of Logic = 1)
+  Source:            u4udc/counter_0 (FF)
+  Destination:       counter<0> (PAD)
+  Source Clock:      u1rs/u1rc/sizeMinusOneFlipFlops[18].uitff/q rising
+
+  Data Path: u4udc/counter_0 to counter<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.514   0.538  u4udc/counter_0 (u4udc/counter_0)
+     OBUF:I->O                 3.169          counter_0_OBUF (counter<0>)
+    ----------------------------------------
+    Total                      4.221ns (3.683ns logic, 0.538ns route)
+                                       (87.3% logic, 12.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.60 secs
+ 
+--> 
+
+Total memory usage is 199904 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

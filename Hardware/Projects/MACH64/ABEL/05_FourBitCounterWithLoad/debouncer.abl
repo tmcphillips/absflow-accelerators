@@ -1,0 +1,35 @@
+module Debouncer interface (rawSignal, samplingClock -> debounced);
+
+declarations
+
+	// raw button signal
+	rawSignal pin;
+
+	// clock signal setting debouncing frequency
+	samplingClock pin;
+
+	// last sampled button state
+	lastSample node istype 'reg';
+
+	// debounced button state
+	debounced pin istype 'reg';
+
+equations
+
+	// sample input button status at frequency of clock
+	lastSample.clk = samplingClock;
+	lastSample := rawSignal;
+
+	// compute debounced button status as the conjunction of the
+	// the latest and previous states of the buttons using the
+	// sampling clock
+	debounced.clk = samplingClock;
+	debounced := rawSignal & lastSample;
+	
+end
+
+	
+
+
+
+ 

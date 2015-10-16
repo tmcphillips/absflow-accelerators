@@ -1,0 +1,31 @@
+MODULE BCDCounter INTERFACE (clock -> [d3..d0]);
+
+DECLARATIONS
+
+	// input clock signal
+	clock PIN;
+
+	// 4-bit  register for holding decimal digit
+	r3..r0 NODE ISTYPE 'reg';
+	digit = [r3..r0];
+
+	// output bits
+	d3..d0 PIN;
+	output = [d3..d0];
+
+EQUATIONS
+
+	// clock digit register using input clock signal
+	digit.clk = clock;
+
+	// increment decimal digit modulo 10 on each scaled clock pulse
+	WHEN (digit == 9) THEN {
+		digit := 0;
+	} ELSE {
+		digit := digit + 1;
+	}
+
+	// output value of register
+	output = digit;
+END
+

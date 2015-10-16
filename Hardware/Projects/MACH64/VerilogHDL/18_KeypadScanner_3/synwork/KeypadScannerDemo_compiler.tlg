@@ -1,0 +1,34 @@
+Selecting top level module KeypadScannerDemo
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001010
+   Generated name = RippleCounter_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001010
+   Generated name = RippleScaler_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\keypadscanner.v":54:7:54:19|Synthesizing module KeypadScanner
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\stablevaluedetector.v":4:7:4:25|Synthesizing module StableValueDetector
+
+	SIZE=32'b00000000000000000000000000000100
+	UNSTABLE=2'b00
+	STABLE=2'b01
+	WAIT_UNSTABLE=2'b11
+   Generated name = StableValueDetector_4s_0_1_3
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\bcddigittosevensegment.v":4:7:4:28|Synthesizing module BcdDigitToSevenSegment
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\keypadscannerdemo.v":6:7:6:23|Synthesizing module KeypadScannerDemo
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\stablevaluedetector.v":19:1:19:6|Trying to extract state machine for register state_reg
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\18_keypadscanner_3\keypadscanner.v":83:1:83:6|Trying to extract state machine for register activeColumn_reg
+Extracted state machine for register activeColumn_reg
+State machine has 3 reachable states with original encodings of:
+   001
+   010
+   100

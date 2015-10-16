@@ -1,0 +1,833 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Wed Feb 08 16:18:56 2012
+#$ MODULE mach64_verilog_project
+#$ PINS 16 data_7_:45'ke'  reset_n:20'ke'  start_n:21'ke'  e:28'ke'  rw:27'ke'  rs:26'ke'  wack:46'ke'  \
+#  wreq:47'ke'  clock:43'ke'  data_6_:40'ke'  data_5_:39'ke'  data_4_:38'ke'  data_3_:34'ke'  \
+#  data_2_:33'ke'  data_1_:32'ke'  data_0_:31'ke' 
+#$ NODES 58 inst_register writeValue_0_ writeValue_1_ writeValue_2_ writeValue_3_ \
+#  writeValue_4_ writeValue_6_ state_14_ state_0_ state_1_ state_2_ state_3_ state_4_ \
+#  state_5_ state_6_ state_7_ state_8_ state_9_ state_10_ state_11_ state_12_ state_13_ \
+#  II_0_state_0_ II_0_state_4_ II_0_outData_0reg II_0_state_1_ II_0_outData_1reg \
+#  II_0_outData_2reg II_0_outData_3reg II_0_outData_4reg II_0_outData_6reg \
+#  II_0_outData_7 II_0_outData_cl_7_0_reg II_0_outData_cl_6_0_reg \
+#  II_0_outData_cl_5_0_reg II_0_outData_cl_4_0_reg II_0_outData_cl_3_0_reg \
+#  II_0_outData_cl_2_0_reg II_0_outData_cl_1_0_reg II_0_outData_cl_0_ II_0_state_9_ \
+#  II_0_state_2_ II_0_state_3_ II_0_state_7_ II_0_state_10_ II_0_busyFlag \
+#  II_0_state_5_ II_0_state_6_ II_0_state_8_ II_0_state_11_ II_0_state_12_ \
+#  II_0_state_13_ II_0_ereg II_0_rwreg II_0_rsreg II_0_ackreg wreqDFFCRHreg \
+#  un1_state40_i
+.model lcddemo
+.inputs reset_n.BLIF start_n.BLIF clock.BLIF data_7_.BLIF data_6_.BLIF \
+data_5_.BLIF data_4_.BLIF data_3_.BLIF data_2_.BLIF data_1_.BLIF data_0_.BLIF \
+inst_register.BLIF writeValue_0_.BLIF writeValue_1_.BLIF writeValue_2_.BLIF \
+writeValue_3_.BLIF writeValue_4_.BLIF writeValue_6_.BLIF state_14_.BLIF \
+state_0_.BLIF state_1_.BLIF state_2_.BLIF state_3_.BLIF state_4_.BLIF \
+state_5_.BLIF state_6_.BLIF state_7_.BLIF state_8_.BLIF state_9_.BLIF \
+state_10_.BLIF state_11_.BLIF state_12_.BLIF state_13_.BLIF II_0_state_0_.BLIF \
+II_0_state_4_.BLIF II_0_outData_0reg.BLIF II_0_state_1_.BLIF \
+II_0_outData_1reg.BLIF II_0_outData_2reg.BLIF II_0_outData_3reg.BLIF \
+II_0_outData_4reg.BLIF II_0_outData_6reg.BLIF II_0_outData_7.BLIF \
+II_0_outData_cl_7_0_reg.BLIF II_0_outData_cl_6_0_reg.BLIF \
+II_0_outData_cl_5_0_reg.BLIF II_0_outData_cl_4_0_reg.BLIF \
+II_0_outData_cl_3_0_reg.BLIF II_0_outData_cl_2_0_reg.BLIF \
+II_0_outData_cl_1_0_reg.BLIF II_0_outData_cl_0_.BLIF II_0_state_9_.BLIF \
+II_0_state_2_.BLIF II_0_state_3_.BLIF II_0_state_7_.BLIF II_0_state_10_.BLIF \
+II_0_busyFlag.BLIF II_0_state_5_.BLIF II_0_state_6_.BLIF II_0_state_8_.BLIF \
+II_0_state_11_.BLIF II_0_state_12_.BLIF II_0_state_13_.BLIF II_0_ereg.BLIF \
+II_0_rwreg.BLIF II_0_rsreg.BLIF II_0_ackreg.BLIF wreqDFFCRHreg.BLIF \
+un1_state40_i.BLIF data_7_.PIN.BLIF
+.outputs e rw rs wack wreq II_0_state_7_.D II_0_state_7_.C II_0_state_7_.AR \
+II_0_state_8_.D II_0_state_8_.C II_0_state_8_.AR II_0_state_9_.D \
+II_0_state_9_.C II_0_state_9_.AR II_0_state_10_.D II_0_state_10_.C \
+II_0_state_10_.AR II_0_state_11_.D II_0_state_11_.C II_0_state_11_.AR \
+II_0_state_12_.D II_0_state_12_.C II_0_state_12_.AR II_0_state_13_.D \
+II_0_state_13_.C II_0_state_13_.AR II_0_state_0_.D II_0_state_0_.C \
+II_0_state_0_.AP II_0_state_1_.D II_0_state_1_.C II_0_state_1_.AR \
+II_0_state_2_.D II_0_state_2_.C II_0_state_2_.AR II_0_state_3_.D \
+II_0_state_3_.C II_0_state_3_.AR II_0_state_4_.D II_0_state_4_.C \
+II_0_state_4_.AR II_0_state_5_.D II_0_state_5_.C II_0_state_5_.AR \
+II_0_state_6_.D II_0_state_6_.C II_0_state_6_.AR II_0_outData_6reg.D \
+II_0_outData_6reg.CE II_0_outData_6reg.C II_0_outData_4reg.D \
+II_0_outData_4reg.CE II_0_outData_4reg.C II_0_outData_3reg.D \
+II_0_outData_3reg.CE II_0_outData_3reg.C II_0_outData_2reg.D \
+II_0_outData_2reg.CE II_0_outData_2reg.C II_0_outData_1reg.D \
+II_0_outData_1reg.CE II_0_outData_1reg.C II_0_outData_0reg.D \
+II_0_outData_0reg.CE II_0_outData_0reg.C II_0_ereg.D II_0_ereg.CE II_0_ereg.C \
+II_0_rwreg.D II_0_rwreg.CE II_0_rwreg.C II_0_rsreg.D II_0_rsreg.CE \
+II_0_rsreg.C II_0_ackreg.D II_0_ackreg.CE II_0_ackreg.C \
+II_0_outData_cl_7_0_reg.D II_0_outData_cl_7_0_reg.CE II_0_outData_cl_7_0_reg.C \
+II_0_outData_cl_6_0_reg.D II_0_outData_cl_6_0_reg.CE II_0_outData_cl_6_0_reg.C \
+II_0_outData_cl_5_0_reg.D II_0_outData_cl_5_0_reg.CE II_0_outData_cl_5_0_reg.C \
+II_0_outData_cl_4_0_reg.D II_0_outData_cl_4_0_reg.CE II_0_outData_cl_4_0_reg.C \
+II_0_outData_cl_3_0_reg.D II_0_outData_cl_3_0_reg.CE II_0_outData_cl_3_0_reg.C \
+II_0_outData_cl_2_0_reg.D II_0_outData_cl_2_0_reg.CE II_0_outData_cl_2_0_reg.C \
+II_0_outData_cl_1_0_reg.D II_0_outData_cl_1_0_reg.CE II_0_outData_cl_1_0_reg.C \
+II_0_outData_cl_0_.D II_0_outData_cl_0_.CE II_0_outData_cl_0_.C \
+II_0_busyFlag.D II_0_busyFlag.CE II_0_busyFlag.C II_0_outData_7.D \
+II_0_outData_7.CE II_0_outData_7.C state_7_.D state_7_.C state_7_.AR \
+state_8_.D state_8_.C state_8_.AR state_9_.D state_9_.C state_9_.AR \
+state_10_.D state_10_.C state_10_.AR state_11_.D state_11_.C state_11_.AR \
+state_12_.D state_12_.C state_12_.AR state_13_.D state_13_.C state_13_.AR \
+state_14_.D state_14_.C state_14_.AR writeValue_3_.D writeValue_3_.CE \
+writeValue_3_.C writeValue_4_.D writeValue_4_.CE writeValue_4_.C state_0_.D \
+state_0_.C state_0_.AP state_1_.D state_1_.C state_1_.AR state_2_.D state_2_.C \
+state_2_.AR state_3_.D state_3_.C state_3_.AR state_4_.D state_4_.C \
+state_4_.AR state_5_.D state_5_.C state_5_.AR state_6_.D state_6_.C \
+state_6_.AR writeValue_6_.D writeValue_6_.CE writeValue_6_.C inst_register.D \
+inst_register.CE inst_register.C inst_register.AR wreqDFFCRHreg.D \
+wreqDFFCRHreg.CE wreqDFFCRHreg.C wreqDFFCRHreg.AR writeValue_0_.D \
+writeValue_0_.CE writeValue_0_.C writeValue_1_.D writeValue_1_.CE \
+writeValue_1_.C writeValue_2_.D writeValue_2_.CE writeValue_2_.C data_7_ \
+data_6_ data_5_ data_4_ data_3_ data_2_ data_1_ data_0_ un1_state40_i \
+data_7_.OE data_0_.OE data_1_.OE data_2_.OE data_3_.OE data_4_.OE data_5_.OE \
+data_6_.OE
+.names II_0_busyFlag.BLIF II_0_state_6_.BLIF II_0_state_11_.BLIF \
+II_0_state_7_.D
+-1- 1
+1-1 1
+00- 0
+-00 0
+.names II_0_busyFlag.BLIF II_0_state_11_.BLIF II_0_state_12_.D
+01 1
+1- 0
+-0 0
+.names II_0_state_0_.BLIF II_0_state_12_.BLIF wreqDFFCRHreg.BLIF \
+II_0_state_0_.D
+1-0 1
+-1- 1
+00- 0
+-01 0
+.names II_0_state_0_.BLIF wreqDFFCRHreg.BLIF II_0_state_1_.D
+11 1
+0- 0
+-0 0
+.names writeValue_6_.BLIF II_0_state_1_.BLIF II_0_outData_6reg.BLIF \
+II_0_outData_6reg.D
+11- 1
+-01 1
+01- 0
+-00 0
+.names writeValue_4_.BLIF II_0_state_1_.BLIF II_0_outData_4reg.BLIF \
+II_0_outData_4reg.D
+11- 1
+-01 1
+01- 0
+-00 0
+.names writeValue_3_.BLIF II_0_state_1_.BLIF II_0_outData_3reg.BLIF \
+II_0_outData_3reg.D
+11- 1
+-01 1
+01- 0
+-00 0
+.names writeValue_2_.BLIF II_0_state_1_.BLIF II_0_outData_2reg.BLIF \
+II_0_outData_2reg.D
+11- 1
+-01 1
+01- 0
+-00 0
+.names writeValue_1_.BLIF II_0_state_1_.BLIF II_0_outData_1reg.BLIF \
+II_0_outData_1reg.D
+11- 1
+-01 1
+01- 0
+-00 0
+.names writeValue_0_.BLIF II_0_outData_0reg.BLIF II_0_state_1_.BLIF \
+II_0_outData_0reg.D
+-10 1
+1-1 1
+-00 0
+0-1 0
+.names II_0_state_0_.BLIF II_0_state_2_.BLIF II_0_state_3_.BLIF \
+II_0_state_7_.BLIF II_0_state_10_.BLIF II_0_ereg.BLIF II_0_ereg.D
+0-010- 1
+010-0- 1
+0-0-01 1
+-0-0-0 0
+----1- 0
+--1--- 0
+1----- 0
+.names II_0_state_0_.BLIF II_0_state_6_.BLIF II_0_rwreg.BLIF II_0_rwreg.D
+01- 1
+0-1 1
+-00 0
+1-- 0
+.names inst_register.BLIF II_0_state_0_.BLIF II_0_state_1_.BLIF \
+II_0_state_6_.BLIF II_0_rsreg.BLIF II_0_rsreg.D
+-0001 1
+1-1-- 1
+0-1-- 0
+--01- 0
+-10-- 0
+--0-0 0
+.names II_0_state_0_.BLIF II_0_state_12_.BLIF II_0_ackreg.BLIF II_0_ackreg.D
+01- 1
+0-1 1
+-00 0
+1-- 0
+.names II_0_state_0_.BLIF II_0_state_4_.BLIF II_0_state_1_.BLIF \
+II_0_outData_cl_7_0_reg.BLIF II_0_outData_cl_7_0_reg.D
+001- 1
+00-1 1
+--00 0
+-1-- 0
+1--- 0
+.names II_0_state_0_.BLIF II_0_state_4_.BLIF II_0_state_1_.BLIF \
+II_0_outData_cl_6_0_reg.BLIF II_0_outData_cl_6_0_reg.D
+001- 1
+00-1 1
+--00 0
+-1-- 0
+1--- 0
+.names II_0_state_0_.BLIF II_0_state_4_.BLIF II_0_state_1_.BLIF \
+II_0_outData_cl_5_0_reg.BLIF II_0_outData_cl_5_0_reg.D
+001- 1
+00-1 1
+--00 0
+-1-- 0
+1--- 0
+.names II_0_state_0_.BLIF II_0_state_4_.BLIF II_0_state_1_.BLIF \
+II_0_outData_cl_4_0_reg.BLIF II_0_outData_cl_4_0_reg.D
+001- 1
+00-1 1
+--00 0
+-1-- 0
+1--- 0
+.names II_0_state_0_.BLIF II_0_state_4_.BLIF II_0_state_1_.BLIF \
+II_0_outData_cl_3_0_reg.BLIF II_0_outData_cl_3_0_reg.D
+001- 1
+00-1 1
+--00 0
+-1-- 0
+1--- 0
+.names II_0_state_0_.BLIF II_0_state_4_.BLIF II_0_state_1_.BLIF \
+II_0_outData_cl_2_0_reg.BLIF II_0_outData_cl_2_0_reg.D
+001- 1
+00-1 1
+--00 0
+-1-- 0
+1--- 0
+.names II_0_state_0_.BLIF II_0_state_4_.BLIF II_0_state_1_.BLIF \
+II_0_outData_cl_1_0_reg.BLIF II_0_outData_cl_1_0_reg.D
+001- 1
+00-1 1
+--00 0
+-1-- 0
+1--- 0
+.names II_0_state_0_.BLIF II_0_state_4_.BLIF II_0_state_1_.BLIF \
+II_0_outData_cl_0_.BLIF II_0_outData_cl_0_.D
+001- 1
+00-1 1
+--00 0
+-1-- 0
+1--- 0
+.names reset_n.BLIF II_0_state_9_.BLIF II_0_busyFlag.CE
+11 1
+0- 0
+-0 0
+.names II_0_state_1_.BLIF II_0_outData_7.BLIF II_0_outData_7.D
+01 1
+1- 0
+-0 0
+.names state_6_.BLIF state_7_.BLIF II_0_ackreg.BLIF state_7_.D
+-10 1
+1-- 1
+00- 0
+0-1 0
+.names state_7_.BLIF II_0_ackreg.BLIF state_8_.D
+11 1
+0- 0
+-0 0
+.names state_8_.BLIF state_9_.BLIF II_0_ackreg.BLIF state_9_.D
+-10 1
+1-- 1
+00- 0
+0-1 0
+.names state_9_.BLIF II_0_ackreg.BLIF state_10_.D
+11 1
+0- 0
+-0 0
+.names state_10_.BLIF state_11_.BLIF II_0_ackreg.BLIF state_11_.D
+-10 1
+1-- 1
+00- 0
+0-1 0
+.names state_11_.BLIF II_0_ackreg.BLIF state_12_.D
+11 1
+0- 0
+-0 0
+.names state_12_.BLIF state_13_.BLIF II_0_ackreg.BLIF state_13_.D
+-10 1
+1-- 1
+00- 0
+0-1 0
+.names start_n.BLIF state_14_.BLIF state_13_.BLIF II_0_ackreg.BLIF state_14_.D
+01-- 1
+--11 1
+-00- 0
+1-0- 0
+-0-0 0
+1--0 0
+.names state_2_.BLIF state_6_.BLIF state_10_.BLIF writeValue_3_.D
+000 1
+-1- 0
+1-- 0
+--1 0
+.names start_n.BLIF state_1_.BLIF state_2_.BLIF state_3_.BLIF state_4_.BLIF \
+state_5_.BLIF state_6_.BLIF state_7_.BLIF state_8_.BLIF state_9_.BLIF \
+state_10_.BLIF state_11_.BLIF state_12_.BLIF state_13_.BLIF state_0_.D
+10000000000000 1
+------------1- 0
+-----------1-- 0
+----------1--- 0
+---------1---- 0
+--------1----- 0
+-------1------ 0
+------1------- 0
+-----1-------- 0
+----1--------- 0
+---1---------- 0
+--1----------- 0
+-1------------ 0
+0------------- 0
+-------------1 0
+.names start_n.BLIF state_0_.BLIF state_1_.BLIF II_0_ackreg.BLIF state_1_.D
+01-- 1
+--10 1
+-00- 0
+1-0- 0
+-0-1 0
+1--1 0
+.names state_1_.BLIF II_0_ackreg.BLIF state_2_.D
+11 1
+0- 0
+-0 0
+.names state_2_.BLIF state_3_.BLIF II_0_ackreg.BLIF state_3_.D
+-10 1
+1-- 1
+00- 0
+0-1 0
+.names state_3_.BLIF II_0_ackreg.BLIF state_4_.D
+11 1
+0- 0
+-0 0
+.names state_4_.BLIF state_5_.BLIF II_0_ackreg.BLIF state_5_.D
+-10 1
+1-- 1
+00- 0
+0-1 0
+.names state_5_.BLIF II_0_ackreg.BLIF state_6_.D
+11 1
+0- 0
+-0 0
+.names start_n.BLIF state_0_.BLIF state_2_.BLIF state_4_.BLIF state_6_.BLIF \
+state_8_.BLIF state_10_.BLIF state_12_.BLIF inst_register.CE
+01------ 1
+------1- 1
+-----1-- 1
+----1--- 1
+---1---- 1
+--1----- 1
+-------1 1
+-0000000 0
+1-000000 0
+.names start_n.BLIF state_14_.BLIF state_0_.BLIF wreqDFFCRHreg.CE
+00- 1
+-00 1
+-1- 0
+1-1 0
+.names state_4_.BLIF state_6_.BLIF state_10_.BLIF writeValue_0_.D
+-1- 1
+1-- 1
+--1 1
+000 0
+.names state_2_.BLIF state_4_.BLIF state_10_.BLIF state_12_.BLIF \
+writeValue_2_.D
+--1- 1
+-1-- 1
+1--- 1
+---1 1
+0000 0
+.names reset_n.BLIF start_n.BLIF state_0_.BLIF state_2_.BLIF state_4_.BLIF \
+state_6_.BLIF state_8_.BLIF state_10_.BLIF state_12_.BLIF un1_state40_i
+101------ 1
+1-0----1- 1
+1-0---1-- 1
+1-0--1--- 1
+1-0-1---- 1
+1-01----- 1
+1-0-----1 1
+--0000000 0
+-11------ 0
+0-------- 0
+.names II_0_ereg.BLIF e
+1 1
+0 0
+.names II_0_rwreg.BLIF rw
+1 1
+0 0
+.names II_0_rsreg.BLIF rs
+1 1
+0 0
+.names II_0_ackreg.BLIF wack
+1 1
+0 0
+.names wreqDFFCRHreg.BLIF wreq
+1 1
+0 0
+.names clock.BLIF II_0_state_7_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_7_.AR
+0 1
+1 0
+.names II_0_state_7_.BLIF II_0_state_8_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_8_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_8_.AR
+0 1
+1 0
+.names II_0_state_8_.BLIF II_0_state_9_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_9_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_9_.AR
+0 1
+1 0
+.names II_0_state_9_.BLIF II_0_state_10_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_10_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_10_.AR
+0 1
+1 0
+.names II_0_state_10_.BLIF II_0_state_11_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_11_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_11_.AR
+0 1
+1 0
+.names clock.BLIF II_0_state_12_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_12_.AR
+0 1
+1 0
+.names II_0_state_4_.BLIF II_0_state_13_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_13_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_13_.AR
+0 1
+1 0
+.names clock.BLIF II_0_state_0_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_0_.AP
+0 1
+1 0
+.names clock.BLIF II_0_state_1_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_1_.AR
+0 1
+1 0
+.names II_0_state_1_.BLIF II_0_state_2_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_2_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_2_.AR
+0 1
+1 0
+.names II_0_state_5_.BLIF II_0_state_3_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_3_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_3_.AR
+0 1
+1 0
+.names II_0_state_3_.BLIF II_0_state_4_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_4_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_4_.AR
+0 1
+1 0
+.names II_0_state_2_.BLIF II_0_state_5_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_5_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_5_.AR
+0 1
+1 0
+.names II_0_state_13_.BLIF II_0_state_6_.D
+1 1
+0 0
+.names clock.BLIF II_0_state_6_.C
+1 1
+0 0
+.names reset_n.BLIF II_0_state_6_.AR
+0 1
+1 0
+.names reset_n.BLIF II_0_outData_6reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_6reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_4reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_4reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_3reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_3reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_2reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_2reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_1reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_1reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_0reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_0reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_ereg.CE
+1 1
+0 0
+.names clock.BLIF II_0_ereg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_rwreg.CE
+1 1
+0 0
+.names clock.BLIF II_0_rwreg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_rsreg.CE
+1 1
+0 0
+.names clock.BLIF II_0_rsreg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_ackreg.CE
+1 1
+0 0
+.names clock.BLIF II_0_ackreg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_cl_7_0_reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_cl_7_0_reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_cl_6_0_reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_cl_6_0_reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_cl_5_0_reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_cl_5_0_reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_cl_4_0_reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_cl_4_0_reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_cl_3_0_reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_cl_3_0_reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_cl_2_0_reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_cl_2_0_reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_cl_1_0_reg.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_cl_1_0_reg.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_cl_0_.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_cl_0_.C
+1 1
+0 0
+.names data_7_.PIN.BLIF II_0_busyFlag.D
+1 1
+0 0
+.names clock.BLIF II_0_busyFlag.C
+1 1
+0 0
+.names reset_n.BLIF II_0_outData_7.CE
+1 1
+0 0
+.names clock.BLIF II_0_outData_7.C
+1 1
+0 0
+.names clock.BLIF state_7_.C
+1 1
+0 0
+.names reset_n.BLIF state_7_.AR
+0 1
+1 0
+.names clock.BLIF state_8_.C
+1 1
+0 0
+.names reset_n.BLIF state_8_.AR
+0 1
+1 0
+.names clock.BLIF state_9_.C
+1 1
+0 0
+.names reset_n.BLIF state_9_.AR
+0 1
+1 0
+.names clock.BLIF state_10_.C
+1 1
+0 0
+.names reset_n.BLIF state_10_.AR
+0 1
+1 0
+.names clock.BLIF state_11_.C
+1 1
+0 0
+.names reset_n.BLIF state_11_.AR
+0 1
+1 0
+.names clock.BLIF state_12_.C
+1 1
+0 0
+.names reset_n.BLIF state_12_.AR
+0 1
+1 0
+.names clock.BLIF state_13_.C
+1 1
+0 0
+.names reset_n.BLIF state_13_.AR
+0 1
+1 0
+.names clock.BLIF state_14_.C
+1 1
+0 0
+.names reset_n.BLIF state_14_.AR
+0 1
+1 0
+.names un1_state40_i.BLIF writeValue_3_.CE
+1 1
+0 0
+.names clock.BLIF writeValue_3_.C
+1 1
+0 0
+.names state_0_.BLIF writeValue_4_.D
+1 1
+0 0
+.names un1_state40_i.BLIF writeValue_4_.CE
+1 1
+0 0
+.names clock.BLIF writeValue_4_.C
+1 1
+0 0
+.names clock.BLIF state_0_.C
+1 1
+0 0
+.names reset_n.BLIF state_0_.AP
+0 1
+1 0
+.names clock.BLIF state_1_.C
+1 1
+0 0
+.names reset_n.BLIF state_1_.AR
+0 1
+1 0
+.names clock.BLIF state_2_.C
+1 1
+0 0
+.names reset_n.BLIF state_2_.AR
+0 1
+1 0
+.names clock.BLIF state_3_.C
+1 1
+0 0
+.names reset_n.BLIF state_3_.AR
+0 1
+1 0
+.names clock.BLIF state_4_.C
+1 1
+0 0
+.names reset_n.BLIF state_4_.AR
+0 1
+1 0
+.names clock.BLIF state_5_.C
+1 1
+0 0
+.names reset_n.BLIF state_5_.AR
+0 1
+1 0
+.names clock.BLIF state_6_.C
+1 1
+0 0
+.names reset_n.BLIF state_6_.AR
+0 1
+1 0
+.names state_14_.BLIF state_8_.BLIF state_9_.BLIF state_10_.BLIF \
+state_11_.BLIF state_12_.BLIF state_13_.BLIF writeValue_6_.D
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-1----- 1
+1------ 1
+------1 1
+0000000 0
+.names un1_state40_i.BLIF writeValue_6_.CE
+1 1
+0 0
+.names clock.BLIF writeValue_6_.C
+1 1
+0 0
+.names state_14_.BLIF state_8_.BLIF state_9_.BLIF state_10_.BLIF \
+state_11_.BLIF state_12_.BLIF state_13_.BLIF inst_register.D
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-1----- 1
+1------ 1
+------1 1
+0000000 0
+.names clock.BLIF inst_register.C
+1 1
+0 0
+.names reset_n.BLIF inst_register.AR
+0 1
+1 0
+.names state_0_.BLIF state_2_.BLIF state_4_.BLIF state_6_.BLIF state_8_.BLIF \
+state_10_.BLIF state_12_.BLIF wreqDFFCRHreg.D
+-----1- 1
+----1-- 1
+---1--- 1
+--1---- 1
+-1----- 1
+1------ 1
+------1 1
+0000000 0
+.names clock.BLIF wreqDFFCRHreg.C
+1 1
+0 0
+.names reset_n.BLIF wreqDFFCRHreg.AR
+0 1
+1 0
+.names un1_state40_i.BLIF writeValue_0_.CE
+1 1
+0 0
+.names clock.BLIF writeValue_0_.C
+1 1
+0 0
+.names state_4_.BLIF writeValue_1_.D
+1 1
+0 0
+.names un1_state40_i.BLIF writeValue_1_.CE
+1 1
+0 0
+.names clock.BLIF writeValue_1_.C
+1 1
+0 0
+.names un1_state40_i.BLIF writeValue_2_.CE
+1 1
+0 0
+.names clock.BLIF writeValue_2_.C
+1 1
+0 0
+.names II_0_outData_7.BLIF data_7_
+1 1
+0 0
+.names II_0_outData_6reg.BLIF data_6_
+1 1
+0 0
+.names II_0_outData_4reg.BLIF data_5_
+1 1
+0 0
+.names II_0_outData_4reg.BLIF data_4_
+1 1
+0 0
+.names II_0_outData_3reg.BLIF data_3_
+1 1
+0 0
+.names II_0_outData_2reg.BLIF data_2_
+1 1
+0 0
+.names II_0_outData_1reg.BLIF data_1_
+1 1
+0 0
+.names II_0_outData_0reg.BLIF data_0_
+1 1
+0 0
+.names II_0_outData_cl_0_.BLIF data_7_.OE
+1 1
+0 0
+.names II_0_outData_cl_7_0_reg.BLIF data_0_.OE
+1 1
+0 0
+.names II_0_outData_cl_6_0_reg.BLIF data_1_.OE
+1 1
+0 0
+.names II_0_outData_cl_5_0_reg.BLIF data_2_.OE
+1 1
+0 0
+.names II_0_outData_cl_4_0_reg.BLIF data_3_.OE
+1 1
+0 0
+.names II_0_outData_cl_3_0_reg.BLIF data_4_.OE
+1 1
+0 0
+.names II_0_outData_cl_2_0_reg.BLIF data_5_.OE
+1 1
+0 0
+.names II_0_outData_cl_1_0_reg.BLIF data_6_.OE
+1 1
+0 0
+.end

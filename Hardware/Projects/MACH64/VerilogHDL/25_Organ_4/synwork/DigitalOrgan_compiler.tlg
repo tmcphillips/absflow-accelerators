@@ -1,0 +1,64 @@
+Selecting top level module DigitalOrgan
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000000100
+   Generated name = RippleCounter_4s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000000100
+   Generated name = RippleScaler_4s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000000001111010000100100
+	OUT_FREQ=32'b00000000000000000000001000001011
+	BITS=32'b00000000000000000000000000000110
+	TOGGLE_PERIOD=32'b00000000000000000000000000111011
+   Generated name = ClockSynthesizer_62500s_523s_6s_59s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000000001111010000100100
+	OUT_FREQ=32'b00000000000000000000001001001011
+	BITS=32'b00000000000000000000000000000110
+	TOGGLE_PERIOD=32'b00000000000000000000000000110101
+   Generated name = ClockSynthesizer_62500s_587s_6s_53s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000000001111010000100100
+	OUT_FREQ=32'b00000000000000000000001010010011
+	BITS=32'b00000000000000000000000000000110
+	TOGGLE_PERIOD=32'b00000000000000000000000000101111
+   Generated name = ClockSynthesizer_62500s_659s_6s_47s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\clocksynthesizer.v":4:7:4:22|Synthesizing module ClockSynthesizer
+
+	IN_FREQ=32'b00000000000000001111010000100100
+	OUT_FREQ=32'b00000000000000000000001100010000
+	BITS=32'b00000000000000000000000000000110
+	TOGGLE_PERIOD=32'b00000000000000000000000000100111
+   Generated name = ClockSynthesizer_62500s_784s_6s_39s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001100
+   Generated name = RippleCounter_12s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001100
+   Generated name = RippleScaler_12s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000000011
+   Generated name = RippleCounter_3s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\digitalorgan.v":5:7:5:18|Synthesizing module DigitalOrgan
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\25_organ_4\digitalorgan.v":73:1:73:6|Pruning Register songLine[1:5] 
+

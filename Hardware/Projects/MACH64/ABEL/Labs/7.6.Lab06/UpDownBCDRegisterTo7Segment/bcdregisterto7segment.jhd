@@ -1,0 +1,9 @@
+MODULE BCDRegisterTo7Segment
+	SUBMODULE tenbitscaler
+		INSTANCE clockScaler
+	SUBMODULE debouncer
+		INSTANCE debouncedUp
+	SUBMODULE bcdupcounter
+		INSTANCE bcdCounter
+	SUBMODULE bcdtosevensegment
+		INSTANCE digitToSegment

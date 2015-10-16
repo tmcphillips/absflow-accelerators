@@ -1,0 +1,89 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 10_cpu_5
+
+#Mon Jan 30 13:30:57 2012
+
+$ Start of Compile
+#Mon Jan 30 13:30:57 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitalu.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitalu.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\cpu_opcodes.v"
+@N: CG346 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitalu.v":23:30:23:38|Read full_case directive 
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\ripplescaler.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\ripplescaler.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\ripplecounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\ripplecounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\tflipflop.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\buttonpressdetector.v"
+@N: CG346 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v":82:32:82:40|Read full_case directive 
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v changed - recompiling
+Selecting top level module FourBitCPU
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001010
+   Generated name = RippleCounter_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001010
+   Generated name = RippleScaler_10s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\buttonpressdetector.v":4:7:4:25|Synthesizing module ButtonPressDetector
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitalu.v":4:7:4:16|Synthesizing module FourBitALU
+
+@W: CG134 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitalu.v":15:11:15:11|No assignment to bit 0 of c
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v":5:7:5:16|Synthesizing module FourBitCPU
+
+@W: CL169 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v":64:1:64:6|Pruning Register inc_pc 
+
+@W: CL156 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v":25:12:25:18|*Input program[7][8:1] to this expression [pmux] has undriven bits which are being tied to 0 - a simulation mismatch is possible
+@W: CL247 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitalu.v":5:18:5:23|Input port bit 5 of opcode[5:0] is unused
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\buttonpressdetector.v":20:1:20:6|Trying to extract state machine for register state
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jan 30 13:30:57 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\synlog\fourbitcpu_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+@N:"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\10_cpu_5\fourbitcpu.v":64:1:64:6|Found counter in view:work.FourBitCPU(verilog) inst pc[2:0]
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             13 uses
+DFFCRH          10 uses
+DFFRH           3 uses
+IBUF            3 uses
+OBUF            14 uses
+XOR2            17 uses
+AND2            115 uses
+INV             105 uses
+OR2             16 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jan 30 13:30:59 2012
+
+###########################################################]

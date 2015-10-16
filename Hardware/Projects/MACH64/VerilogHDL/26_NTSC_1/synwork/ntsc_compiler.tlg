@@ -1,0 +1,7 @@
+Selecting top level module ntsc
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\26_ntsc_1\ntcs.v":1:7:1:10|Synthesizing module ntsc
+
+@W: CL189 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\26_ntsc_1\ntcs.v":38:1:38:6|Register bit video[0] is always 0, optimizing ...
+@W: CL260 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\26_ntsc_1\ntcs.v":38:1:38:6|Pruning Register bit 0 of video[3:0] 
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\26_ntsc_1\ntcs.v":38:1:38:6|Trying to extract state machine for register state

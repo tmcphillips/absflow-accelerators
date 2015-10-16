@@ -1,0 +1,26 @@
+#$ TOOL   ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE   Mon Feb 06 17:06:12 2012
+#$ MODULE   FourBitCounter
+#$ PINS 6 clock reset counter_3_ counter_2_ counter_1_ counter_0_
+.type f
+.i 6
+.o 12
+.ilb clock reset counter_0_.Q counter_1_.Q counter_2_.Q counter_3_.Q
+.ob counter_3_.D counter_3_.C counter_3_.AR counter_2_.D counter_2_.C
+ counter_2_.AR counter_1_.D counter_1_.C counter_1_.AR counter_0_.D counter_0_.C
+ counter_0_.AR
+.phase 111111111111
+.p 12
+--1110 100000000000
+----01 100000000000
+---0-1 100000000000
+--0--1 100000000000
+0----- 010010010010
+-0---- 001001001001
+--110- 000100000000
+---01- 000100000000
+--0-1- 000100000000
+--10-- 000000100000
+--01-- 000000100000
+--0--- 000000000100
+.end

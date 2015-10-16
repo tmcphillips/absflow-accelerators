@@ -1,0 +1,3 @@
+. TruthTableStateMachine truthtablestatemachine.abl "c:\users\tmcphillips\hobbies\mach64 projects\pellerinchap5\truthtablestatemachine\truthtablestatemachine.abl"
+clockScaler TenBitScaler tenbitscaler.abl "c:\users\tmcphillips\hobbies\mach64 projects\pellerinchap5\truthtablestatemachine\tenbitscaler.abl"
+debouncedStep Debouncer debouncer.abl "c:\users\tmcphillips\hobbies\mach64 projects\pellerinchap5\truthtablestatemachine\debouncer.abl"

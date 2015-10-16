@@ -1,0 +1,85 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:27:21 2012
+#$ MODULE octallatch
+#$ JEDECFILE octallatch
+#$ PINS 18 oe le d7 d6 d5 d4 d3 d2 d1 d0 q7 q6 q5 q4 q3 q2 q1 q0
+#$ INTERFACE octallatch  18 d0'i'  d1'i'  d2'i'  d3'i'  d4'i'  d5'i'  d6'i'  d7'i'  le'i'  oe'i'  q0'o'  q1'o'  q2'o'  q3'o'  q4'o'  q5'o'  q6'o'  q7'o' 
+.model octallatch
+.inputs d7.BLIF d6.BLIF d5.BLIF d4.BLIF d3.BLIF d2.BLIF d1.BLIF d0.BLIF \
+le.BLIF oe.BLIF
+.outputs q7.REG q6.REG q5.REG q4.REG q3.REG q2.REG q1.REG q0.REG q7.LE q6.LE \
+q5.LE q4.LE q3.LE q2.LE q1.LE q0.LE q7.OE q6.OE q5.OE q4.OE q3.OE q2.OE q1.OE \
+q0.OE
+.names d7.BLIF q7.REG
+1 1
+0 0
+.names d6.BLIF q6.REG
+1 1
+0 0
+.names d5.BLIF q5.REG
+1 1
+0 0
+.names d4.BLIF q4.REG
+1 1
+0 0
+.names d3.BLIF q3.REG
+1 1
+0 0
+.names d2.BLIF q2.REG
+1 1
+0 0
+.names d1.BLIF q1.REG
+1 1
+0 0
+.names d0.BLIF q0.REG
+1 1
+0 0
+.names le.BLIF q7.LE
+1 1
+0 0
+.names le.BLIF q6.LE
+1 1
+0 0
+.names le.BLIF q5.LE
+1 1
+0 0
+.names le.BLIF q4.LE
+1 1
+0 0
+.names le.BLIF q3.LE
+1 1
+0 0
+.names le.BLIF q2.LE
+1 1
+0 0
+.names le.BLIF q1.LE
+1 1
+0 0
+.names le.BLIF q0.LE
+1 1
+0 0
+.names oe.BLIF q7.OE
+1 1
+0 0
+.names oe.BLIF q6.OE
+1 1
+0 0
+.names oe.BLIF q5.OE
+1 1
+0 0
+.names oe.BLIF q4.OE
+1 1
+0 0
+.names oe.BLIF q3.OE
+1 1
+0 0
+.names oe.BLIF q2.OE
+1 1
+0 0
+.names oe.BLIF q1.OE
+1 1
+0 0
+.names oe.BLIF q0.OE
+1 1
+0 0
+.end

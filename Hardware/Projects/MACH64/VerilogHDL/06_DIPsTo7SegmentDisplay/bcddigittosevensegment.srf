@@ -1,0 +1,56 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: dipsto7segementdisplay
+
+#Mon Jan 23 19:59:15 2012
+
+$ Start of Compile
+#Mon Jan 23 19:59:15 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\bcddigittosevensegment.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\hexdigittosevensegment.v"
+@W: CG978 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":17:3:17:24|An instance name was not specified - using generated name II_0
+@W: CG978 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\dipsto7segmentdisplay.v":19:3:19:24|An instance name was not specified - using generated name II_0
+Verilog syntax check successful!
+Selecting top level module BcdDigitToSevenSegment
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\bcddigittosevensegment.v":4:7:4:28|Synthesizing module BcdDigitToSevenSegment
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jan 23 19:59:15 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\synlog\bcddigittosevensegment_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+@N: MO106 :"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.5lab05\dipsto7segementdisplay\bcddigittosevensegment.v":11:2:11:5|Found ROM, 'segments_1[6:0]', 10 words by 7 bits 
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+IBUF            4 uses
+OBUF            7 uses
+INV             19 uses
+AND2            30 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jan 23 19:59:17 2012
+
+###########################################################]

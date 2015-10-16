@@ -1,0 +1,275 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+noteOutC = !button_n_1_ & u1cs_outclock.Q ; (1 pterm, 2 signals)
+
+noteOutD = !button_n_2_ & u2cs_outclock.Q ; (1 pterm, 2 signals)
+
+noteOutE = !button_n_3_ & u3cs_outclock.Q ; (1 pterm, 2 signals)
+
+noteOutF = !button_n_4_ & u4cs_outclock.Q ; (1 pterm, 2 signals)
+
+octaveClocks_pmux = octaveSelect_n_1_ & !octaveSelect_n_0_
+       & u0rc_genblk1_0__uitff_q.Q
+    # !octaveSelect_n_1_ & octaveSelect_n_0_ & u0rc_u0tff_q.Q
+    # !octaveSelect_n_1_ & oneMHzClock & !octaveSelect_n_0_
+    # octaveSelect_n_1_ & octaveSelect_n_0_ & u0rc_genblk1_1__uitff_q.Q ; (4 pterms, 6 signals)
+
+u0rc_genblk1_0__uitff_q.D = !u0rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u0rc_genblk1_0__uitff_q.C = !u0rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u0rc_genblk1_1__uitff_q.D = !u0rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u0rc_genblk1_1__uitff_q.C = !u0rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u0rc_u0tff_q.D = !u0rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u0rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u1cs_count_0_.D = !( !u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & !u1cs_count_5_.Q & u1cs_count_6_.Q
+       & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # u1cs_count_0_.Q ) ; (2 pterms, 9 signals)
+u1cs_count_0_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_count_1_.D = u1cs_count_0_.Q & !u1cs_count_1_.Q
+    # !u1cs_count_0_.Q & u1cs_count_1_.Q ; (2 pterms, 2 signals)
+u1cs_count_1_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_count_2_.D = !( !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & !u1cs_count_5_.Q & u1cs_count_6_.Q
+       & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q
+    # !u1cs_count_1_.Q & !u1cs_count_2_.Q
+    # !u1cs_count_0_.Q & !u1cs_count_2_.Q ) ; (4 pterms, 9 signals)
+u1cs_count_2_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_count_3_.D.X1 = u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q
+    # !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & !u1cs_count_5_.Q & u1cs_count_6_.Q
+       & u1cs_count_7_.Q & u1cs_count_8_.Q ; (2 pterms, 9 signals)
+u1cs_count_3_.D.X2 = u1cs_count_3_.Q ; (1 pterm, 1 signal)
+u1cs_count_3_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_count_4_.T = !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_2_.Q
+       & u1cs_count_3_.Q & u1cs_count_4_.Q & !u1cs_count_5_.Q
+       & u1cs_count_6_.Q & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q ; (2 pterms, 9 signals)
+u1cs_count_4_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_count_5_.D = u1cs_count_5_.Q & !u1cs_n_17_n
+    # !u1cs_count_5_.Q & u1cs_n_17_n ; (2 pterms, 2 signals)
+u1cs_count_5_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_count_6_.D = !( !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_2_.Q
+       & u1cs_count_3_.Q & u1cs_count_4_.Q & !u1cs_count_5_.Q
+       & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # u1cs_count_5_.Q & u1cs_count_6_.Q & u1cs_n_17_n
+    # !u1cs_count_5_.Q & !u1cs_count_6_.Q
+    # !u1cs_count_6_.Q & !u1cs_n_17_n ) ; (4 pterms, 10 signals)
+u1cs_count_6_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_count_7_.T = !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_2_.Q
+       & u1cs_count_3_.Q & u1cs_count_4_.Q & !u1cs_count_5_.Q
+       & u1cs_count_6_.Q & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & u1cs_count_5_.Q & u1cs_count_6_.Q ; (2 pterms, 9 signals)
+u1cs_count_7_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_count_8_.T = !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_2_.Q
+       & u1cs_count_3_.Q & u1cs_count_4_.Q & !u1cs_count_5_.Q
+       & u1cs_count_6_.Q & u1cs_count_7_.Q & u1cs_count_8_.Q
+    # u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q & u1cs_count_3_.Q
+       & u1cs_count_4_.Q & u1cs_count_5_.Q & u1cs_count_6_.Q & u1cs_count_7_.Q ; (2 pterms, 9 signals)
+u1cs_count_8_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u1cs_n_17_n = u1cs_count_0_.Q & u1cs_count_1_.Q & u1cs_count_2_.Q
+       & u1cs_count_3_.Q & u1cs_count_4_.Q ; (1 pterm, 5 signals)
+
+u1cs_outclock.T = !u1cs_count_0_.Q & !u1cs_count_1_.Q & u1cs_count_2_.Q
+       & u1cs_count_3_.Q & u1cs_count_4_.Q & !u1cs_count_5_.Q
+       & u1cs_count_6_.Q & u1cs_count_7_.Q & u1cs_count_8_.Q ; (1 pterm, 9 signals)
+u1cs_outclock.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_0_.D = !( !u2cs_count_1_.Q & !u2cs_count_2_.Q & u2cs_count_3_.Q
+       & !u2cs_count_4_.Q & u2cs_count_5_.Q & !u2cs_count_6_.Q
+       & u2cs_count_7_.Q & u2cs_count_8_.Q
+    # u2cs_count_0_.Q ) ; (2 pterms, 9 signals)
+u2cs_count_0_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_1_.D = u2cs_count_0_.Q & !u2cs_count_1_.Q
+    # !u2cs_count_0_.Q & u2cs_count_1_.Q ; (2 pterms, 2 signals)
+u2cs_count_1_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_2_.D = u2cs_count_0_.Q & u2cs_count_1_.Q & !u2cs_count_2_.Q
+    # !u2cs_count_1_.Q & u2cs_count_2_.Q
+    # !u2cs_count_0_.Q & u2cs_count_2_.Q ; (3 pterms, 3 signals)
+u2cs_count_2_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_3_.D.X1 = u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q
+    # !u2cs_count_0_.Q & !u2cs_count_1_.Q & !u2cs_count_2_.Q & u2cs_count_3_.Q
+       & !u2cs_count_4_.Q & u2cs_count_5_.Q & !u2cs_count_6_.Q
+       & u2cs_count_7_.Q & u2cs_count_8_.Q ; (2 pterms, 9 signals)
+u2cs_count_3_.D.X2 = u2cs_count_3_.Q ; (1 pterm, 1 signal)
+u2cs_count_3_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_4_.D.X1 = u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q
+       & u2cs_count_3_.Q ; (1 pterm, 4 signals)
+u2cs_count_4_.D.X2 = u2cs_count_4_.Q ; (1 pterm, 1 signal)
+u2cs_count_4_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_5_.T = !u2cs_count_0_.Q & !u2cs_count_1_.Q & !u2cs_count_2_.Q
+       & u2cs_count_3_.Q & !u2cs_count_4_.Q & u2cs_count_5_.Q
+       & !u2cs_count_6_.Q & u2cs_count_7_.Q & u2cs_count_8_.Q
+    # u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q & u2cs_count_3_.Q
+       & u2cs_count_4_.Q ; (2 pterms, 9 signals)
+u2cs_count_5_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_6_.T = u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q
+       & u2cs_count_3_.Q & u2cs_count_4_.Q & u2cs_count_5_.Q ; (1 pterm, 6 signals)
+u2cs_count_6_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_7_.T = !u2cs_count_0_.Q & !u2cs_count_1_.Q & !u2cs_count_2_.Q
+       & u2cs_count_3_.Q & !u2cs_count_4_.Q & u2cs_count_5_.Q
+       & !u2cs_count_6_.Q & u2cs_count_7_.Q & u2cs_count_8_.Q
+    # u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q & u2cs_count_3_.Q
+       & u2cs_count_4_.Q & u2cs_count_5_.Q & u2cs_count_6_.Q ; (2 pterms, 9 signals)
+u2cs_count_7_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_count_8_.T = !u2cs_count_0_.Q & !u2cs_count_1_.Q & !u2cs_count_2_.Q
+       & u2cs_count_3_.Q & !u2cs_count_4_.Q & u2cs_count_5_.Q
+       & !u2cs_count_6_.Q & u2cs_count_7_.Q & u2cs_count_8_.Q
+    # u2cs_count_0_.Q & u2cs_count_1_.Q & u2cs_count_2_.Q & u2cs_count_3_.Q
+       & u2cs_count_4_.Q & u2cs_count_5_.Q & u2cs_count_6_.Q & u2cs_count_7_.Q ; (2 pterms, 9 signals)
+u2cs_count_8_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u2cs_outclock.T = !u2cs_count_0_.Q & !u2cs_count_1_.Q & !u2cs_count_2_.Q
+       & u2cs_count_3_.Q & !u2cs_count_4_.Q & u2cs_count_5_.Q
+       & !u2cs_count_6_.Q & u2cs_count_7_.Q & u2cs_count_8_.Q ; (1 pterm, 9 signals)
+u2cs_outclock.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_0_.D = !( u3cs_count_1_.Q & !u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q
+    # u3cs_count_0_.Q ) ; (2 pterms, 9 signals)
+u3cs_count_0_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_1_.D = !( !u3cs_count_0_.Q & !u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q
+    # !u3cs_count_0_.Q & !u3cs_count_1_.Q ) ; (3 pterms, 9 signals)
+u3cs_count_1_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_2_.D = u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+    # !u3cs_count_1_.Q & u3cs_count_2_.Q
+    # !u3cs_count_0_.Q & u3cs_count_2_.Q ; (3 pterms, 3 signals)
+u3cs_count_2_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_3_.D.X1 = u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q
+    # !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q ; (2 pterms, 9 signals)
+u3cs_count_3_.D.X2 = u3cs_count_3_.Q ; (1 pterm, 1 signal)
+u3cs_count_3_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_4_.T = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q & u3cs_count_3_.Q ; (2 pterms, 9 signals)
+u3cs_count_4_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_5_.T = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q ; (2 pterms, 9 signals)
+u3cs_count_5_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_6_.T = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q ; (2 pterms, 9 signals)
+u3cs_count_6_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_7_.T = u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q ; (1 pterm, 7 signals)
+u3cs_count_7_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_count_8_.T = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q
+    # u3cs_count_0_.Q & u3cs_count_1_.Q & u3cs_count_2_.Q & u3cs_count_3_.Q
+       & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q & u3cs_count_7_.Q ; (2 pterms, 9 signals)
+u3cs_count_8_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u3cs_outclock.T = !u3cs_count_0_.Q & u3cs_count_1_.Q & !u3cs_count_2_.Q
+       & u3cs_count_3_.Q & u3cs_count_4_.Q & u3cs_count_5_.Q & u3cs_count_6_.Q
+       & !u3cs_count_7_.Q & u3cs_count_8_.Q ; (1 pterm, 9 signals)
+u3cs_outclock.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_0_.D = !( !u4cs_count_1_.Q & u4cs_count_2_.Q & !u4cs_count_3_.Q
+       & !u4cs_count_4_.Q & u4cs_count_5_.Q & u4cs_count_6_.Q
+       & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # u4cs_count_0_.Q ) ; (2 pterms, 9 signals)
+u4cs_count_0_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_1_.D = u4cs_count_0_.Q & !u4cs_count_1_.Q
+    # !u4cs_count_0_.Q & u4cs_count_1_.Q ; (2 pterms, 2 signals)
+u4cs_count_1_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_2_.D = !( !u4cs_count_0_.Q & !u4cs_count_1_.Q & !u4cs_count_3_.Q
+       & !u4cs_count_4_.Q & u4cs_count_5_.Q & u4cs_count_6_.Q
+       & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+    # !u4cs_count_1_.Q & !u4cs_count_2_.Q
+    # !u4cs_count_0_.Q & !u4cs_count_2_.Q ) ; (4 pterms, 9 signals)
+u4cs_count_2_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_3_.D = u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q
+    # !u4cs_count_2_.Q & u4cs_count_3_.Q
+    # !u4cs_count_1_.Q & u4cs_count_3_.Q
+    # !u4cs_count_0_.Q & u4cs_count_3_.Q ; (4 pterms, 4 signals)
+u4cs_count_3_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_4_.D.X1 = u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+       & u4cs_count_3_.Q ; (1 pterm, 4 signals)
+u4cs_count_4_.D.X2 = u4cs_count_4_.Q ; (1 pterm, 1 signal)
+u4cs_count_4_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_5_.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & !u4cs_count_4_.Q & u4cs_count_5_.Q
+       & u4cs_count_6_.Q & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q & u4cs_count_3_.Q
+       & u4cs_count_4_.Q ; (2 pterms, 9 signals)
+u4cs_count_5_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_6_.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & !u4cs_count_4_.Q & u4cs_count_5_.Q
+       & u4cs_count_6_.Q & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q & u4cs_count_3_.Q
+       & u4cs_count_4_.Q & u4cs_count_5_.Q ; (2 pterms, 9 signals)
+u4cs_count_6_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_7_.T = u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q
+       & u4cs_count_3_.Q & u4cs_count_4_.Q & u4cs_count_5_.Q & u4cs_count_6_.Q ; (1 pterm, 7 signals)
+u4cs_count_7_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_count_8_.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & !u4cs_count_4_.Q & u4cs_count_5_.Q
+       & u4cs_count_6_.Q & !u4cs_count_7_.Q & u4cs_count_8_.Q
+    # u4cs_count_0_.Q & u4cs_count_1_.Q & u4cs_count_2_.Q & u4cs_count_3_.Q
+       & u4cs_count_4_.Q & u4cs_count_5_.Q & u4cs_count_6_.Q & u4cs_count_7_.Q ; (2 pterms, 9 signals)
+u4cs_count_8_.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+
+u4cs_outclock.T = !u4cs_count_0_.Q & !u4cs_count_1_.Q & u4cs_count_2_.Q
+       & !u4cs_count_3_.Q & !u4cs_count_4_.Q & u4cs_count_5_.Q
+       & u4cs_count_6_.Q & !u4cs_count_7_.Q & u4cs_count_8_.Q ; (1 pterm, 9 signals)
+u4cs_outclock.C = octaveClocks_pmux ; (1 pterm, 1 signal)
+

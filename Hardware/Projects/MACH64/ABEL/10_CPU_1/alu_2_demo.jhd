@@ -1,0 +1,7 @@
+MODULE ALU_2_demo
+	SUBMODULE alu_2
+		INSTANCE alu
+	SUBMODULE tenbitscaler
+		INSTANCE scaler
+	SUBMODULE debouncer
+		INSTANCE debouncer

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_FourBitCounterWithLoad\impact.xsl
+OUTFILE=C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_FourBitCounterWithLoad\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\Users\tmcphillips\Designs\Projects\BASYS250\VerilogHDL\01_FourBitCounterWithLoad
+LICENSE=iMPACT
+USER_INFO=iMPACT

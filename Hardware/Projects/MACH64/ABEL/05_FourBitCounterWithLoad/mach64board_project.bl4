@@ -1,0 +1,262 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 15:09:37 2012
+#$ TITLE Four bit counter with load
+#$ MODULE mach64board_project
+#$ JEDECFILE fourbitcounterwithload
+#$ PINS 14 oneMHzClock:19 upButton:18 downButton:23 loadButton:22 reset:20 \
+#  stepDirectionUp:21 d0:31 d1:32 d2:33 d3:34 q0:14 q1:15 q2:16 q3:17
+#$ NODES 16 X0_debounced'co,o'  B0_debounced'co,o'  L0_debounced'co,o'  S0_s9 S0_s8 S0_s7 S0_s6 \
+#  S0_s5 S0_s4 S0_s3 S0_s2 S0_s1 S0_s0 X1_lastSample B1_lastSample L1_lastSample
+.model fourbitcounterwithload
+.inputs oneMHzClock.BLIF upButton.BLIF downButton.BLIF loadButton.BLIF \
+X0_debounced.Q B0_debounced.Q L0_debounced.Q reset.BLIF d3.BLIF d2.BLIF \
+d1.BLIF d0.BLIF q3.Q q2.Q q1.Q q0.Q stepDirectionUp.BLIF S0_s9.Q S0_s8.Q \
+S0_s7.Q S0_s6.Q S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q \
+X1_lastSample.Q B1_lastSample.Q L1_lastSample.Q
+.outputs q3.C q2.C q1.C q0.C q3.AR q2.AR q1.AR q0.AR S0_s9.C S0_s8.C S0_s7.C \
+S0_s6.C S0_s5.C S0_s4.C S0_s3.C S0_s2.C S0_s1.C S0_s0.C X0_debounced.C \
+X1_lastSample.C B0_debounced.C B1_lastSample.C L0_debounced.C L1_lastSample.C \
+q0.D q1.D q2.T q3.T X0_debounced.D B0_debounced.D L0_debounced.D S0_s9.T \
+S0_s8.T S0_s7.T S0_s6.T S0_s5.T S0_s4.D S0_s3.D S0_s2.D S0_s1.D S0_s0.D \
+X1_lastSample.D B1_lastSample.D L1_lastSample.D
+.names X0_debounced.Q B0_debounced.Q L0_debounced.Q q3.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names X0_debounced.Q B0_debounced.Q L0_debounced.Q q2.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names X0_debounced.Q B0_debounced.Q L0_debounced.Q q1.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names X0_debounced.Q B0_debounced.Q L0_debounced.Q q0.C
+-1- 1
+1-- 1
+--1 1
+000 0
+.names reset.BLIF q3.AR
+0 1
+1 0
+.names reset.BLIF q2.AR
+0 1
+1 0
+.names reset.BLIF q1.AR
+0 1
+1 0
+.names reset.BLIF q0.AR
+0 1
+1 0
+.names oneMHzClock.BLIF S0_s9.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s8.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s7.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s6.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s5.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s4.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s3.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s2.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s1.C
+1 1
+0 0
+.names oneMHzClock.BLIF S0_s0.C
+1 1
+0 0
+.names S0_s9.Q X0_debounced.C
+1 1
+0 0
+.names S0_s9.Q X1_lastSample.C
+1 1
+0 0
+.names S0_s9.Q B0_debounced.C
+1 1
+0 0
+.names S0_s9.Q B1_lastSample.C
+1 1
+0 0
+.names S0_s9.Q L0_debounced.C
+1 1
+0 0
+.names S0_s9.Q L1_lastSample.C
+1 1
+0 0
+.names loadButton.BLIF d0.BLIF q0.Q q0.D
+00- 1
+1-0 1
+01- 0
+1-1 0
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d1.BLIF q1.Q q0.Q \
+stepDirectionUp.BLIF q1.D
+1-1-000 1
+0-1-100 1
+0-1-010 1
+1-1-110 1
+-11-001 1
+-01-101 1
+-01-011 1
+-11-111 1
+--00--- 1
+0-1-000 0
+1-1-100 0
+1-1-010 0
+0-1-110 0
+-01-001 0
+-11-101 0
+-11-011 0
+-01-111 0
+--01--- 0
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d2.BLIF q2.Q q1.Q q0.Q \
+stepDirectionUp.BLIF q2.T
+1-1--000 1
+0-1--110 1
+-11--001 1
+-01--111 1
+--000--- 1
+--011--- 1
+0-1---00 0
+1-1---10 0
+-01---01 0
+-11---11 0
+--1--10- 0
+--1--01- 0
+--010--- 0
+--001--- 0
+.names upButton.BLIF downButton.BLIF loadButton.BLIF d3.BLIF q3.Q q2.Q q1.Q \
+q0.Q stepDirectionUp.BLIF q3.T
+1-1--0000 1
+0-1--1110 1
+-11--0001 1
+-01--1111 1
+--000---- 1
+--011---- 1
+0-1---0-0 0
+1-1---1-0 0
+-01---0-1 0
+-11---1-1 0
+--1--1-0- 0
+--1---01- 0
+--1--01-- 0
+--010---- 0
+--001---- 0
+.names upButton.BLIF X1_lastSample.Q X0_debounced.D
+01 1
+1- 0
+-0 0
+.names downButton.BLIF B1_lastSample.Q B0_debounced.D
+01 1
+1- 0
+-0 0
+.names loadButton.BLIF L1_lastSample.Q L0_debounced.D
+01 1
+1- 0
+-0 0
+.names S0_s8.Q S0_s7.Q S0_s6.Q S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q \
+S0_s9.T
+111111111 1
+-------0- 0
+------0-- 0
+-----0--- 0
+----0---- 0
+---0----- 0
+--0------ 0
+-0------- 0
+0-------- 0
+--------0 0
+.names S0_s7.Q S0_s6.Q S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s8.T
+11111111 1
+------0- 0
+-----0-- 0
+----0--- 0
+---0---- 0
+--0----- 0
+-0------ 0
+0------- 0
+-------0 0
+.names S0_s6.Q S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s7.T
+1111111 1
+-----0- 0
+----0-- 0
+---0--- 0
+--0---- 0
+-0----- 0
+0------ 0
+------0 0
+.names S0_s5.Q S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s6.T
+111111 1
+----0- 0
+---0-- 0
+--0--- 0
+-0---- 0
+0----- 0
+-----0 0
+.names S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s5.T
+11111 1
+---0- 0
+--0-- 0
+-0--- 0
+0---- 0
+----0 0
+.names S0_s4.Q S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s4.D
+01111 1
+1--0- 1
+1-0-- 1
+10--- 1
+1---0 1
+11111 0
+0--0- 0
+0-0-- 0
+00--- 0
+0---0 0
+.names S0_s3.Q S0_s2.Q S0_s1.Q S0_s0.Q S0_s3.D
+0111 1
+1-0- 1
+10-- 1
+1--0 1
+1111 0
+0-0- 0
+00-- 0
+0--0 0
+.names S0_s2.Q S0_s1.Q S0_s0.Q S0_s2.D
+011 1
+10- 1
+1-0 1
+111 0
+00- 0
+0-0 0
+.names S0_s1.Q S0_s0.Q S0_s1.D
+10 1
+01 1
+00 0
+11 0
+.names S0_s0.Q S0_s0.D
+0 1
+1 0
+.names upButton.BLIF X1_lastSample.D
+0 1
+1 0
+.names downButton.BLIF B1_lastSample.D
+0 1
+1 0
+.names loadButton.BLIF L1_lastSample.D
+0 1
+1 0
+.end

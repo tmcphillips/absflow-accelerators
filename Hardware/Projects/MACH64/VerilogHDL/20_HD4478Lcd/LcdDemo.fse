@@ -1,0 +1,30 @@
+
+fsm_encoding {317711771} onehot
+
+fsm_state_encoding {317711771} WAIT_WRITE_REQ {0000000000001}
+
+fsm_state_encoding {317711771} WRITE_0 {0000000000010}
+
+fsm_state_encoding {317711771} WRITE_1 {0000000000100}
+
+fsm_state_encoding {317711771} WRITE_3 {0000000001000}
+
+fsm_state_encoding {317711771} WRITE_4 {0000000010000}
+
+fsm_state_encoding {317711771} WRITE_2 {0000000100000}
+
+fsm_state_encoding {317711771} READ_BF_0 {0000001000000}
+
+fsm_state_encoding {317711771} READ_BF_1 {0000010000000}
+
+fsm_state_encoding {317711771} READ_BF_2 {0000100000000}
+
+fsm_state_encoding {317711771} READ_BF_3 {0001000000000}
+
+fsm_state_encoding {317711771} READ_BF_4 {0010000000000}
+
+fsm_state_encoding {317711771} READ_BF_5 {0100000000000}
+
+fsm_state_encoding {317711771} ACK_WRITE {1000000000000}
+
+fsm_registers {317711771} {state[12]}  {state[11]}  {state[10]}  {state[9]}  {state[8]}  {state[7]}  {state[6]}  {state[5]}  {state[4]}  {state[3]}  {state[2]}  {state[1]}  {state[0]} 

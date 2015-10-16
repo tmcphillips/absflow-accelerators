@@ -1,0 +1,58 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 09_alu_1
+
+#Thu Jan 26 13:48:45 2012
+
+$ Start of Compile
+#Thu Jan 26 13:48:45 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\alu.v"
+@N: CG346 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\alu.v":28:30:28:38|Read full_case directive 
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\aludemo.v"
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\aludemo.v changed - recompiling
+Selecting top level module ALU_Demo
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\alu.v":4:7:4:9|Synthesizing module ALU
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\aludemo.v":3:7:3:14|Synthesizing module ALU_Demo
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Jan 26 13:48:45 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\09_alu_1\synlog\alu_demo_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+IBUF            12 uses
+OBUF            14 uses
+AND2            86 uses
+XOR2            10 uses
+INV             53 uses
+OR2             24 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Jan 26 13:48:47 2012
+
+###########################################################]

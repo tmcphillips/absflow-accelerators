@@ -1,0 +1,22 @@
+//
+// Software Version :  ispLEVER Classic 1.4.01.04.23.l1  
+// Project Name	    :  lab01fourpushbuttons
+// Targeted Device  :  LC4064V-75T48I
+// Date             :  Sat Nov 26 11:05:15 2011
+//
+                   GNDIO0          SYS           5
+                   VCCIO0          SYS           6
+                      VCC          SYS           12
+                      GND          SYS           13
+                      pb0          IN            21
+                      pb1          IN            22
+                      pb2          IN            23
+                      pb3          IN            24
+                   GNDIO1          SYS           29
+                   VCCIO1          SYS           30
+                     led0          OUT           31
+                     led1          OUT           32
+                     led2          OUT           33
+                     led3          OUT           34
+                      VCC          SYS           36
+                      GND          SYS           37

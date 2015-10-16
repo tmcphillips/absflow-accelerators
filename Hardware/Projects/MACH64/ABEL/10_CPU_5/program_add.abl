@@ -1,0 +1,11 @@
+
+
+	when (pc == 0) then { op = OP_LDA;	arg = ^b0001;	}
+	when (pc == 1) then { op = OP_LDB;	arg = ^b0011;	}
+	when (pc == 2) then { op = OP_ADD;			}
+	when (pc == 3) then { op = OP_DECB	arg = 3;	}
+	when (pc == 4) then { op = OP_JNC;	arg = 2;	}
+	when (pc == 5) then { op = OP_JMP;	arg = 5;	}
+	when (pc == 6) then { op = OP_LDB;	arg = 0;	}
+	when (pc == 7) then { op = OP_JMP;	arg = 7;	}
+

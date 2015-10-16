@@ -1,0 +1,131 @@
+|--------------------------------------------------- ----------|
+|- ispLEVER Classic 1.5.00.05.39.l1 Equations File            -|
+|- Copyright(C), 1992-2011, Lattice Semiconductor Corporation -|
+|- All Rights Reserved.                                       -|
+|--------------------------------------------------------------|
+
+
+Equations:
+
+counter_0_.T = !u4udc_state_0_.Q & !u4udc_state_1_.Q & !u3bpd_state_0_.Q
+       & u3bpd_state_2_.Q
+    # !u4udc_state_0_.Q & !u4udc_state_1_.Q & !u2bpd_state_0_.Q
+       & u2bpd_state_2_.Q ; (2 pterms, 6 signals)
+counter_0_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+counter_0_.AR = counter_0__0 ; (1 pterm, 1 signal)
+counter_0_.AP = !loadButton_n & resetButton_n & !dipSwitches_n_0_ ; (1 pterm, 3 signals)
+
+counter_0__0 = !resetButton_n
+    # !loadButton_n & dipSwitches_n_0_ ; (2 pterms, 3 signals)
+
+counter_1_.T = counter_0_.Q & !u4udc_state_0_.Q & !u4udc_state_1_.Q
+       & !u2bpd_state_0_.Q & u2bpd_state_2_.Q
+    # !counter_0_.Q & !u4udc_state_0_.Q & !u4udc_state_1_.Q
+       & !u3bpd_state_0_.Q & u3bpd_state_2_.Q & !u2bpd_state_2_.Q
+    # !counter_0_.Q & !u4udc_state_0_.Q & !u4udc_state_1_.Q
+       & !u3bpd_state_0_.Q & u3bpd_state_2_.Q & u2bpd_state_0_.Q ; (3 pterms, 7 signals)
+counter_1_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+counter_1_.AR = counter_1__0 ; (1 pterm, 1 signal)
+counter_1_.AP = !loadButton_n & resetButton_n & !dipSwitches_n_1_ ; (1 pterm, 3 signals)
+
+counter_1__0 = !resetButton_n
+    # !loadButton_n & dipSwitches_n_1_ ; (2 pterms, 3 signals)
+
+counter_2_.T = counter_1_.Q & counter_0_.Q & !u4udc_state_0_.Q
+       & !u4udc_state_1_.Q & !u2bpd_state_0_.Q & u2bpd_state_2_.Q
+    # !counter_1_.Q & !counter_0_.Q & !u4udc_state_0_.Q & !u4udc_state_1_.Q
+       & !u3bpd_state_0_.Q & u3bpd_state_2_.Q & !u2bpd_state_2_.Q
+    # !counter_1_.Q & !counter_0_.Q & !u4udc_state_0_.Q & !u4udc_state_1_.Q
+       & !u3bpd_state_0_.Q & u3bpd_state_2_.Q & u2bpd_state_0_.Q ; (3 pterms, 8 signals)
+counter_2_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+counter_2_.AR = counter_2__0 ; (1 pterm, 1 signal)
+counter_2_.AP = !loadButton_n & resetButton_n & !dipSwitches_n_2_ ; (1 pterm, 3 signals)
+
+counter_2__0 = !resetButton_n
+    # !loadButton_n & dipSwitches_n_2_ ; (2 pterms, 3 signals)
+
+counter_3_.T = counter_2_.Q & counter_1_.Q & counter_0_.Q & !u4udc_state_0_.Q
+       & !u4udc_state_1_.Q & !u2bpd_state_0_.Q & u2bpd_state_2_.Q
+    # !counter_2_.Q & !counter_1_.Q & !counter_0_.Q & !u4udc_state_0_.Q
+       & !u4udc_state_1_.Q & !u3bpd_state_0_.Q & u3bpd_state_2_.Q
+       & !u2bpd_state_2_.Q
+    # !counter_2_.Q & !counter_1_.Q & !counter_0_.Q & !u4udc_state_0_.Q
+       & !u4udc_state_1_.Q & !u3bpd_state_0_.Q & u3bpd_state_2_.Q
+       & u2bpd_state_0_.Q ; (3 pterms, 9 signals)
+counter_3_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+counter_3_.AR = counter_3__0 ; (1 pterm, 1 signal)
+counter_3_.AP = !dipSwitches_n_3_ & !loadButton_n & resetButton_n ; (1 pterm, 3 signals)
+
+counter_3__0 = !resetButton_n
+    # dipSwitches_n_3_ & !loadButton_n ; (2 pterms, 3 signals)
+
+u1rs_u1rc_genblk1_0__uitff_q.D = !u1rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_0__uitff_q.C = !u1rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_1__uitff_q.D = !u1rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_1__uitff_q.C = !u1rs_u1rc_genblk1_0__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_2__uitff_q.D = !u1rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_2__uitff_q.C = !u1rs_u1rc_genblk1_1__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_3__uitff_q.D = !u1rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_3__uitff_q.C = !u1rs_u1rc_genblk1_2__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_4__uitff_q.D = !u1rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_4__uitff_q.C = !u1rs_u1rc_genblk1_3__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_5__uitff_q.D = !u1rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_5__uitff_q.C = !u1rs_u1rc_genblk1_4__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_6__uitff_q.D = !u1rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_6__uitff_q.C = !u1rs_u1rc_genblk1_5__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_7__uitff_q.D = !u1rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_7__uitff_q.C = !u1rs_u1rc_genblk1_6__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_genblk1_8__uitff_q.D = !u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_genblk1_8__uitff_q.C = !u1rs_u1rc_genblk1_7__uitff_q.Q ; (1 pterm, 1 signal)
+
+u1rs_u1rc_u0tff_q.D = !u1rs_u1rc_u0tff_q.Q ; (1 pterm, 1 signal)
+u1rs_u1rc_u0tff_q.C = !oneMHzClock ; (1 pterm, 1 signal)
+
+u2bpd_state_0_.D = !upButton_n & !u2bpd_state_0_.Q & !u2bpd_state_2_.Q
+    # u4udc_state_0_.Q & !u2bpd_state_0_.Q & u2bpd_state_2_.Q
+    # !upButton_n & u2bpd_state_0_.Q & u2bpd_state_2_.Q ; (3 pterms, 4 signals)
+u2bpd_state_0_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2bpd_state_1_.D = !u2bpd_state_0_.Q & u2bpd_state_1_.Q & u2bpd_state_2_.Q
+    # !upButton_n & u2bpd_state_0_.Q
+    # !upButton_n & u2bpd_state_1_.Q ; (3 pterms, 4 signals)
+u2bpd_state_1_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u2bpd_state_2_.D = !upButton_n & u2bpd_state_0_.Q & u2bpd_state_1_.Q
+    # !u2bpd_state_0_.Q & u2bpd_state_1_.Q & u2bpd_state_2_.Q ; (2 pterms, 4 signals)
+u2bpd_state_2_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3bpd_state_0_.D = !downButton_n & !u3bpd_state_0_.Q & !u3bpd_state_2_.Q
+    # u4udc_state_1_.Q & !u3bpd_state_0_.Q & u3bpd_state_2_.Q
+    # !downButton_n & u3bpd_state_0_.Q & u3bpd_state_2_.Q ; (3 pterms, 4 signals)
+u3bpd_state_0_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3bpd_state_1_.D = !u3bpd_state_0_.Q & u3bpd_state_1_.Q & u3bpd_state_2_.Q
+    # !downButton_n & u3bpd_state_0_.Q
+    # !downButton_n & u3bpd_state_1_.Q ; (3 pterms, 4 signals)
+u3bpd_state_1_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u3bpd_state_2_.D = !downButton_n & u3bpd_state_0_.Q & u3bpd_state_1_.Q
+    # !u3bpd_state_0_.Q & u3bpd_state_1_.Q & u3bpd_state_2_.Q ; (2 pterms, 4 signals)
+u3bpd_state_2_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+
+u4udc_state_0_.D = !u4udc_state_0_.Q & !u4udc_state_1_.Q & !u2bpd_state_0_.Q
+       & u2bpd_state_2_.Q ; (1 pterm, 4 signals)
+u4udc_state_0_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u4udc_state_0_.CE = loadButton_n & resetButton_n ; (1 pterm, 2 signals)
+
+u4udc_state_1_.D = !u4udc_state_0_.Q & !u4udc_state_1_.Q & !u3bpd_state_0_.Q
+       & u3bpd_state_2_.Q & u2bpd_state_0_.Q
+    # !u4udc_state_0_.Q & !u4udc_state_1_.Q & !u3bpd_state_0_.Q
+       & u3bpd_state_2_.Q & !u2bpd_state_2_.Q ; (2 pterms, 6 signals)
+u4udc_state_1_.C = u1rs_u1rc_genblk1_8__uitff_q.Q ; (1 pterm, 1 signal)
+u4udc_state_1_.CE = loadButton_n & resetButton_n ; (1 pterm, 2 signals)
+

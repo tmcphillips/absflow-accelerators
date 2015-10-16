@@ -1,0 +1,17 @@
+3003
+~M 1 "./src/ripplecounter.v" 6 RippleCounter
+~A 1 "./src/ripplecounter.v" 6 RippleCounter
+~M 1 "./src/buttonpressdetector.v" 4 ButtonPressDetector
+~A 1 "./src/buttonpressdetector.v" 4 ButtonPressDetector
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 1 "./src/fourbitcounterwithload.v" 7 FourBitCounterWithLoad
+~A 1 "./src/fourbitcounterwithload.v" 7 FourBitCounterWithLoad
+~M 1 "./src/tflipflop.v" 4 TFlipFlop
+~A 1 "./src/tflipflop.v" 4 TFlipFlop
+~M 1 "./src/ripplescaler.v" 6 RippleScaler
+~A 1 "./src/ripplescaler.v" 6 RippleScaler
+~M 1 "./src/updowncounter.v" 4 UpDownCounter
+~A 1 "./src/updowncounter.v" 4 UpDownCounter
+~M 3 "./src/testbench.v" 3 testbench
+~A 1 "./src/testbench.v" 3 testbench

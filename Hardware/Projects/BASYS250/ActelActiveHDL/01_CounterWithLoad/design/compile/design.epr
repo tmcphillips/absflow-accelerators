@@ -1,0 +1,6 @@
+"./src/tflipflop.v"	1
+"./src/updowncounter.v"	1
+"./src/ripplecounter.v"	1
+"./src/fourbitcounterwithload.v"	2
+"./src/ripplescaler.v"	1
+"./src/buttonpressdetector.v"	1

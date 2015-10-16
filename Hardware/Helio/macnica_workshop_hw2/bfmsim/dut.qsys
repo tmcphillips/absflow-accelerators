@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element mypwmled_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSXFC6C6U23C8ES" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="8_H6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="mypwmled_0_avalon_mm_slave"
+   internal="mypwmled_0.avalon_mm_slave"
+   type="avalon"
+   dir="end" />
+ <interface
+   name="mypwmled_0_reset_input"
+   internal="mypwmled_0.reset_input"
+   type="reset"
+   dir="end" />
+ <interface
+   name="mypwmled_0_clock_input"
+   internal="mypwmled_0.clock_input"
+   type="clock"
+   dir="end" />
+ <interface
+   name="mypwmled_0_led_output_conduit"
+   internal="mypwmled_0.led_output_conduit"
+   type="conduit"
+   dir="end" />
+ <module kind="mypwmled" version="1.0" enabled="1" name="mypwmled_0">
+  <parameter name="scratchreg_on_reset" value="3233857728" />
+  <parameter name="AUTO_CLOCK_INPUT_CLOCK_RATE" value="0" />
+ </module>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="false" />
+</system>

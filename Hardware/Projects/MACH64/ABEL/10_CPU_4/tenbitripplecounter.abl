@@ -1,0 +1,44 @@
+module TenBitRippleCounter interface (inclock -> outclock);
+
+declarations
+
+	// input unscaled clock signal		
+	inclock pin;
+
+	// output scaled clock signal
+	outclock pin;
+
+	// 10 bit register
+	s9..s0 node istype 'reg_t';	
+	scaler 	= [s9..s0];
+	
+equations
+
+
+	s0.t = 1;
+	s1.t = 1;
+	s2.t = 1;
+	s3.t = 1;
+	s4.t = 1;
+	s5.t = 1;
+	s6.t = 1;
+	s7.t = 1;
+	s8.t = 1;
+	s9.t = 1;
+	
+	s0.clk = inclock;
+	s1.clk = s0;
+	s2.clk = s1;
+	s3.clk = s2;
+	s4.clk = s3;
+	s5.clk = s4;
+	s6.clk = s5;
+	s7.clk = s6;
+	s8.clk = s7;
+	s9.clk = s8;
+
+
+	// output the highest order bit of the scaling register
+	outclock = s9;
+end
+

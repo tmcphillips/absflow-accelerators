@@ -1,0 +1,10 @@
+[NameRules]
+InstanceSeparator=^
+
+[Waves]
+Count=5
+Net0=PB0
+Net1=PB1
+Net2=LED_AND
+Net3=LED_OR
+Net4=LED_XOR

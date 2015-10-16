@@ -1,0 +1,46 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Mon Jan 16 16:21:01 2012
+#$ MODULE addressablelatchdemo
+#$ JEDECFILE addressablelatchdemo
+#$ PINS 14 s0:7 s1:8 s2:9 d:17 g:26 clr:20 q0:31 q1:32 q2:33 q3:34 q4:38 q5:39 q6:40 q7:45
+#$ NODES 14 latch>Clr'co'  latch>D'co'  latch>G'co'  latch>S0'co'  latch>S1'co'  latch>S2'co'  latch>Q0'co'  latch>Q1'co'  latch>Q2'co'  latch>Q3'co'  latch>Q4'co'  latch>Q5'co'  \
+#  latch>Q6'co'  latch>Q7'co' 
+#$ INTERFACE addressablelatch  14 Clr'i'  D'i'  G'i'  S0'i'  S1'i'  S2'i'  Q0'o'  Q1'o'  Q2'o'  Q3'o'  Q4'o'  Q5'o'  Q6'o'  Q7'o' 
+#$ INSTANCE latch addressablelatch 14 latch>Clr latch>D latch>G latch>S0 latch>S1 latch>S2 latch>Q0 latch>Q1 latch>Q2 latch>Q3 latch>Q4 latch>Q5 latch>Q6 \
+#  latch>Q7
+
+.model addressablelatchdemo
+.inputs s2.BLIF s1.BLIF s0.BLIF d.BLIF g.BLIF clr.BLIF latch>Q7.BLIF latch>Q6.BLIF \
+latch>Q5.BLIF latch>Q4.BLIF latch>Q3.BLIF latch>Q2.BLIF latch>Q1.BLIF \
+latch>Q0.BLIF
+.outputs latch>Clr latch>D latch>G latch>S0 latch>S1 latch>S2 q0 q1 q2 q3 q4 \
+q5 q6 q7
+.names clr.BLIF latch>Clr
+0 1
+.names d.BLIF latch>D
+0 1
+.names g.BLIF latch>G
+0 1
+.names s0.BLIF latch>S0
+0 1
+.names s1.BLIF latch>S1
+0 1
+.names s2.BLIF latch>S2
+0 1
+.names latch>Q0.BLIF q0
+1 1
+.names latch>Q1.BLIF q1
+1 1
+.names latch>Q2.BLIF q2
+1 1
+.names latch>Q3.BLIF q3
+1 1
+.names latch>Q4.BLIF q4
+1 1
+.names latch>Q5.BLIF q5
+1 1
+.names latch>Q6.BLIF q6
+1 1
+.names latch>Q7.BLIF q7
+1 1
+.end

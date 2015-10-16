@@ -1,0 +1,78 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 22_organ
+
+#Tue Feb 14 16:49:16 2012
+
+$ Start of Compile
+#Tue Feb 14 16:49:16 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\digitalorgan.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\digitalorgan.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplescaler.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplescaler.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplecounter.v"
+@I:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplecounter.v":"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\tflipflop.v"
+Verilog syntax check successful!
+File C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\digitalorgan.v changed - recompiling
+Selecting top level module DigitalOrgan
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\tflipflop.v":4:7:4:15|Synthesizing module TFlipFlop
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000001100
+   Generated name = RippleCounter_12s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000001100
+   Generated name = RippleScaler_12s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplecounter.v":6:7:6:19|Synthesizing module RippleCounter
+
+	SIZE=32'b00000000000000000000000000000001
+   Generated name = RippleCounter_1s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\ripplescaler.v":6:7:6:18|Synthesizing module RippleScaler
+
+	BITS=32'b00000000000000000000000000000001
+   Generated name = RippleScaler_1s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\digitalorgan.v":3:7:3:18|Synthesizing module DigitalOrgan
+
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Feb 14 16:49:16 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\22_organ\synlog\digitalorgan_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFF             15 uses
+IBUF            5 uses
+OBUF            1 use
+INV             25 uses
+AND2            7 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Feb 14 16:49:17 2012
+
+###########################################################]

@@ -1,0 +1,10 @@
+
+fsm_encoding {8831831} sequential
+
+fsm_state_encoding {8831831} ACTIVE_COLUMN_1 {00}
+
+fsm_state_encoding {8831831} ACTIVE_COLUMN_2 {01}
+
+fsm_state_encoding {8831831} ACTIVE_COLUMN_3 {10}
+
+fsm_registers {8831831} {activeColumn_reg_1[1]}  {activeColumn_reg_1[0]} 

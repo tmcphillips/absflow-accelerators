@@ -1,0 +1,5 @@
+. BCDRegisterTo7Segment bcdregisterto7segment.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.6.lab06\bcdregisterto7segment\bcdregisterto7segment.abl"
+digitToSegment BCDToSevenSegment bcdtosevensegment.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.6.lab06\bcdregisterto7segment\bcdtosevensegment.abl"
+bcdCounter BcdUpCounter bcdupcounter.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.6.lab06\bcdregisterto7segment\bcdupcounter.abl"
+debouncedUp Debouncer debouncer.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.6.lab06\bcdregisterto7segment\debouncer.abl"
+clockScaler TenBitScaler tenbitscaler.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.6.lab06\bcdregisterto7segment\tenbitscaler.abl"

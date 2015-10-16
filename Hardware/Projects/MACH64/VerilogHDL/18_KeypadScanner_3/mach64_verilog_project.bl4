@@ -1,0 +1,695 @@
+#$ TOOL ispLEVER Classic 1.5.00.05.39.l1
+#$ DATE Thu Feb 02 14:00:36 2012
+#$ PROPERTY LATTICE PULL DEFAULT = DOWN
+#$ MODULE mach64_verilog_project
+#$ PINS 15 keypadRows_3_:28'ke'  keypadRows_2_:27'ke'  segments_6_:31'ke'  \
+#  keypadRows_1_:26'ke'  oneMHzClock:19'ke'  keypadRows_0_:24'ke'  keypadColumns_0_:20'ke'  \
+#  segments_5_:32'ke'  segments_4_:33'ke'  segments_3_:34'ke'  segments_2_:38'ke'  \
+#  segments_1_:39'ke'  segments_0_:40'ke'  keypadColumns_2_:22'ke'  keypadColumns_1_:21'ke' 
+#$ NODES 34 u0rs_u1rc_genblk1_8__uitff_q u1ks_activeKey_reg_0_ \
+#  u1ks_activeKey_reg_1_ u1ks_activeKey_reg_2_ u1ks_activeKey_reg_3_ \
+#  u2slpf_stableValue_reg_0_ u2slpf_stableValue_reg_1_ u2slpf_stableValue_reg_2_ \
+#  u2slpf_stableValue_reg_3_ u0rs_u1rc_u0tff_q u0rs_u1rc_genblk1_0__uitff_q \
+#  u0rs_u1rc_genblk1_1__uitff_q u0rs_u1rc_genblk1_2__uitff_q \
+#  u0rs_u1rc_genblk1_3__uitff_q u0rs_u1rc_genblk1_4__uitff_q \
+#  u0rs_u1rc_genblk1_5__uitff_q u0rs_u1rc_genblk1_6__uitff_q \
+#  u0rs_u1rc_genblk1_7__uitff_q u2slpf_state_reg_0_ u2slpf_state_reg_1_ \
+#  u2slpf_valueHistory_reg_1__0_ u2slpf_valueHistory_reg_1__1_ \
+#  u2slpf_valueHistory_reg_1__2_ u2slpf_valueHistory_reg_1__3_ \
+#  u2slpf_valueHistory_reg_2__0_ u2slpf_valueHistory_reg_2__1_ \
+#  u2slpf_valueHistory_reg_2__2_ u2slpf_valueHistory_reg_2__3_ \
+#  u2slpf_valueHistory_reg_3__0_ u2slpf_valueHistory_reg_3__1_ \
+#  u2slpf_valueHistory_reg_3__2_ u2slpf_valueHistory_reg_3__3_ u1ks_n_21_n \
+#  u1ks_n_22_n
+.model keypadscannerdemo
+.inputs keypadRows_3_.BLIF oneMHzClock.BLIF keypadRows_2_.BLIF \
+keypadRows_1_.BLIF keypadRows_0_.BLIF u0rs_u1rc_genblk1_8__uitff_q.Q \
+u1ks_activeKey_reg_0_.Q u1ks_activeKey_reg_1_.Q u1ks_activeKey_reg_2_.Q \
+u1ks_activeKey_reg_3_.Q u2slpf_stableValue_reg_0_.Q \
+u2slpf_stableValue_reg_1_.Q u2slpf_stableValue_reg_2_.Q \
+u2slpf_stableValue_reg_3_.Q u0rs_u1rc_u0tff_q.Q u0rs_u1rc_genblk1_0__uitff_q.Q \
+u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.Q \
+u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.Q \
+u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.Q \
+u0rs_u1rc_genblk1_7__uitff_q.Q u2slpf_state_reg_0_.Q u2slpf_state_reg_1_.Q \
+u2slpf_valueHistory_reg_1__0_.Q u2slpf_valueHistory_reg_1__1_.Q \
+u2slpf_valueHistory_reg_1__2_.Q u2slpf_valueHistory_reg_1__3_.Q \
+u2slpf_valueHistory_reg_2__0_.Q u2slpf_valueHistory_reg_2__1_.Q \
+u2slpf_valueHistory_reg_2__2_.Q u2slpf_valueHistory_reg_2__3_.Q \
+u2slpf_valueHistory_reg_3__0_.Q u2slpf_valueHistory_reg_3__1_.Q \
+u2slpf_valueHistory_reg_3__2_.Q u2slpf_valueHistory_reg_3__3_.Q \
+u1ks_n_21_n.BLIF u1ks_n_22_n.BLIF keypadColumns_1_.Q keypadColumns_2_.Q
+.outputs segments_6_ keypadColumns_0_ segments_5_ segments_4_ segments_2_ \
+segments_1_ segments_0_ keypadColumns_1_.C keypadColumns_2_.C \
+u1ks_activeKey_reg_0_.CE u1ks_activeKey_reg_0_.C u1ks_activeKey_reg_1_.CE \
+u1ks_activeKey_reg_1_.C u1ks_activeKey_reg_2_.CE u1ks_activeKey_reg_2_.C \
+u1ks_activeKey_reg_3_.CE u1ks_activeKey_reg_3_.C \
+u2slpf_valueHistory_reg_1__1_.CE u2slpf_valueHistory_reg_1__1_.C \
+u2slpf_valueHistory_reg_1__2_.CE u2slpf_valueHistory_reg_1__2_.C \
+u2slpf_valueHistory_reg_1__3_.CE u2slpf_valueHistory_reg_1__3_.C \
+u2slpf_state_reg_0_.C u2slpf_state_reg_1_.C u2slpf_stableValue_reg_0_.CE \
+u2slpf_stableValue_reg_0_.C u2slpf_stableValue_reg_1_.CE \
+u2slpf_stableValue_reg_1_.C u2slpf_stableValue_reg_2_.CE \
+u2slpf_stableValue_reg_2_.C u2slpf_stableValue_reg_3_.CE \
+u2slpf_stableValue_reg_3_.C u2slpf_valueHistory_reg_3__0_.CE \
+u2slpf_valueHistory_reg_3__0_.C u2slpf_valueHistory_reg_3__1_.CE \
+u2slpf_valueHistory_reg_3__1_.C u2slpf_valueHistory_reg_3__2_.CE \
+u2slpf_valueHistory_reg_3__2_.C u2slpf_valueHistory_reg_3__3_.CE \
+u2slpf_valueHistory_reg_3__3_.C u2slpf_valueHistory_reg_2__0_.CE \
+u2slpf_valueHistory_reg_2__0_.C u2slpf_valueHistory_reg_2__1_.CE \
+u2slpf_valueHistory_reg_2__1_.C u2slpf_valueHistory_reg_2__2_.CE \
+u2slpf_valueHistory_reg_2__2_.C u2slpf_valueHistory_reg_2__3_.CE \
+u2slpf_valueHistory_reg_2__3_.C u2slpf_valueHistory_reg_1__0_.CE \
+u2slpf_valueHistory_reg_1__0_.C u0rs_u1rc_genblk1_5__uitff_q.C \
+u0rs_u1rc_genblk1_7__uitff_q.C u0rs_u1rc_u0tff_q.C \
+u0rs_u1rc_genblk1_1__uitff_q.C u0rs_u1rc_genblk1_0__uitff_q.C \
+u0rs_u1rc_genblk1_2__uitff_q.C u0rs_u1rc_genblk1_6__uitff_q.C \
+u0rs_u1rc_genblk1_8__uitff_q.C u0rs_u1rc_genblk1_4__uitff_q.C \
+u0rs_u1rc_genblk1_3__uitff_q.C u1ks_n_21_n u1ks_n_22_n segments_3_.X1 \
+segments_3_.X2 u0rs_u1rc_genblk1_8__uitff_q.D u1ks_activeKey_reg_0_.D \
+u1ks_activeKey_reg_1_.D u1ks_activeKey_reg_2_.D u1ks_activeKey_reg_3_.D \
+u2slpf_stableValue_reg_0_.D u2slpf_stableValue_reg_1_.D \
+u2slpf_stableValue_reg_2_.D u2slpf_stableValue_reg_3_.D u0rs_u1rc_u0tff_q.D \
+u0rs_u1rc_genblk1_0__uitff_q.D u0rs_u1rc_genblk1_1__uitff_q.D \
+u0rs_u1rc_genblk1_2__uitff_q.D u0rs_u1rc_genblk1_3__uitff_q.D \
+u0rs_u1rc_genblk1_4__uitff_q.D u0rs_u1rc_genblk1_5__uitff_q.D \
+u0rs_u1rc_genblk1_6__uitff_q.D u0rs_u1rc_genblk1_7__uitff_q.D \
+u2slpf_state_reg_0_.D u2slpf_state_reg_1_.D u2slpf_valueHistory_reg_1__0_.D \
+u2slpf_valueHistory_reg_1__1_.D u2slpf_valueHistory_reg_1__2_.D \
+u2slpf_valueHistory_reg_1__3_.D u2slpf_valueHistory_reg_2__0_.D \
+u2slpf_valueHistory_reg_2__1_.D u2slpf_valueHistory_reg_2__2_.D \
+u2slpf_valueHistory_reg_2__3_.D u2slpf_valueHistory_reg_3__0_.D \
+u2slpf_valueHistory_reg_3__1_.D u2slpf_valueHistory_reg_3__2_.D \
+u2slpf_valueHistory_reg_3__3_.D keypadColumns_1_.D keypadColumns_2_.D
+.names u2slpf_stableValue_reg_0_.Q u2slpf_stableValue_reg_1_.Q \
+u2slpf_stableValue_reg_2_.Q u2slpf_stableValue_reg_3_.Q segments_6_
+0-00 1
+-001 1
+1-10 1
+-1-0 1
+1000 0
+001- 0
+-1-1 0
+--11 0
+.names keypadColumns_1_.Q keypadColumns_2_.Q keypadColumns_0_
+00 1
+1- 0
+-1 0
+.names u2slpf_stableValue_reg_0_.Q u2slpf_stableValue_reg_1_.Q \
+u2slpf_stableValue_reg_2_.Q u2slpf_stableValue_reg_3_.Q segments_5_
+11-0 1
+-00- 1
+00-0 1
+--00 1
+101- 0
+011- 0
+-1-1 0
+--11 0
+.names u2slpf_stableValue_reg_0_.Q u2slpf_stableValue_reg_1_.Q \
+u2slpf_stableValue_reg_2_.Q u2slpf_stableValue_reg_3_.Q segments_4_
+-00- 1
+--10 1
+1--0 1
+010- 0
+--11 0
+-1-1 0
+.names u2slpf_stableValue_reg_0_.Q u2slpf_stableValue_reg_1_.Q \
+u2slpf_stableValue_reg_2_.Q u2slpf_stableValue_reg_3_.Q segments_2_
+000- 1
+01-0 1
+-01- 0
+1--- 0
+-1-1 0
+.names u2slpf_stableValue_reg_0_.Q u2slpf_stableValue_reg_1_.Q \
+u2slpf_stableValue_reg_2_.Q u2slpf_stableValue_reg_3_.Q segments_1_
+000- 1
+-001 1
+0-10 1
+-010 1
+1-00 0
+-10- 0
+11-- 0
+--11 0
+.names u2slpf_stableValue_reg_0_.Q u2slpf_stableValue_reg_1_.Q \
+u2slpf_stableValue_reg_2_.Q u2slpf_stableValue_reg_3_.Q segments_0_
+01-0 1
+-001 1
+-100 1
+-010 1
+111- 0
+-000 0
+--11 0
+-1-1 0
+.names u1ks_n_21_n.BLIF u1ks_n_22_n.BLIF u1ks_activeKey_reg_0_.CE
+1- 1
+-1 1
+00 0
+.names u1ks_n_21_n.BLIF u1ks_n_22_n.BLIF u1ks_activeKey_reg_1_.CE
+1- 1
+-1 1
+00 0
+.names u1ks_n_21_n.BLIF u1ks_n_22_n.BLIF u1ks_activeKey_reg_2_.CE
+1- 1
+-1 1
+00 0
+.names u1ks_n_21_n.BLIF u1ks_n_22_n.BLIF u1ks_activeKey_reg_3_.CE
+1- 1
+-1 1
+00 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_1__1_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_1__2_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_1__3_.CE
+0 1
+1 0
+.names u1ks_activeKey_reg_0_.Q u1ks_activeKey_reg_1_.Q u1ks_activeKey_reg_2_.Q \
+u1ks_activeKey_reg_3_.Q u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_1__0_.Q \
+u2slpf_valueHistory_reg_1__1_.Q u2slpf_valueHistory_reg_1__2_.Q \
+u2slpf_valueHistory_reg_1__3_.Q u2slpf_valueHistory_reg_2__0_.Q \
+u2slpf_valueHistory_reg_2__1_.Q u2slpf_valueHistory_reg_2__2_.Q \
+u2slpf_valueHistory_reg_2__3_.Q u2slpf_valueHistory_reg_3__0_.Q \
+u2slpf_valueHistory_reg_3__1_.Q u2slpf_valueHistory_reg_3__2_.Q \
+u2slpf_valueHistory_reg_3__3_.Q u2slpf_stableValue_reg_0_.CE
+----0111111111111 1
+---00111-111-111- 1
+0---0-111-111-111 1
+-0--01-111-111-11 1
+--0-011-111-111-1 1
+0--00-11--11--11- 1
+-0-001-1-1-1-1-1- 1
+--00011--11--11-- 1
+00--0--11--11--11 1
+0-0-0-1-1-1-1-1-1 1
+-00-01--11--11--1 1
+00-00--1---1---1- 1
+0-000-1---1---1-- 1
+-00001---1---1--- 1
+000-0---1---1---1 1
+00000------------ 1
+---1--------0---- 0
+---1----0-------- 0
+--1------------0- 0
+-1------------0-- 0
+1------------0--- 0
+--1--------0----- 0
+-1--------0------ 0
+1--------0------- 0
+--1----0--------- 0
+-1----0---------- 0
+1----0----------- 0
+----1------------ 0
+---1------------0 0
+.names u1ks_activeKey_reg_0_.Q u1ks_activeKey_reg_1_.Q u1ks_activeKey_reg_2_.Q \
+u1ks_activeKey_reg_3_.Q u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_1__0_.Q \
+u2slpf_valueHistory_reg_1__1_.Q u2slpf_valueHistory_reg_1__2_.Q \
+u2slpf_valueHistory_reg_1__3_.Q u2slpf_valueHistory_reg_2__0_.Q \
+u2slpf_valueHistory_reg_2__1_.Q u2slpf_valueHistory_reg_2__2_.Q \
+u2slpf_valueHistory_reg_2__3_.Q u2slpf_valueHistory_reg_3__0_.Q \
+u2slpf_valueHistory_reg_3__1_.Q u2slpf_valueHistory_reg_3__2_.Q \
+u2slpf_valueHistory_reg_3__3_.Q u2slpf_stableValue_reg_1_.CE
+----0111111111111 1
+---00111-111-111- 1
+0---0-111-111-111 1
+-0--01-111-111-11 1
+--0-011-111-111-1 1
+0--00-11--11--11- 1
+-0-001-1-1-1-1-1- 1
+--00011--11--11-- 1
+00--0--11--11--11 1
+0-0-0-1-1-1-1-1-1 1
+-00-01--11--11--1 1
+00-00--1---1---1- 1
+0-000-1---1---1-- 1
+-00001---1---1--- 1
+000-0---1---1---1 1
+00000------------ 1
+---1--------0---- 0
+---1----0-------- 0
+--1------------0- 0
+-1------------0-- 0
+1------------0--- 0
+--1--------0----- 0
+-1--------0------ 0
+1--------0------- 0
+--1----0--------- 0
+-1----0---------- 0
+1----0----------- 0
+----1------------ 0
+---1------------0 0
+.names u1ks_activeKey_reg_0_.Q u1ks_activeKey_reg_1_.Q u1ks_activeKey_reg_2_.Q \
+u1ks_activeKey_reg_3_.Q u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_1__0_.Q \
+u2slpf_valueHistory_reg_1__1_.Q u2slpf_valueHistory_reg_1__2_.Q \
+u2slpf_valueHistory_reg_1__3_.Q u2slpf_valueHistory_reg_2__0_.Q \
+u2slpf_valueHistory_reg_2__1_.Q u2slpf_valueHistory_reg_2__2_.Q \
+u2slpf_valueHistory_reg_2__3_.Q u2slpf_valueHistory_reg_3__0_.Q \
+u2slpf_valueHistory_reg_3__1_.Q u2slpf_valueHistory_reg_3__2_.Q \
+u2slpf_valueHistory_reg_3__3_.Q u2slpf_stableValue_reg_2_.CE
+----0111111111111 1
+---00111-111-111- 1
+0---0-111-111-111 1
+-0--01-111-111-11 1
+--0-011-111-111-1 1
+0--00-11--11--11- 1
+-0-001-1-1-1-1-1- 1
+--00011--11--11-- 1
+00--0--11--11--11 1
+0-0-0-1-1-1-1-1-1 1
+-00-01--11--11--1 1
+00-00--1---1---1- 1
+0-000-1---1---1-- 1
+-00001---1---1--- 1
+000-0---1---1---1 1
+00000------------ 1
+---1--------0---- 0
+---1----0-------- 0
+--1------------0- 0
+-1------------0-- 0
+1------------0--- 0
+--1--------0----- 0
+-1--------0------ 0
+1--------0------- 0
+--1----0--------- 0
+-1----0---------- 0
+1----0----------- 0
+----1------------ 0
+---1------------0 0
+.names u1ks_activeKey_reg_0_.Q u1ks_activeKey_reg_1_.Q u1ks_activeKey_reg_2_.Q \
+u1ks_activeKey_reg_3_.Q u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_1__0_.Q \
+u2slpf_valueHistory_reg_1__1_.Q u2slpf_valueHistory_reg_1__2_.Q \
+u2slpf_valueHistory_reg_1__3_.Q u2slpf_valueHistory_reg_2__0_.Q \
+u2slpf_valueHistory_reg_2__1_.Q u2slpf_valueHistory_reg_2__2_.Q \
+u2slpf_valueHistory_reg_2__3_.Q u2slpf_valueHistory_reg_3__0_.Q \
+u2slpf_valueHistory_reg_3__1_.Q u2slpf_valueHistory_reg_3__2_.Q \
+u2slpf_valueHistory_reg_3__3_.Q u2slpf_stableValue_reg_3_.CE
+----0111111111111 1
+---00111-111-111- 1
+0---0-111-111-111 1
+-0--01-111-111-11 1
+--0-011-111-111-1 1
+0--00-11--11--11- 1
+-0-001-1-1-1-1-1- 1
+--00011--11--11-- 1
+00--0--11--11--11 1
+0-0-0-1-1-1-1-1-1 1
+-00-01--11--11--1 1
+00-00--1---1---1- 1
+0-000-1---1---1-- 1
+-00001---1---1--- 1
+000-0---1---1---1 1
+00000------------ 1
+---1--------0---- 0
+---1----0-------- 0
+--1------------0- 0
+-1------------0-- 0
+1------------0--- 0
+--1--------0----- 0
+-1--------0------ 0
+1--------0------- 0
+--1----0--------- 0
+-1----0---------- 0
+1----0----------- 0
+----1------------ 0
+---1------------0 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_3__0_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_3__1_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_3__2_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_3__3_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_2__0_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_2__1_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_2__2_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_2__3_.CE
+0 1
+1 0
+.names u2slpf_state_reg_0_.Q u2slpf_valueHistory_reg_1__0_.CE
+0 1
+1 0
+.names u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.C
+0 1
+1 0
+.names oneMHzClock.BLIF u0rs_u1rc_u0tff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_genblk1_0__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.C
+0 1
+1 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.C
+0 1
+1 0
+.names keypadRows_3_.BLIF keypadRows_2_.BLIF keypadRows_1_.BLIF \
+keypadRows_0_.BLIF u1ks_n_21_n
+1000 1
+0010 1
+0-0- 0
+1-1- 0
+-1-- 0
+---1 0
+.names keypadRows_3_.BLIF keypadRows_2_.BLIF keypadRows_1_.BLIF \
+keypadRows_0_.BLIF u1ks_n_22_n
+0100 1
+0001 1
+-0-0 0
+-1-1 0
+--1- 0
+1--- 0
+.names u2slpf_stableValue_reg_1_.Q u2slpf_stableValue_reg_2_.Q segments_3_.X1
+00 1
+1- 0
+-1 0
+.names u2slpf_stableValue_reg_0_.Q u2slpf_stableValue_reg_1_.Q \
+u2slpf_stableValue_reg_2_.Q u2slpf_stableValue_reg_3_.Q segments_3_.X2
+10-0 1
+01-0 1
+-100 1
+---1 0
+00-- 0
+111- 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q keypadColumns_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q keypadColumns_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_activeKey_reg_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_activeKey_reg_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_activeKey_reg_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u1ks_activeKey_reg_3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_1__1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_1__2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_1__3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_state_reg_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_state_reg_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_stableValue_reg_0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_stableValue_reg_1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_stableValue_reg_2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_stableValue_reg_3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_3__0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_3__1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_3__2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_3__3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_2__0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_2__1_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_2__2_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_2__3_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u2slpf_valueHistory_reg_1__0_.C
+1 1
+0 0
+.names u0rs_u1rc_genblk1_8__uitff_q.Q u0rs_u1rc_genblk1_8__uitff_q.D
+0 1
+1 0
+.names keypadRows_2_.BLIF keypadRows_0_.BLIF keypadColumns_1_.Q \
+u1ks_activeKey_reg_0_.D
+000 1
+101 1
+1-0 0
+0-1 0
+-1- 0
+.names keypadRows_3_.BLIF keypadRows_1_.BLIF keypadRows_0_.BLIF \
+keypadColumns_1_.Q keypadColumns_2_.Q u1ks_activeKey_reg_1_.D
+-0000 1
+100-0 1
+-1001 1
+110-1 1
+0--1- 0
+-1--0 0
+-0--1 0
+--1-- 0
+.names keypadRows_2_.BLIF keypadRows_1_.BLIF keypadColumns_2_.Q \
+u1ks_activeKey_reg_2_.D
+1-- 1
+-11 1
+00- 0
+0-0 0
+.names keypadRows_1_.BLIF keypadColumns_2_.Q u1ks_activeKey_reg_3_.D
+10 1
+0- 0
+-1 0
+.names u1ks_activeKey_reg_0_.Q u2slpf_stableValue_reg_0_.D
+1 1
+0 0
+.names u1ks_activeKey_reg_1_.Q u2slpf_stableValue_reg_1_.D
+1 1
+0 0
+.names u1ks_activeKey_reg_2_.Q u2slpf_stableValue_reg_2_.D
+1 1
+0 0
+.names u1ks_activeKey_reg_3_.Q u2slpf_stableValue_reg_3_.D
+1 1
+0 0
+.names u0rs_u1rc_u0tff_q.Q u0rs_u1rc_u0tff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_0__uitff_q.Q u0rs_u1rc_genblk1_0__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_1__uitff_q.Q u0rs_u1rc_genblk1_1__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_2__uitff_q.Q u0rs_u1rc_genblk1_2__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_3__uitff_q.Q u0rs_u1rc_genblk1_3__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_4__uitff_q.Q u0rs_u1rc_genblk1_4__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_5__uitff_q.Q u0rs_u1rc_genblk1_5__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_6__uitff_q.Q u0rs_u1rc_genblk1_6__uitff_q.D
+0 1
+1 0
+.names u0rs_u1rc_genblk1_7__uitff_q.Q u0rs_u1rc_genblk1_7__uitff_q.D
+0 1
+1 0
+.names u1ks_activeKey_reg_0_.Q u1ks_activeKey_reg_1_.Q u1ks_activeKey_reg_2_.Q \
+u1ks_activeKey_reg_3_.Q u2slpf_stableValue_reg_0_.Q \
+u2slpf_stableValue_reg_1_.Q u2slpf_stableValue_reg_2_.Q \
+u2slpf_stableValue_reg_3_.Q u2slpf_state_reg_0_.Q u2slpf_state_reg_1_.Q \
+u2slpf_valueHistory_reg_1__0_.Q u2slpf_valueHistory_reg_1__1_.Q \
+u2slpf_valueHistory_reg_1__2_.Q u2slpf_valueHistory_reg_1__3_.Q \
+u2slpf_valueHistory_reg_2__0_.Q u2slpf_valueHistory_reg_2__1_.Q \
+u2slpf_valueHistory_reg_2__2_.Q u2slpf_valueHistory_reg_2__3_.Q \
+u2slpf_valueHistory_reg_3__0_.Q u2slpf_valueHistory_reg_3__1_.Q \
+u2slpf_valueHistory_reg_3__2_.Q u2slpf_valueHistory_reg_3__3_.Q \
+u2slpf_state_reg_0_.D
+11111111--111111111111 1
+11101110--111-111-111- 1
+01110111---111-111-111 1
+10111011--1-111-111-11 1
+11011101--11-111-111-1 1
+01100110---11--11--11- 1
+10101010--1-1-1-1-1-1- 1
+11001100--11--11--11-- 1
+00110011----11--11--11 1
+01010101---1-1-1-1-1-1 1
+10011001--1--11--11--1 1
+---------0111111111111 1
+---0-----0111-111-111- 1
+00100010----1---1---1- 1
+01000100---1---1---1-- 1
+10001000--1---1---1--- 1
+0--------0-111-111-111 1
+-0-------01-111-111-11 1
+--0------011-111-111-1 1
+00010001-----1---1---1 1
+111111111------------- 1
+0--0-----0-11--11--11- 1
+-0-0-----01-1-1-1-1-1- 1
+--00-----011--11--11-- 1
+110111011------------- 1
+101110111------------- 1
+011101111------------- 1
+100110011------------- 1
+010101011------------- 1
+001100111------------- 1
+000100011------------- 1
+111011101------------- 1
+110011001------------- 1
+101010101------------- 1
+011001101------------- 1
+100010001------------- 1
+010001001------------- 1
+001000101------------- 1
+00-------0--11--11--11 1
+0-0------0-1-1-1-1-1-1 1
+-00------01--11--11--1 1
+00000000-------------- 1
+00-0-----0--1---1---1- 1
+0-00-----0-1---1---1-- 1
+-000-----01---1---1--- 1
+000------0---1---1---1 1
+0000-----0------------ 1
+--------10------------ 1
+---0---1-1------------ 0
+--0---1--1------------ 0
+-0---1---1------------ 0
+0---1----1------------ 0
+---1---0-1------------ 0
+--1---0--1------------ 0
+-1---0---1------------ 0
+1---0----1------------ 0
+---1----0--------0---- 0
+---1----0----0-------- 0
+--1-----0-----------0- 0
+-1------0----------0-- 0
+1-------0---------0--- 0
+--1-----0-------0----- 0
+-1------0------0------ 0
+1-------0-----0------- 0
+--1-----0---0--------- 0
+-1------0--0---------- 0
+1-------0-0----------- 0
+---1----0------------0 0
+.names u1ks_activeKey_reg_0_.Q u1ks_activeKey_reg_1_.Q u1ks_activeKey_reg_2_.Q \
+u1ks_activeKey_reg_3_.Q u2slpf_stableValue_reg_0_.Q \
+u2slpf_stableValue_reg_1_.Q u2slpf_stableValue_reg_2_.Q \
+u2slpf_stableValue_reg_3_.Q u2slpf_state_reg_0_.Q u2slpf_state_reg_1_.Q \
+u2slpf_state_reg_1_.D
+000000001- 1
+100010001- 1
+010001001- 1
+110011001- 1
+001000101- 1
+101010101- 1
+011001101- 1
+111011101- 1
+000100011- 1
+100110011- 1
+010101011- 1
+110111011- 1
+001100111- 1
+101110111- 1
+011101111- 1
+111111111- 1
+--------10 1
+---1---0-1 0
+---0---1-1 0
+--1---0--1 0
+--0---1--1 0
+-1---0---1 0
+-0---1---1 0
+1---0----1 0
+0---1----1 0
+--------0- 0
+.names u1ks_activeKey_reg_0_.Q u2slpf_valueHistory_reg_1__0_.D
+1 1
+0 0
+.names u1ks_activeKey_reg_1_.Q u2slpf_valueHistory_reg_1__1_.D
+1 1
+0 0
+.names u1ks_activeKey_reg_2_.Q u2slpf_valueHistory_reg_1__2_.D
+1 1
+0 0
+.names u1ks_activeKey_reg_3_.Q u2slpf_valueHistory_reg_1__3_.D
+1 1
+0 0
+.names u2slpf_valueHistory_reg_1__0_.Q u2slpf_valueHistory_reg_2__0_.D
+1 1
+0 0
+.names u2slpf_valueHistory_reg_1__1_.Q u2slpf_valueHistory_reg_2__1_.D
+1 1
+0 0
+.names u2slpf_valueHistory_reg_1__2_.Q u2slpf_valueHistory_reg_2__2_.D
+1 1
+0 0
+.names u2slpf_valueHistory_reg_1__3_.Q u2slpf_valueHistory_reg_2__3_.D
+1 1
+0 0
+.names u2slpf_valueHistory_reg_2__0_.Q u2slpf_valueHistory_reg_3__0_.D
+1 1
+0 0
+.names u2slpf_valueHistory_reg_2__1_.Q u2slpf_valueHistory_reg_3__1_.D
+1 1
+0 0
+.names u2slpf_valueHistory_reg_2__2_.Q u2slpf_valueHistory_reg_3__2_.D
+1 1
+0 0
+.names u2slpf_valueHistory_reg_2__3_.Q u2slpf_valueHistory_reg_3__3_.D
+1 1
+0 0
+.names keypadColumns_1_.Q keypadColumns_2_.Q keypadColumns_1_.D
+00 1
+1- 0
+-1 0
+.names keypadColumns_1_.Q keypadColumns_2_.D
+1 1
+0 0
+.end

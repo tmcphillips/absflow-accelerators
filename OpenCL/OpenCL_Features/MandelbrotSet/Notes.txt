@@ -1,0 +1,17 @@
+
+
+Maximize window
+Zoom 4x.
+
+						Single		Double
+
+CPU Sequential			14590		14590
+CPU Parallel-For		 2189		 2170
+CPU OpenCL				  685		 1360
+NVIDIA GTX 650	 		  196		 2002
+FPGA*					  240		  790
+
+*Single-precision FPGA using pragma unroll 80
+*Double-precision FPGA using pragma unroll 20
+
+

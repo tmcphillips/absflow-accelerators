@@ -1,0 +1,98 @@
+MODULE UpDownButtonCounter
+
+// Displays in binary on 4 LEDs a 4 bit counter that is
+// reset by pressing button 0, preset by pushing button 1,
+// incremented by pressing button 3, and decremented by
+// pushing button 4.  
+//
+//Two 4-bit registers are used to debounce
+// the buttons. 
+//
+// Mach64	       Push Button (3..0)
+// 20/C0	->  	PB0
+// 21/C2	->	PB1
+// 22/C4	->	PB2
+// 23/C6	->	PB3
+//
+// Mach64 	       LEDs
+// 14/B8	->	L0
+// 15/B10	->	L1
+// 16/B12	->	L2
+// 17/B14	->	L3
+//
+// Mach64		
+// 43/CLK0_IN	->	OSC
+
+declarations
+
+	// external clock (1 MHz) 
+	clock pin 43;
+
+	// four button inputs
+	!resetButton, !presetButton, !upButton, !downButton pin 20..23;
+
+	// debounced buttons states
+	reset, preset, up, down node istype 'com';
+
+	// 11-bit clock scaler (MSB toggles at 500 Hz)
+	TenBitScaler interface (inclock -> outclock);
+	Scaler functional_block TenBitScaler;
+
+	// create four button debouncers
+	Debouncer interface (button, clock -> debounced);
+	ResetDebouncer  functional_block Debouncer;
+	PresetDebouncer functional_block Debouncer;	
+	UpDebouncer     functional_block Debouncer;	
+	DownDebouncer   functional_block Debouncer;
+
+	// 4-bit counter
+	c3..c0 pin 17..14 istype 'reg'; 
+	counter = [c3..c0];
+
+equations
+
+	// scale incoming 1 MHz signal to 1 KHz for clocking the debouncers
+	Scaler.inclock = clock;
+
+	// clock debouncers at 1 KHz
+	ResetDebouncer.clock  = Scaler.outclock;
+	PresetDebouncer.clock = Scaler.outclock;
+	UpDebouncer.clock     = Scaler.outclock;
+	DownDebouncer.clock   = Scaler.outclock;
+
+	// wire raw button signals to inputs of debouncers 
+	ResetDebouncer.button  = resetButton;
+	PresetDebouncer.button = presetButton;	
+	UpDebouncer.button     = upButton;	
+	DownDebouncer.button   = downButton;
+
+	// name debounced signals
+	reset  = ResetDebouncer.debounced;
+	preset = PresetDebouncer.debounced;	
+	up     = UpDebouncer.debounced;
+	down   = DownDebouncer.debounced;
+	
+	// clock counter off of OR of up and down buttons such that the
+	// counter value wis updated whenever up or down buttons are pressed (go high)
+	counter.clk = !(up # down);
+
+	// asynchronously reset the counter when reset button is pressed
+	counter.aclr = reset;
+
+	// asynchronously preset the counter when preset button is pressed
+	counter.aset = preset;
+
+	// increment the counter when the up button is pressed and
+	// decrement it when the down button is pressed
+	when (up) then {
+		counter := counter + 1;
+	} else when (down) then {
+		counter := counter - 1;
+	}
+end
+
+	
+
+
+
+ 

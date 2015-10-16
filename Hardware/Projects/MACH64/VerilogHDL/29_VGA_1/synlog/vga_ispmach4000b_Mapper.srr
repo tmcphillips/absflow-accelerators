@@ -1,0 +1,38 @@
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+Encoding state machine work.vga(verilog)-vState_1[3:0]
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+Encoding state machine work.vga(verilog)-hState_1[3:0]
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@W: BN132 :"c:\users\tmcphillips\designs\projects\mach64\veriloghdl\29_vga_1\vga.v":57:1:57:6|Removing instance video[4],  because it is equivalent to instance video[0]
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFCRH          3 uses
+DFFRH           22 uses
+DFFSH           2 uses
+IBUF            2 uses
+OBUF            12 uses
+AND2            168 uses
+INV             80 uses
+XOR2            18 uses
+OR2             10 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Feb 24 17:13:40 2012
+
+###########################################################]

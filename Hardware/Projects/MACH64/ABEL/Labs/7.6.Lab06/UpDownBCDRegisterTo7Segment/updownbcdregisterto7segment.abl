@@ -1,0 +1,58 @@
+module BCDCounterTo7Segment
+
+	// define macros
+	CounterMax macro { 9 }
+
+declarations
+	
+	// declare module interfaces
+	TenBitScaler 	  interface (inclock -> outclock);
+	Debouncer 	  interface (rawSignal, samplingClock -> debounced);
+	BcdUpDownCounter  interface (step, direction, [m3..m0]=CounterMax -> [d3..d0]);
+	BCDToSevenSegment interface ([d3..d0] -> [a,b,c,d,e,f,g]);
+
+	// declare input pins
+	!upButton 	pin 18;			// pushbutton 0 for incrementing counter
+	!downButton 	pin 43;			// pushbutton 1 for decrementing counter
+	oneMHzClock	pin 19;			// on-board 1 MHz clock for debouncing
+
+	// declare functional blocks
+	clockScaler 	functional_block TenBitScaler;
+	debouncedUp 	functional_block Debouncer;
+	debouncedDown 	functional_block Debouncer;
+	bcdCounter 	functional_block BcdUpDownCounter;
+	digitToSegment 	functional_block BCDToSevenSegment;
+
+	// declare output pins
+	a,b,c,d,e,f,g	pin 20..24,26,27; 	// drivers for display segments
+
+	// define output sets
+	sevenSegments = [a,b,c,d,e,f,g];	// 7-segment display output
+
+
+equations
+
+	// scale down on-board clock for driving debouncer
+	clockScaler.inclock = oneMHzClock;
+
+	// debounce up button using scaled clock signal
+	debouncedUp.samplingClock = clockScaler.outclock;
+	debouncedUp.rawSignal = upButton;
+
+	// debounce down button using scaled clock signal
+	debouncedDown.samplingClock = clockScaler.outclock;
+	debouncedDown.rawSignal = downButton;
+
+	// step the decimal counter when either button is pushed
+	bcdCounter.step = debouncedUp.debounced # debouncedDown.debounced;
+
+	// step the counter up when the up button is pressed and down otherwise
+	bcdCounter.direction = upButton; 
+	
+	// convert bcd counter value to seven segment display signals
+	digitToSegment.[d0..d3] = bcdCounter.[d0..d3];
+
+	// drive the seven segment display
+	sevenSegments = digitToSegment.[a,b,c,d,e,f,g];	
+
+end

@@ -1,0 +1,13 @@
+#$ TOOL ispLEVER Classic 1.4.01.04.23.l1
+#$ DATE Sat Nov 26 10:26:31 2011
+#$ TITLE Single push button LED program
+#$ MODULE mach64_kit_push_01
+#$ JEDECFILE mach64_kit_push_01
+#$ PINS 2 pb3:20 led:21
+
+.model mach64_kit_push_01
+.inputs pb3.BLIF
+.outputs led
+.names pb3.BLIF led
+0 1
+.end

@@ -1,0 +1,9 @@
+ntscClock  i
+reset_n  i
+video[2]  o
+video[1]  o
+video[0]  o
+hState[1]  o
+hState[0]  o
+vState[1]  o
+vState[0]  o

@@ -1,0 +1,10 @@
+Selecting top level module DebouncedFourBitCounter
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\synchronousclockscaler.v":1:7:1:28|Synthesizing module SynchronousClockScaler
+
+	BITS=32'b00000000000000000000000000000110
+   Generated name = SynchronousClockScaler_6s
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncer.v":1:7:1:15|Synthesizing module Debouncer
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\7.3lab03\03_debouncedfourbitcounter\debouncedfourbitcounter.v":4:7:4:29|Synthesizing module DebouncedFourBitCounter
+

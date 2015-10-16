@@ -1,0 +1,94 @@
+#Build: Synplify Pro E-2011.03LC, Build 066R, Feb 23 2011
+#install: C:\ISPLEVER_CLASSIC1_5\synpbase
+#OS:  6.0
+#Hostname: NEMESIS-X86
+
+#Implementation: 20_hd4478lcd
+
+#Thu Feb 09 10:01:48 2012
+
+$ Start of Compile
+#Thu Feb 09 10:01:48 2012
+
+Synopsys Verilog Compiler, version comp550rc, Build 030R, built Feb 22 2011
+@N|Running in 32-bit mode
+Copyright (C) 1994-2011 Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+
+@I::"C:\ISPLEVER_CLASSIC1_5\synpbase\lib\vlog\hypermods.v"
+@I::"C:\ispLEVER_Classic1_5\ispcpld\..\cae_library\synthesis\verilog\mach.v"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\mach64_verilog_project.h"
+@I::"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v"
+Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+Selecting top level module LcdDemo
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v":141:7:141:15|Synthesizing module LCDWriter
+
+@N: CG364 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v":1:7:1:13|Synthesizing module LcdDemo
+
+@N: CL201 :"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\lcddemo.v":177:1:177:6|Trying to extract state machine for register state
+Extracted state machine for register state
+State machine has 13 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   0101
+   0110
+   0111
+   1000
+   1001
+   1010
+   1011
+   1100
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Feb 09 10:01:48 2012
+
+###########################################################]
+Mapping Report (contents appended below)
+@N:"C:\users\tmcphillips\designs\projects\mach64\veriloghdl\20_hd4478lcd\synlog\lcddemo_ispmach4000b_Mapper.srr"
+Synopsys CPLD Technology Mapper, Version maprc, Build 388R, Built Mar  1 2011
+Copyright (C) 1994-2011, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version E-2011.03LC
+Encoding state machine work.LCDWriter(verilog)-state[12:0]
+original code -> new code
+   0000 -> 0000000000001
+   0001 -> 0000000000010
+   0010 -> 0000000000100
+   0011 -> 0000000001000
+   0100 -> 0000000010000
+   0101 -> 0000000100000
+   0110 -> 0000001000000
+   0111 -> 0000010000000
+   1000 -> 0000100000000
+   1001 -> 0001000000000
+   1010 -> 0010000000000
+   1011 -> 0100000000000
+   1100 -> 1000000000000
+---------------------------------------
+Resource Usage Report
+
+Simple gate primitives:
+DFFSH           1 use
+DFFRH           26 uses
+DFFCRH          14 uses
+IBUF            3 uses
+BUFTH           7 uses
+BI_DIR          1 use
+OBUF            5 uses
+AND2            104 uses
+INV             89 uses
+XOR2            7 uses
+OR2             2 uses
+
+
+@N: FC100 |Timing Report not generated for this device, please use place and route tools for timing analysis.
+E-2011.03LC
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Feb 09 10:01:48 2012
+
+###########################################################]

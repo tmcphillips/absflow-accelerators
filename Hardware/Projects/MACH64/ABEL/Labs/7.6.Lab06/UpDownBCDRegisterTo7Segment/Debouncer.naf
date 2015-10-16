@@ -1,0 +1,3 @@
+debounced		o
+samplingClock		i
+rawSignal		i

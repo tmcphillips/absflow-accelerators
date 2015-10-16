@@ -1,0 +1,45 @@
+#PLAFILE     mach64_verilog_project.bl5
+#DATE        Wed Jan 25 17:15:27 2012
+
+#DESIGN      mach64_verilog_project
+#DEVICE      MACH4S-64
+
+
+// Default settings.
+DATA GLOBAL tINDIO:0
+
+
+// Signal locations
+DATA LOCATION dipSwitches_n_3_:B_*_14
+DATA LOCATION dipSwitches_n_2_:B_*_15
+DATA LOCATION dipSwitches_n_1_:B_*_16
+DATA LOCATION dipSwitches_n_0_:B_*_17
+DATA LOCATION a:C_0_20
+DATA LOCATION b:C_3_21
+DATA LOCATION c:C_5_22
+DATA LOCATION d:C_7_23
+DATA LOCATION e:C_9_24
+DATA LOCATION f:C_1_26
+DATA LOCATION g:C_12_27
+
+// Signals direction
+DATA IO_DIR dipSwitches_n_3_:IN
+DATA IO_DIR dipSwitches_n_2_:IN
+DATA IO_DIR dipSwitches_n_1_:IN
+DATA IO_DIR dipSwitches_n_0_:IN
+DATA IO_DIR a:OUT
+DATA IO_DIR b:OUT
+DATA IO_DIR c:OUT
+DATA IO_DIR d:OUT
+DATA IO_DIR e:OUT
+DATA IO_DIR f:OUT
+DATA IO_DIR g:OUT
+
+// Signals using OSM or fast 5-PTs path
+DATA tOSM a
+DATA tOSM b
+DATA tOSM c
+DATA tOSM d
+DATA tOSM e
+DATA tOSM f
+DATA tOSM g

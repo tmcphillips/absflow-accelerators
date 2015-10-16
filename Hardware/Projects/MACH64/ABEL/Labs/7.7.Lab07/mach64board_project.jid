@@ -1,0 +1,4 @@
+. RollingUpDownCounter rollingupdowncounter.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.7.lab07\rollingupdowncounter.abl"
+counterClock MillisecondClock generalscaler.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.7.lab07\generalscaler.abl"
+led HexToSevenSegment hextosevensegment.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.7.lab07\hextosevensegment.abl"
+bcd BoundedUpDownCounter boundedupdowncounter.abl "c:\users\tmcphillips\hobbies\mach64 projects\7.7.lab07\boundedupdowncounter.abl"

@@ -1,0 +1,26 @@
+MODULE TwentyBitScaler INTERFACE (inclock -> outclock);
+
+DECLARATIONS
+
+	// input unscaled clock signal		
+	inclock PIN istype 'com';
+
+	// output scaled clock signal
+	outclock PIN istype 'com';
+
+	// 20 bit register
+	s19..s0 NODE ISTYPE 'reg';	
+	scaler 	= [s19..s0];
+	
+EQUATIONS
+
+	// clock the scaling register using the input clock signal
+	scaler.clk = inclock;
+
+	// increment scalar on each input clock pulse
+	scaler := scaler + 1;
+
+	// output the highest order bit of the scaling register
+	outclock = s19;
+END
+

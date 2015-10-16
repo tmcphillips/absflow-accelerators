@@ -1,0 +1,27 @@
+MODULE KeypadScannerDemo DEFIN keypadscannerdemo.v
+	SUBMODULE BcdDigitToSevenSegment
+		INSTANCE u3bdtss
+	SUBMODULE StableValueDetector
+		INSTANCE u2slpf
+	SUBMODULE KeypadScanner
+		INSTANCE u1ks
+	SUBMODULE RippleScaler
+		INSTANCE u0rs
+MODULE StableValueDetector DEFIN stablevaluedetector.v
+MODULE KeypadScanner DEFIN keypadscanner.v
+MODULE BcdDigitToSevenSegment DEFIN bcddigittosevensegment.v
+MODULE RippleScaler DEFIN ripplescaler.v
+	SUBMODULE RippleCounter
+		INSTANCE u1rc
+MODULE RippleCounter DEFIN ripplecounter.v
+	SUBMODULE TFlipFlop
+		INSTANCE uitff
+	SUBMODULE TFlipFlop
+		INSTANCE u0tff
+MODULE TFlipFlop DEFIN tflipflop.v
+DEPEND INCLUDED_FILE stablevaluedetector.v
+DEPEND INCLUDED_FILE keypadscanner.v
+DEPEND INCLUDED_FILE bcddigittosevensegment.v
+DEPEND INCLUDED_FILE tflipflop.v
+DEPEND INCLUDED_FILE ripplecounter.v
+DEPEND INCLUDED_FILE ripplescaler.v

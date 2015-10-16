@@ -1,0 +1,5 @@
+.metadata
+*.swp
+*.o
+*.lst
+.kdbgrc.*

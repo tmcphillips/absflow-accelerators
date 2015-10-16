@@ -1,0 +1,15 @@
+total 92
+drwxr-xr-x 2 tmcphillips tmcphillips  4096 2011-01-19 19:23 .
+drwxr-xr-x 7 tmcphillips tmcphillips  4096 2010-12-12 15:03 ..
+-rw-r--r-- 1 tmcphillips tmcphillips  6666 2011-01-13 22:39 hexdump1.asm
+-rw-r--r-- 1 tmcphillips tmcphillips  6683 2011-01-13 22:39 hexdump2.asm
+-rw-r--r-- 1 tmcphillips tmcphillips  9051 2011-01-15 13:56 hexdump3.asm
+-rw-r--r-- 1 tmcphillips tmcphillips 12404 2011-01-17 20:04 hexdump4.asm
+-rwxr-xr-x 1 tmcphillips tmcphillips  3222 2011-01-19 19:23 hexdump5
+-rw-r--r-- 1 tmcphillips tmcphillips 10551 2011-01-19 19:17 hexdump5.asm
+-rw-r--r-- 1 tmcphillips tmcphillips  3200 2011-01-19 19:23 hexdump5.o
+-rw-r--r-- 1 tmcphillips tmcphillips  4181 2011-01-18 21:50 hexlib5.asm
+-rw-r--r-- 1 tmcphillips tmcphillips  1456 2011-01-18 21:50 hexlib5.o
+-rw-r--r-- 1 tmcphillips tmcphillips     0 2011-01-19 19:23 junk.txt
+-rw-r--r-- 1 tmcphillips tmcphillips   378 2011-01-18 21:47 makefile
+-rw-r--r-- 1 tmcphillips tmcphillips   364 2010-12-12 15:01 .project 

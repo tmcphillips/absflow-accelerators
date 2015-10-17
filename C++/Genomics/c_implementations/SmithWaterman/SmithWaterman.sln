@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmithWaterman_1_App", "SmithWaterman_1_App\SmithWaterman_1_App.vcxproj", "{F4955BF4-4D16-4D99-968E-66B7D90A0A07}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmithWaterman_1_Lib", "SmithWaterman_1_Lib\SmithWaterman_1_Lib.vcxproj", "{CF1CD57B-1F8E-441D-A827-2F586D6B95C5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SequenceUtilities", "Libraries\SequenceUtilities\SequenceUtilities.vcxproj", "{2A6C5CA5-A959-4FFD-A284-1CEFD6896A31}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmithWaterman_1_Tests", "SmithWaterman_1_Tests\SmithWaterman_1_Tests.vcxproj", "{7DF84F75-AD07-4DD2-9128-BFBC68C0A8CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C9FF7D5-5753-479C-8FFB-4CE6193CF579}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SmithWaterman.vsmdi = SmithWaterman.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://nemesis42.dyndns.org:8080/tfs/absoluteflow
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SmithWaterman_1_App\\SmithWaterman_1_App.vcxproj
+		SccProjectName1 = SmithWaterman_1_App
+		SccLocalPath1 = SmithWaterman_1_App
+		SccProjectUniqueName2 = SmithWaterman_1_Lib\\SmithWaterman_1_Lib.vcxproj
+		SccProjectName2 = SmithWaterman_1_Lib
+		SccLocalPath2 = SmithWaterman_1_Lib
+		SccProjectUniqueName3 = Libraries\\SequenceUtilities\\SequenceUtilities.vcxproj
+		SccProjectName3 = Libraries/SequenceUtilities
+		SccLocalPath3 = Libraries\\SequenceUtilities
+		SccProjectUniqueName4 = SmithWaterman_1_Tests\\SmithWaterman_1_Tests.vcxproj
+		SccProjectName4 = SmithWaterman_1_Tests
+		SccLocalPath4 = SmithWaterman_1_Tests
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SmithWaterman.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4955BF4-4D16-4D99-968E-66B7D90A0A07}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F4955BF4-4D16-4D99-968E-66B7D90A0A07}.Debug|Win32.Build.0 = Debug|Win32
+		{F4955BF4-4D16-4D99-968E-66B7D90A0A07}.Release|Win32.ActiveCfg = Release|Win32
+		{F4955BF4-4D16-4D99-968E-66B7D90A0A07}.Release|Win32.Build.0 = Release|Win32
+		{CF1CD57B-1F8E-441D-A827-2F586D6B95C5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CF1CD57B-1F8E-441D-A827-2F586D6B95C5}.Debug|Win32.Build.0 = Debug|Win32
+		{CF1CD57B-1F8E-441D-A827-2F586D6B95C5}.Release|Win32.ActiveCfg = Release|Win32
+		{CF1CD57B-1F8E-441D-A827-2F586D6B95C5}.Release|Win32.Build.0 = Release|Win32
+		{2A6C5CA5-A959-4FFD-A284-1CEFD6896A31}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2A6C5CA5-A959-4FFD-A284-1CEFD6896A31}.Debug|Win32.Build.0 = Debug|Win32
+		{2A6C5CA5-A959-4FFD-A284-1CEFD6896A31}.Release|Win32.ActiveCfg = Release|Win32
+		{2A6C5CA5-A959-4FFD-A284-1CEFD6896A31}.Release|Win32.Build.0 = Release|Win32
+		{7DF84F75-AD07-4DD2-9128-BFBC68C0A8CE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7DF84F75-AD07-4DD2-9128-BFBC68C0A8CE}.Debug|Win32.Build.0 = Debug|Win32
+		{7DF84F75-AD07-4DD2-9128-BFBC68C0A8CE}.Release|Win32.ActiveCfg = Release|Win32
+		{7DF84F75-AD07-4DD2-9128-BFBC68C0A8CE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

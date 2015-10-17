@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SequenceUtilities", "SequenceUtilities\SequenceUtilities.vcxproj", "{EB1E7A68-11F6-4071-854C-30D9D727DD56}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SequenceUtilities.Tests", "SequenceUtilities.Tests\SequenceUtilities.Tests.vcxproj", "{8700B261-9C08-48A2-BBCE-EDDDD1A09F78}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PairwiseAlignment", "PairwiseAlignment\PairwiseAlignment.vcxproj", "{B8238437-98E4-45B3-8F33-CB1B8E35AEC2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PairwiseAlignment.Tests", "PairwiseAlignment.Tests\PairwiseAlignment.Tests.vcxproj", "{C0E986DA-613C-493E-85E7-8344F3BB32BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB1E7A68-11F6-4071-854C-30D9D727DD56}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB1E7A68-11F6-4071-854C-30D9D727DD56}.Debug|Win32.Build.0 = Debug|Win32
+		{EB1E7A68-11F6-4071-854C-30D9D727DD56}.Release|Win32.ActiveCfg = Release|Win32
+		{EB1E7A68-11F6-4071-854C-30D9D727DD56}.Release|Win32.Build.0 = Release|Win32
+		{8700B261-9C08-48A2-BBCE-EDDDD1A09F78}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8700B261-9C08-48A2-BBCE-EDDDD1A09F78}.Debug|Win32.Build.0 = Debug|Win32
+		{8700B261-9C08-48A2-BBCE-EDDDD1A09F78}.Release|Win32.ActiveCfg = Release|Win32
+		{8700B261-9C08-48A2-BBCE-EDDDD1A09F78}.Release|Win32.Build.0 = Release|Win32
+		{B8238437-98E4-45B3-8F33-CB1B8E35AEC2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B8238437-98E4-45B3-8F33-CB1B8E35AEC2}.Debug|Win32.Build.0 = Debug|Win32
+		{B8238437-98E4-45B3-8F33-CB1B8E35AEC2}.Release|Win32.ActiveCfg = Release|Win32
+		{B8238437-98E4-45B3-8F33-CB1B8E35AEC2}.Release|Win32.Build.0 = Release|Win32
+		{C0E986DA-613C-493E-85E7-8344F3BB32BC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C0E986DA-613C-493E-85E7-8344F3BB32BC}.Debug|Win32.Build.0 = Debug|Win32
+		{C0E986DA-613C-493E-85E7-8344F3BB32BC}.Release|Win32.ActiveCfg = Release|Win32
+		{C0E986DA-613C-493E-85E7-8344F3BB32BC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

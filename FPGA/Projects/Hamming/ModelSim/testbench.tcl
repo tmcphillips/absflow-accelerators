@@ -3,8 +3,9 @@ set source_dir   "${project_dir}/Source"
 set modelsim_dir "${project_dir}/ModelSim"
 set tests_dir   "${source_dir}/fifo_tests"
 
-set OVM_LIB_DIR "C:/Users/tmcphillips/Designs/Libraries/ovm-2.1.2"
-set OVL_LIB_DIR "C:/Users/tmcphillips/Designs/Libraries/std_ovl"
+set SV_VERIFICATION_LIBS "C:/Users/tmcphill/GitRepos/sv-verification-libs"
+set OVM_LIB_DIR "${SV_VERIFICATION_LIBS}/ovm-2.1.2"
+set OVL_LIB_DIR "${SV_VERIFICATION_LIBS}/ovl-2.4"
 
 set ovm_build_options [concat   \
     +incdir+${OVM_LIB_DIR}/src  \

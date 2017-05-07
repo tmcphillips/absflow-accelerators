@@ -162,3 +162,5 @@ $RECYCLE.BIN/
 *.map
 .tmp_versions
 
+# ignore work directories created by ModelSim
+work

@@ -2,6 +2,7 @@ import ppfifo_testbench_classes_pkg::*;
 import ovm_pkg::*;
 
 `include "constants.sv"
+`timescale 1ns / 1ps
 
 interface ppfifo_if(input bit clock);
 

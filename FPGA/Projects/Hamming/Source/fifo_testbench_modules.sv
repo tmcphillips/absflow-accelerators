@@ -1,6 +1,7 @@
 import ovm_pkg::*;
 import ppfifo_testbench_classes_pkg::*;
 
+`timescale 1ns / 1ps
 
 /*****************   C L O C K   G E N E R A T O R   ***************/
 
